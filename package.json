@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-console-app1",
+  "version": "0.0.0",
+  "description": "NodejsConsoleApp1",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@storybook/react": "^4.1.13",
+    "babel-loader": "^8.0.5"
+  },
+  "scripts": {
+    "storybook": "set STORYBOOK_SITE=HK&& start-storybook -p 9001 -c ./sites/hallakonsument"
+  },
+  "dependencies": {
+    "css-loader": "^2.1.0",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+
+  }
+}
