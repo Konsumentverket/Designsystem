@@ -27,6 +27,8 @@ function loadStories() {
     about.keys().forEach(filename => about(filename));
     //VARUMÄRKESIDENTITET
     brandIdentity.keys().forEach(filename => brandIdentity(filename));
+    //ANALOGA PRODUKTER
+    analogueProducts.keys().forEach(filename => analogueProducts(filename));
     //DIGITALA PRODUKTER
     digitalProducts.keys().forEach(filename => digitalProducts(filename));
     components.keys().forEach(filename => components(filename));
@@ -34,8 +36,7 @@ function loadStories() {
     ux.keys().forEach(filename => ux(filename));
     //TILLGÄNGLIGHET
     availability.keys().forEach(filename => availability(filename));
-    //ANALOGA PRODUKTER
-    analogueProducts.keys().forEach(filename => analogueProducts(filename));
+    
 
 }
 
