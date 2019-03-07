@@ -33,8 +33,11 @@
   <ItemGroup>
     <Compile Include="components\Link\Link.js" />
     <Compile Include="components\Link\Link-stories.js" />
+    <Compile Include="sections\about\contentful-stories.js" />
+    <Compile Include="sections\analogue-products\contentful-stories.js" />
     <Compile Include="sections\availability\contentful-stories.js" />
     <Compile Include="sections\brand-identity\contentful-stories.js" />
+    <Compile Include="sections\digital-products\contentful-stories.js" />
     <Compile Include="sections\research-ux\contentful-stories.js" />
     <Compile Include="sites\hallakonsument\addons.js" />
     <Compile Include="sites\hallakonsument\config.js" />
@@ -49,6 +52,9 @@
     <Folder Include="sections\" />
     <Folder Include="sections\brand-identity\" />
     <Folder Include="sections\availability\" />
+    <Folder Include="sections\about\" />
+    <Folder Include="sections\analogue-products\" />
+    <Folder Include="sections\digital-products\" />
     <Folder Include="sections\research-ux\" />
     <Folder Include="sites\" />
     <Folder Include="sites\hallakonsument\" />
