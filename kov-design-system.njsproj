@@ -31,6 +31,10 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="components\Button\Button-stories.js" />
+    <Compile Include="components\Button\Button.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="components\Link\Link.js" />
     <Compile Include="components\Link\Link-stories.js" />
     <Compile Include="sections\about\contentful-stories.js" />
@@ -41,14 +45,21 @@
     <Compile Include="sections\research-ux\contentful-stories.js" />
     <Compile Include="sites\hallakonsument\addons.js" />
     <Compile Include="sites\hallakonsument\config.js" />
+    <Compile Include="sites\hallakonsument\theme.js" />
     <Compile Include="sites\hallakonsument\webpack.config.js" />
+    <Content Include="components\Button\Button.scss" />
     <Content Include="components\Link\Link.scss" />
+    <Content Include="misc\ComponentExplanation\ComponentExplanation.js" />
+    <Content Include="misc\ComponentExplanation\ComponentExplanation.scss" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="components\" />
     <Folder Include="components\Link\" />
+    <Folder Include="components\Button\" />
+    <Folder Include="misc\" />
+    <Folder Include="misc\ComponentExplanation\" />
     <Folder Include="sections\" />
     <Folder Include="sections\brand-identity\" />
     <Folder Include="sections\availability\" />

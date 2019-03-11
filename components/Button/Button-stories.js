@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Button from './Button';
-import ComponentExplanation from '../../misc/ComponentExplanation/ComponentExplanation';
-import ReactMarkdown from 'react-markdown';
+import { text, select } from '@storybook/addon-knobs';
 
 var buttonText = `## When to use this component
 Use the button component to help users carry out an action on a GOV.UK page like starting an application or saving their information.
@@ -28,10 +27,8 @@ Align the primary action button to the left edge of your form.
 
 There are 2 ways to use the button component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.`;
 
-storiesOf('Digitala Produkter|Komponenter>Knappar', module)
+storiesOf('Digitala Produkter|Komponenter/Knappar', module)
     .add('Knapp', () =>
-        <ComponentExplanation heading="Knapp">
-            <Button text="Klicka mig!" />
-            <ReactMarkdown source={buttonText} />
-        </ComponentExplanation>
+        <Button text={text('Text', 'Button')} className={select('Class',["","green","red"])} />
+    , { notes: buttonText }
     );

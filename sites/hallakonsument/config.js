@@ -1,16 +1,18 @@
-import { configure, addDecorator  } from '@storybook/react';
-import { withOptions } from '@storybook/addon-options';
+import { configure, addParameters, addDecorator  } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs';
+import theme from './theme';
 
-addDecorator(
-    withOptions({
-        name: 'Konsumentverket',
-        url: '#',
-        hierarchyRootSeparator: /\|/,
-        hierarchySeparator: /\>/,
-        sidebarAnimations: false,
-        enableShortcuts: false
-    })
-);
+addDecorator(withKnobs);
+addParameters({
+    options: { theme: theme }
+});
+addParameters({
+    info: {
+        header: false,
+        source: false
+    }
+});
+
 
 const about = require.context('../../sections/about/', false, /-stories\.js$/);
 const brandIdentity = require.context('../../sections/brand-identity/', false, /-stories\.js$/);
