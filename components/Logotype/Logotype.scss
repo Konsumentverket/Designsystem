@@ -1,0 +1,19 @@
+.logotype {
+
+    .logotype__image {
+        max-width: 250px;
+        vertical-align: middle;
+    }
+
+    .logotype__slogan {
+        vertical-align: middle;
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 20px;
+        color: #000;
+        font-weight: 700;
+        max-width: 220px;
+        position: relative;
+        bottom: 15px;
+    }
+}
