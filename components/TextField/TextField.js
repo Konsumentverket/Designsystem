@@ -20,7 +20,7 @@ export default class TextField extends React.Component {
 
     render() {
 
-        return <div>
+        return <div className="textfield">
             <FormLabel for={this.props.id} labelText={this.props.labelText} />
             <TextInput
                 type={this.props.type}
