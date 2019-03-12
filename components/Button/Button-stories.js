@@ -27,7 +27,7 @@ Align the primary action button to the left edge of your form.
 
 There are 2 ways to use the button component. You can use HTML or, if you are using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.`;
 
-storiesOf('Digitala Produkter|Komponenter/Knappar', module)
+storiesOf('Digitala Produkter|Komponenter/Atomer/Knappar', module)
     .add('Knapp', () =>
         <Button text={text('Text', 'Button')} className={select('Class',["","green","red"])} />
     , { notes: buttonText }
