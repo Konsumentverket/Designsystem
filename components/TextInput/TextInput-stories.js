@@ -2,11 +2,9 @@
 import { storiesOf } from '@storybook/react';
 import TextInput from './TextInput';
 import { text, select } from '@storybook/addon-knobs';
+import NotesLoader from '../NotesLoader';
 
-var notes = `## When to use this component
-Use this component to make users write stuff
-
-`;
+let name = 'Textinput';
 
 storiesOf('Digitala Produkter|Komponenter/Atomer', module)
     .add('Textinput', () =>
@@ -17,5 +15,5 @@ storiesOf('Digitala Produkter|Komponenter/Atomer', module)
             name={text("Name", "firstName")}
             value={text("Värde", "")}
         />
-        , { notes: notes }
+    , { notes: NotesLoader(name) }
     );

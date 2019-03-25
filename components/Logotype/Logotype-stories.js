@@ -2,19 +2,18 @@
 import { storiesOf } from '@storybook/react';
 import Logotype from './Logotype';
 import { text } from '@storybook/addon-knobs';
+import NotesLoader from '../NotesLoader';
 
-var notes = `## When to use this component
-Use this component in the top of every application
+let name = 'Logotyp';
 
-`;
 
 storiesOf('Digitala Produkter|Komponenter/Molekyler', module)
-    .add('Logotyp', () =>
+    .add(name, () =>
         <Logotype
             src={text("Bild", "https://www.hallakonsument.se/Static/img/logo.svg")}
             href={text("Href", "http://konsumentverket.se")}
             alt={text("Bildens alt text","")}
             slogan={text("Slogan", "Oberoende vägledning genom Konsumentverket")}
         />
-        , { notes: notes }
+    , { notes: NotesLoader(name) }
     );

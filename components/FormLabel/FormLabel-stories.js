@@ -2,16 +2,15 @@
 import { storiesOf } from '@storybook/react';
 import FormLabel from './FormLabel';
 import { text } from '@storybook/addon-knobs';
+import NotesLoader from '../NotesLoader';
 
-var notes = `## When to use this component
-Label for a FormField
-`;
+let name = 'Formulärfältstext';
 
 storiesOf('Digitala Produkter|Komponenter/Atomer', module)
-    .add('Formulärfältstext', () =>
+    .add(name, () =>
         <FormLabel
             for="id"
             labelText={text("Text", "Förnamn")}
         />
-        , { notes: notes }
+    , { notes: NotesLoader(name) }
     );

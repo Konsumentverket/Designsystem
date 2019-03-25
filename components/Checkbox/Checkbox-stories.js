@@ -2,17 +2,13 @@
 import { storiesOf } from '@storybook/react';
 import Checkbox from './Checkbox.js';
 import { text } from '@storybook/addon-knobs';
+import NotesLoader from '../NotesLoader';
 
-
-var notes = `## When to use this component
-Use this component when you want to force users to click in a box
-
-`;
-
+let name = "Checkbox";
 storiesOf('Digitala Produkter|Komponenter/Atomer/Valalternativ', module)
-    .add('Checkbox', () =>
+    .add(name, () =>
         <>
             <Checkbox name="name" label={text("Text", "Jag godkänner avtalet")} value={text("Värde","Yes")} />
         </>
-        , { notes: notes }
+    , { notes: NotesLoader(name) }
     );

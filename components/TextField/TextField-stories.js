@@ -2,14 +2,12 @@
 import { storiesOf } from '@storybook/react';
 import TextField from './TextField';
 import { text,select } from '@storybook/addon-knobs';
+import NotesLoader from '../NotesLoader';
 
-var notes = `## When to use this component
-Use this component to make users write stuff
-
-`;
+let name = 'Textfält';
 
 storiesOf('Digitala Produkter|Komponenter/Molekyler', module)
-    .add('Textfält', () =>
+    .add(name, () =>
         <TextField
             type={select("Fält typ", ['text', 'password', 'email', 'number', 'search', 'url'])}
             id={text("Id", "firstName")}
@@ -18,5 +16,5 @@ storiesOf('Digitala Produkter|Komponenter/Molekyler', module)
             value={text("Värde", "")}
             labelText={text("Text","Förnamn")}
         />
-        , { notes: notes }
+    , { notes: NotesLoader(name) }
     );

@@ -2,14 +2,13 @@
 import { storiesOf } from '@storybook/react';
 import RadioButton from './RadioButton';
 import { text } from '@storybook/addon-knobs';
+import NotesLoader from '../NotesLoader';
 
-var notes = `## When to use this component
-Use this component when you want to force users to make an action
+let name = 'Radioknapp';
 
-`;
 
 storiesOf('Digitala Produkter|Komponenter/Atomer/Valalternativ', module)
-    .add('Radioknapp', () =>
+    .add(name, () =>
         <>
             <RadioButton
                 name={text("Input name", "namn")}
@@ -27,5 +26,5 @@ storiesOf('Digitala Produkter|Komponenter/Atomer/Valalternativ', module)
                 value={text("Värde på fält 3", "value3")}
             />
         </>
-        , { notes: notes }
+    , { notes: NotesLoader(name) }
     );
