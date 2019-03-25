@@ -8,7 +8,7 @@ Use this component in the top of every application
 
 `;
 
-storiesOf('Digitala Produkter|Komponenter/Molekyl', module)
+storiesOf('Digitala Produkter|Komponenter/Molekyler', module)
     .add('Logotyp', () =>
         <Logotype
             src={text("Bild", "https://www.hallakonsument.se/Static/img/logo.svg")}

@@ -8,7 +8,7 @@ Use this component to make users write stuff
 
 `;
 
-storiesOf('Digitala Produkter|Komponenter/Molekyl', module)
+storiesOf('Digitala Produkter|Komponenter/Molekyler', module)
     .add('Textfält', () =>
         <TextField
             type={select("Fält typ", ['text', 'password', 'email', 'number', 'search', 'url'])}

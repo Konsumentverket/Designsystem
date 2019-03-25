@@ -35,8 +35,21 @@
     <Compile Include="components\Button\Button.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="components\Checkbox\Checkbox-stories.js" />
+    <Compile Include="components\Checkbox\Checkbox.js" />
+    <Compile Include="components\FormLabel\FormLabel-stories.js" />
+    <Compile Include="components\FormLabel\FormLabel.js" />
+    <Compile Include="components\FormLabel\index.js" />
     <Compile Include="components\Link\Link.js" />
     <Compile Include="components\Link\Link-stories.js" />
+    <Compile Include="components\Logotype\Logotype-stories.js" />
+    <Compile Include="components\Logotype\Logotype.js" />
+    <Compile Include="components\RadioButton\RadioButton-stories.js" />
+    <Compile Include="components\RadioButton\RadioButton.js" />
+    <Compile Include="components\TextField\TextField-stories.js" />
+    <Compile Include="components\TextField\TextField.js" />
+    <Compile Include="components\TextInput\TextInput-stories.js" />
+    <Compile Include="components\TextInput\TextInput.js" />
     <Compile Include="sections\about\contentful-stories.js" />
     <Compile Include="sections\analogue-products\contentful-stories.js" />
     <Compile Include="sections\availability\contentful-stories.js" />
@@ -48,7 +61,13 @@
     <Compile Include="sites\hallakonsument\theme.js" />
     <Compile Include="sites\hallakonsument\webpack.config.js" />
     <Content Include="components\Button\Button.scss" />
+    <Content Include="components\Checkbox\Checkbox.scss" />
+    <Content Include="components\FormLabel\FormLabel.scss" />
     <Content Include="components\Link\Link.scss" />
+    <Content Include="components\Logotype\Logotype.scss" />
+    <Content Include="components\RadioButton\RadioButton.scss" />
+    <Content Include="components\TextField\TextField.scss" />
+    <Content Include="components\TextInput\TextInput.scss" />
     <Content Include="misc\ComponentExplanation\ComponentExplanation.js" />
     <Content Include="misc\ComponentExplanation\ComponentExplanation.scss" />
     <Content Include="package.json" />
@@ -58,6 +77,12 @@
     <Folder Include="components\" />
     <Folder Include="components\Link\" />
     <Folder Include="components\Button\" />
+    <Folder Include="components\Logotype\" />
+    <Folder Include="components\Checkbox\" />
+    <Folder Include="components\FormLabel\" />
+    <Folder Include="components\TextInput\" />
+    <Folder Include="components\TextField\" />
+    <Folder Include="components\RadioButton\" />
     <Folder Include="misc\" />
     <Folder Include="misc\ComponentExplanation\" />
     <Folder Include="sections\" />

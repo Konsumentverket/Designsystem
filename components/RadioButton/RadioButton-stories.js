@@ -13,17 +13,17 @@ storiesOf('Digitala Produkter|Komponenter/Atomer/Valalternativ', module)
         <>
             <RadioButton
                 name={text("Input name", "namn")}
-                label={text("Text i fält 1", "Banan")}
+                labelText={text("Text i fält 1", "Banan")}
                 value={text("Värde på fält 1", "value1")}
             />
             <RadioButton
                 name={text("Input name", "namn")}
-                label={text("Text i fält 2", "Äpple")}
+                labelText={text("Text i fält 2", "Äpple")}
                 value={text("Värde på fält 2", "value2")}
             />
             <RadioButton
                 name={text("Input name", "namn")}
-                label={text("Text i fält 3", "Korv")}
+                labelText={text("Text i fält 3", "Korv")}
                 value={text("Värde på fält 3", "value3")}
             />
         </>

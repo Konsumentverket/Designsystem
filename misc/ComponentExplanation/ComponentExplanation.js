@@ -1,6 +1,7 @@
 import React from 'react';
 import './ComponentExplanation.scss';
 
+
 export default class ComponentExplanation extends React.Component {
 
     render() {
