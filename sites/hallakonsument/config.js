@@ -5,7 +5,10 @@ import SynchronousGraphQLRequest from '../../misc/SynchronousGraphQLRequest';
 
 addDecorator(withKnobs);
 addParameters({
-    options: { theme: theme }
+    options: {
+        theme: theme,
+        sortStoriesByKind: true
+    }
 });
 addParameters({
     info: {
@@ -43,7 +46,7 @@ const dynamicStoryInitializr = require.context('../../', false, /DynamicStoryIni
 
 function loadStories() {
     dynamicStoryInitializr.keys().forEach(filename => dynamicStoryInitializr(filename));
-    components.keys().forEach(filename => components(filename));
+    components.keys().sort().forEach(filename => components(filename));
 }
 
 configure(loadStories, module);

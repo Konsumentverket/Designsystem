@@ -6,7 +6,7 @@ import NotesLoader from '../NotesLoader';
 
 let name = 'Textfält';
 
-storiesOf('Digitala Produkter|Komponenter/Molekyler', module)
+storiesOf('Digitala Produkter|Komponenter', module)
     .add(name, () =>
         <TextField
             type={select("Fält typ", ['text', 'password', 'email', 'number', 'search', 'url'])}

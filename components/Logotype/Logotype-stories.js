@@ -7,7 +7,7 @@ import NotesLoader from '../NotesLoader';
 let name = 'Logotyp';
 
 
-storiesOf('Digitala Produkter|Komponenter/Molekyler', module)
+storiesOf('Digitala Produkter|Komponenter', module)
     .add(name, () =>
         <Logotype
             src={text("Bild", "https://www.hallakonsument.se/Static/img/logo.svg")}

@@ -44,18 +44,24 @@
     <Compile Include="components\Link\Link-stories.js" />
     <Compile Include="components\Logotype\Logotype-stories.js" />
     <Compile Include="components\Logotype\Logotype.js" />
+    <Compile Include="components\NotesLoader.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="components\RadioButton\RadioButton-stories.js" />
     <Compile Include="components\RadioButton\RadioButton.js" />
     <Compile Include="components\TextField\TextField-stories.js" />
     <Compile Include="components\TextField\TextField.js" />
     <Compile Include="components\TextInput\TextInput-stories.js" />
     <Compile Include="components\TextInput\TextInput.js" />
-    <Compile Include="sections\about\contentful-stories.js" />
-    <Compile Include="sections\analogue-products\contentful-stories.js" />
-    <Compile Include="sections\availability\contentful-stories.js" />
-    <Compile Include="sections\brand-identity\contentful-stories.js" />
-    <Compile Include="sections\digital-products\contentful-stories.js" />
-    <Compile Include="sections\research-ux\contentful-stories.js" />
+    <Compile Include="DynamicStoryInitializr.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="misc\Page\Page.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="misc\SynchronousGraphQLRequest.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="sites\hallakonsument\addons.js" />
     <Compile Include="sites\hallakonsument\config.js" />
     <Compile Include="sites\hallakonsument\theme.js" />
@@ -68,8 +74,7 @@
     <Content Include="components\RadioButton\RadioButton.scss" />
     <Content Include="components\TextField\TextField.scss" />
     <Content Include="components\TextInput\TextInput.scss" />
-    <Content Include="misc\ComponentExplanation\ComponentExplanation.js" />
-    <Content Include="misc\ComponentExplanation\ComponentExplanation.scss" />
+    <Content Include="misc\Page\Page.scss" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
@@ -84,14 +89,7 @@
     <Folder Include="components\TextField\" />
     <Folder Include="components\RadioButton\" />
     <Folder Include="misc\" />
-    <Folder Include="misc\ComponentExplanation\" />
-    <Folder Include="sections\" />
-    <Folder Include="sections\brand-identity\" />
-    <Folder Include="sections\availability\" />
-    <Folder Include="sections\about\" />
-    <Folder Include="sections\analogue-products\" />
-    <Folder Include="sections\digital-products\" />
-    <Folder Include="sections\research-ux\" />
+    <Folder Include="misc\Page\" />
     <Folder Include="sites\" />
     <Folder Include="sites\hallakonsument\" />
   </ItemGroup>

@@ -6,7 +6,7 @@ import NotesLoader from '../NotesLoader';
 
 let name = 'Formulärfältstext';
 
-storiesOf('Digitala Produkter|Komponenter/Atomer', module)
+storiesOf('Digitala Produkter|Komponenter', module)
     .add(name, () =>
         <FormLabel
             for="id"
