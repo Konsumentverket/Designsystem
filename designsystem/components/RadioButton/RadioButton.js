@@ -1,5 +1,4 @@
 import React from 'react';
-import './RadioButton.scss';
 import FormLabel from '../FormLabel'
 
 export default class RadioButton extends React.Component {

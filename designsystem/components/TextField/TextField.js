@@ -1,5 +1,4 @@
 import React from 'react';
-import './TextField.scss';
 import FormLabel from '../FormLabel';
 import TextInput from '../TextInput/TextInput';
 

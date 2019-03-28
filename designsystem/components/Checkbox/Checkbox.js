@@ -1,5 +1,4 @@
 import React from 'react';
-import './Checkbox.scss';
 import FormLabel from '../FormLabel'
 
 export default class Checkbox extends React.Component {

@@ -1,5 +1,4 @@
 import React from 'react';
-import './FormLabel.scss';
 
 export default class FormLabel extends React.Component {
 

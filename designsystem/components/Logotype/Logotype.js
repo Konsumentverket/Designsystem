@@ -1,5 +1,4 @@
 import React from 'react';
-import './Logotype.scss';
 
 export default class Logotype extends React.Component {
 

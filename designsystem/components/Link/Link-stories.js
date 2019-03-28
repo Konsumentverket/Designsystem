@@ -2,7 +2,6 @@
 import { storiesOf } from '@storybook/react';
 import Link from './Link.js';
 import { text } from '@storybook/addon-knobs';
-import './Link.scss'
 import NotesLoader from '../NotesLoader';
 
 let name = 'Länk';
