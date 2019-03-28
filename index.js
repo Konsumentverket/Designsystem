@@ -1,8 +1,0 @@
-export { Button } from './components/Button/Button'
-export { Checkbox } from './components/Checkbox/Checkbox'
-export { FormLabel } from './components/FormLabel/FormLabel'
-export { Link } from './components/Link/Link'
-export { Logotype } from './components/Logotype/Logotype'
-export { RadioButton } from './components/RadioButton/RadioButton'
-export { TextField } from './components/TextField/TextField'
-export { TextInput } from './components/TextInput/TextInput'
