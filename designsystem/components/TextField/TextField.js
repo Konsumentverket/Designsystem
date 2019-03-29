@@ -1,8 +1,8 @@
 import React from 'react';
-import FormLabel from '../FormLabel';
-import TextInput from '../TextInput/TextInput';
+import { FormLabel } from '../FormLabel/FormLabel';
+import { TextInput } from '../TextInput/TextInput';
 
-export default class TextField extends React.Component {
+class TextField extends React.Component {
 
     constructor(props) {
         super(props);
@@ -30,8 +30,8 @@ export default class TextField extends React.Component {
             />
             
         </div>;
-        
-
     }
 }
+
+export { TextField };
 

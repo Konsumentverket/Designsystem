@@ -1,7 +1,7 @@
 import React from 'react';
-import FormLabel from '../FormLabel'
+import {FormLabel} from '../FormLabel/FormLabel'
 
-export default class RadioButton extends React.Component {
+class RadioButton extends React.Component {
 
     render() {
         return <div className="radiobutton">
@@ -12,3 +12,4 @@ export default class RadioButton extends React.Component {
         }
     }
     
+export { RadioButton }

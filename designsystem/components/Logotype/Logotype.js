@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Logotype extends React.Component {
+class Logotype extends React.Component {
 
     render() {
         var slogan = this.props.slogan === null ? null : <span className="logotype__slogan">{this.props.slogan}</span>;
@@ -11,3 +11,4 @@ export default class Logotype extends React.Component {
     }
 }
 
+export { Logotype };

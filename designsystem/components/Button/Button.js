@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 
-export default class Button extends React.Component {
+class Button extends React.Component {
 
     render() {
         let classes = ["button"];
@@ -8,3 +8,4 @@ export default class Button extends React.Component {
         return <input className={classes.join(" ")} type="button" value={this.props.text} />;
     }
 }
+export { Button };

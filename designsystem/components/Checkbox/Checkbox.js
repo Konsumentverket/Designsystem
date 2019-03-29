@@ -1,7 +1,7 @@
 import React from 'react';
-import FormLabel from '../FormLabel'
+import { FormLabel } from '../FormLabel/FormLabel'
 
-export default class Checkbox extends React.Component {
+class Checkbox extends React.Component {
 
     render() {
         return <div className="checkbox">
@@ -11,4 +11,6 @@ export default class Checkbox extends React.Component {
             </div>;
     }
 }
+
+export { Checkbox };
 

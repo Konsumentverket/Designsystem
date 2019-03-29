@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class FormLabel extends React.Component {
+class FormLabel extends React.Component {
 
     render() {
         return <label
@@ -13,4 +13,6 @@ export default class FormLabel extends React.Component {
         </label>;
     }
 }
+
+export { FormLabel };
 
