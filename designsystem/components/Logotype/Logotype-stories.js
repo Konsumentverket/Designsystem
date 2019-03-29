@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Logotype from './Logotype';
+import { Logotype } from './Logotype';
 import { text } from '@storybook/addon-knobs';
 import NotesLoader from '../NotesLoader';
 

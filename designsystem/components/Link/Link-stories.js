@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Link from './Link.js';
+import { Link } from './Link.js';
 import { text } from '@storybook/addon-knobs';
 import NotesLoader from '../NotesLoader';
 

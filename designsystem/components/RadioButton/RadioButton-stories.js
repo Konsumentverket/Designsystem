@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import { storiesOf } from '@storybook/react';
-import RadioButton from './RadioButton';
+import { RadioButton } from './RadioButton';
 import { text } from '@storybook/addon-knobs';
 import NotesLoader from '../NotesLoader';
 

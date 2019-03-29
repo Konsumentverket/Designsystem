@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import { storiesOf } from '@storybook/react';
-import TextField from './TextField';
+import { TextField } from './TextField';
 import { text,select } from '@storybook/addon-knobs';
 import NotesLoader from '../NotesLoader';
 
