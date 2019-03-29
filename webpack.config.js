@@ -7,8 +7,8 @@ module.exports = {
     output: {
       path: path.resolve(__dirname, 'designsystem/dist'),
       filename: 'index.js',
-      library: '',
-      libraryTarget: 'commonjs'
+    //   library: '',
+    //   libraryTarget: 'commonjs'
     },
     externals: [nodeExternals()],
     module: {
