@@ -7,10 +7,16 @@ Designsystem för Hallå konsument
 https://konsumentverket.github.io/designsystem/sites/hallakonsument/build/
 
 
-## Kör storybooks
+## Kör storybooks lokalt
 Navigera till \designsystem\ mappen och kör följande script:
 ```
     npm run storybook
+```
+
+## Bygg statik version av storybooks
+Navigera till \designsystem\ mappen och kör följande script:
+```
+    npm run build-storybook
 ```
 ## Bygg distributions filer
 
