@@ -11,7 +11,7 @@ module.exports = {
       libraryTarget: 'umd',
       globalObject: 'this'
     },
-    externals: [nodeExternals()],
+    // externals: [nodeExternals()],
     module: {
       rules: [
         {
