@@ -8,7 +8,8 @@ module.exports = {
       path: path.resolve(__dirname, 'designsystem/dist'),
       filename: 'index.js',
       library: '',
-      libraryTarget: 'umd'
+      libraryTarget: 'umd',
+      globalObject: 'this'
     },
     externals: [nodeExternals()],
     module: {
