@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-console-app1",
+  "name": "storybook-runner",
   "version": "0.0.0",
-  "description": "NodejsConsoleApp1",
+  "description": "Runs KOV storybooks",
   "main": "app.js",
   "author": {
     "name": ""
@@ -12,8 +12,11 @@
     "babel-loader": "^8.0.5"
   },
   "scripts": {
-    "storybook": "set STORYBOOK_SITE=HK&& start-storybook -p 9001 -c ./sites/hallakonsument",
-    "build-storybook": "set STORYBOOK_SITE=HK&& build-storybook -c ./sites/hallakonsument -o ./sites/hallakonsument/build"
+    "hk-storybook": "set STORYBOOK_SITE=HK&& start-storybook -p 9001 -c ./sites/hallakonsument",
+    "hk-build-storybook": "set STORYBOOK_SITE=HK&& build-storybook -c ./sites/hallakonsument -o ./sites/hallakonsument/build",
+
+    "micro-storybook": "set STORYBOOK_SITE=MICRO&& start-storybook -p 9001 -c ./sites/microsite",
+    "micro-build-storybook": "set STORYBOOK_SITE=MICRO&& build-storybook -c ./sites/microsite -o ./sites/microsite/build"
   },
   "dependencies": {
     "@emotion/core": "^10.0.9",
