@@ -1,14 +1,10 @@
 {
   "name": "kov-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "kov-components",
   "main": "/designsystem/dist/index.js",
   "author": {
     "name": "Zero"
-  },
-  "dependencies": {
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3"
   },
   "peerDependencies": {
     "react": "^16.8.3",
@@ -21,6 +17,8 @@
     "babel-loader": "^8.0.0-beta",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^1.7.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   }
 }

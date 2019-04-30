@@ -2,3 +2,5 @@ node_modules/
 package-lock.json
 *.njsproj.user
 *.lock
+*.njsproj
+*.sln

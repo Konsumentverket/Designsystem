@@ -3,7 +3,7 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     entry: path.resolve(__dirname, 'designsystem/components/index.js'),
-    mode: 'development',
+    mode: 'production',
     output: {
       path: path.resolve(__dirname, 'designsystem/dist'),
       filename: 'index.js',
@@ -11,7 +11,7 @@ module.exports = {
       libraryTarget: 'umd',
       globalObject: 'this'
     },
-    // externals: [nodeExternals()],
+    externals: ['react', 'react-dom'],
     module: {
       rules: [
         {
