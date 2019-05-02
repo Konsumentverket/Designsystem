@@ -9,18 +9,16 @@ glob.sync('./designsystem/components/*/*.js', {
     ]
   }
 )
-.reduce((acc,item) => {
+.forEach(item => {
   var file = item.split(/(\\|\/)/g).pop().replace(".js","");
   entrys[file] = item;
-  return entrys;
 });
 
-console.log("entrys",entrys);
 module.exports = {
     entry: entrys,
     mode: 'production',
     output: {
-      path: path.resolve(__dirname, 'designsystem/dist'),
+      path: path.resolve(__dirname, './dist'),
       filename: '[name].js',
       library: '',
       libraryTarget: 'umd',
