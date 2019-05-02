@@ -1,12 +1,27 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
+const glob = require("glob");
 
+var entrys = {};
+glob.sync('./designsystem/components/*/*.js', {
+    ignore:[
+      "./designsystem/components/*.js",
+      "./designsystem/components/**/*-stories.js"
+    ]
+  }
+)
+.reduce((acc,item) => {
+  var file = item.split(/(\\|\/)/g).pop().replace(".js","");
+  entrys[file] = item;
+  return entrys;
+});
+
+console.log("entrys",entrys);
 module.exports = {
-    entry: path.resolve(__dirname, 'designsystem/components/index.js'),
+    entry: entrys,
     mode: 'production',
     output: {
       path: path.resolve(__dirname, 'designsystem/dist'),
-      filename: 'index.js',
+      filename: '[name].js',
       library: '',
       libraryTarget: 'umd',
       globalObject: 'this'
