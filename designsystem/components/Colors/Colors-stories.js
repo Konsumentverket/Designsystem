@@ -8,7 +8,7 @@ import Page from '../../misc/Page/Page';
 let name = 'Färger';
 
 
-var ColorComponent = ({color,name,token, type}) => {
+var ColorComponent = ({color,name,token}) => {
 
     var ColorComponentStyles = css`
         flex: 0 1 calc(33% - 20px);
@@ -52,7 +52,7 @@ var wrapperStyles = css`
     flex-flow: row wrap;
 `;
 
-storiesOf('Digitala Produkter|Komponenter', module)
+storiesOf('Digitala Produkter|Komponenter/Konstanter', module)
     .add(name, () =>
         <Page>
             <h1>Färger</h1>
