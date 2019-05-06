@@ -8,7 +8,7 @@ let name = "Checkbox";
 storiesOf('Digitala Produkter|Komponenter/Valalternativ', module)
     .add(name, () =>
         <>
-            <Checkbox name="name" label={text("Text", "Jag godkänner avtalet")} value={text("Värde","Yes")} />
+            <Checkbox name="name" label={text("label", "Jag godkänner avtalet")} value={text("value","Yes")} />
         </>
     , { notes: NotesLoader(name) }
     );
