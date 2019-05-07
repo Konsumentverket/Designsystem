@@ -1,6 +1,6 @@
 {
   "name": "kov-components",
-  "version": "0.1.4", 
+  "version": "0.1.5", 
   "description": "kov-components",
   "main": "/designsystem/dist/index.js",
   "author": {
