@@ -3,6 +3,7 @@ import {css,jsx } from '@emotion/core'
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import colors from './Colors'
+import NotesLoader from '../NotesLoader';
 import Page from '../../misc/Page/Page';
 
 let name = 'Färger';
@@ -59,35 +60,35 @@ storiesOf('Digitala Produkter|Komponenter/Konstanter', module)
             
             <h2>Primär färger</h2>
             <div css={wrapperStyles}>
-                <ColorComponent color={colors.profile["blue-dark"]} name="Mörkblå" token="blue-dark" type="primär" />
-                <ColorComponent color={colors.profile["blue-mid"]} name="Mellanblå" token="blue-mid" type="primär" />
-                <ColorComponent color={colors.profile.white} name="Vit" token="white" type="primär" />
+                <ColorComponent color={colors.profile["blue-dark"]} name="Mörkblå" token="profile['blue-dark']" />
+                <ColorComponent color={colors.profile["blue-mid"]} name="Mellanblå" token="profile['blue-mid']" />
+                <ColorComponent color={colors.profile.white} name="Vit" token="profile.white" />
             </div>
 
             <h2>Sekundär färger</h2>
             <div css={wrapperStyles}>
-                <ColorComponent color={colors.secondary.yellow} name="Gul" token="yellow" type="sekundär" />
-                <ColorComponent color={colors.secondary.green} name="Mellangrön" token="green" type="sekundär" />
-                <ColorComponent color={colors.secondary.maroon} name="Maroon" token="maroon" type="sekundär" />
+                <ColorComponent color={colors.secondary.yellow} name="Gul" token="secondary.yellow" />
+                <ColorComponent color={colors.secondary.green} name="Mellangrön" token="secondary.green" />
+                <ColorComponent color={colors.secondary.maroon} name="Maroon" token="secondary.maroon" />
             </div>
 
             <h2>Neutrala färger</h2>
             <div css={wrapperStyles}>
-                <ColorComponent color={colors.natural.black} name="Svart" token="black" type="neutrala" />
-                <ColorComponent color={colors.natural.gray} name="Grå" token="gray" type="neutrala" />
-                <ColorComponent color={colors.natural["gray-light"]} name="Ljusgrå" token="gray-light" type="neutrala" />
-                <ColorComponent color={colors.natural.isabelline} name="Isabelline" token="isabelline" type="neutrala" />
-                <ColorComponent color={colors.natural["ghost-white"]} name="Ghost white" token="ghost-white" type="neutrala" />
+                <ColorComponent color={colors.natural.black} name="Svart" token="natural.black" />
+                <ColorComponent color={colors.natural.gray} name="Grå" token="natural.gray" />
+                <ColorComponent color={colors.natural["gray-light"]} name="Ljusgrå" token="natural['gray-light']" />
+                <ColorComponent color={colors.natural.isabelline} name="Isabelline" token="natural.isabelline" />
+                <ColorComponent color={colors.natural["ghost-white"]} name="Ghost white" token="natural['ghost-white']" />
             </div>
 
             <h2>UI färger</h2>
             <div css={wrapperStyles}>
-                <ColorComponent color={colors.ui.geranium} name="Geranium" token="geranium" type="ui" />
-                <ColorComponent color={colors.ui.green} name="Grön" token="green" type="ui" />
-                <ColorComponent color={colors.ui.cyan} name="Cyan" token="cyan" type="ui" />
-                <ColorComponent color={colors.ui.orange} name="Orange" token="orange" type="ui" />
+                <ColorComponent color={colors.ui.geranium} name="Geranium" token="ui.geranium" />
+                <ColorComponent color={colors.ui.green} name="Grön" token="ui.green" />
+                <ColorComponent color={colors.ui.cyan} name="Cyan" token="ui.cyan" />
+                <ColorComponent color={colors.ui.orange} name="Orange" token="ui.orange" />
             </div>
 
         
-        </Page>
+        </Page>, { notes: NotesLoader(name) }
     );

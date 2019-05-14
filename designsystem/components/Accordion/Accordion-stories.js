@@ -1,12 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {Button} from './Button';
-import { text, select } from '@storybook/addon-knobs';
+import {Accordion} from './Accordion';
 import NotesLoader from '../NotesLoader';
 
-let name = 'Knapp';
+let name = 'Accordion';
 storiesOf('Digitala Produkter|Komponenter', module)
     .add(name, () =>
-        <Button text={text('Text', 'Button')} className={select('Class', ["", "green", "red"])} />
+        <Accordion />
     , { notes: NotesLoader(name) }
     );
