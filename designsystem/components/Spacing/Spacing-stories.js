@@ -4,12 +4,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Page from '../../misc/Page/Page';
 import spacing from './Spacing'
+import NotesLoader from '../NotesLoader';
 import colors from '../Colors/Colors'
 
 
 const baseSize = 16;
-let name = 'Avstånd';
-storiesOf('Digitala Produkter|Komponenter/Konstanter', module)
+let name = 'Grid och struktur';
+storiesOf('Digitala produkter|Grunder och foundations', module)
     .add(name, () =>
         <Page>
             <h1>Avstånd med {baseSize} pixlars root</h1>
@@ -41,5 +42,5 @@ storiesOf('Digitala Produkter|Komponenter/Konstanter', module)
                 </tbody>
 
             </table>
-        </Page>
+        </Page>, { notes: NotesLoader(name) }
     );

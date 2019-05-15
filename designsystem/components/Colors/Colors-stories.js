@@ -6,7 +6,7 @@ import colors from './Colors'
 import NotesLoader from '../NotesLoader';
 import Page from '../../misc/Page/Page';
 
-let name = 'Färger';
+let name = 'Färgsystem - Hallå konsument';
 
 
 var ColorComponent = ({color,name,token}) => {
@@ -53,7 +53,7 @@ var wrapperStyles = css`
     flex-flow: row wrap;
 `;
 
-storiesOf('Digitala Produkter|Komponenter/Konstanter', module)
+storiesOf('Digitala produkter|Grunder och foundations/Färgsystem', module)
     .add(name, () =>
         <Page>
             <h1>Färger</h1>
