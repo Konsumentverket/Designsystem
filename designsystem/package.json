@@ -8,13 +8,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@storybook/addon-backgrounds": "^5.0.11",
     "@storybook/react": "^5.0.1",
     "babel-loader": "^8.0.5"
   },
   "scripts": {
     "hk-storybook": "set STORYBOOK_SITE=HK&& start-storybook -p 9001 -c ./sites/hallakonsument",
     "hk-build-storybook": "set STORYBOOK_SITE=HK&& build-storybook -c ./sites/hallakonsument -o ./sites/hallakonsument/build",
-
     "micro-storybook": "set STORYBOOK_SITE=MICRO&& start-storybook -p 9001 -c ./sites/microsite",
     "micro-build-storybook": "set STORYBOOK_SITE=MICRO&& build-storybook -c ./sites/microsite -o ./sites/microsite/build"
   },
