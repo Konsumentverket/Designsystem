@@ -1,5 +1,7 @@
 const spacing = {
+    'spacing-xs': '0.25rem',
     'spacing-s': '0.5rem',
+    'spacing-m/s': '0.75rem',
     'spacing-m': '1rem',
     'spacing-l': '1.5rem',
     'spacing-xl': '2rem',

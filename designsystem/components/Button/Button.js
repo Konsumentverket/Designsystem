@@ -11,7 +11,7 @@ class Button extends React.Component {
             classes.push("darkmode")
         }
         if(this.props.buttontype){
-            classes.push(this.props.type)
+            classes.push(this.props.buttontype)
         }
         if(this.props.className){
             classes.push(this.props.className);
@@ -30,8 +30,8 @@ class Button extends React.Component {
                     css={[style,this.props.style]} 
                     className={classes.join(" ")} 
                     disabled={this.props.disabled} 
-                    type={this.props.type} 
-                    value={this.props.text} 
+                    type={this.props.type ? this.props.type : "submit"} 
+                    value={this.props.text}
                 />;
     }
 }

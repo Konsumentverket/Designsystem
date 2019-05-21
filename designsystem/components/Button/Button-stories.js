@@ -19,7 +19,7 @@ storiesOf('Digitala Produkter|Komponenter', module)
             disabled={boolean("disabled",false)}
             darkmode={boolean("darkmode",false)}
             buttontype={select("buttontype",["primary","secondary","cta"])}
-            type={select("type",["button","submit"])}
+            type={select("type",["submit","button"])}
             size={select("size",["small","medium","large"])}
         />
     , { notes: NotesLoader(name) }

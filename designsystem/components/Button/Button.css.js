@@ -3,18 +3,23 @@ import spacing from '../Spacing/Spacing';
 import colors from '../Colors/Colors';
 
 export default css`
-    padding: ${spacing["spacing-s"]} ${spacing["spacing-3xl"]};
+    padding: calc(${spacing["spacing-s"]} + 2px) ${spacing["spacing-3xl"]};
     background-color: ${colors.profile["blue-mid"]};
     border: 2px solid ${colors.profile["blue-mid"]};
     border-radius: 3px;
-    color: ${colors.profile.white};
+    color: ${colors.profile.white}; 
+    line-height: 16px;
+    font-size: 16px;
+    user-select: none;
 
     &.medium{
-        padding: ${spacing["spacing-m"]} ${spacing["spacing-3xl"]};
+        padding: calc(${spacing["spacing-m/s"]} + 2px) ${spacing["spacing-3xl"]};
+        font-size: 19px;
     }
 
     &.large{
-        padding: ${spacing["spacing-l"]} ${spacing["spacing-3xl"]};
+        padding: calc(${spacing["spacing-m"]} + 2px) ${spacing["spacing-3xl"]};
+        font-size: 24px;
     }
 
     &.secondary{
