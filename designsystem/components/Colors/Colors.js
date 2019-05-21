@@ -1,4 +1,4 @@
-export default {
+const colors =  {
 
     profile:{
         "blue-dark": "#162259",
@@ -24,3 +24,5 @@ export default {
         "orange": "#FA6401"
     }
 }
+
+module.exports = colors; 

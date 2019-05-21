@@ -1,21 +1,22 @@
 const path = require('path');
-const glob = require("glob");
+// const glob = require("glob");
 
-var entrys = {};
-glob.sync('./designsystem/components/*/*.js', {
-    ignore:[
-      "./designsystem/components/*.js",
-      "./designsystem/components/**/*-stories.js"
-    ]
-  }
-)
-.forEach(item => {
-  var file = item.split(/(\\|\/)/g).pop().replace(".js","");
-  entrys[file] = item;
-});
+// var entrys = {};
+// glob.sync('./designsystem/components/*/*.js', {
+//     ignore:[
+//       "./designsystem/components/*.js",
+//       "./designsystem/components/**/*-stories.js",
+//       "./designsystem/components/**/*css.js"
+//     ]
+//   }
+// )
+// .forEach(item => {
+//   var file = item.split(/(\\|\/)/g).pop().replace(".js","");
+//   entrys[file] = item;
+// });
 
 module.exports = {
-    entry: entrys,
+    entry: path.resolve(__dirname, 'designsystem/components/index.js'),
     mode: 'production',
     output: {
       path: path.resolve(__dirname, './dist'),
@@ -24,7 +25,7 @@ module.exports = {
       libraryTarget: 'umd',
       globalObject: 'this'
     },
-    externals: ['react', 'react-dom'],
+    externals: ['react', 'react-dom','@emotion/core'],
     module: {
       rules: [
         {

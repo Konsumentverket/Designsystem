@@ -2,7 +2,7 @@
   "name": "kov-components",
   "version": "0.1.5", 
   "description": "kov-components",
-  "main": "/designsystem/dist/index.js",
+  "main": "/dist/main.js",
   "author": {
     "name": "Zero"
   },
