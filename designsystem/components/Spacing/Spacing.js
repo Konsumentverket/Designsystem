@@ -11,4 +11,4 @@ const spacing = {
     'spacing-5xl': '4rem',
   };
   
-  module.exports = spacing; 
+  export { spacing }

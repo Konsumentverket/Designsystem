@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
-import spacing from '../Spacing/Spacing';
-import colors from '../Colors/Colors';
+import { spacing } from '../Spacing/Spacing';
+import { colors } from '../Colors/Colors';
 
 export default css`
     padding: calc(${spacing["spacing-s"]} + 2px) ${spacing["spacing-3xl"]};
