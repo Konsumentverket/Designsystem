@@ -2,7 +2,7 @@
 import {css,jsx } from '@emotion/core'
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import colors from './Colors'
+import {colors} from './Colors'
 import NotesLoader from '../NotesLoader';
 import Page from '../../misc/Page/Page';
 

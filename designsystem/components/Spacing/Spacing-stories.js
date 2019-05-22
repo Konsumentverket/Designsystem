@@ -3,9 +3,9 @@ import {css,jsx } from '@emotion/core'
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Page from '../../misc/Page/Page';
-import spacing from './Spacing'
+import {spacing} from './Spacing'
 import NotesLoader from '../NotesLoader';
-import colors from '../Colors/Colors'
+import {colors} from '../Colors/Colors'
 
 
 const baseSize = 16;
