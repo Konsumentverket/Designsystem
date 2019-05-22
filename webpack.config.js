@@ -25,7 +25,7 @@ module.exports = {
       libraryTarget: 'umd',
       globalObject: 'this'
     },
-    externals: ['react', 'react-dom','@emotion/core'],
+    externals: ['react', 'react-dom','@emotion/core','react-inlinesvg'],
     module: {
       rules: [
         {
@@ -35,6 +35,9 @@ module.exports = {
           options: {
             presets: ['@babel/preset-env', '@babel/react']
           }
+        },{
+          test: /\.svg$/,
+          loader: 'svg-inline-loader'
         }
       ]
     }
