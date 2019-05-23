@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ExpandSection = ({ content: { headline, title, text } }) => {
+export const ExpandSection = ({ content: { headline, title, text } }) => {
     const [open, setOpen] = useState(false);
 
     const toggleOpen = (e) => {
@@ -24,5 +24,3 @@ const ExpandSection = ({ content: { headline, title, text } }) => {
         </div>
     );
 };
-
-export default ExpandSection;

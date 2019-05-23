@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React, { useState, useEffect } from "react";
-import ExpandSection from "./ExpandSection";
+import { ExpandSection } from "./ExpandSection";
 import style from './Accordion.css';
 
-const Accordion = ({ content }) => {
+export const Accordion = ({ content }) => {
 
     const [children, setchildren] = useState(content.contentCollection.items);
     return (
@@ -21,5 +21,3 @@ const Accordion = ({ content }) => {
         </div>
     );
 };
-
-export default Accordion;
