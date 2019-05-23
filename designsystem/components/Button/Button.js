@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core'
 import React from 'react';
 import style from './Button.css';
+import { Icon } from '../Icon/Icon';
 
 class Button extends React.Component {
 
@@ -22,17 +23,21 @@ class Button extends React.Component {
         if(this.props.size){
             classes.push(this.props.size);
         }
+        if(this.props.icon){
+            classes.push("hasicon")
+        }
 
-        
-
-
-        return <input   
+        return <button   
                     css={[style,this.props.style]} 
                     className={classes.join(" ")} 
                     disabled={this.props.disabled} 
                     type={this.props.type ? this.props.type : "submit"} 
-                    value={this.props.text}
-                />;
+                >
+                    <span className="buttontext">
+                        {this.props.icon ? <Icon icon={this.props.icon} className="buttonIcon" /> : null} 
+                        {this.props.text}
+                    </span>
+                </button>;
     }
 }
 export { Button };

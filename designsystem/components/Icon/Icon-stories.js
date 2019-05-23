@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
 import { Icon, iconDefinitions } from './Icon';
-import { select  } from '@storybook/addon-knobs';
+import { select, text } from '@storybook/addon-knobs';
 
 var clickToDownload = (e,key) => {
     e.preventDefault();
@@ -19,11 +19,14 @@ var clickToDownload = (e,key) => {
 let name = 'Ikon';
 storiesOf('Digitala Produkter|Komponenter/Ikoner', module)
     .add(name, () =>
-        <Icon icon={select("icon", Object.keys(iconDefinitions), Object.keys(iconDefinitions)[0])} />
+        <Icon 
+            icon={select("icon", Object.keys(iconDefinitions), Object.keys(iconDefinitions)[0])} 
+            className={text("className","")}
+        />
     , { notes: NotesLoader(name) }
     ).add("Alla ikoner", () => {
-        let icons = Object.keys(iconDefinitions).map((key) => ( 
-            <a href="#" onClick={(e) => clickToDownload(e,key)} title={"Klicka för att ladda ner ikonen: "+key}>
+        let icons = Object.keys(iconDefinitions).map((key,i) => ( 
+            <a key={i} style={{display: "inline-block"}} href="#" onClick={(e) => clickToDownload(e,key)} title={"Klicka för att ladda ner ikonen: "+key}>
                 <Icon icon={key} />
             </a> 
         ));

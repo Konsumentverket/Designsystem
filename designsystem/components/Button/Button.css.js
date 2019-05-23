@@ -66,4 +66,56 @@ export default css`
             background-color: #004724;
         }
     }
+
+
+    &.hasicon {
+
+        .buttontext{
+            padding-left: 35px;
+            position: relative;
+            svg{
+                position: absolute;
+                top:-7px;
+                left: 0px;
+                width: 30px;
+                fill: #fff;
+            }
+        }
+
+        &.medium{
+
+            .buttontext{
+                padding-left: 45px;
+            }
+
+            svg{
+                width: 35px;
+            }
+        }
+        &.large{
+
+            .buttontext{
+                padding-left: 55px;
+            }
+
+            svg{
+                width: 40px;
+            }
+        }
+
+    }
+
+    /* .buttonIcon{
+        margin-right: ${spacing["spacing-s"]};
+        svg{
+            fill: ${colors.profile.white};
+            width: 22px;
+            vertical-align: middle;
+            position: relative;
+            top: -2px;
+        }
+    } */
+
+
+
 `;
