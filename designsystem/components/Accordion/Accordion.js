@@ -1,15 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React, { useState, useEffect } from "react";
+import { ExpandSection } from "./ExpandSection";
 import style from './Accordion.css';
 
 const Accordion = ({ content }) => {
 
     const [children, setchildren] = useState(content.contentCollection.items);
     return (
-        <div css={style} className="content-accordion">
+        <div className="content-accordion">
             <h2>{content.headline}</h2>
-            <div className="accordion-content">
+            <div className="accordion-content" css={style}>
                 {children.map(c => (
                     <ExpandSection
                         content={c}
@@ -22,7 +23,7 @@ const Accordion = ({ content }) => {
 };
 
 
-const ExpandSection = ({ content: { headline, title, text } }) => {
+/* const ExpandSection = ({ content: { headline, title, text } }) => {
     const [open, setOpen] = useState(false);
 
     const toggleOpen = (e) => {
@@ -45,6 +46,6 @@ const ExpandSection = ({ content: { headline, title, text } }) => {
             </div>
         </div>
     );
-};
+}; */
 
 export { Accordion };
