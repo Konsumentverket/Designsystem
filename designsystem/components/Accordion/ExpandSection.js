@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const ExpandSection = ({ content: { headline, title, text } }) => {
     const [open, setOpen] = useState(false);
@@ -25,4 +25,4 @@ const ExpandSection = ({ content: { headline, title, text } }) => {
     );
 };
 
-export { ExpandSection };
+export default ExpandSection;
