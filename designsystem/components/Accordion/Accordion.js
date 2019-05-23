@@ -47,4 +47,4 @@ const ExpandSection = ({ content: { headline, title, text } }) => {
     );
 };
 
-export default Accordion;
+export { Accordion };
