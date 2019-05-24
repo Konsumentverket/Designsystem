@@ -1,32 +1,26 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React from 'react';
 import IconCss from './Icon.css';
 
-import cars from './svg/cars.svg'
-import clothes from './svg/clothes.svg'
-import furniture from './svg/furniture.svg'
-import other from './svg/other.svg'
-import telecom from './svg/telecom.svg'
-
-
-import SVG from 'react-inlinesvg';
-
-
-
+import Cars from './svg/cars.svg';
+import Clothes from './svg/clothes.svg';
+import Furniture from './svg/furniture.svg';
+import Other from './svg/other.svg';
+import Telecom from './svg/telecom.svg';
 
 
 
 const iconDefinitions = {
-    cars,
-    clothes,
-    furniture,
-    other,
-    telecom
+    Cars,
+    Clothes,
+    Furniture,
+    Other,
+    Telecom
 }
 
-const Icon = ({icon,className}) => (
-    <SVG css={IconCss} src={iconDefinitions[icon]} className={className}></SVG>
-)
+const Icon = ({icon,className}) => {
+    const Element = iconDefinitions[icon];
+    return <Element className={className} css={IconCss} />
+}
 
 export { Icon, iconDefinitions };

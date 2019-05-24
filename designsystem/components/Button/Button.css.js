@@ -73,7 +73,7 @@ export default css`
         .buttontext{
             padding-left: 35px;
             position: relative;
-            svg{
+            .buttonicon{
                 position: absolute;
                 top:-7px;
                 left: 0px;
@@ -88,7 +88,7 @@ export default css`
                 padding-left: 45px;
             }
 
-            svg{
+            .buttonicon{
                 width: 35px;
             }
         }
@@ -98,23 +98,13 @@ export default css`
                 padding-left: 55px;
             }
 
-            svg{
+            .buttonicon{
                 width: 40px;
             }
         }
 
     }
 
-    /* .buttonIcon{
-        margin-right: ${spacing["spacing-s"]};
-        svg{
-            fill: ${colors.profile.white};
-            width: 22px;
-            vertical-align: middle;
-            position: relative;
-            top: -2px;
-        }
-    } */
 
 
 
