@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ExpandSection } from "./ExpandSection";
 import style from './Accordion.css';
 
@@ -22,7 +22,7 @@ import style from './Accordion.css';
     );
 }; */
 
-export class Accordion extends React.Component {
+class Accordion extends React.Component {
 
     render() {
         return (
@@ -41,3 +41,5 @@ export class Accordion extends React.Component {
     }
 
 }
+
+export { Accordion }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 /* export const ExpandSection = ({ content: { headline, title, text } }) => {
     const [open, setOpen] = useState(false);
@@ -25,7 +25,7 @@ import React, { useState } from "react";
     );
 }; */
 
-export class ExpandSection extends React.Component {
+class ExpandSection extends React.Component {
 
     componentDidMount() {
         this.state = { open: false }
@@ -55,3 +55,5 @@ export class ExpandSection extends React.Component {
         );
     }
 }
+
+export { ExpandSection }
