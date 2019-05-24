@@ -10,7 +10,8 @@
     "@babel/core": "^7.3.4",
     "@storybook/addon-backgrounds": "^5.0.11",
     "@storybook/react": "^5.0.1",
-    "babel-loader": "^8.0.5"
+    "babel-loader": "^8.0.5",
+    "babel-plugin-inline-react-svg": "^1.1.0"
   },
   "scripts": {
     "hk-storybook": "set STORYBOOK_SITE=HK&& start-storybook -p 9001 -c ./sites/hallakonsument",

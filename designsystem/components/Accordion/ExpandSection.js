@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 import React from "react";
 
 /* export const ExpandSection = ({ content: { headline, title, text } }) => {
