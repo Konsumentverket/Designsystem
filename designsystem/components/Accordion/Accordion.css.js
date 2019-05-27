@@ -3,6 +3,13 @@ import { colors } from "../Colors/Colors";
 
 export default css`
   .content-text-section {
+
+    .expand-icon {
+        width: 2rem;
+        height: 2rem;
+        padding: 0 0.5rem;
+    }
+
     a.toggle-heading {
         position: relative;
         display: block;

@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from "react";
+import { Icon } from '../Icon/Icon';
 
 /* export const ExpandSection = ({ content: { headline, title, text } }) => {
     const [open, setOpen] = useState(false);
@@ -41,11 +42,12 @@ class ExpandSection extends React.Component {
     render() {
 
         const openClass = this.state && this.state.open ? "open" : "closed";
+        const icon = this.state && this.state.open ? "Telecom" : "Furniture";
 
         return (
             <div className="content-text-section">
                 <a href="#" className={`toggle-heading ${openClass}`} onClick={this.toggleOpen.bind(this)}>
-                    <i className={`icon icon-expand ${openClass}`}></i>
+                    <Icon className="expand-icon" icon={icon} />
                     <h3 className="headline">
                         {this.props.content.headline}
                     </h3>
