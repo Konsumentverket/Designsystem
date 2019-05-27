@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React from "react";
+import { useState } from "react";
 import { Icon } from '../Icon/Icon';
 
-/* export const ExpandSection = ({ content: { headline, title, text } }) => {
+const ExpandSection = ({ content: { headline, title, text } }) => {
     const [open, setOpen] = useState(false);
 
     const toggleOpen = (e) => {
@@ -12,11 +12,12 @@ import { Icon } from '../Icon/Icon';
     };
 
     const openClass = open ? "open" : "closed";
+    const icon = open ? "Telecom" : "Furniture";
 
     return (
         <div className="content-text-section">
             <a href="#" className={`toggle-heading ${openClass}`} onClick={(e) => toggleOpen(e)}>
-                <i className={`icon icon-expand ${openClass}`}></i>
+                <Icon className="expand-icon" icon={icon} />
                 <h3 className="headline">
                     {headline}
                 </h3>
@@ -26,38 +27,6 @@ import { Icon } from '../Icon/Icon';
             </div>
         </div>
     );
-}; */
-
-class ExpandSection extends React.Component {
-
-    componentDidMount() {
-        this.state = { open: false }
-    }
-
-    toggleOpen(e) {
-        e.preventDefault();
-        this.setState({ open: !this.state.open });
-    };
-
-    render() {
-
-        const openClass = this.state && this.state.open ? "open" : "closed";
-        const icon = this.state && this.state.open ? "Telecom" : "Furniture";
-
-        return (
-            <div className="content-text-section">
-                <a href="#" className={`toggle-heading ${openClass}`} onClick={this.toggleOpen.bind(this)}>
-                    <Icon className="expand-icon" icon={icon} />
-                    <h3 className="headline">
-                        {this.props.content.headline}
-                    </h3>
-                </a>
-                <div className={`section-content ${openClass}`}>
-                    <div>{this.props.content.text}</div>
-                </div>
-            </div>
-        );
-    }
-}
+};
 
 export { ExpandSection }
