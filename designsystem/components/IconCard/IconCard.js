@@ -1,3 +1,4 @@
+import React from "react";
 import IconCardStyle from "./IconCard.css";
 import { Icon, iconDefinitions } from '../Icon/Icon';
 

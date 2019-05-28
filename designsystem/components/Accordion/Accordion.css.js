@@ -46,11 +46,22 @@ export default css`
       color: transparent;
       overflow: hidden;
       padding-top: 0;
+      max-height: 0;
+
+      a{
+          line-height: 0;
+          color: transparent;
+      }
 
       &.open {
         line-height: 1.5;
         padding-bottom: 1em;
         color: black;
+        max-height: 500px;
+        a{
+          line-height: 1.5;
+          color: inherit;
+      }
       }
       &.closed {
       }

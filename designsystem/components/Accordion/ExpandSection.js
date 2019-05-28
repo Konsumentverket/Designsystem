@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core'
 import { useState } from "react";
 import { Icon } from '../Icon/Icon';
+import { Markdown } from '../../misc/MarkDown';
 
 const ExpandSection = ({ content: { headline, title, text } }) => {
     const [open, setOpen] = useState(false);
@@ -23,7 +24,7 @@ const ExpandSection = ({ content: { headline, title, text } }) => {
                 </h3>
             </a>
             <div className={`section-content ${openClass}`}>
-                <div>{text}</div>
+                <Markdown content={text} />
             </div>
         </div>
     );
