@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 import React from "react";
 import IconCardStyle from "./IconCard.css";
 import { Icon, iconDefinitions } from '../Icon/Icon';
@@ -7,7 +9,7 @@ const IconCard = ({ title, icon, text, link, href }) => {
 
     return (
         <div css={IconCardStyle}>
-            <Link href={href} item={link}>
+            <Link linkUrl={link}>
                 <div className="iconCard">
                     <div className="icon-container">
                         <Icon icon={icon} />
