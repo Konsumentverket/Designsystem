@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
 import { IconCard } from './IconCard';
 
-let name = 'IconCard';
+let name = 'Ikonkort';
 storiesOf('Digitala Produkter|Komponenter', module)
     .add(name, () =>
         <IconCard icon="Furniture" text="texten" linkUrl="url/for/link" />
