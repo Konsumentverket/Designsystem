@@ -7,6 +7,8 @@ import style from './Accordion.css';
 const Accordion = ({ content }) => {
 
     const [children, setchildren] = useState(content.contentCollection.items);
+    console.log(content);
+
     return (
         <div className="content-accordion">
             <h2>{content.headline}</h2>
