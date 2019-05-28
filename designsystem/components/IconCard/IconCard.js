@@ -1,16 +1,21 @@
 import React from "react";
 import IconCardStyle from "./IconCard.css";
 import { Icon, iconDefinitions } from '../Icon/Icon';
+import { Link } from "../Link/Link";
 
-const IconCard = ({ title, icon, text, linkUrl }) => {
+const IconCard = ({ title, icon, text, link, href }) => {
+
     return (
-        <a href={linkUrl}>
-            <div className="iconCard" css={IconCardStyle}>
-                <h3>{title}</h3>
-                <Icon icon="Furniture" />
-                <span>{text}</span>
-            </div>
-        </a>
+        <div css={IconCardStyle}>
+            <Link href={href} item={link}>
+                <div className="iconCard">
+                    <div className="icon-container">
+                        <Icon icon={icon} />
+                    </div>
+                    <div className="caption">{text}</div>
+                </div>
+            </Link>
+        </div>
     );
 };
 
