@@ -5,7 +5,7 @@ import IconCardStyle from "./IconCard.css";
 import { Icon, iconDefinitions } from '../Icon/Icon';
 import { Link } from "../Link/Link";
 
-const IconCard = ({ icon, text, link }) => {
+const IconCard = ({ card: { icon, text, link } }) => {
 
     return (
         <div css={IconCardStyle}>
