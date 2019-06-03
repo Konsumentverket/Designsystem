@@ -7,7 +7,6 @@ import style from './Accordion.css';
 const Accordion = ({ content }) => {
 
     const [children, setchildren] = useState(content.contentCollection.items);
-    console.log("Accordion: ", content);
 
     return (
         <div className="content-accordion">

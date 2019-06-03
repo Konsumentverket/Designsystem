@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core'
 import { useState } from "react";
 import { Icon } from '../Icon/Icon';
-import { Markdown } from '../MarkDown';
+import { Markdown } from '../Markdown';
 
 const ExpandSection = ({ content: { headline, title, text } }) => {
     const [open, setOpen] = useState(false);
