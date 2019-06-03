@@ -6,9 +6,6 @@ export default css`
   padding: 1em 0.5em;
   margin-top: 1rem;
 
-  &.gray {
-    background-color: ${colors.natural["gray-light"]};
-  }
   &.blue {
     background-color: ${colors.profile["blue-mid"]};
     color: white;
