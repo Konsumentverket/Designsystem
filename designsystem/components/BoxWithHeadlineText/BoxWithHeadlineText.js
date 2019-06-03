@@ -7,8 +7,6 @@ import BoxStyle from "./BoxWithHeadlineText.css";
 const BoxWithHeadlineText = ({ text, headline, color, backgroundWidth }) => {
 
     const show = text && headline;
-    console.log("Box has color: ", color)
-    console.log("And width: ", backgroundWidth)
 
     let selectedColor = color => {
         switch (color) {
@@ -22,6 +20,10 @@ const BoxWithHeadlineText = ({ text, headline, color, backgroundWidth }) => {
                 return color;
         }
     }
+
+    console.log("Box has color: ", color)
+    console.log("Returning color ", selectedColor(color))
+    console.log("And width: ", backgroundWidth)
 
     return (
         show &&
