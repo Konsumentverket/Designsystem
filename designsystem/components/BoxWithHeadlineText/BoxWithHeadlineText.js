@@ -15,15 +15,11 @@ const BoxWithHeadlineText = ({ text, headline, color, backgroundWidth }) => {
             case "Blå":
                 return "blue";
             case "Vit":
-                return "white;"
+                return "white";
             default:
                 return color;
         }
     }
-
-    console.log("Box has color: ", color)
-    console.log("Returning color ", selectedColor(color))
-    console.log("And width: ", backgroundWidth)
 
     return (
         show &&
