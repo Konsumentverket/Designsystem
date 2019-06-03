@@ -12,7 +12,7 @@ storiesOf('Digitala Produkter|Komponenter', module)
         <BoxWithHeadlineText
             headline="Rubrik"
             text="Text"
-            color={select("Bakgrundsfärg", ["gray", "blue", "white"])}
+            color={select("Bakgrundsfärg", ["Grå", "Blå", "Vit"])}
             backgroundWidth={select("Bredd", ["Kolumnbredd", "Helbredd"])}
         />
         , { notes: NotesLoader(name) }

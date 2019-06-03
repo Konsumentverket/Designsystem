@@ -9,9 +9,23 @@ const BoxWithHeadlineText = ({ text, headline, color, backgroundWidth }) => {
     const show = text && headline;
     console.log("Box has color: ", color)
     console.log("And width: ", backgroundWidth)
+
+    let selectedColor = color => {
+        switch (color) {
+            case "Grå":
+                return "gray";
+            case "Blå":
+                return "blue";
+            case "Vit":
+                return "white;"
+            default:
+                return color;
+        }
+    }
+
     return (
         show &&
-        <div css={BoxStyle} className={color}>
+        <div css={BoxStyle} className={selectedColor(color)}>
             <span className="heading">{headline}</span>
             <Markdown content={text} />
         </div>
