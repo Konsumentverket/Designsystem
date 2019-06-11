@@ -33,7 +33,7 @@ class Button extends React.Component {
             disabled={this.props.disabled}
             type={this.props.type ? this.props.type : "submit"}
             onClick={this.props.onClick}
-            ref={this.props.ref}
+            ref={this.props.reference}
         >
             <span className="buttontext">
                 {this.props.icon ? <Icon icon={this.props.icon} className="buttonicon" /> : null}
