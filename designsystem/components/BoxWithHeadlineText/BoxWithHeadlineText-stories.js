@@ -13,7 +13,7 @@ storiesOf('Digitala Produkter|Komponenter', module)
             headline="Rubrik"
             text="Text"
             color={select("Bakgrundsfärg", ["Grå", "Blå", "Vit"])}
-            backgroundWidth={select("Bredd", ["Kolumnbredd", "Helbredd"])}
+            backgroundWidth={select("Bredd", ["Kolumnbredd", "Fullbredd"])}
         />
         , { notes: NotesLoader(name) }
     );

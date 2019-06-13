@@ -13,6 +13,12 @@ export default css`
   &.white {
     background-color: ${colors.profile.white};
   }
+  &.column {
+    width: 50%;
+  }
+  &.full {
+    width: 100%;
+  }
 
   span.heading {
     text-transform: uppercase;

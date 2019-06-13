@@ -17,16 +17,27 @@ const BoxWithHeadlineText = ({ text, headline, color, backgroundWidth }) => {
             case "Vit":
                 return "white";
             default:
-                return color;
+                return "gray";
+        }
+    }
+
+    let selectedWidth = width => {
+        switch (width) {
+            case "Kolumnbredd":
+                return "column";
+            case "Fullbredd":
+                return "full";
+            default:
+                return "column";
         }
     }
 
     return (
         show &&
-        <div css={BoxStyle} className={selectedColor(color)}>
+        <div css={BoxStyle} className={`${selectedColor(color)} ${selectedWidth(backgroundWidth)}`}>
             <span className="heading">{headline}</span>
             <Markdown content={text} />
-        </div>
+        </div >
     );
 };
 
