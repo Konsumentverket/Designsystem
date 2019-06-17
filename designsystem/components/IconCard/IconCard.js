@@ -9,7 +9,7 @@ const IconCard = ({ card: { icon, text, link } }) => {
 
     return (
         <div css={IconCardStyle}>
-            <Link linkUrl={link.url}>
+            <Link linkUrl={link ? link.url : ""}>
                 <div className="iconCard">
                     <div className="icon-container">
                         <Icon icon={icon} />
