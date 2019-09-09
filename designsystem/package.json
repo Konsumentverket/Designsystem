@@ -10,7 +10,9 @@
     "@babel/core": "^7.3.4",
     "@storybook/addon-backgrounds": "^5.0.11",
     "@storybook/react": "^5.0.1",
-    "babel-loader": "^8.0.5"
+    "babel-loader": "^8.0.5",
+    "babel-plugin-inline-react-svg": "^1.1.0",
+    "case-sensitive-paths-webpack-plugin": "^2.2.0"
   },
   "scripts": {
     "hk-storybook": "set STORYBOOK_SITE=HK&& start-storybook -p 9001 -c ./sites/hallakonsument",
@@ -31,10 +33,12 @@
     "css-loader": "^2.1.0",
     "emotion": "^10.0.9",
     "lodash": "^4.17.11",
+    "marked": "^0.6.3",
     "node-sass": "^4.11.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-markdown": "^4.0.6",
+    "react-marked": "^0.3.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1"
   }

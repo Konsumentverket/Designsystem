@@ -3,6 +3,13 @@ import { colors } from "../Colors/Colors";
 
 export default css`
   .content-text-section {
+
+    .expand-icon {
+        width: 2rem;
+        height: 2rem;
+        padding: 0 0.5rem;
+    }
+
     a.toggle-heading {
         position: relative;
         display: block;
@@ -39,11 +46,22 @@ export default css`
       color: transparent;
       overflow: hidden;
       padding-top: 0;
+      max-height: 0;
+
+      a{
+          line-height: 0;
+          color: transparent;
+      }
 
       &.open {
         line-height: 1.5;
         padding-bottom: 1em;
         color: black;
+        max-height: 500px;
+        a{
+          line-height: 1.5;
+          color: inherit;
+      }
       }
       &.closed {
       }

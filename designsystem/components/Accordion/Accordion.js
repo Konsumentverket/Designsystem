@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React from "react";
+import React, { useState } from "react";
 import { ExpandSection } from "./ExpandSection";
 import style from './Accordion.css';
 
-/* export const Accordion = ({ content }) => {
+const Accordion = ({ content }) => {
 
     const [children, setchildren] = useState(content.contentCollection.items);
+
     return (
         <div className="content-accordion">
             <h2>{content.headline}</h2>
@@ -20,26 +21,6 @@ import style from './Accordion.css';
             </div>
         </div>
     );
-}; */
-
-class Accordion extends React.Component {
-
-    render() {
-        return (
-            <div className="content-accordion">
-                <h2>{this.props.content.contentCollection.headline}</h2>
-                <div className="accordion-content" css={style}>
-                    {this.props.content.contentCollection.items.map(c => (
-                        <ExpandSection
-                            content={c}
-                            key={c.title}
-                        />
-                    ))}
-                </div>
-            </div>
-        );
-    }
-
-}
+};
 
 export { Accordion }
