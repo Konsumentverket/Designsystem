@@ -2,20 +2,25 @@
 import { jsx } from '@emotion/core'
 import IconCss from './Icon.css';
 
-import Cars from './svg/cars.svg';
-import Clothes from './svg/clothes.svg';
-import Furniture from './svg/furniture.svg';
-import Other from './svg/other.svg';
-import Telecom from './svg/telecom.svg';
+import Adapt from './svg/adapt.svg';
+import Close from './svg/close.svg';
+import Easytoread from './svg/easytoread.svg';
+import Search from './svg/search.svg';
+import Signlanguage from './svg/signlanguage.svg'
+import Otherlang from './svg/otherlang.svg'
+import Volume from './svg/volume.svg'
+
 
 
 
 const iconDefinitions = {
-    Cars,
-    Clothes,
-    Furniture,
-    Other,
-    Telecom
+    Adapt,
+    Close,
+    Easytoread,
+    Search,
+    Signlanguage,
+    Volume,
+    Otherlang
 }
 
 const Icon = ({icon,className}) => {
