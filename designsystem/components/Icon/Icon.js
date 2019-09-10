@@ -1,17 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import IconCss from './Icon.css';
 
-import Adapt from './svg/adapt.svg';
-import Close from './svg/close.svg';
-import Easytoread from './svg/easytoread.svg';
-import Search from './svg/search.svg';
-import Signlanguage from './svg/signlanguage.svg'
-import Otherlang from './svg/otherlang.svg'
-import Volume from './svg/volume.svg'
-
-
-
+import Adapt from './svg/Adapt'
+import Close from './svg/Close'
+import Easytoread from './svg/Easytoread';
+import Search from './svg/Search';
+import Signlanguage from './svg/Signlanguage'
+import Volume from './svg/Volume'
+import Otherlang from './svg/Otherlang'
 
 const iconDefinitions = {
     Adapt,
@@ -23,9 +19,11 @@ const iconDefinitions = {
     Otherlang
 }
 
-const Icon = ({icon,className}) => {
+const Icon = ({icon,className, style}) => {
     const Element = iconDefinitions[icon];
-    return <Element className={className} css={IconCss} />
+    return <svg className={className} css={style} width="24px" height="24px" viewBox="0 0 24 24">
+                <Element />
+            </svg> 
 }
 
 export { Icon, iconDefinitions };

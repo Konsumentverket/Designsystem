@@ -27,7 +27,10 @@ storiesOf('Digitala Produkter|Komponenter/Ikoner', module)
             />
         </a>
     }, { notes: NotesLoader(name) }
-    );
+    ).add("Alla ikoner", () => {
+        let icons = Object.keys(iconDefinitions).map((key) => ( <div key={key}>{key}<Icon icon={key} /></div> ));
+        return icons;
+    });;
 
     
     
