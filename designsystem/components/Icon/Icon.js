@@ -8,6 +8,8 @@ import Search from './svg/Search';
 import Signlanguage from './svg/Signlanguage'
 import Volume from './svg/Volume'
 import Otherlang from './svg/Otherlang'
+import Ecc from './svg/Ecc'
+import Arrow from './svg/Arrow'
 
 const iconDefinitions = {
     Adapt,
@@ -16,14 +18,14 @@ const iconDefinitions = {
     Search,
     Signlanguage,
     Volume,
-    Otherlang
+    Otherlang,
+    Arrow,
+    Ecc
 }
 
 const Icon = ({icon,className, style}) => {
     const Element = iconDefinitions[icon];
-    return <svg className={className} css={style} width="24px" height="24px" viewBox="0 0 24 24">
-                <Element />
-            </svg> 
+    return <Element className={className} style={style} />
 }
 
 export { Icon, iconDefinitions };
