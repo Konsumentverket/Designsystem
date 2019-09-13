@@ -1,0 +1,17 @@
+{
+    "icons": {
+                "Car": {
+                    "title":"Fåtölj", 
+                    "url":"./EditorIcons/Armchair.svg"
+                },
+                "Receipt": {
+                    "title":"Kläder", 
+                    "url":"./EditorIcons/Clothes.svg"
+                },
+                "Search": {
+                    "title":"Sök", 
+                    "url":"./components/Icon/Svg/search.svg"
+                }
+            }
+}
+
