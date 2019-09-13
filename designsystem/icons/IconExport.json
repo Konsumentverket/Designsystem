@@ -15,9 +15,7 @@
             "title":"Sök", 
             "url":"SystemIcons/search.svg"
         }
-    ]
-              
-            },
+    ],
     "baseurl": "https://raw.githubusercontent.com/Konsumentverket/Konsumentverket.github.io/master/designsystem/icons/"
 }
 
