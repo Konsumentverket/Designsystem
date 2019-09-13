@@ -1,17 +1,23 @@
 {
-    "icons": {
-                "Car": {
-                    "title":"Fåtölj", 
-                    "url":"./EditorIcons/Armchair.svg"
-                },
-                "Receipt": {
-                    "title":"Kläder", 
-                    "url":"./EditorIcons/Clothes.svg"
-                },
-                "Search": {
-                    "title":"Sök", 
-                    "url":"./components/Icon/Svg/search.svg"
-                }
-            }
+    "icons": [
+        {
+            "name": "chair",
+            "title":"Fåtölj", 
+            "url":"EditorIcons/Armchair.svg"
+        },
+        {
+            "name": "clothes",
+            "title":"Kläder", 
+            "url":"EditorIcons/Clothes.svg"
+        },
+        {
+            "name": "search",
+            "title":"Sök", 
+            "url":"SystemIcons/search.svg"
+        }
+    ]
+              
+            },
+    "baseurl": "https://raw.githubusercontent.com/Konsumentverket/Konsumentverket.github.io/master/designsystem/icons/"
 }
 
