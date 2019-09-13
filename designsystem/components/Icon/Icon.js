@@ -10,6 +10,7 @@ import Volume from './svg/Volume'
 import Otherlang from './svg/Otherlang'
 import Ecc from './svg/Ecc'
 import Arrow from './svg/Arrow'
+import Burger from './svg/Burger'
 
 const iconDefinitions = {
     Adapt,
@@ -20,7 +21,8 @@ const iconDefinitions = {
     Volume,
     Otherlang,
     Arrow,
-    Ecc
+    Ecc,
+    Burger
 }
 
 const Icon = ({icon,className, style}) => {
