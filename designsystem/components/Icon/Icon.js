@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core'
+
+import React from 'react'
 
 import Adapt from './svg/Adapt'
 import Close from './svg/Close'
@@ -25,9 +25,9 @@ const iconDefinitions = {
     Burger
 }
 
-const Icon = ({icon,className, style}) => {
+const Icon = ({icon,className, style,title}) => {
     const Element = iconDefinitions[icon];
-    return <Element className={className} style={style} />
+    return <Element className={className} style={style} title={title} />
 }
 
 export { Icon, iconDefinitions };

@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
 import { Icon, iconDefinitions } from './Icon';
 import { select, text } from '@storybook/addon-knobs';
+import css from '@emotion/css';
 
 var clickToDownload = (e,key) => {
     e.preventDefault();
@@ -16,6 +17,12 @@ var clickToDownload = (e,key) => {
     dl.click();
 }
 
+const iconStyle = css`
+    width: 40px;
+    height: 40px;
+`;
+
+
 let name = 'Ikon';
 storiesOf('Digitala Produkter|Komponenter/Ikoner', module)
     .add(name, () => {
@@ -24,6 +31,8 @@ storiesOf('Digitala Produkter|Komponenter/Ikoner', module)
             <Icon 
                 icon={selectedDefinition} 
                 className={text("className","")}
+                title={text("title","")}
+                style={iconStyle}
             />
         </a>
     }, { notes: NotesLoader(name) }
