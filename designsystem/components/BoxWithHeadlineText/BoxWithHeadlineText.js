@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from "react";
-import { Markdown } from "../MarkDown";
 import BoxStyle from "./BoxWithHeadlineText.css";
 
 const BoxWithHeadlineText = ({ text, headline, color, backgroundWidth }) => {
@@ -36,7 +35,7 @@ const BoxWithHeadlineText = ({ text, headline, color, backgroundWidth }) => {
         show &&
         <div css={BoxStyle} className={`${selectedColor(color)} ${selectedWidth(backgroundWidth)}`}>
             <span className="heading">{headline}</span>
-            <Markdown content={text} />
+            {text}
         </div >
     );
 };
