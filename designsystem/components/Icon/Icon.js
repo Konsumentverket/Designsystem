@@ -27,7 +27,8 @@ const iconDefinitions = {
     External
 }
 
-const Icon = ({icon,className, style,title}) => {
+const Icon = ({ icon, className, style, title }) => {
+    console.log({ icon })
     const Element = iconDefinitions[icon];
     return <Element className={className} style={style} title={title} />
 }

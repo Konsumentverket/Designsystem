@@ -12,7 +12,7 @@ const ExpandSection = ({ content: { headline, title, text } }) => {
     };
 
     const openClass = open ? "open" : "closed";
-    const icon = open ? "Telecom" : "Furniture";
+    const icon = open ? "Easytoread" : "Volume";
 
     return (
         <div className="content-text-section">
