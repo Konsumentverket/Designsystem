@@ -29,6 +29,11 @@ export default css`
         &.darkmode{
             border-color: ${colors.profile.white};
         }
+
+        &:active{
+            text-decoration: underline;
+            background-color: ${colors.profile["blue-dark"]};
+        }
     }
     &.darkmode {
         box-shadow: 0px 0px 1px 1px rgba(255,255,255,.7);
@@ -36,6 +41,10 @@ export default css`
             border-color: ${colors.profile.white};
             box-shadow:none;
         }
+    }
+    &.selected {
+        background-color: ${colors.profile["blue-mid"]};
+        color: ${colors.profile.white};
     }
     &:hover{
         border-color: ${colors.natural.black};

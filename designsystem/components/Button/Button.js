@@ -20,6 +20,9 @@ class Button extends React.Component {
         if (this.props.disabled) {
             classes.push("disabled");
         }
+        if (this.props.selected) {
+            classes.push("selected")
+        }
         if (this.props.size) {
             classes.push(this.props.size);
         }
