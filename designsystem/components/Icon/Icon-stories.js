@@ -37,9 +37,7 @@ storiesOf('Digitala Produkter|Komponenter/Ikoner', module)
         </a>
     }, { notes: NotesLoader(name) }
     ).add("Alla ikoner", () => {
-        let icons = Object.keys(iconDefinitions).map((key) => (<div key={key}>{key}<Icon icon={key} /></div>));
-        let extra = <div key={Date.now()}>Från SVG <Svg icon="close" title="close" /></div>
-        icons.push(extra)
+        let icons = Object.keys(iconDefinitions).map((key) => (<div key={key}>{key}<Icon icon={key} style={{ fill: '#000' }} /></div>));
         return icons;
     });;
 

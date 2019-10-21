@@ -2,8 +2,6 @@
 import { jsx } from '@emotion/core'
 import React from 'react'
 
-import SVG from 'react-inlinesvg'
-
 import Adapt from './svg/Adapt'
 import Close from './svg/Close'
 import Easytoread from './svg/Easytoread';
@@ -16,6 +14,9 @@ import Arrow from './svg/Arrow'
 import Burger from './svg/Burger'
 import External from './svg/External'
 
+import Check from '../../icons/Check'
+import Oval from '../../icons/Oval'
+
 const iconDefinitions = {
     Adapt,
     Close,
@@ -27,7 +28,9 @@ const iconDefinitions = {
     Arrow,
     Ecc,
     Burger,
-    External
+    External,
+    Oval,
+    Check
 }
 
 const Icon = ({ icon, className, style, title }) => {
@@ -35,11 +38,4 @@ const Icon = ({ icon, className, style, title }) => {
     return <Element className={className} style={style} title={title} />
 }
 
-const Svg = ({ icon, className, style, title }) => {
-
-    let baseUrl = "https://raw.githubusercontent.com/Konsumentverket/Konsumentverket.github.io/master/designsystem/icons/"
-    let fetchUrl = (`${baseUrl}/SystemIcons/${icon}.svg`)
-    return <><SVG className={className} style={style} title={title} src={fetchUrl} /></>
-}
-
-export { Icon, iconDefinitions, Svg };
+export { Icon, iconDefinitions };
