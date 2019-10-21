@@ -2,20 +2,28 @@
     "icons": [
         {
             "name": "chair",
-            "title":"Fåtölj", 
-            "url":"EditorIcons/Armchair.svg"
+            "title": "Fåtölj",
+            "url": "EditorIcons/Armchair.svg"
         },
         {
             "name": "clothes",
-            "title":"Kläder", 
-            "url":"EditorIcons/Clothes.svg"
+            "title": "Kläder",
+            "url": "EditorIcons/Clothes.svg"
         },
         {
             "name": "search",
-            "title":"Sök", 
-            "url":"SystemIcons/search.svg"
+            "title": "Sök",
+            "url": "SystemIcons/search.svg"
+        },
+        {
+            "name": "oval",
+            "title": "Sök",
+            "url": "SystemIcons/oval.svg"
+        },
+        {
+            "name": "check",
+            "title": "Sök",
+            "url": "SystemIcons/check.svg"
         }
     ]
 }
-
-

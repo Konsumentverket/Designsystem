@@ -1,5 +1,8 @@
-
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 import React from 'react'
+
+import SVG from 'react-inlinesvg'
 
 import Adapt from './svg/Adapt'
 import Close from './svg/Close'
@@ -28,9 +31,15 @@ const iconDefinitions = {
 }
 
 const Icon = ({ icon, className, style, title }) => {
-    console.log({ icon })
     const Element = iconDefinitions[icon];
     return <Element className={className} style={style} title={title} />
 }
 
-export { Icon, iconDefinitions };
+const Svg = ({ icon, className, style, title }) => {
+
+    let baseUrl = "https://raw.githubusercontent.com/Konsumentverket/Konsumentverket.github.io/master/designsystem/icons/"
+    let fetchUrl = (`${baseUrl}/SystemIcons/${icon}.svg`)
+    return <><SVG className={className} style={style} title={title} src={fetchUrl} /></>
+}
+
+export { Icon, iconDefinitions, Svg };
