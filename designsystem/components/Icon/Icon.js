@@ -14,6 +14,7 @@ import Arrow from './svg/Arrow'
 import Burger from './svg/Burger'
 import External from './svg/External'
 
+import Binoculars from './svg/Binoculars'
 import Exclamationmark from './svg/Exclamationmark'
 import Check from '../../icons/Check'
 import Oval from '../../icons/Oval'
@@ -32,7 +33,8 @@ const iconDefinitions = {
     External,
     Oval,
     Check,
-    Exclamationmark
+    Exclamationmark,
+    Binoculars
 }
 
 const Icon = ({ icon, className, style, title }) => {
