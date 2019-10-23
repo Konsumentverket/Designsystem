@@ -11,11 +11,13 @@ import Otherlang from '../../icons/SystemIcons/Otherlang'
 import Ecc from '../../icons/SystemIcons/Ecc'
 import Arrow from '../../icons/SystemIcons/Arrow'
 import Burger from '../../icons/SystemIcons/Burger'
+import External from '../../icons/SystemIcons/External'
 
 const iconDefinitions = {
     Adapt,
     Close,
     Easytoread,
+    External,
     Search,
     Signlanguage,
     Volume,
