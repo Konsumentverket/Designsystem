@@ -3,37 +3,37 @@
        {
            "name": "adapt",
            "title": "Anpassa",
-           "url": "SystemIcons/adapt.svg"
+           "url": "SystemIcons/svg/adapt.svg"
        },
        {
            "name": "close",
            "title": "Stäng",
-           "url": "SystemIcons/close.svg"
+           "url": "SystemIcons/svg/close.svg"
        },
        {
            "name": "easytoread",
            "title": "Lättläst",
-           "url": "SystemIcons/easytoread.svg"
+           "url": "SystemIcons/svg/easytoread.svg"
        },
        {
            "name": "signlanguage",
            "title": "Teckenspråk",
-           "url": "SystemIcons/signlanguage.svg"
+           "url": "SystemIcons/svg/signlanguage.svg"
        },
        {
            "name": "search",
            "title": "Sök",
-           "url": "SystemIcons/search.svg"
+           "url": "SystemIcons/svg/search.svg"
        },
        {
            "name": "oval",
-           "title": "Sök",
-           "url": "SystemIcons/oval.svg"
+           "title": "Punkt",
+           "url": "SystemIcons/svg/oval.svg"
        },
        {
            "name": "check",
-           "title": "Sök",
-           "url": "SystemIcons/check.svg"
+           "title": "Bock",
+           "url": "SystemIcons/svg/check.svg"
        }
    ]
 }
