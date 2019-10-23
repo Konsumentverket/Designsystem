@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
-import { Icon, iconDefinitions, Svg } from './Icon';
+import { Icon, iconDefinitions } from './Icon';
 import { select, text } from '@storybook/addon-knobs';
 import css from '@emotion/css';
 

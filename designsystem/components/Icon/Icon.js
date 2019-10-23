@@ -1,23 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React from 'react'
 
-import Adapt from './svg/Adapt'
-import Close from './svg/Close'
-import Easytoread from './svg/Easytoread';
-import Search from './svg/Search';
-import Signlanguage from './svg/Signlanguage'
-import Volume from './svg/Volume'
-import Otherlang from './svg/Otherlang'
-import Ecc from './svg/Ecc'
-import Arrow from './svg/Arrow'
-import Burger from './svg/Burger'
-import External from './svg/External'
-
-import Binoculars from './svg/Binoculars'
-import Exclamationmark from './svg/Exclamationmark'
-import Check from '../../icons/Check'
-import Oval from '../../icons/Oval'
+import Adapt from '../../icons/SystemIcons/Adapt'
+import Close from '../../icons/SystemIcons/Close'
+import Easytoread from '../../icons/SystemIcons/Easytoread';
+import Search from '../../icons/SystemIcons/Search';
+import Signlanguage from '../../icons/SystemIcons/Signlanguage'
+import Volume from '../../icons/SystemIcons/Volume'
+import Otherlang from '../../icons/SystemIcons/Otherlang'
+import Ecc from '../../icons/SystemIcons/Ecc'
+import Arrow from '../../icons/SystemIcons/Arrow'
+import Burger from '../../icons/SystemIcons/Burger'
 
 const iconDefinitions = {
     Adapt,
@@ -29,17 +22,12 @@ const iconDefinitions = {
     Otherlang,
     Arrow,
     Ecc,
-    Burger,
-    External,
-    Oval,
-    Check,
-    Exclamationmark,
-    Binoculars
+    Burger
 }
 
-const Icon = ({ icon, className, style, title }) => {
+const Icon = ({icon,className, style}) => {
     const Element = iconDefinitions[icon];
-    return <Element className={className} style={style} title={title} />
+    return <Element className={className} style={style} />
 }
 
 export { Icon, iconDefinitions };
