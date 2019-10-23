@@ -14,6 +14,7 @@ import Burger from '../../icons/SystemIcons/Burger'
 import External from '../../icons/SystemIcons/External'
 import Exclamationmark from '../../icons/SystemIcons/Exclamationmark'
 import Check from '../../icons/SystemIcons/Check'
+import Oval from '../../icons/SystemIcons/Oval'
 
 const iconDefinitions = {
     Adapt,
@@ -28,7 +29,8 @@ const iconDefinitions = {
     Ecc,
     Burger,
     Exclamationmark,
-    Check
+    Check,
+    Oval
 }
 
 const Icon = ({icon,className, style}) => {
