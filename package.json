@@ -10,11 +10,15 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   },
+  "scripts": {
+    "start": "nodemon --watch designsystem --exec \"npx webpack\""
+  },
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.0-beta",
+    "nodemon": "^1.19.4",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "webpack": "^4.29.6",
@@ -22,6 +26,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.21",
     "webpack-bundle-analyzer": "^3.5.0"
   }
 }

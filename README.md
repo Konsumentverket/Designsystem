@@ -21,6 +21,32 @@ Navigera till \designsystem\ mappen och kör följande script:
     npm run micro-storybook
 ```
 
+## Kör storybooks lokalt med direkt uppdatering på flippadwebb
+
+```
+    cd ~/projects/Konsumentverket.github.io
+    npm link
+    cd ~/projects/flippad_web
+    npm link kov-components
+
+    # Öppna två terminaler
+    # terminal 1
+    cd ~/projects/Konsumentverket.github.io/designsystem
+    npm run hk-storybook
+
+    # terminal 2
+    cd ~/projects/Konsumentverket.github.io/
+    npm start
+```
+
+### För att återställa
+```
+    cd ~/projects/flippad_web
+    npm uninstall --no-save some-dep && npm install 
+    cd ~/projects/Konsumentverket.github.io
+    npm uninstall
+```
+
 ## Bygg statik version av storybooks
 Navigera till \designsystem\ mappen och kör följande script:
 ```
