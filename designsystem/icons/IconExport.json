@@ -1,29 +1,39 @@
 {
-    "icons": [
-        {
-            "name": "chair",
-            "title": "Fåtölj",
-            "url": "EditorIcons/Armchair.svg"
-        },
-        {
-            "name": "clothes",
-            "title": "Kläder",
-            "url": "EditorIcons/Clothes.svg"
-        },
-        {
-            "name": "search",
-            "title": "Sök",
-            "url": "SystemIcons/search.svg"
-        },
-        {
-            "name": "oval",
-            "title": "Sök",
-            "url": "SystemIcons/oval.svg"
-        },
-        {
-            "name": "check",
-            "title": "Sök",
-            "url": "SystemIcons/check.svg"
-        }
-    ]
+   "icons": [
+       {
+           "name": "adapt",
+           "title": "Anpassa",
+           "url": "SystemIcons/adapt.svg"
+       },
+       {
+           "name": "close",
+           "title": "Stäng",
+           "url": "SystemIcons/close.svg"
+       },
+       {
+           "name": "easytoread",
+           "title": "Lättläst",
+           "url": "SystemIcons/easytoread.svg"
+       },
+       {
+           "name": "signlanguage",
+           "title": "Teckenspråk",
+           "url": "SystemIcons/signlanguage.svg"
+       },
+       {
+           "name": "search",
+           "title": "Sök",
+           "url": "SystemIcons/search.svg"
+       },
+       {
+           "name": "oval",
+           "title": "Sök",
+           "url": "SystemIcons/oval.svg"
+       },
+       {
+           "name": "check",
+           "title": "Sök",
+           "url": "SystemIcons/check.svg"
+       }
+   ]
 }
