@@ -42,7 +42,7 @@ Navigera till \designsystem\ mappen och kör följande script:
 ### För att återställa
 ```
     cd ~/projects/flippad_web
-    npm uninstall --no-save some-dep && npm install 
+    npm uninstall --no-save kov-components && npm install 
     cd ~/projects/Konsumentverket.github.io
     npm uninstall
 ```
