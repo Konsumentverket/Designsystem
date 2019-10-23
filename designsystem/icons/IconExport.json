@@ -24,16 +24,6 @@
            "name": "search",
            "title": "Sök",
            "url": "SystemIcons/svg/search.svg"
-       },
-       {
-           "name": "oval",
-           "title": "Punkt",
-           "url": "SystemIcons/svg/oval.svg"
-       },
-       {
-           "name": "check",
-           "title": "Bock",
-           "url": "SystemIcons/svg/check.svg"
        }
    ]
 }
