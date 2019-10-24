@@ -35,6 +35,12 @@ const iconDefinitions = {
 
 const Icon = ({icon,className, style}) => {
     const Element = iconDefinitions[icon];
+
+    if (Element === undefined) {
+        console.log('Could not find icon in storybook')
+        return null
+    }
+
     return <Element className={className} style={style} />
 }
 
