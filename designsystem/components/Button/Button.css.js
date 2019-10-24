@@ -114,7 +114,16 @@ export default css`
 
     }
 
-
-
+&.fieldbutton {
+    border:0;
+    &.buttontext {
+        padding-right:35px;
+        padding-left:0;
+    }
+    .buttonicon {
+        left:auto;
+        right:0;
+    }
+}
 
 `;

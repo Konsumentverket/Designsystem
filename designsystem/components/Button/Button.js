@@ -30,6 +30,10 @@ class Button extends React.Component {
             classes.push("hasicon")
         }
 
+        if (this.props.fieldbutton){
+            classes.push("fieldbutton")
+        }
+
         return <button
             css={[style, this.props.style]}
             className={classes.join(" ")}
