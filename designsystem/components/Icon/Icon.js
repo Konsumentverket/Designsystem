@@ -15,6 +15,7 @@ import External from '../../icons/SystemIcons/External'
 import Exclamationmark from '../../icons/SystemIcons/Exclamationmark'
 import Check from '../../icons/SystemIcons/Check'
 import Oval from '../../icons/SystemIcons/Oval'
+import Binoculars from '../../icons/SystemIcons/Binoculars'
 
 const iconDefinitions = {
     Adapt,
@@ -30,12 +31,13 @@ const iconDefinitions = {
     Burger,
     Exclamationmark,
     Check,
-    Oval
+    Oval,
+    Binoculars
 }
 
-const Icon = ({icon,className, style}) => {
+const Icon = ({ icon, className, style }) => {
     const Element = iconDefinitions[icon];
-    return <Element className={className} style={style} />
+    return Element ? <Element className={className} style={style} /> : <span className={`Missing icon ${icon}`} />
 }
 
 export { Icon, iconDefinitions };
