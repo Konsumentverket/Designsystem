@@ -62,7 +62,9 @@ storiesOf('Digitala produkter|Grunder och foundations/Färgsystem', module)
             <div css={wrapperStyles}>
                 <ColorComponent color={colors.profile["blue-dark"]} name="Mörkblå" token="profile['blue-dark']" />
                 <ColorComponent color={colors.profile["blue-mid"]} name="Mellanblå" token="profile['blue-mid']" />
+                <ColorComponent color={colors.profile["blue-light"]} name="Ljusblå" token="profile['blue-light']" />
                 <ColorComponent color={colors.profile.white} name="Vit" token="profile.white" />
+                <ColorComponent color={colors.profile["pink-light"]} name="Ljusrosa" token="profile['pink-light']" />
             </div>
 
             <h2>Sekundär färger</h2>
