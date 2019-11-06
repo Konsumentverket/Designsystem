@@ -1,27 +1,27 @@
 {
    "icons": [
        {
-           "name": "adapt",
+           "name": "Adapt",
            "title": "Anpassa",
            "url": "SystemIcons/svg/adapt.svg"
        },
        {
-           "name": "close",
+           "name": "Close",
            "title": "Stäng",
            "url": "SystemIcons/svg/close.svg"
        },
        {
-           "name": "easytoread",
+           "name": "Easytoread",
            "title": "Lättläst",
            "url": "SystemIcons/svg/easytoread.svg"
        },
        {
-           "name": "signlanguage",
+           "name": "Signlanguage",
            "title": "Teckenspråk",
            "url": "SystemIcons/svg/signlanguage.svg"
        },
        {
-           "name": "search",
+           "name": "Search",
            "title": "Sök",
            "url": "SystemIcons/svg/search.svg"
        }
