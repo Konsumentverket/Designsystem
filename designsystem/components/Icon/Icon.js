@@ -16,6 +16,7 @@ import Exclamationmark from '../../icons/SystemIcons/Exclamationmark'
 import Check from '../../icons/SystemIcons/Check'
 import Oval from '../../icons/SystemIcons/Oval'
 import Binoculars from '../../icons/SystemIcons/Binoculars'
+import LinkArrow from '../../icons/SystemIcons/LinkArrow'
 
 const iconDefinitions = {
     Adapt,
@@ -32,7 +33,8 @@ const iconDefinitions = {
     Exclamationmark,
     Check,
     Oval,
-    Binoculars
+    Binoculars,
+    LinkArrow
 }
 
 const Icon = ({ icon, className, style }) => {
