@@ -1,5 +1,5 @@
 export { Button } from './Button/Button.js'
-export { FieldButton } from './Button/FieldButton.js'
+export { FormSearchField } from './FormField/FormSearchField.js'
 export { Checkbox } from './Checkbox/Checkbox.js'
 export { FormLabel } from './FormLabel/FormLabel.js'
 export { Link } from './Link/Link.js'
