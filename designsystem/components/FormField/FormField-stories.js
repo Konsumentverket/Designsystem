@@ -6,9 +6,9 @@ import NotesLoader from '../NotesLoader';
 import { FormSearchField } from './FormSearchField';
 import { colors } from '../Colors/Colors';
 
-let name = 'Formulärfält';
+let name = 'Sökfält';
 
-storiesOf('Digitala Produkter|Komponenter', module)
+storiesOf('Digitala Produkter|Komponenter/Formulärfält', module)
     .add(name, () =>
         <div css={css`
         background-color: ${colors.profile["blue-dark"]};
