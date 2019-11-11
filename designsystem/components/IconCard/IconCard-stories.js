@@ -6,6 +6,6 @@ import { IconCard } from './IconCard';
 let name = 'Ikonkort';
 storiesOf('Digitala Produkter|Komponenter', module)
     .add(name, () =>
-        <IconCard card={{ icon: "Volume", text: "texten", link: { url: "url-to-content" } }} />
+        <IconCard icon="Signlanguage" text="Ikonkort" />
         , { notes: NotesLoader(name) }
     );

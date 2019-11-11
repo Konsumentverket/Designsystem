@@ -1,41 +1,53 @@
-import { css } from "@emotion/core";
-import { colors } from "../Colors/Colors";
-import { spacing } from "../Spacing/Spacing";
+import { css } from '@emotion/core'
+import { colors } from '../Colors/Colors.js'
 
-export default css`
-  display: inline-block;
-  background: ${colors.natural.isabelline};
-  padding: ${spacing["spacing-s"]};
-  padding-top: 0;
-  font-size: 18px;
-  width: 30%;
-  margin-right: ${spacing["spacing-s"]};
-  margin-top: ${spacing["spacing-s"]};
-  text-align: center;
+export const arrowStyle = css`
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    vertical-align: middle;
+    transform: rotate(270deg);
+    height: auto;
+    width: 32px;
+    fill: ${colors.profile['blue-mid']};
 
-  a {
-    text-decoration: none;
-    color: black;
-    &:visited {
-      color: black;
+`
+
+export const iconStyle = css`
+    position:absolute;
+    top: 20px;
+    left: 12px;
+    height: 32px;
+    width: 32px;
+    fill: ${colors.profile['blue-mid']};
+`;
+
+export const iconCardStyle = css`
+        background-color: ${colors.profile['white']};
+        padding-left: 12px;
+        padding-right: 40px;
+        min-height: 72px;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        border-radius: 8px;
+        border: 1px solid ${colors.profile['blue-mid']};
+    h3 {
+        display: flex;
+        align-items:center;
+        margin:0;
+        color: ${colors.profile['blue-mid']};
+        line-height: 24px;
+        font-size: 21px;
+        font-weight: 500;
     }
-  }
+    &.topAreaIcon h3{
+        padding-left: 56px;
+    }
+`;
 
-  &:hover, &:active {
-    background: ${colors.natural["gray-light"]};
-  }
-  &:focus, &:active {
-    outline: 2px solid black;
-  }
-
-.iconCard {
-  padding-top: 0;
-}
-  .icon-container {
-  text-align: center;
-  padding: 0;
-  svg {
-    fill: ${ colors.natural.gray};
-  }
-}
+export const topAreaIcon = css`
+    padding-left: 56px;
 `;
