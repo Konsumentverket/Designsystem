@@ -45,7 +45,7 @@ const Icon = ({ icon, className, style, title }) => {
         return null
     }
 
-    return <Element title={title || ""} className={className} style={style} />
+    return <Element title={title} className={className} style={style} />
 }
 
 export { Icon, iconDefinitions };
