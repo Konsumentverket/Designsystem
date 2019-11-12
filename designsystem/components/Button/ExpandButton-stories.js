@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
-import { IconCard } from './IconCard';
+import { ExpandButton } from './ExpandButton';
 
-let name = 'Ikonkort';
+let name = 'Knapp för att expandera innehåll';
 storiesOf('Digitala Produkter|Komponenter', module)
     .add(name, () =>
-        <IconCard icon="Signlanguage" text="Ikonkort" />
+        <ExpandButton text="Knapp med en hel massa text" expanded={false} />
         , { notes: NotesLoader(name) }
     );

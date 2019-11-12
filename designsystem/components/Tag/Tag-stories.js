@@ -6,6 +6,6 @@ import { Tag } from './Tag';
 let name = 'Tag';
 storiesOf('Digitala Produkter|Komponenter', module)
     .add(name, () =>
-        <Tag />
+        <Tag id="TestTag1" text="Test tag"/>
     , { notes: NotesLoader(name) }
     );

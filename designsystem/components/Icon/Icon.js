@@ -37,7 +37,7 @@ const iconDefinitions = {
     LinkArrow
 }
 
-const Icon = ({ icon, className, style }) => {
+const Icon = ({ icon, className, style, title }) => {
     const Element = iconDefinitions[icon];
 
     if (Element === undefined) {
@@ -45,7 +45,7 @@ const Icon = ({ icon, className, style }) => {
         return null
     }
 
-    return <Element className={className} style={style} />
+    return <Element title={title} className={className} style={style} />
 }
 
 export { Icon, iconDefinitions };

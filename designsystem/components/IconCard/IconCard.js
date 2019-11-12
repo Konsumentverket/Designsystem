@@ -1,24 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React from "react";
-import IconCardStyle from "./IconCard.css";
-import { Icon, iconDefinitions } from '../Icon/Icon';
-import { Link } from "../Link/Link";
+import React from 'react';
+import { iconCardStyle, arrowStyle, iconStyle, topAreaIcon } from './IconCard.css';
+import { Icon } from '../Icon/Icon.js';
 
-const IconCard = ({ card: { icon, text, link } }) => {
-
-    return (
-        <div css={IconCardStyle}>
-            <Link linkUrl={link ? link.url : ""}>
-                <div className="iconCard">
-                    <div className="icon-container">
-                        <Icon icon={icon} />
-                    </div>
-                    <div className="caption">{text}</div>
-                </div>
-            </Link>
-        </div>
-    );
-};
+const IconCard = ({icon, text, url, style}) => {
+    return <a href={url} css={[iconCardStyle, icon && topAreaIcon, style]} >
+                    {icon && <Icon icon={icon} style={iconStyle}>Ikon</Icon>}
+                    <h3>{text}</h3>
+                    <Icon icon="Arrow" style={arrowStyle} />
+                </a>
+}
 
 export { IconCard };
