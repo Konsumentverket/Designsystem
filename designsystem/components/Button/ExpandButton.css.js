@@ -2,10 +2,8 @@ import { css } from '@emotion/core';
 import { colors } from '../Colors/Colors';
 
 export const expandButton = css`
-    /* font-size: 19px; */
     background-color: ${colors.natural.isabelline};
     border-radius: 28px;
-    /* margin: 0 10px 40px 10px; */
     width: 100%;
     display:block;
     text-align: center;
