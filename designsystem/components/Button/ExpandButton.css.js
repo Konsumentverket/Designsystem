@@ -7,12 +7,12 @@ export const expandButton = css`
     width: 100%;
     display:block;
     text-align: center;
-    min-height:57px;
     padding-right:10px;
     padding-left:10px;
     cursor:pointer;
     span {
         font-size: 19px;
+        line-height:57px;
         font-weight: 500;
         color: ${colors.profile['blue-mid']};
         display:inline-block;
@@ -35,10 +35,4 @@ export const showLessArrow = css`
     fill: ${colors.profile['blue-mid']};
     margin-top:-2px;
     transform: rotate(180deg);
-`;
-
-export const buttonContent = css`
-position: relative;
-top: 50%;
-transform: translateY(-50%);
 `;
