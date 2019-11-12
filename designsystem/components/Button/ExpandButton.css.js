@@ -5,14 +5,16 @@ export const expandButton = css`
     background-color: ${colors.natural.isabelline};
     border-radius: 28px;
     width: 100%;
-    display:block;
+    display:table;
     text-align: center;
     padding-right:10px;
     padding-left:10px;
+    min-height: 41px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     cursor:pointer;
     span {
         font-size: 19px;
-        line-height:57px;
         font-weight: 500;
         color: ${colors.profile['blue-mid']};
         display:inline-block;
@@ -20,7 +22,7 @@ export const expandButton = css`
     }
 `;
 
-export const expandArrow = css`
+export const arrow = css`
     vertical-align: middle;
     height: auto;
     width: 30px;
@@ -29,10 +31,11 @@ export const expandArrow = css`
 `;
 
 export const showLessArrow = css`
-    vertical-align: middle;
-    height: auto;
-    width: 30px;
-    fill: ${colors.profile['blue-mid']};
-    margin-top:-2px;
     transform: rotate(180deg);
+`;
+
+export const buttonContent = css`
+display: table-cell; 
+  vertical-align: middle; 
+  text-align: center;
 `;
