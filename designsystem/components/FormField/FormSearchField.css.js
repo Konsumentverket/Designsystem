@@ -3,9 +3,9 @@ import { colors } from '../Colors/Colors';
 
 export default css`
 position:relative;
+
 .textfield {
     border-radius: 8px;
-    position:relative;
     border: none;
     width: 100%;
     padding: 12px 92px 12px 16px;
@@ -14,18 +14,27 @@ position:relative;
     outline: none;
     color:#4D4D4D;
     font-style:italic; 
+    -webkit-appearance: none;
+    top:0;
+    margin:0;
+
 }
 button {
     position: absolute;
+    height:100%;
     top:0;
     bottom:0;
     right:0;
+    margin:0;
     background-color: ${colors.profile["blue-mid"]};
     border:none;
     border-bottom-right-radius:8px;
     border-top-right-radius:8px;
     color: ${colors.profile.white}; 
     padding:12px 16px;
+    display:flex;
+    box-sizing:border-box;
+ 
 
     &:hover{
         /*border-color: ${colors.natural.black};
