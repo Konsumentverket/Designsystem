@@ -6,7 +6,7 @@ import NotesLoader from '../NotesLoader';
 import { iconDefinitions } from '../Icon/Icon';
 
 let name = 'Knapp';
-storiesOf('Digitala Produkter|Komponenter', module)
+storiesOf('Digitala Produkter|Komponenter|Knappar', module)
   .addParameters({
     backgrounds: [
       { name: 'white', value: '#fff', default: true },
