@@ -34,7 +34,7 @@ export const iconCardStyle = css`
         display: flex;
         border-radius: 8px;
         border: 1px solid ${colors.profile['blue-mid']};
-    h3 {
+    h2, h3 {
         display: flex;
         align-items:center;
         margin:0;
