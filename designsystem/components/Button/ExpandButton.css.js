@@ -9,17 +9,11 @@ export const expandButton = css`
     text-align: center;
     padding-right:10px;
     padding-left:10px;
-    min-height: 41px;
+    min-height: 57px;
     padding-top: 8px;
     padding-bottom: 8px;
+    border-width: 0;
     cursor:pointer;
-    span {
-        font-size: 19px;
-        font-weight: 500;
-        color: ${colors.profile['blue-mid']};
-        display:inline-block;
-        padding-right:10px;
-    }
 `;
 
 export const arrow = css`
@@ -35,7 +29,12 @@ export const showLessArrow = css`
 `;
 
 export const buttonContent = css`
-display: table-cell; 
-  vertical-align: middle; 
-  text-align: center;
+    font-size: 19px;
+    font-weight: 500;
+    color: ${colors.profile['blue-mid']};
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center;
+    display:inline-block;
+    padding-right:10px;
 `;
