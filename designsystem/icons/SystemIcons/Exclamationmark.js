@@ -2,8 +2,8 @@
 import { jsx } from '@emotion/core'
 import React from 'react';
 
-export default ({ className, style, title }) => {
-    return <svg className={className} css={style} width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+export default ({ className, style, title, ...otherAttr }) => {
+    return <svg className={className} css={style} width="43px" height="43px" viewBox="0 0 43 43" {...otherAttr} version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
         <title>{title}</title>
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g transform="translate(-250.000000, -2242.000000)">
