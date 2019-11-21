@@ -7,7 +7,7 @@ import NotesLoader from '../NotesLoader';
 let name = 'Radioknapp';
 
 
-storiesOf('Digitala Produkter|Komponenter/Valalternativ', module)
+storiesOf('Digitala Produkter|React komponenter/Valalternativ', module)
     .add(name, () =>
         <>
             <RadioButton

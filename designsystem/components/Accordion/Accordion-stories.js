@@ -22,7 +22,7 @@ let data = {
         ]
     }
 }
-storiesOf('Digitala Produkter|Komponenter', module)
+storiesOf('Digitala Produkter|React komponenter', module)
     .add(name, () =>
         <Accordion content={data} />
         , { notes: NotesLoader(name) }

@@ -5,7 +5,7 @@ import NotesLoader from '../NotesLoader';
 import { Breadcrumb } from './Breadcrumb'
 
 let name = 'Brödsmulor';
-storiesOf('Digitala Produkter|Komponenter', module)
+storiesOf('Digitala Produkter|React komponenter', module)
     .add(name, () =>
         <Breadcrumb />
     , { notes: NotesLoader(name) }

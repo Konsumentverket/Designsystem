@@ -5,7 +5,7 @@ import { text } from '@storybook/addon-knobs';
 import NotesLoader from '../NotesLoader';
 
 let name = "Checkbox";
-storiesOf('Digitala Produkter|Komponenter/Valalternativ', module)
+storiesOf('Digitala Produkter|React komponenter/Valalternativ', module)
     .add(name, () =>
         <>
             <Checkbox name="name" label={text("label", "Jag godkänner avtalet")} value={text("value","Yes")} />

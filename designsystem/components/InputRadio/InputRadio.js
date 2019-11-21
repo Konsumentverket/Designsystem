@@ -1,14 +1,23 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React from 'react'
+import {useRef} from 'react'
 import {fieldWrapper, fieldInput, fieldLabel} from './InputRadio.css'
 
-
-export const InputRadio = ({name,id,labelText}) => {
-
-    return <div css={fieldWrapper}>
-                <input css={fieldInput} id={id} name={name} type="radio"></input>
-                <label css={fieldLabel} htmlFor={id}>{labelText}</label>
+export const InputRadio = ({
+    name, id, labelText,
+    fieldWrapperStyle, fieldInputStyle, fieldLabelStyle,
+    onChange, value
+    }) => {
+        const inputRef = useRef(null);
+        return <div css={[fieldWrapper, fieldWrapperStyle]} 
+                    className={inputRef != null && inputRef.current != null && inputRef.current.checked ? "inputHasValue" : ""} 
+                    onClick={() => inputRef.current.click()}
+                >
+                    <input ref={inputRef} css={[fieldInput,fieldInputStyle]} id={id} name={name} type="radio" 
+                        onChange={onChange} value={value}
+                    >
+                    </input>
+                <label css={[fieldLabel, fieldLabelStyle]} htmlFor={id}>{labelText}</label>
             </div>
 
 } 

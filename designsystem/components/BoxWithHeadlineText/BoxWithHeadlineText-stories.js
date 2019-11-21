@@ -7,7 +7,7 @@ import { iconDefinitions } from '../Icon/Icon';
 
 let name = 'Platta med rubrik och text';
 
-storiesOf('Digitala Produkter|Komponenter', module)
+storiesOf('Digitala Produkter|React komponenter', module)
     .add(name, () =>
         <BoxWithHeadlineText
             headline="Rubrik"

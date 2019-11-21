@@ -8,7 +8,7 @@ import { colors } from '../Colors/Colors';
 
 let name = 'Sökfält';
 
-storiesOf('Digitala Produkter|Komponenter/Formulärfält', module)
+storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
     .add(name, () =>
         <div css={css`
         background-color: ${colors.profile["blue-dark"]};

@@ -15,3 +15,5 @@ export { BoxWithHeadlineText } from './BoxWithHeadlineText/BoxWithHeadlineText.j
 export { Tag } from './Tag/Tag.js'
 export { ExpandButton } from './Button/ExpandButton.js'
 export { InputRadio } from './InputRadio/InputRadio.js'
+export {PrerequisitesBox} from './PrerequisitesBox/PrerequisitesBox'
+export { globalStyles } from './GlobalStyles/globalStyles.js'

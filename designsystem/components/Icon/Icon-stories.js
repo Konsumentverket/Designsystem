@@ -24,7 +24,7 @@ const iconStyle = css`
 
 
 let name = 'Ikon';
-storiesOf('Digitala Produkter|Komponenter/Ikoner', module)
+storiesOf('Digitala Produkter|React komponenter/Ikoner', module)
     .add(name, () => {
         var selectedDefinition = select("icon", Object.keys(iconDefinitions), Object.keys(iconDefinitions)[0]);
         return <a onClick={(e) => clickToDownload(e, selectedDefinition)}>
