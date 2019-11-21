@@ -15,5 +15,5 @@ export { BoxWithHeadlineText } from './BoxWithHeadlineText/BoxWithHeadlineText.j
 export { Tag } from './Tag/Tag.js'
 export { ExpandButton } from './Button/ExpandButton.js'
 export { InputRadio } from './InputRadio/InputRadio.js'
-export { Heading } from './Headings/Heading'
-export { SubHeading } from './Headings/SubHeading'
+export { Heading } from './Headings/Heading.js'
+export { SubHeading } from './Headings/SubHeading.js'
