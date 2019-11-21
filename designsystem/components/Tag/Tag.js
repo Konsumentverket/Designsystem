@@ -2,11 +2,12 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 import { tagStyle } from './Tag.css';
+import SubHeading from '../Headings/SubHeading';
 
-const Tag = ({ id, url, text, style }) => {
+const Tag = ({ id, url, text, style, headingLevel = 4 }) => {
     return <div key={id} css={[tagStyle, style]}>
         <a href={url} >
-            <h4>{text}</h4>
+            <SubHeading level={headingLevel}>{text}</SubHeading>
         </a>
     </div>
 }
