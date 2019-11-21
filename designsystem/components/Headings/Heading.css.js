@@ -1,6 +1,5 @@
 ﻿/** @jsx jsx */
 import { css } from '@emotion/core'
-import { medium, defaultHeadingColor } from "../../Shared/Variables";
 
 export default css`
       font-size: 4.8rem;
@@ -8,9 +7,4 @@ export default css`
       color: #161616; /* defaultHeadingColor */
       font-weight:700;
       margin: 0 0 1.6rem 0;
-      ${medium}{
-          margin-bottom:1.2rem;
-          font-size:4.8rem;
-          line-height:6rem;
-      }
 `;

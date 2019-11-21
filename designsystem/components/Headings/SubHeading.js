@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import SubHeadingStyle from './SubHeading.css'
 
-export default ({ children, text, style, level = 2 }) => {
+export const SubHeading = ({ children, text, style, level = 2 }) => {
 
     const headings = ['h1', 'h2', 'h3', 'h4', 'h5']
 

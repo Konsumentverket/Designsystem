@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core'
 import { iconCardStyle, arrowStyle, iconStyle, topAreaIcon } from './IconCard.css';
 import { Icon } from '../Icon/Icon.js';
-import SubHeading from '../Headings/SubHeading';
+import { SubHeading } from '../Headings/SubHeading';
 
 
 const IconCard = ({ icon, text, url, style, headingLevel = 2 }) => {
