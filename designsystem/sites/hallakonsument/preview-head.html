@@ -1,0 +1,8 @@
+<script>
+    window.createGlobalStyleLoadingElement = function(){
+        var elem = document.createElement('div');
+        elem.id = "globalStyleAttachmentPoint"
+        document.body.appendChild(elem);
+        return elem.id;
+    }
+</script>

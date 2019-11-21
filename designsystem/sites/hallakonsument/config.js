@@ -47,6 +47,7 @@ const dynamicStoryInitializr = require.context('../../', false, /DynamicStoryIni
 function loadStories() {
     dynamicStoryInitializr.keys().forEach(filename => dynamicStoryInitializr(filename));
     components.keys().sort().forEach(filename => components(filename));
+    require('./globalStyleLoader.js');
 }
 
 configure(loadStories, module);
