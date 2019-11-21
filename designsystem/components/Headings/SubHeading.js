@@ -1,4 +1,5 @@
-﻿import SubHeadingStyle from './SubHeading.css'
+﻿import React from 'react';
+import SubHeadingStyle from './SubHeading.css'
 
 export default ({ children, text, style, level = 2 }) => {
 

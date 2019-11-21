@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React from 'react';
 import { jsx } from '@emotion/core';
 import { tagStyle } from './Tag.css';
 import SubHeading from '../Headings/SubHeading';
