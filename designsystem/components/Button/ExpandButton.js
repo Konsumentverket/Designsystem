@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
 import { Icon } from '../Icon/Icon.js';
 import { expandButton, showLessArrow, buttonContent, arrow } from './ExpandButton.css';
 
