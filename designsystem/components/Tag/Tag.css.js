@@ -19,9 +19,10 @@ export const tagStyle = css`
         vertical-align: middle;
     }
 
-    h3, h4, h5 {
+    h2, h3, h4, h5, h6 {
         margin: 0px 10px 0 10px;
         font-size: 16px;
         font-weight: bold;
+        color: inherit;
     }
 `;
