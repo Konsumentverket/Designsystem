@@ -1,4 +1,6 @@
-﻿import React from 'react';
+﻿/** @jsx jsx */
+import { jsx } from '@emotion/core'
+import React from 'react';
 import SubHeadingStyle from './SubHeading.css'
 
 export const SubHeading = ({ children, text, style, level = 2 }) => {

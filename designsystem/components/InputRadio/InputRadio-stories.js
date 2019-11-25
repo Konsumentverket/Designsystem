@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
 import {InputRadio} from './InputRadio'
@@ -15,21 +15,29 @@ const exampleExtraStyle = css`
     }
 `
 
-let name = 'Input radio';
-storiesOf('Digitala Produkter|React komponenter', module)
-    .add(name, () =>
-        <>
+//this wrapper functions makes the InputRadio rerender
+const WrapperFunction = () => {
+    const [,updater] = useState(null)
+    return <>
             Default
             <InputRadio name={text("name","radio")} id="radio1" 
                         labelText={text("labelText","Im the radiobutton")} 
-                        value="test" onChange={(e) => console.log(e)}
+                        value="test" onChange={(e) => updater({})}
             />
             <br />
-            Extra styling
+            Styling
             <InputRadio fieldWrapperStyle={exampleExtraStyle} name={text("name","radio")} 
-                        id="radio2" labelText={text("labelText","Im the radiobutton")} 
-                        value="test2" onChange={(e) => console.log(e)}
+                        id="radio2" labelText={text("labelText","Im the other radiobutton")} 
+                        value="test2" onChange={(e) => updater({})}
             />
         </>
+
+
+};
+
+
+let name = 'Input radio';
+storiesOf('Digitala Produkter|React komponenter', module)
+    .add(name, () => <WrapperFunction />
         , { notes: NotesLoader(name) }
     );

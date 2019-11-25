@@ -18,12 +18,12 @@ storiesOf('Digitala Produkter|React komponenter|Knappar', module)
     <Button
       text={text("text", "Gå till konsumentverket.se")}
       disabled={boolean("disabled", false)}
-      darkmode={boolean("darkmode", false)}
-      selected={boolean("active", false)}
+      selected={boolean("selected", false)}
       buttontype={select("buttontype", ["primary", "secondary", "cta"])}
       type={select("type", ["submit", "button"])}
       size={select("size", ["small", "medium", "large"])}
       icon={select("icon", ["", ...Object.keys(iconDefinitions)], "")}
+      iconRight={boolean("iconRight", false)}
     />
     , { notes: NotesLoader(name) }
   );

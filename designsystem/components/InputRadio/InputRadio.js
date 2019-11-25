@@ -6,15 +6,15 @@ import {fieldWrapper, fieldInput, fieldLabel} from './InputRadio.css'
 export const InputRadio = ({
     name, id, labelText,
     fieldWrapperStyle, fieldInputStyle, fieldLabelStyle,
-    onChange, value
+    onChange, value, checked
     }) => {
         const inputRef = useRef(null);
         return <div css={[fieldWrapper, fieldWrapperStyle]} 
-                    className={inputRef != null && inputRef.current != null && inputRef.current.checked ? "inputHasValue" : ""} 
+                    className={(inputRef != null && inputRef.current != null && inputRef.current.checked) || checked ? "inputHasValue" : ""} 
                     onClick={() => inputRef.current.click()}
                 >
                     <input ref={inputRef} css={[fieldInput,fieldInputStyle]} id={id} name={name} type="radio" 
-                        onChange={onChange} value={value}
+                        onChange={onChange} value={value} checked={checked}
                     >
                     </input>
                 <label css={[fieldLabel, fieldLabelStyle]} htmlFor={id}>{labelText}</label>
