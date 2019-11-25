@@ -5,7 +5,7 @@ import SubHeadingStyle from './SubHeading.css'
 
 export const SubHeading = ({ children, text, style, level = 2 }) => {
 
-    const headings = ['h1', 'h2', 'h3', 'h4', 'h5']
+    const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
 
     const SelectedHeading = headings[level - 1] || 'h2'
 

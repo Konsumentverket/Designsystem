@@ -1,5 +1,4 @@
-﻿/** @jsx jsx */
-import { css } from '@emotion/core'
+﻿import { css } from '@emotion/core'
 
 export default css`
       font-size: 4.8rem;
