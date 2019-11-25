@@ -4,7 +4,7 @@ import NotesLoader from '../NotesLoader';
 import { HelpText } from './HelpText';
 
 let name = 'Hjälptext';
-storiesOf('Digitala Produkter|Komponenter', module)
+storiesOf('Digitala Produkter|React komponenter', module)
     .add(name, () =>
         <HelpText />
     , { notes: NotesLoader(name) }

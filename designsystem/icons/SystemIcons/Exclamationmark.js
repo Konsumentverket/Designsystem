@@ -5,11 +5,11 @@ import React from 'react';
 export default ({ className, style, title, ...otherAttr }) => {
     return <svg className={className} css={style} width="43px" height="43px" viewBox="0 0 43 43" {...otherAttr} version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
         <title>{title}</title>
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g transform="translate(-250.000000, -2242.000000)">
                 <g transform="translate(251.000000, 2243.000000)">
                     <g>
-                        <g fill="#FFFFFF" stroke="#B50255" stroke-width="2">
+                        <g fill="#FFFFFF" stroke="#B50255" strokeWidth="2">
                             <circle cx="20.5" cy="20.5" r="20.5"></circle>
                         </g>
                         <g transform="translate(21.000000, 20.500000) scale(-1, 1) translate(-21.000000, -20.500000) translate(18.000000, 10.000000)">

@@ -4,7 +4,7 @@ import {Divider} from './Divider';
 import NotesLoader from '../NotesLoader';
 
 let name = 'Divider';
-storiesOf('Digitala Produkter|Komponenter', module)
+storiesOf('Digitala Produkter|React komponenter', module)
     .add(name, () =>
         <Divider />
     , { notes: NotesLoader(name) }

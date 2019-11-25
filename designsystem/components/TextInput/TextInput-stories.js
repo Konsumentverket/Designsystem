@@ -6,7 +6,7 @@ import NotesLoader from '../NotesLoader';
 
 let name = 'Textinput';
 
-storiesOf('Digitala Produkter|Komponenter/', module)
+storiesOf('Digitala Produkter|React komponenter/', module)
     .add('Textinput', () =>
         <TextInput
             type={select("Fält typ", ['text', 'password', 'email', 'number', 'search', 'url'])}

@@ -5,29 +5,44 @@ import { colors } from '../Colors/Colors';
 export const fieldWrapper = css`
 
     width: 100%;
-    background-color: ${colors.natural.isabelline};
     padding: 18px 0;
     position: relative;
+    border-radius: 0.8rem;
 
 `
 
 export const fieldInput = css`
 
     appearance: none;
-    width: 24px;
-    height: 24px;
+    width: 2.4rem;
+    height: 2.4rem;
     vertical-align: middle;
     border-radius: 50%;
-    border: 1px solid #999;
+    border: 2px solid ${colors.profile["blue-mid"]};
     background: #fff;
     margin: 0;
-    margin-left: 24px;
+    margin-left: 2.4rem;
     
 
     &:checked{
         outline: none;
-        border: 4px solid #fff;
-        background-color: #f59c00;        
+        border: 4px solid ${colors.profile["blue-mid"]};
+        background-color: ${colors.profile["blue-mid"]};
+        position: relative;
+        
+        &:before{
+            content: "";
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            display:block;
+            border: 2px solid #fff;
+            background: transparent;
+            position: absolute;
+            top:-2px;
+            left:-2px;
+        }
+
     }
 
 `
@@ -36,6 +51,6 @@ export const fieldLabel = css`
     vertical-align: middle;
     color: #464646;
     font-size: 21px;
-    line-height: 24px;
+    line-height: 28px;
     padding-left: 16px;
 `
