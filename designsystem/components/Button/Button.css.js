@@ -2,50 +2,74 @@ import { css } from '@emotion/core'
 import { spacing } from '../Spacing/Spacing';
 import { colors } from '../Colors/Colors';
 
+
+export const mediumStyle = css`
+    padding: 1.3rem 5.8rem;
+    font-size: 18px;
+    line-height: 18px;
+    svg{
+        width: 18px;
+        height: 18px;
+    }
+`;
+
+export const largeStyle = css`
+    padding: 1.1rem 5.8rem;
+    font-size: 24px;
+    line-height: 24px;
+    svg{
+        width: 24px;
+        height: 24px;
+    }
+`
+
+export const secondaryStyle = css`
+    background-color: ${colors.profile.white};
+    color: ${colors.profile["blue-mid"]};
+    &:active{
+        text-decoration: underline;
+        background-color: ${colors.profile["blue-dark"]};
+        color: #fff;
+    }
+`
+
+export const ctaStyle = css`
+    background-color: ${colors.ui.green};
+    outline: none;
+    border-color: ${colors.ui.green};
+    &:hover,&:focus{
+        border-color: ${colors.natural.black};
+    }
+    &:active{
+        background-color: #004724;
+    }
+`
+
+export const selectedStyle = css`
+    background-color: ${colors.profile["blue-mid"]};
+    color: ${colors.profile.white};
+`
+export const iconStyle = (position) => css`
+    
+    fill:#fff;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    margin: ${position == "right" ? '0 0 0 0.8rem ' : '0 0.8rem 0 0'};
+
+`
+
 export default css`
-    padding: calc(${spacing["spacing-s"]} + 2px) ${spacing["spacing-3xl"]};
+    padding: 1.0rem 4.8rem;
     background-color: ${colors.profile["blue-mid"]};
     border: 2px solid ${colors.profile["blue-mid"]};
-    border-radius: 3px;
+    border-radius: 0.8rem;
     color: ${colors.profile.white}; 
-    line-height: 16px;
+    line-height: 1.6rem;
     font-size: 16px;
     user-select: none;
 
-    &.medium{
-        padding: calc(${spacing["spacing-m/s"]} + 2px) ${spacing["spacing-3xl"]};
-        font-size: 19px;
-    }
 
-    &.large{
-        padding: calc(${spacing["spacing-m"]} + 2px) ${spacing["spacing-3xl"]};
-        font-size: 24px;
-    }
-
-    &.secondary{
-        background-color: ${colors.profile.white};
-        color: ${colors.profile["blue-mid"]};
-
-        &.darkmode{
-            border-color: ${colors.profile.white};
-        }
-
-        &:active{
-            text-decoration: underline;
-            background-color: ${colors.profile["blue-dark"]};
-        }
-    }
-    &.darkmode {
-        box-shadow: 0px 0px 1px 1px rgba(255,255,255,.7);
-        &:hover,&:active,&:focus{
-            border-color: ${colors.profile.white};
-            box-shadow:none;
-        }
-    }
-    &.selected {
-        background-color: ${colors.profile["blue-mid"]};
-        color: ${colors.profile.white};
-    }
     &:hover{
         border-color: ${colors.natural.black};
         background-color: ${colors.profile["blue-mid"]};
@@ -63,69 +87,15 @@ export default css`
         background-color:  ${colors.natural["gray-light"]};
         border-color: ${colors.natural["gray-light"]};
         color: ${colors.natural.black}
-    }
-    &.cta{
-        background-color: ${colors.ui.green};
-        outline: none;
-        border-color: ${colors.ui.green};
-        &:hover,&:focus{
-            border-color: ${colors.natural.black};
-        }
-        &:active{
-            background-color: #004724;
+        svg{
+            fill: ${colors.natural.black};
         }
     }
 
+`
 
-    &.hasicon {
 
-        .buttontext{
-            padding-left: 35px;
-            position: relative;
-            .buttonicon{
-                position: absolute;
-                top:-7px;
-                left: 0px;
-                width: 30px;
-                fill: #fff;
-            }
-        }
 
-        &.medium{
 
-            .buttontext{
-                padding-left: 45px;
-            }
 
-            .buttonicon{
-                width: 35px;
-            }
-        }
-        &.large{
 
-            .buttontext{
-                padding-left: 55px;
-            }
-
-            .buttonicon{
-                width: 40px;
-            }
-        }
-
-    }
-
-&.fieldbutton {
-    border:0;
-    .buttontext {
-        padding-right:35px;
-        padding-left:0;
-
-        .buttonicon {
-        left:auto;
-        right:0;
-    }
-    }
-   
-}
-
-`;
