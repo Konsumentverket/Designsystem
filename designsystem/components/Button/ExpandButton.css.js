@@ -9,7 +9,7 @@ export const expandButton = css`
     text-align: center;
     padding-right:10px;
     padding-left:10px;
-    min-height: 57px;
+    min-height: 56px;
     padding-top: 8px;
     padding-bottom: 8px;
     border-width: 0;
