@@ -34,7 +34,7 @@ const iconDefinitions = {
     Check,
     Oval,
     Binoculars,
-    LinkArrow
+    LinkArrow,
 }
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
