@@ -5,11 +5,11 @@ import ButtonStyle, { selectedStyle,secondaryStyle,ctaStyle,mediumStyle,largeSty
 import { Icon } from '../Icon/Icon';
 
 
-export const Button = (props,{text,buttontype,className, id, type = "submit",
-    disabled, selected, size, icon, iconRight, style, reference, onClick}) => {
+export const Button = ({text,buttontype,className, id, type = "submit",
+    disabled, selected, size, icon, iconRight, style, reference, onClick, ...other}) => {
 
     var styles = [ButtonStyle,style];
-
+ 
         switch (buttontype){
             case "primary":
                 //default
@@ -35,11 +35,8 @@ export const Button = (props,{text,buttontype,className, id, type = "submit",
         }
 
         if(selected) styles.push(selectedStyle);
-        // const ariaAttrs = {};
-        // Object.keys(props).filter(x => x.startsWith('aria-')).forEach(y => ariaAttrs[y] = props[y]);
-
-        // const getAriaAttrs = () => Object.keys(props).filter(x => x.startsWith('aria-')).forEach(y => ariaAttrs[y] = props[y]);
-        
+        const ariaAttrs = {};
+        Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x])
 
         return <button
             id={id}
@@ -49,6 +46,7 @@ export const Button = (props,{text,buttontype,className, id, type = "submit",
             type={type}
             onClick={onClick}
             ref={reference}
+            {...ariaAttrs}
         >
             {icon && !iconRight ? <Icon style={iconStyle("left")} icon={icon} /> : null}
             {text}
