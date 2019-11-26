@@ -3,9 +3,9 @@
         {
             "name": "Withdrawal",
             "title": "Ångerrätt",
-            "url": "SystemIcons/svg/withdrawal.svg"
+            "url": "EditorIcons/withdrawal.svg"
         },
-        
+
 
        {
            "name": "Adapt",
