@@ -1,5 +1,12 @@
 {
    "icons": [
+        {
+            "name": "Withdrawal",
+            "title": "Ångerrätt",
+            "url": "EditorIcons/withdrawal.svg"
+        },
+
+
        {
            "name": "Adapt",
            "title": "Anpassa",
