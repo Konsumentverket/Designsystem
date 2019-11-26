@@ -5,32 +5,165 @@
             "title": "Ångerrätt",
             "url": "EditorIcons/Withdrawal.svg"
         },
-
-
-       {
-           "name": "Adapt",
-           "title": "Anpassa",
-           "url": "SystemIcons/svg/adapt.svg"
-       },
-       {
-           "name": "Close",
-           "title": "Stäng",
-           "url": "SystemIcons/svg/close.svg"
-       },
-       {
-           "name": "Easytoread",
-           "title": "Lättläst",
-           "url": "SystemIcons/svg/easytoread.svg"
-       },
-       {
-           "name": "Signlanguage",
-           "title": "Teckenspråk",
-           "url": "SystemIcons/svg/signlanguage.svg"
-       },
-       {
-           "name": "Search",
-           "title": "Sök",
-           "url": "SystemIcons/svg/search.svg"
-       }
+        {
+            "name": "AppsAndGames",
+            "title": "Appar och spel",
+            "url": "EditorIcons/AppsAndGames.svg"
+        },
+        {
+            "name": "Auction",
+            "title": "Aktion",
+            "url": "EditorIcons/Auction.svg"
+        },
+        {
+            "name": "Cars",
+            "title": "Bilar",
+            "url": "EditorIcons/Cars.svg"
+        },
+        {
+            "name": "ComputerTvGameConsole",
+            "title": "Dator Tv Spelkonsol",
+            "url": "EditorIcons/ComputerTvGameConsole.svg"
+        },
+        {
+            "name": "ElectricityHeatingContract",
+            "title": "Elavtal och uppvärmning",
+            "url": "EditorIcons/ElectricityHeatingContract.svg"
+        },
+        {
+            "name": "MoveAndCleaningService",
+            "title": "Flytt och städtjänster",
+            "url": "EditorIcons/MoveAndCleaningService.svg"
+        },
+        {
+            "name": "Insurance",
+            "title": "Försäkring",
+            "url": "EditorIcons/Insurance.svg"
+        },
+        {
+            "name": "Hairdresser",
+            "title": "Frisör",
+            "url": "EditorIcons/Hairdresser.svg"
+        },
+        {
+            "name": "GymAndWorkoutService",
+            "title": "Gym och träningstjänster",
+            "url": "EditorIcons/GymAndWorkoutService.svg"
+        },
+        {
+            "name": "Craftsman",
+            "title": "Hantverkare",
+            "url": "EditorIcons/Craftsman.svg"
+        },
+        {
+            "name": "Pets",
+            "title": "Husdjur",
+            "url": "EditorIcons/Pets.svg"
+        },
+        {
+            "name": "InternetFiberBroadband",
+            "title": "Internet, fiber, bredband",
+            "url": "EditorIcons/InternetFiberBroadband.svg"
+        },
+        {
+            "name": "Clothes",
+            "title": "Kläder",
+            "url": "EditorIcons/Clothes.svg"
+        },
+        {
+            "name": "ConcertAndEvent",
+            "title": "Konsert och evenemang",
+            "url": "EditorIcons/ConcertAndEvent.svg"
+        },
+        {
+            "name": "ConsumerRights",
+            "title": "Konsumentköplagen",
+            "url": "EditorIcons/ConsumerRights.svg"
+        },
+        {
+            "name": "PurchaseFromPrivate",
+            "title": "Köp av privatperson",
+            "url": "EditorIcons/PurchaseFromPrivate.svg"
+        },
+        {
+            "name": "SalesLaw",
+            "title": "Köplagen",
+            "url": "EditorIcons/SalesLaw.svg"
+        },
+        {
+            "name": "Receipt",
+            "title": "Kvitto",
+            "url": "EditorIcons/Receipt.svg"
+        },
+        {
+            "name": "DistanceContractLaw",
+            "title": "Lagen om distansavtal",
+            "url": "EditorIcons/DistanceContractLaw.svg"
+        },
+        {
+            "name": "LoanSaveInvest",
+            "title": "Låna, spara, investera",
+            "url": "EditorIcons/LoanSaveInvest.svg"
+        },
+        {
+            "name": "LotteryAndGames",
+            "title": "Lotteri och spel",
+            "url": "EditorIcons/LotteryAndGames.svg"
+        },
+        {
+            "name": "BrokerServices",
+            "title": "Mäklartjänster",
+            "url": "EditorIcons/BrokerServices.svg"
+        },
+        {
+            "name": "MobilePhone",
+            "title": "Mobiltelefon",
+            "url": "EditorIcons/MobilePhone.svg"
+        },
+        {
+            "name": "FurnituresAndDecoration",
+            "title": "Möbler och inredning",
+            "url": "EditorIcons/FurnituresAndDecoration.svg"
+        },
+        {
+            "name": "Complaint",
+            "title": "Reklamation",
+            "url": "EditorIcons/Complaint.svg"
+        },
+        {
+            "name": "Travel",
+            "title": "Resor",
+            "url": "EditorIcons/Travel.svg"
+        },
+        {
+            "name": "BeautyEngagement",
+            "title": "Skönhetsingrepp",
+            "url": "EditorIcons/BeautyEngagement.svg"
+        },
+        {
+            "name": "ContractWorkHouses",
+            "title": "Småhusentrepenad",
+            "url": "EditorIcons/ContractWorkHouses.svg"
+        },
+        {
+            "name": "Telemarketing",
+            "title": "Telefonförsäljning",
+            "url": "EditorIcons/Telemarketing.svg"
+        },
+        {
+            "name": "NotDefinedPicture",
+            "title": "Odefinierad bild",
+            "url": "EditorIcons/NotDefinedPicture.svg"
+        },
+        {
+            "name": "EducationAndCourses",
+            "title": "Utbildning och kurser",
+            "url": "EditorIcons/EducationAndCourses.svg"
+        },
+        {
+            "name": "WhiteGoods",
+            "title": "Vitvaror",
+            "url": "EditorIcons/WhiteGoods.svg"
+        }
    ]
 }
