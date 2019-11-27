@@ -3,12 +3,12 @@ import { jsx } from '@emotion/core'
 
 import AppsAndGames from '../../icons/EditorIcons/AppsAndGames'
 
-const iconDefinitions = {
+const editorIconDefinitions = {
     AppsAndGames
 }
 
-const Icon = ({ icon, className, style, title, ...otherAttr }) => {
-    const Element = iconDefinitions[icon];
+const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
+    const Element = editorIconDefinitions[icon];
 
     if (Element === undefined) {
         console.log(`Could not find icon in storybook tried to load: ${icon}`)
@@ -18,4 +18,4 @@ const Icon = ({ icon, className, style, title, ...otherAttr }) => {
     return <Element title={title} className={className} style={style} role="img" aria-label={title || ""} alt="" {...otherAttr} />
 }
 
-export { Icon, iconDefinitions };
+export { EditorIcon, editorIconDefinitions };
