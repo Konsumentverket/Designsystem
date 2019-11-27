@@ -8,6 +8,7 @@ export const fieldWrapper = css`
     padding: 18px 0;
     position: relative;
     border-radius: 0.8rem;
+    border: 2px solid transparent;
     &:hover{
         border: 2px solid ${colors.profile["blue-mid"]};
     }
