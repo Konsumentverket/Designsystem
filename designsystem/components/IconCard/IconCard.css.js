@@ -16,7 +16,7 @@ export const arrowStyle = css`
 export const iconStyle = css`
     position:absolute;
     top: 20px;
-    left: 12px;
+    left: 16px;
     height: 32px;
     width: 32px;
     fill: ${colors.profile['blue-mid']};
@@ -24,7 +24,7 @@ export const iconStyle = css`
 
 export const iconCardStyle = css`
     background-color: ${colors.profile['white']};
-    padding-left: 12px;
+    padding-left: 16px;
     padding-right: 40px;
     min-height: 72px;
     text-decoration: none;
@@ -35,7 +35,7 @@ export const iconCardStyle = css`
     border-radius: 8px;
     border: 1px solid ${colors.profile['blue-mid']};
     h2, h3 {
-        padding-left: 44px;
+        padding-left: 48px;
         display: flex;
         align-items:center;
         margin:0;
