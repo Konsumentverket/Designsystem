@@ -23,18 +23,19 @@ export const iconStyle = css`
 `;
 
 export const iconCardStyle = css`
-        background-color: ${colors.profile['white']};
-        padding-left: 12px;
-        padding-right: 40px;
-        min-height: 72px;
-        text-decoration: none;
-        width: 100%;
-        box-sizing: border-box;
-        position: relative;
-        display: flex;
-        border-radius: 8px;
-        border: 1px solid ${colors.profile['blue-mid']};
+    background-color: ${colors.profile['white']};
+    padding-left: 12px;
+    padding-right: 40px;
+    min-height: 72px;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid ${colors.profile['blue-mid']};
     h2, h3 {
+        padding-left: 44px;
         display: flex;
         align-items:center;
         margin:0;
@@ -43,8 +44,8 @@ export const iconCardStyle = css`
         font-size: 21px;
         font-weight: 500;
     }
-    &.topAreaIcon h3{
-        padding-left: 56px;
+    h2:first-child, h3:first-child {
+        padding-left: 0;
     }
 `;
 
