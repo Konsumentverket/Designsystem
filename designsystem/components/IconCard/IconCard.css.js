@@ -16,25 +16,26 @@ export const arrowStyle = css`
 export const iconStyle = css`
     position:absolute;
     top: 20px;
-    left: 12px;
+    left: 16px;
     height: 32px;
     width: 32px;
     fill: ${colors.profile['blue-mid']};
 `;
 
 export const iconCardStyle = css`
-        background-color: ${colors.profile['white']};
-        padding-left: 12px;
-        padding-right: 40px;
-        min-height: 72px;
-        text-decoration: none;
-        width: 100%;
-        box-sizing: border-box;
-        position: relative;
-        display: flex;
-        border-radius: 8px;
-        border: 1px solid ${colors.profile['blue-mid']};
+    background-color: ${colors.profile['white']};
+    padding-left: 16px;
+    padding-right: 40px;
+    min-height: 72px;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid ${colors.profile['blue-mid']};
     h2, h3 {
+        padding-left: 48px;
         display: flex;
         align-items:center;
         margin:0;
@@ -43,8 +44,8 @@ export const iconCardStyle = css`
         font-size: 21px;
         font-weight: 500;
     }
-    &.topAreaIcon h3{
-        padding-left: 56px;
+    h2:first-child, h3:first-child {
+        padding-left: 0;
     }
 `;
 

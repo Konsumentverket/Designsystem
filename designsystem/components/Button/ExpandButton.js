@@ -5,7 +5,7 @@ import { expandButton, showLessArrow, buttonContent, arrow } from './ExpandButto
 
 const ExpandButton = ({ onClick, text, style, expanded }) => {
     return <button aria-expanded={expanded ? "true" : "false"} css={[expandButton, style]} onClick={onClick}>
-        <span css={buttonContent}>{text} <Icon aria-hidden="true" icon="Arrow" style={[arrow, expanded && showLessArrow]} /></span>
+        <span css={[buttonContent]}>{text}</span><Icon aria-hidden="true" icon="Arrow" style={[arrow, expanded && showLessArrow]} />
     </button>
 }
 
