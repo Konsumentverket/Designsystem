@@ -17,6 +17,7 @@ import Check from '../../icons/SystemIcons/Check'
 import Oval from '../../icons/SystemIcons/Oval'
 import Binoculars from '../../icons/SystemIcons/Binoculars'
 import LinkArrow from '../../icons/SystemIcons/LinkArrow'
+import Plane from '../../icons/SystemIcons/Plane'
 
 const iconDefinitions = {
     Adapt,
@@ -35,6 +36,8 @@ const iconDefinitions = {
     Oval,
     Binoculars,
     LinkArrow,
+    Plane
+    
 }
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
