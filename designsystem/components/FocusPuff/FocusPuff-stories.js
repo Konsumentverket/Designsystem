@@ -13,7 +13,7 @@ storiesOf('Digitala Produkter|React komponenter', module)
         <div css={css`
           width: 304px;
         `}>
-          <FocusPuff  headline="Besök våran kampanj" text="lorem ipsum dolor lorem ipsum doloe" image="https://via.placeholder.com/304x100"/>
+          <FocusPuff headline="Besök våran kampanj" text="lorem ipsum dolor lorem ipsum doloe" image="https://via.placeholder.com/304x100"/>
         </div>
     , { notes: NotesLoader(name) }
     );
