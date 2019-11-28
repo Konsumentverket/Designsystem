@@ -8,10 +8,11 @@ export const wrapper = css`
   border-radius: 0.7rem;
   padding: 4rem 1.6rem 2.4rem 1.6rem;
   line-height: 1.8rem;
-  margin: 1rem 0 5.6rem 0;
+  margin-top: 1rem;
   ${medium} {
     padding: 2.4rem 3.2rem 2.4rem 3.2rem;
-    margin: .8rem 0 0 .8rem;
+    margin-top: .8rem;
+    margin-left: .8rem;
   }
 `
 
