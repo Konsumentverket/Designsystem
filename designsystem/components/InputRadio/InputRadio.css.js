@@ -9,6 +9,7 @@ export const fieldWrapper = css`
     position: relative;
     border-radius: 0.8rem;
     border: 2px solid transparent;
+    display:flex;
     &:hover{
         border: 2px solid ${colors.profile["blue-mid"]};
     }
@@ -26,6 +27,7 @@ export const fieldInput = css`
     background: #fff;
     margin: 0;
     margin-left: 2.4rem;
+    flex-shrink: 0;
     
 
     &:checked{

@@ -8,13 +8,14 @@ export const FocusPuff = ({ headline,text,
   isCampaign, isExternalLink,
   image, imageAlt,
   icon,
-  imageComponent
+  imageComponent,
+  wrapperStyle
 }) => {
   
   let imageArea = imageComponent;
   if(imageArea == null){
     if(image != null)
-      imageArea = <img src={image} alt={imageAlt}  />
+      imageArea = <img src={image} alt={imageAlt} css={css.picture(isCampaign)}  />
     else{
       imageArea = <div css={css.iconBackground}>
                     <Icon icon={icon || ""} style={css.icon} />
@@ -24,7 +25,7 @@ export const FocusPuff = ({ headline,text,
 
 
   return (
-        <div css={css.innerContent(isCampaign)}>
+        <div css={[css.innerContent(isCampaign),wrapperStyle]}>
           <div css={css.pictureWrapper(isCampaign)}>
             {imageArea}
           </div>

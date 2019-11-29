@@ -8,8 +8,7 @@ export const flex = css`
 `
 export const innerContent = isCampaign => css`
   display: flex;
-  overflow: visible;
-  /* mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); */
+  overflow: hidden;
   border-radius: 0.8rem;
   ${isCampaign ? `
     flex-flow: column;
@@ -25,7 +24,6 @@ export const innerContent = isCampaign => css`
 
   background-color: #b50255;
   color: #fff;
-  margin: 0 auto;
   margin-bottom: 2.4rem;
 `
 
