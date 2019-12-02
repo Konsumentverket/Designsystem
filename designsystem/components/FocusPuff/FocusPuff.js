@@ -29,7 +29,7 @@ export const FocusPuff = ({ headline,text,
           <div css={css.pictureWrapper(isCampaign)}>
             {imageArea}
           </div>
-          <div css={css.textArea}>
+          <div css={css.textArea(isCampaign)}>
             <h2 css={css.headline}>
               {headline}
               {isExternalLink && <Icon title="Extern länk" icon='External' style={css.externalIcon} />}

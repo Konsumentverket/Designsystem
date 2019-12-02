@@ -8,18 +8,20 @@ export const flex = css`
 `
 export const innerContent = isCampaign => css`
   display: flex;
+  flex: 1;
   overflow: hidden;
   border-radius: 0.8rem;
   ${isCampaign ? `
     flex-flow: column;
-    min-height: 48rem;
+    height: 48rem;
     ${medium} {
       flex-flow: row;
-      min-height: 28.8rem;
+      height: 28.8rem;
+      overflow: hidden;
     }
     ` : `
       flex-flow: column;
-      height: 28.8rem;
+      min-height: 28.8rem;
     `}
 
   background-color: #b50255;
@@ -38,7 +40,11 @@ export const text = css`
   line-height: 3.2rem;
 `
 
-export const textArea = css`
+export const textArea = isCampaign => css`
+  height: 1%;
+  ${medium} {
+    ${isCampaign && 'max-width: 46%;'}
+  }
   margin: 2.4rem;
 `
 
@@ -91,7 +97,7 @@ export const iconBackground = css`
 export const icon = css`
   padding-top: 2.9rem;
   margin: 0 auto;
-  fill: #b50255
+  fill: #b50255;
   width: 6rem;
   height: 5.4rem;
 `
