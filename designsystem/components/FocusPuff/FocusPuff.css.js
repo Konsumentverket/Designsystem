@@ -6,12 +6,21 @@ export const flex = css`
   display: flex;
   flex-direction: column;
 `
-export const innerContent = isCampaign => css`
+
+export const focusWrapper = css`
   display: flex;
   flex: 1;
   overflow: hidden;
   border-radius: 0.8rem;
-  ${isCampaign ? `
+  background-color: #b50255;
+  color: #fff;
+  margin-bottom: 2.4rem;
+  flex-flow: column;
+  min-height: 28.8rem;
+`
+
+export const CampaignfocusWrapper = css`
+ 
     flex-flow: column;
     height: 48rem;
     ${medium} {
@@ -19,49 +28,42 @@ export const innerContent = isCampaign => css`
       height: 28.8rem;
       overflow: hidden;
     }
-    ` : `
-      flex-flow: column;
-      min-height: 28.8rem;
-    `}
-
-  background-color: #b50255;
-  color: #fff;
-  margin-bottom: 2.4rem;
 `
 
-export const headline = css`
+
+export const focusHeadline = css`
   font-size: 2.4rem;
   line-height: 3.2rem;
   margin: 0;
 `
 
-export const text = css`
+export const focusText = css`
   font-size: 1.8rem;
   line-height: 3.2rem;
 `
 
 export const textArea = isCampaign => css`
-  height: 1%;
   ${medium} {
-    ${isCampaign && 'max-width: 46%;'}
+    ${isCampaign && 'max-width:32.8rem;'}
   }
   margin: 2.4rem;
 `
 
-export const pictureWrapper = isCampaign => css`
+export const pictureWrapper = css`
   overflow: hidden;
-  ${isCampaign ? `
-    width: 100%;
+  height: 12rem;
+`
+
+export const campaignPictureWrapper = css`
+  width: 100%;
     height: 24rem;
-    
     ${medium} {
       min-height: 28.8rem;
       width: 29.8rem;
     }
-    ` : `
-    height: 12rem;
-    `}
 `
+
+
 
 export const picElement = css`
   /* this is to make the "isIntersecting" have something to interrsect with */
