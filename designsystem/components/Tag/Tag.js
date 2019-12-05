@@ -7,7 +7,7 @@ import { SubHeading } from '../Headings/SubHeading';
 const Tag = ({ id, url, text, style, headingLevel = 4 }) => {
     return <div key={id} css={[tagStyle, style]}>
         <a href={url} >
-            <SubHeading level={headingLevel}>{text}</SubHeading>
+            {text}
         </a>
     </div>
 }
