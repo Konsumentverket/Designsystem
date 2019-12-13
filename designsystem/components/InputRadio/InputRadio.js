@@ -11,7 +11,10 @@ export const InputRadio = ({
         const inputRef = useRef(null);
         return <div css={[fieldWrapper, fieldWrapperStyle]} 
                     className={(inputRef != null && inputRef.current != null && inputRef.current.checked) || checked ? "inputHasValue" : ""} 
-                    onClick={() => inputRef.current.click()}
+                    onClick={() => {
+                        inputRef.current.click()
+                        inputRef.current.focus()
+                    }}
                 >
                     <input ref={inputRef} css={[fieldInput,fieldInputStyle]} id={id} name={name} type="radio" 
                         onChange={onChange} value={value} checked={checked}

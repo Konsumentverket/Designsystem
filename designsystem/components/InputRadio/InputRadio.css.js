@@ -13,6 +13,12 @@ export const fieldWrapper = css`
     &:hover{
         border: 2px solid ${colors.profile["blue-mid"]};
     }
+    &:focus-within{
+        border: 2px solid transparent;
+        outline-offset: 2px;
+        outline: 3px solid #F59C00;
+    }
+    
 
 `
 
