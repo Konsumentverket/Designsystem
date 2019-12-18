@@ -10,13 +10,23 @@ export const fieldWrapper = css`
     border-radius: 0.8rem;
     border: 2px solid transparent;
     display:flex;
+    align-items: center;
+    background-color: ${colors.natural.isabelline};
+    &.inputHasValue{
+        border: 2px solid ${colors.profile["blue-dark"]};
+    }
+
     &:hover{
         border: 2px solid ${colors.profile["blue-mid"]};
+        .radiolabel {
+            text-decoration: underline;
+        }
     }
     &:focus-within{
-        border: 2px solid transparent;
-        outline-offset: 2px;
-        outline: 3px solid #F59C00;
+        &:not(.inputHasValue){
+            outline-offset: 2px;
+            outline: 3px solid #F59C00;
+        }
     }
     
 
@@ -38,10 +48,16 @@ export const fieldInput = css`
 
     &:checked{
         outline: none;
-        border: 4px solid ${colors.profile["blue-mid"]};
-        background-color: ${colors.profile["blue-mid"]};
+        border: 4px solid ${colors.profile["blue-dark"]};
+        background-color: ${colors.profile["blue-dark"]};
         position: relative;
         
+        &+label{ 
+            text-decoration: underline;
+            font-weight: 500;
+            color: ${colors.profile["blue-dark"]};
+        } 
+
         &:before{
             content: "";
             width: 1.6rem;
@@ -60,7 +76,6 @@ export const fieldInput = css`
 `
 
 export const fieldLabel = css`
-    vertical-align: middle;
     color: #464646;
     font-size: 21px;
     line-height: 28px;

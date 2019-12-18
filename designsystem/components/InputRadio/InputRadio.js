@@ -20,7 +20,7 @@ export const InputRadio = ({
                         onChange={onChange} value={value} checked={checked}
                     >
                     </input>
-                <label css={[fieldLabel, fieldLabelStyle]} htmlFor={id}>{labelText}</label>
+                <label className="radiolabel" css={[fieldLabel, fieldLabelStyle]} htmlFor={id}>{labelText}</label>
             </div>
 
 } 
