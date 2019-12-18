@@ -57,14 +57,14 @@ button {
     padding-right: 8px;
     position: relative;
     .buttonicon{
-                position: relative;
-                padding-right: 4px;
-                top: 5px;
-                right: 0px;
-                width: 22px;
-                height: auto;
-                fill: #fff;
-            }
+        position: relative;
+        padding-right: 4px;
+        top: 5px;
+        right: 0px;
+        width: 22px;
+        height: auto;
+        fill: #fff;
+    }
 }
 
 &.fieldbutton {
@@ -74,9 +74,9 @@ button {
         padding-left:0;
 
         .buttonicon {
-        left:auto;
-        right:0;
-    }
+            left:auto;
+            right:0;
+        }
     }
    
 }
