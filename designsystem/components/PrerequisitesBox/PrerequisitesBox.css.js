@@ -7,8 +7,7 @@ export const wrapper = css`
   background-color: ${colors.profile["blue-light"]};
   border-radius: 0.7rem;
   padding: 4rem 1.6rem 2.4rem 1.6rem;
-  line-height: 1.8rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   ${medium} {
     padding: 2.4rem 3.2rem 2.4rem 3.2rem;
     margin-top: .8rem;
@@ -16,10 +15,9 @@ export const wrapper = css`
   }
 `
 
-
 export const exclamationMarkImage = css`
   position: absolute;
-  top: -1.6rem;
+  top: -2rem;
   left: 50%;
   width:4rem;
   height:4rem;
@@ -39,21 +37,6 @@ export const heading = css`
   font-weight:700;
   ${medium} {
     margin-bottom:.8rem; 
-  }
-`
-
-export const content = css`
-    font-size:1.8rem;
-    line-height:3.2rem;
-
-  p {
-    margin-bottom:1.6rem;
-  }
-
-  a {
-    font-weight:700;
-    display:block;
-    margin-top:.8rem;
   }
 `
 
