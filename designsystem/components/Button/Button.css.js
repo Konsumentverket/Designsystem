@@ -31,6 +31,11 @@ export const secondaryStyle = css`
         background-color: ${colors.profile["blue-dark"]};
         color: #fff;
     }
+    &:hover{
+        border-color: ${colors.natural.black};
+        background-color: ${colors.profile["blue-light"]};
+        color: ${colors.profile["blue-mid"]};
+    }
 `
 
 export const ctaStyle = css`
@@ -74,6 +79,7 @@ export default css`
         border-color: ${colors.natural.black};
         background-color: ${colors.profile["blue-mid"]};
         color: ${colors.profile.white};
+        text-decoration: underline;
     }
     &:active{
         text-decoration: underline;

@@ -16,16 +16,24 @@ class FormSearchField extends React.Component {
             classes.push("hasicon")
         }
 
-        return <div css={[style]} className={classes.join(" ")} >
-        <input ref={this.props.reference} className="textfield" type="search" placeholder={this.props.fieldtext ?  this.props.fieldtext : "Vad letar du efter?"}></input>
-        <button
-            type={this.props.type ? this.props.type : "submit"}
-            onClick={this.props.onClick} >
-            <span className="buttontext">
-                {this.props.buttontext ?  this.props.buttontext : "Sök"}
-                <Icon icon={this.props.icon ? this.props.icon: "Search"} className="buttonicon" />                
-            </span>
-        </button>
+        return <div css={[style, this.props.style]} className={classes.join(" ")} >
+            <input
+                ref={this.props.reference}
+                className="textfield"
+                type="search"
+                value={this.props.value}
+                placeholder={this.props.fieldtext ? this.props.fieldtext : "Vad letar du efter?"}
+                onChange={this.props.onChange}
+            >
+            </input>
+            <button
+                type={this.props.type ? this.props.type : "submit"}
+                onClick={this.props.onClick} >
+                <span className="buttontext">
+                    <Icon icon={this.props.icon ? this.props.icon : "Search"} className="buttonicon" />
+                    {this.props.buttontext ? this.props.buttontext : "Sök"}
+                </span>
+            </button>
         </div>
     }
 }

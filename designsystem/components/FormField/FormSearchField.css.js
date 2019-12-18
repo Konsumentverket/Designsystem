@@ -51,16 +51,18 @@ button {
     }
 }    
 .buttontext {
-    font-size:18px;
+    font-size:21px;
     line-height:24px;
-    padding-right: 28px;
+    /* padding-right: 28px; */
+    padding-right: 8px;
     position: relative;
     .buttonicon{
-                position: absolute;
-                top:2px;
+                position: relative;
+                padding-right: 4px;
+                top: 5px;
                 right: 0px;
-                width: 20px;
-                height:auto;
+                width: 22px;
+                height: auto;
                 fill: #fff;
             }
 }
