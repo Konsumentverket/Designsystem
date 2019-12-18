@@ -1,57 +1,59 @@
 ﻿/** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react';
-import ButtonStyle, { selectedStyle,secondaryStyle,ctaStyle,mediumStyle,largeStyle,iconStyle } from './Button.css';
+import ButtonStyle, { selectedStyle, secondaryStyle, ctaStyle, mediumStyle, largeStyle, iconStyle } from './Button.css';
 import { Icon } from '../Icon/Icon';
 
 
-export const Button = ({text,buttontype,className, id, type = "submit",
-    disabled, selected, size, icon, iconRight, style, reference, onClick, ...other}) => {
+export const Button = ({ text, buttontype, className, id, type = "submit",
+    disabled, selected, size, icon, iconRight, style, reference, onClick, ...other }) => {
 
-    var styles = [ButtonStyle,style];
- 
-        switch (buttontype){
-            case "primary":
-                //default
-                break;
-            case "secondary":
-                styles.push(secondaryStyle);
-                break;
-            case "cta":
-                styles.push(ctaStyle);
-                break;
-        }
-    
-        switch (size){
-            case "small":
-                //default
-                break;
-            case "medium":
-                styles.push(mediumStyle);
-                break;
-            case "large":
-                styles.push(largeStyle);
-                break;
-        }
+    var styles = [ButtonStyle];
 
-        if(selected) styles.push(selectedStyle);
-        const ariaAttrs = {};
-        Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x])
+    switch (buttontype) {
+        case "primary":
+            //default
+            break;
+        case "secondary":
+            styles.push(secondaryStyle);
+            break;
+        case "cta":
+            styles.push(ctaStyle);
+            break;
+    }
 
-        return <button
-            id={id}
-            css={styles}
-            className={className}
-            disabled={disabled}
-            type={type}
-            onClick={onClick}
-            ref={reference}
-            {...ariaAttrs}
-        >
-            {icon && !iconRight ? <Icon style={iconStyle("left")} icon={icon} /> : null}
-            {text}
-            {icon && iconRight ? <Icon style={iconStyle("right")} icon={icon} /> : null}
-        </button>;
+    switch (size) {
+        case "small":
+            //default
+            break;
+        case "medium":
+            styles.push(mediumStyle);
+            break;
+        case "large":
+            styles.push(largeStyle);
+            break;
+    }
+
+    if (selected) styles.push(selectedStyle);
+    const ariaAttrs = {};
+    Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x])
+
+    style && styles.push(style)
+
+    return <button
+        id={id}
+        css={styles}
+        className={className}
+        disabled={disabled}
+        type={type}
+        onClick={onClick}
+        ref={reference}
+        {...ariaAttrs}
+    >
+        {icon && !iconRight ? <Icon style={iconStyle("left")} icon={icon} /> : null}
+        {text}
+        {icon && iconRight ? <Icon style={iconStyle("right")} icon={icon} /> : null}
+    </button>;
 
 
 
