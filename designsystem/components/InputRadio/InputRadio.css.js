@@ -22,6 +22,10 @@ export const fieldWrapper = css`
             text-decoration: underline;
         }
     }
+    &:active{
+        outline-offset: 2px;
+        outline: 3px solid #F59C00;
+    }
     &:focus-within{
         &:not(.inputHasValue){
             outline-offset: 2px;
