@@ -6,61 +6,90 @@ export const flex = css`
   display: flex;
   flex-direction: column;
 `
-export const innerContent = isCampaign => css`
+
+export const focusLink  = css`
+`
+
+export const focusWrapper = (isCampaign, isLink) => css`
   display: flex;
   flex: 1;
-  overflow: hidden;
   border-radius: 0.8rem;
-  ${isCampaign ? `
-    flex-flow: column;
+  background-color: #b50255;
+  color: #fff;
+  flex-flow: column;
+  min-height: 28.8rem;
+  margin-top:.8rem;
+  box-sizing:content-box;
+
+  ${isCampaign}{
     height: 48rem;
     ${medium} {
       flex-flow: row;
       height: 28.8rem;
-      overflow: hidden;
     }
-    ` : `
-      flex-flow: column;
-      min-height: 28.8rem;
-    `}
+  }
 
-  background-color: #b50255;
-  color: #fff;
-  margin-bottom: 2.4rem;
+  ${isLink}{
+    &:hover{
+      margin:-.4rem;
+      padding-top:.8rem;
+      border:solid .4rem ${colors.profile["blue-mid"]};
+      overflow:hidden; 
+
+      img {
+          border-radius:0;
+        }
+
+       .iconBackground {
+          border-radius:0;
+       }
+    }
+  }
 `
 
-export const headline = css`
+export const focusHeadline = css`
   font-size: 2.4rem;
   line-height: 3.2rem;
-  margin: 0;
+  margin: 0 0 .8rem 0;
 `
 
-export const text = css`
+export const focusText = css`
   font-size: 1.8rem;
   line-height: 3.2rem;
+  margin:0;
 `
 
 export const textArea = isCampaign => css`
-  height: 1%;
   ${medium} {
-    ${isCampaign && 'max-width: 46%;'}
+    ${isCampaign}{
+      max-width:32.8rem;
+    }
   }
   margin: 2.4rem;
 `
 
 export const pictureWrapper = isCampaign => css`
   overflow: hidden;
-  ${isCampaign ? `
+  margin-top:-.8rem;
+
+  ${isCampaign}{
     width: 100%;
-    height: 24rem;
-    
+    /*height: 24rem;*/
     ${medium} {
-      min-height: 28.8rem;
-      width: 29.8rem;
     }
-    ` : `
-    height: 12rem;
-    `}
+  }
+
+  picture {
+    display:block;
+  
+  }
+  img {
+    display:block;
+    width:100%;
+    border-top-left-radius:.8rem;
+    border-top-right-radius:.8rem;
+  }
+
 `
 
 export const picElement = css`
@@ -71,23 +100,21 @@ export const picElement = css`
 `
 
 export const picture = isCampaign => css`
-  border-radius: 0.7rem;
-  ${isCampaign ? `
-    height: auto;
-    width: 100%;
+  border-radius: 0.8rem;
+  height: auto;
+  width: 100%;
+  ${isCampaign}{
     ${medium} {
       min-height: 28.8rem;
       margin: auto;
       width: auto;
     }
-    ` : `
-    height: auto;
-    width: 100%;
-  `}
+  }
 `
 
 export const iconBackground = css`
-  border-radius: 0.7rem;
+  border-top-right-radius: .8rem;
+  border-top-left-radius:.8rem;
   display: flex;
   width: 100%;
   background-color: ${colors.profile['pink-light']};
