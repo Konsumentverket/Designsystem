@@ -10,9 +10,6 @@ let name = 'Sökfält';
 
 storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
     .add(name, () =>
-        <div css={css`
-        background-color: ${colors.profile["blue-dark"]};
-        padding:20px;
-      `}><FormSearchField /></div>
+        <FormSearchField icon="Search" />
     , { notes: NotesLoader(name) }
     );

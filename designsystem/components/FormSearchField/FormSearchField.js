@@ -6,7 +6,7 @@ import { Icon } from '../Icon/Icon';
 
 
 
-export const FormSearchField = ({ className, icon, reference, fieldtext, onClick, buttontext, type, ...other }) => {
+export const FormSearchField = ({ className, icon, reference, fieldtext, onClick, buttontext, type, inputtype, ...other }) => {
 
     let classes = ["search-form-field"];
     if (className) {
@@ -17,12 +17,12 @@ export const FormSearchField = ({ className, icon, reference, fieldtext, onClick
     }
 
     return <div css={[style]} className={classes.join(" ")} >
-        <input {...other} ref={reference} className="textfield" type="search" placeholder={fieldtext ? fieldtext : "Vad letar du efter?"}></input>
+        <input {...other} ref={reference} className="textfield" type={inputtype || "search"} placeholder={fieldtext ? fieldtext : "Vad letar du efter?"}></input>
         <button
             type={type ? type : "submit"}
             onClick={onClick} >
             <span className="buttontext">
-                <Icon icon={icon ? icon : "Search"} className="buttonicon" />
+                {icon && <Icon icon={icon} className="buttonicon" />}
                 {buttontext ? buttontext : "Sök"}
             </span>
         </button>
