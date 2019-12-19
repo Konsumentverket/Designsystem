@@ -11,16 +11,20 @@ export const InputRadio = ({
         const inputRef = useRef(null);
         return <div css={[fieldWrapper, fieldWrapperStyle]} 
                     className={(inputRef != null && inputRef.current != null && inputRef.current.checked) || checked ? "inputHasValue" : ""} 
-                    onClick={() => {
-                        inputRef.current.click()
-                        inputRef.current.focus()
-                    }}
                 >
+                <label className="radiolabel" css={[fieldLabel, fieldLabelStyle]} htmlFor={id}>
                     <input ref={inputRef} css={[fieldInput,fieldInputStyle]} id={id} name={name} type="radio" 
-                        onChange={onChange} value={value} checked={checked}
+                        onChange={onChange} value={value} checked={checked}  
+                        onClick={(e) => {
+                            if (e.clientX !== 0 && e.clientY !== 0) {
+                                //its a mouse click
+                                e.target.blur();
+                            }
+                        }}
                     >
                     </input>
-                <label className="radiolabel" css={[fieldLabel, fieldLabelStyle]} htmlFor={id}>{labelText}</label>
+                    {labelText}
+                </label>
             </div>
 
 } 

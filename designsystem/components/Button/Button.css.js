@@ -5,7 +5,7 @@ import { colors } from '../Colors/Colors';
 
 export const mediumStyle = css`
     padding: 1.3rem 5.8rem;
-    font-size: 18px;
+    font-size: 2.1rem;
     line-height: 18px;
     svg{
         width: 18px;
@@ -15,7 +15,7 @@ export const mediumStyle = css`
 
 export const largeStyle = css`
     padding: 1.1rem 5.8rem;
-    font-size: 24px;
+    font-size: 2.4rem;
     line-height: 24px;
     svg{
         width: 24px;

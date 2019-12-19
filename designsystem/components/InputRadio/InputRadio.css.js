@@ -5,7 +5,6 @@ import { colors } from '../Colors/Colors';
 export const fieldWrapper = css`
 
     width: 100%;
-    padding: 18px 0;
     position: relative;
     border-radius: 0.8rem;
     border: 2px solid transparent;
@@ -22,15 +21,10 @@ export const fieldWrapper = css`
             text-decoration: underline;
         }
     }
-    &:active{
+    
+    &:focus-within{
         outline-offset: 2px;
         outline: 3px solid #F59C00;
-    }
-    &:focus-within{
-        &:not(.inputHasValue){
-            outline-offset: 2px;
-            outline: 3px solid #F59C00;
-        }
     }
     
 
@@ -47,6 +41,7 @@ export const fieldInput = css`
     background: #fff;
     margin: 0;
     margin-left: 2.4rem;
+    margin-right: 1.6rem;
     flex-shrink: 0;
     
 
@@ -81,7 +76,8 @@ export const fieldInput = css`
 
 export const fieldLabel = css`
     color: #464646;
+    width: 100%;
     font-size: 21px;
     line-height: 28px;
-    padding-left: 16px;
+    padding: 18px 0;
 `
