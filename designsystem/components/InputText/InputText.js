@@ -1,9 +1,37 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import { InputStyle } from "./InputText.css"
+import { InputStyle,InputWrapperStyle, ClearInput } from "./InputText.css"
+import {Icon} from '../Icon/Icon';
+import { useRef, useState } from 'react';
 
 
-export const InputText = ({style, placeholder, id, onChange, name, disabled}) => {
+export const InputText = ({style,wrapperStyle, placeholder, id, onChange, onClear,
+    name, disabled, type="text", ...other}) => {
+    
+    let inputRef = useRef(null);
+    let [text,setText] = useState(null)
+    return <div css={[InputWrapperStyle,wrapperStyle]}>
+            <input ref={inputRef} {...other} css={[InputStyle,style]} name={name} disabled={disabled} 
+                    placeholder={placeholder} id={id} 
+                    onChange={(e) =>{
+                            onChange(e);
+                            setText(e.target.value);
+                        }
+                    } 
+                    type={type}  />
 
-    return <input css={[InputStyle,style]} name={name} disabled={disabled} placeholder={placeholder} id={id} onChange={onChange} type="text"  />
+            {type == "search" && text != null && text != "" ?     
+                <button tabIndex="-1" css={ClearInput} onClick={(e) =>{
+                    e.preventDefault();
+                    if(inputRef == null || inputRef.current == null) return;
+                    inputRef.current.value = "";
+                    setText("");
+                    inputRef.current.dispatchEvent(new Event('change'));
+                    if(onClear){
+                        onClear(e);
+                    }
+                }}>
+                    <Icon icon="Close" /></button> : 
+                null}
+        </div> 
 }
