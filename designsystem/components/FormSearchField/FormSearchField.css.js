@@ -32,20 +32,13 @@ flex-direction: row;
 
 }
 button {
-    top:0;
-    bottom:0;
-    right:0;
-    margin:0;
     padding: 0 16px 0 16px;
     background-color: ${colors.profile["blue-mid"]};
     border:none;
     border-bottom-right-radius:8px;
     border-top-right-radius:8px;
     color: ${colors.profile.white};
-    align-content:center;
-    display:flex;
-    box-sizing:border-box;
-    text-align: center;
+    display:block;
  
 
     &:hover{
