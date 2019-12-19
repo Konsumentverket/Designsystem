@@ -8,26 +8,29 @@ import { colors } from '../Colors/Colors';
 
 //this wrapper functions makes the InputRadio rerender
 const WrapperFunction = () => {
-    const [,updater] = useState(null)
+    const [val,updater] = useState(null)
     return <>
             Default
             <InputRadio name={text("name","radio")} id="radio1" 
+                        checked={val == "value1"}
                         labelText={text("labelText","Im the radiobutton 1")} 
-                        value="value1" onChange={(e) => updater({})}
+                        value="value1" onChange={(e) => updater(e.target.value)}
             />
             <br />
-            <InputRadio name={text("name","radio")} id="radio1" 
+            <InputRadio name={text("name","radio")} id="radio2" 
+                        checked={val == "value2"}
                         labelText={text("labelText","Im the radiobutton 2")} 
-                        value="value2" onChange={(e) => updater({})}
+                        value="value2" onChange={(e) => updater(e.target.value)}
             />
             <br />
-            <InputRadio name={text("name","radio")} id="radio1" 
+            <InputRadio name={text("name","radio")} id="radio3" 
+                        checked={val == "value3"}
                         labelText={text("labelText","Im the radiobutton 3")} 
-                        value="value3" onChange={(e) => updater({})}
+                        value="value3" onChange={(e) => updater(e.target.value)}
             />
             
             <br />
-
+            <a href="#">Other tabbable element</a>
         </>
 
 
