@@ -15,4 +15,35 @@ export const InputStyle = css`
         border-color: ${colors.profile["blue-mid"]}
     }
 
+    &::-webkit-search-cancel-button{
+        appearance: none;
+    }
+}
+
+`
+
+export const InputWrapperStyle = css`
+    position: relative;
+
+`
+
+export const ClearInput = css` 
+    appearance: none;
+    position: absolute;
+    right: 3.2rem;
+    border: 0px;
+    background-color: transparent;
+    top: 1.3rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 0;
+    svg{
+        fill: ${colors.profile["blue-mid"]};
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    &:focus{
+        outline: none;
+    }
+    
 `

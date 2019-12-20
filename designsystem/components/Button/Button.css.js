@@ -5,7 +5,7 @@ import { colors } from '../Colors/Colors';
 
 export const mediumStyle = css`
     padding: 1.3rem 5.8rem;
-    font-size: 18px;
+    font-size: 2.1rem;
     line-height: 18px;
     svg{
         width: 18px;
@@ -15,7 +15,7 @@ export const mediumStyle = css`
 
 export const largeStyle = css`
     padding: 1.1rem 5.8rem;
-    font-size: 24px;
+    font-size: 2.4rem;
     line-height: 24px;
     svg{
         width: 24px;
@@ -30,6 +30,11 @@ export const secondaryStyle = css`
         text-decoration: underline;
         background-color: ${colors.profile["blue-dark"]};
         color: #fff;
+    }
+    &:hover{
+        border-color: ${colors.natural.black};
+        background-color: ${colors.profile["blue-light"]};
+        color: ${colors.profile["blue-mid"]};
     }
 `
 
@@ -74,6 +79,7 @@ export default css`
         border-color: ${colors.natural.black};
         background-color: ${colors.profile["blue-mid"]};
         color: ${colors.profile.white};
+        text-decoration: underline;
     }
     &:active{
         text-decoration: underline;

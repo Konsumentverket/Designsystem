@@ -1,14 +1,21 @@
 import { css } from '@emotion/core'
 import { colors } from '../Colors/Colors';
+import { medium } from '../GlobalStyles/globalStyles'
 
 export default css`
 position:relative;
+display:flex;
+flex-direction: row;
 
 .textfield {
-    border-radius: 8px;
-    border: none;
-    width: 100%;
-    padding: 12px 92px 12px 16px;
+    border-radius: 8px 0 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #D0D0D0;
+    border-right: none;
+    padding: 11px 8px 11px 15px;
+    height:48px;
     font-size: 16px;
     line-height: 24px; 
     outline: none;
@@ -17,23 +24,21 @@ position:relative;
     -webkit-appearance: none;
     top:0;
     margin:0;
+    flex-grow: 1;
+
+    ${medium} {
+        height: 56px;
+    }
 
 }
 button {
-    position: absolute;
-    height:100%;
-    top:0;
-    bottom:0;
-    right:0;
-    margin:0;
+    padding: 0 16px 0 16px;
     background-color: ${colors.profile["blue-mid"]};
     border:none;
     border-bottom-right-radius:8px;
     border-top-right-radius:8px;
-    color: ${colors.profile.white}; 
-    padding:12px 16px;
-    display:flex;
-    box-sizing:border-box;
+    color: ${colors.profile.white};
+    display:block;
  
 
     &:hover{
@@ -49,20 +54,29 @@ button {
         /*border-color: ${colors.natural.black};
             text-decoration: underline;*/
     }
+
+    ${medium} {
+        padding: 0 24px 0 24px;
+    }
 }    
 .buttontext {
+    display:flex;
+    flex-direction:row;
     font-size:18px;
     line-height:24px;
-    padding-right: 28px;
     position: relative;
     .buttonicon{
-                position: absolute;
-                top:2px;
-                right: 0px;
-                width: 20px;
-                height:auto;
-                fill: #fff;
-            }
+        position: relative;
+        padding-right: 8px;
+        top: 1px;
+        right: 0px;
+        width: 21px;
+        height: auto;
+        fill: #fff;
+    }
+    ${medium} {
+        font-size: 21px;
+    }
 }
 
 &.fieldbutton {
@@ -72,9 +86,9 @@ button {
         padding-left:0;
 
         .buttonicon {
-        left:auto;
-        right:0;
-    }
+            left:auto;
+            right:0;
+        }
     }
    
 }

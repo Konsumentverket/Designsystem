@@ -17,12 +17,8 @@ export const tagStyle = css`
         color: ${colors.profile['blue-mid']};
         display: table-cell;
         vertical-align: middle;
-    }
-
-    h2, h3, h4, h5, h6 {
-        margin: 0px 10px 0 10px;
+        padding: 0 8px 0 8px;
         font-size: 16px;
         color: inherit;
-        font-weight: 100;
     }
 `;
