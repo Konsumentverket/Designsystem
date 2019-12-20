@@ -21,6 +21,7 @@ import Plane from '../../icons/SystemIcons/Plane'
 import Filter from '../../icons/SystemIcons/Filter'
 import List from '../../icons/SystemIcons/List'
 import Picturelist from '../../icons/SystemIcons/Picturelist'
+import Clear from '../../icons/SystemIcons/Clear'
 
 const iconDefinitions = {
     Adapt,
@@ -42,7 +43,8 @@ const iconDefinitions = {
     Plane,
     Filter,
     List,
-    Picturelist
+    Picturelist,
+    Clear
 }
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {

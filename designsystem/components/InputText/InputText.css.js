@@ -30,19 +30,17 @@ export const InputWrapperStyle = css`
 export const ClearInput = css` 
     appearance: none;
     position: absolute;
-    right: 2.4rem;
+    right: 3.2rem;
     border: 0px;
-    background-color: ${colors.profile["blue-mid"]};
-    border-radius: 50%;
-    top: 2rem;
+    background-color: transparent;
+    top: 1.3rem;
     width: 1.6rem;
     height: 1.6rem;
     padding: 0;
     svg{
-        fill: #fff;
-        width: 1rem;
-        height: 1rem;
-        padding: 0.3rem;
+        fill: ${colors.profile["blue-mid"]};
+        width: 3.2rem;
+        height: 3.2rem;
     }
     &:focus{
         outline: none;

@@ -31,7 +31,7 @@ export const InputText = ({style,wrapperStyle, placeholder, id, onChange, onClea
                         onClear(e);
                     }
                 }}>
-                    <Icon icon="Close" /></button> : 
+                    <Icon icon="Clear" /></button> : 
                 null}
         </div> 
 }
