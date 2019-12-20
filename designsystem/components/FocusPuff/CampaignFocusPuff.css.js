@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
 import { colors } from '../Colors/Colors'
-import { medium, large } from '../GlobalStyles/globalStyles'
+import { medium } from '../GlobalStyles/globalStyles'
 
 
 export const focusWrapper = css`
@@ -13,10 +13,6 @@ export const focusWrapper = css`
   margin-top:.8rem;
   border-bottom-right-radius:.8rem;
   border-bottom-left-radius:.8rem;
-`
-
-export const linkWrapper = css`
-  text-decoration:none;
 `
 
 export const focusHeadline = css`
@@ -60,15 +56,41 @@ export const pictureWrapper = css`
 
 `
 
+export const picElement = css`
+  /* this is to make the "isIntersecting" have something to interrsect with */
+  display: block;
+  width: 100%;
+  height: 100%;
+`
+
+export const picture = isCampaign => css`
+  height: auto;
+  width: 100%;
+  ${isCampaign}{
+    ${medium} {
+      min-height: 28.8rem;
+      margin: auto;
+      width: auto;
+    }
+  }
+`
+
 export const iconBackground = css`
   border-top-right-radius: .8rem;
   border-top-left-radius:.8rem;
+  display: flex;
+  width: 100%;
   background-color: ${colors.profile['pink-light']};
-  padding-top:36.84%;
-  position:relative;
-  
+  height: 16rem;
 `
 
+export const icon = css`
+  padding-top: 2.9rem;
+  margin: 0 auto;
+  fill: #b50255;
+  width: 6rem;
+  height: 5.4rem;
+`
 
 export const externalIcon = css`
   position: relative;
@@ -77,11 +99,6 @@ export const externalIcon = css`
   fill: #fff;
 `
 
-export const puffIcon = css`
-  position:absolute;
-  fill: #b50255;
-  width:6.4rem;
-  height:auto;
-  left:calc(50% - 3.2rem);
-  top:calc(50% - 3.2rem);
+export const link = css`
+  display: block;
 `;

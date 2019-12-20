@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import {focusWrapper, pictureWrapper, textArea, focusHeadline, externalIcon, focusText, iconBackground, puffIcon, linkWrapper} from './FocusPuff.css'
+import {focusWrapper, pictureWrapper, textArea, focusHeadline, externalIcon, focusText, iconBackground, picture, focusLink} from './CampaignFocusPuff.css'
 import React from 'react';
-import { EditorIcon } from '../Icon/EditorIcon'
+import { Icon } from '../Icon/Icon'
 
 export const FocusPuff = ({ headline,text,url,
   isCampaign, isExternalLink,
@@ -17,7 +17,7 @@ export const FocusPuff = ({ headline,text,url,
       imageArea = <picture><img src={image} alt={imageAlt} /></picture>     
     else{
       imageArea = <div className={'iconBackground'} css={iconBackground}>
-                    <EditorIcon icon={icon} style={puffIcon} />
+                    <Icon icon={icon || ""} style={icon} />
                   </div>
     }
   }
@@ -37,7 +37,7 @@ export const FocusPuff = ({ headline,text,url,
   </div>
   }
 
-  return url !== null ? <a css={linkWrapper} href={url}>{puffMarkup(FocusPuff)}</a> : puffMarkup(FocusPuff)
+  return url !== null ? <a href={url}>{puffMarkup(FocusPuff)}</a> : puffMarkup(FocusPuff)
   
   
 }
