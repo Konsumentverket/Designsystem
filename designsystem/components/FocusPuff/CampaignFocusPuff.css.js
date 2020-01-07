@@ -1,21 +1,53 @@
 import { css } from '@emotion/core'
 import { colors } from '../Colors/Colors'
-import { medium } from '../GlobalStyles/globalStyles'
+import { medium, large } from '../GlobalStyles/globalStyles'
 
 
 export const focusWrapper = css`
-  color: #fff;
   min-height: 25.6rem;
   display:flex;
   height:100%;
+  width:100%;
   flex-direction:column;
-  background-color: #b50255;
-  margin-top:.8rem;
+  background-color: #fff;
+  /*margin-top:.8rem;*/
   border-bottom-right-radius:.8rem;
   border-bottom-left-radius:.8rem;
+  ${medium}{
+    flex-direction:row;
+    margin-top:-.8rem;
+    margin-left:.8rem;
+    border-top-right-radius:.8rem;
+  }
+`
+
+export const linkWrapper = css`
+  text-decoration:none;
+  padding-bottom:.8rem;
+  display:flex;
+
+  h2 {
+    color: ${colors.profile['blue-mid']};
+  }
+
+  &:hover .focusWrapper {
+      background-color: ${colors.states['pink-hover']};      
+  }
+  &:active .focusWrapper {
+      background-color: ${colors.states['pink-active']};      
+  }
+  &:hover h2, &:active h2 {
+    text-decoration:underline;
+  }
+
+  ${medium} {
+    height:100%
+  }
+
 `
 
 export const focusHeadline = css`
+  color:#000;
   font-size: 2.4rem;
   line-height: 3.2rem;
   margin: 0 0 .8rem 0;
@@ -26,13 +58,22 @@ export const focusText = css`
   line-height: 3.2rem;
   margin:0;
   padding:0;
+  color:${colors.natural['gray']};
 `
 
 export const textArea = css`
-  margin:1.6rem 2.4rem 2.4rem 2.4rem;
-  ${medium} {
-    
+  padding:1.6rem 2.4rem 2.4rem 2.4rem;
+  box-sizing:border-box;
+  ${medium} {   
+      max-width:50.89%;  
+      display:flex;
+      justify-content:center;
+      flex-direction:column;
+      width:100%;
+  }
+  ${large} {   
       max-width:32.8rem;
+      
   }
 `
 
@@ -54,51 +95,52 @@ export const pictureWrapper = css`
     border-top-left-radius:.8rem;
   }
 
-`
-
-export const picElement = css`
-  /* this is to make the "isIntersecting" have something to interrsect with */
-  display: block;
-  width: 100%;
-  height: 100%;
-`
-
-export const picture = isCampaign => css`
-  height: auto;
-  width: 100%;
-  ${isCampaign}{
-    ${medium} {
-      min-height: 28.8rem;
-      margin: auto;
-      width: auto;
+  ${medium}{
+    max-width:49.11%;
+    margin-top:0;
+    margin-left:-.8rem;
+    img {
+      border-top-right-radius: 0;
+      border-bottom-left-radius:.8rem;
     }
+  }
+
+  ${large}{
+    max-width:30.4rem;
   }
 `
 
 export const iconBackground = css`
-  border-top-right-radius: .8rem;
+  border-top-right-radius:.8rem;
   border-top-left-radius:.8rem;
-  display: flex;
-  width: 100%;
+  border-bottom-right-radius:0;
   background-color: ${colors.profile['pink-light']};
-  height: 16rem;
+  position:relative;
+  padding-top:36.84%;
+
+  ${medium}{
+    height:100%;
+    padding-top:0;
+    border-top-right-radius:0;
+    border-bottom-left-radius: .8rem;
+    border-bottom-right-radius:0;
+  }
 `
 
-export const icon = css`
-  padding-top: 2.9rem;
-  margin: 0 auto;
-  fill: #b50255;
-  width: 6rem;
-  height: 5.4rem;
-`
 
 export const externalIcon = css`
   position: relative;
   top: 0.2rem;
-  margin-left: 0.4rem;
-  fill: #fff;
+  margin-left: 0.8rem;
+  fill: ${colors.profile['blue-mid']};
+  width:2rem;
 `
 
-export const link = css`
-  display: block;
+export const puffIcon = css`
+  position:absolute;
+  fill: #b50255;
+  width:6.4rem;
+  height:6.4rem;
+  left:calc(50% - 3.2rem);
+  top:calc(50% - 3.2rem);
 `;

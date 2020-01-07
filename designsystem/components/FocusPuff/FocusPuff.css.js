@@ -4,28 +4,51 @@ import { medium, large } from '../GlobalStyles/globalStyles'
 
 
 export const focusWrapper = css`
-  color: #fff;
   min-height: 25.6rem;
   display:flex;
-  height:100%;
+  height: calc(100% - .8rem);
+  width:100%;
   flex-direction:column;
-  background-color: #b50255;
-  margin-top:.8rem;
+  background-color: ${colors.profile['pink-dark']};
+  /*margin-top:.8rem;*/
   border-bottom-right-radius:.8rem;
   border-bottom-left-radius:.8rem;
+
+  /*${medium} {
+    height:100%
+  }*/
 `
 
 export const linkWrapper = css`
   text-decoration:none;
+  padding-bottom:.8rem;
+  display:flex;
+
+  &:hover .focusWrapper {
+      background-color: ${colors.states['pink-hover']};      
+  }
+  &:active .focusWrapper {
+      background-color: ${colors.states['pink-active']};      
+  }
+  &:hover h2, &:active h2 {
+    text-decoration:underline;
+  }
+  
+  ${medium} {
+    height:100%
+  }
+
 `
 
 export const focusHeadline = css`
+  color: #fff;
   font-size: 2.4rem;
   line-height: 3.2rem;
   margin: 0 0 .8rem 0;
 `
 
 export const focusText = css`
+  color: #fff;
   font-size: 1.8rem;
   line-height: 3.2rem;
   margin:0;
@@ -81,7 +104,7 @@ export const puffIcon = css`
   position:absolute;
   fill: #b50255;
   width:6.4rem;
-  height:auto;
+  height:6.4rem;
   left:calc(50% - 3.2rem);
   top:calc(50% - 3.2rem);
 `;

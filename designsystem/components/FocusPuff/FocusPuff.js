@@ -5,7 +5,7 @@ import React from 'react';
 import { EditorIcon } from '../Icon/EditorIcon'
 
 export const FocusPuff = ({ headline,text,url,
-  isCampaign, isExternalLink,
+  isExternalLink,
   image, imageAlt,
   icon,
   imageComponent
@@ -23,7 +23,7 @@ export const FocusPuff = ({ headline,text,url,
   }
 
   const puffMarkup = () => {
-    return <div css={focusWrapper}>
+    return <div css={focusWrapper} className={'focusWrapper'}>
     <div css={pictureWrapper}>
       {imageArea}
     </div>
