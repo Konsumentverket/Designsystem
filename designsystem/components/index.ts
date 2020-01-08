@@ -1,4 +1,4 @@
-export { Button } from './Button/Button.js'
+export { Button } from './Button/Button'
 export { FormSearchField } from './FormSearchField/FormSearchField.js'
 export { Checkbox } from './Checkbox/Checkbox.js'
 export { FormLabel } from './FormLabel/FormLabel.js'

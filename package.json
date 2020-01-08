@@ -27,6 +27,9 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.21",
+    "@types/node": "^12.12.24",
+    "awesome-typescript-loader": "^5.2.1",
+    "typescript": "^3.7.4",
     "webpack-bundle-analyzer": "^3.5.0"
   }
 }

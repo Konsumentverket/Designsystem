@@ -29,6 +29,7 @@
     "@storybook/addon-storysource": "^5.2.6",
     "@storybook/addons": "^5.2.6",
     "@storybook/core": "^5.2.6",
+    "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^2.1.0",
     "emotion": "^10.0.23",
     "lodash": "^4.17.15",
@@ -39,6 +40,7 @@
     "react-inlinesvg": "^1.2.0",
     "react-markdown": "^4.2.2",
     "sass-loader": "^7.3.1",
-    "style-loader": "^0.23.1"
+    "style-loader": "^0.23.1",
+    "typescript": "^3.7.4"
   }
 }
