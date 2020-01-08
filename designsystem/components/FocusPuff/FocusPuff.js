@@ -3,6 +3,7 @@ import { jsx } from '@emotion/core'
 import {focusWrapper, pictureWrapper, textArea, focusHeadline, externalIcon, focusText, iconBackground, puffIcon, linkWrapper} from './FocusPuff.css'
 import React from 'react';
 import { EditorIcon } from '../Icon/EditorIcon'
+import { Icon } from '../Icon/Icon'
 
 export const FocusPuff = ({ headline,text,url,
   isExternalLink,
