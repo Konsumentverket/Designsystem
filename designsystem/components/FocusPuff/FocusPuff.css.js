@@ -10,18 +10,14 @@ export const focusWrapper = css`
   width:100%;
   flex-direction:column;
   background-color: ${colors.profile['pink-dark']};
-  /*margin-top:.8rem;*/
   border-bottom-right-radius:.8rem;
   border-bottom-left-radius:.8rem;
 
-  /*${medium} {
-    height:100%
-  }*/
 `
 
 export const linkWrapper = css`
   text-decoration:none;
-  padding-bottom:.8rem;
+  padding-top:.8rem;
   display:flex;
 
   &:hover .focusWrapper {
