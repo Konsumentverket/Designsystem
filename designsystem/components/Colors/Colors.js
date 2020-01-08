@@ -3,7 +3,7 @@ const colors = {
     profile: {
         "blue-dark": "#162259",
         "blue-mid": "#006EC2",
-        "blue-light": "#EBF6FD",
+        "blue-light": "#E9F6FD",
         "white": "#ffffff",
         "pink-light": "#FED1D4",
         "pink-mid": "#FED1D4",
