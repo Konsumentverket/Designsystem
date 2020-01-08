@@ -6,6 +6,7 @@ export default css`
 position:relative;
 display:flex;
 flex-direction: row;
+align-items: stretch;
 
 .textfield {
     border-radius: 8px 0 0 8px;
@@ -15,7 +16,6 @@ flex-direction: row;
     border: 1px solid #D0D0D0;
     border-right: none;
     padding: 11px 8px 11px 15px;
-    height:48px;
     font-size: 16px;
     line-height: 24px; 
     outline: none;
@@ -25,6 +25,7 @@ flex-direction: row;
     top:0;
     margin:0;
     flex-grow: 1;
+    width:100%;
 
     ${medium} {
         height: 56px;
@@ -60,6 +61,7 @@ button {
     }
 }    
 .buttontext {
+    width:max-content;
     display:flex;
     flex-direction:row;
     font-size:18px;
