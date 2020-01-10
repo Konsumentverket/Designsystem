@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React from 'react'
 import { jsx } from '@emotion/core'
 import { iconCardStyle, arrowStyle, iconStyle, topAreaIcon } from './IconCard.css';
 import { Icon } from '../Icon/Icon.js';
