@@ -80,4 +80,5 @@ export const fieldLabel = css`
     font-size: 21px;
     line-height: 28px;
     padding: 18px 0;
+    display: flex;
 `
