@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import {focusWrapper, pictureWrapper, textArea, focusHeadline, externalIcon, focusText, iconBackground, puffIcon, linkWrapper} from './FocusPuff.css'
+import {focusWrapper, pictureWrapper, textArea, focusHeadline, externalIcon, focusText, iconBackground, puffIcon, linkWrapper} from './CampaignFocusPuff.css'
 import React from 'react';
 import { EditorIcon } from '../Icon/EditorIcon'
 import { Icon } from '../Icon/Icon'
 
-export const FocusPuff = ({ headline,text,url,
-  isExternalLink,
+export const CampaignFocusPuff = ({ headline,text,url,isExternalLink,
   image, imageAlt,
   icon,
   imageComponent
@@ -17,14 +16,14 @@ export const FocusPuff = ({ headline,text,url,
     if(image != null)
       imageArea = <picture><img src={image} alt={imageAlt} /></picture>     
     else{
-      imageArea = <div className={'iconBackground'} css={iconBackground}>
+      imageArea = <div css={iconBackground} >
                     <EditorIcon icon={icon} style={puffIcon} />
                   </div>
     }
   }
 
-  const puffMarkup = () => {
-    return <div css={focusWrapper} className={'focusWrapper'}>
+  const campaignPuffMarkup = () => {
+    return <div css={focusWrapper} >
     <div css={pictureWrapper}>
       {imageArea}
     </div>
@@ -38,7 +37,7 @@ export const FocusPuff = ({ headline,text,url,
   </div>
   }
 
-  return url !== null ? <a css={linkWrapper} href={url}>{puffMarkup(FocusPuff)}</a> : puffMarkup(FocusPuff)
+  return url !== null ? <a css={linkWrapper} href={url}>{campaignPuffMarkup(CampaignFocusPuff)}</a> : campaignPuffMarkup(CampaignFocusPuff)
   
   
 }

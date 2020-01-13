@@ -6,19 +6,28 @@ import { medium, large } from '../GlobalStyles/globalStyles'
 export const focusWrapper = css`
   min-height: 25.6rem;
   display:flex;
-  height: calc(100% - .8rem);
+  height:100%;
   width:100%;
   flex-direction:column;
-  background-color: ${colors.profile['pink-dark']};
+  background-color: #fff;
   border-bottom-right-radius:.8rem;
   border-bottom-left-radius:.8rem;
-
+  ${medium}{
+    flex-direction:row;
+    margin-top:-.8rem;
+    margin-left:.8rem;
+    border-top-right-radius:.8rem;
+  }
 `
 
 export const linkWrapper = css`
   text-decoration:none;
   padding-top:.8rem;
   display:flex;
+
+  h2 {
+    color: ${colors.profile['blue-mid']};
+  }
 
   &:hover .focusWrapper {
       background-color: ${colors.states['pink-hover']};      
@@ -29,7 +38,7 @@ export const linkWrapper = css`
   &:hover h2, &:active h2 {
     text-decoration:underline;
   }
-  
+
   ${medium} {
     height:100%
   }
@@ -37,25 +46,33 @@ export const linkWrapper = css`
 `
 
 export const focusHeadline = css`
-  color: #fff;
+  color:#000;
   font-size: 2.4rem;
   line-height: 3.2rem;
   margin: 0 0 .8rem 0;
 `
 
 export const focusText = css`
-  color: #fff;
   font-size: 1.8rem;
   line-height: 3.2rem;
   margin:0;
   padding:0;
+  color:${colors.natural['gray']};
 `
 
 export const textArea = css`
-  margin:1.6rem 2.4rem 2.4rem 2.4rem;
-  ${medium} {
-    
+  padding:1.6rem 2.4rem 2.4rem 2.4rem;
+  box-sizing:border-box;
+  ${medium} {   
+      max-width:50.89%;  
+      display:flex;
+      justify-content:center;
+      flex-direction:column;
+      width:100%;
+  }
+  ${large} {   
       max-width:32.8rem;
+      
   }
 `
 
@@ -77,23 +94,45 @@ export const pictureWrapper = css`
     border-top-left-radius:.8rem;
   }
 
+  ${medium}{
+    max-width:49.11%;
+    margin-top:0;
+    margin-left:-.8rem;
+    img {
+      border-top-right-radius: 0;
+      border-bottom-left-radius:.8rem;
+    }
+  }
+
+  ${large}{
+    max-width:30.4rem;
+  }
 `
 
 export const iconBackground = css`
-  border-top-right-radius: .8rem;
+  border-top-right-radius:.8rem;
   border-top-left-radius:.8rem;
+  border-bottom-right-radius:0;
   background-color: ${colors.profile['pink-light']};
-  padding-top:36.84%;
   position:relative;
-  
+  padding-top:36.84%;
+
+  ${medium}{
+    height:100%;
+    padding-top:0;
+    border-top-right-radius:0;
+    border-bottom-left-radius: .8rem;
+    border-bottom-right-radius:0;
+  }
 `
 
 
 export const externalIcon = css`
   position: relative;
   top: 0.2rem;
-  margin-left: 0.4rem;
-  fill: #fff;
+  margin-left: 0.8rem;
+  fill: ${colors.profile['blue-mid']};
+  width:2rem;
 `
 
 export const puffIcon = css`

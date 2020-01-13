@@ -29,7 +29,7 @@ export const exclamationMarkImage = css`
 `
 
 export const heading = css`
-  color: #000;
+  color: #4D4D4D;
   display:inline-block;
   font-size: 2.1rem;
   line-height:3.2rem;
