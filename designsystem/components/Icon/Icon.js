@@ -22,6 +22,7 @@ import Filter from '../../icons/SystemIcons/Filter'
 import List from '../../icons/SystemIcons/List'
 import Picturelist from '../../icons/SystemIcons/Picturelist'
 import Clear from '../../icons/SystemIcons/Clear'
+import Camera from '../../icons/SystemIcons/Camera'
 
 const iconDefinitions = {
     Adapt,
@@ -44,7 +45,8 @@ const iconDefinitions = {
     Filter,
     List,
     Picturelist,
-    Clear
+    Clear,
+    Camera,
 }
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
