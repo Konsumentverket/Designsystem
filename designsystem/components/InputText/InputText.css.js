@@ -9,6 +9,7 @@ export const InputStyle = css`
     border-radius: 0.8rem;
     font-size: 1.8rem;
     line-height: 3rem;
+    -webkit-appearance: textfield; /* safari fix */
 
     &:focus{
         outline: none;
