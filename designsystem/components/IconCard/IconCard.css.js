@@ -34,6 +34,23 @@ export const iconCardStyle = css`
     flex-direction:column;
     border-radius: .8rem;
     border: 1px solid ${colors.profile['blue-mid']};
+    &:hover {
+        background-color: ${colors.profile['blue-light']};
+        span {
+            text-decoration:underline;
+        }
+    }
+    &:active 
+    {   
+        background-color: ${colors.profile['blue-dark']};
+        border-color:${colors.profile['blue-dark']};
+        span{
+            color:#fff;
+        }
+        svg {
+            fill:#fff;
+        }
+    }
 `;
 
 export const iconText = css`
