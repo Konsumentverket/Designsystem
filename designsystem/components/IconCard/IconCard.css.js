@@ -3,52 +3,72 @@ import { colors } from '../Colors/Colors.js'
 
 export const arrowStyle = css`
     position: absolute;
-    top: 20px;
-    right: 5px;
+    top: 2rem;
+    right: .5rem;
     vertical-align: middle;
     transform: rotate(270deg);
-    height: auto;
-    width: 32px;
+    height: 3.2rem;
+    width: 3.2rem;
     fill: ${colors.profile['blue-mid']};
 
 `
 
 export const iconStyle = css`
     position:absolute;
-    top: 20px;
-    left: 16px;
-    height: 32px;
-    width: 32px;
+    top: 2rem;
+    left: 1.6rem;
+    height: 3.2rem;
+    width: 3.2rem;
     fill: ${colors.profile['blue-mid']};
 `;
 
 export const iconCardStyle = css`
-    background-color: ${colors.profile['white']};
-    padding-left: 16px;
-    padding-right: 40px;
-    min-height: 72px;
+    background-color: ${colors.profile['white']};    
+    min-height: 7.2rem;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
     position: relative;
     display: flex;
-    border-radius: 8px;
+    height:100%;
+    flex-direction:column;
+    border-radius: .8rem;
     border: 1px solid ${colors.profile['blue-mid']};
-    h2, h3 {
-        padding-left: 48px;
-        display: flex;
-        align-items:center;
-        margin:0;
-        color: ${colors.profile['blue-mid']};
-        line-height: 24px;
-        font-size: 21px;
-        font-weight: 500;
+    &:hover {
+        background-color: ${colors.profile['blue-light']};
+        span {
+            text-decoration:underline;
+        }
     }
-    h2:first-child, h3:first-child {
-        padding-left: 0;
+    &:active 
+    {   
+        background-color: ${colors.profile['blue-dark']};
+        border-color:${colors.profile['blue-dark']};
+        span{
+            color:#fff;
+        }
+        svg {
+            fill:#fff;
+        }
     }
 `;
 
+export const iconText = css`
+        width:100%;
+        height:100%;
+        padding: .8rem 4rem .8rem 6.4rem;
+        display: flex;
+        flex-direction:column;
+        box-sizing:border-box;
+        justify-content:center;
+        margin:0;
+        color: ${colors.profile['blue-mid']};
+        line-height: 2.4rem;
+        font-size: 2.1rem;
+        font-weight: 500;
+        word-wrap:break-word;
+`;
+
 export const topAreaIcon = css`
-    padding-left: 56px;
+    padding-left: 5.6rem;
 `;
