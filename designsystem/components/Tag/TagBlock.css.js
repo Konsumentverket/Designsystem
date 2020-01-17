@@ -86,6 +86,7 @@ export const tagsList = css`
 
 export const tagsListItem = css`
     margin:0 1.6rem .8rem 0;
+    list-style-type:none;
     &:before{
         content:none !important;
     }
