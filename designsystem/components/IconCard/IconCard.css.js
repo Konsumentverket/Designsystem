@@ -10,7 +10,6 @@ export const arrowStyle = css`
     height: 3.2rem;
     width: 3.2rem;
     fill: ${colors.profile['blue-mid']};
-
 `
 
 export const iconStyle = css`
@@ -34,6 +33,24 @@ export const iconCardStyle = css`
     flex-direction:column;
     border-radius: .8rem;
     border: 1px solid ${colors.profile['blue-mid']};
+    &:hover {
+        background-color: ${colors.profile['blue-light']};
+        border-color: ${colors.profile['blue-dark']};
+        span {
+            text-decoration:underline;
+        }
+    }
+    &:active 
+    {   
+        background-color: ${colors.profile['blue-dark']};
+        border-color:${colors.profile['blue-dark']};
+        span{
+            color:#fff;
+        }
+        svg {
+            fill:#fff;
+        }
+    }
 `;
 
 export const iconText = css`
