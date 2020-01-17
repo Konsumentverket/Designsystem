@@ -8,7 +8,7 @@ import { Tag } from './Tag'
 
 const GetTags = (tags) => {
     return <ul css={tagsList}>{tags.slice(0, 3).map((child, idx) => {
-        return <li key={`lcbc-${idx}`} css={tagsListItem}><Tag id={idx} url={child.url} text={child.titleInNavigation || child.title || child.headline} style={tagItem} /></li>
+        return <li key={`lcbc-${idx}`} css={tagsListItem}><Tag id={idx} url={child.url} text={(child.titleInNavigation && child.titleInNavigation) || (child.title && child.title) || (child.headline && child.headline)} style={tagItem} /></li>
     })}</ul>
 }
 
