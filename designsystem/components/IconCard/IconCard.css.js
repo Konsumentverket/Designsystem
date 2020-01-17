@@ -10,7 +10,6 @@ export const arrowStyle = css`
     height: 3.2rem;
     width: 3.2rem;
     fill: ${colors.profile['blue-mid']};
-
 `
 
 export const iconStyle = css`
