@@ -7,7 +7,7 @@ export const InputStyle = css`
     box-sizing:border-box;
     border: 2px solid #979797;
     border-radius: 0.8rem;
-    -khtml-border-radius: 0.8rem; /*  this is for the fruit phones */
+    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */
     font-size: 1.8rem;
     line-height: 3rem;
     -webkit-appearance: textfield; /* safari fix */
