@@ -1,25 +1,14 @@
 ﻿/** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react';
-import {h1Style, h2Style, h3Style, commonSubHeadingStyle} from './SubHeading.css'
+import {h1Style, h2Style, h3Style,h4Style, commonSubHeadingStyle, h5Style, h6Style} from './SubHeading.css'
 
-export const SubHeading = ({ children, text, style, level = 2 }) => {
+export const SubHeading = ({ children, text, style, level = 2,styleLevel, ...otherAttr }) => {
 
-    const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7']
-
-    
+    const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+    const stylings = [h1Style,h2Style,h3Style,h4Style,h5Style,h6Style];
     const SelectedHeading = headings[level - 1] || 'h2'
-    var headingCss = null;
+    const SelectedStyling = stylings[styleLevel ? styleLevel -1 : level - 1]
 
-    if (SelectedHeading == "h1"){
-        headingCss = h1Style;
-    }
-    if (SelectedHeading == "h2"){
-        headingCss = h2Style;
-    }
-    if (SelectedHeading == "h3"){
-        headingCss = h3Style;
-    }
-
-    return <SelectedHeading css={[commonSubHeadingStyle, headingCss, style]} > {children}{text}</SelectedHeading>
+    return <SelectedHeading css={[commonSubHeadingStyle, SelectedStyling, style]} {...otherAttr}> {children}{text}</SelectedHeading>
 }
