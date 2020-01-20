@@ -48,10 +48,6 @@ export const h4Style = css`
       font-size:1.8rem;
       line-height:3.2rem;
 
-      ${medium}{
-            font-size:1.8rem;
-            line-height:3.2rem;
-      }
 `
 
 export const h5Style = css`
@@ -59,10 +55,6 @@ export const h5Style = css`
       font-size:1.6rem;
       line-height:2.4rem;
 
-      ${medium}{
-            font-size:1.6rem;
-            line-height:2.4rem;
-      }
 `
 
 export const h6Style = css`
@@ -70,9 +62,4 @@ export const h6Style = css`
       font-size:1.4rem;
       line-height:2.4rem;
 
-
-      ${medium}{
-            font-size:1.4rem;
-            line-height:2.4rem;
-      }
 `
