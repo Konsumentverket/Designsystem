@@ -4,7 +4,6 @@ import { colors } from '../Colors/Colors';
 export const tagStyle = css`
     box-shadow:inset 0px 0px 0px 1px ${colors.profile['blue-mid']};
     border-radius:1.6rem;
-    text-align: center;
     color: ${colors.profile['blue-mid']};
     padding: .4rem 1.6rem;
     display: table;
