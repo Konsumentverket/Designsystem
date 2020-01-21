@@ -5,13 +5,13 @@ const colors = {
         "blue-mid": "#006EC2",
         "blue-light": "#E9F6FD",
         "white": "#ffffff",
-        "pink-light": "#FED1D4",
+        "pink-light": "#F6E1EB",
         "pink-mid": "#FED1D4",
-        "pink-dark":"#B50156"
+        "pink-dark": "#B50156"
     },
     states: {
-        "pink-hover":"#A10042",
-        "pink-active":"#8C002D"
+        "pink-hover": "#A10042",
+        "pink-active": "#8C002D"
     },
     secondary: {
         "yellow": "#F59C00",
