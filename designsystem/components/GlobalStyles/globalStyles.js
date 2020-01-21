@@ -1,10 +1,11 @@
 import { css } from '@emotion/core'
 export const globalStyles = (
-        fontSize="62.5%",
-        fontFamily="'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
-    ) => css`
+  fontSize = "62.5%",
+  fontFamily = "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
+) => css`
 html,
   body,
+  button,
   div,
   span,
   applet,

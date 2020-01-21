@@ -7,8 +7,10 @@ export const InputStyle = css`
     box-sizing:border-box;
     border: 2px solid #979797;
     border-radius: 0.8rem;
+    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */
     font-size: 1.8rem;
     line-height: 3rem;
+    -webkit-appearance: textfield; /* safari fix */
 
     &:focus{
         outline: none;
@@ -30,12 +32,12 @@ export const InputWrapperStyle = css`
 export const ClearInput = css` 
     appearance: none;
     position: absolute;
-    right: 3.2rem;
+    right: 1.6rem;
     border: 0px;
     background-color: transparent;
     top: 1.3rem;
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 3.2rem;
+    height: 3.2rem;
     padding: 0;
     svg{
         fill: ${colors.profile["blue-mid"]};
