@@ -1,6 +1,6 @@
 ﻿/** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react';
-import HeadingStyle from './Heading.css'
+import { SubHeading } from './SubHeading';
 
-export const Heading = ({ text, style, ...otherAttr }) => <h1 css={[HeadingStyle, style]} {...otherAttr}>{text}</h1>
+export const Heading = ({text,style,children,...otherAttr}) => <SubHeading style={style} level={1} text={text} {...otherAttr}>{children}</SubHeading>

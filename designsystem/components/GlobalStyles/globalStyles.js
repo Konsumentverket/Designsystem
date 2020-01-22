@@ -1,4 +1,6 @@
 import { css } from '@emotion/core'
+import {spacing} from '../Spacing/Spacing'
+
 export const globalStyles = (
   fontSize = "62.5%",
   fontFamily = "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
@@ -98,6 +100,43 @@ html,
     color: #4D4D4D;
     overflow-x:hidden;
   }
+
+  body {
+
+    font-size: 1.6rem;
+    margin:0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;   
+    -webkit-text-size-adjust: 100%; 
+    -moz-text-size-adjust: 100%;
+    margin: 0;
+    
+    p {
+      padding-bottom: ${spacing["spacing-m"]};
+      font-size: 1.8rem;
+      line-height: 3.2rem;
+    }
+
+    ul {
+      list-style: bullet inside none;
+      padding-left: ${spacing["spacing-xl"]};
+      margin-top: ${spacing["spacing-xl"]};
+      li {
+        margin-bottom: ${spacing["spacing-m"]};
+      }
+      p {
+        display: inline;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 1rem 0 0.5rem 0;
+      font-weight: 700;
+    }
 `;
 
 

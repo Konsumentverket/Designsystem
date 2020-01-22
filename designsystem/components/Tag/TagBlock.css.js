@@ -107,7 +107,7 @@ export const tagItemText = css`
 
 export const iconStyle = css`
     position:absolute;
-    top: 2rem;
+    top: calc((100% - 32px) / 2);
     left: 1.6rem;
     height: 3.2rem;
     width: 3.2rem;
