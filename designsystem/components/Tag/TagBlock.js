@@ -12,21 +12,21 @@ const GetTags = (tags) => {
     })}</ul>
 }
 
-const TagBlock = ({ invertedColors = false, heading, headingLevel = 2, headingUrl, icon, ref, tags, alternativeTagText, style}) => {
+const TagBlock = React.forwardRef(({ invertedColors = false, heading, headingLevel = 2, headingUrl, icon, tags, alternativeTagText, style }, ref) => {
 
     const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7']
     const SelectedHeading = headings[headingLevel - 1] || 'h2'
 
-    return <div css={[tagBlockItem, invertedColors ? invertedTag : null, style]}>        
-    <a ref={ref} href={headingUrl} css={tagLink} >
-        {icon && <EditorIcon aria-hidden="true" icon={icon} css={iconStyle}>Ikon</EditorIcon>}
-        <SelectedHeading className="tagHeading" css={[tagHeading, icon != null ? tagIconHeading : null]}>{heading}</SelectedHeading>
-        <Icon aria-hidden="true" icon="Arrow" style={arrowStyle} />
-    </a>
-    <div css={tagsArea}>
-        {tags.length > 0 ? GetTags(tags) : <p css={tagItemText}>{alternativeTagText}</p> }
-</div>
-</div>
-}
+    return <div css={[tagBlockItem, invertedColors ? invertedTag : null, style]}>
+        <a ref={ref} href={headingUrl} css={tagLink} >
+            {icon && <EditorIcon aria-hidden="true" icon={icon} css={iconStyle}>Ikon</EditorIcon>}
+            <SelectedHeading className="tagHeading" css={[tagHeading, icon != null ? tagIconHeading : null]}>{heading}</SelectedHeading>
+            <Icon aria-hidden="true" icon="Arrow" style={arrowStyle} />
+        </a>
+        <div css={tagsArea}>
+            {tags.length > 0 ? GetTags(tags) : <p css={tagItemText}>{alternativeTagText}</p>}
+        </div>
+    </div>
+})
 
 export { TagBlock };
