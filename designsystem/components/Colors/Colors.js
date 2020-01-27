@@ -12,7 +12,8 @@ const colors = {
     },
     states: {
         "pink-hover": "#A10042",
-        "pink-active": "#8C002D"
+        "pink-active": "#8C002D",
+        "focus": "#F59C00"
     },
     secondary: {
         "yellow": "#F59C00",

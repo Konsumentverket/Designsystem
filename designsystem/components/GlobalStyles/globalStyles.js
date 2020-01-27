@@ -1,10 +1,29 @@
 import { css } from '@emotion/core'
 import {spacing} from '../Spacing/Spacing'
+import { colors } from '../Colors/Colors';
 
 export const globalStyles = (
   fontSize = "62.5%",
   fontFamily = "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
-) => css`
+) => { 
+
+  setTimeout(function(){ 
+
+    document.addEventListener('keyup', e => {
+      if (e.key === "Tab" && !document.body.classList.contains("tabnav")) {
+          document.body.className += "tabnav"
+      }
+  })
+  document.addEventListener('click', e => {
+      // if detail is 0 it's most likely a keypress and not a mouse click
+      if (e.detail !== 0 && document.body.classList.contains("tabnav")) { document.body.classList.remove("tabnav") }
+  })
+
+   }, 0);
+
+  
+
+  return css`
 html,
   body,
   button,
@@ -98,7 +117,7 @@ html,
     font-family: ${fontFamily}; 
     line-height: 16px;
     color: #4D4D4D;
-    overflow-x:hidden;
+    overflow-x:hidden;   
   }
 
   body {
@@ -137,8 +156,21 @@ html,
       margin: 1rem 0 0.5rem 0;
       font-weight: 700;
     }
-`;
 
+    &:not(.tabnav){
+      *:focus {
+        outline: none;
+      }
+    }
+
+    &.tabnav {
+      *:focus {
+        outline: 4px solid ${colors.states.focus};
+      }
+    }
+  }
+`;
+}
 
 export const viewportSmall = 420;
 export const viewportMedium = 768;
