@@ -157,6 +157,38 @@ html,
       font-weight: 700;
     }
 
+a{
+  &:not(.noState){    
+      text-decoration:underline;
+      font-weight:700;
+      &:visited{
+        color:${colors.states['visited']};
+      }
+      &:hover {
+        background-color:${colors.profile['blue-light']};
+        text-decoration:none;
+        border-radius:.8rem;
+      }
+      &:active{
+        background-color:${colors.profile['blue-light']};
+        color:${colors.profile['blue-dark']};
+        text-decoration:none;
+        border-radius:.8rem;
+      }
+    }
+    &.invertedState:not(.noState){
+      &:visited{
+        background-color:inherit;
+      }
+      &:hover {
+        background-color:#fff;
+      }
+      &:active {
+        background-color:#fff;
+      }
+    }
+}
+
     &:not(.tabnav){
       *:focus {
         outline: none;

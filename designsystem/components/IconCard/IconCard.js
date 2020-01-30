@@ -8,7 +8,7 @@ import { SubHeading } from '../Headings/SubHeading';
 
 
 const IconCard = React.forwardRef(({ icon, text, url, style }, ref) => {
-    return <a ref={ref} href={url} css={[iconCardStyle, style]} >
+    return <a ref={ref} href={url} css={[iconCardStyle, style]} className="noState" >
         {icon && <EditorIcon aria-hidden="true" icon={icon} style={iconStyle}>Ikon</EditorIcon>}
         <span css={iconText}>{text}</span>
         <Icon aria-hidden="true" icon="Arrow" style={arrowStyle} />

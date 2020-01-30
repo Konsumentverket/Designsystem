@@ -37,7 +37,7 @@ export const CampaignFocusPuff = ({ headline,text,url,isExternalLink,
   </div>
   }
 
-  return url !== null ? <a css={linkWrapper} href={url}>{campaignPuffMarkup(CampaignFocusPuff)}</a> : campaignPuffMarkup(CampaignFocusPuff)
+  return url !== null ? <a css={linkWrapper} href={url} className="noState">{campaignPuffMarkup(CampaignFocusPuff)}</a> : campaignPuffMarkup(CampaignFocusPuff)
   
   
 }
