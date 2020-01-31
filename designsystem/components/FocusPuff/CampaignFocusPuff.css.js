@@ -50,6 +50,7 @@ export const focusHeadline = css`
   font-size: 2.4rem;
   line-height: 3.2rem;
   margin: 0 0 .8rem 0;
+  font-weight:700;
 `
 
 export const focusText = css`

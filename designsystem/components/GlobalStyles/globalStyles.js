@@ -82,63 +82,63 @@ const globalStyles = (
         }
       }
 
-a{
-  &:not(.noState){    
-      text-decoration:underline;
-      font-weight:700;
-      &:visited{
-        color:${colors.states['visited']};
+  a{
+    &:not(.noState){    
+        text-decoration:underline;
+        font-weight:700;
+        &:visited{
+          color:${colors.states['visited']};
+        }
+        &:hover {
+          background-color:${colors.states['hover']};
+          text-decoration:none;
+        }
+        &:active{
+          background-color:${colors.states['hover']};
+          color:${colors.profile['blue-dark']};
+          text-decoration:none;
+        }
       }
-      &:hover {
-        background-color:${colors.profile['blue-light']};
-        text-decoration:none;
-        border-radius:.8rem;
-      }
-      &:active{
-        background-color:${colors.profile['blue-light']};
-        color:${colors.profile['blue-dark']};
-        text-decoration:none;
-        border-radius:.8rem;
-      }
-    }
-    &.invertedState:not(.noState){
-      &:visited{
-        background-color:inherit;
-      }
-      &:hover {
-        background-color:#fff;
-      }
-      &:active {
-        background-color:#fff;
+      &.invertedState:not(.noState){
+        &:visited{
+          background-color:inherit;
+        }
+        &:hover {
+          background-color:#fff;
+        }
+        &:active {
+          background-color:#fff;
       }
     }
-}
+  }
 
     &:not(.tabnav){
       *:focus {
         outline: none;
-      h1,
-      h2,
-      h3,
-      h4,
-      h5 {
-        margin: 1rem 0 0.5rem 0;
-        font-weight: 700;
-      }
-
-      &:not(.tabnav){
-        *:focus {
-          outline: none;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+          margin: 1rem 0 0.5rem 0;
+          font-weight: 700;
         }
-      }
 
-      &.tabnav {
-        *:focus {
-          outline: 4px solid ${colors.states.focus};
+        &:not(.tabnav){
+          *:focus {
+            outline: none;
+          }
         }
-      }
+
+        &.tabnav {
+          *:focus {
+            outline: 4px solid ${colors.states.focus};
+          }
+        }
+      } 
     }
-  `;
+  }
+`;
 
 
 export const viewportSmall = 420;

@@ -34,7 +34,7 @@ export const iconCardStyle = css`
     border-radius: .8rem;
     border: 1px solid ${colors.profile['blue-mid']};
     &:hover {
-        background-color: ${colors.profile['blue-light']};
+        background-color: ${colors.states['hover']};
         border-color: ${colors.profile['blue-dark']};
         span {
             text-decoration:underline;
