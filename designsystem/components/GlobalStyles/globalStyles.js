@@ -86,17 +86,27 @@ const globalStyles = (
     &:not(.noState){    
         text-decoration:underline;
         font-weight:700;
-        &:visited{
-          color:${colors.states['visited']};
-        }
+        color:${colors.profile['blue-mid']};
         &:hover {
           background-color:${colors.states['hover']};
           text-decoration:none;
+          svg {
+            fill: ${colors.profile['blue-mid']};
+          }
         }
         &:active{
           background-color:${colors.states['hover']};
           color:${colors.profile['blue-dark']};
           text-decoration:none;
+          svg {
+            fill: ${colors.profile['blue-dark']};
+          }
+        }
+        &:visited{
+          color:${colors.states['visited']};
+          svg {
+            fill: ${colors.states['visited']};
+          }
         }
       }
       &.invertedState:not(.noState){
@@ -138,6 +148,52 @@ const globalStyles = (
       } 
     }
   }
+`;
+
+const LinkColors = css`
+  color:${colors.profile['blue-mid']} !important;
+   &:hover {
+    background-color:${colors.states['hover']} !important;
+   }
+   &:active {
+    background-color:${colors.states['hover']} !important;
+   }
+   &:visited{
+    color:${colors.states['visited']} !important;   
+  }
+`;
+
+const LinkColorsInverted = css`
+ color:${colors.profile['blue-mid']} !important;
+   &:hover {
+     background-color:#fff !important;
+   }
+   &:active {
+     background-color:#fff !important;
+   }
+   &:visited{
+    color:${colors.states['visited']} !important;   
+  }
+`;
+
+export const LinkWrapperColorStyle = css`
+    a {
+      ${LinkColors}
+    }  
+`;
+
+export const LinkWrapperInvertedColorStyle = css`
+    a {
+      ${LinkColorsInverted}
+    }  
+`;
+
+export const ElementLinkColorStyle = css`
+    ${LinkColors}
+`;
+
+export const ElementLinkInvertedColorStyle = css`
+    ${LinkColorsInverted}
 `;
 
 
