@@ -20,7 +20,7 @@ export const FormSearchField = ({ className, icon, reference, fieldtext, onClick
         <input {...other} ref={reference} className="textfield" type={inputtype || "search"} placeholder={fieldtext ? fieldtext : "Vad letar du efter?"}></input>
         <button
             type={type ? type : "submit"}
-            onClick={onClick} >
+            onClick={onClick}>
             <span className="buttontext">
                 {icon && <Icon icon={icon} className="buttonicon" />}
                 {buttontext ? buttontext : "Sök"}

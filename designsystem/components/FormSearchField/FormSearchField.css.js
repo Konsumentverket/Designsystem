@@ -28,7 +28,7 @@ align-items: stretch;
     width:100%;
 
     ${medium} {
-        height: 56px;
+        height: 5.6rem;
     }
 
 }
@@ -64,8 +64,8 @@ button {
     width:max-content;
     display:flex;
     flex-direction:row;
-    font-size:18px;
-    line-height:24px;
+    font-size:1.8rem;
+    line-height:5.4rem;
     position: relative;
     .buttonicon{
         position: relative;
