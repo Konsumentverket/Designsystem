@@ -1,27 +1,27 @@
 import { css, Global } from '@emotion/core'
-import {spacing} from '../Spacing/Spacing'
+import { spacing } from '../Spacing/Spacing'
 import { colors } from '../Colors/Colors';
 import React, { useEffect } from 'react';
 
 export const GlobalStyles = ({
-    fontSize = "62.5%",
-    fontFamily = "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
-  }) => {
-  
-  useEffect(() => {
-      document.addEventListener('keyup', e => {
-        if (e.key === "Tab" && !document.body.classList.contains("tabnav")) {
-            document.body.className += "tabnav"
-        }
-      })
-      document.addEventListener('click', e => {
-          // if detail is 0 it's most likely a keypress and not a mouse click
-          if (e.detail !== 0 && document.body.classList.contains("tabnav")) { document.body.classList.remove("tabnav") }
-      })
-    return () =>{}
-  },[])
+  fontSize = "62.5%",
+  fontFamily = "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
+}) => {
 
-  return <Global styles={globalStyles(fontSize,fontFamily)}  />
+  useEffect(() => {
+    document.addEventListener('keyup', e => {
+      if (e.key === "Tab" && !document.body.classList.contains("tabnav")) {
+        document.body.className += "tabnav"
+      }
+    })
+    document.addEventListener('click', e => {
+      // if detail is 0 it's most likely a keypress and not a mouse click
+      if (e.detail !== 0 && document.body.classList.contains("tabnav")) { document.body.classList.remove("tabnav") }
+    })
+    return () => { }
+  }, [])
+
+  return <Global styles={globalStyles(fontSize, fontFamily)} />
 }
 
 const globalStyles = (
@@ -122,31 +122,18 @@ const globalStyles = (
     }
   }
 
-    &:not(.tabnav){
-      *:focus {
-        outline: none;
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-          margin: 1rem 0 0.5rem 0;
-          font-weight: 700;
-        }
 
-        &:not(.tabnav){
-          *:focus {
-            outline: none;
-          }
+      &:not(.tabnav){
+        *:focus {
+          outline: none;
         }
+      }
 
-        &.tabnav {
-          *:focus {
-            outline: 4px solid ${colors.states.focus};
-          }
+      &.tabnav {
+        *:focus {
+          outline: 4px solid ${colors.states.focus};
         }
-      } 
-    }
+      }
   }
 `;
 
