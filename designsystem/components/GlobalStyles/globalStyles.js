@@ -144,6 +144,7 @@ const LinkColors = css`
    }
    &:active {
     background-color:${colors.states['hover']} !important;
+    color:${colors.profile['blue-dark']} !important;
    }
    &:visited{
     color:${colors.states['visited']} !important;   
@@ -157,6 +158,7 @@ const LinkColorsInverted = css`
    }
    &:active {
      background-color:#fff !important;
+     color:${colors.profile['blue-dark']} !important;
    }
    &:visited{
     color:${colors.states['visited']} !important;   
