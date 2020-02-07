@@ -31,7 +31,7 @@ export const secondaryStyle = css`
         background-color: ${colors.profile["blue-dark"]};
         color: #fff;
     }
-    &:hover{
+    &:hover:not(:active){
         border-color: ${colors.natural.black};
         background-color: ${colors.profile["blue-light"]};
         color: ${colors.profile["blue-mid"]};
