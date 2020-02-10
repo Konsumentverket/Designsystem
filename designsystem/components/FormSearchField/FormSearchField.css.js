@@ -33,6 +33,7 @@ align-items: stretch;
 
 }
 button {
+    cursor: pointer;
     padding: 0 16px 0 16px;
     background-color: ${colors.theme1.mid};
     border:none;
