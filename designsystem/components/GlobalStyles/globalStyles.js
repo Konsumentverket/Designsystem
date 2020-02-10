@@ -81,31 +81,58 @@ const globalStyles = (
           display: inline;
         }
       }
-
+  button, input[type="submit"]{
+    font-size:2.1rem;
+    line-height:2.4rem;
+    font-weight:500;
+    padding:1.6rem 2.4rem;
+  }
+  button, input[type="submit"]{
+    &:not(.noState){  
+      cursor:pointer;
+      background-color:${colors.theme1.mid};
+      &:hover {
+        background-color:${colors.theme1.midDark};
+        text-decoration:underline;
+      }
+      &:active{
+        background-color:${colors.theme1.xDark};
+        text-decoration:underline;
+      }
+    }
+    &.invertedState:not(.noState){
+      &:hover {
+        box-shadow:inset 0px 0px 0px 1px #fff;
+      }
+      &:active{
+        box-shadow:inset 0px 0px 0px 1px #fff;
+      }
+    }
+  }
   a{
     &:not(.noState){    
         text-decoration:underline;
         font-weight:700;
-        color:${colors.profile['blue-mid']};
+        color:${colors.theme1.mid};
         &:hover {
-          background-color:${colors.states['hover']};
+          background-color:${colors.theme1.midLight};
           text-decoration:none;
           svg {
-            fill: ${colors.profile['blue-mid']};
+            fill: ${colors.theme1.mid};
           }
         }
         &:active{
-          background-color:${colors.states['hover']};
-          color:${colors.profile['blue-dark']};
+          background-color:${colors.theme1.midLight};
+          color:${colors.theme1.xDark};
           text-decoration:none;
           svg {
-            fill: ${colors.profile['blue-dark']};
+            fill: ${colors.theme1.xDark};
           }
         }
         &:visited{
-          color:${colors.states['visited']};
+          color:${colors.states.visited};
           svg {
-            fill: ${colors.states['visited']};
+            fill: ${colors.states.visited};
           }
         }
       }
@@ -138,30 +165,30 @@ const globalStyles = (
 `;
 
 const LinkColors = css`
-  color:${colors.profile['blue-mid']} !important;
+  color:${colors.theme1.mid} !important;
    &:hover {
-    background-color:${colors.states['hover']} !important;
+    background-color:${colors.theme1.midLight} !important;
    }
    &:active {
-    background-color:${colors.states['hover']} !important;
-    color:${colors.profile['blue-dark']} !important;
+    background-color:${colors.theme1.midLight} !important;
+    color:${colors.theme1.xDark} !important;
    }
    &:visited{
-    color:${colors.states['visited']} !important;   
+    color:${colors.states.visited} !important;   
   }
 `;
 
 const LinkColorsInverted = css`
- color:${colors.profile['blue-mid']} !important;
+ color:${colors.theme1.mid} !important;
    &:hover {
      background-color:#fff !important;
    }
    &:active {
      background-color:#fff !important;
-     color:${colors.profile['blue-dark']} !important;
+     color:${colors.theme1.xDark} !important;
    }
    &:visited{
-    color:${colors.states['visited']} !important;   
+    color:${colors.states.visited} !important;   
   }
 `;
 

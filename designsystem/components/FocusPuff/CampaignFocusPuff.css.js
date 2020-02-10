@@ -26,14 +26,14 @@ export const linkWrapper = css`
   display:flex;
 
   h2 {
-    color: ${colors.profile['blue-mid']};
+    color: ${colors.theme1.mid};
   }
 
   &:hover .focusWrapper {
-      background-color: ${colors.states['pink-hover']};      
+      background-color: ${colors.theme2.midDark};      
   }
   &:active .focusWrapper {
-      background-color: ${colors.states['pink-active']};      
+      background-color: ${colors.theme2.dark};      
   }
   &:hover h2, &:active h2 {
     text-decoration:underline;
@@ -58,7 +58,7 @@ export const focusText = css`
   line-height: 3.2rem;
   margin:0;
   padding:0;
-  color:${colors.natural['gray']};
+  color:${colors.common.gray};
 `
 
 export const textArea = css`
@@ -114,7 +114,7 @@ export const iconBackground = css`
   border-top-right-radius:.8rem;
   border-top-left-radius:.8rem;
   border-bottom-right-radius:0;
-  background-color: ${colors.profile['pink-light']};
+  background-color: ${colors.theme2.light};
   position:relative;
   padding-top:36.84%;
 
@@ -132,13 +132,13 @@ export const externalIcon = css`
   position: relative;
   top: 0.2rem;
   margin-left: 0.8rem;
-  fill: ${colors.profile['blue-mid']};
+  fill: ${colors.theme1.mid};
   width:2rem;
 `
 
 export const puffIcon = css`
   position:absolute;
-  fill: #b50255;
+  fill: ${colors.theme2.mid};
   width:6.4rem;
   height:6.4rem;
   left:calc(50% - 3.2rem);

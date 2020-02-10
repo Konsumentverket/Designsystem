@@ -14,7 +14,7 @@ export const InputStyle = css`
 
     &:focus{
         outline: none;
-        border-color: ${colors.profile["blue-mid"]}
+        border-color: ${colors.theme1.mid}
     }
 
     &::-webkit-search-cancel-button{
@@ -40,7 +40,7 @@ export const ClearInput = css`
     height: 3.2rem;
     padding: 0;
     svg{
-        fill: ${colors.profile["blue-mid"]};
+        fill: ${colors.theme1.mid};
         width: 3.2rem;
         height: 3.2rem;
     }

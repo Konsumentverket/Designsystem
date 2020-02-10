@@ -10,13 +10,13 @@ export const fieldWrapper = css`
     border: 2px solid transparent;
     display:flex;
     align-items: center;
-    background-color: ${colors.natural.isabelline};
+    background-color: ${colors.common.isabelline};
     &.inputHasValue{
-        border: 2px solid ${colors.profile["blue-dark"]};
+        border: 2px solid ${colors.theme1.xDark};
     }
 
     &:hover{
-        border: 2px solid ${colors.profile["blue-mid"]};
+        border: 2px solid ${colors.theme1.mid};
         .radiolabel {
             text-decoration: underline;
         }
@@ -37,7 +37,7 @@ export const fieldInput = css`
     height: 2.4rem;
     vertical-align: middle;
     border-radius: 50%;
-    border: 2px solid ${colors.profile["blue-mid"]};
+    border: 2px solid ${colors.theme1.mid};
     background: #fff;
     margin: 0;
     margin-left: 2.4rem;
@@ -47,14 +47,14 @@ export const fieldInput = css`
 
     &:checked{
         outline: none;
-        border: 4px solid ${colors.profile["blue-dark"]};
-        background-color: ${colors.profile["blue-dark"]};
+        border: 4px solid ${colors.theme1.xDark};
+        background-color: ${colors.theme1.xDark};
         position: relative;
         
         &+label{ 
             text-decoration: underline;
             font-weight: 500;
-            color: ${colors.profile["blue-dark"]};
+            color: ${colors.theme1.xDark};
         } 
 
         &:before{

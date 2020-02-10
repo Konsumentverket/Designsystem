@@ -4,7 +4,7 @@ import { colors } from '../Colors/Colors'
 
 export const wrapper = css`
   position: relative;
-  background-color: ${colors.profile["blue-light"]};
+  background-color: ${colors.theme1.light};
   border-radius: 0.7rem;
   padding: 4rem 1.6rem 2.4rem 1.6rem;
   margin-top: 2rem;

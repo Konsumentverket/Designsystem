@@ -9,7 +9,7 @@ export const focusWrapper = css`
   height: calc(100% - .8rem);
   width:100%;
   flex-direction:column;
-  background-color: ${colors.profile['pink-dark']};
+  background-color: ${colors.theme2.mid};
   border-bottom-right-radius:.8rem;
   border-bottom-left-radius:.8rem;
 
@@ -21,10 +21,10 @@ export const linkWrapper = css`
   display:flex;
 
   &:hover .focusWrapper {
-      background-color: ${colors.states['pink-hover']};      
+      background-color: ${colors.theme2.midDark};      
   }
   &:active .focusWrapper {
-      background-color: ${colors.states['pink-active']};      
+      background-color: ${colors.theme2.dark};      
   }
   &:hover h2, &:active h2 {
     text-decoration:underline;
@@ -83,7 +83,7 @@ export const pictureWrapper = css`
 export const iconBackground = css`
   border-top-right-radius: .8rem;
   border-top-left-radius:.8rem;
-  background-color: ${colors.profile['pink-light']};
+  background-color: ${colors.theme2.light};
   padding-top:36.84%;
   position:relative;
   

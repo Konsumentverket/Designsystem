@@ -1,38 +1,46 @@
 const colors = {
 
-    profile: {
-        "blue-dark": "#162259",
-        "blue-mid-dark": "#00518F",
-        "blue-mid": "#006EC2",
-        "blue-light": "#E9F6FD",
-        "white": "#ffffff",
-        "pink-light": "#F6E1EB",
-        "pink-mid": "#FED1D4",
-        "pink-dark": "#B50156"
+    theme1:{
+        "xDark": "#162259",
+        "dark": "#00345c",      
+        "midDark": "#00518f",
+        "mid": "#006EC2",
+        "midLight": "#ddf1fd",
+        "light": "#ebf6fd",
+        "xLight": "#ebf6fd"
     },
+    theme2:{
+        "xDark": "#8C002D",
+        "dark": "#8C002D",
+        "midDark": "#A10042",
+        "mid": "#B50156",
+        "midLight": "#B50156",
+        "light": "#F6E1EB",
+        "xLight": "#F6E1EB"
+    },
+    
     states: {
-        "pink-hover": "#A10042",
-        "pink-active": "#8C002D",
-        "focus": "#F59C00",
         "visited": "#800080",
-        "hover": "#DDF1FD"
+        "visitedInverted": "#FFC7C2",
+        "focus": "#F59C00"
     },
-    secondary: {
-        "yellow": "#F59C00",
-        "green": "#76b82a",
-        "maroon": "#b50156"
+    common: {
+        "white": "#ffffff",
+        "black": "#000000",
+        "isabelline": "#F2F0F0",
+        "gray": "#565656",
+        "grayLight": "#CDD1D4",
+        "darkGreen": "#007A3E",
+        "ligthGreen": "#76b82a",
+        "geranium": "#E7342B",
+        "cyan": "#92DCFA",
     },
     natural: {
         "black": "#000000",
-        "gray": "#565656",
-        "gray-light": "#CDD1D4",
-        "isabelline": "#F2F0F0",
         "ghost-white": "#F8F8F8",
     },
     ui: {
-        "geranium": "#E7342B",
-        "green": "#007A3E",
-        "cyan": "#92DCFA",
+        
         "orange": "#FA6401"
     }
 }

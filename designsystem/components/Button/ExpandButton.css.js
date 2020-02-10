@@ -2,7 +2,7 @@ import { css } from '@emotion/core';
 import { colors } from '../Colors/Colors';
 
 export const expandButton = css`
-    background-color: ${colors.natural.isabelline};
+    background-color: ${colors.common.isabelline};
     border-radius: 28px;
     width: 100%;
     display:flex;
@@ -23,7 +23,7 @@ export const arrow = css`
     vertical-align: middle;
     height: 30px;
     width: 30px;
-    fill: ${colors.profile['blue-mid']};
+    fill: ${colors.theme1.mid};
 `;
 
 export const showLessArrow = css`
@@ -33,7 +33,7 @@ export const showLessArrow = css`
 export const buttonContent = css`
     font-size: 19px;
     font-weight: 500;
-    color: ${colors.profile['blue-mid']};
+    color: ${colors.theme1.mid};
     display: flex;
     vertical-align: middle; 
     text-align: center;

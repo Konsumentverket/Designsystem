@@ -34,7 +34,7 @@ storiesOf('Digitala produkter|Grunder och foundations', module)
                                 <td><div css={{
                                         width:value,
                                         height:value,
-                                        backgroundColor:colors.profile["blue-mid"]}}>
+                                        backgroundColor:colors.theme1.mid}}>
                                     </div>
                                 </td>
                             </tr>);

@@ -9,7 +9,7 @@ export const arrowStyle = css`
     transform: rotate(270deg);
     height: 3.2rem;
     width: 3.2rem;
-    fill: ${colors.profile['blue-mid']};
+    fill: ${colors.theme1.mid};
 `
 
 export const iconStyle = css`
@@ -18,11 +18,11 @@ export const iconStyle = css`
     left: 1.6rem;
     height: 3.2rem;
     width: 3.2rem;
-    fill: ${colors.profile['blue-mid']};
+    fill: ${colors.theme1.mid};
 `;
 
 export const iconCardStyle = css`
-    background-color: ${colors.profile['white']};    
+    background-color: ${colors.common.white};    
     min-height: 7.2rem;
     text-decoration: none;
     width: 100%;
@@ -32,18 +32,18 @@ export const iconCardStyle = css`
     height:100%;
     flex-direction:column;
     border-radius: .8rem;
-    border: 1px solid ${colors.profile['blue-mid']};
+    border: 1px solid ${colors.theme1.mid};
     &:hover {
-        background-color: ${colors.states['hover']};
-        border-color: ${colors.profile['blue-dark']};
+        background-color: ${colors.theme1.midLight};
+        border-color: ${colors.theme1.xDark};
         span {
             text-decoration:underline;
         }
     }
     &:active 
     {   
-        background-color: ${colors.profile['blue-dark']};
-        border-color:${colors.profile['blue-dark']};
+        background-color: ${colors.theme1.xDark};
+        border-color:${colors.theme1.xDark};
         span{
             color:#fff;
         }
@@ -62,7 +62,7 @@ export const iconText = css`
         box-sizing:border-box;
         justify-content:center;
         margin:0;
-        color: ${colors.profile['blue-mid']};
+        color: ${colors.theme1.mid};
         line-height: 2.4rem;
         font-size: 2.1rem;
         font-weight: 500;

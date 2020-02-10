@@ -18,7 +18,7 @@ export default css`
         margin: 0;
         font-size: 2rem;
         cursor: pointer;
-        background: ${colors.natural.isabelline};
+        background: ${colors.common.isabelline};
         color: black;
         margin-bottom: 0.5rem;
 
@@ -27,7 +27,7 @@ export default css`
         }
 
         &.open {
-            background: ${colors.natural["gray-light"]};
+            background: ${colors.common.grayLight};
         }
 
         h3 {

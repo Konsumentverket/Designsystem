@@ -22,7 +22,7 @@ var ColorComponent = ({color,name,token}) => {
         .color-preview{
             height: 100px;
             background-color: ${color};
-            border-bottom: 1px solid ${colors.natural["gray-light"]};
+            border-bottom: 1px solid ${colors.common.grayLight};
         }
         .color-info{
             margin: 0 0 5px 5px;
@@ -58,39 +58,23 @@ storiesOf('Digitala produkter|Grunder och foundations/Färgsystem', module)
         <Page>
             <h1>Färger</h1>
             
-            <h2>Primär färger</h2>
+            <h2>Temafärg 1</h2>
             <div css={wrapperStyles}>
-                <ColorComponent color={colors.profile["blue-dark"]} name="Mörkblå" token="profile['blue-dark']" />
-                <ColorComponent color={colors.profile["blue-mid"]} name="Mellanblå" token="profile['blue-mid']" />
-                <ColorComponent color={colors.profile["blue-light"]} name="Ljusblå" token="profile['blue-light']" />
-                <ColorComponent color={colors.profile.white} name="Vit" token="profile.white" />
-                <ColorComponent color={colors.profile["pink-light"]} name="Ljusrosa" token="profile['pink-light']" />
+                <ColorComponent color={colors.theme1.xDark} name="Extra mörkblå" token="theme1.xDark" />
+                <ColorComponent color={colors.theme1.dark} name="Mörkblå" token="theme1.dark" />
+                <ColorComponent color={colors.theme1.midDark} name="Mellan mörkblå" token="theme1.midDark" />
+                <ColorComponent color={colors.theme1.mid} name="Mellanblå" token="theme1.mid" />
+                <ColorComponent color={colors.theme1.midLight} name="Mellan ljusblå" token="theme1.midLight" />
+                <ColorComponent color={colors.theme1.light} name="Ljusblå" token="theme1.light" />
             </div>
 
-            <h2>Sekundär färger</h2>
+            <h2>Temafärg 2</h2>
             <div css={wrapperStyles}>
-                <ColorComponent color={colors.secondary.yellow} name="Gul" token="secondary.yellow" />
-                <ColorComponent color={colors.secondary.green} name="Mellangrön" token="secondary.green" />
-                <ColorComponent color={colors.secondary.maroon} name="Maroon" token="secondary.maroon" />
+                <ColorComponent color={colors.theme2.dark} name="MörkRosa" token="theme2.dark" />
+                <ColorComponent color={colors.theme2.midDark} name="Mellan mörkrosa" token="theme2.midDark" />
+                <ColorComponent color={colors.theme2.mid} name="Mellanrosa" token="theme2.mid" />
+                <ColorComponent color={colors.theme2.light} name="Ljusrosa" token="theme2.light" />
             </div>
-
-            <h2>Neutrala färger</h2>
-            <div css={wrapperStyles}>
-                <ColorComponent color={colors.natural.black} name="Svart" token="natural.black" />
-                <ColorComponent color={colors.natural.gray} name="Grå" token="natural.gray" />
-                <ColorComponent color={colors.natural["gray-light"]} name="Ljusgrå" token="natural['gray-light']" />
-                <ColorComponent color={colors.natural.isabelline} name="Isabelline" token="natural.isabelline" />
-                <ColorComponent color={colors.natural["ghost-white"]} name="Ghost white" token="natural['ghost-white']" />
-            </div>
-
-            <h2>UI färger</h2>
-            <div css={wrapperStyles}>
-                <ColorComponent color={colors.ui.geranium} name="Geranium" token="ui.geranium" />
-                <ColorComponent color={colors.ui.green} name="Grön" token="ui.green" />
-                <ColorComponent color={colors.ui.cyan} name="Cyan" token="ui.cyan" />
-                <ColorComponent color={colors.ui.orange} name="Orange" token="ui.orange" />
-            </div>
-
         
         </Page>, { notes: NotesLoader(name) }
     );

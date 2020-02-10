@@ -34,26 +34,22 @@ align-items: stretch;
 }
 button {
     padding: 0 16px 0 16px;
-    background-color: ${colors.profile["blue-mid"]};
+    background-color: ${colors.theme1.mid};
     border:none;
     border-bottom-right-radius:8px;
     border-top-right-radius:8px;
-    color: ${colors.profile.white};
+    color: ${colors.common.white};
     display:block;
  
 
     &:hover{
-        /*border-color: ${colors.natural.black};
-        background-color: ${colors.profile["blue-mid"]};
-        color: ${colors.profile.white};*/
+
     }
     &:active{
-            /*text-decoration: underline;
-            background-color: ${colors.profile["blue-dark"]};*/
+
     }
     &:focus{
-        /*border-color: ${colors.natural.black};
-            text-decoration: underline;*/
+ 
     }
 
     ${medium} {

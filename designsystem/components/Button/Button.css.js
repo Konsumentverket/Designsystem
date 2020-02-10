@@ -24,26 +24,26 @@ export const largeStyle = css`
 `
 
 export const secondaryStyle = css`
-    background-color: ${colors.profile.white};
-    color: ${colors.profile["blue-mid"]};
+    background-color: ${colors.common.white};
+    color: ${colors.theme1.mid};
     &:active{
         text-decoration: underline;
-        background-color: ${colors.profile["blue-dark"]};
+        background-color: ${colors.theme1.xDark};
         color: #fff;
     }
     &:hover{
-        border-color: ${colors.natural.black};
-        background-color: ${colors.profile["blue-light"]};
-        color: ${colors.profile["blue-mid"]};
+        border-color: ${colors.common.black};
+        background-color: ${colors.theme1.light};
+        color: ${colors.theme1.mid};
     }
 `
 
 export const ctaStyle = css`
-    background-color: ${colors.ui.green};
+    background-color: ${colors.common.darkGreen};
     outline: none;
-    border-color: ${colors.ui.green};
+    border-color: ${colors.common.darkGreen};
     &:hover,&:focus{
-        border-color: ${colors.natural.black};
+        border-color: ${colors.common.black};
     }
     &:active{
         background-color: #004724;
@@ -51,8 +51,8 @@ export const ctaStyle = css`
 `
 
 export const selectedStyle = css`
-    background-color: ${colors.profile["blue-mid"]};
-    color: ${colors.profile.white};
+    background-color: ${colors.theme1.mid};
+    color: ${colors.common.white};
 `
 export const iconStyle = (position) => css`
     
@@ -66,35 +66,35 @@ export const iconStyle = (position) => css`
 
 export default css`
     padding: 1.0rem 4.8rem;
-    background-color: ${colors.profile["blue-mid"]};
-    border: 2px solid ${colors.profile["blue-mid"]};
+    background-color: ${colors.theme1.mid};
+    border: 2px solid ${colors.theme1.mid};
     border-radius: 0.8rem;
-    color: ${colors.profile.white}; 
+    color: ${colors.common.white}; 
     line-height: 1.6rem;
     font-size: 16px;
     user-select: none;
 
 
     &:hover{
-        border-color: ${colors.natural.black};
-        background-color: ${colors.profile["blue-mid"]};
-        color: ${colors.profile.white};
+        border-color: ${colors.common.black};
+        background-color: ${colors.theme1.mid};
+        color: ${colors.common.white};
         text-decoration: underline;
     }
     &:active{
         text-decoration: underline;
-        background-color: ${colors.profile["blue-dark"]};
+        background-color: ${colors.theme1.xDark};
     }
     &:focus{
-        border-color: ${colors.natural.black};
+        border-color: ${colors.common.black};
         text-decoration: underline;
     }
     &[disabled]{
-        background-color:  ${colors.natural["gray-light"]};
-        border-color: ${colors.natural["gray-light"]};
-        color: ${colors.natural.black}
+        background-color:  ${colors.common.grayLight};
+        border-color: ${colors.common.grayLight};
+        color: ${colors.common.black}
         svg{
-            fill: ${colors.natural.black};
+            fill: ${colors.common.black};
         }
     }
 

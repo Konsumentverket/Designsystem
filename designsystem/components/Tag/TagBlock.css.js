@@ -2,7 +2,7 @@ import { css } from '@emotion/core';
 import { colors } from '../Colors/Colors';
 
 export const tagBlockItem = css`
-    background-color:${colors.natural['isabelline']};    
+    background-color:${colors.common.isabelline};    
     display:flex;
     flex-direction:column;
     height:100%;
@@ -17,7 +17,7 @@ export const invertedTag = css`
 `;
 
 export const tagLink = css`
-    background-color: ${colors.profile['blue-mid']};    
+    background-color: ${colors.theme1.mid};    
     min-height: 7.2rem;
     text-decoration: none;
     width: 100%;
@@ -28,15 +28,15 @@ export const tagLink = css`
     flex-direction:column;
 
     &:hover {
-        background-color: ${colors.profile['blue-mid-dark']};
+        background-color: ${colors.theme1.midDark};
            .tagHeading{
                 text-decoration:underline;
             }
     }
     &:active 
     {   
-        background-color: ${colors.profile['blue-dark']};
-        border-color:${colors.profile['blue-dark']};
+        background-color: ${colors.theme1.xDark};
+        border-color:${colors.theme1.xDark};
         span{
             color:#fff;
         }

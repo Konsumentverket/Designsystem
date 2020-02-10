@@ -10,8 +10,8 @@ storiesOf('Digitala Produkter|React komponenter|Knappar', module)
   .addParameters({
     backgrounds: [
       { name: 'white', value: '#fff', default: true },
-      { name: 'blue-dark', value: '#162259' },
-      { name: 'blue-mid', value: '#0074CC' },
+      { name: 'blueExtraDark', value: '#162259' },
+      { name: 'blueMid', value: '#006EC2' },
     ],
   })
   .add(name, () =>
