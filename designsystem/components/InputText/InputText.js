@@ -21,7 +21,7 @@ export const InputText = ({style,wrapperStyle, placeholder, id, onChange, onClea
                     type={type}  />
 
             {type == "search" && text != null && text != "" ?     
-                <button tabIndex="-1" css={ClearInput} onClick={(e) =>{
+                <button tabIndex="-1" css={ClearInput} className="noState" onClick={(e) =>{
                     e.preventDefault();
                     if(inputRef == null || inputRef.current == null) return;
                     inputRef.current.value = "";

@@ -47,7 +47,7 @@ var ColorComponent = ({color,name,token}) => {
         </div>
     </div>;
 }
-
+    
 var wrapperStyles = css`
     display: flex;
     flex-flow: row wrap;
