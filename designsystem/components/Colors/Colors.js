@@ -4,7 +4,7 @@ const colors = {
         "xDark": "#162259",
         "dark": "#00345c",      
         "midDark": "#00518f",
-        "mid": "#006EC2",
+        "mid": "#0061c2",
         "midLight": "#ddf1fd",
         "light": "#ebf6fd",
         "xLight": "#ebf6fd"
@@ -18,7 +18,15 @@ const colors = {
         "light": "#F6E1EB",
         "xLight": "#F6E1EB"
     },
-    
+    theme3: {
+        "xDark": "#161616",
+        "dark": "#4D4D4D",
+        "midDark": "#717171",
+        "mid": "#757575",
+        "midLight": "#D5D3D3",
+        "light": "#D0D0D0",
+        "xLight": "#F2F0F0"
+    },    
     states: {
         "visited": "#800080",
         "visitedInverted": "#FFC7C2",
@@ -28,20 +36,13 @@ const colors = {
         "white": "#ffffff",
         "black": "#000000",
         "isabelline": "#F2F0F0",
-        "gray": "#565656",
+        "grayDark": "#565656",
+        "grayMid": "#D5D3D3",
         "grayLight": "#CDD1D4",
         "darkGreen": "#007A3E",
         "ligthGreen": "#76b82a",
         "geranium": "#E7342B",
         "cyan": "#92DCFA",
-    },
-    natural: {
-        "black": "#000000",
-        "ghost-white": "#F8F8F8",
-    },
-    ui: {
-        
-        "orange": "#FA6401"
     }
 }
 

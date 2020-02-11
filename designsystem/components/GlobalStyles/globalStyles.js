@@ -81,36 +81,8 @@ const globalStyles = (
           display: inline;
         }
       }
-  button, input[type="submit"]{
-    font-size:2.1rem;
-    line-height:2.4rem;
-    font-weight:500;
-    padding:1.6rem 2.4rem;
-  }
-  button, input[type="submit"]{
-    &:not(.noState){  
-      cursor:pointer;
-      background-color:${colors.theme1.mid};
-      &:hover {
-        background-color:${colors.theme1.midDark};
-        text-decoration:underline;
-      }
-      &:active{
-        background-color:${colors.theme1.xDark};
-        text-decoration:underline;
-      }
-    }
-    &.invertedState:not(.noState){
-      &:hover {
-        box-shadow:inset 0px 0px 0px 1px #fff;
-      }
-      &:active{
-        box-shadow:inset 0px 0px 0px 1px #fff;
-      }
-    }
-  }
   a{
-    &:not(.noState){    
+    &:not(.noStyle){    
         text-decoration:underline;
         font-weight:700;
         color:${colors.theme1.mid};
@@ -136,7 +108,7 @@ const globalStyles = (
           }
         }
       }
-      &.invertedState:not(.noState){
+      &.invertedState:not(.noStyle){
         &:visited{
           background-color:inherit;
         }

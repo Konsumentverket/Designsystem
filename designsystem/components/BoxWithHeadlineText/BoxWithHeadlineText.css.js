@@ -23,7 +23,7 @@ export default css`
   span.heading {
     text-transform: uppercase;
     font-size: 1rem;
-    color: ${colors.common.gray};
+    color: ${colors.common.grayDark};
 
     .blue& {
       color: white;

@@ -18,7 +18,7 @@ const TagBlock = React.forwardRef(({ invertedColors = false, heading, headingLev
     const SelectedHeading = headings[headingLevel - 1] || 'h2'
 
     return <div css={[tagBlockItem, invertedColors ? invertedTag : null, style]}>
-        <a ref={ref} href={headingUrl} css={tagLink} className="noState" >
+        <a ref={ref} href={headingUrl} css={tagLink} className="noStyle" >
             {icon && <EditorIcon aria-hidden="true" icon={icon} css={iconStyle}>Ikon</EditorIcon>}
             <SelectedHeading className="tagHeading" css={[tagHeading, icon != null ? tagIconHeading : null]}>{heading}</SelectedHeading>
             <Icon aria-hidden="true" icon="Arrow" style={arrowStyle} />

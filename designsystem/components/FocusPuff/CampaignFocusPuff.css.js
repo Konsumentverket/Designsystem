@@ -58,7 +58,7 @@ export const focusText = css`
   line-height: 3.2rem;
   margin:0;
   padding:0;
-  color:${colors.common.gray};
+  color:${colors.common.grayDark};
 `
 
 export const textArea = css`

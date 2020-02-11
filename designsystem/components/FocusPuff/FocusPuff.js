@@ -38,7 +38,7 @@ export const FocusPuff = ({ headline,text,url,
   </div>
   }
 
-  return url !== null ? <a css={linkWrapper} href={url} className="noState">{puffMarkup(FocusPuff)}</a> : puffMarkup(FocusPuff)
+  return url !== null ? <a css={linkWrapper} href={url} className="noStyle">{puffMarkup(FocusPuff)}</a> : puffMarkup(FocusPuff)
   
   
 }
