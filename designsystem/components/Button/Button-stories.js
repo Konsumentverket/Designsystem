@@ -6,7 +6,7 @@ import NotesLoader from '../NotesLoader';
 import { iconDefinitions } from '../Icon/Icon';
 
 let name = 'Knapp';
-storiesOf('Digitala Produkter|React komponenter|Knappar', module)
+storiesOf('Digitala Produkter|React komponenter/Knappar', module)
 .addParameters({
   backgrounds: [
     { name: 'white', value: '#fff', default: true },
@@ -15,7 +15,7 @@ storiesOf('Digitala Produkter|React komponenter|Knappar', module)
   ],
 })
 .add(name, () =>
-<>
+
   <Button
         text={text("Text", "Gå till konsumentverket.se")}
         secondaryButtonStyle={boolean("Sekundärknapp", false)}
@@ -24,7 +24,7 @@ storiesOf('Digitala Produkter|React komponenter|Knappar', module)
         iconRight={select("Ikon höger", ["", ...Object.keys(iconDefinitions)], "")}
         disabled={boolean("Inaktiverad", false)}
       />
-      </>
+
       , { notes: NotesLoader(name) }
 );
  

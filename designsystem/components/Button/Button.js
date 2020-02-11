@@ -6,7 +6,7 @@ import { Icon } from '../Icon/Icon';
 
 
 export const Button = ({ text, secondaryButtonStyle=false, invertedBackgroundColor=false, className, id, type = "submit",
-    disabled, size, iconLeft, iconRight, style, reference, onClick, ...other }) => {
+    disabled, iconLeft, iconRight, style, reference, onClick, ...other }) => {
 
     var styles = [buttonStyle];
 
@@ -34,7 +34,4 @@ export const Button = ({ text, secondaryButtonStyle=false, invertedBackgroundCol
     {text}
     {iconRight ? <Icon style={iconStyle} icon={iconRight} /> : null}
     </button>;
-
-
-
 }
