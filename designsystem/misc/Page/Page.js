@@ -12,16 +12,16 @@ const pageStyle = css`
     max-width: 800px;
     margin: 0 auto;
 
-    h2 {
+    /* h2 {
         font-size: 24px;
         border-bottom: 1px solid rgba(0,0,0,.1);
         font-weight: 400;
-    }
+    } */
 
-    h3 {
+    /* h3 {
         font-size: 20px;
         font-weight: 400;
-    }
+    } */
 
 
     table {

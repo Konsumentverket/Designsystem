@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react';
 import {colors} from './Colors'
 import NotesLoader from '../NotesLoader';
 import Page from '../../misc/Page/Page';
+import {SubHeading} from '../Headings/SubHeading'
 
 let name = 'Färgsystem - Hallå konsument';
 
@@ -41,13 +42,12 @@ var ColorComponent = ({color,name,token}) => {
     return <div css={ColorComponentStyles}>
         <div className="color-preview"></div>
         <div className="color-info">
-            <h3>{name}</h3>
             <p><span>Token:</span> {token}</p>
             <p><span>Hex:</span> {color}</p>
         </div>
     </div>;
 }
-
+    
 var wrapperStyles = css`
     display: flex;
     flex-flow: row wrap;
@@ -56,25 +56,20 @@ var wrapperStyles = css`
 storiesOf('Digitala produkter|Grunder och foundations/Färgsystem', module)
     .add(name, () =>
         <Page>
-            <h1>Färger</h1>
             
-            <h2>Temafärg 1</h2>
-            <div css={wrapperStyles}>
-                <ColorComponent color={colors.theme1.xDark} name="Extra mörkblå" token="theme1.xDark" />
-                <ColorComponent color={colors.theme1.dark} name="Mörkblå" token="theme1.dark" />
-                <ColorComponent color={colors.theme1.midDark} name="Mellan mörkblå" token="theme1.midDark" />
-                <ColorComponent color={colors.theme1.mid} name="Mellanblå" token="theme1.mid" />
-                <ColorComponent color={colors.theme1.midLight} name="Mellan ljusblå" token="theme1.midLight" />
-                <ColorComponent color={colors.theme1.light} name="Ljusblå" token="theme1.light" />
-            </div>
+            <SubHeading level={1} text={"Färger"} />
 
-            <h2>Temafärg 2</h2>
-            <div css={wrapperStyles}>
-                <ColorComponent color={colors.theme2.dark} name="MörkRosa" token="theme2.dark" />
-                <ColorComponent color={colors.theme2.midDark} name="Mellan mörkrosa" token="theme2.midDark" />
-                <ColorComponent color={colors.theme2.mid} name="Mellanrosa" token="theme2.mid" />
-                <ColorComponent color={colors.theme2.light} name="Ljusrosa" token="theme2.light" />
-            </div>
+            {Object.keys(colors).map(key => {
+                return <>
+                    <SubHeading style={css`margin-top:50px;`}>{key}</SubHeading>
+                        <div css={wrapperStyles}>
+                            {Object.keys(colors[key]).map(colorKey => {
+                                return <ColorComponent color={colors[key][colorKey]} token={`${key}.${colorKey}`} />
+                            })}
+                        </div>
+                    </>
+            })}
+ 
         
         </Page>, { notes: NotesLoader(name) }
     );
