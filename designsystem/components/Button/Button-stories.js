@@ -22,6 +22,7 @@ storiesOf('Digitala Produkter|React komponenter/Knappar', module)
         invertedBackgroundColor={boolean("States för mörk bakgrund", false)}
         iconLeft={select("Ikon vänster", ["", ...Object.keys(iconDefinitions)], "")}
         iconRight={select("Ikon höger", ["", ...Object.keys(iconDefinitions)], "")}
+        selected={boolean("Förvald", false)}
         disabled={boolean("Inaktiverad", false)}
       />
 
