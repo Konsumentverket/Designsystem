@@ -5,8 +5,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var core = require('@emotion/core');
-var React$1 = require('react');
-var React$1__default = _interopDefault(React$1);
+var React = require('react');
+var React__default = _interopDefault(React);
 
 function _typeof(obj) {
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
@@ -1936,7 +1936,7 @@ var ExpandSection = function ExpandSection(_ref) {
       title = _ref$content.title,
       text = _ref$content.text;
 
-  var _useState = React$1.useState(false),
+  var _useState = React.useState(false),
       _useState2 = _slicedToArray(_useState, 2),
       open = _useState2[0],
       setOpen = _useState2[1];
@@ -1980,7 +1980,7 @@ var style$1 = core.css(_templateObject$2(), colors.common.isabelline, colors.com
 var Accordion = function Accordion(_ref) {
   var content = _ref.content;
 
-  var _useState = React$1.useState(content.contentCollection.items),
+  var _useState = React.useState(content.contentCollection.items),
       _useState2 = _slicedToArray(_useState, 2),
       children = _useState2[0],
       setchildren = _useState2[1];
@@ -2149,7 +2149,7 @@ var SubHeading = function SubHeading(_ref) {
 };
 
 /** @jsx jsx */
-var IconCard = React$1__default.forwardRef(function (_ref, ref) {
+var IconCard = React__default.forwardRef(function (_ref, ref) {
   var icon = _ref.icon,
       text = _ref.text,
       url = _ref.url,
@@ -2407,7 +2407,7 @@ var GetTags = function GetTags(tags) {
   }));
 };
 
-var TagBlock = React$1__default.forwardRef(function (_ref, ref) {
+var TagBlock = React__default.forwardRef(function (_ref, ref) {
   var _ref$invertedColors = _ref.invertedColors,
       invertedColors = _ref$invertedColors === void 0 ? false : _ref$invertedColors,
       heading = _ref.heading,
@@ -2637,7 +2637,7 @@ var InputRadio = function InputRadio(_ref) {
       onChange = _ref.onChange,
       value = _ref.value,
       checked = _ref.checked;
-  var inputRef = React$1.useRef(null);
+  var inputRef = React.useRef(null);
   return core.jsx("div", {
     css: [fieldWrapper, fieldWrapperStyle],
     className: inputRef != null && inputRef.current != null && inputRef.current.checked || checked ? "inputHasValue" : ""
@@ -2787,7 +2787,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
       fontSize = _ref$fontSize === void 0 ? "62.5%" : _ref$fontSize,
       _ref$fontFamily = _ref.fontFamily,
       fontFamily = _ref$fontFamily === void 0 ? "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif" : _ref$fontFamily;
-  React$1.useEffect(function () {
+  React.useEffect(function () {
     document.addEventListener('keyup', function (e) {
       if (e.key === "Tab" && !document.body.classList.contains("tabnav")) {
         document.body.className += "tabnav";
@@ -2801,7 +2801,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
     });
     return function () {};
   }, []);
-  return React$1__default.createElement(core.Global, {
+  return React__default.createElement(core.Global, {
     styles: globalStyles(fontSize, fontFamily)
   });
 };
@@ -3245,9 +3245,9 @@ var InputText = function InputText(_ref) {
       type = _ref$type === void 0 ? "text" : _ref$type,
       other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "id", "onChange", "onClear", "name", "disabled", "type"]);
 
-  var inputRef = React$1.useRef(null);
+  var inputRef = React.useRef(null);
 
-  var _useState = React$1.useState(null),
+  var _useState = React.useState(null),
       _useState2 = _slicedToArray(_useState, 2),
       text = _useState2[0],
       setText = _useState2[1];
@@ -3590,10 +3590,6 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
   }, campaignPuffMarkup()) : campaignPuffMarkup();
 };
 
-var Test = function Test() {
-  return React.createElement("p", null, "ORD DU B\xD6R HITTA NIKLAS!");
-};
-
 exports.Accordion = Accordion;
 exports.BoxWithHeadlineText = BoxWithHeadlineText;
 exports.Button = Button;
@@ -3616,7 +3612,6 @@ exports.PrerequisitesBox = PrerequisitesBox;
 exports.SubHeading = SubHeading;
 exports.Tag = Tag;
 exports.TagBlock = TagBlock;
-exports.Test = Test;
 exports.colors = colors;
 exports.spacing = spacing;
 //# sourceMappingURL=main.js.map

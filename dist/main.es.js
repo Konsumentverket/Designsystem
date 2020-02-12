@@ -1,5 +1,5 @@
 import { css as css$1, jsx, Global } from '@emotion/core';
-import React$1, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 function _typeof(obj) {
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
@@ -2142,7 +2142,7 @@ var SubHeading = function SubHeading(_ref) {
 };
 
 /** @jsx jsx */
-var IconCard = React$1.forwardRef(function (_ref, ref) {
+var IconCard = React.forwardRef(function (_ref, ref) {
   var icon = _ref.icon,
       text = _ref.text,
       url = _ref.url,
@@ -2400,7 +2400,7 @@ var GetTags = function GetTags(tags) {
   }));
 };
 
-var TagBlock = React$1.forwardRef(function (_ref, ref) {
+var TagBlock = React.forwardRef(function (_ref, ref) {
   var _ref$invertedColors = _ref.invertedColors,
       invertedColors = _ref$invertedColors === void 0 ? false : _ref$invertedColors,
       heading = _ref.heading,
@@ -2794,7 +2794,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
     });
     return function () {};
   }, []);
-  return React$1.createElement(Global, {
+  return React.createElement(Global, {
     styles: globalStyles(fontSize, fontFamily)
   });
 };
@@ -3583,9 +3583,5 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
   }, campaignPuffMarkup()) : campaignPuffMarkup();
 };
 
-var Test = function Test() {
-  return React.createElement("p", null, "ORD DU B\xD6R HITTA NIKLAS!");
-};
-
-export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FocusPuff, FormSearchField, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, PrerequisitesBox, SubHeading, Tag, TagBlock, Test, colors, spacing };
+export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FocusPuff, FormSearchField, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, PrerequisitesBox, SubHeading, Tag, TagBlock, colors, spacing };
 //# sourceMappingURL=main.es.js.map
