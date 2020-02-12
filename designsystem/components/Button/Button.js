@@ -6,12 +6,14 @@ import { Icon } from '../Icon/Icon';
 
 
 export const Button = ({ text, secondaryButtonStyle=false, invertedBackgroundColor=false, className, id, type = "submit",
-    disabled, iconLeft, iconRight, style, reference, onClick, ...other }) => {
+    selected, disabled, iconLeft, iconRight, style, reference, onClick, ...other }) => {
 
     var styles = [buttonStyle];
+    var cssClass = [className];
 
     secondaryButtonStyle && styles.push(secondaryStyle);   
     invertedBackgroundColor && styles.push(invertedBackgroundStyle);
+    selected && cssClass.push("selectedButtonStyle");
     (invertedBackgroundColor && secondaryButtonStyle) && styles.push(invertedSecondaryBackgroundStyle);
     iconLeft && styles.push(buttonIconLeft)
     iconRight && styles.push(buttonIconRight)
@@ -24,10 +26,11 @@ export const Button = ({ text, secondaryButtonStyle=false, invertedBackgroundCol
     return <button
         id={id}
         css={styles}
-        className={className}
+        className={cssClass.join(" ")}
         disabled={disabled}
         onClick={onClick}
         ref={reference}
+        type={type}
         {...ariaAttrs}
     >
     {iconLeft ? <Icon style={iconStyle} icon={iconLeft} /> : null}

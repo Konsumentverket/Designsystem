@@ -33,7 +33,7 @@ export const buttonStyle = css`
           text-align:left;
       }
 
-      &:hover {
+      &:hover, &.selectedButtonStyle {
         background-color:${colors.theme1.midDark};
         text-decoration:underline;
       }
@@ -54,7 +54,7 @@ export const secondaryStyle = css`
     svg {
         fill:${colors.theme1.mid}; 
     }
-    &:hover {
+    &:hover, &.selectedButtonStyle {
         background-color:${colors.theme1.midLight};
         text-decoration:underline;
         border-color:${colors.theme1.xDark};
@@ -73,7 +73,7 @@ export const secondaryStyle = css`
 `;
 
 export const invertedBackgroundStyle = css`
-    &:hover, &:active {
+    &:hover, &:active, &.selectedButtonStyle {
         box-shadow:inset 0px 0px 0px 1px ${colors.common.white};
     }
     &:active {
@@ -87,10 +87,10 @@ export const invertedSecondaryBackgroundStyle = css`
     svg {
             fill:${colors.common.white}; 
         }
-    &:hover, &:active {
+    &:hover, &:active, &.selectedButtonStyle {
         box-shadow:inset 0px 0px 0px 1px ${colors.common.white};
     }
-    &:hover {
+    &:hover, &.selectedButtonStyle {
         background-color:${colors.theme1.midDark};
     }
     &:active {

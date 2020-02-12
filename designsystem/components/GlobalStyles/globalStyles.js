@@ -108,7 +108,7 @@ const globalStyles = (
           }
         }
       }
-      &.invertedState:not(.noStyle){
+      &.invertedStyle:not(.noStyle){
         &:visited{
           background-color:inherit;
         }
