@@ -2,7 +2,8 @@
   "name": "kov-components",
   "version": "0.6.5",
   "description": "kov-components",
-  "main": "/dist/main.js",
+  "main": "./dist/main.js",
+  "module": "./dist/main.es.js",
   "author": {
     "name": "Zero"
   },
@@ -12,22 +13,26 @@
     "@emotion/core": "^10.0.21"
   },
   "scripts": {
-    "start": "nodemon --watch designsystem --exec \"npx webpack\""
+    "start": "nodemon --watch designsystem --exec \"rollup -c\"",
+    "build": "rollup -c"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^8.0.0-beta",
     "nodemon": "^1.19.4",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
-    "webpack-node-externals": "^1.7.2"
+    "rollup": "^1.27.11",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.21",
-    "webpack-bundle-analyzer": "^3.5.0"
+    "@emotion/core": "^10.0.21"
+
   }
 }
