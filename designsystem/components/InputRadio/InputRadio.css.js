@@ -43,7 +43,10 @@ export const fieldInput = css`
     margin-left: 2.4rem;
     margin-right: 1.6rem;
     flex-shrink: 0;
-    
+
+    &:focus{
+        outline:none!important;
+    }    
 
     &:checked{
         outline: none;

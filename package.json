@@ -33,6 +33,5 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.21"
-
   }
 }
