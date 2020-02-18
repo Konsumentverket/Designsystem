@@ -93,6 +93,13 @@ const globalStyles = (
             fill: ${colors.theme1.mid};
           }
         }
+        &:visited{
+          color:${colors.states.visited};
+          svg {
+            fill: ${colors.states.visited};
+          }
+        }
+        
         &:active{
           background-color:${colors.theme1.midLight};
           color:${colors.theme1.xDark};
@@ -101,12 +108,7 @@ const globalStyles = (
             fill: ${colors.theme1.xDark};
           }
         }
-        &:visited{
-          color:${colors.states.visited};
-          svg {
-            fill: ${colors.states.visited};
-          }
-        }
+        
       }
       &.invertedStyle:not(.noStyle){
         &:visited{
