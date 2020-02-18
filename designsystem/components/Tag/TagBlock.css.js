@@ -8,7 +8,7 @@ export const tagBlockItem = css`
     height:100%;
     min-height:16rem;
     border-radius:.8rem;
-    overflow:hidden;
+    
 
 `;
 
@@ -26,6 +26,8 @@ export const tagLink = css`
     display: flex;
     justify-content:center;
     flex-direction:column;
+    border-top-left-radius:.8rem;
+        border-top-right-radius:.8rem;
 
     &:hover {
         background-color: ${colors.theme1.midDark};

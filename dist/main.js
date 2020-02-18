@@ -2412,7 +2412,7 @@ function _templateObject4$4() {
 }
 
 function _templateObject3$5() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";    \n    min-height: 7.2rem;\n    text-decoration: none;\n    width: 100%;\n    box-sizing: border-box;\n    position: relative;\n    display: flex;\n    justify-content:center;\n    flex-direction:column;\n\n    &:hover {\n        background-color: ", ";\n           .tagHeading{\n                text-decoration:underline;\n            }\n    }\n    &:active \n    {   \n        background-color: ", ";\n        border-color:", ";\n        span{\n            color:#fff;\n        }\n        svg {\n            fill:#fff;\n        }\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";    \n    min-height: 7.2rem;\n    text-decoration: none;\n    width: 100%;\n    box-sizing: border-box;\n    position: relative;\n    display: flex;\n    justify-content:center;\n    flex-direction:column;\n    border-top-left-radius:.8rem;\n        border-top-right-radius:.8rem;\n\n    &:hover {\n        background-color: ", ";\n           .tagHeading{\n                text-decoration:underline;\n            }\n    }\n    &:active \n    {   \n        background-color: ", ";\n        border-color:", ";\n        span{\n            color:#fff;\n        }\n        svg {\n            fill:#fff;\n        }\n    }\n"]);
 
   _templateObject3$5 = function _templateObject3() {
     return data;
@@ -2432,7 +2432,7 @@ function _templateObject2$5() {
 }
 
 function _templateObject$7() {
-  var data = _taggedTemplateLiteral(["\n    background-color:", ";    \n    display:flex;\n    flex-direction:column;\n    height:100%;\n    min-height:16rem;\n    border-radius:.8rem;\n    overflow:hidden;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color:", ";    \n    display:flex;\n    flex-direction:column;\n    height:100%;\n    min-height:16rem;\n    border-radius:.8rem;\n    \n\n"]);
 
   _templateObject$7 = function _templateObject() {
     return data;
