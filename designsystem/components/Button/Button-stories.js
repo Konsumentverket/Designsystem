@@ -18,10 +18,10 @@ storiesOf('Digitala Produkter|React komponenter/Knappar', module)
 
   <Button
         text={text("Text", "Gå till konsumentverket.se")}
-        secondaryButtonStyle={boolean("Sekundärknapp", false)}
-        invertedBackgroundColor={boolean("States för mörk bakgrund", false)}
         iconLeft={select("Ikon vänster", ["", ...Object.keys(iconDefinitions)], "")}
         iconRight={select("Ikon höger", ["", ...Object.keys(iconDefinitions)], "")}
+        secondaryButtonStyle={boolean("Sekundärknapp", false)}
+        invertedBackgroundColor={boolean("States för mörk bakgrund", false)}
         selected={boolean("Förvald", false)}
         disabled={boolean("Inaktiverad", false)}
       />

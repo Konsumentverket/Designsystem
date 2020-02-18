@@ -2,7 +2,7 @@ import { css } from '@emotion/core';
 import { colors } from '../Colors/Colors';
 
 export const tagBlockItem = css`
-    background-color:${colors.common.isabelline};    
+    background-color:${colors.theme3.xLight};    
     display:flex;
     flex-direction:column;
     height:100%;

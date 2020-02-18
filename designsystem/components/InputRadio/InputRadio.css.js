@@ -10,7 +10,7 @@ export const fieldWrapper = css`
     border: 2px solid transparent;
     display:flex;
     align-items: center;
-    background-color: ${colors.common.isabelline};
+    background-color: ${colors.theme3.xLight};
     &.inputHasValue{
         border: 2px solid ${colors.theme1.xDark};
     }

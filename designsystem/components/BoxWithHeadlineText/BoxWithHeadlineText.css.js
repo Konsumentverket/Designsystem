@@ -2,7 +2,7 @@ import { css } from "@emotion/core";
 import { colors } from '../Colors/Colors';
 
 export default css`
-  background: ${colors.common.isabelline};
+  background: ${colors.theme3.xLight};
   padding: 1em 0.5em;
   margin-top: 1rem;
 
@@ -23,7 +23,7 @@ export default css`
   span.heading {
     text-transform: uppercase;
     font-size: 1rem;
-    color: ${colors.common.grayDark};
+    color: ${colors.theme3.dark};
 
     .blue& {
       color: white;

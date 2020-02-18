@@ -21,9 +21,9 @@ const colors = {
     theme3: {
         "xDark": "#161616",
         "dark": "#4D4D4D",
-        "midDark": "#717171",
-        "mid": "#757575",
-        "midLight": "#D5D3D3",
+        "midDark": "#6B6B6B",
+        "mid": "#6B6B6B",
+        "midLight": "#D0D0D0",
         "light": "#D0D0D0",
         "xLight": "#F2F0F0"
     },    
@@ -35,14 +35,9 @@ const colors = {
     common: {
         "white": "#ffffff",
         "black": "#000000",
-        "isabelline": "#F2F0F0",
-        "grayDark": "#565656",
-        "grayMid": "#D5D3D3",
-        "grayLight": "#CDD1D4",
-        "darkGreen": "#007A3E",
-        "ligthGreen": "#76b82a",
-        "geranium": "#E7342B",
-        "cyan": "#92DCFA",
+        "warning": "#E7342B",
+        "success": "007A3E",
+        "cyan": "#92DCFA"
     }
 }
 
