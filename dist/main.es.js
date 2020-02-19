@@ -1063,7 +1063,7 @@ function _templateObject2$2() {
 }
 
 function _templateObject$1() {
-  var data = _taggedTemplateLiteral(["\n    position:relative;\n    display:flex;\n    flex-direction: row;\n    align-items: stretch;\n    \n    overflow:hidden;\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius:.8rem;\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    position:relative;\n    display:flex;\n    flex-direction: row;\n    align-items: stretch;\n    background-color: ", ";\n    \n    overflow:hidden;\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius:.8rem;\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n"]);
 
   _templateObject$1 = function _templateObject() {
     return data;
@@ -1071,7 +1071,7 @@ function _templateObject$1() {
 
   return data;
 }
-var searchWrapperStyle = css$1(_templateObject$1(), colors.theme3.mid, colors.theme1.mid, colors.theme1.xDark);
+var searchWrapperStyle = css$1(_templateObject$1(), colors.common.white, colors.theme3.mid, colors.theme1.mid, colors.theme1.xDark);
 var searchFieldInputStyle = css$1(_templateObject2$2(), colors.theme1.xDark, colors.theme1.dark);
 var searchFiledButtonStyle = css$1(_templateObject3$2());
 

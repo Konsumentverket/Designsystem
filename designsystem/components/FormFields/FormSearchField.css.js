@@ -6,6 +6,7 @@ export const searchWrapperStyle = css`
     display:flex;
     flex-direction: row;
     align-items: stretch;
+    background-color: ${colors.common.white};
     
     overflow:hidden;
     box-shadow:inset 0px 0px 0px 1px ${colors.theme3.mid};
