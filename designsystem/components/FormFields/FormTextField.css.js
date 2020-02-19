@@ -39,4 +39,11 @@ export const fieldStyle = css`
     }
 `;
 
+export const invertedBackgroundStyle = css`
+    box-shadow:none;
+    &:hover, &:active {
+        box-shadow:none;
+    }
+`;
+
 

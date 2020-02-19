@@ -1,13 +1,14 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react';
-import { fieldStyle } from './FormTextField.css';
+import { fieldStyle, invertedBackgroundStyle } from './FormTextField.css';
 
 
 
-export const FormTextField = ({ reference, fieldtext, style, disabled, inputType, ...other }) => {
+export const FormTextField = ({ reference, fieldtext, style, invertedBackgroundColor=false, disabled, inputType, ...other }) => {
 
     var styles = [fieldStyle];
+    invertedBackgroundColor && styles.push(invertedBackgroundStyle);
     style && styles.push(style)
 
     const ariaAttrs = {};

@@ -22,6 +22,7 @@ storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
 .add(name, () =>
         <FormTextField 
         fieldtext={text("Hjälptext", "Placeholder")}
+        invertedBackgroundColor={boolean("States för mörk bakgrund", false)}
         disabled={boolean("Inaktiverad", false)}
         />
     , { notes: NotesLoader(name) }

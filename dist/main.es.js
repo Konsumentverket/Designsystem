@@ -982,6 +982,7 @@ var Icon = function Icon(_ref) {
   }
 
   return jsx(Element, _extends({
+    focusable: "false",
     title: title,
     className: className,
     style: style,
@@ -1042,8 +1043,28 @@ var Button = function Button(_ref) {
   }) : null);
 };
 
+function _templateObject5$2() {
+  var data = _taggedTemplateLiteral(["\n    box-shadow:none;\n    &:hover, &:active {\n        box-shadow:none;\n    }\n"]);
+
+  _templateObject5$2 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$2() {
+  var data = _taggedTemplateLiteral(["\n    width:auto;\n    display:flex;\n    border-radius: 0 .8rem .8rem 0;\n    margin-right:-.8rem;\n"]);
+
+  _templateObject4$2 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3$2() {
-  var data = _taggedTemplateLiteral(["\n    width:auto;\n    display:flex;\n    border-radius: 0 .8rem .8rem 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.8rem;\n    line-height:3.2rem;\n    display:flex;\n    flex-grow:1;\n    padding: 1.2rem 3.2rem 1.2rem 1.6rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject3$2 = function _templateObject3() {
     return data;
@@ -1053,7 +1074,7 @@ function _templateObject3$2() {
 }
 
 function _templateObject2$2() {
-  var data = _taggedTemplateLiteral(["\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.8rem;\n    line-height:3.2rem;\n    display:flex;\n    flex-grow:1;\n    margin:1.2rem 3.2rem 1.2rem 1.6rem;\n    padding:0;\n    color: ", ";\n        font-style:normal;\n        font-weight:500;\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    position:relative;\n    display:flex;\n    flex-direction: row;\n    align-items: stretch;\n    background-color: ", ";\n    margin-right:.8rem;\n    border-radius:.8rem;\n"]);
 
   _templateObject2$2 = function _templateObject2() {
     return data;
@@ -1063,7 +1084,7 @@ function _templateObject2$2() {
 }
 
 function _templateObject$1() {
-  var data = _taggedTemplateLiteral(["\n    position:relative;\n    display:flex;\n    flex-direction: row;\n    align-items: stretch;\n    background-color: ", ";\n    \n    overflow:hidden;\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius:.8rem;\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n"]);
+  var data = _taggedTemplateLiteral([" \n        background-color: ", ";\n        text-decoration:none;\n        box-shadow:inset 0px 0px 0px 1px ", ";\n        cursor:inherit;\n        &::placeholder {\n            color: ", ";\n        }\n"]);
 
   _templateObject$1 = function _templateObject() {
     return data;
@@ -1071,9 +1092,11 @@ function _templateObject$1() {
 
   return data;
 }
-var searchWrapperStyle = css$1(_templateObject$1(), colors.common.white, colors.theme3.mid, colors.theme1.mid, colors.theme1.xDark);
-var searchFieldInputStyle = css$1(_templateObject2$2(), colors.theme1.xDark, colors.theme1.dark);
-var searchFiledButtonStyle = css$1(_templateObject3$2());
+var disabled$1 = css$1(_templateObject$1(), colors.theme3.xLight, colors.theme3.midLight, colors.theme3.midLight);
+var searchWrapperStyle = css$1(_templateObject2$2(), colors.common.white);
+var searchFieldInputStyle = css$1(_templateObject3$2(), colors.common.white, colors.theme3.mid, colors.theme1.xDark, colors.theme1.mid, colors.theme1.xDark, colors.theme1.dark, disabled$1);
+var searchFieldButtonStyle = css$1(_templateObject4$2());
+var invertedBackgroundStyle$1 = css$1(_templateObject5$2());
 
 var FormSearchField = function FormSearchField(_ref) {
   var className = _ref.className,
@@ -1081,15 +1104,20 @@ var FormSearchField = function FormSearchField(_ref) {
       reference = _ref.reference,
       fieldtext = _ref.fieldtext,
       onClick = _ref.onClick,
+      onChange = _ref.onChange,
+      _ref$invertedBackgrou = _ref.invertedBackgroundColor,
+      invertedBackgroundColor = _ref$invertedBackgrou === void 0 ? false : _ref$invertedBackgrou,
       buttontext = _ref.buttontext,
       style = _ref.style,
       disabled = _ref.disabled,
       type = _ref.type,
       inputtype = _ref.inputtype,
-      other = _objectWithoutProperties(_ref, ["className", "icon", "reference", "fieldtext", "onClick", "buttontext", "style", "disabled", "type", "inputtype"]);
+      other = _objectWithoutProperties(_ref, ["className", "icon", "reference", "fieldtext", "onClick", "onChange", "invertedBackgroundColor", "buttontext", "style", "disabled", "type", "inputtype"]);
 
   var styles = [searchWrapperStyle];
   style && styles.push(style);
+  var searchFieldInputStyles = [searchFieldInputStyle];
+  invertedBackgroundColor && searchFieldInputStyles.push(invertedBackgroundStyle$1);
   var ariaAttrs = {};
   Object.keys(other).filter(function (x) {
     return x.startsWith("aria-");
@@ -1100,13 +1128,14 @@ var FormSearchField = function FormSearchField(_ref) {
     css: [styles],
     className: className
   }, jsx("input", _extends({}, other, {
+    onChange: onChange,
     ref: reference,
     type: inputtype || "search",
     placeholder: fieldtext,
     disabled: disabled,
-    css: searchFieldInputStyle
+    css: [searchFieldInputStyles]
   })), jsx(Button, _extends({
-    style: searchFiledButtonStyle,
+    style: searchFieldButtonStyle,
     disabled: disabled,
     onClick: onClick,
     ref: reference,
@@ -2055,20 +2084,20 @@ var Accordion = function Accordion(_ref) {
   })));
 };
 
-function _templateObject5$2() {
+function _templateObject5$3() {
   var data = _taggedTemplateLiteral(["\n    padding-left: 5.6rem;\n"]);
 
-  _templateObject5$2 = function _templateObject5() {
+  _templateObject5$3 = function _templateObject5() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject4$2() {
+function _templateObject4$3() {
   var data = _taggedTemplateLiteral(["\n        width:100%;\n        height:100%;\n        min-height:7.2rem;\n        padding: .8rem 4rem .8rem 6.4rem;\n        display: flex;\n        flex-direction:column;\n        box-sizing:border-box;\n        justify-content:center;\n        margin:0;\n        color: ", ";\n        line-height: 2.4rem;\n        font-size: 2.1rem;\n        font-weight: 500;\n        word-wrap:break-word;\n"]);
 
-  _templateObject4$2 = function _templateObject4() {
+  _templateObject4$3 = function _templateObject4() {
     return data;
   };
 
@@ -2107,8 +2136,8 @@ function _templateObject$3() {
 var arrowStyle = css$1(_templateObject$3(), colors.theme1.mid);
 var iconStyle$1 = css$1(_templateObject2$3(), colors.theme1.mid);
 var iconCardStyle = css$1(_templateObject3$3(), colors.common.white, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark);
-var iconText = css$1(_templateObject4$2(), colors.theme1.mid);
-var topAreaIcon = css$1(_templateObject5$2());
+var iconText = css$1(_templateObject4$3(), colors.theme1.mid);
+var topAreaIcon = css$1(_templateObject5$3());
 
 function _templateObject7$2() {
   var data = _taggedTemplateLiteral(["\n\n      font-size:1.4rem;\n      line-height:2.4rem;\n\n"]);
@@ -2130,20 +2159,20 @@ function _templateObject6$2() {
   return data;
 }
 
-function _templateObject5$3() {
+function _templateObject5$4() {
   var data = _taggedTemplateLiteral(["\n\n      font-size:1.8rem;\n      line-height:3.2rem;\n\n"]);
 
-  _templateObject5$3 = function _templateObject5() {
+  _templateObject5$4 = function _templateObject5() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject4$3() {
+function _templateObject4$4() {
   var data = _taggedTemplateLiteral(["\n\n      font-size:2.0rem;\n      line-height:3.2rem;\n\n\n      ", "{\n            font-size:2.4rem;\n            line-height:3.2rem;\n      }\n"]);
 
-  _templateObject4$3 = function _templateObject4() {
+  _templateObject4$4 = function _templateObject4() {
     return data;
   };
 
@@ -2182,8 +2211,8 @@ function _templateObject$4() {
 var commonSubHeadingStyle = css$1(_templateObject$4());
 var h1Style = css$1(_templateObject2$4(), medium);
 var h2Style = css$1(_templateObject3$4(), medium);
-var h3Style = css$1(_templateObject4$3(), medium);
-var h4Style = css$1(_templateObject5$3());
+var h3Style = css$1(_templateObject4$4(), medium);
+var h4Style = css$1(_templateObject5$4());
 var h5Style = css$1(_templateObject6$2());
 var h6Style = css$1(_templateObject7$2());
 
@@ -2384,20 +2413,20 @@ function _templateObject6$3() {
   return data;
 }
 
-function _templateObject5$4() {
+function _templateObject5$5() {
   var data = _taggedTemplateLiteral(["     \n        padding: .8rem 4rem .8rem 6.4rem;\n"]);
 
-  _templateObject5$4 = function _templateObject5() {
+  _templateObject5$5 = function _templateObject5() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject4$4() {
+function _templateObject4$5() {
   var data = _taggedTemplateLiteral(["\n        width:100%;\n        height:100%;\n        padding: .8rem 4rem .8rem 1.6rem;\n        display: flex;\n        flex-direction:column;\n        box-sizing:border-box;\n        justify-content:center;\n        margin:0;\n        color: #fff;\n        line-height: 2.4rem;\n        font-size: 2.1rem;\n        font-weight: 500;\n        word-wrap:break-word;\n\n"]);
 
-  _templateObject4$4 = function _templateObject4() {
+  _templateObject4$5 = function _templateObject4() {
     return data;
   };
 
@@ -2436,8 +2465,8 @@ function _templateObject$7() {
 var tagBlockItem = css$1(_templateObject$7(), colors.theme3.xLight);
 var invertedTag = css$1(_templateObject2$5());
 var tagLink = css$1(_templateObject3$5(), colors.theme1.mid, colors.theme1.midDark, colors.theme1.xDark, colors.theme1.xDark);
-var tagHeading = css$1(_templateObject4$4());
-var tagIconHeading = css$1(_templateObject5$4());
+var tagHeading = css$1(_templateObject4$5());
+var tagIconHeading = css$1(_templateObject5$5());
 var tagsArea = css$1(_templateObject6$3());
 var tagsList = css$1(_templateObject7$3());
 var tagsListItem = css$1(_templateObject8$1());
@@ -2522,20 +2551,20 @@ function _templateObject6$4() {
   return data;
 }
 
-function _templateObject5$5() {
+function _templateObject5$6() {
   var data = _taggedTemplateLiteral(["\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    color: ", ";\n    svg {\n            fill:", "; \n        }\n    &:hover, &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:hover {\n        background-color:", ";\n    }\n    &:active {\n        background-color: ", ";\n    }\n    &:disabled {\n        ", "\n    }\n"]);
 
-  _templateObject5$5 = function _templateObject5() {
+  _templateObject5$6 = function _templateObject5() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject4$5() {
+function _templateObject4$6() {
   var data = _taggedTemplateLiteral(["\n    &:hover, &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        background-color: ", ";\n    }\n"]);
 
-  _templateObject4$5 = function _templateObject4() {
+  _templateObject4$6 = function _templateObject4() {
     return data;
   };
 
@@ -2571,11 +2600,11 @@ function _templateObject$8() {
 
   return data;
 }
-var disabled$1 = css$1(_templateObject$8(), colors.theme3.dark, colors.theme3.midLight, colors.theme3.dark);
-var expandButtonStyle = css$1(_templateObject2$6(), colors.common.white, colors.theme1.mid, colors.common.white, medium, colors.theme1.midDark, colors.theme1.xDark, disabled$1);
-var secondaryStyle$1 = css$1(_templateObject3$6(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$1);
-var invertedBackgroundStyle$1 = css$1(_templateObject4$5(), colors.common.white, colors.theme1.dark);
-var invertedSecondaryBackgroundStyle$1 = css$1(_templateObject5$5(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$1);
+var disabled$2 = css$1(_templateObject$8(), colors.theme3.dark, colors.theme3.midLight, colors.theme3.dark);
+var expandButtonStyle = css$1(_templateObject2$6(), colors.common.white, colors.theme1.mid, colors.common.white, medium, colors.theme1.midDark, colors.theme1.xDark, disabled$2);
+var secondaryStyle$1 = css$1(_templateObject3$6(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$2);
+var invertedBackgroundStyle$2 = css$1(_templateObject4$6(), colors.common.white, colors.theme1.dark);
+var invertedSecondaryBackgroundStyle$1 = css$1(_templateObject5$6(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$2);
 var iconStyle$3 = css$1(_templateObject6$4());
 var expandedIconStyle = css$1(_templateObject7$4());
 
@@ -2595,7 +2624,7 @@ var ExpandButton = function ExpandButton(_ref) {
       onClick = _ref.onClick;
   var styles = [expandButtonStyle];
   secondaryButtonStyle && styles.push(secondaryStyle$1);
-  invertedBackgroundColor && styles.push(invertedBackgroundStyle$1);
+  invertedBackgroundColor && styles.push(invertedBackgroundStyle$2);
   invertedBackgroundColor && secondaryButtonStyle && styles.push(invertedSecondaryBackgroundStyle$1);
   style && styles.push(style);
   return jsx("button", {
@@ -2752,20 +2781,20 @@ function _templateObject6$5() {
   return data;
 }
 
-function _templateObject5$6() {
+function _templateObject5$7() {
   var data = _taggedTemplateLiteral(["\n    a {\n      ", "\n    }  \n"]);
 
-  _templateObject5$6 = function _templateObject5() {
+  _templateObject5$7 = function _templateObject5() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject4$6() {
+function _templateObject4$7() {
   var data = _taggedTemplateLiteral(["\n    a {\n      ", "\n    }  \n"]);
 
-  _templateObject4$6 = function _templateObject4() {
+  _templateObject4$7 = function _templateObject4() {
     return data;
   };
 
@@ -2833,8 +2862,8 @@ var globalStyles = function globalStyles() {
 
 var LinkColors$1 = css$1(_templateObject2$9(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
 var LinkColorsInverted$1 = css$1(_templateObject3$9(), colors.theme1.mid, colors.theme1.xDark, colors.states.visited);
-var LinkWrapperColorStyle$1 = css$1(_templateObject4$6(), LinkColors$1);
-var LinkWrapperInvertedColorStyle$1 = css$1(_templateObject5$6(), LinkColorsInverted$1);
+var LinkWrapperColorStyle$1 = css$1(_templateObject4$7(), LinkColors$1);
+var LinkWrapperInvertedColorStyle$1 = css$1(_templateObject5$7(), LinkColorsInverted$1);
 var ElementLinkColorStyle$1 = css$1(_templateObject6$5(), LinkColors$1);
 var ElementLinkInvertedColorStyle$1 = css$1(_templateObject7$5(), LinkColorsInverted$1);
 
@@ -3350,20 +3379,20 @@ function _templateObject6$6() {
   return data;
 }
 
-function _templateObject5$7() {
+function _templateObject5$8() {
   var data = _taggedTemplateLiteral(["\n  margin:1.6rem 2.4rem 2.4rem 2.4rem;\n  ", " {\n    \n      max-width:32.8rem;\n  }\n"]);
 
-  _templateObject5$7 = function _templateObject5() {
+  _templateObject5$8 = function _templateObject5() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject4$7() {
+function _templateObject4$8() {
   var data = _taggedTemplateLiteral(["\n  color: #fff;\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin:0;\n  padding:0;\n"]);
 
-  _templateObject4$7 = function _templateObject4() {
+  _templateObject4$8 = function _templateObject4() {
     return data;
   };
 
@@ -3402,8 +3431,8 @@ function _templateObject$d() {
 var focusWrapper = css$1(_templateObject$d(), colors.theme2.mid);
 var linkWrapper = css$1(_templateObject2$b(), colors.theme2.midDark, colors.theme2.dark, medium);
 var focusHeadline = css$1(_templateObject3$b());
-var focusText = css$1(_templateObject4$7());
-var textArea = css$1(_templateObject5$7(), medium);
+var focusText = css$1(_templateObject4$8());
+var textArea = css$1(_templateObject5$8(), medium);
 var pictureWrapper = css$1(_templateObject6$6());
 var iconBackground = css$1(_templateObject7$6(), colors.theme2.light);
 var externalIcon = css$1(_templateObject8$2());
@@ -3502,20 +3531,20 @@ function _templateObject6$7() {
   return data;
 }
 
-function _templateObject5$8() {
+function _templateObject5$9() {
   var data = _taggedTemplateLiteral(["\n  padding:1.6rem 2.4rem 2.4rem 2.4rem;\n  box-sizing:border-box;\n  ", " {   \n      max-width:50.89%;  \n      display:flex;\n      justify-content:center;\n      flex-direction:column;\n      width:100%;\n  }\n  ", " {   \n      max-width:32.8rem;\n      \n  }\n"]);
 
-  _templateObject5$8 = function _templateObject5() {
+  _templateObject5$9 = function _templateObject5() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject4$8() {
+function _templateObject4$9() {
   var data = _taggedTemplateLiteral(["\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin:0;\n  padding:0;\n  color:", ";\n"]);
 
-  _templateObject4$8 = function _templateObject4() {
+  _templateObject4$9 = function _templateObject4() {
     return data;
   };
 
@@ -3554,8 +3583,8 @@ function _templateObject$e() {
 var focusWrapper$1 = css$1(_templateObject$e(), medium);
 var linkWrapper$1 = css$1(_templateObject2$c(), colors.theme1.mid, colors.theme2.midDark, colors.theme2.dark, medium);
 var focusHeadline$1 = css$1(_templateObject3$c());
-var focusText$1 = css$1(_templateObject4$8(), colors.theme3.dark);
-var textArea$1 = css$1(_templateObject5$8(), medium, large);
+var focusText$1 = css$1(_templateObject4$9(), colors.theme3.dark);
+var textArea$1 = css$1(_templateObject5$9(), medium, large);
 var pictureWrapper$1 = css$1(_templateObject6$7(), medium, large);
 var iconBackground$1 = css$1(_templateObject7$7(), colors.theme2.light, medium);
 var externalIcon$1 = css$1(_templateObject8$3(), colors.theme1.mid);
@@ -3612,20 +3641,20 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
   }, campaignPuffMarkup()) : campaignPuffMarkup();
 };
 
-function _templateObject5$9() {
+function _templateObject5$a() {
   var data = _taggedTemplateLiteral(["\n    &:hover + label {\n        background-color:", ";\n        color: ", ";\n    }\n    &:checked + label {\n        background-color:", ";\n    }\n    \n"]);
 
-  _templateObject5$9 = function _templateObject5() {
+  _templateObject5$a = function _templateObject5() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject4$9() {
+function _templateObject4$a() {
   var data = _taggedTemplateLiteral(["\n    &:hover {\n        background-color:", ";\n    }\n"]);
 
-  _templateObject4$9 = function _templateObject4() {
+  _templateObject4$a = function _templateObject4() {
     return data;
   };
 
@@ -3664,8 +3693,8 @@ function _templateObject$f() {
 var wrapperStyle = css$1(_templateObject$f());
 var labelStyle = css$1(_templateObject2$d(), colors.theme1.light);
 var fieldStyle = css$1(_templateObject3$d(), colors.theme1.mid, colors.common.white, colors.theme1.xDark, colors.theme1.xDark, colors.common.white, colors.theme1.light, colors.theme1.light, colors.theme1.xDark);
-var invertedLabelStyle = css$1(_templateObject4$9(), colors.common.white);
-var invertedfieldStyle = css$1(_templateObject5$9(), colors.common.white, colors.theme1.xDark, colors.common.white);
+var invertedLabelStyle = css$1(_templateObject4$a(), colors.common.white);
+var invertedfieldStyle = css$1(_templateObject5$a(), colors.common.white, colors.theme1.xDark, colors.common.white);
 
 /** @jsx jsx */
 var FormCheckbox = function FormCheckbox(_ref) {
@@ -3704,20 +3733,20 @@ var FormCheckbox = function FormCheckbox(_ref) {
   }, labelText)));
 };
 
-function _templateObject5$a() {
+function _templateObject5$b() {
   var data = _taggedTemplateLiteral(["\n    &:hover + label {\n        background-color:", ";\n        color: ", ";\n    }\n    &:checked + label {\n        background-color:", ";\n    }\n    \n"]);
 
-  _templateObject5$a = function _templateObject5() {
+  _templateObject5$b = function _templateObject5() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject4$a() {
+function _templateObject4$b() {
   var data = _taggedTemplateLiteral(["\n    &:hover {\n        background-color:", ";\n    }\n"]);
 
-  _templateObject4$a = function _templateObject4() {
+  _templateObject4$b = function _templateObject4() {
     return data;
   };
 
@@ -3756,8 +3785,8 @@ function _templateObject$g() {
 var wrapperStyle$1 = css$1(_templateObject$g());
 var labelStyle$1 = css$1(_templateObject2$e(), colors.theme1.light);
 var fieldStyle$1 = css$1(_templateObject3$e(), colors.theme1.mid, colors.common.white, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.light, colors.theme1.light, colors.theme1.xDark);
-var invertedLabelStyle$1 = css$1(_templateObject4$a(), colors.common.white);
-var invertedfieldStyle$1 = css$1(_templateObject5$a(), colors.common.white, colors.theme1.xDark, colors.common.white);
+var invertedLabelStyle$1 = css$1(_templateObject4$b(), colors.common.white);
+var invertedfieldStyle$1 = css$1(_templateObject5$b(), colors.common.white, colors.theme1.xDark, colors.common.white);
 
 /** @jsx jsx */
 var FormRadiobutton = function FormRadiobutton(_ref) {

@@ -23,7 +23,7 @@ storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
         fieldtext={text("Hjälptext", "Vad letar du efter?")}
         buttontext={text("Knapptext", "Sök")}
         icon={select("Ikon", ["", ...Object.keys(iconDefinitions)], "Search")}
-        secondaryButtonStyle={boolean("Sekundärknapp", false)}
+        invertedBackgroundColor={boolean("States för mörk bakgrund", false)}
         disabled={boolean("Inaktiverad", false)}
         />
     , { notes: NotesLoader(name) }

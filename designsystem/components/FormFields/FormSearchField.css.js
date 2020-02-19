@@ -2,14 +2,23 @@
 import { jsx, css } from '@emotion/core'
 import { colors } from '../Colors/Colors';
 
+const disabled = css` 
+        background-color: ${colors.theme3.xLight};
+        text-decoration:none;
+        box-shadow:inset 0px 0px 0px 1px ${colors.theme3.midLight};
+        cursor:inherit;
+        &::placeholder {
+            color: ${colors.theme3.midLight};
+        }
+`;
+
 export const searchWrapperStyle = css`
     position:relative;
     display:flex;
     flex-direction: row;
     align-items: stretch;
     background-color: ${colors.common.white};
-    
-    overflow:hidden;
+    margin-right:.8rem;
     border-radius:.8rem;
 `;
 
@@ -37,10 +46,22 @@ export const searchFieldInputStyle = css`
         font-style:italic;
         color: ${colors.theme1.dark};
     }
+    &:disabled{
+        ${disabled}
+    }
 `;
 
 export const searchFieldButtonStyle = css`
     width:auto;
     display:flex;
     border-radius: 0 .8rem .8rem 0;
+    margin-right:-.8rem;
 `;
+
+export const invertedBackgroundStyle = css`
+    box-shadow:none;
+    &:hover, &:active {
+        box-shadow:none;
+    }
+`;
+

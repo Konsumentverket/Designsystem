@@ -1,13 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react';
-import { searchWrapperStyle, searchFieldInputStyle, searchFieldButtonStyle } from './FormSearchField.css';
+import { searchWrapperStyle, searchFieldInputStyle, searchFieldButtonStyle, invertedBackgroundStyle } from './FormSearchField.css';
 import { Button } from '../Button/Button';
 
-export const FormSearchField = ({ className, icon, reference, fieldtext, onClick, onChange, buttontext, style, disabled, type, inputtype, ...other }) => {
+export const FormSearchField = ({ className, icon, reference, fieldtext, onClick, onChange, invertedBackgroundColor=false, buttontext, style, disabled, type, inputtype, ...other }) => {
 
     var styles = [searchWrapperStyle];
     style && styles.push(style)
+
+    var searchFieldInputStyles = [searchFieldInputStyle];
+    invertedBackgroundColor && searchFieldInputStyles.push(invertedBackgroundStyle);
 
     const ariaAttrs = {};
     Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x])
@@ -22,7 +25,7 @@ export const FormSearchField = ({ className, icon, reference, fieldtext, onClick
             type={inputtype || "search"}
             placeholder={fieldtext}
             disabled={disabled}
-            css={[searchFieldInputStyle]} />
+            css={[searchFieldInputStyles]} />
         <Button
             style={searchFieldButtonStyle}
             disabled={disabled}
