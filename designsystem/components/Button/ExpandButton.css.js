@@ -14,10 +14,11 @@ const disabled = css`
 `;
 
 export const expandButtonStyle = css`
-    font-size:2.1rem;
+    font-size:1.6rem;
     line-height:2.4rem;
     font-weight:500;
-    padding:1.6rem 2.4rem;
+    padding:.8rem 0;
+    
     color: ${colors.common.white};
     border-radius:3.2rem;
     width:100%;
@@ -30,6 +31,8 @@ export const expandButtonStyle = css`
 
     ${medium}{
         width:auto;
+        font-size:2.1rem;
+        padding:1.6rem 2.4rem;
     }
 
     &:hover {

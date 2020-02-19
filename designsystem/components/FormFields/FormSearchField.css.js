@@ -7,6 +7,7 @@ export const searchWrapperStyle = css`
     display:flex;
     flex-direction: row;
     align-items: stretch;
+    background-color: ${colors.common.white};
     
     overflow:hidden;
     border-radius:.8rem;
