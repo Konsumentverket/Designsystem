@@ -56,6 +56,7 @@ export const iconCardStyle = css`
 export const iconText = css`
         width:100%;
         height:100%;
+        min-height:7.2rem;
         padding: .8rem 4rem .8rem 6.4rem;
         display: flex;
         flex-direction:column;
