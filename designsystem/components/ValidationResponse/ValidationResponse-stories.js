@@ -16,12 +16,12 @@ storiesOf('Digitala Produkter|React komponenter', module)
       <div css={css`max-width: 80%; margin-left: 2%; p{font-size: 1.8rem;}`}>
         <p>Lyckat</p>
         <br />
-        <ValidationResponse success={true} text='Detta är ett lyckat meddelande' />
+        <ValidationResponse success={true} text={<p>Detta är ett lyckat meddelande</p>} />
         <br />
         <br />
         <p>Något fel</p>
         <br />
-        <ValidationResponse success={false} text='Något har gått fel' />
+        <ValidationResponse success={false} text={<p>Något har gått fel</p>} />
       </div>
     </>
   }
