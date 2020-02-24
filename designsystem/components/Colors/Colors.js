@@ -36,7 +36,7 @@ const defaultTheme = {
         "white": "#ffffff",
         "black": "#000000",
         "warning": "#E7342B",
-        "success": "007A3E",
+        "success": "#007A3E",
         "cyan": "#92DCFA"
     }
 }
@@ -50,7 +50,7 @@ const eccTheme = {
 }
 
 const colors = process.env.THEME === 'ecc'
-    ? Object.assign(defaultTheme, eccTheme)
+    ? Object.assign({}, defaultTheme, eccTheme)
     : defaultTheme
 
 export { colors }
