@@ -3847,7 +3847,7 @@ var FormRadiobutton = function FormRadiobutton(_ref) {
 };
 
 function _templateObject$h() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  color: ", ";\n  font-size: 1.4rem;\n  line-height: 2.4rem;\n  svg {\n    align-content: center;\n    margin-right: 0.4rem;\n    fill: ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  color: ", ";\n  font-size: 1.4rem;\n  svg {\n    align-content: center;\n    margin-right: 0.4rem;\n    fill: ", ";\n  }\n  p {\n    line-height: 2.4rem;\n  }\n"]);
 
   _templateObject$h = function _templateObject() {
     return data;
