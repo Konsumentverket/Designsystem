@@ -160,7 +160,7 @@ var defaultTheme = {
     "white": "#ffffff",
     "black": "#000000",
     "warning": "#E7342B",
-    "success": "007A3E",
+    "success": "#007A3E",
     "cyan": "#92DCFA"
   }
 };
@@ -171,7 +171,7 @@ var eccTheme = {
     "mid": "red"
   }
 };
-var colors = process.env.THEME === 'ecc' ? Object.assign(defaultTheme, eccTheme) : defaultTheme;
+var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme;
 
 var spacing = {
   'spacing-xs': '0.25rem',
@@ -3839,5 +3839,32 @@ var FormRadiobutton = function FormRadiobutton(_ref) {
   }, labelText)));
 };
 
-export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, PrerequisitesBox, SubHeading, Tag, TagBlock, colors, spacing };
+function _templateObject$h() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  color: ", ";\n  font-size: 1.4rem;\n  line-height: 2.4rem;\n  svg {\n    align-content: center;\n    margin-right: 0.4rem;\n    fill: ", ";\n  }\n"]);
+
+  _templateObject$h = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var wrapper$1 = function wrapper(success) {
+  return css(_templateObject$h(), success ? colors.common.success : colors.common.warning, success ? colors.common.success : colors.common.warning);
+};
+
+/** @jsx jsx */
+
+var ValidationResponse = function ValidationResponse(_ref) {
+  var _ref$success = _ref.success,
+      success = _ref$success === void 0 ? false : _ref$success,
+      _ref$text = _ref.text,
+      text = _ref$text === void 0 ? '' : _ref$text;
+  return jsx("div", {
+    css: wrapper$1(success)
+  }, jsx(Icon, {
+    icon: "Clear"
+  }), text);
+};
+
+export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, PrerequisitesBox, SubHeading, Tag, TagBlock, ValidationResponse, colors, spacing };
 //# sourceMappingURL=main.es.js.map
