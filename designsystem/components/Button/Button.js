@@ -6,7 +6,7 @@ import { Icon } from '../Icon/Icon';
 
 
 export const Button = ({ text, secondaryButtonStyle=false, invertedBackgroundColor=false, className, id, type = "submit",
-    selected, disabled, iconLeft, iconRight, style, reference, onClick, ...other }) => {
+    selected, disabled, iconLeft, iconRight, style, reference, onClick, href, ...other }) => {
 
     var styles = [buttonStyle];
     var cssClass = [className];
@@ -14,6 +14,7 @@ export const Button = ({ text, secondaryButtonStyle=false, invertedBackgroundCol
     secondaryButtonStyle && styles.push(secondaryStyle);   
     invertedBackgroundColor && styles.push(invertedBackgroundStyle);
     selected && cssClass.push("selectedButtonStyle");
+    href && cssClass.push("noStyle");
     (invertedBackgroundColor && secondaryButtonStyle) && styles.push(invertedSecondaryBackgroundStyle);
     iconLeft && styles.push(buttonIconLeft)
     iconRight && styles.push(buttonIconRight)
@@ -23,18 +24,26 @@ export const Button = ({ text, secondaryButtonStyle=false, invertedBackgroundCol
 
     style && styles.push(style)
 
-    return <button
-        id={id}
-        css={styles}
-        className={cssClass.join(" ")}
-        disabled={disabled}
-        onClick={onClick}
-        ref={reference}
-        type={type}
-        {...ariaAttrs}
-    >
-    {iconLeft ? <Icon style={iconStyle} icon={iconLeft} /> : null}
-    {text}
-    {iconRight ? <Icon style={iconStyle} icon={iconRight} /> : null}
+    const props={
+        "id":id,
+        "css":styles,
+        "className":cssClass.join(" "),
+        "disabled":disabled,
+        "onClick":onClick,
+        "ref":reference,
+        "type":href !== null ? null : type,
+        "href":href || null,
+        ...ariaAttrs}
+
+    return href ? <a {...props} > 
+        {iconLeft ? <Icon style={iconStyle} icon={iconLeft} /> : null}
+        {text}
+        {iconRight ? <Icon style={iconStyle} icon={iconRight} /> : null}
+    </a>
+    :
+    <button {...props} >
+        {iconLeft ? <Icon style={iconStyle} icon={iconLeft} /> : null}
+        {text}
+        {iconRight ? <Icon style={iconStyle} icon={iconRight} /> : null}
     </button>;
 }
