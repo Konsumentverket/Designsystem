@@ -52,6 +52,7 @@ export const searchFieldInputStyle = css`
 `;
 
 export const searchFieldButtonStyle = css`
+    white-space: nowrap;
     width:auto;
     display:flex;
     border-radius: 0 .8rem .8rem 0;
