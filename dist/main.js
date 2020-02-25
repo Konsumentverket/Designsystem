@@ -364,7 +364,7 @@ function _templateObject3$1() {
 }
 
 function _templateObject2$1() {
-  var data = _taggedTemplateLiteral(["\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem 0;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:auto;\n        text-align:left;\n        padding:1.6rem 2.4rem;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:auto;\n        text-align:left;\n        padding:1.6rem 2.4rem;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
 
   _templateObject2$1 = function _templateObject2() {
     return data;
@@ -1071,7 +1071,7 @@ function _templateObject4$2() {
 }
 
 function _templateObject3$2() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.8rem;\n    line-height:3.2rem;\n    display:flex;\n    flex-grow:1;\n    padding: 1.2rem 3.2rem 1.2rem 1.6rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem 1.6rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 3.2rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject3$2 = function _templateObject3() {
     return data;
@@ -1101,7 +1101,7 @@ function _templateObject$1() {
 }
 var disabled$1 = core.css(_templateObject$1(), colors.theme3.xLight, colors.theme3.midLight, colors.theme3.midLight);
 var searchWrapperStyle = core.css(_templateObject2$2(), colors.common.white);
-var searchFieldInputStyle = core.css(_templateObject3$2(), colors.common.white, colors.theme3.mid, colors.theme1.xDark, colors.theme1.mid, colors.theme1.xDark, colors.theme1.dark, disabled$1);
+var searchFieldInputStyle = core.css(_templateObject3$2(), colors.common.white, colors.theme3.mid, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme1.dark, disabled$1);
 var searchFieldButtonStyle = core.css(_templateObject4$2());
 var invertedBackgroundStyle$1 = core.css(_templateObject5$2());
 

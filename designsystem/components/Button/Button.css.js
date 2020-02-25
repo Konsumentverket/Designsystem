@@ -17,7 +17,7 @@ export const buttonStyle = css`
     font-size:1.6rem;
     line-height:2.4rem;
     font-weight:500;
-    padding: .8rem 0;
+    padding: .8rem;
     color: ${colors.common.white};
     border-radius:.8rem;
     width:100%;
