@@ -15,6 +15,21 @@ function _typeof(obj) {
   return _typeof(obj);
 }
 
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
 function _extends() {
   _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -31,6 +46,40 @@ function _extends() {
   };
 
   return _extends.apply(this, arguments);
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(source, true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(source).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
 }
 
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -166,12 +215,19 @@ var defaultTheme = {
 };
 var eccTheme = {
   theme1: {
-    "xDark": "green",
-    "midDark": "red",
-    "mid": "red"
+    "xDark": "#4663a9",
+    "midDark": "#4663a9",
+    "mid": "#4663a9",
+    "midLight": "#e4e8f2"
+  },
+  theme2: {
+    "light": "#f4f8e9"
   }
-};
-var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme;
+}; // const colors = process.env.THEME === 'ecc'
+//     ? Object.assign({}, defaultTheme, eccTheme)
+//     : defaultTheme
+
+var colors = Object.assign(defaultTheme, eccTheme);
 
 var spacing = {
   'spacing-xs': '0.25rem',
@@ -322,7 +378,7 @@ function _templateObject3$1() {
 }
 
 function _templateObject2$1() {
-  var data = _taggedTemplateLiteral(["\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem 0;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:auto;\n        text-align:left;\n        padding:1.6rem 2.4rem;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n    display:inline-block;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:auto;\n        text-align:left;\n        padding:1.6rem 2.4rem;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
 
   _templateObject2$1 = function _templateObject2() {
     return data;
@@ -974,13 +1030,15 @@ var Button = function Button(_ref) {
       style = _ref.style,
       reference = _ref.reference,
       onClick = _ref.onClick,
-      other = _objectWithoutProperties(_ref, ["text", "secondaryButtonStyle", "invertedBackgroundColor", "className", "id", "type", "selected", "disabled", "iconLeft", "iconRight", "style", "reference", "onClick"]);
+      href = _ref.href,
+      other = _objectWithoutProperties(_ref, ["text", "secondaryButtonStyle", "invertedBackgroundColor", "className", "id", "type", "selected", "disabled", "iconLeft", "iconRight", "style", "reference", "onClick", "href"]);
 
   var styles = [buttonStyle];
   var cssClass = [className];
   secondaryButtonStyle && styles.push(secondaryStyle);
   invertedBackgroundColor && styles.push(invertedBackgroundStyle);
   selected && cssClass.push("selectedButtonStyle");
+  href && cssClass.push("noStyle");
   invertedBackgroundColor && secondaryButtonStyle && styles.push(invertedSecondaryBackgroundStyle);
   iconLeft && styles.push(buttonIconLeft);
   iconRight && styles.push(buttonIconRight);
@@ -991,15 +1049,25 @@ var Button = function Button(_ref) {
     return ariaAttrs[x] = other[x];
   });
   style && styles.push(style);
-  return jsx("button", _extends({
-    id: id,
-    css: styles,
-    className: cssClass.join(" "),
-    disabled: disabled,
-    onClick: onClick,
-    ref: reference,
-    type: type
-  }, ariaAttrs), iconLeft ? jsx(Icon, {
+
+  var props = _objectSpread2({
+    "id": id,
+    "css": styles,
+    "className": cssClass.join(" "),
+    "disabled": disabled,
+    "onClick": onClick,
+    "ref": reference,
+    "type": href !== null ? null : type,
+    "href": href || null
+  }, ariaAttrs);
+
+  return href ? jsx("a", props, iconLeft ? jsx(Icon, {
+    style: iconStyle,
+    icon: iconLeft
+  }) : null, text, iconRight ? jsx(Icon, {
+    style: iconStyle,
+    icon: iconRight
+  }) : null) : jsx("button", props, iconLeft ? jsx(Icon, {
     style: iconStyle,
     icon: iconLeft
   }) : null, text, iconRight ? jsx(Icon, {
@@ -1029,7 +1097,7 @@ function _templateObject4$2() {
 }
 
 function _templateObject3$2() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.8rem;\n    line-height:3.2rem;\n    display:flex;\n    flex-grow:1;\n    padding: 1.2rem 3.2rem 1.2rem 1.6rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem 1.6rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 3.2rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject3$2 = function _templateObject3() {
     return data;
@@ -1059,7 +1127,7 @@ function _templateObject$1() {
 }
 var disabled$1 = css$1(_templateObject$1(), colors.theme3.xLight, colors.theme3.midLight, colors.theme3.midLight);
 var searchWrapperStyle = css$1(_templateObject2$2(), colors.common.white);
-var searchFieldInputStyle = css$1(_templateObject3$2(), colors.common.white, colors.theme3.mid, colors.theme1.xDark, colors.theme1.mid, colors.theme1.xDark, colors.theme1.dark, disabled$1);
+var searchFieldInputStyle = css$1(_templateObject3$2(), colors.common.white, colors.theme3.mid, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme1.dark, disabled$1);
 var searchFieldButtonStyle = css$1(_templateObject4$2());
 var invertedBackgroundStyle$1 = css$1(_templateObject5$2());
 
@@ -3840,7 +3908,7 @@ var FormRadiobutton = function FormRadiobutton(_ref) {
 };
 
 function _templateObject$h() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  color: ", ";\n  font-size: 1.4rem;\n  line-height: 2.4rem;\n  svg {\n    align-content: center;\n    margin-right: 0.4rem;\n    fill: ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  color: ", ";\n  font-size: 1.4rem;\n  svg {\n    align-content: center;\n    margin-right: 0.4rem;\n    fill: ", ";\n  }\n  p {\n    line-height: 2.4rem;\n  }\n"]);
 
   _templateObject$h = function _templateObject() {
     return data;
