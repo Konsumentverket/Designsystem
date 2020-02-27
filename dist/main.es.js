@@ -226,6 +226,7 @@ var eccTheme = {
 }; // const colors = process.env.THEME === 'ecc'
 //     ? Object.assign({}, defaultTheme, eccTheme)
 //     : defaultTheme
+// For development on ECC (Bug with hotreload)
 
 var colors = Object.assign(defaultTheme, eccTheme);
 
