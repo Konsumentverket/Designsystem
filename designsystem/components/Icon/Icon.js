@@ -55,7 +55,7 @@ const Icon = ({ icon, className, style, title, ...otherAttr }) => {
         return null
     }
 
-    return <Element title={title} className={className} style={style} role="img" aria-label={title || ""} alt="" {...otherAttr} />
+    return <Element focusable="false" title={title} className={className} style={style} role="img" aria-label={title || ""} alt="" {...otherAttr} />
 }
 
 export { Icon, iconDefinitions };

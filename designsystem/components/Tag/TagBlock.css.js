@@ -2,13 +2,13 @@ import { css } from '@emotion/core';
 import { colors } from '../Colors/Colors';
 
 export const tagBlockItem = css`
-    background-color:${colors.common.isabelline};    
+    background-color:${colors.theme3.xLight};    
     display:flex;
     flex-direction:column;
     height:100%;
     min-height:16rem;
     border-radius:.8rem;
-    overflow:hidden;
+    
 
 `;
 
@@ -26,6 +26,8 @@ export const tagLink = css`
     display: flex;
     justify-content:center;
     flex-direction:column;
+    border-top-left-radius:.8rem;
+        border-top-right-radius:.8rem;
 
     &:hover {
         background-color: ${colors.theme1.midDark};

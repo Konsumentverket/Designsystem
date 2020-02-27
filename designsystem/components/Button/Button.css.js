@@ -3,35 +3,38 @@ import { colors } from '../Colors/Colors';
 import { medium } from '../GlobalStyles/globalStyles';
 
 const disabled = css` 
-        color:${colors.common.grayDark};
+        color:${colors.theme3.dark};
         background-color: ${colors.theme3.midLight};
         text-decoration:none;
         box-shadow:none;
         cursor:inherit;
         svg {
-            fill:${colors.common.grayDark};
+            fill:${colors.theme3.dark};
         }
 `;
 
 export const buttonStyle = css`
-    font-size:2.1rem;
-      line-height:2.4rem;
-      font-weight:500;
-      padding:1.6rem 2.4rem;
-      color: ${colors.common.white};
-      border-radius:.8rem;
-      width:100%;
-      cursor:pointer;
-      background-color:${colors.theme1.mid};
+    display:inline-block;
+    font-size:1.6rem;
+    line-height:2.4rem;
+    font-weight:500;
+    padding: .8rem;
+    color: ${colors.common.white};
+    border-radius:.8rem;
+    width:100%;
+    cursor:pointer;
+    background-color:${colors.theme1.mid};
 
-      svg {
+    svg {
         fill: ${colors.common.white};
-      }
+    }
 
-      ${medium}{
-          width:auto;
-          text-align:left;
-      }
+    ${medium}{
+        font-size:2.1rem;
+        width:auto;
+        text-align:left;
+        padding:1.6rem 2.4rem;
+    }
 
       &:hover, &.selectedButtonStyle {
         background-color:${colors.theme1.midDark};
