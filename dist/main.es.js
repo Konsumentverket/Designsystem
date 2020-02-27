@@ -2146,10 +2146,12 @@ var IconCard = React.forwardRef(function (_ref, ref) {
   var icon = _ref.icon,
       text = _ref.text,
       url = _ref.url,
-      style = _ref.style;
+      style = _ref.style,
+      onClick = _ref.onClick;
   return jsx("a", {
     ref: ref,
     href: url,
+    onClick: onClick,
     css: [iconCardStyle, style],
     className: "noStyle"
   }, icon && jsx(EditorIcon, {
@@ -2251,7 +2253,7 @@ var Tag = function Tag(_ref) {
 };
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n        position: absolute;\n    top: 2rem;\n    right: .5rem;\n    vertical-align: middle;\n    transform: rotate(270deg);\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: #fff;\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    top: 2rem;\n    right: .5rem;\n    vertical-align: middle;\n    transform: rotate(270deg);\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: #fff;\n\n    [dir='rtl'] &{\n        left: .5rem;\n        right: auto;\n        transform: rotate(90deg);\n    }\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -2331,7 +2333,7 @@ function _templateObject5$4() {
 }
 
 function _templateObject4$4() {
-  var data = _taggedTemplateLiteral(["\n        width:100%;\n        height:100%;\n        padding: .8rem 4rem .8rem 1.6rem;\n        display: flex;\n        flex-direction:column;\n        box-sizing:border-box;\n        justify-content:center;\n        margin:0;\n        color: #fff;\n        line-height: 2.4rem;\n        font-size: 2.1rem;\n        font-weight: 500;\n        word-wrap:break-word;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n        width:100%;\n        height:100%;\n        padding: .8rem 4rem .8rem 1.6rem;\n        display: flex;\n        flex-direction:column;\n        box-sizing:border-box;\n        justify-content:center;\n        margin:0;\n        color: #fff;\n        line-height: 2.4rem;\n        font-size: 2.1rem;\n        font-weight: 500;\n        word-wrap:break-word;\n\n        [dir='rtl'] &{\n            padding: .8rem 1.6rem .8rem 4rem;\n        }\n\n"]);
 
   _templateObject4$4 = function _templateObject4() {
     return data;
@@ -2384,7 +2386,7 @@ var arrowStyle$1 = css$1(_templateObject12());
 
 /** @jsx jsx */
 
-var GetTags = function GetTags(tags) {
+var GetTags = function GetTags(tags, onClick) {
   return jsx("ul", {
     css: tagsList
   }, tags.slice(0, 3).map(function (child, idx) {
@@ -2393,6 +2395,7 @@ var GetTags = function GetTags(tags) {
       css: tagsListItem
     }, jsx(Tag, {
       id: idx,
+      onClick: onClick,
       url: child.url,
       text: child.titleInNavigation && child.titleInNavigation || child.title && child.title || child.headline && child.headline,
       style: tagItem
@@ -2410,7 +2413,8 @@ var TagBlock = React.forwardRef(function (_ref, ref) {
       icon = _ref.icon,
       tags = _ref.tags,
       alternativeTagText = _ref.alternativeTagText,
-      style = _ref.style;
+      style = _ref.style,
+      onClick = _ref.onClick;
   var headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7'];
   var SelectedHeading = headings[headingLevel - 1] || 'h2';
   return jsx("div", {
@@ -2419,7 +2423,8 @@ var TagBlock = React.forwardRef(function (_ref, ref) {
     ref: ref,
     href: headingUrl,
     css: tagLink,
-    className: "noStyle"
+    className: "noStyle",
+    onClick: onClick
   }, icon && jsx(EditorIcon, {
     "aria-hidden": "true",
     icon: icon,
@@ -2433,7 +2438,7 @@ var TagBlock = React.forwardRef(function (_ref, ref) {
     style: arrowStyle$1
   })), jsx("div", {
     css: tagsArea
-  }, tags.length > 0 ? GetTags(tags) : jsx("p", {
+  }, tags && tags.length > 0 ? GetTags(tags, onClick) : jsx("p", {
     css: tagItemText
   }, alternativeTagText)));
 });
@@ -2667,7 +2672,7 @@ function _templateObject3$7() {
 }
 
 function _templateObject2$7() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: -2rem;\n  left: 50%;\n  width:4rem;\n  height:4rem;\n  transform: translate(-50%, 0);\n  ", " {\n    left: 1.2rem;\n    top:-.8rem; \n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: -2rem;\n  left: 50%;\n  width:4rem;\n  height:4rem;\n  transform: translate(-50%, 0);\n  ", " {\n    left: 1.2rem;\n    top:-.8rem; \n  }\n\n  [dir=\"rtl\"] &{\n    ", " {\n      left: auto;\n      right: -3.2rem; \n    }\n  }\n\n"]);
 
   _templateObject2$7 = function _templateObject2() {
     return data;
@@ -2677,7 +2682,7 @@ function _templateObject2$7() {
 }
 
 function _templateObject$a() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n  background-color: ", ";\n  border-radius: 0.7rem;\n  padding: 4rem 1.6rem 2.4rem 1.6rem;\n  margin-top: 2rem;\n  ", " {\n    padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    margin-top: .8rem;\n    margin-left: .8rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  background-color: ", ";\n  border-radius: 0.7rem;\n  padding: 4rem 1.6rem 2.4rem 1.6rem;\n  margin-top: 2rem;\n  ", " {\n    padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    margin-top: .8rem;\n    margin-left: .8rem;\n  }\n  [dir=\"rtl\"] &{\n    ", " {\n      margin-left: .0rem;\n      margin-right: .8rem;\n    }\n  }\n"]);
 
   _templateObject$a = function _templateObject() {
     return data;
@@ -2685,8 +2690,8 @@ function _templateObject$a() {
 
   return data;
 }
-var wrapper = css$1(_templateObject$a(), colors.theme1.light, medium);
-var exclamationMarkImage = css$1(_templateObject2$7(), medium);
+var wrapper = css$1(_templateObject$a(), colors.theme1.light, medium, medium);
+var exclamationMarkImage = css$1(_templateObject2$7(), medium, medium);
 var heading = css$1(_templateObject3$7(), medium);
 
 /** @jsx jsx */
@@ -3389,7 +3394,8 @@ var FocusPuff = function FocusPuff(_ref) {
       image = _ref.image,
       imageAlt = _ref.imageAlt,
       icon = _ref.icon,
-      imageComponent = _ref.imageComponent;
+      imageComponent = _ref.imageComponent,
+      onClick = _ref.onClick;
   var imageArea = imageComponent;
 
   if (imageArea == null) {
@@ -3428,6 +3434,7 @@ var FocusPuff = function FocusPuff(_ref) {
 
   return url !== null ? jsx("a", {
     css: linkWrapper,
+    onClick: onClick,
     href: url,
     className: "noStyle"
   }, puffMarkup()) : puffMarkup();
@@ -3541,7 +3548,8 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
       image = _ref.image,
       imageAlt = _ref.imageAlt,
       icon = _ref.icon,
-      imageComponent = _ref.imageComponent;
+      imageComponent = _ref.imageComponent,
+      onClick = _ref.onClick;
   var imageArea = imageComponent;
 
   if (imageArea == null) {
@@ -3579,6 +3587,7 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
   return url !== null ? jsx("a", {
     css: linkWrapper$1,
     href: url,
+    onClick: onClick,
     className: "noStyle"
   }, campaignPuffMarkup()) : campaignPuffMarkup();
 };

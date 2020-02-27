@@ -8,7 +8,8 @@ import { Icon } from '../Icon/Icon'
 export const CampaignFocusPuff = ({ headline,text,url,isExternalLink,
   image, imageAlt,
   icon,
-  imageComponent
+  imageComponent,
+  onClick
 }) => {
 
   let imageArea = imageComponent;
@@ -37,7 +38,7 @@ export const CampaignFocusPuff = ({ headline,text,url,isExternalLink,
   </div>
   }
 
-  return url !== null ? <a css={linkWrapper} href={url} className="noStyle">{campaignPuffMarkup(CampaignFocusPuff)}</a> : campaignPuffMarkup(CampaignFocusPuff)
+  return url !== null ? <a css={linkWrapper} href={url} onClick={onClick} className="noStyle">{campaignPuffMarkup(CampaignFocusPuff)}</a> : campaignPuffMarkup(CampaignFocusPuff)
   
   
 }

@@ -13,6 +13,12 @@ export const wrapper = css`
     margin-top: .8rem;
     margin-left: .8rem;
   }
+  [dir="rtl"] &{
+    ${medium} {
+      margin-left: .0rem;
+      margin-right: .8rem;
+    }
+  }
 `
 
 export const exclamationMarkImage = css`
@@ -26,6 +32,14 @@ export const exclamationMarkImage = css`
     left: 1.2rem;
     top:-.8rem; 
   }
+
+  [dir="rtl"] &{
+    ${medium} {
+      left: auto;
+      right: -3.2rem; 
+    }
+  }
+
 `
 
 export const heading = css`

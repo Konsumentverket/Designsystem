@@ -9,7 +9,8 @@ export const FocusPuff = ({ headline,text,url,
   isExternalLink,
   image, imageAlt,
   icon,
-  imageComponent
+  imageComponent,
+  onClick
 }) => {
 
   let imageArea = imageComponent;
@@ -38,7 +39,7 @@ export const FocusPuff = ({ headline,text,url,
   </div>
   }
 
-  return url !== null ? <a css={linkWrapper} href={url} className="noStyle">{puffMarkup(FocusPuff)}</a> : puffMarkup(FocusPuff)
+  return url !== null ? <a css={linkWrapper} onClick={onClick} href={url} className="noStyle">{puffMarkup(FocusPuff)}</a> : puffMarkup(FocusPuff)
   
   
 }
