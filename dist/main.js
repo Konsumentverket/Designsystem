@@ -230,12 +230,8 @@ var eccTheme = {
   theme2: {
     "light": "#f4f8e9"
   }
-}; // const colors = process.env.THEME === 'ecc'
-//     ? Object.assign({}, defaultTheme, eccTheme)
-//     : defaultTheme
-// For development on ECC (Bug with hotreload)
-
-var colors = Object.assign(defaultTheme, eccTheme);
+};
+var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme; // For development on ECC (Bug with hotreload)
 
 var spacing = {
   'spacing-xs': '0.25rem',
@@ -2125,8 +2121,18 @@ var Accordion = function Accordion(_ref) {
   })));
 };
 
-function _templateObject5$3() {
+function _templateObject6$2() {
   var data = _taggedTemplateLiteral(["\n    padding-left: 5.6rem;\n"]);
+
+  _templateObject6$2 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$3() {
+  var data = _taggedTemplateLiteral(["\n    padding: .8rem 4rem .8rem 1.4rem;\n"]);
 
   _templateObject5$3 = function _templateObject5() {
     return data;
@@ -2136,7 +2142,7 @@ function _templateObject5$3() {
 }
 
 function _templateObject4$3() {
-  var data = _taggedTemplateLiteral(["\n        width:100%;\n        height:100%;\n        min-height:7.2rem;\n        padding: .8rem 4rem .8rem 6.4rem;\n        display: flex;\n        flex-direction:column;\n        box-sizing:border-box;\n        justify-content:center;\n        margin:0;\n        color: ", ";\n        line-height: 2.4rem;\n        font-size: 2.1rem;\n        font-weight: 500;\n        word-wrap:break-word;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width:100%;\n    height:100%;\n    min-height:7.2rem;\n    padding: .8rem 4rem .8rem 6.4rem;\n    display: flex;\n    flex-direction:column;\n    box-sizing:border-box;\n    justify-content:center;\n    margin:0;\n    color: ", ";\n    line-height: 2.4rem;\n    font-size: 2.1rem;\n    font-weight: 500;\n    word-wrap:break-word;\n"]);
 
   _templateObject4$3 = function _templateObject4() {
     return data;
@@ -2178,7 +2184,8 @@ var arrowStyle = core.css(_templateObject$3(), colors.theme1.mid);
 var iconStyle$1 = core.css(_templateObject2$3(), colors.theme1.mid);
 var iconCardStyle = core.css(_templateObject3$3(), colors.common.white, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark);
 var iconText = core.css(_templateObject4$3(), colors.theme1.mid);
-var topAreaIcon = core.css(_templateObject5$3());
+var noIcon = core.css(_templateObject5$3());
+var topAreaIcon = core.css(_templateObject6$2());
 
 function _templateObject7$2() {
   var data = _taggedTemplateLiteral(["\n\n      font-size:1.4rem;\n      line-height:2.4rem;\n\n"]);
@@ -2190,10 +2197,10 @@ function _templateObject7$2() {
   return data;
 }
 
-function _templateObject6$2() {
+function _templateObject6$3() {
   var data = _taggedTemplateLiteral(["\n\n      font-size:1.6rem;\n      line-height:2.4rem;\n\n"]);
 
-  _templateObject6$2 = function _templateObject6() {
+  _templateObject6$3 = function _templateObject6() {
     return data;
   };
 
@@ -2254,7 +2261,7 @@ var h1Style = core.css(_templateObject2$4(), medium);
 var h2Style = core.css(_templateObject3$4(), medium);
 var h3Style = core.css(_templateObject4$4(), medium);
 var h4Style = core.css(_templateObject5$4());
-var h5Style = core.css(_templateObject6$2());
+var h5Style = core.css(_templateObject6$3());
 var h6Style = core.css(_templateObject7$2());
 
 var SubHeading = function SubHeading(_ref) {
@@ -2281,6 +2288,7 @@ var IconCard = React__default.forwardRef(function (_ref, ref) {
       text = _ref.text,
       url = _ref.url,
       style = _ref.style;
+  var haveIcon = !icon ? noIcon : null;
   return core.jsx("a", {
     ref: ref,
     href: url,
@@ -2291,7 +2299,7 @@ var IconCard = React__default.forwardRef(function (_ref, ref) {
     icon: icon,
     style: iconStyle$1
   }, "Ikon"), core.jsx("span", {
-    css: iconText
+    css: [iconText, haveIcon]
   }, text), core.jsx(Icon, {
     "aria-hidden": "true",
     icon: "Arrow",
@@ -2444,10 +2452,10 @@ function _templateObject7$3() {
   return data;
 }
 
-function _templateObject6$3() {
+function _templateObject6$4() {
   var data = _taggedTemplateLiteral(["\n     position: relative;\n    min-height:6.9rem;\n    box-sizing:border-box;\n    overflow: auto;\n    padding: .8rem 1.6rem 0 1.6rem;\n"]);
 
-  _templateObject6$3 = function _templateObject6() {
+  _templateObject6$4 = function _templateObject6() {
     return data;
   };
 
@@ -2508,7 +2516,7 @@ var invertedTag = core.css(_templateObject2$5());
 var tagLink = core.css(_templateObject3$5(), colors.theme1.mid, colors.theme1.midDark, colors.theme1.xDark, colors.theme1.xDark);
 var tagHeading = core.css(_templateObject4$5());
 var tagIconHeading = core.css(_templateObject5$5());
-var tagsArea = core.css(_templateObject6$3());
+var tagsArea = core.css(_templateObject6$4());
 var tagsList = core.css(_templateObject7$3());
 var tagsListItem = core.css(_templateObject8$1());
 var tagItem = core.css(_templateObject9());
@@ -2582,10 +2590,10 @@ function _templateObject7$4() {
   return data;
 }
 
-function _templateObject6$4() {
+function _templateObject6$5() {
   var data = _taggedTemplateLiteral(["\n    padding: 0 0 0 .8rem;\n    width:2.4rem;\n    height:2.4rem;\n    vertical-align: top;\n"]);
 
-  _templateObject6$4 = function _templateObject6() {
+  _templateObject6$5 = function _templateObject6() {
     return data;
   };
 
@@ -2646,7 +2654,7 @@ var expandButtonStyle = core.css(_templateObject2$6(), colors.common.white, colo
 var secondaryStyle$1 = core.css(_templateObject3$6(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$2);
 var invertedBackgroundStyle$2 = core.css(_templateObject4$6(), colors.common.white, colors.theme1.dark);
 var invertedSecondaryBackgroundStyle$1 = core.css(_templateObject5$6(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$2);
-var iconStyle$3 = core.css(_templateObject6$4());
+var iconStyle$3 = core.css(_templateObject6$5());
 var expandedIconStyle = core.css(_templateObject7$4());
 
 /** @jsx jsx */
@@ -2812,10 +2820,10 @@ function _templateObject7$5() {
   return data;
 }
 
-function _templateObject6$5() {
+function _templateObject6$6() {
   var data = _taggedTemplateLiteral(["\n    ", "\n"]);
 
-  _templateObject6$5 = function _templateObject6() {
+  _templateObject6$6 = function _templateObject6() {
     return data;
   };
 
@@ -2905,7 +2913,7 @@ var LinkColors$1 = core.css(_templateObject2$9(), colors.theme1.mid, colors.them
 var LinkColorsInverted$1 = core.css(_templateObject3$9(), colors.theme1.mid, colors.theme1.xDark, colors.states.visited);
 var LinkWrapperColorStyle$1 = core.css(_templateObject4$7(), LinkColors$1);
 var LinkWrapperInvertedColorStyle$1 = core.css(_templateObject5$7(), LinkColorsInverted$1);
-var ElementLinkColorStyle$1 = core.css(_templateObject6$5(), LinkColors$1);
+var ElementLinkColorStyle$1 = core.css(_templateObject6$6(), LinkColors$1);
 var ElementLinkInvertedColorStyle$1 = core.css(_templateObject7$5(), LinkColorsInverted$1);
 
 var Heading = function Heading(_ref) {
@@ -3459,10 +3467,10 @@ function _templateObject7$6() {
   return data;
 }
 
-function _templateObject6$6() {
+function _templateObject6$7() {
   var data = _taggedTemplateLiteral(["\n  margin-top:-.8rem;\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:auto;\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n"]);
 
-  _templateObject6$6 = function _templateObject6() {
+  _templateObject6$7 = function _templateObject6() {
     return data;
   };
 
@@ -3523,7 +3531,7 @@ var linkWrapper = core.css(_templateObject2$b(), colors.theme2.midDark, colors.t
 var focusHeadline = core.css(_templateObject3$b());
 var focusText = core.css(_templateObject4$8());
 var textArea = core.css(_templateObject5$8(), medium);
-var pictureWrapper = core.css(_templateObject6$6());
+var pictureWrapper = core.css(_templateObject6$7());
 var iconBackground = core.css(_templateObject7$6(), colors.theme2.light);
 var externalIcon = core.css(_templateObject8$2());
 var puffIcon = core.css(_templateObject9$1());
@@ -3611,10 +3619,10 @@ function _templateObject7$7() {
   return data;
 }
 
-function _templateObject6$7() {
+function _templateObject6$8() {
   var data = _taggedTemplateLiteral(["\n  margin-top:-.8rem;\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:auto;\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n  ", "{\n    max-width:49.11%;\n    margin-top:0;\n    margin-left:-.8rem;\n    img {\n      border-top-right-radius: 0;\n      border-bottom-left-radius:.8rem;\n    }\n  }\n\n  ", "{\n    max-width:30.4rem;\n  }\n"]);
 
-  _templateObject6$7 = function _templateObject6() {
+  _templateObject6$8 = function _templateObject6() {
     return data;
   };
 
@@ -3675,7 +3683,7 @@ var linkWrapper$1 = core.css(_templateObject2$c(), colors.theme1.mid, colors.the
 var focusHeadline$1 = core.css(_templateObject3$c());
 var focusText$1 = core.css(_templateObject4$9(), colors.theme3.dark);
 var textArea$1 = core.css(_templateObject5$9(), medium, large);
-var pictureWrapper$1 = core.css(_templateObject6$7(), medium, large);
+var pictureWrapper$1 = core.css(_templateObject6$8(), medium, large);
 var iconBackground$1 = core.css(_templateObject7$7(), colors.theme2.light, medium);
 var externalIcon$1 = core.css(_templateObject8$3(), colors.theme1.mid);
 var puffIcon$1 = core.css(_templateObject9$2(), colors.theme2.mid);
