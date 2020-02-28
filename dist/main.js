@@ -739,30 +739,7 @@ var Plane = (function (_ref) {
   }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
     d: "M19.9999816,8.00003683 L15.2378763,8.00003683 L10.8586895,0.335834879 C10.739814,0.12812559 10.5188546,0 10.2795202,0 L7.55034094,0 C7.10742224,0 6.78783743,0.423751951 6.90950466,0.849587244 L8.95243073,8.00003683 L4.66657767,8.00003683 L2.86656938,5.60002578 C2.74073547,5.43210834 2.54281789,5.33335789 2.33323359,5.33335789 L0.666975921,5.33335789 C0.233223924,5.33335789 -0.0851108748,5.74085976 0.0203062771,6.16169503 L1.33322899,10.6667158 L0.0203062771,15.1717365 C-0.0851108748,15.5925718 0.233223924,16.0000737 0.666975921,16.0000737 L2.33323359,16.0000737 C2.54323456,16.0000737 2.74073547,15.9013232 2.86656938,15.7334058 L4.66657767,13.3333947 L8.95243073,13.3333947 L6.90950466,20.4834276 C6.78783743,20.9092629 7.10742224,21.3334315 7.55034094,21.3334315 L10.2795202,21.3334315 C10.5186879,21.3334315 10.7395223,21.2050976 10.8582728,20.9975967 L15.2378763,13.3333947 L19.9999816,13.3333947 C21.472905,13.3333947 24,12.1396392 24,10.6667158 C24,9.19379232 21.472905,8.00003683 19.9999816,8.00003683"
   }));
-}); // <?xml version="1.0" encoding="UTF-8"?>
-// <svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-//     <!-- Generator: sketchtool 60 (101010) - https://sketch.com -->
-//     <title>5B7D6A80-E784-4D54-90F1-75EF382B65FA</title>
-//     <desc>Created with sketchtool.</desc>
-//     <defs>
-//         <path d="M19.9999816,8.00003683 L15.2378763,8.00003683 L10.8586895,0.335834879 C10.739814,0.12812559 10.5188546,0 10.2795202,0 L7.55034094,0 C7.10742224,0 6.78783743,0.423751951 6.90950466,0.849587244 L8.95243073,8.00003683 L4.66657767,8.00003683 L2.86656938,5.60002578 C2.74073547,5.43210834 2.54281789,5.33335789 2.33323359,5.33335789 L0.666975921,5.33335789 C0.233223924,5.33335789 -0.0851108748,5.74085976 0.0203062771,6.16169503 L1.33322899,10.6667158 L0.0203062771,15.1717365 C-0.0851108748,15.5925718 0.233223924,16.0000737 0.666975921,16.0000737 L2.33323359,16.0000737 C2.54323456,16.0000737 2.74073547,15.9013232 2.86656938,15.7334058 L4.66657767,13.3333947 L8.95243073,13.3333947 L6.90950466,20.4834276 C6.78783743,20.9092629 7.10742224,21.3334315 7.55034094,21.3334315 L10.2795202,21.3334315 C10.5186879,21.3334315 10.7395223,21.2050976 10.8582728,20.9975967 L15.2378763,13.3333947 L19.9999816,13.3333947 C21.472905,13.3333947 24,12.1396392 24,10.6667158 C24,9.19379232 21.472905,8.00003683 19.9999816,8.00003683" id="path-1"></path>
-//     </defs>
-//     <g id="Asset-Artboard-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-//         <g id="icon-/-travel-/-plane-icon-/-travel-/-plane-Font-Awesome" transform="translate(0.007752, 0.000000)">
-//             <g id="icon-/-travel-/-plane" transform="translate(0.000000, 1.000000)">
-//                 <mask id="mask-2" fill="white">
-//                     <use xlink:href="#path-1"></use>
-//                 </mask>
-//                 <use id="Fill-1" fill="#000000" xlink:href="#path-1"></use>
-//                 <g id="Color-/-brand-/-darkblue-Color-/-ui-/-white" mask="url(#mask-2)" fill="#FFFFFF">
-//                     <g transform="translate(0.000000, -1.000000)" id="Color-/-ui-/white">
-//                         <rect x="0" y="0" width="24" height="24"></rect>
-//                     </g>
-//                 </g>
-//             </g>
-//         </g>
-//     </g>
-// </svg>
+});
 
 var Filter = (function (_ref) {
   var className = _ref.className,
@@ -825,7 +802,7 @@ var List = (function (_ref) {
     stroke: "none",
     strokeWidth: "1",
     fill: "none",
-    "fill-rule": "evenodd"
+    fillRule: "evenodd"
   }, core.jsx("g", {
     id: "icon-/-lista"
   }, core.jsx("g", null, core.jsx("mask", {
@@ -1176,7 +1153,7 @@ var AppsAndGames = (function (_ref) {
     viewBox: "0 0 32 28"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-514.000000, -2018.000000)"
   }, core.jsx("path", {
@@ -1199,7 +1176,7 @@ var Auction = (function (_ref) {
     viewBox: "0 0 32 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-584.000000, -1463.000000)"
   }, core.jsx("path", {
@@ -1223,7 +1200,7 @@ var BeautyEngagement = (function (_ref) {
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     id: "Page-1",
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     id: "19-11-14-\xC4mnessida_steg1",
     transform: "translate(-1008.000000, -2009.000000)"
@@ -1247,7 +1224,7 @@ var BrokerServices = (function (_ref) {
     viewBox: "0 0 32 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-1066.000000, -1836.000000)"
   }, core.jsx("path", {
@@ -1270,7 +1247,7 @@ var Cars = (function (_ref) {
     viewBox: "0 0 32 24"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-256.000000, -536.000000)"
   }, core.jsx("g", {
@@ -1296,7 +1273,7 @@ var Clothes = (function (_ref) {
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     id: "Page-1",
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-904.000000, -422.000000)"
   }, core.jsx("g", {
@@ -1321,7 +1298,7 @@ var Complaint = (function (_ref) {
     viewBox: "0 0 32 28"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-912.000000, -1097.000000)"
   }, core.jsx("g", {
@@ -1346,7 +1323,7 @@ var ComputerTvGameConsole = (function (_ref) {
     viewBox: "0 0 32 26"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-880.000000, -1650.000000)"
   }, core.jsx("path", {
@@ -1369,7 +1346,7 @@ var ConcertAndEvent = (function (_ref) {
     viewBox: "0 0 32 22"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-1114.000000, -1833.000000)"
   }, core.jsx("path", {
@@ -1392,7 +1369,7 @@ var ConsumerRights = (function (_ref) {
     viewBox: "0 0 28 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-258.000000, -1831.000000)"
   }, core.jsx("g", {
@@ -1417,7 +1394,7 @@ var ContractWorkHouses = (function (_ref) {
     viewBox: "0 0 32 29"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-540.000000, -1643.000000)"
   }, core.jsx("g", {
@@ -1442,7 +1419,7 @@ var Craftsman = (function (_ref) {
     viewBox: "0 0 32 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-256.000000, -716.000000)"
   }, core.jsx("g", {
@@ -1467,7 +1444,7 @@ var DistanceContractLaw = (function (_ref) {
     viewBox: "0 0 32 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-584.000000, -1831.000000)"
   }, core.jsx("g", {
@@ -1492,7 +1469,7 @@ var EducationAndCourses = (function (_ref) {
     viewBox: "0 0 32 20"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-860.000000, -2156.000000)"
   }, core.jsx("g", {
@@ -1519,7 +1496,7 @@ var ElectricityHeatingContract = (function (_ref) {
     viewBox: "0 0 32 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-1134.000000, -1648.000000)"
   }, core.jsx("g", {
@@ -1544,7 +1521,7 @@ var FurnituresAndDecoration = (function (_ref) {
     viewBox: "0 0 28 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-586.000000, -716.000000)"
   }, core.jsx("g", {
@@ -1569,7 +1546,7 @@ var GymAndWorkoutService = (function (_ref) {
     viewBox: "0 0 32 23"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-905.000000, -2019.000000)"
   }, core.jsx("path", {
@@ -1592,7 +1569,7 @@ var Hairdresser = (function (_ref) {
     viewBox: "0 0 32 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-747.000000, -2158.000000)"
   }, core.jsx("g", {
@@ -1616,17 +1593,12 @@ var Insurance = (function (_ref) {
     height: "26px",
     viewBox: "0 0 32 26"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
-    stroke: "none",
-    "stroke-width": "1",
-    fill: "none",
-    "fill-rule": "evenodd"
+    fillRule: "evenodd"
   }, core.jsx("g", {
-    id: "19-11-14-\xC4mnessida_steg1",
     transform: "translate(-489.000000, -1647.000000)",
-    fill: "#000000"
+    fill: "inherit"
   }, core.jsx("path", {
-    d: "M520.2,1667.8 L508.077,1667.8 C508.04,1668.7905 507.3415,1669.4 506.44,1669.4 L503.4,1669.4 C502.4655,1669.4 501.75,1668.5265 501.7615,1667.8 L489.8,1667.8 C489.3582,1667.8 489,1668.15815 489,1668.6 L489,1669.4 C489.0052,1671.16515 490.43485,1672.5948 492.2,1672.6 L517.8,1672.6 C519.56515,1672.5948 520.9948,1671.16515 521,1669.4 L521,1668.6 C521,1668.15815 520.64185,1667.8 520.2,1667.8 L520.2,1667.8 Z M495.4,1663 L514.6,1663 L514.6,1650.2 L495.4,1650.2 L495.4,1663 Z M517.8,1649.4 C517.79615,1648.0761 516.7239,1647.00385 515.4,1647 L494.6,1647 C493.2761,1647.00385 492.20385,1648.0761 492.2,1649.4 L492.2,1666.2 L517.8,1666.2 L517.8,1649.4 Z M500.6,1658.2 L503.4,1658.2 L503.4,1661 C503.4,1661.2209 503.5791,1661.4 503.8,1661.4 L506.2,1661.4 C506.4209,1661.4 506.6,1661.2209 506.6,1661 L506.6,1658.2 L509.4,1658.2 C509.6209,1658.2 509.8,1658.0209 509.8,1657.8 L509.8,1655.4 C509.8,1655.1791 509.6209,1655 509.4,1655 L506.6,1655 L506.6,1652.2 C506.6,1651.9791 506.4209,1651.8 506.2,1651.8 L503.8,1651.8 C503.5791,1651.8 503.4,1651.9791 503.4,1652.2 L503.4,1655 L500.6,1655 C500.3791,1655 500.2,1655.1791 500.2,1655.4 L500.2,1657.8 C500.2,1658.0209 500.3791,1658.2 500.6,1658.2 L500.6,1658.2 Z",
-    id: "Fill-1"
+    d: "M520.2,1667.8 L508.077,1667.8 C508.04,1668.7905 507.3415,1669.4 506.44,1669.4 L503.4,1669.4 C502.4655,1669.4 501.75,1668.5265 501.7615,1667.8 L489.8,1667.8 C489.3582,1667.8 489,1668.15815 489,1668.6 L489,1669.4 C489.0052,1671.16515 490.43485,1672.5948 492.2,1672.6 L517.8,1672.6 C519.56515,1672.5948 520.9948,1671.16515 521,1669.4 L521,1668.6 C521,1668.15815 520.64185,1667.8 520.2,1667.8 L520.2,1667.8 Z M495.4,1663 L514.6,1663 L514.6,1650.2 L495.4,1650.2 L495.4,1663 Z M517.8,1649.4 C517.79615,1648.0761 516.7239,1647.00385 515.4,1647 L494.6,1647 C493.2761,1647.00385 492.20385,1648.0761 492.2,1649.4 L492.2,1666.2 L517.8,1666.2 L517.8,1649.4 Z M500.6,1658.2 L503.4,1658.2 L503.4,1661 C503.4,1661.2209 503.5791,1661.4 503.8,1661.4 L506.2,1661.4 C506.4209,1661.4 506.6,1661.2209 506.6,1661 L506.6,1658.2 L509.4,1658.2 C509.6209,1658.2 509.8,1658.0209 509.8,1657.8 L509.8,1655.4 C509.8,1655.1791 509.6209,1655 509.4,1655 L506.6,1655 L506.6,1652.2 C506.6,1651.9791 506.4209,1651.8 506.2,1651.8 L503.8,1651.8 C503.5791,1651.8 503.4,1651.9791 503.4,1652.2 L503.4,1655 L500.6,1655 C500.3791,1655 500.2,1655.1791 500.2,1655.4 L500.2,1657.8 C500.2,1658.0209 500.3791,1658.2 500.6,1658.2 L500.6,1658.2 Z"
   }))));
 });
 
@@ -1644,7 +1616,7 @@ var InternetFiberBroadband = (function (_ref) {
     viewBox: "0 0 32 23"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-944.000000, -1652.000000)"
   }, core.jsx("g", {
@@ -1669,7 +1641,7 @@ var LoanSaveInvest = (function (_ref) {
     viewBox: "0 0 32 29"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-1060.000000, -2013.000000)"
   }, core.jsx("path", {
@@ -1692,7 +1664,7 @@ var LotteryAndGames = (function (_ref) {
     viewBox: "0 0 32 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-1002.000000, -1647.000000)"
   }, core.jsx("g", {
@@ -1717,7 +1689,7 @@ var MobilePhone = (function (_ref) {
     viewBox: "0 0 20 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-814.000000, -2157.000000)"
   }, core.jsx("path", {
@@ -1740,7 +1712,7 @@ var MoveAndCleaningService = (function (_ref) {
     viewBox: "0 0 32 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-1086.000000, -1645.000000)"
   }, core.jsx("g", {
@@ -1765,7 +1737,7 @@ var NotDefinedPicture = (function (_ref) {
     viewBox: "0 0 32 24"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-961.000000, -2015.000000)"
   }, core.jsx("path", {
@@ -1788,7 +1760,7 @@ var Pets = (function (_ref) {
     viewBox: "0 0 32 28"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-697.000000, -2158.000000)"
   }, core.jsx("g", {
@@ -1813,7 +1785,7 @@ var PurchaseFromPrivate = (function (_ref) {
     viewBox: "0 0 32 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-912.000000, -1463.000000)"
   }, core.jsx("g", {
@@ -1838,7 +1810,7 @@ var Receipt = (function (_ref) {
     viewBox: "0 0 23 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-261.000000, -1095.000000)"
   }, core.jsx("g", {
@@ -1863,7 +1835,7 @@ var SalesLaw = (function (_ref) {
     viewBox: "0 0 32 25"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-912.000000, -1835.000000)"
   }, core.jsx("g", {
@@ -1888,7 +1860,7 @@ var Telemarketing = (function (_ref) {
     viewBox: "0 0 32 28"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-256.000000, -1465.000000)"
   }, core.jsx("g", {
@@ -1913,7 +1885,7 @@ var Travel = (function (_ref) {
     viewBox: "0 0 32 29"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-584.000000, -533.000000)"
   }, core.jsx("g", {
@@ -1938,7 +1910,7 @@ var WhiteGoods = (function (_ref) {
     viewBox: "0 0 25 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-915.000000, -532.000000)"
   }, core.jsx("g", {
@@ -1963,7 +1935,7 @@ var Withdrawal = (function (_ref) {
     viewBox: "0 0 32 20"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
-    "stroke-width": "1"
+    strokeWidth: "1"
   }, core.jsx("g", {
     transform: "translate(-584.000000, -1101.000000)"
   }, core.jsx("g", {

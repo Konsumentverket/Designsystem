@@ -5,7 +5,7 @@ import React from 'react';
 export default ({ className, style, title, ...otherAttr }) => {
         return <svg className={className} css={style}  width="32px" height="20px" viewBox="0 0 32 20" {...otherAttr}>
                 <title>{title}</title>
-                <g stroke="none" stroke-width="1">
+                <g stroke="none" strokeWidth="1">
         <g transform="translate(-860.000000, -2156.000000)">
             <g transform="translate(697.000000, 2156.000000)">
                 <g transform="translate(163.000000, 0.000000)" id="Fill-1">
