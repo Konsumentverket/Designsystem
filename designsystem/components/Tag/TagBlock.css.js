@@ -63,6 +63,10 @@ export const tagHeading = css`
         font-weight: 500;
         word-wrap:break-word;
 
+        [dir='rtl'] &{
+            padding: .8rem 1.6rem .8rem 4rem;
+        }
+
 `;
 
 export const tagIconHeading = css`     
@@ -117,7 +121,7 @@ export const iconStyle = css`
 `;
 
 export const arrowStyle = css`
-        position: absolute;
+    position: absolute;
     top: 2rem;
     right: .5rem;
     vertical-align: middle;
@@ -125,6 +129,12 @@ export const arrowStyle = css`
     height: 3.2rem;
     width: 3.2rem;
     fill: #fff;
+
+    [dir='rtl'] &{
+        left: .5rem;
+        right: auto;
+        transform: rotate(90deg);
+    }
 `;
 
 

@@ -54,22 +54,24 @@ export const iconCardStyle = css`
 `;
 
 export const iconText = css`
-        width:100%;
-        height:100%;
-        min-height:7.2rem;
-        padding: .8rem 4rem .8rem 6.4rem;
-        display: flex;
-        flex-direction:column;
-        box-sizing:border-box;
-        justify-content:center;
-        margin:0;
-        color: ${colors.theme1.mid};
-        line-height: 2.4rem;
-        font-size: 2.1rem;
-        font-weight: 500;
-        word-wrap:break-word;
+    width:100%;
+    height:100%;
+    min-height:7.2rem;
+    padding: .8rem 4rem .8rem 6.4rem;
+    display: flex;
+    flex-direction:column;
+    box-sizing:border-box;
+    justify-content:center;
+    margin:0;
+    color: ${colors.theme1.mid};
+    line-height: 2.4rem;
+    font-size: 2.1rem;
+    font-weight: 500;
+    word-wrap:break-word;
 `;
-
+export const noIcon = css`
+    padding: .8rem 4rem .8rem 1.4rem;
+`
 export const topAreaIcon = css`
     padding-left: 5.6rem;
 `;
