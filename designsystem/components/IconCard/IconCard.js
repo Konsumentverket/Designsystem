@@ -4,13 +4,11 @@ import { jsx } from '@emotion/core'
 import { iconCardStyle, arrowStyle, iconStyle, iconText, noIcon } from './IconCard.css';
 import { Icon } from '../Icon/Icon.js';
 import { EditorIcon } from '../Icon/EditorIcon.js';
-import { SubHeading } from '../Headings/SubHeading';
 
 
-const IconCard = React.forwardRef(({ icon, text, url, style }, ref) => {
+const IconCard = React.forwardRef(({ icon, text, url, style, onClick }, ref) => {
     const haveIcon = !icon ? noIcon : null
-
-    return <a ref={ref} href={url} css={[iconCardStyle, style]} className="noStyle" >
+    return <a ref={ref} href={url} onClick={onClick} css={[iconCardStyle, style]} className="noStyle" >
         {icon && <EditorIcon aria-hidden="true" icon={icon} style={iconStyle}>Ikon</EditorIcon>}
         <span css={[iconText, haveIcon]}>{text}</span>
         <Icon aria-hidden="true" icon="Arrow" style={arrowStyle} />
