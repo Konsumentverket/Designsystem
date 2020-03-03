@@ -126,8 +126,24 @@ function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
 }
 
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+}
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+    return arr2;
+  }
+}
+
 function _arrayWithHoles(arr) {
   if (Array.isArray(arr)) return arr;
+}
+
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
 }
 
 function _iterableToArrayLimit(arr, i) {
@@ -154,6 +170,10 @@ function _iterableToArrayLimit(arr, i) {
   }
 
   return _arr;
+}
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
 }
 
 function _nonIterableRest() {
@@ -1093,10 +1113,9 @@ var searchFieldInputStyle = core.css(_templateObject3$2(), colors.common.white, 
 var searchFieldButtonStyle = core.css(_templateObject4$2());
 var invertedBackgroundStyle$1 = core.css(_templateObject5$2());
 
-var FormSearchField = function FormSearchField(_ref) {
+var FormSearchField = React__default.forwardRef(function (_ref, reference) {
   var className = _ref.className,
       icon = _ref.icon,
-      reference = _ref.reference,
       fieldtext = _ref.fieldtext,
       onClick = _ref.onClick,
       onChange = _ref.onChange,
@@ -1107,7 +1126,7 @@ var FormSearchField = function FormSearchField(_ref) {
       disabled = _ref.disabled,
       type = _ref.type,
       inputtype = _ref.inputtype,
-      other = _objectWithoutProperties(_ref, ["className", "icon", "reference", "fieldtext", "onClick", "onChange", "invertedBackgroundColor", "buttontext", "style", "disabled", "type", "inputtype"]);
+      other = _objectWithoutProperties(_ref, ["className", "icon", "fieldtext", "onClick", "onChange", "invertedBackgroundColor", "buttontext", "style", "disabled", "type", "inputtype"]);
 
   var styles = [searchWrapperStyle];
   style && styles.push(style);
@@ -1133,11 +1152,10 @@ var FormSearchField = function FormSearchField(_ref) {
     style: searchFieldButtonStyle,
     disabled: disabled,
     onClick: onClick,
-    ref: reference,
     iconLeft: icon,
     text: buttontext
   }, ariaAttrs)));
-};
+});
 
 var AppsAndGames = (function (_ref) {
   var className = _ref.className,
@@ -3860,6 +3878,176 @@ var ValidationResponse = function ValidationResponse(_ref) {
   }), text);
 };
 
+function _templateObject7$8() {
+  var data = _taggedTemplateLiteral(["\n\n    background-color:", ";\n    color: #fff!important;\n\n    &:hover{\n        color: ", "!important;\n    }\n\n\n"]);
+
+  _templateObject7$8 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6$9() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 2.1rem;\n    color: ", ";\n    font-weight: 500;\n\n"]);
+
+  _templateObject6$9 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$c() {
+  var data = _taggedTemplateLiteral(["\n    visibility: hidden;\n"]);
+
+  _templateObject5$c = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$c() {
+  var data = _taggedTemplateLiteral(["\n    margin-left: auto;\n    font-size: 1.8rem;\n"]);
+
+  _templateObject4$c = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$f() {
+  var data = _taggedTemplateLiteral(["\n    margin-right: auto;\n    font-size: 1.8rem;\n"]);
+
+  _templateObject3$f = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$f() {
+  var data = _taggedTemplateLiteral(["\n    height: 5.6rem;\n    width: 6.0rem;\n    line-height: 5.6rem;\n    border: 1px solid ", ";\n    border-radius: 8px;\n    display: inline-block;\n    font-size: 2.1rem;\n    text-align:center;\n    text-decoration: none !important;\n    margin: 0 1.2rem;\n\n"]);
+
+  _templateObject2$f = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$i() {
+  var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n"]);
+
+  _templateObject$i = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var paginationWrapperStyle = core.css(_templateObject$i());
+var pageStyle = core.css(_templateObject2$f(), colors.theme1.mid);
+var prevPageStyle = core.css(_templateObject3$f());
+var nextPageStyle = core.css(_templateObject4$c());
+var prevPageStyleHidden = core.css(_templateObject5$c());
+var distanceIndicatorStyle = core.css(_templateObject6$9(), colors.theme1.mid);
+var currentPageStyle = core.css(_templateObject7$8(), colors.theme1.dark, colors.theme1.mid);
+
+var Pagination = function Pagination(_ref) {
+  var pageSize = _ref.pageSize,
+      total = _ref.total,
+      currentPage = _ref.currentPage,
+      baseUrl = _ref.baseUrl,
+      onClick = _ref.onClick,
+      style = _ref.style;
+  var totalNumberOfPages = Math.ceil(total / pageSize);
+  var links = Object.keys(_toConsumableArray(new Array(totalNumberOfPages))).map(function (val) {
+    return parseInt(val) + 1;
+  });
+  var searchRadius = currentPage == totalNumberOfPages || currentPage == 1 ? 2 : 1;
+
+  var createHref = function createHref(pageNumber) {
+    var url = new URL(baseUrl, "http://f.a");
+    url.searchParams.set("page", pageNumber);
+    return url.pathname + url.search;
+  }; //filter pages that are close to the current page
+
+
+  var shouldBeDisplayed = function shouldBeDisplayed(page) {
+    if (page == currentPage) return true;
+    if (page > currentPage && currentPage + searchRadius >= page) return true;
+    if (page < currentPage && currentPage - searchRadius <= page) return true;
+    return false;
+  };
+
+  var filteredLink = links.filter(function (x) {
+    return shouldBeDisplayed(x);
+  });
+
+  var firstLink = function firstLink() {
+    if (filteredLink.some(function (x) {
+      return x === 1;
+    })) return null;
+    var distanceEl = filteredLink.some(function (x) {
+      return x === 2;
+    }) ? null : core.jsx("span", {
+      css: distanceIndicatorStyle
+    }, "...");
+    return core.jsx(React__default.Fragment, null, core.jsx("a", {
+      href: createHref(1),
+      onClick: onClick,
+      css: [pageStyle]
+    }, "1"), distanceEl);
+  };
+
+  var lastLink = function lastLink() {
+    var max = Math.max.apply(Math, _toConsumableArray(links));
+    if (filteredLink.some(function (x) {
+      return x == max;
+    })) return null;
+    var distanceEl = filteredLink.some(function (x) {
+      return x === max - 1;
+    }) ? null : core.jsx("span", {
+      css: distanceIndicatorStyle
+    }, "...");
+    return core.jsx(React__default.Fragment, null, distanceEl, core.jsx("a", {
+      href: createHref(max),
+      onClick: onClick,
+      css: pageStyle
+    }, max));
+  };
+
+  var isFirstPage = currentPage == 1;
+  var isLastPage = Math.max.apply(Math, _toConsumableArray(links)) == currentPage;
+  return core.jsx("nav", {
+    "aria-label": "pagination",
+    css: [paginationWrapperStyle, style]
+  }, isFirstPage ? core.jsx("span", {
+    css: [prevPageStyle, prevPageStyleHidden]
+  }, "F\xF6reg\xE5ende sida") : core.jsx("a", {
+    href: createHref(currentPage - 1),
+    onClick: onClick,
+    css: prevPageStyle
+  }, "F\xF6reg\xE5ende sida"), firstLink(), filteredLink.map(function (pageNumber) {
+    var isCurrent = pageNumber == currentPage;
+    return core.jsx("a", {
+      href: createHref(pageNumber),
+      onClick: onClick,
+      "aria-current": isCurrent ? "page" : null,
+      key: "pagination".concat(pageNumber),
+      css: [pageStyle, isCurrent ? currentPageStyle : null]
+    }, pageNumber);
+  }), lastLink(), isLastPage ? core.jsx("span", {
+    css: [nextPageStyle, prevPageStyleHidden]
+  }, "N\xE4sta sida") : core.jsx("a", {
+    href: createHref(currentPage + 1),
+    onClick: onClick,
+    css: nextPageStyle
+  }, "N\xE4sta sida"));
+};
+
 exports.Accordion = Accordion;
 exports.BoxWithHeadlineText = BoxWithHeadlineText;
 exports.Button = Button;
@@ -3880,6 +4068,7 @@ exports.InputRadio = InputRadio;
 exports.InputText = InputText;
 exports.LinkWrapperColorStyle = LinkWrapperColorStyle$1;
 exports.LinkWrapperInvertedColorStyle = LinkWrapperInvertedColorStyle$1;
+exports.Pagination = Pagination;
 exports.PrerequisitesBox = PrerequisitesBox;
 exports.SubHeading = SubHeading;
 exports.Tag = Tag;

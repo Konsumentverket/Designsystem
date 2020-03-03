@@ -4,7 +4,7 @@ import React from 'react';
 import { searchWrapperStyle, searchFieldInputStyle, searchFieldButtonStyle, invertedBackgroundStyle } from './FormSearchField.css';
 import { Button } from '../Button/Button';
 
-export const FormSearchField = ({ className, icon, reference, fieldtext, onClick, onChange, invertedBackgroundColor=false, buttontext, style, disabled, type, inputtype, ...other }) => {
+export const FormSearchField = React.forwardRef(({ className, icon, fieldtext, onClick, onChange, invertedBackgroundColor=false, buttontext, style, disabled, type, inputtype, ...other },reference) => {
 
     var styles = [searchWrapperStyle];
     style && styles.push(style)
@@ -30,12 +30,11 @@ export const FormSearchField = ({ className, icon, reference, fieldtext, onClick
             style={searchFieldButtonStyle}
             disabled={disabled}
             onClick={onClick}
-            ref={reference}
             iconLeft={icon}
             text={buttontext}
             {...ariaAttrs}
         />
     </div>
 
-}
+})
 
