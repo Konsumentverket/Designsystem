@@ -9,8 +9,6 @@ var React = require('react');
 var React__default = _interopDefault(React);
 
 function _typeof(obj) {
-  "@babel/helpers - typeof";
-
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -76,13 +74,13 @@ function _objectSpread2(target) {
     var source = arguments[i] != null ? arguments[i] : {};
 
     if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
+      ownKeys(source, true).forEach(function (key) {
         _defineProperty(target, key, source[key]);
       });
     } else if (Object.getOwnPropertyDescriptors) {
       Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
     } else {
-      ownKeys(Object(source)).forEach(function (key) {
+      ownKeys(source).forEach(function (key) {
         Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
       });
     }
@@ -3947,6 +3945,38 @@ var ValidationResponse = function ValidationResponse(_ref) {
   }), text);
 };
 
+function _templateObject2$f() {
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n"]);
+
+  _templateObject2$f = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$i() {
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.7rem;\n    padding-left: 1rem;\n    padding-right: 3rem;\n    padding-bottom: 0.2rem;\n    padding-top: 2.4rem;\n    margin-bottom: 2.4rem;\n    ", " {\n        padding-left: 4rem;\n        padding-right: 4rem;\n    }\n    ul {\n        padding-left: 0;\n    }\n"]);
+
+  _templateObject$i = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var wrapper$2 = core.css(_templateObject$i(), colors.theme3.xLight, medium);
+var secondaryColorStyle = core.css(_templateObject2$f(), colors.theme2.light);
+
+/** @jsx jsx */
+var FactBox = function FactBox(_ref) {
+  var content = _ref.content,
+      secondaryColor = _ref.secondaryColor;
+  if (content == null) return null;
+  return core.jsx("div", {
+    css: [wrapper$2, secondaryColor && secondaryColorStyle]
+  }, content);
+};
+
 exports.Accordion = Accordion;
 exports.BoxWithHeadlineText = BoxWithHeadlineText;
 exports.Button = Button;
@@ -3955,6 +3985,7 @@ exports.EditorIcon = EditorIcon;
 exports.ElementLinkColorStyle = ElementLinkColorStyle$1;
 exports.ElementLinkInvertedColorStyle = ElementLinkInvertedColorStyle$1;
 exports.ExpandButton = ExpandButton;
+exports.FactBox = FactBox;
 exports.FocusPuff = FocusPuff;
 exports.FormCheckbox = FormCheckbox;
 exports.FormRadiobutton = FormRadiobutton;

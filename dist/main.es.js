@@ -2,8 +2,6 @@ import { css as css$1, jsx, Global } from '@emotion/core';
 import React, { useState, useRef, useEffect } from 'react';
 
 function _typeof(obj) {
-  "@babel/helpers - typeof";
-
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -69,13 +67,13 @@ function _objectSpread2(target) {
     var source = arguments[i] != null ? arguments[i] : {};
 
     if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
+      ownKeys(source, true).forEach(function (key) {
         _defineProperty(target, key, source[key]);
       });
     } else if (Object.getOwnPropertyDescriptors) {
       Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
     } else {
-      ownKeys(Object(source)).forEach(function (key) {
+      ownKeys(source).forEach(function (key) {
         Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
       });
     }
@@ -3940,5 +3938,37 @@ var ValidationResponse = function ValidationResponse(_ref) {
   }), text);
 };
 
-export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, PrerequisitesBox, SubHeading, Tag, TagBlock, ValidationResponse, colors, spacing };
+function _templateObject2$f() {
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n"]);
+
+  _templateObject2$f = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$i() {
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.7rem;\n    padding-left: 1rem;\n    padding-right: 3rem;\n    padding-bottom: 0.2rem;\n    padding-top: 2.4rem;\n    margin-bottom: 2.4rem;\n    ", " {\n        padding-left: 4rem;\n        padding-right: 4rem;\n    }\n    ul {\n        padding-left: 0;\n    }\n"]);
+
+  _templateObject$i = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var wrapper$2 = css$1(_templateObject$i(), colors.theme3.xLight, medium);
+var secondaryColorStyle = css$1(_templateObject2$f(), colors.theme2.light);
+
+/** @jsx jsx */
+var FactBox = function FactBox(_ref) {
+  var content = _ref.content,
+      secondaryColor = _ref.secondaryColor;
+  if (content == null) return null;
+  return jsx("div", {
+    css: [wrapper$2, secondaryColor && secondaryColorStyle]
+  }, content);
+};
+
+export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, PrerequisitesBox, SubHeading, Tag, TagBlock, ValidationResponse, colors, spacing };
 //# sourceMappingURL=main.es.js.map
