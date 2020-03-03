@@ -81,6 +81,13 @@ const globalStyles = (
           display: inline;
         }
       }
+
+      h1, h2 {
+        margin-bottom: 1.6rem;
+      }
+      h3, h4, h5, h6 {
+        margin-bottom: .8rem;
+      }
   a{
     &:not(.noStyle){    
         text-decoration:underline;

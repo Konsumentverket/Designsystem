@@ -376,7 +376,7 @@ function _templateObject3$1() {
 }
 
 function _templateObject2$1() {
-  var data = _taggedTemplateLiteral(["\n    display:inline-block;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:auto;\n        text-align:left;\n        padding:1.6rem 2.4rem;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n    display:inline-block;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    box-sizing: border-box;\n    cursor:pointer;\n    text-align: center;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:auto;\n        text-align:left;\n        padding:1.6rem 2.4rem;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
 
   _templateObject2$1 = function _templateObject2() {
     return data;
@@ -939,6 +939,30 @@ var Camera = (function (_ref) {
   }))))));
 });
 
+var Play = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "43px",
+    height: "43px",
+    viewBox: "0 0 496 496",
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    xlink: "http://www.w3.org/1999/xlink"
+  }, otherAttr), jsx("title", null, title), jsx("g", null, jsx("path", {
+    fill: "#0061C2",
+    d: "M248,0C111,0,0,111,0,248s111,248,248,248s248-111,248-248S385,0,248,0z"
+  }), jsx("path", {
+    fill: "#FFFFFF",
+    d: "M363.7,272l-176,101c-15.8,8.8-35.7-2.5-35.7-21V144c0-18.4,19.8-29.8,35.7-21l176,107 C380.1,239.2,380.1,262.9,363.7,272z"
+  })));
+});
+
 var iconDefinitions = {
   Adapt: Adapt,
   Close: Close,
@@ -960,7 +984,8 @@ var iconDefinitions = {
   List: List,
   Picturelist: Picturelist,
   Clear: Clear,
-  Camera: Camera
+  Camera: Camera,
+  Play: Play
 };
 
 var Icon = function Icon(_ref) {
@@ -2728,7 +2753,7 @@ function _templateObject2$8() {
 }
 
 function _templateObject$a() {
-  var data = _taggedTemplateLiteral(["\n      color: #161616;\n      font-weight:700;\n      margin: 0 0 1.6rem 0;\n      font-size:3.4rem;\n      line-height:4.8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n      color: #161616;\n      font-weight:700;\n      font-size:3.4rem;\n      line-height:4.8rem;\n"]);
 
   _templateObject$a = function _templateObject() {
     return data;
@@ -2840,7 +2865,7 @@ function _templateObject2$9() {
 }
 
 function _templateObject$b() {
-  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        margin-top: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n  a{\n    &:not(.noStyle){    \n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        &:hover {\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n        }\n        &:active {\n          background-color:#fff;\n      }\n    }\n  }\n\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        margin-top: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a{\n    &:not(.noStyle){    \n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        &:hover {\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n        }\n        &:active {\n          background-color:#fff;\n      }\n    }\n  }\n\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n  }\n"]);
 
   _templateObject$b = function _templateObject() {
     return data;
@@ -4041,5 +4066,37 @@ var Pagination = function Pagination(_ref) {
   }, "N\xE4sta sida"));
 };
 
-export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, Pagination, PrerequisitesBox, SubHeading, Tag, TagBlock, ValidationResponse, colors, spacing };
+function _templateObject2$g() {
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n"]);
+
+  _templateObject2$g = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$j() {
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.7rem;\n    padding-left: 1rem;\n    padding-right: 3rem;\n    padding-bottom: 0.2rem;\n    padding-top: 2.4rem;\n    margin-bottom: 2.4rem;\n    ", " {\n        padding-left: 4rem;\n        padding-right: 4rem;\n    }\n    ul {\n        padding-left: 0;\n    }\n"]);
+
+  _templateObject$j = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var wrapper$2 = css$1(_templateObject$j(), colors.theme3.xLight, medium);
+var secondaryColorStyle = css$1(_templateObject2$g(), colors.theme2.light);
+
+/** @jsx jsx */
+var FactBox = function FactBox(_ref) {
+  var content = _ref.content,
+      secondaryColor = _ref.secondaryColor;
+  if (content == null) return null;
+  return jsx("div", {
+    css: [wrapper$2, secondaryColor && secondaryColorStyle]
+  }, content);
+};
+
+export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, Pagination, PrerequisitesBox, SubHeading, Tag, TagBlock, ValidationResponse, colors, spacing };
 //# sourceMappingURL=main.es.js.map

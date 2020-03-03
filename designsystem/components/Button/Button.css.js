@@ -22,7 +22,9 @@ export const buttonStyle = css`
     color: ${colors.common.white};
     border-radius:.8rem;
     width:100%;
+    box-sizing: border-box;
     cursor:pointer;
+    text-align: center;
     background-color:${colors.theme1.mid};
 
     svg {

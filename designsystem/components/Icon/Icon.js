@@ -22,6 +22,7 @@ import List from '../../icons/SystemIcons/List'
 import Picturelist from '../../icons/SystemIcons/Picturelist'
 import Clear from '../../icons/SystemIcons/Clear'
 import Camera from '../../icons/SystemIcons/Camera'
+import Play from '../../icons/SystemIcons/Play'
 
 const iconDefinitions = {
     Adapt,
@@ -45,10 +46,12 @@ const iconDefinitions = {
     Picturelist,
     Clear,
     Camera,
+    Play
 }
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
     const Element = iconDefinitions[icon];
+    
 
     if (Element === undefined) {
         console.log(`Could not find icon in storybook tried to load: ${icon}`)
