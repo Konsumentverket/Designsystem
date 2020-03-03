@@ -1,11 +1,19 @@
 import { css } from "@emotion/core";
 import { colors } from "../Colors/Colors";
+import { large, medium } from "../GlobalStyles/globalStyles";
 
 export const paginationWrapperStyle = css`
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    padding-bottom: 3.2rem;
+
+    ${large}{
+        justify-content: space-between;
+        padding-bottom: 0;
+    }
 `
 export const pageStyle = css`
     height: 5.6rem;
@@ -24,11 +32,26 @@ export const pageStyle = css`
 export const prevPageStyle = css`
     margin-right: auto;
     font-size: 1.8rem;
+    position: absolute;
+    left: 0px;
+    bottom: -0rem;
+
+    ${medium}{
+        position: static;
+    }
 `
 
 export const nextPageStyle = css`
     margin-left: auto;
     font-size: 1.8rem;
+    position: absolute;
+    right: 0px;
+    bottom: -0rem;
+
+    ${medium}{
+        position: static;
+    }
+
 `
 
 export const prevPageStyleHidden = css`

@@ -3927,7 +3927,7 @@ function _templateObject5$c() {
 }
 
 function _templateObject4$c() {
-  var data = _taggedTemplateLiteral(["\n    margin-left: auto;\n    font-size: 1.8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-left: auto;\n    font-size: 1.8rem;\n    position: absolute;\n    right: 0px;\n    bottom: -0rem;\n\n    ", "{\n        position: static;\n    }\n\n"]);
 
   _templateObject4$c = function _templateObject4() {
     return data;
@@ -3937,7 +3937,7 @@ function _templateObject4$c() {
 }
 
 function _templateObject3$f() {
-  var data = _taggedTemplateLiteral(["\n    margin-right: auto;\n    font-size: 1.8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-right: auto;\n    font-size: 1.8rem;\n    position: absolute;\n    left: 0px;\n    bottom: -0rem;\n\n    ", "{\n        position: static;\n    }\n"]);
 
   _templateObject3$f = function _templateObject3() {
     return data;
@@ -3957,7 +3957,7 @@ function _templateObject2$f() {
 }
 
 function _templateObject$i() {
-  var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    padding-bottom: 3.2rem;\n\n    ", "{\n        justify-content: space-between;\n        padding-bottom: 0;\n    }\n"]);
 
   _templateObject$i = function _templateObject() {
     return data;
@@ -3965,10 +3965,10 @@ function _templateObject$i() {
 
   return data;
 }
-var paginationWrapperStyle = css$1(_templateObject$i());
+var paginationWrapperStyle = css$1(_templateObject$i(), large);
 var pageStyle = css$1(_templateObject2$f(), colors.theme1.mid);
-var prevPageStyle = css$1(_templateObject3$f());
-var nextPageStyle = css$1(_templateObject4$c());
+var prevPageStyle = css$1(_templateObject3$f(), medium);
+var nextPageStyle = css$1(_templateObject4$c(), medium);
 var prevPageStyleHidden = css$1(_templateObject5$c());
 var distanceIndicatorStyle = css$1(_templateObject6$9(), colors.theme1.mid);
 var currentPageStyle = css$1(_templateObject7$8(), colors.theme1.dark, colors.theme1.mid);
