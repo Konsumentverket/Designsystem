@@ -52,12 +52,13 @@ const eccTheme = {
         "light": "#d7e6ed"
     }
 }
-const __process = (typeof global !== 'undefined' ? global : window).process
-const colors = __process.env.THEME === 'ecc'
+
+// This line is for reading environment variabels both serverside and client side.
+// const __process = (typeof global !== 'undefined' ? global : window).process
+
+const colors = process.env.THEME === 'ecc'
     ? Object.assign({}, defaultTheme, eccTheme)
     : defaultTheme
 
-// For development on ECC (Bug with hotreload)
-// const colors = Object.assign(defaultTheme, eccTheme)
 
 export { colors }
