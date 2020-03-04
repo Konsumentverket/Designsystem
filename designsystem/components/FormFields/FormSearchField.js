@@ -4,7 +4,7 @@ import React from 'react';
 import { searchWrapperStyle, searchFieldInputStyle, searchFieldButtonStyle, invertedBackgroundStyle } from './FormSearchField.css';
 import { Button } from '../Button/Button';
 
-export const FormSearchField = React.forwardRef(({ className, icon, fieldtext, onClick, onChange, invertedBackgroundColor=false, buttontext, style, disabled, type, inputtype, ...other },reference) => {
+export const FormSearchField = React.forwardRef(({ className, icon, fieldtext, onClick, onChange, invertedBackgroundColor = false, buttontext, style, disabled, type, inputtype, ...other }, ref) => {
 
     var styles = [searchWrapperStyle];
     style && styles.push(style)
@@ -21,7 +21,7 @@ export const FormSearchField = React.forwardRef(({ className, icon, fieldtext, o
         <input
             {...other}
             onChange={onChange}
-            ref={reference}
+            ref={ref}
             type={inputtype || "search"}
             placeholder={fieldtext}
             disabled={disabled}
