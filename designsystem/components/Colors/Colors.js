@@ -49,7 +49,7 @@ const eccTheme = {
         "midLight": "#e4e8f2",
     },
     theme2: {
-        "light": "#f4f8e9"
+        "light": "#d7e6ed"
     }
 }
 
