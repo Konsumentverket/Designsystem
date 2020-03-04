@@ -3959,7 +3959,7 @@ function _templateObject7$8() {
 }
 
 function _templateObject6$9() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 2.1rem;\n    color: ", ";\n    font-weight: 500;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    color: ", ";\n    font-weight: 500;\n    ", "{\n        font-size: 2.1rem;\n    }\n\n"]);
 
   _templateObject6$9 = function _templateObject6() {
     return data;
@@ -3999,7 +3999,7 @@ function _templateObject3$f() {
 }
 
 function _templateObject2$f() {
-  var data = _taggedTemplateLiteral(["\n    height: 5.6rem;\n    width: 6.0rem;\n    line-height: 5.6rem;\n    border: 1px solid ", ";\n    border-radius: 8px;\n    display: inline-block;\n    font-size: 2.1rem;\n    text-align:center;\n    text-decoration: none !important;\n    margin: 0 1.2rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    height: 4.0rem;\n    width: 4.2rem;\n\n    line-height: 4.0rem;\n    border: 1px solid ", ";\n    border-radius: 8px;\n    display: inline-block;\n    font-size: 2.1rem;\n    text-align:center;\n    text-decoration: none !important;\n    margin: 0 0.8rem;\n\n    &.last{\n        margin-right: 0;\n    }\n\n    &.first{\n        margin-left: 0;\n    }\n\n    ", "{\n        margin: 0 1.2rem;\n        height: 5.6rem;\n        line-height: 5.6rem;\n        width: 6.0rem;\n    }\n\n"]);
 
   _templateObject2$f = function _templateObject2() {
     return data;
@@ -4009,7 +4009,7 @@ function _templateObject2$f() {
 }
 
 function _templateObject$i() {
-  var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    padding-bottom: 3.2rem;\n\n    ", "{\n        justify-content: space-between;\n        padding-bottom: 0;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    padding-bottom: 5.6rem;\n\n    ", "{\n        justify-content: space-between;\n        padding-bottom: 0;\n    }\n"]);
 
   _templateObject$i = function _templateObject() {
     return data;
@@ -4018,11 +4018,11 @@ function _templateObject$i() {
   return data;
 }
 var paginationWrapperStyle = css$1(_templateObject$i(), large);
-var pageStyle = css$1(_templateObject2$f(), colors.theme1.mid);
+var pageStyle = css$1(_templateObject2$f(), colors.theme1.mid, medium);
 var prevPageStyle = css$1(_templateObject3$f(), medium);
 var nextPageStyle = css$1(_templateObject4$c(), medium);
 var prevPageStyleHidden = css$1(_templateObject5$c());
-var distanceIndicatorStyle = css$1(_templateObject6$9(), colors.theme1.mid);
+var distanceIndicatorStyle = css$1(_templateObject6$9(), colors.theme1.mid, medium);
 var currentPageStyle = css$1(_templateObject7$8(), colors.theme1.dark, colors.theme1.mid);
 
 var Pagination = function Pagination(_ref) {
@@ -4066,6 +4066,7 @@ var Pagination = function Pagination(_ref) {
       css: distanceIndicatorStyle
     }, "...");
     return jsx(React.Fragment, null, jsx("a", {
+      className: "first",
       href: createHref(1),
       onClick: onClick,
       css: [pageStyle]
@@ -4083,6 +4084,7 @@ var Pagination = function Pagination(_ref) {
       css: distanceIndicatorStyle
     }, "...");
     return jsx(React.Fragment, null, distanceEl, jsx("a", {
+      className: "last",
       href: createHref(max),
       onClick: onClick,
       css: pageStyle
@@ -4090,7 +4092,15 @@ var Pagination = function Pagination(_ref) {
   };
 
   var isFirstPage = currentPage == 1;
-  var isLastPage = Math.max.apply(Math, _toConsumableArray(links)) == currentPage;
+  var lastPage = Math.max.apply(Math, _toConsumableArray(links));
+  var isLastPage = lastPage == currentPage;
+
+  var getClass = function getClass(pageNumber) {
+    if (lastPage === pageNumber) return "last";
+    if (pageNumber === 1) return "first";
+    return null;
+  };
+
   return jsx("nav", {
     "aria-label": "pagination",
     css: [paginationWrapperStyle, style]
@@ -4104,6 +4114,7 @@ var Pagination = function Pagination(_ref) {
     var isCurrent = pageNumber == currentPage;
     return jsx("a", {
       href: createHref(pageNumber),
+      className: getClass(pageNumber),
       onClick: onClick,
       "aria-current": isCurrent ? "page" : null,
       key: "pagination".concat(pageNumber),

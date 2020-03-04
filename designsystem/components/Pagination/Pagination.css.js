@@ -8,7 +8,7 @@ export const paginationWrapperStyle = css`
     justify-content: center;
     align-items: center;
     position: relative;
-    padding-bottom: 3.2rem;
+    padding-bottom: 5.6rem;
 
     ${large}{
         justify-content: space-between;
@@ -16,16 +16,32 @@ export const paginationWrapperStyle = css`
     }
 `
 export const pageStyle = css`
-    height: 5.6rem;
-    width: 6.0rem;
-    line-height: 5.6rem;
+    height: 4.0rem;
+    width: 4.2rem;
+
+    line-height: 4.0rem;
     border: 1px solid ${colors.theme1.mid};
     border-radius: 8px;
     display: inline-block;
     font-size: 2.1rem;
     text-align:center;
     text-decoration: none !important;
-    margin: 0 1.2rem;
+    margin: 0 0.8rem;
+
+    &.last{
+        margin-right: 0;
+    }
+
+    &.first{
+        margin-left: 0;
+    }
+
+    ${medium}{
+        margin: 0 1.2rem;
+        height: 5.6rem;
+        line-height: 5.6rem;
+        width: 6.0rem;
+    }
 
 `
 
@@ -59,9 +75,12 @@ export const prevPageStyleHidden = css`
 `
 
 export const distanceIndicatorStyle = css`
-    font-size: 2.1rem;
+    font-size: 1.6rem;
     color: ${colors.theme1.mid};
     font-weight: 500;
+    ${medium}{
+        font-size: 2.1rem;
+    }
 
 `
 
