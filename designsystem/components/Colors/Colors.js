@@ -52,8 +52,8 @@ const eccTheme = {
         "light": "#d7e6ed"
     }
 }
-
-const colors = process.env.THEME === 'ecc'
+const __process = (typeof global !== 'undefined' ? global : window).process
+const colors = __process.env.THEME === 'ecc'
     ? Object.assign({}, defaultTheme, eccTheme)
     : defaultTheme
 
