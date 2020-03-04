@@ -53,9 +53,6 @@ const eccTheme = {
     }
 }
 
-// This line is for reading environment variabels both serverside and client side.
-// const __process = (typeof global !== 'undefined' ? global : window).process
-
 const colors = process.env.THEME === 'ecc'
     ? Object.assign({}, defaultTheme, eccTheme)
     : defaultTheme

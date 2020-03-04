@@ -250,9 +250,7 @@ var eccTheme = {
   theme2: {
     "light": "#d7e6ed"
   }
-}; // This line is for reading environment variabels both serverside and client side.
-// const __process = (typeof global !== 'undefined' ? global : window).process
-
+};
 var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme;
 
 var spacing = {
