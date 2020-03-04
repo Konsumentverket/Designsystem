@@ -251,7 +251,8 @@ var eccTheme = {
     "light": "#d7e6ed"
   }
 };
-var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme; // For development on ECC (Bug with hotreload)
+var __process = (typeof global !== 'undefined' ? global : window).process;
+var colors = __process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme; // For development on ECC (Bug with hotreload)
 
 var spacing = {
   'spacing-xs': '0.25rem',
