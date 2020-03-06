@@ -235,6 +235,7 @@ var defaultTheme = {
 };
 var eccTheme = {
   theme1: {
+    "dark": "#4663a9",
     "xDark": "#4663a9",
     "midDark": "#4663a9",
     "mid": "#4663a9",
