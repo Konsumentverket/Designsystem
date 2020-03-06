@@ -231,8 +231,8 @@ var defaultTheme = {
 };
 var eccTheme = {
   theme1: {
-    "xDark": "#4663a9",
-    "midDark": "#4663a9",
+    "xDark": "#1C2742",
+    "midDark": "#314575",
     "mid": "#4663a9",
     "midLight": "#e4e8f2"
   },
@@ -391,7 +391,7 @@ function _templateObject3$1() {
 }
 
 function _templateObject2$1() {
-  var data = _taggedTemplateLiteral(["\n    display:inline-block;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    box-sizing: border-box;\n    cursor:pointer;\n    text-align: center;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:auto;\n        text-align:left;\n        padding:1.6rem 2.4rem;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    display:inline-block;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    box-sizing: border-box;\n    cursor:pointer;\n    text-align: center;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:auto;\n        text-align:left;\n        padding:1.6rem 2.4rem;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
 
   _templateObject2$1 = function _templateObject2() {
     return data;

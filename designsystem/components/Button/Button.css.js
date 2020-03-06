@@ -14,6 +14,7 @@ const disabled = css`
 `;
 
 export const buttonStyle = css`
+    text-decoration: none;
     display:inline-block;
     font-size:1.6rem;
     line-height:2.4rem;

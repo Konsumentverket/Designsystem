@@ -43,8 +43,8 @@ const defaultTheme = {
 
 const eccTheme = {
     theme1: {
-        "xDark": "#4663a9",
-        "midDark": "#4663a9",
+        "xDark": "#1C2742",
+        "midDark": "#314575",
         "mid": "#4663a9",
         "midLight": "#e4e8f2",
     },
