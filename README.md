@@ -26,7 +26,7 @@ Navigera till \designsystem\ mappen och kör följande script:
 ```
     cd ~/projects/Konsumentverket.github.io
     npm link
-    cd ~/projects/flippad_web/wwwroot
+    cd ~/projects/flippad_web/hallakonsument/wwwroot
     npm link kov-components
 
     # Öppna två terminaler

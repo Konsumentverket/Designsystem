@@ -155,10 +155,6 @@ function _iterableToArray(iter) {
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
-
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -3036,7 +3032,6 @@ function memoize(fn) {
 }
 
 var ILLEGAL_ESCAPE_SEQUENCE_ERROR = "You have illegal escape sequence in your template literal, most likely inside content's property value.\nBecause you write your CSS inside a JavaScript string you actually have to do double escaping, so for example \"content: '\\00d7';\" should become \"content: '\\\\00d7';\".\nYou can read more about this here:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences";
-var UNDEFINED_AS_OBJECT_KEY_ERROR = "You have passed in falsy value as style object's key (can happen when in example you pass unexported component as computed key).";
 var hyphenateRegex = /[A-Z]|^ms/g;
 var animationRegex = /_EMO_([^_]+?)_([^]*?)_EMO_/g;
 
@@ -3044,15 +3039,15 @@ var isCustomProperty = function isCustomProperty(property) {
   return property.charCodeAt(1) === 45;
 };
 
-var isProcessableValue = function isProcessableValue(value) {
-  return value != null && typeof value !== 'boolean';
-};
-
 var processStyleName = memoize(function (styleName) {
   return isCustomProperty(styleName) ? styleName : styleName.replace(hyphenateRegex, '-$&').toLowerCase();
 });
 
 var processStyleValue = function processStyleValue(key, value) {
+  if (value == null || typeof value === 'boolean') {
+    return '';
+  }
+
   switch (key) {
     case 'animation':
     case 'animationName':
@@ -3225,7 +3220,7 @@ function createStringFromObject(mergedProps, registered, obj) {
       if (_typeof(value) !== 'object') {
         if (registered != null && registered[value] !== undefined) {
           string += _key + "{" + registered[value] + "}";
-        } else if (isProcessableValue(value)) {
+        } else {
           string += processStyleName(_key) + ":" + processStyleValue(_key, value) + ";";
         }
       } else {
@@ -3235,9 +3230,7 @@ function createStringFromObject(mergedProps, registered, obj) {
 
         if (Array.isArray(value) && typeof value[0] === 'string' && (registered == null || registered[value[0]] === undefined)) {
           for (var _i = 0; _i < value.length; _i++) {
-            if (isProcessableValue(value[_i])) {
-              string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
-            }
+            string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
           }
         } else {
           var interpolated = handleInterpolation(mergedProps, registered, value, false);
@@ -3252,10 +3245,6 @@ function createStringFromObject(mergedProps, registered, obj) {
 
             default:
               {
-                if (process.env.NODE_ENV !== 'production' && _key === 'undefined') {
-                  console.error(UNDEFINED_AS_OBJECT_KEY_ERROR);
-                }
-
                 string += _key + "{" + interpolated + "}";
               }
           }
@@ -4051,6 +4040,7 @@ var Pagination = function Pagination(_ref) {
       baseUrl = _ref.baseUrl,
       onClick = _ref.onClick,
       style = _ref.style;
+  if (total == 0) return null;
   var totalNumberOfPages = Math.ceil(total / pageSize);
   var links = Object.keys(_toConsumableArray(new Array(totalNumberOfPages))).map(function (val) {
     return parseInt(val) + 1;
@@ -4180,5 +4170,91 @@ var FactBox = function FactBox(_ref) {
   }, content);
 };
 
-export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, Pagination, PrerequisitesBox, SubHeading, Tag, TagBlock, ValidationResponse, colors, spacing };
+function _templateObject5$d() {
+  var data = _taggedTemplateLiteral(["\n    display: inline-block;\n    flex-grow: 1;\n    text-align: right;\n    font-size: 1.8rem;\n"]);
+
+  _templateObject5$d = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$d() {
+  var data = _taggedTemplateLiteral(["\n    margin-left: 2.4rem;\n    margin-top: -.4rem;\n"]);
+
+  _templateObject4$d = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$g() {
+  var data = _taggedTemplateLiteral(["\n    padding-top: 2.4rem;\n    display: flex;\n"]);
+
+  _templateObject3$g = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$h() {
+  var data = _taggedTemplateLiteral(["\n    padding-bottom: 2.4rem;\n    border-bottom: .1rem solid #000;\n    display: flex;\n"]);
+
+  _templateObject2$h = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$k() {
+  var data = _taggedTemplateLiteral(["\n    padding: 2.8rem 3.2rem 2.8rem 3.2rem;\n    background-color: ", ";\n    p > a {\n        margin-bottom: 0;\n        margin-left: 1.6rem;\n    }\n    p > a:first-of-type {\n        margin-left: 0;\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
+
+  _templateObject$k = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var sourceStyle = css$1(_templateObject$k(), colors.theme1.midLight);
+var firstRow = css$1(_templateObject2$h());
+var secondRow = css$1(_templateObject3$g());
+var buttonStyle$1 = css$1(_templateObject4$d());
+var rightAlign = css$1(_templateObject5$d());
+
+/** @jsx jsx */
+var Source = function Source(_ref) {
+  var didThisHelpText = _ref.didThisHelpText,
+      reportBugText = _ref.reportBugText,
+      markdownText = _ref.markdownText,
+      reviewedDate = _ref.reviewedDate;
+  var reviewed = new Date(reviewedDate);
+  var months = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
+  return jsx("div", {
+    css: sourceStyle
+  }, jsx("div", {
+    css: [firstRow]
+  }, jsx("p", null, didThisHelpText || "Hittade du svaret på din fråga?"), jsx(Button, {
+    style: buttonStyle$1,
+    secondaryButtonStyle: true,
+    text: "Ja"
+  }), jsx(Button, {
+    style: buttonStyle$1,
+    secondaryButtonStyle: true,
+    text: "Nej"
+  }), jsx("div", {
+    css: rightAlign
+  }, jsx("a", {
+    href: "#"
+  }, reportBugText || "Rapportera fel på denna sida"))), jsx("div", {
+    css: [secondRow]
+  }, markdownText, reviewed && jsx("div", {
+    css: rightAlign
+  }, jsx("p", null, "Granskad: ".concat(reviewed.getDate(), " ").concat(months[reviewed.getMonth() - 1], " ").concat(reviewed.getFullYear())))));
+};
+
+export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, Pagination, PrerequisitesBox, Source, SubHeading, Tag, TagBlock, ValidationResponse, colors, spacing };
 //# sourceMappingURL=main.es.js.map
