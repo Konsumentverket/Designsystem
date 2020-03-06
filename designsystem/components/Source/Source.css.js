@@ -2,7 +2,7 @@ import { css } from "@emotion/core";
 import { colors } from '../Colors/Colors';
 
 export const sourceStyle = css`
-    padding: 2.8rem 3.2rem 2.8rem 3.2rem;
+    padding: 2.8rem 3.2rem 2.4rem 3.2rem;
     background-color: ${colors.theme1.midLight};
     p > a {
         margin-bottom: 0;
@@ -17,7 +17,7 @@ export const sourceStyle = css`
 
 export const firstRow = css`
     padding-bottom: 2.4rem;
-    border-bottom: .1rem solid #000;
+    border-bottom: .1rem solid ${colors.theme3.light};
     display: flex;
 `;
 

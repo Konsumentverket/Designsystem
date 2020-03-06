@@ -4201,7 +4201,7 @@ function _templateObject3$g() {
 }
 
 function _templateObject2$h() {
-  var data = _taggedTemplateLiteral(["\n    padding-bottom: 2.4rem;\n    border-bottom: .1rem solid #000;\n    display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding-bottom: 2.4rem;\n    border-bottom: .1rem solid ", ";\n    display: flex;\n"]);
 
   _templateObject2$h = function _templateObject2() {
     return data;
@@ -4211,7 +4211,7 @@ function _templateObject2$h() {
 }
 
 function _templateObject$k() {
-  var data = _taggedTemplateLiteral(["\n    padding: 2.8rem 3.2rem 2.8rem 3.2rem;\n    background-color: ", ";\n    p > a {\n        margin-bottom: 0;\n        margin-left: 1.6rem;\n    }\n    p > a:first-of-type {\n        margin-left: 0;\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 2.8rem 3.2rem 2.4rem 3.2rem;\n    background-color: ", ";\n    p > a {\n        margin-bottom: 0;\n        margin-left: 1.6rem;\n    }\n    p > a:first-of-type {\n        margin-left: 0;\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
 
   _templateObject$k = function _templateObject() {
     return data;
@@ -4220,7 +4220,7 @@ function _templateObject$k() {
   return data;
 }
 var sourceStyle = css$1(_templateObject$k(), colors.theme1.midLight);
-var firstRow = css$1(_templateObject2$h());
+var firstRow = css$1(_templateObject2$h(), colors.theme3.light);
 var secondRow = css$1(_templateObject3$g());
 var buttonStyle$1 = css$1(_templateObject4$d());
 var rightAlign = css$1(_templateObject5$d());
