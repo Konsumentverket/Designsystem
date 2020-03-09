@@ -164,11 +164,6 @@
             "name": "WhiteGoods",
             "title": "Vitvaror",
             "url": "EditorIcons/svg/WhiteGoods.svg"
-        },
-        {
-            "name": "Play",
-            "title": "Playknapp",
-            "url": "SystemIcons/svg/play.svg"
         }
    ]
 }
