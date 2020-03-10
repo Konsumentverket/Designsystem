@@ -6,7 +6,7 @@ import { Button } from '../Button/Button';
 
 export const Source = ({ didThisHelpText, reportBugText, markdownText, reviewedDate }) => {
 
-    const reviewed = new Date(reviewedDate);
+    const reviewed = reviewedDate ? new Date(reviewedDate) : null;
     const months = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
 
     return <div css={sourceStyle}>

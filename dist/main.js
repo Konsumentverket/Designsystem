@@ -4190,7 +4190,7 @@ function _templateObject5$d() {
 }
 
 function _templateObject4$d() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: 2.4rem;\n    margin-bottom: 1.6rem;\n    padding: 0 2.4rem;\n    &:first-of-type {\n        margin-left: 0;\n    }\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 2.4rem;\n        &:first-of-type {\n            margin-left: 2.4rem;\n        }\n        margin-left: 2.4rem;\n        margin-top: -.4rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: 2.4rem;\n    margin-bottom: 1.6rem;\n    padding: 0 2.4rem;\n    &:first-of-type {\n        margin-left: 0;\n    }\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 2.4rem;\n        &:first-of-type {\n            margin-left: 2.4rem;\n        }\n        margin-left: 2.4rem;\n        margin-bottom: 0;\n        margin-top: -.4rem;\n    }\n"]);
 
   _templateObject4$d = function _templateObject4() {
     return data;
@@ -4210,7 +4210,7 @@ function _templateObject3$g() {
 }
 
 function _templateObject2$h() {
-  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 1.6rem;\n    }\n    padding-bottom: 2.4rem;\n    border-bottom: .1rem solid ", ";\n    display: flex;\n    flex-direction: column;\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    padding-bottom: 2rem;\n    border-bottom: .1rem solid ", ";\n    display: flex;\n    flex-direction: column;\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject2$h = function _templateObject2() {
     return data;
@@ -4220,7 +4220,7 @@ function _templateObject2$h() {
 }
 
 function _templateObject$k() {
-  var data = _taggedTemplateLiteral(["\n    padding: 2.4rem 1.6rem 2.4rem 1.6rem;\n    ", " {\n        padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    }\n\n    a {\n        font-size: 1.8rem;\n    }\n    background-color: ", ";\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: 1.6rem;\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 2.4rem 1.6rem 2.4rem 1.6rem;\n    ", " {\n        padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n    }\n    background-color: ", ";\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: 1.6rem;\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
 
   _templateObject$k = function _templateObject() {
     return data;
@@ -4240,7 +4240,7 @@ var Source = function Source(_ref) {
       reportBugText = _ref.reportBugText,
       markdownText = _ref.markdownText,
       reviewedDate = _ref.reviewedDate;
-  var reviewed = new Date(reviewedDate);
+  var reviewed = reviewedDate ? new Date(reviewedDate) : null;
   var months = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
   return core.jsx("div", {
     css: sourceStyle

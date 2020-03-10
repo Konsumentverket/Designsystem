@@ -10,6 +10,7 @@ export const sourceStyle = css`
 
     a {
         font-size: 1.8rem;
+        line-height: 3.2rem;
     }
     background-color: ${colors.theme1.midLight};
     ${medium} {
@@ -27,9 +28,9 @@ export const sourceStyle = css`
 
 export const firstRow = css`
     p {
-        padding-bottom: 1.6rem;
+        padding-bottom: 0;
     }
-    padding-bottom: 2.4rem;
+    padding-bottom: 2rem;
     border-bottom: .1rem solid ${colors.theme3.light};
     display: flex;
     flex-direction: column;
@@ -65,6 +66,7 @@ export const buttonStyle = css`
             margin-left: 2.4rem;
         }
         margin-left: 2.4rem;
+        margin-bottom: 0;
         margin-top: -.4rem;
     }
 `;
