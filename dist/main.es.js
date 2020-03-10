@@ -4150,7 +4150,7 @@ function _templateObject2$g() {
 }
 
 function _templateObject$j() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.7rem;\n    padding-left: 1rem;\n    padding-right: 3rem;\n    padding-bottom: 0.2rem;\n    padding-top: 2.4rem;\n    margin-bottom: 2.4rem;\n    ", " {\n        padding-left: 4rem;\n        padding-right: 4rem;\n    }\n    ul {\n        padding-left: 0;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.7rem;\n    padding-left: 1rem;\n    padding-right: 3rem;\n    padding-bottom: 0.2rem;\n    padding-top: 2.4rem;\n    ", " {\n        padding-left: 4rem;\n        padding-right: 4rem;\n    }\n    ul {\n        padding-left: 0;\n    }\n"]);
 
   _templateObject$j = function _templateObject() {
     return data;
@@ -4164,15 +4164,16 @@ var secondaryColorStyle = css$1(_templateObject2$g(), colors.theme2.light);
 /** @jsx jsx */
 var FactBox = function FactBox(_ref) {
   var content = _ref.content,
-      secondaryColor = _ref.secondaryColor;
+      secondaryColor = _ref.secondaryColor,
+      style = _ref.style;
   if (content == null) return null;
   return jsx("div", {
-    css: [wrapper$2, secondaryColor && secondaryColorStyle]
+    css: [wrapper$2, secondaryColor && secondaryColorStyle, style]
   }, content);
 };
 
 function _templateObject5$d() {
-  var data = _taggedTemplateLiteral(["\n    display: inline-block;\n    flex-grow: 1;\n    text-align: right;\n    font-size: 1.8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    ", " {\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
 
   _templateObject5$d = function _templateObject5() {
     return data;
@@ -4182,7 +4183,7 @@ function _templateObject5$d() {
 }
 
 function _templateObject4$d() {
-  var data = _taggedTemplateLiteral(["\n    margin-left: 2.4rem;\n    margin-top: -.4rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: 2.4rem;\n    margin-bottom: 1.6rem;\n    padding: 0 2.4rem;\n    &:first-of-type {\n        margin-left: 0;\n    }\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 2.4rem;\n        &:first-of-type {\n            margin-left: 2.4rem;\n        }\n        margin-left: 2.4rem;\n        margin-top: -.4rem;\n    }\n"]);
 
   _templateObject4$d = function _templateObject4() {
     return data;
@@ -4192,7 +4193,7 @@ function _templateObject4$d() {
 }
 
 function _templateObject3$g() {
-  var data = _taggedTemplateLiteral(["\n    padding-top: 2.4rem;\n    display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding-top: 2.4rem;\n    flex-direction: column;\n    display: flex;\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject3$g = function _templateObject3() {
     return data;
@@ -4202,7 +4203,7 @@ function _templateObject3$g() {
 }
 
 function _templateObject2$h() {
-  var data = _taggedTemplateLiteral(["\n    padding-bottom: 2.4rem;\n    border-bottom: .1rem solid ", ";\n    display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 1.6rem;\n    }\n    padding-bottom: 2.4rem;\n    border-bottom: .1rem solid ", ";\n    display: flex;\n    flex-direction: column;\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject2$h = function _templateObject2() {
     return data;
@@ -4212,7 +4213,7 @@ function _templateObject2$h() {
 }
 
 function _templateObject$k() {
-  var data = _taggedTemplateLiteral(["\n    padding: 2.8rem 3.2rem 2.4rem 3.2rem;\n    background-color: ", ";\n    p > a {\n        margin-bottom: 0;\n        margin-left: 1.6rem;\n    }\n    p > a:first-of-type {\n        margin-left: 0;\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 2.4rem 1.6rem 2.4rem 1.6rem;\n    ", " {\n        padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    }\n\n    a {\n        font-size: 1.8rem;\n    }\n    background-color: ", ";\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: 1.6rem;\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
 
   _templateObject$k = function _templateObject() {
     return data;
@@ -4220,11 +4221,11 @@ function _templateObject$k() {
 
   return data;
 }
-var sourceStyle = css$1(_templateObject$k(), colors.theme1.midLight);
-var firstRow = css$1(_templateObject2$h(), colors.theme3.light);
-var secondRow = css$1(_templateObject3$g());
-var buttonStyle$1 = css$1(_templateObject4$d());
-var rightAlign = css$1(_templateObject5$d());
+var sourceStyle = css$1(_templateObject$k(), medium, colors.theme1.midLight, medium);
+var firstRow = css$1(_templateObject2$h(), colors.theme3.light, medium);
+var secondRow = css$1(_templateObject3$g(), medium);
+var buttonStyle$1 = css$1(_templateObject4$d(), medium);
+var rightAlign = css$1(_templateObject5$d(), medium);
 
 /** @jsx jsx */
 var Source = function Source(_ref) {
@@ -4238,7 +4239,7 @@ var Source = function Source(_ref) {
     css: sourceStyle
   }, jsx("div", {
     css: [firstRow]
-  }, jsx("p", null, didThisHelpText || "Hittade du svaret på din fråga?"), jsx(Button, {
+  }, jsx("p", null, didThisHelpText || "Hittade du svaret på din fråga?"), jsx("div", null, jsx(Button, {
     style: buttonStyle$1,
     secondaryButtonStyle: true,
     text: "Ja"
@@ -4246,7 +4247,7 @@ var Source = function Source(_ref) {
     style: buttonStyle$1,
     secondaryButtonStyle: true,
     text: "Nej"
-  }), jsx("div", {
+  })), jsx("div", {
     css: rightAlign
   }, jsx("a", {
     href: "#"

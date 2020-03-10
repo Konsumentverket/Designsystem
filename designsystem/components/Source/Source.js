@@ -12,8 +12,10 @@ export const Source = ({ didThisHelpText, reportBugText, markdownText, reviewedD
     return <div css={sourceStyle}>
         <div css={[firstRow]}>
             <p>{didThisHelpText || "Hittade du svaret på din fråga?"}</p>
+            <div>
             <Button style={buttonStyle} secondaryButtonStyle={true} text={"Ja"} />
             <Button style={buttonStyle} secondaryButtonStyle={true} text={"Nej"} />
+            </div>
             <div css={rightAlign}><a href="#">{reportBugText || "Rapportera fel på denna sida"}</a></div>
         </div>
         <div css={[secondRow]}>
