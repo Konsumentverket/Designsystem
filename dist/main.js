@@ -55,35 +55,20 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
+function _objectSpread(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i] != null ? arguments[i] : {};
+    var ownKeys = Object.keys(source);
 
-    if (i % 2) {
-      ownKeys(source, true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(source).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
+    if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
     }
+
+    ownKeys.forEach(function (key) {
+      _defineProperty(target, key, source[key]);
+    });
   }
 
   return target;
@@ -162,10 +147,6 @@ function _iterableToArray(iter) {
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
-
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -459,9 +440,9 @@ var Close = (function (_ref) {
     width: "24px",
     height: "24px",
     viewBox: "0 0 24 24"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("polygon", {
-    points: "19.6211699 3 12.3129062 10.0362117 5.00557103 3 3 4.93779016 3 4.93964717 10.2831941 12.0009285 3 19.0584958 3 19.0603528 5.00557103 21 12.3129062 13.9619313 19.6211699 21 21.6267409 19.0594243 14.3435469 12.0009285 21.6267409 4.93871866"
-  }), ";");
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M15.5696544,12.005 L23.6488809,3.92612623 C24.1160647,3.45888353 24.1160647,2.70064538 23.6488809,2.23265269 L21.7715207,0.355432024 C21.304262,-0.111810675 20.5460727,-0.111810675 20.077989,0.355432024 L11.9995875,8.43505578 L3.92043601,0.356182013 C3.45317725,-0.111060687 2.69491303,-0.111060687 2.22697926,0.356182013 L0.350444071,2.23265269 C-0.11681469,2.69989539 -0.11681469,3.45813354 0.350444071,3.92612623 L8.42952055,12.005 L0.350444071,20.0838738 C-0.11681469,20.5511165 -0.11681469,21.3093546 0.350444071,21.7773473 L2.22765427,23.654568 C2.69491303,24.1218107 3.45317725,24.1218107 3.92118602,23.654568 L11.9995875,15.5749442 L20.078739,23.653818 C20.5460727,24.1210607 21.304262,24.1210607 21.7722707,23.653818 L23.6495559,21.7765973 C24.1168147,21.3093546 24.1168147,20.5511165 23.6495559,20.0831238 L15.5696544,12.005 Z"
+  }));
 });
 
 var Easytoread = (function (_ref) {
@@ -654,11 +635,11 @@ var External = (function (_ref) {
   return core.jsx("svg", _extends({
     className: className,
     css: style,
-    width: "24px",
-    height: "24px",
-    viewBox: "0 0 24 24"
+    width: "17px",
+    height: "15px",
+    viewBox: "0 0 17 15"
   }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M10.9996739,15.3752038 L9.87536683,14.2495924 L17.7494294,4.79993478 L15.2751712,3.67497554 L15.500163,3 L22.2492663,3 L22.2492663,9.75040759 L21.5742908,9.97474729 L20.4493315,7.49983696 L10.9996739,15.3752038 Z M2.32803159,20.6713163 C2.1089091,20.4528459 2,20.1867686 2,19.8750408 L2,8.6247962 C2,8.31306837 2.1089091,8.0463389 2.32803159,7.82786856 C2.54650194,7.61005036 2.8119271,7.49983696 3.12495924,7.49983696 L10.9996739,7.49983696 L10.9996739,9.5247636 L4.25057063,9.5247636 L4.25057063,18.9750734 L15.500163,18.9750734 L15.500163,14.2495924 L17.7494294,14.2495924 L17.7494294,19.8750408 C17.7494294,20.1867686 17.6405203,20.4528459 17.4220499,20.6713163 C17.2029274,20.8904388 16.9375023,21 16.6244701,21 L3.12495924,21 C2.8119271,21 2.54650194,20.8904388 2.32803159,20.6713163 L2.32803159,20.6713163 Z"
+    d: "M12.4715521,8.17957031 L12.4715521,13.59375 C12.4715521,14.3704102 11.8733073,15 11.1353143,15 L1.33623772,15 C0.598244763,15 0,14.3704102 0,13.59375 L0,3.28125 C0,2.50458984 0.598244763,1.875 1.33623772,1.875 L8.24013261,1.875 C8.41732158,1.875 8.58725358,1.94907496 8.71254832,2.08092773 L9.1579609,2.54967773 C9.57887578,2.99264648 9.28078342,3.75 8.68554519,3.75 L1.78165029,3.75 L1.78165029,13.125 L10.6899018,13.125 L10.6899018,8.64832031 C10.6899018,8.4618457 10.7603048,8.28298828 10.8855771,8.15112305 L11.3309897,7.68237305 C11.7518767,7.23943359 12.4715521,7.55314453 12.4715521,8.17957031 Z M16.0348527,1.09374023 C16.0348527,0.489697266 15.5695357,0 14.9955659,0 L10.5785486,0 C10.1480574,0 9.79907662,0.367265625 9.79907662,0.8203125 L9.79907662,1.34428711 C9.79907662,1.80618164 10.1612806,2.17702148 10.6000398,2.16427734 L12.4708561,2.1084375 L5.54232433,9.34833984 C5.27983713,9.62264648 5.27905766,10.0691895 5.5406262,10.3444629 L6.20537662,11.044043 C6.46694516,11.3193164 6.89128415,11.3185254 7.15190618,11.0422852 L14.0313591,3.75073242 L13.9782993,5.71957031 C13.9662175,6.18128906 14.3185945,6.5625 14.7574929,6.5625 L15.2553807,6.5625 C15.6858719,6.5625 16.0348527,6.19523438 16.0348527,5.7421875 L16.0348527,1.09374023 Z"
   }));
 });
 
@@ -1077,7 +1058,7 @@ var Button = function Button(_ref) {
   });
   style && styles.push(style);
 
-  var props = _objectSpread2({
+  var props = _objectSpread({
     "id": id,
     "css": styles,
     "className": cssClass.join(" "),
@@ -1652,17 +1633,12 @@ var Insurance = (function (_ref) {
   return core.jsx("svg", _extends({
     className: className,
     css: style,
-    width: "32px",
-    height: "26px",
-    viewBox: "0 0 32 26"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
-    fillRule: "evenodd"
-  }, core.jsx("g", {
-    transform: "translate(-489.000000, -1647.000000)",
-    fill: "inherit"
-  }, core.jsx("path", {
-    d: "M520.2,1667.8 L508.077,1667.8 C508.04,1668.7905 507.3415,1669.4 506.44,1669.4 L503.4,1669.4 C502.4655,1669.4 501.75,1668.5265 501.7615,1667.8 L489.8,1667.8 C489.3582,1667.8 489,1668.15815 489,1668.6 L489,1669.4 C489.0052,1671.16515 490.43485,1672.5948 492.2,1672.6 L517.8,1672.6 C519.56515,1672.5948 520.9948,1671.16515 521,1669.4 L521,1668.6 C521,1668.15815 520.64185,1667.8 520.2,1667.8 L520.2,1667.8 Z M495.4,1663 L514.6,1663 L514.6,1650.2 L495.4,1650.2 L495.4,1663 Z M517.8,1649.4 C517.79615,1648.0761 516.7239,1647.00385 515.4,1647 L494.6,1647 C493.2761,1647.00385 492.20385,1648.0761 492.2,1649.4 L492.2,1666.2 L517.8,1666.2 L517.8,1649.4 Z M500.6,1658.2 L503.4,1658.2 L503.4,1661 C503.4,1661.2209 503.5791,1661.4 503.8,1661.4 L506.2,1661.4 C506.4209,1661.4 506.6,1661.2209 506.6,1661 L506.6,1658.2 L509.4,1658.2 C509.6209,1658.2 509.8,1658.0209 509.8,1657.8 L509.8,1655.4 C509.8,1655.1791 509.6209,1655 509.4,1655 L506.6,1655 L506.6,1652.2 C506.6,1651.9791 506.4209,1651.8 506.2,1651.8 L503.8,1651.8 C503.5791,1651.8 503.4,1651.9791 503.4,1652.2 L503.4,1655 L500.6,1655 C500.3791,1655 500.2,1655.1791 500.2,1655.4 L500.2,1657.8 C500.2,1658.0209 500.3791,1658.2 500.6,1658.2 L500.6,1658.2 Z"
-  }))));
+    width: "34px",
+    height: "36px",
+    viewBox: "0 0 34 36"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M16.8820031,31.3786969 L16.8749719,4.58963438 L29.2430109,9.74354062 C29.0109094,20.3888531 23.4702844,28.1021344 16.8820031,31.3786969 M31.6757531,5.88338437 L18.1757531,0.258384375 C17.3452922,-0.086146875 16.4118234,-0.086146875 15.5812219,0.258384375 L2.08122188,5.88338437 C0.822698438,6.40369687 -2.8125e-05,7.63416562 -2.8125e-05,8.99822812 C-2.8125e-05,22.9552594 8.05075312,32.6021344 15.5741906,35.7380719 C16.4038781,36.0826031 17.3390344,36.0826031 18.1687922,35.7380719 C24.1945031,33.2279156 33.7499719,24.5583844 33.7499719,8.99822812 C33.7499719,7.63416562 32.9273156,6.40369687 31.6757531,5.88338437"
+  }));
 });
 
 var InternetFiberBroadband = (function (_ref) {
@@ -2951,24 +2927,37 @@ var Heading = function Heading(_ref) {
 };
 
 /* eslint-disable */
-// murmurhash2 via https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
-function murmurhash2_32_gc(str) {
-  var l = str.length,
-      h = l ^ l,
+// Inspired by https://github.com/garycourt/murmurhash-js
+// Ported from https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash2.cpp#L37-L86
+function murmur2(str) {
+  // 'm' and 'r' are mixing constants generated offline.
+  // They're not really 'magic', they just happen to work well.
+  // const m = 0x5bd1e995;
+  // const r = 24;
+  // Initialize the hash
+  var h = 0; // Mix 4 bytes at a time into the hash
+
+  var k,
       i = 0,
-      k;
+      len = str.length;
 
-  while (l >= 4) {
+  for (; len >= 4; ++i, len -= 4) {
     k = str.charCodeAt(i) & 0xff | (str.charCodeAt(++i) & 0xff) << 8 | (str.charCodeAt(++i) & 0xff) << 16 | (str.charCodeAt(++i) & 0xff) << 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    k ^= k >>> 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16) ^ k;
-    l -= 4;
-    ++i;
-  }
+    k =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16);
+    k ^=
+    /* k >>> r: */
+    k >>> 24;
+    h =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16) ^
+    /* Math.imul(h, m): */
+    (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Handle the last few bytes of the input array
 
-  switch (l) {
+
+  switch (len) {
     case 3:
       h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
 
@@ -2977,13 +2966,18 @@ function murmurhash2_32_gc(str) {
 
     case 1:
       h ^= str.charCodeAt(i) & 0xff;
-      h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  }
+      h =
+      /* Math.imul(h, m): */
+      (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Do a few final mixes of the hash to ensure the last few
+  // bytes are well-incorporated.
+
 
   h ^= h >>> 13;
-  h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  h ^= h >>> 15;
-  return (h >>> 0).toString(36);
+  h =
+  /* Math.imul(h, m): */
+  (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  return ((h ^ h >>> 15) >>> 0).toString(36);
 }
 
 var unitlessKeys = {
@@ -3339,7 +3333,7 @@ var serializeStyles = function serializeStyles(args, registered, mergedProps) {
     match[1];
   }
 
-  var name = murmurhash2_32_gc(styles) + identifierName;
+  var name = murmur2(styles) + identifierName;
 
   if (process.env.NODE_ENV !== 'production') {
     // $FlowFixMe SerializedStyles type doesn't have toString property (and we don't want to add it)
