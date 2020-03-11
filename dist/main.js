@@ -2706,7 +2706,7 @@ function _templateObject7$4() {
 }
 
 function _templateObject6$5() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:1.6rem;\n      line-height:2.4rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n      font-size:1.6rem;\n      line-height:2.4rem;\n      ", "{\n            font-size:1.8rem;\n            \n      }\n\n"]);
 
   _templateObject6$5 = function _templateObject6() {
     return data;
@@ -2716,7 +2716,7 @@ function _templateObject6$5() {
 }
 
 function _templateObject5$6() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:1.8rem;\n      line-height:3.2rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n      font-size:1.8rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:2.0rem;\n            \n      }\n\n"]);
 
   _templateObject5$6 = function _templateObject5() {
     return data;
@@ -2768,8 +2768,8 @@ var commonSubHeadingStyle = core.css(_templateObject$a());
 var h1Style = core.css(_templateObject2$8(), medium);
 var h2Style = core.css(_templateObject3$8(), medium);
 var h3Style = core.css(_templateObject4$6(), medium);
-var h4Style = core.css(_templateObject5$6());
-var h5Style = core.css(_templateObject6$5());
+var h4Style = core.css(_templateObject5$6(), medium);
+var h5Style = core.css(_templateObject6$5(), medium);
 var h6Style = core.css(_templateObject7$4());
 
 var SubHeading = function SubHeading(_ref) {
