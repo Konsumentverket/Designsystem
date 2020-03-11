@@ -34,6 +34,10 @@ import Telemarketing from '../../icons/EditorIcons/Telemarketing'
 import Travel from '../../icons/EditorIcons/Travel'
 import WhiteGoods from '../../icons/EditorIcons/WhiteGoods'
 import Withdrawal from '../../icons/EditorIcons/Withdrawal'
+import Pen from '../../icons/EditorIcons/Pen'
+import Map from '../../icons/EditorIcons/Map'
+import ChatWithUs from '../../icons/EditorIcons/ChatWithUs'
+import CallUs from '../../icons/EditorIcons/CallUs'
 
 
 const editorIconDefinitions = {
@@ -69,7 +73,11 @@ const editorIconDefinitions = {
     Telemarketing,
     Travel,
     WhiteGoods,
-    Withdrawal
+    Withdrawal,
+    Pen,
+    Map,
+    ChatWithUs,
+    CallUs
 }
 
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
