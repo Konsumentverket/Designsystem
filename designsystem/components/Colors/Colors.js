@@ -53,6 +53,9 @@ const eccTheme = {
     },
     theme2: {
         "light": "#d7e6ed"
+    },
+    theme3: {
+        "xLight": "#d7e6ed"
     }
 }
 
