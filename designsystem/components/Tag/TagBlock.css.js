@@ -137,6 +137,21 @@ export const arrowStyle = css`
     }
 `;
 
+export const arrowStyleECC = css`
+    position: absolute;
+    top: 2rem;
+    right: .5rem;
+    vertical-align: middle;
+    height: 3.2rem;
+    width: 3.2rem;
+    fill: #fff;
+
+    [dir='rtl'] &{
+        left: .5rem;
+        right: auto;
+        transform: rotate(90deg);
+    }
+`;
 
 
 
