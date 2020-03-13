@@ -12,7 +12,7 @@ storiesOf('Digitala Produkter|React komponenter', module)
       // headingLevel={select('Heading', ['1', '2', '3', '4', '5'])}
       alternativeTagText={text('Alternativ tagtext', 'en tagg')}
       invertedColors={boolean('Inventerade färger', false)}
-      eccArrow={boolean('ECC pil', false)}
+      secondaryArrowStyle={boolean('Alternativ pil', false)}
     />
     , { notes: NotesLoader(name) }
   )

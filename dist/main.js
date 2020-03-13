@@ -2574,7 +2574,7 @@ var tagItem = core.css(_templateObject9());
 var tagItemText = core.css(_templateObject10());
 var iconStyle$2 = core.css(_templateObject11());
 var arrowStyle$1 = core.css(_templateObject12());
-var arrowStyleECC = core.css(_templateObject13());
+var secondaryArrowStyleCSS = core.css(_templateObject13());
 
 /** @jsx jsx */
 
@@ -2607,8 +2607,8 @@ var TagBlock = React__default.forwardRef(function (_ref, ref) {
       alternativeTagText = _ref.alternativeTagText,
       style = _ref.style,
       onClick = _ref.onClick,
-      _ref$eccArrow = _ref.eccArrow,
-      eccArrow = _ref$eccArrow === void 0 ? false : _ref$eccArrow;
+      _ref$secondaryArrowSt = _ref.secondaryArrowStyle,
+      secondaryArrowStyle = _ref$secondaryArrowSt === void 0 ? false : _ref$secondaryArrowSt;
   var headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7'];
   var SelectedHeading = headings[headingLevel - 1] || 'h2';
   return core.jsx("div", {
@@ -2626,10 +2626,10 @@ var TagBlock = React__default.forwardRef(function (_ref, ref) {
   }, "Ikon"), core.jsx(SelectedHeading, {
     className: "tagHeading",
     css: [tagHeading, icon != null ? tagIconHeading : null]
-  }, heading), eccArrow ? core.jsx(Icon, {
+  }, heading), secondaryArrowStyle ? core.jsx(Icon, {
     "aria-hidden": "true",
     icon: "LinkArrow",
-    style: arrowStyleECC
+    style: secondaryArrowStyleCSS
   }) : core.jsx(Icon, {
     "aria-hidden": "true",
     icon: "Arrow",

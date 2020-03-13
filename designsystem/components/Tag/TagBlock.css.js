@@ -137,7 +137,7 @@ export const arrowStyle = css`
     }
 `;
 
-export const arrowStyleECC = css`
+export const secondaryArrowStyleCSS = css`
     position: absolute;
     top: 2rem;
     right: .5rem;
