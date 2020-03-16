@@ -49,10 +49,13 @@ const eccTheme = {
         "xDark": "#1C2742",
         "midDark": "#314575",
         "mid": "#4663a9",
-        "midLight": "#e4e8f2",
+        "midLight": "#eaeae9",
     },
     theme2: {
         "light": "#d7e6ed"
+    },
+    theme3: {
+        "xLight": "#d7e6ed"
     }
 }
 

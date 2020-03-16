@@ -4,6 +4,7 @@ import NotesLoader from '../NotesLoader';
 import { Icon, iconDefinitions } from './Icon';
 import { select, text } from '@storybook/addon-knobs';
 import css from '@emotion/css';
+import { editorIconDefinitions, EditorIcon } from './EditorIcon';
 
 var clickToDownload = (e, key) => {
     e.preventDefault();
@@ -37,8 +38,11 @@ storiesOf('Digitala Produkter|React komponenter/Ikoner', module)
         </a>
     }, { notes: NotesLoader(name) }
     ).add("Alla ikoner", () => {
-        let icons = Object.keys(iconDefinitions).map((key) => (<div key={key}>{key}<Icon icon={key} style={{ fill: '#000' }} /></div>));
+        let icons = Object.keys(iconDefinitions).map((key) => (<><br/><br/><div key={key}>{key} <br/> <Icon icon={key} style={{ fill: '#000',marginTop:'8px' }} /></div></>));
         return icons;
-    });;
+    }).add("Alla 'Redaktörs' ikoner",() => {
+        let icons = Object.keys(editorIconDefinitions).map((key) => (<><br/><br/><div key={key}>{key} <br/> <EditorIcon icon={key} style={{ fill: '#000',marginTop:'8px' }} /></div></>));
+        return icons;
+    });
 
 
