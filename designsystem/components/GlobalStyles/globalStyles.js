@@ -142,6 +142,16 @@ const globalStyles = (
           outline: 4px solid ${colors.states.focus};
         }
       }
+
+    i {
+      font-style: italic;
+    }
+    strong {
+      font-weight: 700;
+    }
+    u {
+      text-decoration: underline;
+    }
   }
 `;
 

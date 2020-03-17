@@ -55,20 +55,35 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-function _objectSpread(target) {
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
 
-    if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
+    if (i % 2) {
+      ownKeys(source, true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(source).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
     }
-
-    ownKeys.forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    });
   }
 
   return target;
@@ -180,6 +195,8 @@ function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance");
 }
 
+var _theme;
+
 var defaultTheme = {
   theme1: {
     "xDark": "#162259",
@@ -222,17 +239,19 @@ var defaultTheme = {
   }
 };
 var eccTheme = {
-  theme1: {
+  theme1: (_theme = {
+    "dark": "#4663a9",
     "xDark": "#4663a9",
-    "midDark": "#4663a9",
-    "mid": "#4663a9",
-    "midLight": "#e4e8f2"
-  },
+    "midDark": "#4663a9"
+  }, _defineProperty(_theme, "xDark", "#1C2742"), _defineProperty(_theme, "midDark", "#314575"), _defineProperty(_theme, "mid", "#4663a9"), _defineProperty(_theme, "midLight", "#eaeae9"), _theme),
   theme2: {
-    "light": "#f4f8e9"
+    "light": "#d7e6ed"
+  },
+  theme3: {
+    "xLight": "#d7e6ed"
   }
 };
-var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme; // For development on ECC (Bug with hotreload)
+var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme;
 
 var spacing = {
   'spacing-xs': '0.25rem',
@@ -383,7 +402,7 @@ function _templateObject3$1() {
 }
 
 function _templateObject2$1() {
-  var data = _taggedTemplateLiteral(["\n    display:inline-block;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    box-sizing: border-box;\n    cursor:pointer;\n    text-align: center;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:auto;\n        text-align:left;\n        padding:1.6rem 2.4rem;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    display:inline-block;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    box-sizing: border-box;\n    cursor:pointer;\n    text-align: center;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:auto;\n        text-align:left;\n        padding:1.6rem 2.4rem;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
 
   _templateObject2$1 = function _templateObject2() {
     return data;
@@ -439,9 +458,9 @@ var Close = (function (_ref) {
     width: "24px",
     height: "24px",
     viewBox: "0 0 24 24"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("polygon", {
-    points: "19.6211699 3 12.3129062 10.0362117 5.00557103 3 3 4.93779016 3 4.93964717 10.2831941 12.0009285 3 19.0584958 3 19.0603528 5.00557103 21 12.3129062 13.9619313 19.6211699 21 21.6267409 19.0594243 14.3435469 12.0009285 21.6267409 4.93871866"
-  }), ";");
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M15.5696544,12.005 L23.6488809,3.92612623 C24.1160647,3.45888353 24.1160647,2.70064538 23.6488809,2.23265269 L21.7715207,0.355432024 C21.304262,-0.111810675 20.5460727,-0.111810675 20.077989,0.355432024 L11.9995875,8.43505578 L3.92043601,0.356182013 C3.45317725,-0.111060687 2.69491303,-0.111060687 2.22697926,0.356182013 L0.350444071,2.23265269 C-0.11681469,2.69989539 -0.11681469,3.45813354 0.350444071,3.92612623 L8.42952055,12.005 L0.350444071,20.0838738 C-0.11681469,20.5511165 -0.11681469,21.3093546 0.350444071,21.7773473 L2.22765427,23.654568 C2.69491303,24.1218107 3.45317725,24.1218107 3.92118602,23.654568 L11.9995875,15.5749442 L20.078739,23.653818 C20.5460727,24.1210607 21.304262,24.1210607 21.7722707,23.653818 L23.6495559,21.7765973 C24.1168147,21.3093546 24.1168147,20.5511165 23.6495559,20.0831238 L15.5696544,12.005 Z"
+  }));
 });
 
 var Easytoread = (function (_ref) {
@@ -634,11 +653,11 @@ var External = (function (_ref) {
   return core.jsx("svg", _extends({
     className: className,
     css: style,
-    width: "24px",
-    height: "24px",
-    viewBox: "0 0 24 24"
+    width: "17px",
+    height: "15px",
+    viewBox: "0 0 17 15"
   }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M10.9996739,15.3752038 L9.87536683,14.2495924 L17.7494294,4.79993478 L15.2751712,3.67497554 L15.500163,3 L22.2492663,3 L22.2492663,9.75040759 L21.5742908,9.97474729 L20.4493315,7.49983696 L10.9996739,15.3752038 Z M2.32803159,20.6713163 C2.1089091,20.4528459 2,20.1867686 2,19.8750408 L2,8.6247962 C2,8.31306837 2.1089091,8.0463389 2.32803159,7.82786856 C2.54650194,7.61005036 2.8119271,7.49983696 3.12495924,7.49983696 L10.9996739,7.49983696 L10.9996739,9.5247636 L4.25057063,9.5247636 L4.25057063,18.9750734 L15.500163,18.9750734 L15.500163,14.2495924 L17.7494294,14.2495924 L17.7494294,19.8750408 C17.7494294,20.1867686 17.6405203,20.4528459 17.4220499,20.6713163 C17.2029274,20.8904388 16.9375023,21 16.6244701,21 L3.12495924,21 C2.8119271,21 2.54650194,20.8904388 2.32803159,20.6713163 L2.32803159,20.6713163 Z"
+    d: "M12.4715521,8.17957031 L12.4715521,13.59375 C12.4715521,14.3704102 11.8733073,15 11.1353143,15 L1.33623772,15 C0.598244763,15 0,14.3704102 0,13.59375 L0,3.28125 C0,2.50458984 0.598244763,1.875 1.33623772,1.875 L8.24013261,1.875 C8.41732158,1.875 8.58725358,1.94907496 8.71254832,2.08092773 L9.1579609,2.54967773 C9.57887578,2.99264648 9.28078342,3.75 8.68554519,3.75 L1.78165029,3.75 L1.78165029,13.125 L10.6899018,13.125 L10.6899018,8.64832031 C10.6899018,8.4618457 10.7603048,8.28298828 10.8855771,8.15112305 L11.3309897,7.68237305 C11.7518767,7.23943359 12.4715521,7.55314453 12.4715521,8.17957031 Z M16.0348527,1.09374023 C16.0348527,0.489697266 15.5695357,0 14.9955659,0 L10.5785486,0 C10.1480574,0 9.79907662,0.367265625 9.79907662,0.8203125 L9.79907662,1.34428711 C9.79907662,1.80618164 10.1612806,2.17702148 10.6000398,2.16427734 L12.4708561,2.1084375 L5.54232433,9.34833984 C5.27983713,9.62264648 5.27905766,10.0691895 5.5406262,10.3444629 L6.20537662,11.044043 C6.46694516,11.3193164 6.89128415,11.3185254 7.15190618,11.0422852 L14.0313591,3.75073242 L13.9782993,5.71957031 C13.9662175,6.18128906 14.3185945,6.5625 14.7574929,6.5625 L15.2553807,6.5625 C15.6858719,6.5625 16.0348527,6.19523438 16.0348527,5.7421875 L16.0348527,1.09374023 Z"
   }));
 });
 
@@ -1057,7 +1076,7 @@ var Button = function Button(_ref) {
   });
   style && styles.push(style);
 
-  var props = _objectSpread({
+  var props = _objectSpread2({
     "id": id,
     "css": styles,
     "className": cssClass.join(" "),
@@ -1632,17 +1651,12 @@ var Insurance = (function (_ref) {
   return core.jsx("svg", _extends({
     className: className,
     css: style,
-    width: "32px",
-    height: "26px",
-    viewBox: "0 0 32 26"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
-    fillRule: "evenodd"
-  }, core.jsx("g", {
-    transform: "translate(-489.000000, -1647.000000)",
-    fill: "inherit"
-  }, core.jsx("path", {
-    d: "M520.2,1667.8 L508.077,1667.8 C508.04,1668.7905 507.3415,1669.4 506.44,1669.4 L503.4,1669.4 C502.4655,1669.4 501.75,1668.5265 501.7615,1667.8 L489.8,1667.8 C489.3582,1667.8 489,1668.15815 489,1668.6 L489,1669.4 C489.0052,1671.16515 490.43485,1672.5948 492.2,1672.6 L517.8,1672.6 C519.56515,1672.5948 520.9948,1671.16515 521,1669.4 L521,1668.6 C521,1668.15815 520.64185,1667.8 520.2,1667.8 L520.2,1667.8 Z M495.4,1663 L514.6,1663 L514.6,1650.2 L495.4,1650.2 L495.4,1663 Z M517.8,1649.4 C517.79615,1648.0761 516.7239,1647.00385 515.4,1647 L494.6,1647 C493.2761,1647.00385 492.20385,1648.0761 492.2,1649.4 L492.2,1666.2 L517.8,1666.2 L517.8,1649.4 Z M500.6,1658.2 L503.4,1658.2 L503.4,1661 C503.4,1661.2209 503.5791,1661.4 503.8,1661.4 L506.2,1661.4 C506.4209,1661.4 506.6,1661.2209 506.6,1661 L506.6,1658.2 L509.4,1658.2 C509.6209,1658.2 509.8,1658.0209 509.8,1657.8 L509.8,1655.4 C509.8,1655.1791 509.6209,1655 509.4,1655 L506.6,1655 L506.6,1652.2 C506.6,1651.9791 506.4209,1651.8 506.2,1651.8 L503.8,1651.8 C503.5791,1651.8 503.4,1651.9791 503.4,1652.2 L503.4,1655 L500.6,1655 C500.3791,1655 500.2,1655.1791 500.2,1655.4 L500.2,1657.8 C500.2,1658.0209 500.3791,1658.2 500.6,1658.2 L500.6,1658.2 Z"
-  }))));
+    width: "34px",
+    height: "36px",
+    viewBox: "0 0 34 36"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M16.8820031,31.3786969 L16.8749719,4.58963438 L29.2430109,9.74354062 C29.0109094,20.3888531 23.4702844,28.1021344 16.8820031,31.3786969 M31.6757531,5.88338437 L18.1757531,0.258384375 C17.3452922,-0.086146875 16.4118234,-0.086146875 15.5812219,0.258384375 L2.08122188,5.88338437 C0.822698438,6.40369687 -2.8125e-05,7.63416562 -2.8125e-05,8.99822812 C-2.8125e-05,22.9552594 8.05075312,32.6021344 15.5741906,35.7380719 C16.4038781,36.0826031 17.3390344,36.0826031 18.1687922,35.7380719 C24.1945031,33.2279156 33.7499719,24.5583844 33.7499719,8.99822812 C33.7499719,7.63416562 32.9273156,6.40369687 31.6757531,5.88338437"
+  }));
 });
 
 var InternetFiberBroadband = (function (_ref) {
@@ -1989,6 +2003,122 @@ var Withdrawal = (function (_ref) {
   })))));
 });
 
+var Pen = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "31px",
+    height: "32px",
+    viewBox: "0 0 31 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M30.1462496,8.87691571 L27.3549094,11.7582804 C27.0703259,12.052042 26.6101484,12.052042 26.3255649,11.7582804 L19.6045507,4.82050431 C19.3199673,4.52674262 19.3199673,4.05172372 19.6045507,3.75796203 L22.3958909,0.876597379 C23.5281698,-0.292199126 25.36888,-0.292199126 26.507214,0.876597379 L30.1462496,4.63299685 C31.2845835,5.80179335 31.2845835,7.70186895 30.1462496,8.87691571 Z M17.2067835,6.23306051 L1.30643829,22.6462136 L0.0227851346,30.2402657 C-0.152808929,31.2653065 0.713051455,32.1528418 1.70606616,31.9778349 L9.06285194,30.6465319 L24.9631972,14.2333788 C25.2477807,13.9396172 25.2477807,13.4645983 24.9631972,13.1708366 L18.242183,6.23306051 C17.9515446,5.93929882 17.491367,5.93929882 17.2067835,6.23306051 Z M7.51278021,21.2399076 C7.17975698,20.8961439 7.17975698,20.3461221 7.51278021,20.0023584 L16.8374305,10.3769754 C17.1704537,10.0332117 17.7032909,10.0332117 18.0363141,10.3769754 C18.3693373,10.7207391 18.3693373,11.270761 18.0363141,11.6145246 L8.71166382,21.2399076 C8.37864059,21.5836713 7.84580343,21.5836713 7.51278021,21.2399076 L7.51278021,21.2399076 Z M5.32693686,26.4963668 L8.23332137,26.4963668 L8.23332137,28.7652071 L4.32786718,29.4714852 L2.44477222,27.5276578 L3.12898358,23.4962474 L5.32693686,23.4962474 L5.32693686,26.4963668 Z"
+  }));
+}); // <?xml version="1.0" encoding="UTF-8"?>
+// <svg width="31px" height="32px" viewBox="0 0 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+//     <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+//     <title>Shape</title>
+//     <desc>Created with Sketch.</desc>
+//     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+//         <g id="19-11-13-Kontakt_inaktiv/stängd" transform="translate(-264.000000, -440.000000)" fill="#006EC2" fill-rule="nonzero">
+//             <g id="pencil-alt" transform="translate(264.000000, 440.000000)">
+//                 <path d="M30.1462496,8.87691571 L27.3549094,11.7582804 C27.0703259,12.052042 26.6101484,12.052042 26.3255649,11.7582804 L19.6045507,4.82050431 C19.3199673,4.52674262 19.3199673,4.05172372 19.6045507,3.75796203 L22.3958909,0.876597379 C23.5281698,-0.292199126 25.36888,-0.292199126 26.507214,0.876597379 L30.1462496,4.63299685 C31.2845835,5.80179335 31.2845835,7.70186895 30.1462496,8.87691571 Z M17.2067835,6.23306051 L1.30643829,22.6462136 L0.0227851346,30.2402657 C-0.152808929,31.2653065 0.713051455,32.1528418 1.70606616,31.9778349 L9.06285194,30.6465319 L24.9631972,14.2333788 C25.2477807,13.9396172 25.2477807,13.4645983 24.9631972,13.1708366 L18.242183,6.23306051 C17.9515446,5.93929882 17.491367,5.93929882 17.2067835,6.23306051 Z M7.51278021,21.2399076 C7.17975698,20.8961439 7.17975698,20.3461221 7.51278021,20.0023584 L16.8374305,10.3769754 C17.1704537,10.0332117 17.7032909,10.0332117 18.0363141,10.3769754 C18.3693373,10.7207391 18.3693373,11.270761 18.0363141,11.6145246 L8.71166382,21.2399076 C8.37864059,21.5836713 7.84580343,21.5836713 7.51278021,21.2399076 L7.51278021,21.2399076 Z M5.32693686,26.4963668 L8.23332137,26.4963668 L8.23332137,28.7652071 L4.32786718,29.4714852 L2.44477222,27.5276578 L3.12898358,23.4962474 L5.32693686,23.4962474 L5.32693686,26.4963668 Z" id="Shape"></path>
+//             </g>
+//         </g>
+//     </g>
+// </svg>
+
+var Map = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "32px",
+    height: "27px",
+    viewBox: "0 0 32 27"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M16,0 C12.1338889,0 9,2.97474609 9,6.64453125 C9,9.61136719 13.575,15.01875 15.3277778,16.9815234 C15.6827778,17.3791406 16.3177778,17.3791406 16.6722222,16.9815234 C18.425,15.01875 23,9.61136719 23,6.64453125 C23,2.97474609 19.8661111,0 16,0 Z M16,8.859375 C14.7111111,8.859375 13.6666667,7.86796875 13.6666667,6.64453125 C13.6666667,5.42109375 14.7111111,4.4296875 16,4.4296875 C17.2888889,4.4296875 18.3333333,5.42109375 18.3333333,6.64453125 C18.3333333,7.86796875 17.2888889,8.859375 16,8.859375 Z M1.11777778,11.3879883 C0.442815432,11.6442448 0.000161653935,12.2646924 0,12.9547266 L0,26.1551953 C0,26.7521484 0.635,27.1603125 1.21888889,26.9388281 L8.88888889,23.625 L8.88888889,11.3336719 C8.39777778,10.4909766 7.99611111,9.67042969 7.70833333,8.88574219 L1.11777778,11.3879883 Z M16,18.9669727 C15.2183333,18.9669727 14.4788889,18.6410742 13.9716667,18.0725977 C12.8794444,16.8491602 11.7177778,15.455918 10.6666667,14.0268164 L10.6666667,23.6244727 L21.3333333,26.9994727 L21.3333333,14.0273437 C20.2822222,15.455918 19.1211111,16.8496875 18.0283333,18.073125 C17.5211111,18.6410742 16.7816667,18.9669727 16,18.9669727 Z M30.7811111,8.49867187 L23.1111111,11.8125 L23.1111111,27 L30.8822222,24.0495117 C31.5572855,23.7933742 32,23.1728523 32,22.4827734 L32,9.28230469 C32,8.68535156 31.365,8.2771875 30.7811111,8.49867187 L30.7811111,8.49867187 Z"
+  }));
+}); // <?xml version="1.0" encoding="UTF-8"?>
+// <svg width="32px" height="27px" viewBox="0 0 32 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+//     <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+//     <title>Shape</title>
+//     <desc>Created with Sketch.</desc>
+//     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+//         <g id="19-11-13-Kontakt_inaktiv/stängd" transform="translate(-264.000000, -608.000000)" fill="#006EC2" fill-rule="nonzero">
+//             <g id="map-marked-alt" transform="translate(264.000000, 608.000000)">
+//                 <path d="M16,0 C12.1338889,0 9,2.97474609 9,6.64453125 C9,9.61136719 13.575,15.01875 15.3277778,16.9815234 C15.6827778,17.3791406 16.3177778,17.3791406 16.6722222,16.9815234 C18.425,15.01875 23,9.61136719 23,6.64453125 C23,2.97474609 19.8661111,0 16,0 Z M16,8.859375 C14.7111111,8.859375 13.6666667,7.86796875 13.6666667,6.64453125 C13.6666667,5.42109375 14.7111111,4.4296875 16,4.4296875 C17.2888889,4.4296875 18.3333333,5.42109375 18.3333333,6.64453125 C18.3333333,7.86796875 17.2888889,8.859375 16,8.859375 Z M1.11777778,11.3879883 C0.442815432,11.6442448 0.000161653935,12.2646924 0,12.9547266 L0,26.1551953 C0,26.7521484 0.635,27.1603125 1.21888889,26.9388281 L8.88888889,23.625 L8.88888889,11.3336719 C8.39777778,10.4909766 7.99611111,9.67042969 7.70833333,8.88574219 L1.11777778,11.3879883 Z M16,18.9669727 C15.2183333,18.9669727 14.4788889,18.6410742 13.9716667,18.0725977 C12.8794444,16.8491602 11.7177778,15.455918 10.6666667,14.0268164 L10.6666667,23.6244727 L21.3333333,26.9994727 L21.3333333,14.0273437 C20.2822222,15.455918 19.1211111,16.8496875 18.0283333,18.073125 C17.5211111,18.6410742 16.7816667,18.9669727 16,18.9669727 Z M30.7811111,8.49867187 L23.1111111,11.8125 L23.1111111,27 L30.8822222,24.0495117 C31.5572855,23.7933742 32,23.1728523 32,22.4827734 L32,9.28230469 C32,8.68535156 31.365,8.2771875 30.7811111,8.49867187 L30.7811111,8.49867187 Z" id="Shape"></path>
+//             </g>
+//         </g>
+//     </g>
+// </svg>
+
+var ChatWithUs = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "32px",
+    height: "25px",
+    viewBox: "0 0 32 25"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M12.4444383,18.2397892 C10.355606,18.2397892 8.38738475,17.8623896 6.65871893,17.1962623 C4.91566424,18.5661843 2.77710974,19.40095 0.505166417,19.6402357 C0.488740902,19.6419646 0.472237437,19.6428585 0.455721997,19.6428585 C0.248166544,19.6428585 0.0606666367,19.5034611 0.0103333282,19.304633 C-0.0441110893,19.083595 0.126333271,18.9475459 0.295110965,18.7853807 C1.12938833,17.9796329 2.14077672,17.3462065 2.53633208,14.6393425 C0.945277311,13.1074786 0,11.1954249 0,9.11992249 C0,4.08258956 5.5720528,0 12.4444383,0 C19.3168238,0 24.8888766,4.08253376 24.8888766,9.11992249 C24.8888766,14.160771 19.3168238,18.2397892 12.4444383,18.2397892 Z M31.7259288,24.2204815 C30.9512625,23.487948 30.0120963,22.9121109 29.6448187,20.4513407 C33.4674835,16.8482154 32.5432062,11.6938066 27.5518197,8.89637337 C27.5535419,8.97081534 27.5554864,9.0452015 27.5554864,9.11992249 C27.5554864,15.9554698 20.3564344,21.1954813 11.7637164,20.9068653 C13.8815487,22.6345997 16.9853249,23.7244994 20.4443788,23.7244994 C22.3840445,23.7244994 24.2116547,23.381419 25.8168206,22.7758386 C27.4353753,24.021207 29.4211521,24.7800798 31.5308733,24.9976021 C31.7412065,25.0196445 31.9399287,24.8875017 31.9903175,24.692524 C32.0409286,24.4915753 31.8826509,24.3679146 31.7259288,24.2204815 L31.7259288,24.2204815 Z"
+  }));
+}); // <?xml version="1.0" encoding="UTF-8"?>
+// <svg width="32px" height="25px" viewBox="0 0 32 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+//     <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+//     <title>Shape</title>
+//     <desc>Created with Sketch.</desc>
+//     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+//         <g id="19-11-13-Kontakt_utfälld" transform="translate(-264.000000, -444.000000)" fill="#006EC2" fill-rule="nonzero">
+//             <g id="comments" transform="translate(264.000000, 444.000000)">
+//                 <path d="M12.4444383,18.2397892 C10.355606,18.2397892 8.38738475,17.8623896 6.65871893,17.1962623 C4.91566424,18.5661843 2.77710974,19.40095 0.505166417,19.6402357 C0.488740902,19.6419646 0.472237437,19.6428585 0.455721997,19.6428585 C0.248166544,19.6428585 0.0606666367,19.5034611 0.0103333282,19.304633 C-0.0441110893,19.083595 0.126333271,18.9475459 0.295110965,18.7853807 C1.12938833,17.9796329 2.14077672,17.3462065 2.53633208,14.6393425 C0.945277311,13.1074786 0,11.1954249 0,9.11992249 C0,4.08258956 5.5720528,0 12.4444383,0 C19.3168238,0 24.8888766,4.08253376 24.8888766,9.11992249 C24.8888766,14.160771 19.3168238,18.2397892 12.4444383,18.2397892 Z M31.7259288,24.2204815 C30.9512625,23.487948 30.0120963,22.9121109 29.6448187,20.4513407 C33.4674835,16.8482154 32.5432062,11.6938066 27.5518197,8.89637337 C27.5535419,8.97081534 27.5554864,9.0452015 27.5554864,9.11992249 C27.5554864,15.9554698 20.3564344,21.1954813 11.7637164,20.9068653 C13.8815487,22.6345997 16.9853249,23.7244994 20.4443788,23.7244994 C22.3840445,23.7244994 24.2116547,23.381419 25.8168206,22.7758386 C27.4353753,24.021207 29.4211521,24.7800798 31.5308733,24.9976021 C31.7412065,25.0196445 31.9399287,24.8875017 31.9903175,24.692524 C32.0409286,24.4915753 31.8826509,24.3679146 31.7259288,24.2204815 L31.7259288,24.2204815 Z" id="Shape"></path>
+//             </g>
+//         </g>
+//     </g>
+// </svg>
+
+var CallUs = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "31px",
+    height: "32px",
+    viewBox: "0 0 31 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M29.8736456,1.53840565 L23.5767658,0.0385915824 C22.891738,-0.124596088 22.1915128,0.241841795 21.9143896,0.909279993 L19.0081374,7.90909981 C18.7531083,8.52337623 18.922527,9.23771889 19.4236103,9.66091414 L23.093783,12.7606674 C20.9157287,17.5528599 17.1033918,21.5424266 12.3619018,23.838679 L9.35901673,20.050175 C8.94904644,19.5329275 8.25702719,19.3580437 7.66194708,19.6212996 L0.880873555,22.6213027 C0.234474626,22.9072405 -0.12075416,23.6299912 0.0373943974,24.3373045 L1.49033886,30.8373113 C1.64134288,31.5127495 2.22495466,32 2.90622861,32 C18.411508,32 31,19.0292364 31,2.99996968 C31,2.30146895 30.5329411,1.69540581 29.8736456,1.53840565 Z"
+  }));
+}); // <?xml version="1.0" encoding="UTF-8"?>
+// <svg width="31px" height="32px" viewBox="0 0 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+//     <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+//     <title>Path</title>
+//     <desc>Created with Sketch.</desc>
+//     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+//         <g id="19-11-13-Kontakt_utfälld" transform="translate(-264.000000, -2120.000000)" fill="#006EC2" fill-rule="nonzero">
+//             <g id="phone" transform="translate(264.000000, 2120.000000)">
+//                 <path d="M29.8736456,1.53840565 L23.5767658,0.0385915824 C22.891738,-0.124596088 22.1915128,0.241841795 21.9143896,0.909279993 L19.0081374,7.90909981 C18.7531083,8.52337623 18.922527,9.23771889 19.4236103,9.66091414 L23.093783,12.7606674 C20.9157287,17.5528599 17.1033918,21.5424266 12.3619018,23.838679 L9.35901673,20.050175 C8.94904644,19.5329275 8.25702719,19.3580437 7.66194708,19.6212996 L0.880873555,22.6213027 C0.234474626,22.9072405 -0.12075416,23.6299912 0.0373943974,24.3373045 L1.49033886,30.8373113 C1.64134288,31.5127495 2.22495466,32 2.90622861,32 C18.411508,32 31,19.0292364 31,2.99996968 C31,2.30146895 30.5329411,1.69540581 29.8736456,1.53840565 Z" id="Path"></path>
+//             </g>
+//         </g>
+//     </g>
+// </svg>
+
 var editorIconDefinitions = {
   AppsAndGames: AppsAndGames,
   Auction: Auction,
@@ -2022,7 +2152,11 @@ var editorIconDefinitions = {
   Telemarketing: Telemarketing,
   Travel: Travel,
   WhiteGoods: WhiteGoods,
-  Withdrawal: Withdrawal
+  Withdrawal: Withdrawal,
+  Pen: Pen,
+  Map: Map,
+  ChatWithUs: ChatWithUs,
+  CallUs: CallUs
 };
 
 var EditorIcon = function EditorIcon(_ref) {
@@ -2295,6 +2429,16 @@ var Tag = function Tag(_ref) {
   }, text);
 };
 
+function _templateObject13() {
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    top: 2rem;\n    right: .5rem;\n    vertical-align: middle;\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: #fff;\n\n    [dir='rtl'] &{\n        left: .5rem;\n        right: auto;\n        transform: rotate(90deg);\n    }\n"]);
+
+  _templateObject13 = function _templateObject13() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject12() {
   var data = _taggedTemplateLiteral(["\n    position: absolute;\n    top: 2rem;\n    right: .5rem;\n    vertical-align: middle;\n    transform: rotate(270deg);\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: #fff;\n\n    [dir='rtl'] &{\n        left: .5rem;\n        right: auto;\n        transform: rotate(90deg);\n    }\n"]);
 
@@ -2426,6 +2570,7 @@ var tagItem = core.css(_templateObject9());
 var tagItemText = core.css(_templateObject10());
 var iconStyle$2 = core.css(_templateObject11());
 var arrowStyle$1 = core.css(_templateObject12());
+var secondaryArrowStyleCSS = core.css(_templateObject13());
 
 /** @jsx jsx */
 
@@ -2457,7 +2602,9 @@ var TagBlock = React__default.forwardRef(function (_ref, ref) {
       tags = _ref.tags,
       alternativeTagText = _ref.alternativeTagText,
       style = _ref.style,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      _ref$secondaryArrowSt = _ref.secondaryArrowStyle,
+      secondaryArrowStyle = _ref$secondaryArrowSt === void 0 ? false : _ref$secondaryArrowSt;
   var headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7'];
   var SelectedHeading = headings[headingLevel - 1] || 'h2';
   return core.jsx("div", {
@@ -2475,7 +2622,11 @@ var TagBlock = React__default.forwardRef(function (_ref, ref) {
   }, "Ikon"), core.jsx(SelectedHeading, {
     className: "tagHeading",
     css: [tagHeading, icon != null ? tagIconHeading : null]
-  }, heading), core.jsx(Icon, {
+  }, heading), secondaryArrowStyle ? core.jsx(Icon, {
+    "aria-hidden": "true",
+    icon: "LinkArrow",
+    style: secondaryArrowStyleCSS
+  }) : core.jsx(Icon, {
     "aria-hidden": "true",
     icon: "Arrow",
     style: arrowStyle$1
@@ -2710,7 +2861,7 @@ function _templateObject7$4() {
 }
 
 function _templateObject6$5() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:1.6rem;\n      line-height:2.4rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n      font-size:1.6rem;\n      line-height:2.4rem;\n      ", "{\n            font-size:1.8rem;\n            \n      }\n\n"]);
 
   _templateObject6$5 = function _templateObject6() {
     return data;
@@ -2720,7 +2871,7 @@ function _templateObject6$5() {
 }
 
 function _templateObject5$6() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:1.8rem;\n      line-height:3.2rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n      font-size:1.8rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:2.0rem;\n            \n      }\n\n"]);
 
   _templateObject5$6 = function _templateObject5() {
     return data;
@@ -2772,8 +2923,8 @@ var commonSubHeadingStyle = core.css(_templateObject$a());
 var h1Style = core.css(_templateObject2$8(), medium);
 var h2Style = core.css(_templateObject3$8(), medium);
 var h3Style = core.css(_templateObject4$6(), medium);
-var h4Style = core.css(_templateObject5$6());
-var h5Style = core.css(_templateObject6$5());
+var h4Style = core.css(_templateObject5$6(), medium);
+var h5Style = core.css(_templateObject6$5(), medium);
 var h6Style = core.css(_templateObject7$4());
 
 var SubHeading = function SubHeading(_ref) {
@@ -2872,7 +3023,7 @@ function _templateObject2$9() {
 }
 
 function _templateObject$b() {
-  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        margin-top: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a{\n    &:not(.noStyle){    \n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        &:hover {\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n        }\n        &:active {\n          background-color:#fff;\n      }\n    }\n  }\n\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        margin-top: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a{\n    &:not(.noStyle){    \n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        &:hover {\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n        }\n        &:active {\n          background-color:#fff;\n      }\n    }\n  }\n\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n\n    i {\n      font-style: italic;\n    }\n    strong {\n      font-weight: 700;\n    }\n    u {\n      text-decoration: underline;\n    }\n  }\n"]);
 
   _templateObject$b = function _templateObject() {
     return data;
@@ -3024,7 +3175,6 @@ function memoize(fn) {
 }
 
 var ILLEGAL_ESCAPE_SEQUENCE_ERROR = "You have illegal escape sequence in your template literal, most likely inside content's property value.\nBecause you write your CSS inside a JavaScript string you actually have to do double escaping, so for example \"content: '\\00d7';\" should become \"content: '\\\\00d7';\".\nYou can read more about this here:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences";
-var UNDEFINED_AS_OBJECT_KEY_ERROR = "You have passed in falsy value as style object's key (can happen when in example you pass unexported component as computed key).";
 var hyphenateRegex = /[A-Z]|^ms/g;
 var animationRegex = /_EMO_([^_]+?)_([^]*?)_EMO_/g;
 
@@ -3032,15 +3182,15 @@ var isCustomProperty = function isCustomProperty(property) {
   return property.charCodeAt(1) === 45;
 };
 
-var isProcessableValue = function isProcessableValue(value) {
-  return value != null && typeof value !== 'boolean';
-};
-
 var processStyleName = memoize(function (styleName) {
   return isCustomProperty(styleName) ? styleName : styleName.replace(hyphenateRegex, '-$&').toLowerCase();
 });
 
 var processStyleValue = function processStyleValue(key, value) {
+  if (value == null || typeof value === 'boolean') {
+    return '';
+  }
+
   switch (key) {
     case 'animation':
     case 'animationName':
@@ -3213,7 +3363,7 @@ function createStringFromObject(mergedProps, registered, obj) {
       if (_typeof(value) !== 'object') {
         if (registered != null && registered[value] !== undefined) {
           string += _key + "{" + registered[value] + "}";
-        } else if (isProcessableValue(value)) {
+        } else {
           string += processStyleName(_key) + ":" + processStyleValue(_key, value) + ";";
         }
       } else {
@@ -3223,9 +3373,7 @@ function createStringFromObject(mergedProps, registered, obj) {
 
         if (Array.isArray(value) && typeof value[0] === 'string' && (registered == null || registered[value[0]] === undefined)) {
           for (var _i = 0; _i < value.length; _i++) {
-            if (isProcessableValue(value[_i])) {
-              string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
-            }
+            string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
           }
         } else {
           var interpolated = handleInterpolation(mergedProps, registered, value, false);
@@ -3240,10 +3388,6 @@ function createStringFromObject(mergedProps, registered, obj) {
 
             default:
               {
-                if (process.env.NODE_ENV !== 'production' && _key === 'undefined') {
-                  console.error(UNDEFINED_AS_OBJECT_KEY_ERROR);
-                }
-
                 string += _key + "{" + interpolated + "}";
               }
           }
@@ -4039,6 +4183,7 @@ var Pagination = function Pagination(_ref) {
       baseUrl = _ref.baseUrl,
       onClick = _ref.onClick,
       style = _ref.style;
+  if (total == 0) return null;
   var totalNumberOfPages = Math.ceil(total / pageSize);
   var links = Object.keys(_toConsumableArray(new Array(totalNumberOfPages))).map(function (val) {
     return parseInt(val) + 1;
@@ -4147,7 +4292,7 @@ function _templateObject2$g() {
 }
 
 function _templateObject$j() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.7rem;\n    padding-left: 1rem;\n    padding-right: 3rem;\n    padding-bottom: 0.2rem;\n    padding-top: 2.4rem;\n    margin-bottom: 2.4rem;\n    ", " {\n        padding-left: 4rem;\n        padding-right: 4rem;\n    }\n    ul {\n        padding-left: 0;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.7rem;\n    padding-left: 1rem;\n    padding-right: 3rem;\n    padding-bottom: 0.2rem;\n    padding-top: 2.4rem;\n    ", " {\n        padding-left: 4rem;\n        padding-right: 4rem;\n    }\n    ul {\n        padding-left: 0;\n    }\n"]);
 
   _templateObject$j = function _templateObject() {
     return data;
@@ -4161,11 +4306,98 @@ var secondaryColorStyle = core.css(_templateObject2$g(), colors.theme2.light);
 /** @jsx jsx */
 var FactBox = function FactBox(_ref) {
   var content = _ref.content,
-      secondaryColor = _ref.secondaryColor;
+      secondaryColor = _ref.secondaryColor,
+      style = _ref.style;
   if (content == null) return null;
   return core.jsx("div", {
-    css: [wrapper$2, secondaryColor && secondaryColorStyle]
+    css: [wrapper$2, secondaryColor && secondaryColorStyle, style]
   }, content);
+};
+
+function _templateObject5$d() {
+  var data = _taggedTemplateLiteral(["\n    ", " {\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
+
+  _templateObject5$d = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$d() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: 2.4rem;\n    margin-bottom: 1.6rem;\n    padding: 0 2.4rem;\n    &:first-of-type {\n        margin-left: 0;\n    }\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 2.4rem;\n        &:first-of-type {\n            margin-left: 2.4rem;\n        }\n        margin-left: 2.4rem;\n        margin-bottom: 0;\n        margin-top: -.4rem;\n    }\n"]);
+
+  _templateObject4$d = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$g() {
+  var data = _taggedTemplateLiteral(["\n    padding-top: 2.4rem;\n    flex-direction: column;\n    display: flex;\n    ", " {\n        flex-direction: row;\n    }\n"]);
+
+  _templateObject3$g = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$h() {
+  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    padding-bottom: 2rem;\n    border-bottom: .1rem solid ", ";\n    display: flex;\n    flex-direction: column;\n    ", " {\n        flex-direction: row;\n    }\n"]);
+
+  _templateObject2$h = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$k() {
+  var data = _taggedTemplateLiteral(["\n    padding: 2.4rem 1.6rem 2.4rem 1.6rem;\n    ", " {\n        padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n    }\n    background-color: ", ";\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: 1.6rem;\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
+
+  _templateObject$k = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var sourceStyle = core.css(_templateObject$k(), medium, colors.theme1.midLight, medium);
+var firstRow = core.css(_templateObject2$h(), colors.theme3.light, medium);
+var secondRow = core.css(_templateObject3$g(), medium);
+var buttonStyle$1 = core.css(_templateObject4$d(), medium);
+var rightAlign = core.css(_templateObject5$d(), medium);
+
+/** @jsx jsx */
+var Source = function Source(_ref) {
+  var didThisHelpText = _ref.didThisHelpText,
+      reportErrorText = _ref.reportErrorText,
+      markdownText = _ref.markdownText,
+      reviewedDate = _ref.reviewedDate;
+  var reviewed = reviewedDate ? new Date(reviewedDate) : null;
+  var months = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
+  return core.jsx("div", {
+    css: sourceStyle
+  }, core.jsx("div", {
+    css: [firstRow]
+  }, core.jsx("p", null, didThisHelpText || "Hittade du svaret på din fråga?"), core.jsx("div", null, core.jsx(Button, {
+    style: buttonStyle$1,
+    secondaryButtonStyle: true,
+    text: "Ja"
+  }), core.jsx(Button, {
+    style: buttonStyle$1,
+    secondaryButtonStyle: true,
+    text: "Nej"
+  })), core.jsx("div", {
+    css: rightAlign
+  }, core.jsx("a", {
+    href: "#"
+  }, reportErrorText || "Rapportera fel på denna sida"))), core.jsx("div", {
+    css: [secondRow]
+  }, markdownText, reviewed && core.jsx("div", {
+    css: rightAlign
+  }, core.jsx("p", null, "Granskad: ".concat(reviewed.getDate(), " ").concat(months[reviewed.getMonth() - 1], " ").concat(reviewed.getFullYear())))));
 };
 
 exports.Accordion = Accordion;
@@ -4191,6 +4423,7 @@ exports.LinkWrapperColorStyle = LinkWrapperColorStyle$1;
 exports.LinkWrapperInvertedColorStyle = LinkWrapperInvertedColorStyle$1;
 exports.Pagination = Pagination;
 exports.PrerequisitesBox = PrerequisitesBox;
+exports.Source = Source;
 exports.SubHeading = SubHeading;
 exports.Tag = Tag;
 exports.TagBlock = TagBlock;

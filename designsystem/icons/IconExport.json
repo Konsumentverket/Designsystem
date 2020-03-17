@@ -164,11 +164,26 @@
             "name": "WhiteGoods",
             "title": "Vitvaror",
             "url": "EditorIcons/svg/WhiteGoods.svg"
-        }
+        },
         {
-            "name": "Play",
-            "title": "Playknapp",
-            "url": "SystemIcons/svg/play.svg"
+            "name": "Pen",
+            "title": "Skriv till oss",
+            "url": "EditorIcons/svg/Pen.svg"
+        },
+        {
+            "name": "Map",
+            "title": "Karta",
+            "url": "EditorIcons/svg/Map.svg"
+        },
+        {
+            "name": "CallUs",
+            "title": "Ring till oss",
+            "url": "EditorIcons/svg/CallUs.svg"
+        },
+        {
+            "name": "ChatWithUs",
+            "title": "Chatta med oss",
+            "url": "EditorIcons/svg/ChatWithUs.svg"
         }
    ]
 }

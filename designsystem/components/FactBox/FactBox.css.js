@@ -9,7 +9,6 @@ export const wrapper = css`
     padding-right: 3rem;
     padding-bottom: 0.2rem;
     padding-top: 2.4rem;
-    margin-bottom: 2.4rem;
     ${medium} {
         padding-left: 4rem;
         padding-right: 4rem;

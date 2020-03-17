@@ -43,13 +43,19 @@ const defaultTheme = {
 
 const eccTheme = {
     theme1: {
+        "dark": "#4663a9",
         "xDark": "#4663a9",
         "midDark": "#4663a9",
+        "xDark": "#1C2742",
+        "midDark": "#314575",
         "mid": "#4663a9",
-        "midLight": "#e4e8f2",
+        "midLight": "#eaeae9",
     },
     theme2: {
-        "light": "#f4f8e9"
+        "light": "#d7e6ed"
+    },
+    theme3: {
+        "xLight": "#d7e6ed"
     }
 }
 
@@ -57,7 +63,5 @@ const colors = process.env.THEME === 'ecc'
     ? Object.assign({}, defaultTheme, eccTheme)
     : defaultTheme
 
-// For development on ECC (Bug with hotreload)
-// const colors = Object.assign(defaultTheme, eccTheme)
 
 export { colors }

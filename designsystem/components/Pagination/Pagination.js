@@ -5,6 +5,7 @@ import { paginationWrapperStyle,pageStyle,prevPageStyle,nextPageStyle,distanceIn
 
 
 export const Pagination = ({pageSize, total, currentPage, baseUrl, onClick, style}) => {
+    if(total == 0) return null;
 
     const totalNumberOfPages = Math.ceil(total / pageSize);
     const links = Object.keys([...new Array(totalNumberOfPages)]).map(val => parseInt(val)+1);
