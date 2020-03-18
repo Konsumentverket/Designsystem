@@ -2,8 +2,6 @@ import { css as css$1, jsx, Global } from '@emotion/core';
 import React, { useRef, useState, useEffect } from 'react';
 
 function _typeof(obj) {
-  "@babel/helpers - typeof";
-
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -50,35 +48,20 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
+function _objectSpread(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i] != null ? arguments[i] : {};
+    var ownKeys = Object.keys(source);
 
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
+    if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
     }
+
+    ownKeys.forEach(function (key) {
+      _defineProperty(target, key, source[key]);
+    });
   }
 
   return target;
@@ -157,10 +140,6 @@ function _iterableToArray(iter) {
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
-
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -258,6 +237,21 @@ var spacing = {
   'spacing-l': '1.6rem',
   'spacing-xl': '2.4rem',
   'spacing-2xl': '3.2rem'
+  /*
+  const old_spacing = {
+      'spacing-xs': '0.25rem',
+      'spacing-s': '0.5rem',
+      'spacing-m/s': '0.75rem',
+      'spacing-m': '1rem',
+      'spacing-l': '1.5rem',
+      'spacing-xl': '2rem',
+      'spacing-2xl': '2.5rem',
+      'spacing-3xl': '3rem',
+      'spacing-4xl': '3.5rem',
+      'spacing-5xl': '4rem',
+    };
+  */
+
 };
 
 function _templateObject7() {
@@ -1057,7 +1051,7 @@ var Button = function Button(_ref) {
   });
   style && styles.push(style);
 
-  var props = _objectSpread2({
+  var props = _objectSpread({
     "id": id,
     "css": styles,
     "className": cssClass.join(" "),
@@ -1083,6 +1077,16 @@ var Button = function Button(_ref) {
   }) : null);
 };
 
+function _templateObject6$2() {
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 12rem;\n    border: 0px;\n    background-color: transparent;\n    top: 1.3rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 3.2rem;\n        height: 3.2rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n"]);
+
+  _templateObject6$2 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject5$2() {
   var data = _taggedTemplateLiteral(["\n    box-shadow:none;\n    &:hover, &:active {\n        box-shadow:none;\n    }\n"]);
 
@@ -1104,7 +1108,7 @@ function _templateObject4$2() {
 }
 
 function _templateObject3$2() {
-  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem 1.6rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 3.2rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem 1.6rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 3.2rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject3$2 = function _templateObject3() {
     return data;
@@ -1137,12 +1141,14 @@ var searchWrapperStyle = css$1(_templateObject2$2(), colors.common.white);
 var searchFieldInputStyle = css$1(_templateObject3$2(), colors.common.white, colors.theme3.mid, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme1.dark, disabled$1);
 var searchFieldButtonStyle = css$1(_templateObject4$2());
 var invertedBackgroundStyle$1 = css$1(_templateObject5$2());
+var clearInputStyle = css$1(_templateObject6$2(), colors.theme1.mid);
 
-var FormSearchField = React.forwardRef(function (_ref, ref) {
+var FormSearchField = React.forwardRef(function (_ref, _ref2) {
   var className = _ref.className,
       icon = _ref.icon,
       fieldtext = _ref.fieldtext,
       onClick = _ref.onClick,
+      onClear = _ref.onClear,
       onChange = _ref.onChange,
       _ref$invertedBackgrou = _ref.invertedBackgroundColor,
       invertedBackgroundColor = _ref$invertedBackgrou === void 0 ? false : _ref$invertedBackgrou,
@@ -1151,12 +1157,13 @@ var FormSearchField = React.forwardRef(function (_ref, ref) {
       disabled = _ref.disabled,
       type = _ref.type,
       inputtype = _ref.inputtype,
-      other = _objectWithoutProperties(_ref, ["className", "icon", "fieldtext", "onClick", "onChange", "invertedBackgroundColor", "buttontext", "style", "disabled", "type", "inputtype"]);
+      other = _objectWithoutProperties(_ref, ["className", "icon", "fieldtext", "onClick", "onClear", "onChange", "invertedBackgroundColor", "buttontext", "style", "disabled", "type", "inputtype"]);
 
   var styles = [searchWrapperStyle];
   style && styles.push(style);
   var searchFieldInputStyles = [searchFieldInputStyle];
   invertedBackgroundColor && searchFieldInputStyles.push(invertedBackgroundStyle$1);
+  var inputRef = useRef();
   var ariaAttrs = {};
   Object.keys(other).filter(function (x) {
     return x.startsWith("aria-");
@@ -1168,11 +1175,30 @@ var FormSearchField = React.forwardRef(function (_ref, ref) {
     className: className
   }, jsx("input", _extends({}, other, {
     onChange: onChange,
-    ref: ref,
+    ref: function ref(el) {
+      inputRef.current = el;
+      return _ref2(el);
+    },
     type: inputtype || "search",
     placeholder: fieldtext,
     disabled: disabled,
     css: [searchFieldInputStyles]
+  })), jsx("span", {
+    tabIndex: "-1",
+    css: clearInputStyle,
+    className: "noState",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      if (inputRef == null || inputRef.current == null) return;
+      inputRef.current.value = "";
+      inputRef.current.dispatchEvent(new Event('change'));
+
+      if (onClear) {
+        onClear(e);
+      }
+    }
+  }, jsx(Icon, {
+    icon: "Clear"
   })), jsx(Button, _extends({
     style: searchFieldButtonStyle,
     disabled: disabled,
@@ -1183,24 +1209,37 @@ var FormSearchField = React.forwardRef(function (_ref, ref) {
 });
 
 /* eslint-disable */
-// murmurhash2 via https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
-function murmurhash2_32_gc(str) {
-  var l = str.length,
-      h = l ^ l,
+// Inspired by https://github.com/garycourt/murmurhash-js
+// Ported from https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash2.cpp#L37-L86
+function murmur2(str) {
+  // 'm' and 'r' are mixing constants generated offline.
+  // They're not really 'magic', they just happen to work well.
+  // const m = 0x5bd1e995;
+  // const r = 24;
+  // Initialize the hash
+  var h = 0; // Mix 4 bytes at a time into the hash
+
+  var k,
       i = 0,
-      k;
+      len = str.length;
 
-  while (l >= 4) {
+  for (; len >= 4; ++i, len -= 4) {
     k = str.charCodeAt(i) & 0xff | (str.charCodeAt(++i) & 0xff) << 8 | (str.charCodeAt(++i) & 0xff) << 16 | (str.charCodeAt(++i) & 0xff) << 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    k ^= k >>> 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16) ^ k;
-    l -= 4;
-    ++i;
-  }
+    k =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16);
+    k ^=
+    /* k >>> r: */
+    k >>> 24;
+    h =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16) ^
+    /* Math.imul(h, m): */
+    (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Handle the last few bytes of the input array
 
-  switch (l) {
+
+  switch (len) {
     case 3:
       h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
 
@@ -1209,13 +1248,18 @@ function murmurhash2_32_gc(str) {
 
     case 1:
       h ^= str.charCodeAt(i) & 0xff;
-      h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  }
+      h =
+      /* Math.imul(h, m): */
+      (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Do a few final mixes of the hash to ensure the last few
+  // bytes are well-incorporated.
+
 
   h ^= h >>> 13;
-  h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  h ^= h >>> 15;
-  return (h >>> 0).toString(36);
+  h =
+  /* Math.imul(h, m): */
+  (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  return ((h ^ h >>> 15) >>> 0).toString(36);
 }
 
 var unitlessKeys = {
@@ -1571,7 +1615,7 @@ var serializeStyles = function serializeStyles(args, registered, mergedProps) {
     match[1];
   }
 
-  var name = murmurhash2_32_gc(styles) + identifierName;
+  var name = murmur2(styles) + identifierName;
 
   if (process.env.NODE_ENV !== 'production') {
     // $FlowFixMe SerializedStyles type doesn't have toString property (and we don't want to add it)
@@ -2725,10 +2769,10 @@ var Accordion = function Accordion(_ref) {
   })));
 };
 
-function _templateObject6$2() {
+function _templateObject6$3() {
   var data = _taggedTemplateLiteral(["\n    padding-left: 5.6rem;\n"]);
 
-  _templateObject6$2 = function _templateObject6() {
+  _templateObject6$3 = function _templateObject6() {
     return data;
   };
 
@@ -2789,7 +2833,7 @@ var iconStyle$1 = css$1(_templateObject2$4(), colors.theme1.mid);
 var iconCardStyle = css$1(_templateObject3$4(), colors.common.white, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark);
 var iconText = css$1(_templateObject4$3(), colors.theme1.mid);
 var noIcon = css$1(_templateObject5$3());
-var topAreaIcon = css$1(_templateObject6$2());
+var topAreaIcon = css$1(_templateObject6$3());
 
 /** @jsx jsx */
 var IconCard = React.forwardRef(function (_ref, ref) {
@@ -2973,10 +3017,10 @@ function _templateObject7$2() {
   return data;
 }
 
-function _templateObject6$3() {
+function _templateObject6$4() {
   var data = _taggedTemplateLiteral(["\n     position: relative;\n    min-height:6.9rem;\n    box-sizing:border-box;\n    overflow: auto;\n    padding: .8rem 1.6rem 0 1.6rem;\n"]);
 
-  _templateObject6$3 = function _templateObject6() {
+  _templateObject6$4 = function _templateObject6() {
     return data;
   };
 
@@ -3037,7 +3081,7 @@ var invertedTag = css$1(_templateObject2$5());
 var tagLink = css$1(_templateObject3$5(), colors.theme1.mid, colors.theme1.midDark, colors.theme1.xDark, colors.theme1.xDark);
 var tagHeading = css$1(_templateObject4$4());
 var tagIconHeading = css$1(_templateObject5$4());
-var tagsArea = css$1(_templateObject6$3());
+var tagsArea = css$1(_templateObject6$4());
 var tagsList = css$1(_templateObject7$2());
 var tagsListItem = css$1(_templateObject8$1());
 var tagItem = css$1(_templateObject9());
@@ -3121,10 +3165,10 @@ function _templateObject7$3() {
   return data;
 }
 
-function _templateObject6$4() {
+function _templateObject6$5() {
   var data = _taggedTemplateLiteral(["\n    padding: 0 0 0 .8rem;\n    width:2.4rem;\n    height:2.4rem;\n    vertical-align: top;\n"]);
 
-  _templateObject6$4 = function _templateObject6() {
+  _templateObject6$5 = function _templateObject6() {
     return data;
   };
 
@@ -3185,7 +3229,7 @@ var expandButtonStyle = css$1(_templateObject2$6(), colors.common.white, colors.
 var secondaryStyle$1 = css$1(_templateObject3$6(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$2);
 var invertedBackgroundStyle$2 = css$1(_templateObject4$5(), colors.common.white, colors.theme1.dark);
 var invertedSecondaryBackgroundStyle$1 = css$1(_templateObject5$5(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$2);
-var iconStyle$3 = css$1(_templateObject6$4());
+var iconStyle$3 = css$1(_templateObject6$5());
 var expandedIconStyle = css$1(_templateObject7$3());
 
 /** @jsx jsx */
@@ -3334,10 +3378,10 @@ function _templateObject7$4() {
   return data;
 }
 
-function _templateObject6$5() {
+function _templateObject6$6() {
   var data = _taggedTemplateLiteral(["\n\n      font-size:1.6rem;\n      line-height:2.4rem;\n      ", "{\n            font-size:1.8rem;\n            \n      }\n\n"]);
 
-  _templateObject6$5 = function _templateObject6() {
+  _templateObject6$6 = function _templateObject6() {
     return data;
   };
 
@@ -3398,7 +3442,7 @@ var h1Style = css$1(_templateObject2$9(), medium);
 var h2Style = css$1(_templateObject3$9(), medium);
 var h3Style = css$1(_templateObject4$6(), medium);
 var h4Style = css$1(_templateObject5$6(), medium);
-var h5Style = css$1(_templateObject6$5(), medium);
+var h5Style = css$1(_templateObject6$6(), medium);
 var h6Style = css$1(_templateObject7$4());
 
 var SubHeading = function SubHeading(_ref) {
@@ -3446,10 +3490,10 @@ function _templateObject7$5() {
   return data;
 }
 
-function _templateObject6$6() {
+function _templateObject6$7() {
   var data = _taggedTemplateLiteral(["\n    ", "\n"]);
 
-  _templateObject6$6 = function _templateObject6() {
+  _templateObject6$7 = function _templateObject6() {
     return data;
   };
 
@@ -3539,7 +3583,7 @@ var LinkColors$1 = css$1(_templateObject2$a(), colors.theme1.mid, colors.theme1.
 var LinkColorsInverted$1 = css$1(_templateObject3$a(), colors.theme1.mid, colors.theme1.xDark, colors.states.visited);
 var LinkWrapperColorStyle$1 = css$1(_templateObject4$7(), LinkColors$1);
 var LinkWrapperInvertedColorStyle$1 = css$1(_templateObject5$7(), LinkColorsInverted$1);
-var ElementLinkColorStyle$1 = css$1(_templateObject6$6(), LinkColors$1);
+var ElementLinkColorStyle$1 = css$1(_templateObject6$7(), LinkColors$1);
 var ElementLinkInvertedColorStyle$1 = css$1(_templateObject7$5(), LinkColorsInverted$1);
 
 var Heading = function Heading(_ref) {
@@ -3689,10 +3733,10 @@ function _templateObject7$6() {
   return data;
 }
 
-function _templateObject6$7() {
+function _templateObject6$8() {
   var data = _taggedTemplateLiteral(["\n  margin-top:-.8rem;\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:auto;\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n"]);
 
-  _templateObject6$7 = function _templateObject6() {
+  _templateObject6$8 = function _templateObject6() {
     return data;
   };
 
@@ -3753,7 +3797,7 @@ var linkWrapper = css$1(_templateObject2$c(), colors.theme2.midDark, colors.them
 var focusHeadline = css$1(_templateObject3$c());
 var focusText = css$1(_templateObject4$9());
 var textArea = css$1(_templateObject5$8(), medium);
-var pictureWrapper = css$1(_templateObject6$7());
+var pictureWrapper = css$1(_templateObject6$8());
 var iconBackground = css$1(_templateObject7$6(), colors.theme2.light);
 var externalIcon = css$1(_templateObject8$2());
 var puffIcon = css$1(_templateObject9$1());
@@ -3843,10 +3887,10 @@ function _templateObject7$7() {
   return data;
 }
 
-function _templateObject6$8() {
+function _templateObject6$9() {
   var data = _taggedTemplateLiteral(["\n  margin-top:-.8rem;\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:auto;\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n  ", "{\n    max-width:49.11%;\n    margin-top:0;\n    margin-left:-.8rem;\n    img {\n      border-top-right-radius: 0;\n      border-bottom-left-radius:.8rem;\n    }\n  }\n\n  ", "{\n    max-width:30.4rem;\n  }\n"]);
 
-  _templateObject6$8 = function _templateObject6() {
+  _templateObject6$9 = function _templateObject6() {
     return data;
   };
 
@@ -3907,7 +3951,7 @@ var linkWrapper$1 = css$1(_templateObject2$d(), colors.theme1.mid, colors.theme2
 var focusHeadline$1 = css$1(_templateObject3$d());
 var focusText$1 = css$1(_templateObject4$a(), colors.theme3.dark);
 var textArea$1 = css$1(_templateObject5$9(), medium, large);
-var pictureWrapper$1 = css$1(_templateObject6$8(), medium, large);
+var pictureWrapper$1 = css$1(_templateObject6$9(), medium, large);
 var iconBackground$1 = css$1(_templateObject7$7(), colors.theme2.light, medium);
 var externalIcon$1 = css$1(_templateObject8$3(), colors.theme1.mid);
 var puffIcon$1 = css$1(_templateObject9$2(), colors.theme2.mid);
@@ -4020,6 +4064,7 @@ var fieldStyle = css$1(_templateObject3$e(), colors.theme1.mid, colors.common.wh
 var invertedLabelStyle = css$1(_templateObject4$b(), colors.common.white);
 var invertedfieldStyle = css$1(_templateObject5$a(), colors.common.white, colors.theme1.xDark, colors.common.white);
 
+/** @jsx jsx */
 var FormCheckbox = function FormCheckbox(_ref) {
   var name = _ref.name,
       id = _ref.id,
@@ -4028,16 +4073,11 @@ var FormCheckbox = function FormCheckbox(_ref) {
       _ref$invertedBackgrou = _ref.invertedBackgroundColor,
       invertedBackgroundColor = _ref$invertedBackgrou === void 0 ? false : _ref$invertedBackgrou,
       _ref$checked = _ref.checked,
+      checked = _ref$checked === void 0 ? false : _ref$checked,
       onChange = _ref.onChange,
       style = _ref.style;
   var fieldStyles = [fieldStyle];
   var labelStyles = [labelStyle];
-  var inputRef = useRef(null);
-
-  var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      checkValue = _useState2[0],
-      setChecked = _useState2[1];
 
   if (invertedBackgroundColor) {
     labelStyles.push(invertedLabelStyle);
@@ -4045,22 +4085,21 @@ var FormCheckbox = function FormCheckbox(_ref) {
   }
 
   style && labelStyles.push(style);
-  return jsx(React.Fragment, null, jsx("div", {
-    css: wrapperStyle
+  return jsx("div", {
+    css: wrapperStyle,
+    "data-checked": checked
   }, jsx("input", {
     id: id,
     name: name,
     type: "checkbox",
     css: [fieldStyles],
     value: value,
-    onChange: function onChange() {
-      setChecked(!checkValue);
-    },
-    checked: checkValue
+    onChange: onChange,
+    checked: checked
   }), jsx("label", {
     htmlFor: id,
     css: [labelStyles]
-  }, labelText)));
+  }, labelText));
 };
 
 function _templateObject5$b() {
@@ -4192,10 +4231,10 @@ function _templateObject7$8() {
   return data;
 }
 
-function _templateObject6$9() {
+function _templateObject6$a() {
   var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    color: ", ";\n    font-weight: 500;\n    ", "{\n        font-size: 2.1rem;\n    }\n\n"]);
 
-  _templateObject6$9 = function _templateObject6() {
+  _templateObject6$a = function _templateObject6() {
     return data;
   };
 
@@ -4256,7 +4295,7 @@ var pageStyle = css$1(_templateObject2$g(), colors.theme1.mid, medium);
 var prevPageStyle = css$1(_templateObject3$g(), medium);
 var nextPageStyle = css$1(_templateObject4$d(), medium);
 var prevPageStyleHidden = css$1(_templateObject5$c());
-var distanceIndicatorStyle = css$1(_templateObject6$9(), colors.theme1.mid, medium);
+var distanceIndicatorStyle = css$1(_templateObject6$a(), colors.theme1.mid, medium);
 var currentPageStyle = css$1(_templateObject7$8(), colors.theme1.dark, colors.theme1.mid);
 
 var Pagination = function Pagination(_ref) {
