@@ -38,6 +38,10 @@ export const searchFieldInputStyle = css`
     font-style: normal;
     font-weight: 500;
 
+    &::-webkit-search-cancel-button{
+        appearance: none;
+    }
+
     ${medium}{
         font-size:1.8rem;
         line-height:3.2rem;
@@ -74,3 +78,24 @@ export const invertedBackgroundStyle = css`
     }
 `;
 
+export const clearInputStyle = css`
+
+    appearance: none;
+    position: absolute;
+    right: 12rem;
+    border: 0px;
+    background-color: transparent;
+    top: 1.3rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0;
+    svg{
+        fill: ${colors.theme1.mid};
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    &:focus{
+        outline: none;
+    }
+
+`

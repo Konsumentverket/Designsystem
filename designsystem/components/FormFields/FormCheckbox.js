@@ -25,7 +25,7 @@ export const FormCheckbox = ({
 
 
     return <>
-    <div css={wrapperStyle}>
+    <div css={wrapperStyle} data-checked={checked}>
     <input 
     id={id}
     name={name}

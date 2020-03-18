@@ -1,17 +1,18 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React from 'react';
-import { searchWrapperStyle, searchFieldInputStyle, searchFieldButtonStyle, invertedBackgroundStyle } from './FormSearchField.css';
+import React, { useRef } from 'react';
+import { searchWrapperStyle, searchFieldInputStyle, searchFieldButtonStyle, invertedBackgroundStyle, clearInputStyle } from './FormSearchField.css';
 import { Button } from '../Button/Button';
+import { Icon } from '../Icon/Icon';
 
-export const FormSearchField = React.forwardRef(({ className, icon, fieldtext, onClick, onChange, invertedBackgroundColor = false, buttontext, style, disabled, type, inputtype, ...other }, ref) => {
+export const FormSearchField = React.forwardRef(({ className, icon, fieldtext, onClick, onClear, onChange, invertedBackgroundColor = false, buttontext, style, disabled, type, inputtype, ...other }, ref) => {
 
     var styles = [searchWrapperStyle];
     style && styles.push(style)
 
     var searchFieldInputStyles = [searchFieldInputStyle];
     invertedBackgroundColor && searchFieldInputStyles.push(invertedBackgroundStyle);
-
+    const inputRef = useRef();
     const ariaAttrs = {};
     Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x])
 
@@ -21,11 +22,25 @@ export const FormSearchField = React.forwardRef(({ className, icon, fieldtext, o
         <input
             {...other}
             onChange={onChange}
-            ref={ref}
+            ref={(el) => {
+                inputRef.current = el
+                return ref(el)
+            }}
             type={inputtype || "search"}
             placeholder={fieldtext}
             disabled={disabled}
             css={[searchFieldInputStyles]} />
+            <span tabIndex="-1" css={clearInputStyle} className="noState" onClick={(e) =>{
+                e.preventDefault();
+                if(inputRef == null || inputRef.current == null) return;
+                inputRef.current.value = "";
+                inputRef.current.dispatchEvent(new Event('change'));
+                if(onClear){
+                    onClear(e);
+                }
+            }}>
+                <Icon icon="Clear" />
+            </span>
         <Button
             style={searchFieldButtonStyle}
             disabled={disabled}
