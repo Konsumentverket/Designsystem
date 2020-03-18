@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import { InputStyle,InputWrapperStyle, ClearInput } from "./InputText.css"
+import { InputStyle,InputWrapperStyle, ClearInput, Label } from "./InputText.css"
 import {Icon} from '../Icon/Icon';
 import { useRef, useState } from 'react';
 
@@ -8,9 +8,15 @@ import { useRef, useState } from 'react';
 export const InputText = ({style,wrapperStyle, placeholder, id, onChange, onClear,
     name, disabled, type="text", ...other}) => {
     
+    const { label } = other
+
     let inputRef = useRef(null);
     let [text,setText] = useState(null)
+
     return <div css={[InputWrapperStyle,wrapperStyle]}>
+
+            { label && <label css={Label} htmlFor={id}>{label}</label> }
+
             <input ref={inputRef} {...other} css={[InputStyle,style]} name={name} disabled={disabled} 
                     placeholder={placeholder} id={id} 
                     onChange={(e) =>{
