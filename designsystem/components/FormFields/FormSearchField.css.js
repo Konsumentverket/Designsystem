@@ -24,6 +24,7 @@ export const searchWrapperStyle = css`
 `;
 
 export const searchFieldInputStyle = css`
+    -webkit-appearance: none;
     background-color: ${colors.common.white};
     box-shadow:inset 0px 0px 0px 1px ${colors.theme3.mid};
     border-radius: .8rem 0 0 .8rem;
