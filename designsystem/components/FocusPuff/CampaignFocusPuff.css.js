@@ -130,7 +130,6 @@ export const iconBackground = css`
 
 export const externalIcon = css`
   position: relative;
-  top: 0.2rem;
   margin-left: 0.8rem;
   fill: ${colors.theme1.mid};
   width:2rem;
