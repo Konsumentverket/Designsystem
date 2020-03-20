@@ -82,10 +82,10 @@ export const clearInputStyle = css`
 
     appearance: none;
     position: absolute;
-    right: 12rem;
+    right: 10rem;
     border: 0px;
     background-color: transparent;
-    top: 1.3rem;
+    top: 0.5rem;
     width: 3.2rem;
     height: 3.2rem;
     padding: 0;
@@ -96,6 +96,10 @@ export const clearInputStyle = css`
     }
     &:focus{
         outline: none;
+    }
+    ${medium} {
+        top: 1.3rem;
+        right: 12rem;
     }
 
 `

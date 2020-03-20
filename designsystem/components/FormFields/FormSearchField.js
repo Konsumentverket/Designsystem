@@ -5,7 +5,20 @@ import { searchWrapperStyle, searchFieldInputStyle, searchFieldButtonStyle, inve
 import { Button } from '../Button/Button';
 import { Icon } from '../Icon/Icon';
 
-export const FormSearchField = React.forwardRef(({ className, icon, fieldtext, onClick, onClear, onChange, invertedBackgroundColor = false, buttontext, style, disabled, type, inputtype, ...other }, ref) => {
+export const FormSearchField = React.forwardRef(({ className,
+    icon,
+    fieldtext,
+    onClick,
+    onClear,
+    onChange,
+    invertedBackgroundColor = false,
+    buttontext,
+    style,
+    disabled,
+    type,
+    inputtype,
+    value,
+    ...other }, ref) => {
 
     var styles = [searchWrapperStyle];
     style && styles.push(style)
@@ -24,23 +37,28 @@ export const FormSearchField = React.forwardRef(({ className, icon, fieldtext, o
             onChange={onChange}
             ref={(el) => {
                 inputRef.current = el
-                return ref(el)
+                return typeof ref === 'function' ? ref(el) : null
             }}
             type={inputtype || "search"}
             placeholder={fieldtext}
             disabled={disabled}
             css={[searchFieldInputStyles]} />
-            <span tabIndex="-1" css={clearInputStyle} className="noState" onClick={(e) =>{
-                e.preventDefault();
-                if(inputRef == null || inputRef.current == null) return;
-                inputRef.current.value = "";
-                inputRef.current.dispatchEvent(new Event('change'));
-                if(onClear){
-                    onClear(e);
+        {inputRef && inputRef.current && inputRef.current.value.length > 0 && <span
+            tabIndex="-1"
+            css={clearInputStyle}
+            className="noState"
+            onClick={e => {
+                e.preventDefault()
+                if (inputRef == null || inputRef.current == null) return
+                inputRef.current.value = ""
+                inputRef.current.dispatchEvent(new Event('change'))
+                if (onClear) {
+                    onClear(e)
                 }
             }}>
-                <Icon icon="Clear" />
-            </span>
+            <Icon icon="Clear" />
+        </span>
+        }
         <Button
             style={searchFieldButtonStyle}
             disabled={disabled}
