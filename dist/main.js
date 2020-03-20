@@ -55,35 +55,20 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
+function _objectSpread(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i] != null ? arguments[i] : {};
+    var ownKeys = Object.keys(source);
 
-    if (i % 2) {
-      ownKeys(source, true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(source).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
+    if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
     }
+
+    ownKeys.forEach(function (key) {
+      _defineProperty(target, key, source[key]);
+    });
   }
 
   return target;
@@ -162,10 +147,6 @@ function _iterableToArray(iter) {
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-    return;
-  }
-
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -263,6 +244,21 @@ var spacing = {
   'spacing-l': '1.6rem',
   'spacing-xl': '2.4rem',
   'spacing-2xl': '3.2rem'
+  /*
+  const old_spacing = {
+      'spacing-xs': '0.25rem',
+      'spacing-s': '0.5rem',
+      'spacing-m/s': '0.75rem',
+      'spacing-m': '1rem',
+      'spacing-l': '1.5rem',
+      'spacing-xl': '2rem',
+      'spacing-2xl': '2.5rem',
+      'spacing-3xl': '3rem',
+      'spacing-4xl': '3.5rem',
+      'spacing-5xl': '4rem',
+    };
+  */
+
 };
 
 function _templateObject7() {
@@ -762,23 +758,6 @@ var LinkArrow = (function (_ref) {
   }));
 });
 
-var Plane = (function (_ref) {
-  var className = _ref.className,
-      style = _ref.style,
-      title = _ref.title,
-      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
-
-  return core.jsx("svg", _extends({
-    className: className,
-    css: style,
-    width: "25px",
-    height: "24px",
-    viewBox: "0 0 25 24"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M19.9999816,8.00003683 L15.2378763,8.00003683 L10.8586895,0.335834879 C10.739814,0.12812559 10.5188546,0 10.2795202,0 L7.55034094,0 C7.10742224,0 6.78783743,0.423751951 6.90950466,0.849587244 L8.95243073,8.00003683 L4.66657767,8.00003683 L2.86656938,5.60002578 C2.74073547,5.43210834 2.54281789,5.33335789 2.33323359,5.33335789 L0.666975921,5.33335789 C0.233223924,5.33335789 -0.0851108748,5.74085976 0.0203062771,6.16169503 L1.33322899,10.6667158 L0.0203062771,15.1717365 C-0.0851108748,15.5925718 0.233223924,16.0000737 0.666975921,16.0000737 L2.33323359,16.0000737 C2.54323456,16.0000737 2.74073547,15.9013232 2.86656938,15.7334058 L4.66657767,13.3333947 L8.95243073,13.3333947 L6.90950466,20.4834276 C6.78783743,20.9092629 7.10742224,21.3334315 7.55034094,21.3334315 L10.2795202,21.3334315 C10.5186879,21.3334315 10.7395223,21.2050976 10.8582728,20.9975967 L15.2378763,13.3333947 L19.9999816,13.3333947 C21.472905,13.3333947 24,12.1396392 24,10.6667158 C24,9.19379232 21.472905,8.00003683 19.9999816,8.00003683"
-  }));
-});
-
 var Filter = (function (_ref) {
   var className = _ref.className,
       style = _ref.style,
@@ -991,7 +970,6 @@ var iconDefinitions = {
   Check: Check,
   Oval: Oval,
   LinkArrow: LinkArrow,
-  Plane: Plane,
   Filter: Filter,
   List: List,
   Picturelist: Picturelist,
@@ -1062,7 +1040,7 @@ var Button = function Button(_ref) {
   });
   style && styles.push(style);
 
-  var props = _objectSpread2({
+  var props = _objectSpread({
     "id": id,
     "css": styles,
     "className": cssClass.join(" "),
@@ -1073,19 +1051,15 @@ var Button = function Button(_ref) {
     "href": href || null
   }, ariaAttrs);
 
-  return href ? core.jsx("a", props, iconLeft ? core.jsx(Icon, {
+  var leftIcon = iconLeft ? React__default.isValidElement(iconLeft) ? iconLeft : core.jsx(Icon, {
     style: iconStyle,
     icon: iconLeft
-  }) : null, text, iconRight ? core.jsx(Icon, {
+  }) : null;
+  var rightIcon = iconRight ? React__default.isValidElement(iconRight) ? iconRight : core.jsx(Icon, {
     style: iconStyle,
     icon: iconRight
-  }) : null) : core.jsx("button", props, iconLeft ? core.jsx(Icon, {
-    style: iconStyle,
-    icon: iconLeft
-  }) : null, text, iconRight ? core.jsx(Icon, {
-    style: iconStyle,
-    icon: iconRight
-  }) : null);
+  }) : null;
+  return href ? core.jsx("a", props, leftIcon, text, rightIcon) : core.jsx("button", props, leftIcon, text, rightIcon);
 };
 
 function _templateObject6$2() {
@@ -1194,6 +1168,7 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
     type: inputtype || "search",
     placeholder: fieldtext,
     disabled: disabled,
+    value: value,
     css: [searchFieldInputStyles]
   })), inputRef && inputRef.current && inputRef.current.value.length > 0 && core.jsx("span", {
     tabIndex: "-1",
@@ -1221,24 +1196,37 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
 });
 
 /* eslint-disable */
-// murmurhash2 via https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
-function murmurhash2_32_gc(str) {
-  var l = str.length,
-      h = l ^ l,
+// Inspired by https://github.com/garycourt/murmurhash-js
+// Ported from https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash2.cpp#L37-L86
+function murmur2(str) {
+  // 'm' and 'r' are mixing constants generated offline.
+  // They're not really 'magic', they just happen to work well.
+  // const m = 0x5bd1e995;
+  // const r = 24;
+  // Initialize the hash
+  var h = 0; // Mix 4 bytes at a time into the hash
+
+  var k,
       i = 0,
-      k;
+      len = str.length;
 
-  while (l >= 4) {
+  for (; len >= 4; ++i, len -= 4) {
     k = str.charCodeAt(i) & 0xff | (str.charCodeAt(++i) & 0xff) << 8 | (str.charCodeAt(++i) & 0xff) << 16 | (str.charCodeAt(++i) & 0xff) << 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    k ^= k >>> 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16) ^ k;
-    l -= 4;
-    ++i;
-  }
+    k =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16);
+    k ^=
+    /* k >>> r: */
+    k >>> 24;
+    h =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16) ^
+    /* Math.imul(h, m): */
+    (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Handle the last few bytes of the input array
 
-  switch (l) {
+
+  switch (len) {
     case 3:
       h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
 
@@ -1247,13 +1235,18 @@ function murmurhash2_32_gc(str) {
 
     case 1:
       h ^= str.charCodeAt(i) & 0xff;
-      h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  }
+      h =
+      /* Math.imul(h, m): */
+      (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Do a few final mixes of the hash to ensure the last few
+  // bytes are well-incorporated.
+
 
   h ^= h >>> 13;
-  h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  h ^= h >>> 15;
-  return (h >>> 0).toString(36);
+  h =
+  /* Math.imul(h, m): */
+  (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  return ((h ^ h >>> 15) >>> 0).toString(36);
 }
 
 var unitlessKeys = {
@@ -1609,7 +1602,7 @@ var serializeStyles = function serializeStyles(args, registered, mergedProps) {
     match[1];
   }
 
-  var name = murmurhash2_32_gc(styles) + identifierName;
+  var name = murmur2(styles) + identifierName;
 
   if (process.env.NODE_ENV !== 'production') {
     // $FlowFixMe SerializedStyles type doesn't have toString property (and we don't want to add it)
