@@ -2935,7 +2935,7 @@ var Tag = function Tag(_ref) {
 };
 
 function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    top: 2rem;\n    right: .5rem;\n    vertical-align: middle;\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: #fff;\n\n    [dir='rtl'] &{\n        left: .5rem;\n        right: auto;\n        transform: rotate(90deg);\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    top: 2rem;\n    right: 1.2rem;\n    vertical-align: middle;\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: #fff;\n\n    [dir='rtl'] &{\n        left: .5rem;\n        right: auto;\n        transform: rotate(90deg);\n    }\n"]);
 
   _templateObject13 = function _templateObject13() {
     return data;
@@ -3193,7 +3193,7 @@ function _templateObject3$6() {
 }
 
 function _templateObject2$6() {
-  var data = _taggedTemplateLiteral(["\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding:.8rem 0;\n    \n    color: ", ";\n    border-radius:3.2rem;\n    width:100%;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        width:auto;\n        font-size:2.1rem;\n        padding:1.6rem 2.4rem;\n    }\n\n    &:hover {\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:active{\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding:.8rem 0;\n    \n    color: ", ";\n    border-radius:3.2rem;\n    width:100%;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        /*width:auto;*/\n        font-size:2.1rem;\n        padding:1.6rem 2.4rem;\n    }\n\n    &:hover {\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:active{\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject2$6 = function _templateObject2() {
     return data;
@@ -3323,7 +3323,7 @@ var InputRadio = function InputRadio(_ref) {
 };
 
 function _templateObject3$8() {
-  var data = _taggedTemplateLiteral(["\n  color: #4D4D4D;\n  display:inline-block;\n  font-size: 2.1rem;\n  line-height:3.2rem;\n  margin-bottom:1.6rem;\n  font-weight:700;\n  ", " {\n    margin-bottom:.8rem; \n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: #000;\n"]);
 
   _templateObject3$8 = function _templateObject3() {
     return data;
@@ -3353,7 +3353,7 @@ function _templateObject$a() {
 }
 var wrapper = core.css(_templateObject$a(), colors.theme1.light, medium, medium);
 var exclamationMarkImage = core.css(_templateObject2$8(), medium, medium);
-var heading = core.css(_templateObject3$8(), medium);
+var heading = core.css(_templateObject3$8());
 
 function _templateObject7$4() {
   var data = _taggedTemplateLiteral(["\n\n      font-size:1.4rem;\n      line-height:2.4rem;\n\n"]);
@@ -3462,6 +3462,7 @@ var PrerequisitesBox = function PrerequisitesBox(_ref) {
     icon: "Exclamationmark",
     style: exclamationMarkImage
   }), text && core.jsx(SubHeading, {
+    style: heading,
     text: text,
     styleLevel: 3
   }), children);
