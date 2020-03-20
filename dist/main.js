@@ -4310,9 +4310,14 @@ var Pagination = function Pagination(_ref) {
       total = _ref.total,
       currentPage = _ref.currentPage,
       baseUrl = _ref.baseUrl,
-      onClick = _ref.onClick,
+      _onClick = _ref.onClick,
       style = _ref.style;
   if (total == 0) return null;
+
+  if (!_onClick) {
+    _onClick = function onClick() {};
+  }
+
   var totalNumberOfPages = Math.ceil(total / pageSize);
   var links = Object.keys(_toConsumableArray(new Array(totalNumberOfPages))).map(function (val) {
     return parseInt(val) + 1;
@@ -4349,7 +4354,9 @@ var Pagination = function Pagination(_ref) {
     return core.jsx(React__default.Fragment, null, core.jsx("a", {
       className: "first",
       href: createHref(1),
-      onClick: onClick,
+      onClick: function onClick(e) {
+        return _onClick(e, 1);
+      },
       css: [pageStyle]
     }, "1"), distanceEl);
   };
@@ -4367,7 +4374,9 @@ var Pagination = function Pagination(_ref) {
     return core.jsx(React__default.Fragment, null, distanceEl, core.jsx("a", {
       className: "last",
       href: createHref(max),
-      onClick: onClick,
+      onClick: function onClick(e) {
+        return _onClick(e, max);
+      },
       css: pageStyle
     }, max));
   };
@@ -4389,14 +4398,18 @@ var Pagination = function Pagination(_ref) {
     css: [prevPageStyle, prevPageStyleHidden]
   }, "F\xF6reg\xE5ende sida") : core.jsx("a", {
     href: createHref(currentPage - 1),
-    onClick: onClick,
+    onClick: function onClick(e) {
+      return _onClick(e, currentPage - 1);
+    },
     css: prevPageStyle
   }, "F\xF6reg\xE5ende sida"), firstLink(), filteredLink.map(function (pageNumber) {
     var isCurrent = pageNumber == currentPage;
     return core.jsx("a", {
       href: createHref(pageNumber),
       className: getClass(pageNumber),
-      onClick: onClick,
+      onClick: function onClick(e) {
+        return _onClick(e, pageNumber);
+      },
       "aria-current": isCurrent ? "page" : null,
       key: "pagination".concat(pageNumber),
       css: [pageStyle, isCurrent ? currentPageStyle : null]
@@ -4405,7 +4418,9 @@ var Pagination = function Pagination(_ref) {
     css: [nextPageStyle, prevPageStyleHidden]
   }, "N\xE4sta sida") : core.jsx("a", {
     href: createHref(currentPage + 1),
-    onClick: onClick,
+    onClick: function onClick(e) {
+      return _onClick(e, currentPage + 1);
+    },
     css: nextPageStyle
   }, "N\xE4sta sida"));
 };
