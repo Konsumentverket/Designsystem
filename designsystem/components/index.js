@@ -1,5 +1,6 @@
 export { Button } from './Button/Button.js'
 export { FormSearchField } from './FormFields/FormSearchField.js'
+export { TextArea } from './TextArea/TextArea.js'
 export { colors } from './Colors/Colors.js'
 export { spacing } from './Spacing/Spacing.js'
 export { Icon } from './Icon/Icon.js'

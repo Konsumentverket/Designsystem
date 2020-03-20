@@ -92,7 +92,6 @@ export const iconBackground = css`
 
 export const externalIcon = css`
   position: relative;
-  top: 0.2rem;
   margin-left: 0.4rem;
   fill: #fff;
 `

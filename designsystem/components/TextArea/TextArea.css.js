@@ -1,10 +1,10 @@
 import css from "@emotion/css";
 import { colors } from '../Colors/Colors';
 
-export const InputStyle = css`
+export const TextAreaStyle = css`
     width: 100%;
     padding: 1.2rem 1.6rem;
-    box-sizing:border-box;
+    box-sizing: border-box;
     border: 2px solid #979797;
     border-radius: 0.8rem;
     -khtml-border-radius: 0.8rem; /* this is for the fruit phones */
@@ -22,31 +22,11 @@ export const InputStyle = css`
     }
 `
 
-export const InputWrapperStyle = css`
+export const TextAreaWrapperStyle = css`
     position: relative;
 
 `
 
-export const ClearInput = css` 
-    appearance: none;
-    position: absolute;
-    right: 1.6rem;
-    border: 0px;
-    background-color: transparent;
-    top: 1.3rem;
-    width: 3.2rem;
-    height: 3.2rem;
-    padding: 0;
-    svg{
-        fill: ${colors.theme1.mid};
-        width: 3.2rem;
-        height: 3.2rem;
-    }
-    &:focus{
-        outline: none;
-    }
-    
-`
 export const Label = css`
   color: #4D4D4D;
   font-size: 1.8rem;

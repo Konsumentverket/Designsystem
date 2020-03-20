@@ -140,7 +140,7 @@ export const arrowStyle = css`
 export const secondaryArrowStyleCSS = css`
     position: absolute;
     top: 2rem;
-    right: .5rem;
+    right: 1.2rem;
     vertical-align: middle;
     height: 3.2rem;
     width: 3.2rem;

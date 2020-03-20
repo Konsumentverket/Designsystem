@@ -24,6 +24,7 @@ export const searchWrapperStyle = css`
 `;
 
 export const searchFieldInputStyle = css`
+    -webkit-appearance: none;
     background-color: ${colors.common.white};
     box-shadow:inset 0px 0px 0px 1px ${colors.theme3.mid};
     border-radius: .8rem 0 0 .8rem;
@@ -36,6 +37,10 @@ export const searchFieldInputStyle = css`
     color: ${colors.theme1.xDark};
     font-style: normal;
     font-weight: 500;
+
+    &::-webkit-search-cancel-button{
+        appearance: none;
+    }
 
     ${medium}{
         font-size:1.8rem;
@@ -73,3 +78,28 @@ export const invertedBackgroundStyle = css`
     }
 `;
 
+export const clearInputStyle = css`
+
+    appearance: none;
+    position: absolute;
+    right: 10rem;
+    border: 0px;
+    background-color: transparent;
+    top: 0.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0;
+    svg{
+        fill: ${colors.theme1.mid};
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    &:focus{
+        outline: none;
+    }
+    ${medium} {
+        top: 1.3rem;
+        right: 12rem;
+    }
+
+`
