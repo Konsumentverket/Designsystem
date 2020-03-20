@@ -1082,7 +1082,7 @@ var Button = function Button(_ref) {
 };
 
 function _templateObject6$2() {
-  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 12rem;\n    border: 0px;\n    background-color: transparent;\n    top: 1.3rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 3.2rem;\n        height: 3.2rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 10rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 3.2rem;\n        height: 3.2rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    ", " {\n        top: 1.3rem;\n        right: 12rem;\n    }\n\n"]);
 
   _templateObject6$2 = function _templateObject6() {
     return data;
@@ -1145,7 +1145,7 @@ var searchWrapperStyle = css$1(_templateObject2$2(), colors.common.white);
 var searchFieldInputStyle = css$1(_templateObject3$2(), colors.common.white, colors.theme3.mid, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme1.dark, disabled$1);
 var searchFieldButtonStyle = css$1(_templateObject4$2());
 var invertedBackgroundStyle$1 = css$1(_templateObject5$2());
-var clearInputStyle = css$1(_templateObject6$2(), colors.theme1.mid);
+var clearInputStyle = css$1(_templateObject6$2(), colors.theme1.mid, medium);
 
 var FormSearchField = React.forwardRef(function (_ref, _ref2) {
   var className = _ref.className,
@@ -1161,7 +1161,8 @@ var FormSearchField = React.forwardRef(function (_ref, _ref2) {
       disabled = _ref.disabled,
       type = _ref.type,
       inputtype = _ref.inputtype,
-      other = _objectWithoutProperties(_ref, ["className", "icon", "fieldtext", "onClick", "onClear", "onChange", "invertedBackgroundColor", "buttontext", "style", "disabled", "type", "inputtype"]);
+      value = _ref.value,
+      other = _objectWithoutProperties(_ref, ["className", "icon", "fieldtext", "onClick", "onClear", "onChange", "invertedBackgroundColor", "buttontext", "style", "disabled", "type", "inputtype", "value"]);
 
   var styles = [searchWrapperStyle];
   style && styles.push(style);
@@ -1181,13 +1182,13 @@ var FormSearchField = React.forwardRef(function (_ref, _ref2) {
     onChange: onChange,
     ref: function ref(el) {
       inputRef.current = el;
-      return _ref2(el);
+      return typeof _ref2 === 'function' ? _ref2(el) : null;
     },
     type: inputtype || "search",
     placeholder: fieldtext,
     disabled: disabled,
     css: [searchFieldInputStyles]
-  })), jsx("span", {
+  })), inputRef && inputRef.current && inputRef.current.value.length > 0 && jsx("span", {
     tabIndex: "-1",
     css: clearInputStyle,
     className: "noState",
