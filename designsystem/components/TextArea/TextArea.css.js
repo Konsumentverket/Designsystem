@@ -36,3 +36,8 @@ export const Label = css`
   margin-bottom: .8rem;
   display: block;
 `
+export const invalidStyle = css`
+    textarea {
+        border-color: #F00;
+    }
+`

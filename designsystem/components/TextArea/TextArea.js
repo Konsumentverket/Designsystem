@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import { TextAreaStyle,TextAreaWrapperStyle, Label } from "./TextArea.css"
+import { TextAreaStyle,TextAreaWrapperStyle, Label, invalidStyle } from "./TextArea.css"
 import { useRef, useState } from 'react';
 
 
@@ -11,9 +11,10 @@ export const TextArea = ({style, wrapperStyle, placeholder, text, id, onChange, 
 
   let inputRef = useRef(null);
   let [addedText,setText] = useState(null)
+  const invalid = validationError ? invalidStyle : null
 
   return (
-    <div css={[TextAreaWrapperStyle, wrapperStyle]}>
+    <div css={[TextAreaWrapperStyle, wrapperStyle, invalid]}>
       { label && <label css={Label} htmlFor={id}>{label}</label> }
       {validationError}
       <textarea 

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import { InputStyle,InputWrapperStyle, ClearInput, Label } from "./InputText.css"
+import { InputStyle,InputWrapperStyle, ClearInput, Label, invalidStyle } from "./InputText.css"
 import {Icon} from '../Icon/Icon';
 import { useRef, useState } from 'react';
 
@@ -12,9 +12,9 @@ export const InputText = ({style,wrapperStyle, placeholder, id, onChange, onClea
 
     let inputRef = useRef(null);
     let [text,setText] = useState(null)
+    const invalid = validationError ? invalidStyle : null
 
-    return <div css={[InputWrapperStyle,wrapperStyle]}>
-
+    return <div css={[InputWrapperStyle,wrapperStyle, invalid]}>
             { label && <label css={Label} htmlFor={id}>{label}</label> }
             {validationError}
             <input ref={inputRef} {...other} css={[InputStyle,style]} name={name} disabled={disabled} 

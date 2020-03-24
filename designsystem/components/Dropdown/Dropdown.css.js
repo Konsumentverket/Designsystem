@@ -26,3 +26,8 @@ export const selectStyle = css`
 export const selectWrapperStyle = css`
     width: 100%;
 `
+export const invalidStyle = css`
+    select {
+        border-color: #F00;
+    }
+`

@@ -22,7 +22,11 @@ export const InputStyle = css`
         appearance: none;
     }
 `
-
+export const invalidStyle = css`
+    input {
+        border-color: #F00;
+    }
+`
 export const InputWrapperStyle = css`
     position: relative;
 
