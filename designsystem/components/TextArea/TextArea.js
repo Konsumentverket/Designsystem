@@ -4,7 +4,7 @@ import { TextAreaStyle,TextAreaWrapperStyle, Label } from "./TextArea.css"
 import { useRef, useState } from 'react';
 
 
-export const TextArea = ({style, wrapperStyle, placeholder, text, id, onChange, onClear,
+export const TextArea = ({style, wrapperStyle, placeholder, text, id, onChange, onClear,validationError,
   name, disabled, ...other}) => {
   
   const { label } = other
@@ -15,7 +15,7 @@ export const TextArea = ({style, wrapperStyle, placeholder, text, id, onChange, 
   return (
     <div css={[TextAreaWrapperStyle, wrapperStyle]}>
       { label && <label css={Label} htmlFor={id}>{label}</label> }
-
+      {validationError}
       <textarea 
         id={id} 
         ref={inputRef} 

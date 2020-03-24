@@ -5,7 +5,7 @@ import {Icon} from '../Icon/Icon';
 import { useRef, useState } from 'react';
 
 
-export const InputText = ({style,wrapperStyle, placeholder, id, onChange, onClear,
+export const InputText = ({style,wrapperStyle, placeholder, id, onChange, onClear,validationError,
     name, disabled, type="text", ...other}) => {
     
     const { label } = other
@@ -16,7 +16,7 @@ export const InputText = ({style,wrapperStyle, placeholder, id, onChange, onClea
     return <div css={[InputWrapperStyle,wrapperStyle]}>
 
             { label && <label css={Label} htmlFor={id}>{label}</label> }
-
+            {validationError}
             <input ref={inputRef} {...other} css={[InputStyle,style]} name={name} disabled={disabled} 
                     placeholder={placeholder} id={id} 
                     onChange={(e) =>{
