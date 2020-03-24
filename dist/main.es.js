@@ -7647,6 +7647,7 @@ var locale$1 = {
   }
 };
 
+/** @jsx jsx */
 var defaultDateFormat = "yyyy MM dd HH:mm:ss";
 var dateAndTimeFormat = "d MMMM yyyy 'kl.' HH:mm";
 var dateFormat = "d MMMM yyyy";
