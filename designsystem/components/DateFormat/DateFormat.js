@@ -6,8 +6,6 @@ export const dateAndTimeFormat = "d MMMM yyyy 'kl.' HH:mm";
 export const dateFormat = "d MMMM yyyy";
 export const timeFormat = "'kl.' HH:mm";
 
-
-
 const isDate = (date) => {
   return (new Date(date) !== "Invalid Date" && !isNaN(new Date(date)) )
 }
@@ -23,4 +21,4 @@ const DateFormat = ({date = null, showDate = false, showTime = false}) => {
   }
 }
 
-export default DateFormat
+export { DateFormat }
