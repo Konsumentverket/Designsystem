@@ -604,6 +604,7 @@ var Ecc = (function (_ref) {
   }));
 });
 
+var arrowPath = "M18.8200426,7.70004261 C18.4334198,7.31341975 17.8080945,7.31122597 17.4179582,7.70051231 L12.7020418,12.4061544 C12.3143148,12.7930366 11.6880945,12.7954407 11.2979582,12.4061544 L6.58204182,7.70051231 C6.19431483,7.31363005 5.56955624,7.31044376 5.17995739,7.70004261 L4.70004261,8.17995739 C4.31341975,8.56658025 4.3235178,9.2035178 4.70994663,9.58994663 L11.2900534,16.1700534 C11.6821461,16.5621461 12.3235178,16.5564822 12.7099466,16.1700534 L19.2900534,9.58994663 C19.6821461,9.19785393 19.6895562,8.56955624 19.2999574,8.17995739 L18.8200426,7.70004261 Z";
 var Arrow = (function (_ref) {
   var className = _ref.className,
       style = _ref.style,
@@ -617,7 +618,7 @@ var Arrow = (function (_ref) {
     height: "24px",
     viewBox: "0 0 24 24"
   }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M18.8200426,7.70004261 C18.4334198,7.31341975 17.8080945,7.31122597 17.4179582,7.70051231 L12.7020418,12.4061544 C12.3143148,12.7930366 11.6880945,12.7954407 11.2979582,12.4061544 L6.58204182,7.70051231 C6.19431483,7.31363005 5.56955624,7.31044376 5.17995739,7.70004261 L4.70004261,8.17995739 C4.31341975,8.56658025 4.3235178,9.2035178 4.70994663,9.58994663 L11.2900534,16.1700534 C11.6821461,16.5621461 12.3235178,16.5564822 12.7099466,16.1700534 L19.2900534,9.58994663 C19.6821461,9.19785393 19.6895562,8.56955624 19.2999574,8.17995739 L18.8200426,7.70004261 Z",
+    d: arrowPath,
     id: "arrow-".concat(title)
   }));
 });
@@ -1653,7 +1654,7 @@ function _templateObject2$3() {
 }
 
 function _templateObject$2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing: border-box;\n    border: 2px solid #979797;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing: border-box;\n    border: 2px solid #979797;\n    font-family: Arial;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n"]);
 
   _templateObject$2 = function _templateObject() {
     return data;
@@ -1673,9 +1674,10 @@ var TextArea = function TextArea(_ref) {
       id = _ref.id,
       _onChange = _ref.onChange,
       onClear = _ref.onClear,
+      validationError = _ref.validationError,
       name = _ref.name,
       disabled = _ref.disabled,
-      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "text", "id", "onChange", "onClear", "name", "disabled"]);
+      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "text", "id", "onChange", "onClear", "validationError", "name", "disabled"]);
 
   var label = other.label;
   var inputRef = React.useRef(null);
@@ -1690,7 +1692,7 @@ var TextArea = function TextArea(_ref) {
   }, label && core.jsx("label", {
     css: Label,
     htmlFor: id
-  }, label), core.jsx("textarea", _extends({
+  }, label), validationError, core.jsx("textarea", _extends({
     id: id,
     ref: inputRef
   }, other, {
@@ -3638,11 +3640,12 @@ var InputText = function InputText(_ref) {
       id = _ref.id,
       _onChange = _ref.onChange,
       onClear = _ref.onClear,
+      validationError = _ref.validationError,
       name = _ref.name,
       disabled = _ref.disabled,
       _ref$type = _ref.type,
       type = _ref$type === void 0 ? "text" : _ref$type,
-      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "id", "onChange", "onClear", "name", "disabled", "type"]);
+      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "id", "onChange", "onClear", "validationError", "name", "disabled", "type"]);
 
   var label = other.label;
   var inputRef = React.useRef(null);
@@ -3657,7 +3660,7 @@ var InputText = function InputText(_ref) {
   }, label && core.jsx("label", {
     css: Label$1,
     htmlFor: id
-  }, label), core.jsx("input", _extends({
+  }, label), validationError, core.jsx("input", _extends({
     ref: inputRef
   }, other, {
     css: [InputStyle, style],
@@ -4525,10 +4528,66 @@ var Source = function Source(_ref) {
   }, core.jsx("p", null, "Granskad: ".concat(reviewed.getDate(), " ").concat(months[reviewed.getMonth() - 1], " ").concat(reviewed.getFullYear())))));
 };
 
+function _templateObject2$j() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n"]);
+
+  _templateObject2$j = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$m() {
+  var data = _taggedTemplateLiteral(["\n    appearance: none;\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing:border-box;\n    border: 2px solid #979797;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><path fill='", "' d='", "' /></svg>\");\n    background-repeat: no-repeat, repeat;\n    background-position: right .7em top 50%, 0 0;\n    background-size: 1.6em auto, 100%;\n    &[data-hasvalue=\"false\"]{\n        color: ", ";    \n    }\n\n"]);
+
+  _templateObject$m = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var selectStyle = core.css(_templateObject$m(), encodeURIComponent(colors.theme1.mid), arrowPath, colors.theme3.dark);
+var selectWrapperStyle = core.css(_templateObject2$j());
+
+var Dropdown = function Dropdown(_ref) {
+  var label = _ref.label,
+      id = _ref.id,
+      _onChange = _ref.onChange,
+      validationError = _ref.validationError,
+      children = _ref.children,
+      other = _objectWithoutProperties(_ref, ["label", "id", "onChange", "validationError", "children"]);
+
+  var _useState = React.useState(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setValue = _useState2[1];
+
+  return core.jsx("div", {
+    css: selectWrapperStyle
+  }, label && core.jsx("label", {
+    css: Label,
+    htmlFor: id
+  }, label), validationError, core.jsx("select", _extends({
+    id: id,
+    css: selectStyle,
+    "data-hasvalue": !!value,
+    value: value,
+    onChange: function onChange(e) {
+      setValue(e.target.value);
+
+      if (_onChange) {
+        _onChange(e);
+      }
+    }
+  }, other), children));
+};
+
 exports.Accordion = Accordion;
 exports.BoxWithHeadlineText = BoxWithHeadlineText;
 exports.Button = Button;
 exports.CampaignFocusPuff = CampaignFocusPuff;
+exports.Dropdown = Dropdown;
 exports.EditorIcon = EditorIcon;
 exports.ElementLinkColorStyle = ElementLinkColorStyle$1;
 exports.ElementLinkInvertedColorStyle = ElementLinkInvertedColorStyle$1;
