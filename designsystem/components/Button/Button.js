@@ -35,15 +35,18 @@ export const Button = ({ text, secondaryButtonStyle=false, invertedBackgroundCol
         "href":href || null,
         ...ariaAttrs}
 
+    const leftIcon = iconLeft ? (React.isValidElement(iconLeft) ? iconLeft : <Icon style={iconStyle} icon={iconLeft} />) : null;
+    const rightIcon = iconRight ? (React.isValidElement(iconRight) ? iconRight : <Icon style={iconStyle} icon={iconRight} />) : null;
+
     return href ? <a {...props} > 
-        {iconLeft ? <Icon style={iconStyle} icon={iconLeft} /> : null}
+        {leftIcon}
         {text}
-        {iconRight ? <Icon style={iconStyle} icon={iconRight} /> : null}
+        {rightIcon}
     </a>
     :
     <button {...props} >
-        {iconLeft ? <Icon style={iconStyle} icon={iconLeft} /> : null}
+        {leftIcon}
         {text}
-        {iconRight ? <Icon style={iconStyle} icon={iconRight} /> : null}
+        {rightIcon}
     </button>;
 }

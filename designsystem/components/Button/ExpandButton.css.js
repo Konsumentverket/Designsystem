@@ -30,7 +30,7 @@ export const expandButtonStyle = css`
     }
 
     ${medium}{
-        width:auto;
+        /*width:auto;*/
         font-size:2.1rem;
         padding:1.6rem 2.4rem;
     }

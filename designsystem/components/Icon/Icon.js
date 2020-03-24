@@ -16,7 +16,6 @@ import Exclamationmark from '../../icons/SystemIcons/Exclamationmark'
 import Check from '../../icons/SystemIcons/Check'
 import Oval from '../../icons/SystemIcons/Oval'
 import LinkArrow from '../../icons/SystemIcons/LinkArrow'
-import Plane from '../../icons/SystemIcons/Plane'
 import Filter from '../../icons/SystemIcons/Filter'
 import List from '../../icons/SystemIcons/List'
 import Picturelist from '../../icons/SystemIcons/Picturelist'
@@ -40,7 +39,6 @@ const iconDefinitions = {
     Check,
     Oval,
     LinkArrow,
-    Plane,
     Filter,
     List,
     Picturelist,

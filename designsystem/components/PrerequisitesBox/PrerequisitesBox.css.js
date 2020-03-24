@@ -43,14 +43,6 @@ export const exclamationMarkImage = css`
 `
 
 export const heading = css`
-  color: #4D4D4D;
-  display:inline-block;
-  font-size: 2.1rem;
-  line-height:3.2rem;
-  margin-bottom:1.6rem;
-  font-weight:700;
-  ${medium} {
-    margin-bottom:.8rem; 
-  }
+  color: #000;
 `
 
