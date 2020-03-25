@@ -4606,7 +4606,7 @@ var Dropdown = function Dropdown(_ref) {
     id: id,
     css: selectStyle,
     "data-hasvalue": !!value,
-    value: value,
+    value: value || "",
     onChange: function onChange(e) {
       setValue(e.target.value);
 
