@@ -11,6 +11,7 @@ export const InputStyle = css`
     font-size: 1.8rem;
     line-height: 3rem;
     -webkit-appearance: textfield; /* safari fix */
+    margin-bottom: 2.4rem;
 
     &:focus{
         outline: none;
@@ -21,7 +22,11 @@ export const InputStyle = css`
         appearance: none;
     }
 `
-
+export const invalidStyle = css`
+    input {
+        border-color: #F00;
+    }
+`
 export const InputWrapperStyle = css`
     position: relative;
 
@@ -52,4 +57,5 @@ export const Label = css`
   font-size: 1.8rem;
   line-height: 3.2rem;
   margin-bottom: .8rem;
+  display: block;
 `

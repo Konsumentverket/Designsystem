@@ -12,9 +12,10 @@ export const paginationWrapperStyle = css`
 
     ${large}{
         justify-content: space-between;
-        padding-bottom: 0;
+        padding-bottom: 4.8rem;
     }
 `
+
 export const pageStyle = css`
     height: 4.0rem;
     width: 4.2rem;
