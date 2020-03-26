@@ -12,7 +12,7 @@ export const sourceStyle = css`
         font-size: 1.8rem;
         line-height: 3.2rem;
     }
-    background-color: ${colors.theme1.midLight};
+    background-color: ${colors.theme1.light};
     ${medium} {
         p > a {
             margin-bottom: 0;
