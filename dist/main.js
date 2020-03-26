@@ -233,7 +233,7 @@ var eccTheme = {
     "light": "#d7e6ed"
   },
   theme3: {
-    "xLight": "#d7e6ed",
+    "xLight": "#F2F0F0",
     "xDark": "#161616"
   }
 };
@@ -1684,7 +1684,7 @@ function _templateObject2$3() {
 }
 
 function _templateObject$2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing: border-box;\n    border: 2px solid #979797;\n    font-family: Arial;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n    margin-bottom: 2.4rem;\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 1.2rem 1.6rem;\n    box-sizing: border-box;\n    border: 2px solid #979797;\n    font-family: Arial;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n    margin-bottom: 2.4rem;\n    max-width: 100%;\n    min-width: 100%;\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n"]);
 
   _templateObject$2 = function _templateObject() {
     return data;
@@ -4548,7 +4548,7 @@ function _templateObject$l() {
 
   return data;
 }
-var sourceStyle = core.css(_templateObject$l(), medium, colors.theme1.midLight, medium);
+var sourceStyle = core.css(_templateObject$l(), medium, colors.theme1.light, medium);
 var firstRow = core.css(_templateObject2$i(), colors.theme3.light, medium);
 var secondRow = core.css(_templateObject3$h(), medium);
 var buttonStyle$1 = core.css(_templateObject4$f(), medium);
