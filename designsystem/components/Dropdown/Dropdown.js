@@ -12,7 +12,7 @@ export const Dropdown = ({label,id,onChange,validationError,children, ...other})
     <div css={[selectWrapperStyle, invalid]}>
         { label && <label css={Label} htmlFor={id}>{label}</label> }
         {validationError}
-        <select id={id} css={selectStyle} data-hasvalue={!!value} value={value} onChange={(e) => {
+        <select id={id} css={selectStyle} data-hasvalue={!!value} value={value || ""} onChange={(e) => {
             setValue(e.target.value)
             if(onChange){
                 onChange(e)
