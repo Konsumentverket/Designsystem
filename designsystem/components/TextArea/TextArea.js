@@ -2,10 +2,11 @@
 import { jsx } from '@emotion/core'
 import { TextAreaStyle,TextAreaWrapperStyle, Label, invalidStyle } from "./TextArea.css"
 import { useRef, useState } from 'react';
+import { VisuallyHidden } from '../GlobalStyles/globalStyles';
 
 
 export const TextArea = ({style, wrapperStyle, placeholder, text, id, onChange, onClear,validationError,
-  name, disabled, ...other}) => {
+  name, disabled,hiddenLabel = false, ...other}) => {
   
   const { label } = other
 
@@ -15,7 +16,7 @@ export const TextArea = ({style, wrapperStyle, placeholder, text, id, onChange, 
 
   return (
     <div css={[TextAreaWrapperStyle, wrapperStyle, invalid]}>
-      { label && <label css={Label} htmlFor={id}>{label}</label> }
+      { label && <label css={[Label,(hiddenLabel ? VisuallyHidden : null)]} htmlFor={id || name}>{label}</label> }
       {validationError}
       <textarea 
         id={id} 

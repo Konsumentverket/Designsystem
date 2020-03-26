@@ -56,6 +56,9 @@ export const prevPageStyle = css`
     ${medium}{
         position: static;
     }
+    &:visited{
+        color: ${colors.theme1.mid}!important;
+    }
 `
 
 export const nextPageStyle = css`
@@ -67,6 +70,9 @@ export const nextPageStyle = css`
 
     ${medium}{
         position: static;
+    }
+    &:visited{
+        color: ${colors.theme1.mid}!important;
     }
 
 `

@@ -33,7 +33,7 @@ export const searchFieldInputStyle = css`
     line-height:2.4rem;
     display:flex;
     flex-grow:1;
-    padding: .8rem 1.6rem;
+    padding: .8rem 6.4rem .8rem .8rem;
     color: ${colors.theme1.xDark};
     font-style: normal;
     font-weight: 500;
@@ -45,7 +45,7 @@ export const searchFieldInputStyle = css`
     ${medium}{
         font-size:1.8rem;
         line-height:3.2rem;
-        padding: 1.2rem 3.2rem 1.2rem 1.6rem;
+        padding: 1.2rem 6.4rem 1.2rem 1.6rem;
     }
 
     &:hover {

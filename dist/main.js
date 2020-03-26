@@ -9,8 +9,6 @@ var React = require('react');
 var React__default = _interopDefault(React);
 
 function _typeof(obj) {
-  "@babel/helpers - typeof";
-
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -57,35 +55,20 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
+function _objectSpread(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i] != null ? arguments[i] : {};
+    var ownKeys = Object.keys(source);
 
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
+    if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
     }
+
+    ownKeys.forEach(function (key) {
+      _defineProperty(target, key, source[key]);
+    });
   }
 
   return target;
@@ -140,15 +123,19 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+    return arr2;
+  }
 }
 
 function _arrayWithHoles(arr) {
@@ -156,11 +143,10 @@ function _arrayWithHoles(arr) {
 }
 
 function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -186,29 +172,12 @@ function _iterableToArrayLimit(arr, i) {
   return _arr;
 }
 
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(n);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-
-  return arr2;
-}
-
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance");
 }
 
 var _theme;
@@ -259,12 +228,13 @@ var eccTheme = {
     "dark": "#4663a9",
     "xDark": "#4663a9",
     "midDark": "#4663a9"
-  }, _defineProperty(_theme, "xDark", "#1C2742"), _defineProperty(_theme, "midDark", "#314575"), _defineProperty(_theme, "mid", "#4663a9"), _defineProperty(_theme, "midLight", "#eaeae9"), _theme),
+  }, _defineProperty(_theme, "xDark", "#1C2742"), _defineProperty(_theme, "midDark", "#314575"), _defineProperty(_theme, "mid", "#4663a9"), _defineProperty(_theme, "midLight", "#eaeae9"), _defineProperty(_theme, "light", "#d7e6ed"), _theme),
   theme2: {
     "light": "#d7e6ed"
   },
   theme3: {
-    "xLight": "#d7e6ed"
+    "xLight": "#d7e6ed",
+    "xDark": "#161616"
   }
 };
 var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme;
@@ -275,7 +245,32 @@ var spacing = {
   'spacing-l': '1.6rem',
   'spacing-xl': '2.4rem',
   'spacing-2xl': '3.2rem'
+  /*
+  const old_spacing = {
+      'spacing-xs': '0.25rem',
+      'spacing-s': '0.5rem',
+      'spacing-m/s': '0.75rem',
+      'spacing-m': '1rem',
+      'spacing-l': '1.5rem',
+      'spacing-xl': '2rem',
+      'spacing-2xl': '2.5rem',
+      'spacing-3xl': '3rem',
+      'spacing-4xl': '3.5rem',
+      'spacing-5xl': '4rem',
+    };
+  */
+
 };
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject7() {
   var data = _taggedTemplateLiteral(["\n    ", "\n"]);
@@ -343,6 +338,7 @@ var LinkWrapperColorStyle = core.css(_templateObject4(), LinkColors);
 var LinkWrapperInvertedColorStyle = core.css(_templateObject5(), LinkColorsInverted);
 var ElementLinkColorStyle = core.css(_templateObject6(), LinkColors);
 var ElementLinkInvertedColorStyle = core.css(_templateObject7(), LinkColorsInverted);
+var VisuallyHidden = core.css(_templateObject8());
 var viewportMedium = 768;
 var viewportLarge = 1120;
 
@@ -352,10 +348,10 @@ var mediaQueryMinWidth = function mediaQueryMinWidth(width) {
 var medium = mediaQueryMinWidth(viewportMedium);
 var large = mediaQueryMinWidth(viewportLarge);
 
-function _templateObject8() {
+function _templateObject8$1() {
   var data = _taggedTemplateLiteral(["\n    \n    fill:", ";\n    width: 2.4rem;\n    height: 2.4rem;\n    top: 1.8rem;\n    vertical-align: top;\n    ", "{\n        position:absolute; \n      }\n"]);
 
-  _templateObject8 = function _templateObject8() {
+  _templateObject8$1 = function _templateObject8() {
     return data;
   };
 
@@ -438,7 +434,7 @@ var invertedBackgroundStyle = core.css(_templateObject4$1(), colors.common.white
 var invertedSecondaryBackgroundStyle = core.css(_templateObject5$1(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled);
 var buttonIconLeft = core.css(_templateObject6$1(), medium);
 var buttonIconRight = core.css(_templateObject7$1(), medium);
-var iconStyle = core.css(_templateObject8(), colors.common.white, medium);
+var iconStyle = core.css(_templateObject8$1(), colors.common.white, medium);
 
 var Adapt = (function (_ref) {
   var className = _ref.className,
@@ -1057,7 +1053,7 @@ var Button = function Button(_ref) {
   });
   style && styles.push(style);
 
-  var props = _objectSpread2({
+  var props = _objectSpread({
     "id": id,
     "css": styles,
     "className": cssClass.join(" "),
@@ -1110,7 +1106,7 @@ function _templateObject4$2() {
 }
 
 function _templateObject3$2() {
-  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem 1.6rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 3.2rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem 6.4rem .8rem .8rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject3$2 = function _templateObject3() {
     return data;
@@ -1149,6 +1145,7 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
   var className = _ref.className,
       icon = _ref.icon,
       fieldtext = _ref.fieldtext,
+      labeltext = _ref.labeltext,
       onClick = _ref.onClick,
       onClear = _ref.onClear,
       onChange = _ref.onChange,
@@ -1160,7 +1157,9 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
       type = _ref.type,
       inputtype = _ref.inputtype,
       value = _ref.value,
-      other = _objectWithoutProperties(_ref, ["className", "icon", "fieldtext", "onClick", "onClear", "onChange", "invertedBackgroundColor", "buttontext", "style", "disabled", "type", "inputtype", "value"]);
+      name = _ref.name,
+      id = _ref.id,
+      other = _objectWithoutProperties(_ref, ["className", "icon", "fieldtext", "labeltext", "onClick", "onClear", "onChange", "invertedBackgroundColor", "buttontext", "style", "disabled", "type", "inputtype", "value", "name", "id"]);
 
   var styles = [searchWrapperStyle];
   style && styles.push(style);
@@ -1176,8 +1175,12 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
   return core.jsx("div", {
     css: [styles],
     className: className
-  }, core.jsx("input", _extends({}, other, {
+  }, core.jsx("label", {
+    css: VisuallyHidden,
+    htmlFor: id || name
+  }, labeltext || fieldtext), core.jsx("input", _extends({}, other, {
     onChange: onChange,
+    id: id,
     ref: function ref(el) {
       inputRef.current = el;
       return typeof _ref2 === 'function' ? _ref2(el) : null;
@@ -1186,6 +1189,7 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
     placeholder: fieldtext,
     disabled: disabled,
     value: value,
+    name: name,
     css: [searchFieldInputStyles]
   })), inputRef && inputRef.current && inputRef.current.value.length > 0 && core.jsx("span", {
     tabIndex: "-1",
@@ -1213,24 +1217,37 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
 });
 
 /* eslint-disable */
-// murmurhash2 via https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
-function murmurhash2_32_gc(str) {
-  var l = str.length,
-      h = l ^ l,
+// Inspired by https://github.com/garycourt/murmurhash-js
+// Ported from https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash2.cpp#L37-L86
+function murmur2(str) {
+  // 'm' and 'r' are mixing constants generated offline.
+  // They're not really 'magic', they just happen to work well.
+  // const m = 0x5bd1e995;
+  // const r = 24;
+  // Initialize the hash
+  var h = 0; // Mix 4 bytes at a time into the hash
+
+  var k,
       i = 0,
-      k;
+      len = str.length;
 
-  while (l >= 4) {
+  for (; len >= 4; ++i, len -= 4) {
     k = str.charCodeAt(i) & 0xff | (str.charCodeAt(++i) & 0xff) << 8 | (str.charCodeAt(++i) & 0xff) << 16 | (str.charCodeAt(++i) & 0xff) << 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    k ^= k >>> 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16) ^ k;
-    l -= 4;
-    ++i;
-  }
+    k =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16);
+    k ^=
+    /* k >>> r: */
+    k >>> 24;
+    h =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16) ^
+    /* Math.imul(h, m): */
+    (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Handle the last few bytes of the input array
 
-  switch (l) {
+
+  switch (len) {
     case 3:
       h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
 
@@ -1239,13 +1256,18 @@ function murmurhash2_32_gc(str) {
 
     case 1:
       h ^= str.charCodeAt(i) & 0xff;
-      h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  }
+      h =
+      /* Math.imul(h, m): */
+      (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Do a few final mixes of the hash to ensure the last few
+  // bytes are well-incorporated.
+
 
   h ^= h >>> 13;
-  h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  h ^= h >>> 15;
-  return (h >>> 0).toString(36);
+  h =
+  /* Math.imul(h, m): */
+  (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  return ((h ^ h >>> 15) >>> 0).toString(36);
 }
 
 var unitlessKeys = {
@@ -1601,7 +1623,7 @@ var serializeStyles = function serializeStyles(args, registered, mergedProps) {
     match[1];
   }
 
-  var name = murmurhash2_32_gc(styles) + identifierName;
+  var name = murmur2(styles) + identifierName;
 
   if (process.env.NODE_ENV !== 'production') {
     // $FlowFixMe SerializedStyles type doesn't have toString property (and we don't want to add it)
@@ -1686,7 +1708,9 @@ var TextArea = function TextArea(_ref) {
       validationError = _ref.validationError,
       name = _ref.name,
       disabled = _ref.disabled,
-      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "text", "id", "onChange", "onClear", "validationError", "name", "disabled"]);
+      _ref$hiddenLabel = _ref.hiddenLabel,
+      hiddenLabel = _ref$hiddenLabel === void 0 ? false : _ref$hiddenLabel,
+      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "text", "id", "onChange", "onClear", "validationError", "name", "disabled", "hiddenLabel"]);
 
   var label = other.label;
   var inputRef = React.useRef(null);
@@ -1700,8 +1724,8 @@ var TextArea = function TextArea(_ref) {
   return core.jsx("div", {
     css: [TextAreaWrapperStyle, wrapperStyle, invalid]
   }, label && core.jsx("label", {
-    css: Label,
-    htmlFor: id
+    css: [Label, hiddenLabel ? VisuallyHidden : null],
+    htmlFor: id || name
   }, label), validationError, core.jsx("textarea", _extends({
     id: id,
     ref: inputRef
@@ -2996,10 +3020,10 @@ function _templateObject9() {
   return data;
 }
 
-function _templateObject8$1() {
+function _templateObject8$2() {
   var data = _taggedTemplateLiteral(["\n    margin:0 1.6rem .8rem 0;\n    list-style-type:none;\n    &:before{\n        content:none !important;\n    }\n    &:last-child{\n        margin-right:0;\n    }\n"]);
 
-  _templateObject8$1 = function _templateObject8() {
+  _templateObject8$2 = function _templateObject8() {
     return data;
   };
 
@@ -3082,7 +3106,7 @@ var tagHeading = core.css(_templateObject4$5());
 var tagIconHeading = core.css(_templateObject5$4());
 var tagsArea = core.css(_templateObject6$4());
 var tagsList = core.css(_templateObject7$2());
-var tagsListItem = core.css(_templateObject8$1());
+var tagsListItem = core.css(_templateObject8$2());
 var tagItem = core.css(_templateObject9());
 var tagItemText = core.css(_templateObject10());
 var iconStyle$2 = core.css(_templateObject11());
@@ -3480,6 +3504,16 @@ var PrerequisitesBox = function PrerequisitesBox(_ref) {
   }), children);
 };
 
+function _templateObject8$3() {
+  var data = _taggedTemplateLiteral(["\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n"]);
+
+  _templateObject8$3 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject7$5() {
   var data = _taggedTemplateLiteral(["\n    ", "\n"]);
 
@@ -3568,7 +3602,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
     });
     return function () {};
   }, []);
-  return /*#__PURE__*/React__default.createElement(core.Global, {
+  return React__default.createElement(core.Global, {
     styles: globalStyles(fontSize, fontFamily)
   });
 };
@@ -3585,6 +3619,7 @@ var LinkWrapperColorStyle$1 = core.css(_templateObject4$8(), LinkColors$1);
 var LinkWrapperInvertedColorStyle$1 = core.css(_templateObject5$7(), LinkColorsInverted$1);
 var ElementLinkColorStyle$1 = core.css(_templateObject6$7(), LinkColors$1);
 var ElementLinkInvertedColorStyle$1 = core.css(_templateObject7$5(), LinkColorsInverted$1);
+var VisuallyHidden$1 = core.css(_templateObject8$3());
 
 var Heading = function Heading(_ref) {
   var text = _ref.text,
@@ -3726,10 +3761,10 @@ function _templateObject9$1() {
   return data;
 }
 
-function _templateObject8$2() {
+function _templateObject8$4() {
   var data = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 0.4rem;\n  fill: #fff;\n"]);
 
-  _templateObject8$2 = function _templateObject8() {
+  _templateObject8$4 = function _templateObject8() {
     return data;
   };
 
@@ -3812,7 +3847,7 @@ var focusText = core.css(_templateObject4$a());
 var textArea = core.css(_templateObject5$9(), medium);
 var pictureWrapper = core.css(_templateObject6$8());
 var iconBackground = core.css(_templateObject7$6(), colors.theme2.light);
-var externalIcon = core.css(_templateObject8$2());
+var externalIcon = core.css(_templateObject8$4());
 var puffIcon = core.css(_templateObject9$1());
 
 /** @jsx jsx */
@@ -3880,10 +3915,10 @@ function _templateObject9$2() {
   return data;
 }
 
-function _templateObject8$3() {
+function _templateObject8$5() {
   var data = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 0.8rem;\n  fill: ", ";\n  width:2rem;\n"]);
 
-  _templateObject8$3 = function _templateObject8() {
+  _templateObject8$5 = function _templateObject8() {
     return data;
   };
 
@@ -3966,7 +4001,7 @@ var focusText$1 = core.css(_templateObject4$b(), colors.theme3.dark);
 var textArea$1 = core.css(_templateObject5$a(), medium, large);
 var pictureWrapper$1 = core.css(_templateObject6$9(), medium, large);
 var iconBackground$1 = core.css(_templateObject7$7(), colors.theme2.light, medium);
-var externalIcon$1 = core.css(_templateObject8$3(), colors.theme1.mid);
+var externalIcon$1 = core.css(_templateObject8$5(), colors.theme1.mid);
 var puffIcon$1 = core.css(_templateObject9$2(), colors.theme2.mid);
 
 /** @jsx jsx */
@@ -4265,7 +4300,7 @@ function _templateObject5$d() {
 }
 
 function _templateObject4$e() {
-  var data = _taggedTemplateLiteral(["\n    margin-left: auto;\n    font-size: 1.8rem;\n    position: absolute;\n    right: 0px;\n    bottom: -0rem;\n\n    ", "{\n        position: static;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-left: auto;\n    font-size: 1.8rem;\n    position: absolute;\n    right: 0px;\n    bottom: -0rem;\n\n    ", "{\n        position: static;\n    }\n    &:visited{\n        color: ", "!important;\n    }\n\n"]);
 
   _templateObject4$e = function _templateObject4() {
     return data;
@@ -4275,7 +4310,7 @@ function _templateObject4$e() {
 }
 
 function _templateObject3$g() {
-  var data = _taggedTemplateLiteral(["\n    margin-right: auto;\n    font-size: 1.8rem;\n    position: absolute;\n    left: 0px;\n    bottom: -0rem;\n\n    ", "{\n        position: static;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-right: auto;\n    font-size: 1.8rem;\n    position: absolute;\n    left: 0px;\n    bottom: -0rem;\n\n    ", "{\n        position: static;\n    }\n    &:visited{\n        color: ", "!important;\n    }\n"]);
 
   _templateObject3$g = function _templateObject3() {
     return data;
@@ -4305,8 +4340,8 @@ function _templateObject$j() {
 }
 var paginationWrapperStyle = core.css(_templateObject$j(), large);
 var pageStyle = core.css(_templateObject2$g(), colors.theme1.mid, medium);
-var prevPageStyle = core.css(_templateObject3$g(), medium);
-var nextPageStyle = core.css(_templateObject4$e(), medium);
+var prevPageStyle = core.css(_templateObject3$g(), medium, colors.theme1.mid);
+var nextPageStyle = core.css(_templateObject4$e(), medium, colors.theme1.mid);
 var prevPageStyleHidden = core.css(_templateObject5$d());
 var distanceIndicatorStyle = core.css(_templateObject6$a(), colors.theme1.mid, medium);
 var currentPageStyle = core.css(_templateObject7$8(), colors.theme1.dark, colors.theme1.mid);

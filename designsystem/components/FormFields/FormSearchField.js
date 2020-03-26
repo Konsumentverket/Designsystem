@@ -4,10 +4,12 @@ import React, { useRef } from 'react';
 import { searchWrapperStyle, searchFieldInputStyle, searchFieldButtonStyle, invertedBackgroundStyle, clearInputStyle } from './FormSearchField.css';
 import { Button } from '../Button/Button';
 import { Icon } from '../Icon/Icon';
+import { VisuallyHidden } from '../GlobalStyles/globalStyles';
 
 export const FormSearchField = React.forwardRef(({ className,
     icon,
     fieldtext,
+    labeltext,
     onClick,
     onClear,
     onChange,
@@ -18,6 +20,8 @@ export const FormSearchField = React.forwardRef(({ className,
     type,
     inputtype,
     value,
+    name,
+    id,
     ...other }, ref) => {
 
     var styles = [searchWrapperStyle];
@@ -32,9 +36,11 @@ export const FormSearchField = React.forwardRef(({ className,
     return <div
         css={[styles]}
         className={className} >
+        <label css={VisuallyHidden} htmlFor={id || name}>{labeltext || fieldtext}</label>
         <input
             {...other}
             onChange={onChange}
+            id={id}
             ref={(el) => {
                 inputRef.current = el
                 return typeof ref === 'function' ? ref(el) : null
@@ -43,6 +49,7 @@ export const FormSearchField = React.forwardRef(({ className,
             placeholder={fieldtext}
             disabled={disabled}
             value={value}
+            name={name}
             css={[searchFieldInputStyles]} />
         {inputRef && inputRef.current && inputRef.current.value.length > 0 && <span
             tabIndex="-1"
