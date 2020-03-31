@@ -188,8 +188,6 @@ function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance");
 }
 
-var _theme;
-
 var defaultTheme = {
   theme1: {
     "xDark": "#162259",
@@ -232,16 +230,21 @@ var defaultTheme = {
   }
 };
 var eccTheme = {
-  theme1: (_theme = {
-    "dark": "#4663a9",
-    "xDark": "#4663a9",
-    "midDark": "#4663a9"
-  }, _defineProperty(_theme, "xDark", "#1C2742"), _defineProperty(_theme, "midDark", "#314575"), _defineProperty(_theme, "mid", "#4663a9"), _defineProperty(_theme, "midLight", "#eaeae9"), _defineProperty(_theme, "light", "#d7e6ed"), _theme),
+  theme1: {
+    "xDark": "#1C2742",
+    "dark": "#314575",
+    "midDark": "#4663a9",
+    "mid": "#4663a9",
+    "midLight": "#DDF1FD",
+    "light": "#d7e6ed"
+  },
   theme2: {
+    "midLight": "#eaeae9",
     "light": "#d7e6ed"
   },
   theme3: {
     "xLight": "#F2F0F0",
+    "light": "#D0D0D0",
     "xDark": "#161616"
   }
 };
