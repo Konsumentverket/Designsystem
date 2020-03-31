@@ -5,7 +5,7 @@ export const arrowPath = "M18.8200426,7.70004261 C18.4334198,7.31341975 17.80809
 export default ({ className, style, title, ...otherAttr }) => {
     return <svg className={className} css={style} width="24px" height="24px" viewBox="0 0 24 24" {...otherAttr}>
         <title>{title}</title>
-        <path d={arrowPath} id={`arrow-${title}`}></path>
+        <path d={arrowPath}></path>
     </svg>;
 }
 

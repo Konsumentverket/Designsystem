@@ -518,8 +518,7 @@ var Search = (function (_ref) {
     height: "24px",
     viewBox: "0 0 24 24"
   }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M20.7144058,18.1558442 L16.6248488,14.0669856 C16.440265,13.8824334 16.1900514,13.7799043 15.9275322,13.7799043 L15.2589286,13.7799043 C16.3910427,12.3321941 17.0637481,10.5112782 17.0637481,8.53041695 C17.0637481,3.81818182 13.2449141,0 8.53187406,0 C3.81883401,0 0,3.81818182 0,8.53041695 C0,13.2426521 3.81883401,17.0608339 8.53187406,17.0608339 C10.5130737,17.0608339 12.3343006,16.3882433 13.7822581,15.2563226 L13.7822581,15.924812 C13.7822581,16.1872864 13.8848047,16.4374573 14.0693885,16.6220096 L18.1589454,20.7108681 C18.5445205,21.0963773 19.1680036,21.0963773 19.5494768,20.7108681 L20.7103039,19.5502392 C21.095879,19.16473 21.095879,18.5413534 20.7144058,18.1558442 Z M8.53187406,13.7799043 C5.63185725,13.7799043 3.28149002,11.4340396 3.28149002,8.53041695 C3.28149002,5.63089542 5.62775539,3.2809296 8.53187406,3.2809296 C11.4318909,3.2809296 13.7822581,5.62679426 13.7822581,8.53041695 C13.7822581,11.4299385 11.4359927,13.7799043 8.53187406,13.7799043 Z",
-    id: "search-".concat(title)
+    d: "M20.7144058,18.1558442 L16.6248488,14.0669856 C16.440265,13.8824334 16.1900514,13.7799043 15.9275322,13.7799043 L15.2589286,13.7799043 C16.3910427,12.3321941 17.0637481,10.5112782 17.0637481,8.53041695 C17.0637481,3.81818182 13.2449141,0 8.53187406,0 C3.81883401,0 0,3.81818182 0,8.53041695 C0,13.2426521 3.81883401,17.0608339 8.53187406,17.0608339 C10.5130737,17.0608339 12.3343006,16.3882433 13.7822581,15.2563226 L13.7822581,15.924812 C13.7822581,16.1872864 13.8848047,16.4374573 14.0693885,16.6220096 L18.1589454,20.7108681 C18.5445205,21.0963773 19.1680036,21.0963773 19.5494768,20.7108681 L20.7103039,19.5502392 C21.095879,19.16473 21.095879,18.5413534 20.7144058,18.1558442 Z M8.53187406,13.7799043 C5.63185725,13.7799043 3.28149002,11.4340396 3.28149002,8.53041695 C3.28149002,5.63089542 5.62775539,3.2809296 8.53187406,3.2809296 C11.4318909,3.2809296 13.7822581,5.62679426 13.7822581,8.53041695 C13.7822581,11.4299385 11.4359927,13.7799043 8.53187406,13.7799043 Z"
   }));
 });
 
@@ -648,8 +647,7 @@ var Arrow = (function (_ref) {
     height: "24px",
     viewBox: "0 0 24 24"
   }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: arrowPath,
-    id: "arrow-".concat(title)
+    d: arrowPath
   }));
 });
 
@@ -1192,13 +1190,14 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
   });
   return core.jsx("div", {
     css: [styles],
-    className: className
+    className: className,
+    role: "search"
   }, core.jsx("label", {
     css: VisuallyHidden,
     htmlFor: id || name
   }, labeltext || fieldtext), core.jsx("input", _extends({}, other, {
     onChange: onChange,
-    id: id,
+    id: id || name,
     ref: function ref(el) {
       inputRef.current = el;
       return typeof _ref2 === 'function' ? _ref2(el) : null;
@@ -1225,13 +1224,14 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
     }
   }, core.jsx(Icon, {
     icon: "Clear"
-  })), core.jsx(Button, _extends({
+  })), core.jsx(Button, {
     style: searchFieldButtonStyle,
     disabled: disabled,
     onClick: onClick,
     iconLeft: icon,
-    text: buttontext
-  }, ariaAttrs)));
+    text: buttontext //{...ariaAttrs}
+
+  }));
 });
 
 /* eslint-disable */
@@ -1794,7 +1794,6 @@ var BeautyEngagement = (function (_ref) {
     height: "32px",
     viewBox: "0 0 28 32"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
-    id: "Page-1",
     stroke: "none",
     strokeWidth: "1"
   }, core.jsx("g", {
@@ -1867,7 +1866,6 @@ var Clothes = (function (_ref) {
     height: "29px",
     viewBox: "0 0 32 29"
   }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
-    id: "Page-1",
     stroke: "none",
     strokeWidth: "1"
   }, core.jsx("g", {
@@ -4323,7 +4321,7 @@ function _templateObject2$g() {
 }
 
 function _templateObject$j() {
-  var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    padding-bottom: 5.6rem;\n\n    ", "{\n        justify-content: space-between;\n        padding-bottom: 4.8rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n\n    ", "{\n        justify-content: space-between;\n        padding-bottom: 4.8rem;\n    }\n"]);
 
   _templateObject$j = function _templateObject() {
     return data;
