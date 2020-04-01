@@ -35,12 +35,13 @@ export const FormSearchField = React.forwardRef(({ className,
 
     return <div
         css={[styles]}
-        className={className} >
+        className={className} 
+        role="search">
         <label css={VisuallyHidden} htmlFor={id || name}>{labeltext || fieldtext}</label>
         <input
             {...other}
             onChange={onChange}
-            id={id}
+            id={id || name}
             ref={(el) => {
                 inputRef.current = el
                 return typeof ref === 'function' ? ref(el) : null
@@ -73,7 +74,7 @@ export const FormSearchField = React.forwardRef(({ className,
             onClick={onClick}
             iconLeft={icon}
             text={buttontext}
-            {...ariaAttrs}
+            //{...ariaAttrs}
         />
     </div>
 

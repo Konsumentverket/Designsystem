@@ -4,12 +4,12 @@ import React from 'react';
 import { sourceStyle, firstRow, buttonStyle, secondRow, rightAlign } from './Source.css';
 import { Button } from '../Button/Button';
 
-export const Source = ({ didThisHelpText, reportErrorText, markdownText, reviewedDate }) => {
+export const Source = ({ didThisHelpText, reportErrorText, markdownText, reviewedDate, style }) => {
 
     const reviewed = reviewedDate ? new Date(reviewedDate) : null;
     const months = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
 
-    return <div css={sourceStyle}>
+    return <div css={[sourceStyle, style]}>
         <div css={[firstRow]}>
             <p>{didThisHelpText || "Hittade du svaret på din fråga?"}</p>
             <div>
@@ -20,7 +20,7 @@ export const Source = ({ didThisHelpText, reportErrorText, markdownText, reviewe
         </div>
         <div css={[secondRow]}>
             {markdownText}
-            {reviewed && <div css={rightAlign}><p>{`Granskad: ${reviewed.getDate()} ${months[reviewed.getMonth()-1]} ${reviewed.getFullYear()}`}</p></div>}
+            {reviewed && <div css={rightAlign}><p>{`Granskad: ${reviewed.getDate()} ${months[reviewed.getMonth()]} ${reviewed.getFullYear()}`}</p></div>}
         </div>
     </div>
 }

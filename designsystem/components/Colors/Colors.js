@@ -43,20 +43,20 @@ const defaultTheme = {
 
 const eccTheme = {
     theme1: {
-        "dark": "#4663a9",
-        "xDark": "#4663a9",
-        "midDark": "#4663a9",
         "xDark": "#1C2742",
-        "midDark": "#314575",
+        "dark": "#314575",
+        "midDark": "#4663a9",
         "mid": "#4663a9",
-        "midLight": "#eaeae9",
+        "midLight": "#DDF1FD",
         "light" : "#d7e6ed"
     },
     theme2: {
+        "midLight": "#eaeae9",
         "light": "#d7e6ed"
     },
     theme3: {
         "xLight": "#F2F0F0",
+        "light": "#D0D0D0",
         "xDark": "#161616"
     }
 }
