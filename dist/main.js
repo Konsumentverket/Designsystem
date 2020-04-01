@@ -631,7 +631,7 @@ var Arrow = (function (_ref) {
     viewBox: "0 0 24 24"
   }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
     d: arrowPath,
-    id: "arrow-".concat(title)
+    id: title && "arrow-".concat(title)
   }));
 });
 
@@ -3675,7 +3675,7 @@ function _templateObject2$b() {
 }
 
 function _templateObject$d() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing:border-box;\n    border: 2px solid #979797;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n    margin-bottom: 2.4rem;\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing:border-box;\n    border: 2px solid #979797;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n"]);
 
   _templateObject$d = function _templateObject() {
     return data;
@@ -3689,7 +3689,7 @@ var InputWrapperStyle = css(_templateObject3$b());
 var ClearInput = css(_templateObject4$9(), colors.theme1.mid);
 var Label$1 = css(_templateObject5$8());
 
-var InputText = function InputText(_ref) {
+var InputText = React__default.forwardRef(function (_ref, _ref2) {
   var style = _ref.style,
       wrapperStyle = _ref.wrapperStyle,
       placeholder = _ref.placeholder,
@@ -3704,7 +3704,7 @@ var InputText = function InputText(_ref) {
       other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "id", "onChange", "onClear", "validationError", "name", "disabled", "type"]);
 
   var label = other.label;
-  var inputRef = React.useRef(null);
+  var inputRef = React.useRef();
 
   var _useState = React.useState(null),
       _useState2 = _slicedToArray(_useState, 2),
@@ -3718,8 +3718,10 @@ var InputText = function InputText(_ref) {
     css: Label$1,
     htmlFor: id
   }, label), validationError, core.jsx("input", _extends({
-    ref: inputRef
-  }, other, {
+    ref: function ref(el) {
+      inputRef.current = el;
+      return typeof _ref2 === 'function' ? _ref2(el) : null;
+    },
     css: [InputStyle, style],
     name: name,
     disabled: disabled,
@@ -3731,7 +3733,7 @@ var InputText = function InputText(_ref) {
       setText(e.target.value);
     },
     type: type
-  })), type == "search" && text != null && text != "" ? core.jsx("button", {
+  }, other)), type == "search" && text != null && text != "" ? core.jsx("button", {
     tabIndex: "-1",
     css: ClearInput,
     className: "noState",
@@ -3749,7 +3751,7 @@ var InputText = function InputText(_ref) {
   }, core.jsx(Icon, {
     icon: "Clear"
   })) : null);
-};
+});
 
 function _templateObject9$1() {
   var data = _taggedTemplateLiteral(["\n  position:absolute;\n  fill: #b50255;\n  width:6.4rem;\n  height:6.4rem;\n  left:calc(50% - 3.2rem);\n  top:calc(50% - 3.2rem);\n"]);
