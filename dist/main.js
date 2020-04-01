@@ -4574,7 +4574,7 @@ var Source = function Source(_ref) {
     css: [secondRow]
   }, markdownText, reviewed && core.jsx("div", {
     css: rightAlign
-  }, core.jsx("p", null, "Granskad: ".concat(reviewed.getDate(), " ").concat(months[reviewed.getMonth() - 1], " ").concat(reviewed.getFullYear())))));
+  }, core.jsx("p", null, "Granskad: ".concat(reviewed.getDate(), " ").concat(months[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))));
 };
 
 function _templateObject3$i() {

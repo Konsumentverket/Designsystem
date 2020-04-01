@@ -20,7 +20,7 @@ export const Source = ({ didThisHelpText, reportErrorText, markdownText, reviewe
         </div>
         <div css={[secondRow]}>
             {markdownText}
-            {reviewed && <div css={rightAlign}><p>{`Granskad: ${reviewed.getDate()} ${months[reviewed.getMonth()-1]} ${reviewed.getFullYear()}`}</p></div>}
+            {reviewed && <div css={rightAlign}><p>{`Granskad: ${reviewed.getDate()} ${months[reviewed.getMonth()]} ${reviewed.getFullYear()}`}</p></div>}
         </div>
     </div>
 }
