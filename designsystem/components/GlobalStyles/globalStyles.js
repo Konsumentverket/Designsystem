@@ -127,8 +127,10 @@ const globalStyles = (
         }
         &:hover {
           background-color:#fff;
+          box-shadow: 0 0 0 4px #fff;
         }
         &:active {
+          box-shadow: 0 0 0 4px #fff;
           background-color:#fff;
       }
     }
