@@ -9,6 +9,8 @@ var React = require('react');
 var React__default = _interopDefault(React);
 
 function _typeof(obj) {
+  "@babel/helpers - typeof";
+
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -55,20 +57,35 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-function _objectSpread(target) {
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
 
-    if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
     }
-
-    ownKeys.forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    });
   }
 
   return target;
@@ -147,6 +164,10 @@ function _iterableToArray(iter) {
 }
 
 function _iterableToArrayLimit(arr, i) {
+  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
+    return;
+  }
+
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -248,21 +269,6 @@ var spacing = {
   'spacing-l': '1.6rem',
   'spacing-xl': '2.4rem',
   'spacing-2xl': '3.2rem'
-  /*
-  const old_spacing = {
-      'spacing-xs': '0.25rem',
-      'spacing-s': '0.5rem',
-      'spacing-m/s': '0.75rem',
-      'spacing-m': '1rem',
-      'spacing-l': '1.5rem',
-      'spacing-xl': '2rem',
-      'spacing-2xl': '2.5rem',
-      'spacing-3xl': '3rem',
-      'spacing-4xl': '3.5rem',
-      'spacing-5xl': '4rem',
-    };
-  */
-
 };
 
 function _templateObject8() {
@@ -1055,7 +1061,7 @@ var Button = function Button(_ref) {
   });
   style && styles.push(style);
 
-  var props = _objectSpread({
+  var props = _objectSpread2({
     "id": id,
     "css": styles,
     "className": cssClass.join(" "),
@@ -3394,7 +3400,7 @@ var exclamationMarkImage = core.css(_templateObject2$8(), medium, medium);
 var heading = core.css(_templateObject3$8());
 
 function _templateObject7$4() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:1.4rem;\n      line-height:2.4rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:2.4rem;\n\n"]);
 
   _templateObject7$4 = function _templateObject7() {
     return data;
@@ -3404,7 +3410,7 @@ function _templateObject7$4() {
 }
 
 function _templateObject6$6() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:1.6rem;\n      line-height:2.4rem;\n      ", "{\n            font-size:1.8rem;\n            \n      }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:1.8rem;      \n      }\n\n"]);
 
   _templateObject6$6 = function _templateObject6() {
     return data;
