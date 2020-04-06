@@ -73,7 +73,6 @@ const globalStyles = (
       ul {
         list-style: bullet inside none;
         padding-left: ${spacing["spacing-xl"]};
-        margin-top: ${spacing["spacing-xl"]};
         li {
           margin-bottom: ${spacing["spacing-m"]};
         }
