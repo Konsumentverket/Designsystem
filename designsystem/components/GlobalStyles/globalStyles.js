@@ -93,6 +93,9 @@ const globalStyles = (
         text-decoration:underline;
         font-weight:700;
         color:${colors.theme1.mid};
+        svg {
+          fill: ${colors.theme1.mid};
+        }
         &:hover {
           background-color:${colors.theme1.midLight};
           text-decoration:none;

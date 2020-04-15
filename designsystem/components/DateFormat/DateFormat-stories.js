@@ -4,11 +4,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
 import { text, boolean } from '@storybook/addon-knobs';
-import { DateFormat } from './DateFormat'
+import { DateFormat, Formats } from './DateFormat'
 
 
-let name = 'Datum formatering';
-storiesOf('Digitala Produkter|React komponenter', module)
+let name = 'Automatisk datumformatering';
+storiesOf('Digitala Produkter|React komponenter/Tid och datum', module)
 .add(name, () => {
   return <>
     <div>
@@ -30,4 +30,20 @@ storiesOf('Digitala Produkter|React komponenter', module)
       <i>För en utförlig presentation av tillgängliga format. se: <a href="https://date-fns.org/v2.11.0/docs/format">https://date-fns.org/v2.11.0/docs/format</a></i>
     </div>
   </>
-}, { notes: NotesLoader(name) });
+}, { notes: NotesLoader(name) })
+.add("Datumformat",() => {
+  
+  const formats = Formats;
+  var keys = Object.keys(formats);
+  const date = text("Datumstämpel","2019-04-02T17:10:24");
+  return <div>
+    Tillgängliga format
+    <ul>
+      {keys.map(formatName => {
+        return <li><strong>{`Formats.${formatName}`}:</strong> <DateFormat date={date} dateFormat={formats[formatName]} /></li>
+      })}
+    </ul>
+  </div>
+
+
+});

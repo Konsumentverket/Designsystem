@@ -3577,7 +3577,7 @@ function _templateObject2$a() {
 }
 
 function _templateObject$c() {
-  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        margin-top: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a{\n    &:not(.noStyle){    \n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        &:hover {\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n        }\n        &:active {\n          background-color:#fff;\n      }\n    }\n  }\n\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n\n    i {\n      font-style: italic;\n    }\n    strong {\n      font-weight: 700;\n    }\n    u {\n      text-decoration: underline;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        margin-top: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a{\n    &:not(.noStyle){    \n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        svg {\n          fill: ", ";\n        }\n        &:hover {\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n        }\n        &:active {\n          background-color:#fff;\n      }\n    }\n  }\n\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n\n    i {\n      font-style: italic;\n    }\n    strong {\n      font-weight: 700;\n    }\n    u {\n      text-decoration: underline;\n    }\n  }\n"]);
 
   _templateObject$c = function _templateObject() {
     return data;
@@ -3612,7 +3612,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
 var globalStyles = function globalStyles() {
   var fontSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "62.5%";
   var fontFamily = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
-  return core.css(_templateObject$c(), fontSize, fontFamily, spacing["spacing-m"], spacing["spacing-xl"], spacing["spacing-xl"], spacing["spacing-m"], colors.theme1.mid, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
+  return core.css(_templateObject$c(), fontSize, fontFamily, spacing["spacing-m"], spacing["spacing-xl"], spacing["spacing-xl"], spacing["spacing-m"], colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
 };
 
 var LinkColors$1 = core.css(_templateObject2$a(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
@@ -7687,10 +7687,16 @@ var locale$1 = {
 };
 
 /** @jsx jsx */
-var defaultDateFormat = "yyyy MM dd HH:mm:ss";
-var dateAndTimeFormat = "d MMMM yyyy 'kl.' HH:mm";
-var dateFormat = "d MMMM yyyy";
-var timeFormat = "'kl.' HH:mm";
+//const dateAndTimeFormat = "d MMMM yyyy 'kl.' HH:mm";
+//const dateFormat = "d MMMM yyyy";
+//const timeFormat = "'kl.' HH:mm";
+
+var Formats = {
+  dateFormat: "d MMMM yyyy",
+  timeFormat: "'kl.' HH:mm",
+  dateAndTimeFormat: "d MMMM yyyy 'kl.' HH:mm",
+  simpleDateAndTimeFormat: "yyyy MM dd HH:mm:ss"
+};
 
 var isDate = function isDate(date) {
   return new Date(date) !== "Invalid Date" && !isNaN(new Date(date));
@@ -7699,17 +7705,21 @@ var isDate = function isDate(date) {
 var DateFormat = function DateFormat(_ref) {
   var _ref$date = _ref.date,
       date = _ref$date === void 0 ? null : _ref$date,
+      _ref$dateFormat = _ref.dateFormat,
+      dateFormat = _ref$dateFormat === void 0 ? null : _ref$dateFormat,
       _ref$showDate = _ref.showDate,
       showDate = _ref$showDate === void 0 ? false : _ref$showDate,
       _ref$showTime = _ref.showTime,
       showTime = _ref$showTime === void 0 ? false : _ref$showTime;
 
   if (isDate(date)) {
-    var displayFormat = showDate && showTime ? dateAndTimeFormat : showDate ? dateFormat : showTime ? timeFormat : defaultDateFormat;
+    var displayFormat;
+    if (dateFormat) displayFormat = dateFormat;else displayFormat = showDate && showTime ? Formats.dateAndTimeFormat : showDate ? Formats.dateFormat : showTime ? Formats.timeFormat : Formats.simpleDateAndTimeFormat;
     return format(parseISO(date), displayFormat, {
       locale: locale$1
     });
   } else {
+    console.log("parse date failed");
     return null;
   }
 };
@@ -7729,6 +7739,7 @@ exports.FocusPuff = FocusPuff;
 exports.FormCheckbox = FormCheckbox;
 exports.FormRadiobutton = FormRadiobutton;
 exports.FormSearchField = FormSearchField;
+exports.Formats = Formats;
 exports.GlobalStyles = GlobalStyles;
 exports.Heading = Heading;
 exports.Icon = Icon;
