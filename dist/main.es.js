@@ -204,7 +204,7 @@ var defaultTheme = {
   states: {
     "visited": "#800080",
     "visitedInverted": "#FFC7C2",
-    "focus": "#F59C00"
+    "focus": "#00944B"
   },
   common: {
     "white": "#ffffff",
@@ -218,14 +218,14 @@ var eccTheme = {
   theme1: {
     "xDark": "#1C2742",
     "dark": "#314575",
-    "midDark": "#4663a9",
+    "midDark": "#314575",
     "mid": "#4663a9",
-    "midLight": "#DDF1FD",
-    "light": "#d7e6ed"
+    "midLight": "#E4E8F2",
+    "light": "#e7f0f4"
   },
   theme2: {
     "midLight": "#eaeae9",
-    "light": "#d7e6ed"
+    "light": "#e7f0f4"
   },
   theme3: {
     "xLight": "#F2F0F0",
@@ -1101,7 +1101,7 @@ function _templateObject4$2() {
 }
 
 function _templateObject3$2() {
-  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem 6.4rem .8rem .8rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem .8rem .8rem .8rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n    box-sizing: border-box;\n    width: 100%; \n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject3$2 = function _templateObject3() {
     return data;
@@ -3387,7 +3387,7 @@ var exclamationMarkImage = css$1(_templateObject2$8(), medium, medium);
 var heading = css$1(_templateObject3$8());
 
 function _templateObject7$4() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:1.4rem;\n      line-height:2.4rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:2.4rem;\n\n"]);
 
   _templateObject7$4 = function _templateObject7() {
     return data;
@@ -3397,7 +3397,7 @@ function _templateObject7$4() {
 }
 
 function _templateObject6$6() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:1.6rem;\n      line-height:2.4rem;\n      ", "{\n            font-size:1.8rem;\n            \n      }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:1.8rem;      \n      }\n\n"]);
 
   _templateObject6$6 = function _templateObject6() {
     return data;
@@ -3570,7 +3570,7 @@ function _templateObject2$a() {
 }
 
 function _templateObject$c() {
-  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        margin-top: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a{\n    &:not(.noStyle){    \n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        svg {\n          fill: ", ";\n        }\n        &:hover {\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n        }\n        &:active {\n          background-color:#fff;\n      }\n    }\n  }\n\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n\n    i {\n      font-style: italic;\n    }\n    strong {\n      font-weight: 700;\n    }\n    u {\n      text-decoration: underline;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a{\n    &:not(.noStyle){    \n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        svg {\n          fill: ", ";\n        }\n        &:hover {\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n          box-shadow: 0 0 0 4px #fff;\n        }\n        &:active {\n          box-shadow: 0 0 0 4px #fff;\n          background-color:#fff;\n      }\n    }\n  }\n\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n\n    i {\n      font-style: italic;\n    }\n    strong {\n      font-weight: 700;\n    }\n    u {\n      text-decoration: underline;\n    }\n  }\n"]);
 
   _templateObject$c = function _templateObject() {
     return data;
@@ -3605,7 +3605,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
 var globalStyles = function globalStyles() {
   var fontSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "62.5%";
   var fontFamily = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
-  return css$1(_templateObject$c(), fontSize, fontFamily, spacing["spacing-m"], spacing["spacing-xl"], spacing["spacing-xl"], spacing["spacing-m"], colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
+  return css$1(_templateObject$c(), fontSize, fontFamily, spacing["spacing-m"], spacing["spacing-xl"], spacing["spacing-m"], colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
 };
 
 var LinkColors$1 = css$1(_templateObject2$a(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
@@ -4537,7 +4537,7 @@ function _templateObject2$i() {
 }
 
 function _templateObject$l() {
-  var data = _taggedTemplateLiteral(["\n    padding: 2.4rem 1.6rem 2.4rem 1.6rem;\n    ", " {\n        padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n    }\n    background-color: ", ";\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: 1.6rem;\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 0rem 1.6rem 2.4rem 1.6rem;\n    ", " {\n        padding: 0rem 3.2rem 2.4rem 3.2rem;\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n    }\n    background-color: ", ";\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: 1.6rem;\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
 
   _templateObject$l = function _templateObject() {
     return data;
@@ -4553,18 +4553,15 @@ var rightAlign = css$1(_templateObject5$e(), medium);
 
 /** @jsx jsx */
 var Source = function Source(_ref) {
-  var didThisHelpText = _ref.didThisHelpText,
+  var usabilla = _ref.usabilla,
+      didThisHelpText = _ref.didThisHelpText,
       reportErrorText = _ref.reportErrorText,
       markdownText = _ref.markdownText,
       reviewedDate = _ref.reviewedDate,
       style = _ref.style;
   var reviewed = reviewedDate ? new Date(reviewedDate) : null;
   var months = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
-  return jsx("div", {
-    css: [sourceStyle, style]
-  }, jsx("div", {
-    css: [firstRow]
-  }, jsx("p", null, didThisHelpText || "Hittade du svaret på din fråga?"), jsx("div", null, jsx(Button, {
+  var question = jsx(React.Fragment, null, jsx("p", null, didThisHelpText || "Hittade du svaret på din fråga?"), jsx("div", null, jsx(Button, {
     style: buttonStyle$1,
     secondaryButtonStyle: true,
     text: "Ja"
@@ -4576,7 +4573,12 @@ var Source = function Source(_ref) {
     css: rightAlign
   }, jsx("a", {
     href: "#"
-  }, reportErrorText || "Rapportera fel på denna sida"))), jsx("div", {
+  }, reportErrorText || "Rapportera fel på denna sida")));
+  return jsx("div", {
+    css: [sourceStyle, style]
+  }, jsx("div", {
+    css: [firstRow]
+  }, usabilla ? usabilla : question), jsx("div", {
     css: [secondRow]
   }, markdownText, reviewed && jsx("div", {
     css: rightAlign

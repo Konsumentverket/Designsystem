@@ -3,9 +3,9 @@ import { colors } from '../Colors/Colors';
 import { medium } from '../GlobalStyles/globalStyles';
 
 export const sourceStyle = css`
-    padding: 2.4rem 1.6rem 2.4rem 1.6rem;
+    padding: 0rem 1.6rem 2.4rem 1.6rem;
     ${medium} {
-        padding: 2.4rem 3.2rem 2.4rem 3.2rem;
+        padding: 0rem 3.2rem 2.4rem 3.2rem;
     }
 
     a {

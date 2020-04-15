@@ -30,7 +30,7 @@ const defaultTheme = {
     states: {
         "visited": "#800080",
         "visitedInverted": "#FFC7C2",
-        "focus": "#F59C00"
+        "focus": "#00944B"
     },
     common: {
         "white": "#ffffff",
@@ -45,14 +45,14 @@ const eccTheme = {
     theme1: {
         "xDark": "#1C2742",
         "dark": "#314575",
-        "midDark": "#4663a9",
+        "midDark": "#314575",
         "mid": "#4663a9",
-        "midLight": "#DDF1FD",
-        "light" : "#d7e6ed"
+        "midLight": "#E4E8F2",
+        "light": "#e7f0f4"
     },
     theme2: {
         "midLight": "#eaeae9",
-        "light": "#d7e6ed"
+        "light": "#e7f0f4"
     },
     theme3: {
         "xLight": "#F2F0F0",

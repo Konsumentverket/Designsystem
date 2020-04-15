@@ -73,7 +73,6 @@ const globalStyles = (
       ul {
         list-style: bullet inside none;
         padding-left: ${spacing["spacing-xl"]};
-        margin-top: ${spacing["spacing-xl"]};
         li {
           margin-bottom: ${spacing["spacing-m"]};
         }
@@ -97,6 +96,8 @@ const globalStyles = (
           fill: ${colors.theme1.mid};
         }
         &:hover {
+          box-shadow: 0 0 0 4px ${colors.theme1.midLight};
+          border-radius: .8rem;
           background-color:${colors.theme1.midLight};
           text-decoration:none;
           svg {
@@ -111,6 +112,8 @@ const globalStyles = (
         }
         
         &:active{
+          box-shadow: 0 0 0 4px ${colors.theme1.midLight};
+          border-radius: .8rem;
           background-color:${colors.theme1.midLight};
           color:${colors.theme1.xDark};
           text-decoration:none;
@@ -126,8 +129,10 @@ const globalStyles = (
         }
         &:hover {
           background-color:#fff;
+          box-shadow: 0 0 0 4px #fff;
         }
         &:active {
+          box-shadow: 0 0 0 4px #fff;
           background-color:#fff;
       }
     }
