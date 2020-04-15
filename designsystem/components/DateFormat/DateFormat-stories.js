@@ -37,10 +37,10 @@ storiesOf('Digitala Produkter|React komponenter/Tid och datum', module)
   var keys = Object.keys(formats);
   const date = text("Datumstämpel","2019-04-02T17:10:24");
   return <div>
-    Tillgängliga format
+    <h2>Tillgängliga format</h2>
     <ul>
       {keys.map(formatName => {
-        return <li><strong>{`Formats.${formatName}`}:</strong> <DateFormat date={date} dateFormat={formats[formatName]} /></li>
+        return <li key={formatName}><strong>{`Formats.${formatName}`}:</strong> <DateFormat date={date} dateFormat={formats[formatName]} /></li>
       })}
     </ul>
   </div>
