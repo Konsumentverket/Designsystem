@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react';
-import { sourceStyle, firstRow, buttonStyle, secondRow, rightAlign } from './Source.css';
+import { sourceStyle, firstRow, firstRowUsabilla, buttonStyle, secondRow, rightAlign } from './Source.css';
 import { Button } from '../Button/Button';
 
 export const Source = ({ usabilla, didThisHelpText, reportErrorText, markdownText, reviewedDate, style }) => {
@@ -21,10 +21,10 @@ export const Source = ({ usabilla, didThisHelpText, reportErrorText, markdownTex
     </>)
 
     return <div css={[sourceStyle, style]}>
-        <div css={[firstRow]}>
+        <div css={usabilla ? firstRowUsabilla : firstRow}>
             {usabilla ? usabilla : question}
         </div>
-        <div css={[secondRow]}>
+        <div css={secondRow}>
             {markdownText}
             {reviewed && <div css={rightAlign}><p>{`Granskad: ${reviewed.getDate()} ${months[reviewed.getMonth()]} ${reviewed.getFullYear()}`}</p></div>}
         </div>
