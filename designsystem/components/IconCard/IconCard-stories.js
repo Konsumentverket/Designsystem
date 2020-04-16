@@ -6,7 +6,7 @@ import { IconCard } from './IconCard';
 import { editorIconDefinitions } from '../Icon/EditorIcon';
 
 let name = 'Ikonkort';
-storiesOf('Digitala Produkter|React komponenter', module)
+storiesOf('Digitala Produkter|React komponenter/Kort', module)
     .add(name, () =>
         <IconCard 
         url={text("Url", "https://www.hallakonsument.se")}

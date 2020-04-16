@@ -5,7 +5,7 @@ import { TagBlock } from './TagBlock';
 import { boolean, text, select } from '@storybook/addon-knobs';
 
 let name = 'TagBlock';
-storiesOf('Digitala Produkter|React komponenter', module)
+storiesOf('Digitala Produkter|React komponenter/Kort', module)
   .add(name, () =>
     <TagBlock
       heading={text('Heading', 'En text')}

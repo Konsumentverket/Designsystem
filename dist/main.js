@@ -7726,6 +7726,130 @@ var DateFormat = function DateFormat(_ref) {
   }
 };
 
+function _templateObject5$f() {
+  var data = _taggedTemplateLiteral(["\n    line-height: 2.4rem!important;\n    margin-bottom: 0;\n\n"]);
+
+  _templateObject5$f = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$g() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.4rem;\n    cursor: pointer;\n    display: block;\n    border-top: 1px solid ", ";\n    padding: .8rem 0 1.6rem 0;\n    margin: 0 1.6rem;\n    line-height: 2.4rem;\n    margin-top: auto;\n    \n"]);
+
+  _templateObject4$g = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$j() {
+  var data = _taggedTemplateLiteral(["\n\n    display: inline-flex;\n    flex-direction:column;\n    padding: 0 1.6rem 1.6rem 1.6rem;\n\n"]);
+
+  _templateObject3$j = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$k() {
+  var data = _taggedTemplateLiteral(["\n\n    padding: 1.6rem ;\n    box-sizing:border-box;\n    box-shadow: none !important;\n    text-decoration: none !important;\n    min-height: 8rem;\n    width: 100%;\n    font-size: 2.1rem;\n    display: flex;\n    font-weight: 500 !important;\n    justify-content: space-between;\n    align-items: center;\n\n    svg{\n        flex-shrink: 0;\n        transform: rotate(270deg);\n        height: 4rem;\n        width: 4rem;\n        position: relative;\n        right: -1.4rem;\n    }\n\n"]);
+
+  _templateObject2$k = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$n() {
+  var data = _taggedTemplateLiteral(["\n    background-color: #fff;\n    border-radius: 0.8rem;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n"]);
+
+  _templateObject$n = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var wrapper$3 = core.css(_templateObject$n());
+var mainLinkStyle = core.css(_templateObject2$k());
+var childrenWrapper = core.css(_templateObject3$j());
+var showAllLink = core.css(_templateObject4$g(), colors.theme3.midLight);
+var headingStyle = core.css(_templateObject5$f());
+
+var LinkCard = React__default.forwardRef(function (_ref, ref) {
+  var text = _ref.text,
+      href = _ref.href,
+      children = _ref.children,
+      id = _ref.id,
+      _ref$headingLevel = _ref.headingLevel,
+      headingLevel = _ref$headingLevel === void 0 ? 2 : _ref$headingLevel,
+      onClick = _ref.onClick,
+      _ref$beforeToggleCoun = _ref.beforeToggleCount,
+      beforeToggleCount = _ref$beforeToggleCoun === void 0 ? 3 : _ref$beforeToggleCoun,
+      style = _ref.style,
+      childrenWrapperStyle = _ref.childrenWrapperStyle,
+      _ref$showAll = _ref.showAll,
+      showAll = _ref$showAll === void 0 ? false : _ref$showAll;
+
+  var _useState = React.useState(showAll),
+      _useState2 = _slicedToArray(_useState, 2),
+      show = _useState2[0],
+      setShow = _useState2[1];
+
+  React.useEffect(function () {
+    if (show) {
+      var idToFocus = id + (beforeToggleCount + 1);
+      document.getElementById(idToFocus).focus();
+    }
+
+    return function () {};
+  }, [show]);
+  var childrenArray = React__default.Children.toArray(children);
+  var itemsToShow = [];
+
+  if (childrenArray && childrenArray.length > 0) {
+    itemsToShow = show ? childrenArray : childrenArray.slice(0, beforeToggleCount);
+  }
+
+  return core.jsx("div", {
+    id: id,
+    css: [wrapper$3, style]
+  }, core.jsx(SubHeading, {
+    level: headingLevel,
+    styleLevel: 3,
+    style: headingStyle
+  }, core.jsx("a", {
+    ref: ref,
+    href: href,
+    css: mainLinkStyle,
+    onClick: onClick
+  }, core.jsx("span", null, text), core.jsx(Icon, {
+    "aria-hidden": "true",
+    icon: "Arrow"
+  }))), itemsToShow.length > 0 && core.jsx("div", {
+    css: [childrenWrapper, childrenWrapperStyle]
+  }, itemsToShow.map(function (item, i) {
+    return React__default.cloneElement(item, {
+      id: id + (i + 1)
+    });
+  })), childrenArray.length > beforeToggleCount && core.jsx("span", {
+    css: showAllLink
+  }, core.jsx("a", {
+    href: "#",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      setShow(!show);
+    },
+    "aria-controls": id,
+    "aria-expanded": show
+  }, show ? "Visa f\xE4rre (".concat(beforeToggleCount, ")") : "Visa alla (".concat(childrenArray.length, ")"))));
+});
+
 exports.Accordion = Accordion;
 exports.BoxWithHeadlineText = BoxWithHeadlineText;
 exports.Button = Button;
@@ -7748,6 +7872,7 @@ exports.Icon = Icon;
 exports.IconCard = IconCard;
 exports.InputRadio = InputRadio;
 exports.InputText = InputText;
+exports.LinkCard = LinkCard;
 exports.LinkWrapperColorStyle = LinkWrapperColorStyle$1;
 exports.LinkWrapperInvertedColorStyle = LinkWrapperInvertedColorStyle$1;
 exports.Pagination = Pagination;
