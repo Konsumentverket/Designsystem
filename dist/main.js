@@ -4494,17 +4494,35 @@ var secondaryColorStyle = core.css(_templateObject2$h(), colors.theme2.light);
 
 /** @jsx jsx */
 var FactBox = function FactBox(_ref) {
-  var content = _ref.content,
+  var children = _ref.children,
+      headline = _ref.headline,
+      _ref$headlineLevel = _ref.headlineLevel,
+      headlineLevel = _ref$headlineLevel === void 0 ? 2 : _ref$headlineLevel,
+      content = _ref.content,
       secondaryColor = _ref.secondaryColor,
       style = _ref.style;
-  if (content == null) return null;
+  if (!content && !children) return null;
   return core.jsx("div", {
     css: [wrapper$2, secondaryColor && secondaryColorStyle, style]
-  }, content);
+  }, headline && core.jsx(SubHeading, {
+    level: headlineLevel,
+    text: headline,
+    styleLevel: 3
+  }), children, content);
 };
 
-function _templateObject5$e() {
+function _templateObject6$b() {
   var data = _taggedTemplateLiteral(["\n    ", " {\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
+
+  _templateObject6$b = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$e() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: 2.4rem;\n    margin-bottom: 1.6rem;\n    padding: 0 2.4rem;\n    &:first-of-type {\n        margin-left: 0;\n    }\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 2.4rem;\n        &:first-of-type {\n            margin-left: 2.4rem;\n        }\n        margin-left: 2.4rem;\n        margin-bottom: 0;\n        margin-top: -.4rem;\n    }\n"]);
 
   _templateObject5$e = function _templateObject5() {
     return data;
@@ -4514,7 +4532,7 @@ function _templateObject5$e() {
 }
 
 function _templateObject4$f() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: 2.4rem;\n    margin-bottom: 1.6rem;\n    padding: 0 2.4rem;\n    &:first-of-type {\n        margin-left: 0;\n    }\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 2.4rem;\n        &:first-of-type {\n            margin-left: 2.4rem;\n        }\n        margin-left: 2.4rem;\n        margin-bottom: 0;\n        margin-top: -.4rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding-top: 2.4rem;\n    flex-direction: column;\n    display: flex;\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject4$f = function _templateObject4() {
     return data;
@@ -4524,7 +4542,7 @@ function _templateObject4$f() {
 }
 
 function _templateObject3$h() {
-  var data = _taggedTemplateLiteral(["\n    padding-top: 2.4rem;\n    flex-direction: column;\n    display: flex;\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    display: flex;\n    flex-direction: column;\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject3$h = function _templateObject3() {
     return data;
@@ -4554,9 +4572,10 @@ function _templateObject$l() {
 }
 var sourceStyle = core.css(_templateObject$l(), medium, colors.theme1.light, medium);
 var firstRow = core.css(_templateObject2$i(), colors.theme3.light, medium);
-var secondRow = core.css(_templateObject3$h(), medium);
-var buttonStyle$1 = core.css(_templateObject4$f(), medium);
-var rightAlign = core.css(_templateObject5$e(), medium);
+var firstRowUsabilla = core.css(_templateObject3$h(), medium);
+var secondRow = core.css(_templateObject4$f(), medium);
+var buttonStyle$1 = core.css(_templateObject5$e(), medium);
+var rightAlign = core.css(_templateObject6$b(), medium);
 
 /** @jsx jsx */
 var Source = function Source(_ref) {
@@ -4584,9 +4603,9 @@ var Source = function Source(_ref) {
   return core.jsx("div", {
     css: [sourceStyle, style]
   }, core.jsx("div", {
-    css: [firstRow]
+    css: usabilla ? firstRowUsabilla : firstRow
   }, usabilla ? usabilla : question), core.jsx("div", {
-    css: [secondRow]
+    css: secondRow
   }, markdownText, reviewed && core.jsx("div", {
     css: rightAlign
   }, core.jsx("p", null, "Granskad: ".concat(reviewed.getDate(), " ").concat(months[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))));

@@ -39,6 +39,17 @@ export const firstRow = css`
     }
 `;
 
+export const firstRowUsabilla = css`
+    p {
+        padding-bottom: 0;
+    }
+    display: flex;
+    flex-direction: column;
+    ${medium} {
+        flex-direction: row;
+    }
+`;
+
 export const secondRow = css`
     padding-top: 2.4rem;
     flex-direction: column;
