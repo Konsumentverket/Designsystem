@@ -11,12 +11,12 @@ export const wrapper = css`
 `
 
 export const mainLinkStyle = css`
-
+    outline-offset: -2px;
     padding: 1.6rem ;
     box-sizing:border-box;
     box-shadow: none !important;
     text-decoration: none !important;
-    min-height: 8rem;
+    min-height: 7.2rem;
     width: 100%;
     font-size: 2.1rem;
     display: flex;
@@ -27,8 +27,8 @@ export const mainLinkStyle = css`
     svg{
         flex-shrink: 0;
         transform: rotate(270deg);
-        height: 4rem;
-        width: 4rem;
+        height: 3.2rem;
+        width: 3.2rem;
         position: relative;
         right: -1.4rem;
     }

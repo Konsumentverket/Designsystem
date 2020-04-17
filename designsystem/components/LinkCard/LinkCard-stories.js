@@ -26,7 +26,7 @@ storiesOf('Digitala Produkter|React komponenter/Kort', module)
         `
     
         return <div style={{backgroundColor: colors.theme3.xLight,height: "100vh",padding:"50px", }}>
-            <div style={{maxWidth:"1200px", display:"flex", justifyContent:"space-between"}}>
+            <div style={{maxWidth:"960px", display:"flex", justifyContent:"space-between"}}>
                 <div css={linkCardStyle}>
                     <LinkCard id="one" href="http://www.google.se" text="Inför att köpa eller leasa en bil">
                         <p css={css`font-size: 16px; line-height: 2.4rem;`}>
@@ -45,7 +45,7 @@ storiesOf('Digitala Produkter|React komponenter/Kort', module)
                     </LinkCard>
                 </div>
             </div>
-            <div style={{maxWidth:"1200px", marginTop: "20px"}}>
+            <div style={{maxWidth:"960px", marginTop: "20px"}}>
                 <LinkCard text="Full width card" href="#" />
                 <br />
                 <LinkCard text="Full width card with text" href="#">
