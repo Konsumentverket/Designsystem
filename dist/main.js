@@ -4452,17 +4452,35 @@ var secondaryColorStyle = core.css(_templateObject2$h(), colors.theme2.light);
 
 /** @jsx jsx */
 var FactBox = function FactBox(_ref) {
-  var content = _ref.content,
+  var children = _ref.children,
+      headline = _ref.headline,
+      _ref$headlineLevel = _ref.headlineLevel,
+      headlineLevel = _ref$headlineLevel === void 0 ? 2 : _ref$headlineLevel,
+      content = _ref.content,
       secondaryColor = _ref.secondaryColor,
       style = _ref.style;
-  if (content == null) return null;
+  if (!content && !children) return null;
   return core.jsx("div", {
     css: [wrapper$2, secondaryColor && secondaryColorStyle, style]
-  }, content);
+  }, headline && core.jsx(SubHeading, {
+    level: headlineLevel,
+    text: headline,
+    styleLevel: 3
+  }), children, content);
 };
 
-function _templateObject5$e() {
+function _templateObject6$b() {
   var data = _taggedTemplateLiteral(["\n    ", " {\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
+
+  _templateObject6$b = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$e() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: 2.4rem;\n    margin-bottom: 1.6rem;\n    padding: 0 2.4rem;\n    &:first-of-type {\n        margin-left: 0;\n    }\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 2.4rem;\n        &:first-of-type {\n            margin-left: 2.4rem;\n        }\n        margin-left: 2.4rem;\n        margin-bottom: 0;\n        margin-top: -.4rem;\n    }\n"]);
 
   _templateObject5$e = function _templateObject5() {
     return data;
@@ -4472,7 +4490,7 @@ function _templateObject5$e() {
 }
 
 function _templateObject4$f() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: 2.4rem;\n    margin-bottom: 1.6rem;\n    padding: 0 2.4rem;\n    &:first-of-type {\n        margin-left: 0;\n    }\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 2.4rem;\n        &:first-of-type {\n            margin-left: 2.4rem;\n        }\n        margin-left: 2.4rem;\n        margin-bottom: 0;\n        margin-top: -.4rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding-top: 2.4rem;\n    flex-direction: column;\n    display: flex;\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject4$f = function _templateObject4() {
     return data;
@@ -4482,7 +4500,7 @@ function _templateObject4$f() {
 }
 
 function _templateObject3$h() {
-  var data = _taggedTemplateLiteral(["\n    padding-top: 2.4rem;\n    flex-direction: column;\n    display: flex;\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    display: flex;\n    flex-direction: column;\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject3$h = function _templateObject3() {
     return data;
@@ -4512,9 +4530,10 @@ function _templateObject$l() {
 }
 var sourceStyle = core.css(_templateObject$l(), medium, colors.theme1.light, medium);
 var firstRow = core.css(_templateObject2$i(), colors.theme3.light, medium);
-var secondRow = core.css(_templateObject3$h(), medium);
-var buttonStyle$1 = core.css(_templateObject4$f(), medium);
-var rightAlign = core.css(_templateObject5$e(), medium);
+var firstRowUsabilla = core.css(_templateObject3$h(), medium);
+var secondRow = core.css(_templateObject4$f(), medium);
+var buttonStyle$1 = core.css(_templateObject5$e(), medium);
+var rightAlign = core.css(_templateObject6$b(), medium);
 
 /** @jsx jsx */
 var Source = function Source(_ref) {
@@ -4542,9 +4561,9 @@ var Source = function Source(_ref) {
   return core.jsx("div", {
     css: [sourceStyle, style]
   }, core.jsx("div", {
-    css: [firstRow]
+    css: usabilla ? firstRowUsabilla : firstRow
   }, usabilla ? usabilla : question), core.jsx("div", {
-    css: [secondRow]
+    css: secondRow
   }, markdownText, reviewed && core.jsx("div", {
     css: rightAlign
   }, core.jsx("p", null, "Granskad: ".concat(reviewed.getDate(), " ").concat(months[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))));
@@ -7684,6 +7703,130 @@ var DateFormat = function DateFormat(_ref) {
   }
 };
 
+function _templateObject5$f() {
+  var data = _taggedTemplateLiteral(["\n    line-height: 2.4rem!important;\n    margin-bottom: 0;\n\n"]);
+
+  _templateObject5$f = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$g() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.4rem;\n    cursor: pointer;\n    display: block;\n    border-top: 1px solid ", ";\n    padding: .8rem 0 1.6rem 0;\n    margin: 0 1.6rem;\n    line-height: 2.4rem;\n    margin-top: auto;\n    \n"]);
+
+  _templateObject4$g = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$j() {
+  var data = _taggedTemplateLiteral(["\n\n    display: inline-flex;\n    flex-direction:column;\n    padding: 0 1.6rem 1.6rem 1.6rem;\n\n"]);
+
+  _templateObject3$j = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$k() {
+  var data = _taggedTemplateLiteral(["\n    outline-offset: -2px;\n    padding: 1.6rem ;\n    box-sizing:border-box;\n    box-shadow: none !important;\n    text-decoration: none !important;\n    min-height: 7.2rem;\n    width: 100%;\n    font-size: 2.1rem;\n    display: flex;\n    font-weight: 500 !important;\n    justify-content: space-between;\n    align-items: center;\n\n    svg{\n        flex-shrink: 0;\n        transform: rotate(270deg);\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n    }\n\n"]);
+
+  _templateObject2$k = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$n() {
+  var data = _taggedTemplateLiteral(["\n    background-color: #fff;\n    border-radius: 0.8rem;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n"]);
+
+  _templateObject$n = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var wrapper$3 = core.css(_templateObject$n());
+var mainLinkStyle = core.css(_templateObject2$k());
+var childrenWrapper = core.css(_templateObject3$j());
+var showAllLink = core.css(_templateObject4$g(), colors.theme3.midLight);
+var headingStyle = core.css(_templateObject5$f());
+
+var LinkCard = React__default.forwardRef(function (_ref, ref) {
+  var text = _ref.text,
+      href = _ref.href,
+      children = _ref.children,
+      id = _ref.id,
+      _ref$headingLevel = _ref.headingLevel,
+      headingLevel = _ref$headingLevel === void 0 ? 2 : _ref$headingLevel,
+      onClick = _ref.onClick,
+      _ref$beforeToggleCoun = _ref.beforeToggleCount,
+      beforeToggleCount = _ref$beforeToggleCoun === void 0 ? 3 : _ref$beforeToggleCoun,
+      style = _ref.style,
+      childrenWrapperStyle = _ref.childrenWrapperStyle,
+      _ref$showAll = _ref.showAll,
+      showAll = _ref$showAll === void 0 ? false : _ref$showAll;
+
+  var _useState = React.useState(showAll),
+      _useState2 = _slicedToArray(_useState, 2),
+      show = _useState2[0],
+      setShow = _useState2[1];
+
+  React.useEffect(function () {
+    if (show) {
+      var idToFocus = id + (beforeToggleCount + 1);
+      document.getElementById(idToFocus).focus();
+    }
+
+    return function () {};
+  }, [show]);
+  var childrenArray = React__default.Children.toArray(children);
+  var itemsToShow = [];
+
+  if (childrenArray && childrenArray.length > 0) {
+    itemsToShow = show ? childrenArray : childrenArray.slice(0, beforeToggleCount);
+  }
+
+  return core.jsx("div", {
+    id: id,
+    css: [wrapper$3, style]
+  }, core.jsx(SubHeading, {
+    level: headingLevel,
+    styleLevel: 3,
+    style: headingStyle
+  }, core.jsx("a", {
+    ref: ref,
+    href: href,
+    css: mainLinkStyle,
+    onClick: onClick
+  }, core.jsx("span", null, text), core.jsx(Icon, {
+    "aria-hidden": "true",
+    icon: "Arrow"
+  }))), itemsToShow.length > 0 && core.jsx("div", {
+    css: [childrenWrapper, childrenWrapperStyle]
+  }, itemsToShow.map(function (item, i) {
+    return React__default.cloneElement(item, {
+      id: id + (i + 1)
+    });
+  })), childrenArray.length > beforeToggleCount && core.jsx("span", {
+    css: showAllLink
+  }, core.jsx("a", {
+    href: "#",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      setShow(!show);
+    },
+    "aria-controls": id,
+    "aria-expanded": show
+  }, show ? "Visa f\xE4rre (".concat(beforeToggleCount, ")") : "Visa alla (".concat(childrenArray.length, ")"))));
+});
+
 exports.Accordion = Accordion;
 exports.BoxWithHeadlineText = BoxWithHeadlineText;
 exports.Button = Button;
@@ -7706,6 +7849,7 @@ exports.Icon = Icon;
 exports.IconCard = IconCard;
 exports.InputRadio = InputRadio;
 exports.InputText = InputText;
+exports.LinkCard = LinkCard;
 exports.LinkWrapperColorStyle = LinkWrapperColorStyle$1;
 exports.LinkWrapperInvertedColorStyle = LinkWrapperInvertedColorStyle$1;
 exports.Pagination = Pagination;
