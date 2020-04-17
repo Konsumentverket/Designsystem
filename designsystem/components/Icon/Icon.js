@@ -58,12 +58,11 @@ const Icon = ({ icon, className, style, title, ...otherAttr }) => {
 	return (
 		<Element
 			focusable="false"
-			title={title}
+			title={title || icon || ''}
 			className={className}
 			style={style}
 			role="img"
-			aria-label={title || ''}
-			alt={title}
+			aria-label={title || icon || ''}
 			{...otherAttr}
 		/>
 	);
