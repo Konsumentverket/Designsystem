@@ -46,15 +46,15 @@ storiesOf('Digitala Produkter|React komponenter/Kort', module)
                 </div>
             </div>
             <div style={{maxWidth:"960px", marginTop: "20px"}}>
-                <LinkCard text="Full width card" href="#" />
+                <LinkCard text="Helbreddskort" href="#" />
                 <br />
-                <LinkCard text="Full width card with text" href="#">
+                <LinkCard text="Helbreddskort med text" href="#">
                     <p css={css`font-size: 16px; line-height: 2.4rem; max-width: 80%;`}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     </p>
                 </LinkCard>
                 <br />
-                <LinkCard text="Full width card with text and border" href="#" style={css`border: 1px solid ${colors.theme1.mid};`}>
+                <LinkCard text="Helbreddskort med text och ram" href="#" style={css`border: 1px solid ${colors.theme1.mid};`}>
                     <p css={css`font-size: 16px; line-height: 2.4rem; max-width: 80%;`}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     </p>
