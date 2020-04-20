@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React, { useState, useEffect } from 'react';
-import { wrapper, mainLinkStyle, childrenWrapper, showAllLink, headingStyle } from './LinkCard.css';
+import { wrapper, mainLinkStyle, childrenWrapper, showAllLink, headingStyle, rotateArrow } from './LinkCard.css';
 import { Icon } from '../Icon/Icon';    
 import {SubHeading} from '../Headings/SubHeading'
 
-export const LinkCard = React.forwardRef(({text,href,children,id,
+export const LinkCard = React.forwardRef(({text,href,children,id, secondaryArrowStyle = false,
     headingLevel = 2, onClick, beforeToggleCount = 3, style, childrenWrapperStyle,
     showAll = false}, ref) => {
 
@@ -27,7 +27,8 @@ export const LinkCard = React.forwardRef(({text,href,children,id,
     return <div id={id} css={[wrapper,style]}>
             <SubHeading level={headingLevel} styleLevel={3} style={headingStyle}>
                 <a ref={ref} href={href} css={mainLinkStyle} onClick={onClick}>
-                    <span>{text}</span><Icon aria-hidden='true' icon='Arrow' />
+                    <span>{text}</span>
+                    <Icon aria-hidden='true' style={!secondaryArrowStyle && rotateArrow} icon={secondaryArrowStyle ? 'LinkArrow':'Arrow'} />
                 </a>
             </SubHeading>
             {itemsToShow.length > 0 && <div css={[childrenWrapper,childrenWrapperStyle]}>
