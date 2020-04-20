@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { text, color } from '@storybook/addon-knobs';
 import NotesLoader from '../NotesLoader';
 import { LinkCard } from './LinkCard';
+import { LinkTextCard } from './LinkTextCard';
 import { colors } from '../Colors/Colors';
 import { css } from '@emotion/core';
 
@@ -36,7 +37,7 @@ storiesOf('Digitala Produkter|React komponenter/Kort', module)
                 </div>
                 <div css={linkCardStyle}>
                     <LinkCard id="two" href="http://www.google.com" text="Problem och vanliga frågor om bil" >
-                        {[1,2,3,4,5].map(n => <a key={n} css={linkContentStyle} href={`/${n}`}>Föremål i listan: {n}</a>)}
+                        {[1,2,3,4,5].map(n => <span css={linkContentStyle}><a key={n} href={`/${n}`}>Föremål i listan: {n}</a></span>)}
                     </LinkCard>
                 </div>
                 <div css={linkCardStyle}>
@@ -59,6 +60,23 @@ storiesOf('Digitala Produkter|React komponenter/Kort', module)
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     </p>
                 </LinkCard>
+                <br />
+                <LinkCard text="Helbreddskort med text och ram" href="#" style={css`border: 1px solid ${colors.theme1.mid};`}>
+                    <p css={css`font-size: 16px; line-height: 2.4rem; max-width: 80%;`}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    </p>
+                </LinkCard>
+                <br />
+                <LinkTextCard text="Länktexts kort med ram" href="#" style={css`border: 1px solid ${colors.theme1.mid};`}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                </LinkTextCard>
+                <br />
+                <LinkTextCard text="Länktexts kort med ram och utan text" href="#" style={css`border: 1px solid ${colors.theme1.mid};`} />
+                <br />
+                <LinkTextCard dir="rtl" text="Hallå konsument ستهلكين. يمكنك ستهلكين" href="#" style={css`border: 1px solid ${colors.theme1.mid};`} >
+                يجيبك المستشارون على أسئلتك و يساعدونك في الاتصال باختصاصيين في سلطات أخرى، بمكاتب المستهلكين أو خدمات المستهلكين في البلديات. يمكنك الاتصال بنا عبر الهاتف، الشات، الفيس بوك أو البريد الالكتروني إذا لم تجد المعلومات التي تحتاج إليها على موقع hallakonsument.se.
+                </LinkTextCard>
+                
             </div>
         </div>
     }

@@ -10,6 +10,10 @@ export const wrapper = css`
     flex-direction: column;
 `
 
+export const linkTextMainLinkStyle = css`
+    padding: 2.4rem 1.6rem;
+`
+
 export const mainLinkStyle = css`
     outline-offset: -2px;
     padding: 1.6rem ;
@@ -23,7 +27,16 @@ export const mainLinkStyle = css`
     font-weight: 500 !important;
     justify-content: space-between;
     align-items: center;
-
+    flex-wrap: wrap;
+    span{
+        max-width: 84%;
+    }
+    [dir='rtl'] &{
+        svg{
+            right: 1.4rem;;
+            transform: rotate(90deg);
+        }
+    }
     svg{
         flex-shrink: 0;
         transform: rotate(270deg);
@@ -58,5 +71,21 @@ export const showAllLink = css`
 export const headingStyle = css`
     line-height: 2.4rem!important;
     margin-bottom: 0;
+
+`
+
+export const linkTextCardContentStyle = css`
+
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    padding-right: 20%;
+    color: ${colors.theme3.dark};
+    font-weight: 400;
+    margin-top: 1.6rem;
+    [dir='rtl'] & {
+        padding-left: 20%;
+        padding-right: 0%;
+    }
 
 `

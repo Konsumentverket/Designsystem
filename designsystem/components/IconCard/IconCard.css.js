@@ -2,20 +2,17 @@ import { css } from '@emotion/core'
 import { colors } from '../Colors/Colors.js'
 
 export const arrowStyle = css`
-    position: absolute;
-    top: 2rem;
-    right: .5rem;
-    vertical-align: middle;
+    flex-shrink: 0;
     transform: rotate(270deg);
+    padding-right: .4rem;
     height: 3.2rem;
     width: 3.2rem;
     fill: ${colors.theme1.mid};
 `
 
 export const iconStyle = css`
-    position:absolute;
-    top: calc((100% - 32px) / 2);
-    left: 1.6rem;
+    flex-shrink: 0;
+    padding: 0 1.6rem 0 1.2rem;
     height: 3.2rem;
     width: 3.2rem;
     fill: ${colors.theme1.mid};
@@ -30,7 +27,7 @@ export const iconCardStyle = css`
     position: relative;
     display: flex;
     height:100%;
-    flex-direction:column;
+    align-items: center;
     border-radius: .8rem;
     border: 1px solid ${colors.theme1.mid};
     &:hover {
@@ -57,7 +54,6 @@ export const iconText = css`
     width:100%;
     height:100%;
     min-height:7.2rem;
-    padding: .8rem 4rem .8rem 6.4rem;
     display: flex;
     flex-direction:column;
     box-sizing:border-box;

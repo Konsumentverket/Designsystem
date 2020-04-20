@@ -6,7 +6,7 @@ import { Icon } from '../Icon/Icon';
 import {SubHeading} from '../Headings/SubHeading'
 
 export const LinkCard = React.forwardRef(({text,href,children,id,
-    headingLevel = 2, onClick, beforeToggleCount = 3, style, childrenWrapperStyle,
+    headingLevel = 2, onClick, beforeToggleCount = 3, style, childrenWrapperStyle, renderChildrenInLink = false,
     showAll = false}, ref) => {
 
     const [show,setShow] = useState(showAll)

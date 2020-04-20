@@ -6,9 +6,9 @@ import { Icon } from '../Icon/Icon.js';
 import { EditorIcon } from '../Icon/EditorIcon.js';
 
 
-const IconCard = React.forwardRef(({ icon, text, url, style, onClick }, ref) => {
+const IconCard = React.forwardRef(({ icon, text, url, style, onClick, id }, ref) => {
     const haveIcon = !icon ? noIcon : null
-    return <a ref={ref} href={url} onClick={onClick} css={[iconCardStyle, style]} className="noStyle" >
+    return <a ref={ref} id={id} href={url} onClick={onClick} css={[iconCardStyle, style]} className="noStyle" >
         {icon && <EditorIcon aria-hidden="true" icon={icon} style={iconStyle}>Ikon</EditorIcon>}
         <span css={[iconText, haveIcon]}>{text}</span>
         <Icon aria-hidden="true" icon="Arrow" style={arrowStyle} />

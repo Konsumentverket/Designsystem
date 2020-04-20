@@ -18,6 +18,9 @@ export const expandButtonStyle = css`
     line-height:2.4rem;
     font-weight:500;
     padding:.8rem 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     
     color: ${colors.common.white};
     border-radius:3.2rem;
@@ -25,6 +28,9 @@ export const expandButtonStyle = css`
     cursor:pointer;
     background-color:${colors.theme1.mid};
 
+    span{
+        padding-right: .8rem;
+    }
     svg {
         fill: ${colors.common.white};
     }
@@ -47,6 +53,24 @@ export const expandButtonStyle = css`
         ${disabled}
     }
 `;
+
+export const smallStyle = css`
+
+    padding: .8rem .8rem !important;
+    font-size: 1.6rem !important;
+    span{
+        padding-right: .2rem;
+    }
+    svg{
+        top: 1px;
+    }
+    &[aria-expanded="true"]{
+        svg{
+            top: -1px;
+        }
+    }
+
+`
 
 export const secondaryStyle = css`
     background-color:transparent;
@@ -104,13 +128,12 @@ export const invertedSecondaryBackgroundStyle = css`
 `;
 
 export const iconStyle = css`
-    padding: 0 0 0 .8rem;
     width:2.4rem;
     height:2.4rem;
-    vertical-align: top;
+    position: relative;
+    top: 3px;
 `;
 
 export const expandedIconStyle = css`
-transform: rotate(180deg);
-padding: 0 .8rem 0 0;
+    transform: rotate(180deg);
 `;
