@@ -631,8 +631,7 @@ var Arrow = (function (_ref) {
     height: "24px",
     viewBox: "0 0 24 24"
   }, otherAttr), jsx("title", null, title), jsx("path", {
-    d: arrowPath,
-    id: title && "arrow-".concat(title)
+    d: arrowPath
   }));
 });
 

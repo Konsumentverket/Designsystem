@@ -638,8 +638,7 @@ var Arrow = (function (_ref) {
     height: "24px",
     viewBox: "0 0 24 24"
   }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: arrowPath,
-    id: title && "arrow-".concat(title)
+    d: arrowPath
   }));
 });
 
