@@ -39,13 +39,15 @@ export const mainLinkStyle = css`
     }
     svg{
         flex-shrink: 0;
-        transform: rotate(270deg);
         height: 3.2rem;
         width: 3.2rem;
         position: relative;
         right: -1.4rem;
     }
 
+`
+export const rotateArrow = css`
+    transform: rotate(270deg);
 `
 
 export const childrenWrapper = css`

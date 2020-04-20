@@ -12,9 +12,9 @@
                 <mask id="mask-2">
                     <use xlink:href="#path-1"></use>
                 </mask>
-                <use id="Fill-1" xlink:href="#path-1"></use>
-                <g id="Color-/-brand-/-darkblue-Color-/-ui-/-blue" mask="url(#mask-2)" fill="#006EC2">
-                    <rect id="Color-/-ui-/-blue" x="0" y="0" width="24" height="24"></rect>
+                <use xlink:href="#path-1"></use>
+                <g mask="url(#mask-2)" fill="#006EC2">
+                    <rect x="0" y="0" width="24" height="24"></rect>
                 </g>
             </g>
         </g>
