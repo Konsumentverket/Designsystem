@@ -2671,8 +2671,7 @@ var EditorIcon = function EditorIcon(_ref) {
     className: className,
     style: style,
     role: "img",
-    "aria-label": title || "",
-    alt: ""
+    "aria-label": title || ""
   }, otherAttr));
 };
 
