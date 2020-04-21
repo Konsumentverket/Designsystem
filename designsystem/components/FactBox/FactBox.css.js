@@ -10,11 +10,14 @@ export const wrapper = css`
     padding-bottom: 0.2rem;
     padding-top: 2.4rem;
     ${medium} {
-        padding-left: 4rem;
-        padding-right: 4rem;
+        padding-left: 3.2rem;
+        padding-right: 3.2rem;
     }
     ul {
         padding-left: 0;
+        li {
+            margin-bottom: 1rem;
+        }
     }
 `
 
