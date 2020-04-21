@@ -27,7 +27,7 @@ export const LinkCard = React.forwardRef(({text,href,children,id,secondaryArrowS
             <SubHeading level={headingLevel} styleLevel={3} style={headingStyle}>
                 <a ref={ref} href={href} css={mainLinkStyle} onClick={onClick}>
                     <span>{text}</span>
-                    <Icon aria-hidden='true' style={!secondaryArrowStyle && rotateArrow} icon={secondaryArrowStyle ? 'LinkArrow':'Arrow'} />
+                    <Icon aria-hidden='true' style={secondaryArrowStyle ? rotateArrow : null} icon={secondaryArrowStyle ? 'LinkArrow':'Arrow'} />
                 </a>
             </SubHeading>
             {itemsToShow.length > 0 && <div css={[childrenWrapper,childrenWrapperStyle]}>

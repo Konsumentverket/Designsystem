@@ -43,11 +43,12 @@ export const mainLinkStyle = css`
         width: 3.2rem;
         position: relative;
         right: -1.4rem;
+        transform: rotate(-90deg);
     }
 
 `
 export const rotateArrow = css`
-    transform: rotate(270deg);
+    transform: rotate(0deg)!important;
 `
 
 export const childrenWrapper = css`

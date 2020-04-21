@@ -61,6 +61,12 @@ storiesOf('Digitala Produkter|React komponenter/Kort', module)
                     </p>
                 </LinkCard>
                 <br />
+                <LinkCard text="Helbreddskort med text sekudär pil" secondaryArrowStyle={true} href="#" style={css`border: 1px solid ${colors.theme1.mid};`}>
+                    <p css={css`font-size: 16px; line-height: 2.4rem; max-width: 80%;`}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    </p>
+                </LinkCard>
+                <br />
                 <LinkCard text="Helbreddskort med text och ram" href="#" style={css`border: 1px solid ${colors.theme1.mid};`}>
                     <p css={css`font-size: 16px; line-height: 2.4rem; max-width: 80%;`}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -72,6 +78,7 @@ storiesOf('Digitala Produkter|React komponenter/Kort', module)
                 </LinkTextCard>
                 <br />
                 <LinkTextCard text="Länktexts kort med ram och utan text" href="#" style={css`border: 1px solid ${colors.theme1.mid};`} />
+
                 <br />
                 <LinkTextCard dir="rtl" text="Hallå konsument ستهلكين. يمكنك ستهلكين" href="#" style={css`border: 1px solid ${colors.theme1.mid};`} >
                 يجيبك المستشارون على أسئلتك و يساعدونك في الاتصال باختصاصيين في سلطات أخرى، بمكاتب المستهلكين أو خدمات المستهلكين في البلديات. يمكنك الاتصال بنا عبر الهاتف، الشات، الفيس بوك أو البريد الالكتروني إذا لم تجد المعلومات التي تحتاج إليها على موقع hallakonsument.se.
