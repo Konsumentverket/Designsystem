@@ -2,15 +2,16 @@
 import { jsx } from '@emotion/core';
 import { Icon } from '../Icon/Icon.js';
 import React from 'react';
-import { expandButtonStyle, secondaryStyle, invertedBackgroundStyle, invertedSecondaryBackgroundStyle, iconStyle, expandedIconStyle } from './ExpandButton.css';
+import { expandButtonStyle, secondaryStyle, smallStyle, iconStyle, expandedIconStyle } from './ExpandButton.css';
 
-export const ExpandButton = ({ text, secondaryButtonStyle=false, invertedBackgroundColor=false, expanded=false, className, id, disabled, style, onClick }) => {
+export const ExpandButton = ({ text, secondaryButtonStyle=false, small = false, expanded=false, className, id, disabled, style, onClick }) => {
 
     var styles = [expandButtonStyle];
 
-    secondaryButtonStyle && styles.push(secondaryStyle);   
-    invertedBackgroundColor && styles.push(invertedBackgroundStyle);
-    (invertedBackgroundColor && secondaryButtonStyle) && styles.push(invertedSecondaryBackgroundStyle);
+    secondaryButtonStyle && styles.push(secondaryStyle);
+    small && styles.push(smallStyle)
+    // invertedBackgroundColor && styles.push(invertedBackgroundStyle);
+    // (invertedBackgroundColor && secondaryButtonStyle) && styles.push(invertedSecondaryBackgroundStyle);
 
 
     style && styles.push(style)
@@ -21,8 +22,9 @@ export const ExpandButton = ({ text, secondaryButtonStyle=false, invertedBackgro
         className={className}
         disabled={disabled}
         aria-expanded={expanded ? "true" : "false"} 
-        onClick={onClick}>
-        {text}
+        onClick={onClick}
+    >
+        <span>{text}</span>
         <Icon aria-hidden="true" icon="Arrow" style={[iconStyle, expanded && expandedIconStyle]} />
     </button>;
 }

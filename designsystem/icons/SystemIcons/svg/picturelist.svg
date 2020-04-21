@@ -12,7 +12,7 @@
                 <mask id="mask-2">
                     <use xlink:href="#path-1"></use>
                 </mask>
-                <use id="Fill-1" xlink:href="#path-1"></use>
+                <use xlink:href="#path-1"></use>
                 <g id="Color-/-brand-/-darkblue-Color-/-ui-/-blue" mask="url(#mask-2)" fill="#006EC2">
                     <g transform="translate(122.000000, 0.000000)" id="Color-/-ui-/-blue">
                         <rect x="0" y="0" width="24" height="24"></rect>

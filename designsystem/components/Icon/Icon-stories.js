@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
@@ -22,7 +24,20 @@ const iconStyle = css`
     width: 40px;
     height: 40px;
 `;
+const iconsWrapper = css`
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+`
+const iconWrapper = css`
 
+    width: 20%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    
+    margin-bottom: 2.6rem;
+`
 
 let name = 'Ikon';
 storiesOf('Digitala Produkter|React komponenter/Ikoner', module)
@@ -38,11 +53,29 @@ storiesOf('Digitala Produkter|React komponenter/Ikoner', module)
         </a>
     }, { notes: NotesLoader(name) }
     ).add("Alla ikoner", () => {
-        let icons = Object.keys(iconDefinitions).map((key) => (<><br/><br/><div key={key}>{key} <br/> <Icon icon={key} style={{ fill: '#000',marginTop:'8px' }} /></div></>));
-        return icons;
+        let icons = Object.keys(iconDefinitions).map((key) => (
+            <div css={iconWrapper} key={key}>
+                <span>{key}</span>
+                <Icon icon={key} style={{ fill: '#000',marginTop:'10px' }} />
+            </div>
+        ));
+        return <div css={iconsWrapper}>
+            {icons}
+        </div>
     }).add("Alla 'Redaktörs' ikoner",() => {
-        let icons = Object.keys(editorIconDefinitions).map((key) => (<><br/><br/><div key={key}>{key} <br/> <EditorIcon icon={key} style={{ fill: '#000',marginTop:'8px' }} /></div></>));
-        return icons;
+
+        let icons = Object.keys(editorIconDefinitions).map((key) => (
+            <div css={iconWrapper} key={key}>
+                <span>{key}</span>
+                <EditorIcon icon={key} style={{ fill: '#000',marginTop:'10px' }} />
+            </div>
+        ));
+        return <div css={iconsWrapper}>
+            {icons}
+        </div>
+
+        // let icons = Object.keys(editorIconDefinitions).map((key) => (<><div key={key}><span>{key}</span><EditorIcon icon={key} style={{ fill: '#000',marginTop:'8px' }} /></div></>));
+        // return icons;
     });
 
 

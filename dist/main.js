@@ -55,35 +55,20 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
+function _objectSpread(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i] != null ? arguments[i] : {};
+    var ownKeys = Object.keys(source);
 
-    if (i % 2) {
-      ownKeys(source, true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(source).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
+    if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
     }
+
+    ownKeys.forEach(function (key) {
+      _defineProperty(target, key, source[key]);
+    });
   }
 
   return target;
@@ -633,7 +618,7 @@ var Ecc = (function (_ref) {
   }));
 });
 
-var arrowPath = "M18.8200426,7.70004261 C18.4334198,7.31341975 17.8080945,7.31122597 17.4179582,7.70051231 L12.7020418,12.4061544 C12.3143148,12.7930366 11.6880945,12.7954407 11.2979582,12.4061544 L6.58204182,7.70051231 C6.19431483,7.31363005 5.56955624,7.31044376 5.17995739,7.70004261 L4.70004261,8.17995739 C4.31341975,8.56658025 4.3235178,9.2035178 4.70994663,9.58994663 L11.2900534,16.1700534 C11.6821461,16.5621461 12.3235178,16.5564822 12.7099466,16.1700534 L19.2900534,9.58994663 C19.6821461,9.19785393 19.6895562,8.56955624 19.2999574,8.17995739 L18.8200426,7.70004261 Z";
+var arrowPath = 'M18.8200426,7.70004261 C18.4334198,7.31341975 17.8080945,7.31122597 17.4179582,7.70051231 L12.7020418,12.4061544 C12.3143148,12.7930366 11.6880945,12.7954407 11.2979582,12.4061544 L6.58204182,7.70051231 C6.19431483,7.31363005 5.56955624,7.31044376 5.17995739,7.70004261 L4.70004261,8.17995739 C4.31341975,8.56658025 4.3235178,9.2035178 4.70994663,9.58994663 L11.2900534,16.1700534 C11.6821461,16.5621461 12.3235178,16.5564822 12.7099466,16.1700534 L19.2900534,9.58994663 C19.6821461,9.19785393 19.6895562,8.56955624 19.2999574,8.17995739 L18.8200426,7.70004261 Z';
 var Arrow = (function (_ref) {
   var className = _ref.className,
       style = _ref.style,
@@ -647,8 +632,7 @@ var Arrow = (function (_ref) {
     height: "24px",
     viewBox: "0 0 24 24"
   }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: arrowPath,
-    id: title && "arrow-".concat(title)
+    d: arrowPath
   }));
 });
 
@@ -808,14 +792,11 @@ var Filter = (function (_ref) {
     strokeWidth: "1",
     fill: "inherit",
     fillRule: "evenodd"
-  }, core.jsx("g", {
-    id: "icon-/-filter"
-  }, core.jsx("g", null, core.jsx("mask", {
+  }, core.jsx("g", null, core.jsx("g", null, core.jsx("mask", {
     id: "mask-2-filter"
   }, core.jsx("use", {
     href: "#icon-filter"
   })), core.jsx("use", {
-    id: "Fill-1",
     href: "#icon-filter"
   }), core.jsx("g", {
     mask: "url(#mask-2-filter)"
@@ -836,33 +817,12 @@ var List = (function (_ref) {
   return core.jsx("svg", _extends({
     className: className,
     css: style,
-    width: "24px",
-    height: "24px",
-    viewBox: "0 0 24 24"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("defs", null, core.jsx("path", {
-    d: "M9.62498437,14.5 L22.875,14.5 C23.4963281,14.5 24,13.9963281 24,13.375 L24,9.625 C24,9.00367188 23.4963281,8.5 22.875,8.5 L9.62498437,8.5 C9.00365625,8.5 8.49998437,9.00367188 8.49998437,9.625 L8.49998437,13.375 C8.49998437,13.9963281 9.00365625,14.5 9.62498437,14.5 M8.49998437,2.125 L8.49998437,5.875 C8.49998437,6.49632812 9.00365625,7 9.62498437,7 L22.875,7 C23.4963281,7 24,6.49632812 24,5.875 L24,2.125 C24,1.50367188 23.4963281,1 22.875,1 L9.62498437,1 C9.00365625,1 8.49998437,1.50367188 8.49998437,2.125 M9.62498437,22 L22.875,22 C23.4963281,22 24,21.4963281 24,20.875 L24,17.125 C24,16.5036719 23.4963281,16 22.875,16 L9.62498437,16 C9.00365625,16 8.49998437,16.5036719 8.49998437,17.125 L8.49998437,20.875 C8.49998437,21.4963281 9.00365625,22 9.62498437,22 M5.87498438,1 L1.125,1 C0.503671875,1 0,1.50367188 0,2.125 L0,5.875 C0,6.49632812 0.503671875,7 1.125,7 L5.87498438,7 C6.4963125,7 6.99998438,6.49632812 6.99998438,5.875 L6.99998438,2.125 C6.99998438,1.50367188 6.4963125,1 5.87498438,1 M0,17.125 L0,20.875 C0,21.4963281 0.503671875,22 1.125,22 L5.87498438,22 C6.4963125,22 6.99998438,21.4963281 6.99998438,20.875 L6.99998438,17.125 C6.99998438,16.5036719 6.4963125,16 5.87498438,16 L1.125,16 C0.503671875,16 0,16.5036719 0,17.125 M6.99998438,9.625 L6.99998438,13.375 C6.99998438,13.9963281 6.4963125,14.5 5.87498438,14.5 L1.125,14.5 C0.503671875,14.5 0,13.9963281 0,13.375 L0,9.625 C0,9.00367188 0.503671875,8.5 1.125,8.5 L5.87498438,8.5 C6.4963125,8.5 6.99998438,9.00367188 6.99998438,9.625",
-    id: "path-icon-list"
-  })), core.jsx("g", {
-    stroke: "none",
-    strokeWidth: "1",
-    fillRule: "evenodd"
-  }, core.jsx("g", {
-    id: "icon-/-lista"
-  }, core.jsx("g", null, core.jsx("mask", {
-    id: "mask-2-list"
-  }, core.jsx("use", {
-    href: "#path-icon-list"
-  })), core.jsx("use", {
-    id: "Fill-1",
-    href: "#path-icon-list"
-  }), core.jsx("g", {
-    mask: "url(#mask-2-list)"
-  }, core.jsx("rect", {
-    x: "0",
-    y: "0",
-    width: "24",
-    height: "24"
-  }))))));
+    height: "32px",
+    viewBox: "0 0 32 32",
+    width: "32px"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M9.62498437,14.5 L22.875,14.5 C23.4963281,14.5 24,13.9963281 24,13.375 L24,9.625 C24,9.00367188 23.4963281,8.5 22.875,8.5 L9.62498437,8.5 C9.00365625,8.5 8.49998437,9.00367188 8.49998437,9.625 L8.49998437,13.375 C8.49998437,13.9963281 9.00365625,14.5 9.62498437,14.5 M8.49998437,2.125 L8.49998437,5.875 C8.49998437,6.49632812 9.00365625,7 9.62498437,7 L22.875,7 C23.4963281,7 24,6.49632812 24,5.875 L24,2.125 C24,1.50367188 23.4963281,1 22.875,1 L9.62498437,1 C9.00365625,1 8.49998437,1.50367188 8.49998437,2.125 M9.62498437,22 L22.875,22 C23.4963281,22 24,21.4963281 24,20.875 L24,17.125 C24,16.5036719 23.4963281,16 22.875,16 L9.62498437,16 C9.00365625,16 8.49998437,16.5036719 8.49998437,17.125 L8.49998437,20.875 C8.49998437,21.4963281 9.00365625,22 9.62498437,22 M5.87498438,1 L1.125,1 C0.503671875,1 0,1.50367188 0,2.125 L0,5.875 C0,6.49632812 0.503671875,7 1.125,7 L5.87498438,7 C6.4963125,7 6.99998438,6.49632812 6.99998438,5.875 L6.99998438,2.125 C6.99998438,1.50367188 6.4963125,1 5.87498438,1 M0,17.125 L0,20.875 C0,21.4963281 0.503671875,22 1.125,22 L5.87498438,22 C6.4963125,22 6.99998438,21.4963281 6.99998438,20.875 L6.99998438,17.125 C6.99998438,16.5036719 6.4963125,16 5.87498438,16 L1.125,16 C0.503671875,16 0,16.5036719 0,17.125 M6.99998438,9.625 L6.99998438,13.375 C6.99998438,13.9963281 6.4963125,14.5 5.87498438,14.5 L1.125,14.5 C0.503671875,14.5 0,13.9963281 0,13.375 L0,9.625 C0,9.00367188 0.503671875,8.5 1.125,8.5 L5.87498438,8.5 C6.4963125,8.5 6.99998438,9.00367188 6.99998438,9.625"
+  }));
 });
 
 var Picturelist = (function (_ref) {
@@ -929,36 +889,15 @@ var Camera = (function (_ref) {
       title = _ref.title,
       otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
 
-  return core.jsx("svg", {
-    width: "24px",
-    height: "24px",
-    viewBox: "0 0 24 24",
-    version: "1.1"
-  }, core.jsx("title", null, title), core.jsx("defs", null, core.jsx("path", {
-    d: "M16.125,13 C16.125,15.2734375 14.2734375,17.125 12,17.125 C9.7265625,17.125 7.875,15.2734375 7.875,13 C7.875,10.7265625 9.7265625,8.875 12,8.875 C14.2734375,8.875 16.125,10.7265625 16.125,13 M17.625,13 C17.625,9.896875 15.103125,7.375 12,7.375 C8.896875,7.375 6.375,9.896875 6.375,13 C6.375,16.103125 8.896875,18.625 12,18.625 C15.103125,18.625 17.625,16.103125 17.625,13 M24,6.25 L24,19.75 C24,20.9921875 22.9921875,22 21.75,22 L2.25,22 C1.0078125,22 0,20.9921875 0,19.75 L0,6.25 C0,5.0078125 1.0078125,4 2.25,4 L6.375,4 L6.9515625,2.4578125 C7.2796875,1.58125 8.11875,1 9.05625,1 L14.9390625,1 C15.8765625,1 16.715625,1.58125 17.04375,2.4578125 L17.625,4 L21.75,4 C22.9921875,4 24,5.0078125 24,6.25",
-    id: "camera-".concat(title)
-  })), core.jsx("g", {
-    stroke: "none",
-    strokeWidth: "1",
-    fill: "inherit",
-    fillRule: "evenodd"
-  }, core.jsx("g", null, core.jsx("g", null, core.jsx("mask", {
-    id: "mask-210"
-  }, core.jsx("use", {
-    href: "#path-12323"
-  })), core.jsx("use", {
-    id: "Fill-1",
-    href: "#path-12323"
-  }), core.jsx("g", {
-    id: "Color-/-brand-/-darkblue-Color-/-ui-/-blue",
-    mask: "url(#mask-210)",
-    fill: "#006EC2"
-  }, core.jsx("rect", {
-    x: "0",
-    y: "0",
-    width: "24",
-    height: "24"
-  }))))));
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    height: "32px",
+    viewBox: "0 0 32 32",
+    width: "32px"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M16.125,13 C16.125,15.2734375 14.2734375,17.125 12,17.125 C9.7265625,17.125 7.875,15.2734375 7.875,13 C7.875,10.7265625 9.7265625,8.875 12,8.875 C14.2734375,8.875 16.125,10.7265625 16.125,13 M17.625,13 C17.625,9.896875 15.103125,7.375 12,7.375 C8.896875,7.375 6.375,9.896875 6.375,13 C6.375,16.103125 8.896875,18.625 12,18.625 C15.103125,18.625 17.625,16.103125 17.625,13 M24,6.25 L24,19.75 C24,20.9921875 22.9921875,22 21.75,22 L2.25,22 C1.0078125,22 0,20.9921875 0,19.75 L0,6.25 C0,5.0078125 1.0078125,4 2.25,4 L6.375,4 L6.9515625,2.4578125 C7.2796875,1.58125 8.11875,1 9.05625,1 L14.9390625,1 C15.8765625,1 16.715625,1.58125 17.04375,2.4578125 L17.625,4 L21.75,4 C22.9921875,4 24,5.0078125 24,6.25"
+  }));
 });
 
 var Play = (function (_ref) {
@@ -1024,12 +963,11 @@ var Icon = function Icon(_ref) {
 
   return core.jsx(Element, _extends({
     focusable: "false",
-    title: title,
+    title: title || icon || '',
     className: className,
     style: style,
     role: "img",
-    "aria-label": title || "",
-    alt: ""
+    "aria-label": title || icon || ''
   }, otherAttr));
 };
 
@@ -1070,7 +1008,7 @@ var Button = function Button(_ref) {
   });
   style && styles.push(style);
 
-  var props = _objectSpread2({
+  var props = _objectSpread({
     "id": id,
     "css": styles,
     "className": cssClass.join(" "),
@@ -1236,24 +1174,37 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
 });
 
 /* eslint-disable */
-// murmurhash2 via https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
-function murmurhash2_32_gc(str) {
-  var l = str.length,
-      h = l ^ l,
+// Inspired by https://github.com/garycourt/murmurhash-js
+// Ported from https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash2.cpp#L37-L86
+function murmur2(str) {
+  // 'm' and 'r' are mixing constants generated offline.
+  // They're not really 'magic', they just happen to work well.
+  // const m = 0x5bd1e995;
+  // const r = 24;
+  // Initialize the hash
+  var h = 0; // Mix 4 bytes at a time into the hash
+
+  var k,
       i = 0,
-      k;
+      len = str.length;
 
-  while (l >= 4) {
+  for (; len >= 4; ++i, len -= 4) {
     k = str.charCodeAt(i) & 0xff | (str.charCodeAt(++i) & 0xff) << 8 | (str.charCodeAt(++i) & 0xff) << 16 | (str.charCodeAt(++i) & 0xff) << 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    k ^= k >>> 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16) ^ k;
-    l -= 4;
-    ++i;
-  }
+    k =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16);
+    k ^=
+    /* k >>> r: */
+    k >>> 24;
+    h =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16) ^
+    /* Math.imul(h, m): */
+    (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Handle the last few bytes of the input array
 
-  switch (l) {
+
+  switch (len) {
     case 3:
       h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
 
@@ -1262,13 +1213,18 @@ function murmurhash2_32_gc(str) {
 
     case 1:
       h ^= str.charCodeAt(i) & 0xff;
-      h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  }
+      h =
+      /* Math.imul(h, m): */
+      (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Do a few final mixes of the hash to ensure the last few
+  // bytes are well-incorporated.
+
 
   h ^= h >>> 13;
-  h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  h ^= h >>> 15;
-  return (h >>> 0).toString(36);
+  h =
+  /* Math.imul(h, m): */
+  (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  return ((h ^ h >>> 15) >>> 0).toString(36);
 }
 
 var unitlessKeys = {
@@ -1329,6 +1285,7 @@ function memoize(fn) {
 }
 
 var ILLEGAL_ESCAPE_SEQUENCE_ERROR = "You have illegal escape sequence in your template literal, most likely inside content's property value.\nBecause you write your CSS inside a JavaScript string you actually have to do double escaping, so for example \"content: '\\00d7';\" should become \"content: '\\\\00d7';\".\nYou can read more about this here:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences";
+var UNDEFINED_AS_OBJECT_KEY_ERROR = "You have passed in falsy value as style object's key (can happen when in example you pass unexported component as computed key).";
 var hyphenateRegex = /[A-Z]|^ms/g;
 var animationRegex = /_EMO_([^_]+?)_([^]*?)_EMO_/g;
 
@@ -1336,15 +1293,15 @@ var isCustomProperty = function isCustomProperty(property) {
   return property.charCodeAt(1) === 45;
 };
 
+var isProcessableValue = function isProcessableValue(value) {
+  return value != null && typeof value !== 'boolean';
+};
+
 var processStyleName = memoize(function (styleName) {
   return isCustomProperty(styleName) ? styleName : styleName.replace(hyphenateRegex, '-$&').toLowerCase();
 });
 
 var processStyleValue = function processStyleValue(key, value) {
-  if (value == null || typeof value === 'boolean') {
-    return '';
-  }
-
   switch (key) {
     case 'animation':
     case 'animationName':
@@ -1517,7 +1474,7 @@ function createStringFromObject(mergedProps, registered, obj) {
       if (_typeof(value) !== 'object') {
         if (registered != null && registered[value] !== undefined) {
           string += _key + "{" + registered[value] + "}";
-        } else {
+        } else if (isProcessableValue(value)) {
           string += processStyleName(_key) + ":" + processStyleValue(_key, value) + ";";
         }
       } else {
@@ -1527,7 +1484,9 @@ function createStringFromObject(mergedProps, registered, obj) {
 
         if (Array.isArray(value) && typeof value[0] === 'string' && (registered == null || registered[value[0]] === undefined)) {
           for (var _i = 0; _i < value.length; _i++) {
-            string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
+            if (isProcessableValue(value[_i])) {
+              string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
+            }
           }
         } else {
           var interpolated = handleInterpolation(mergedProps, registered, value, false);
@@ -1542,6 +1501,10 @@ function createStringFromObject(mergedProps, registered, obj) {
 
             default:
               {
+                if (process.env.NODE_ENV !== 'production' && _key === 'undefined') {
+                  console.error(UNDEFINED_AS_OBJECT_KEY_ERROR);
+                }
+
                 string += _key + "{" + interpolated + "}";
               }
           }
@@ -1617,7 +1580,7 @@ var serializeStyles = function serializeStyles(args, registered, mergedProps) {
     match[1];
   }
 
-  var name = murmurhash2_32_gc(styles) + identifierName;
+  var name = murmur2(styles) + identifierName;
 
   if (process.env.NODE_ENV !== 'production') {
     // $FlowFixMe SerializedStyles type doesn't have toString property (and we don't want to add it)
@@ -1798,7 +1761,6 @@ var BeautyEngagement = (function (_ref) {
     stroke: "none",
     strokeWidth: "1"
   }, core.jsx("g", {
-    id: "19-11-14-\xC4mnessida_steg1",
     transform: "translate(-1008.000000, -2009.000000)"
   }, core.jsx("path", {
     d: "M1027.96312,2029 L1022,2034.96187 L1016.03688,2029 C1011.56875,2029.19375 1008,2032.85 1008,2037.36188 C1008,2039.37112 1009.62881,2041 1011.63812,2041 L1032.36188,2041 C1034.37112,2041 1036,2039.37112 1036,2037.36188 C1036,2032.85 1032.43125,2029.19375 1027.96312,2029 L1027.96312,2029 Z M1017,2019 L1027,2019 L1027,2021 C1027,2023.76144 1024.76138,2026 1022,2026 C1019.23856,2026 1017,2023.76144 1017,2021 L1017,2019 Z M1019.5,2013.47937 C1019.5,2013.30681 1019.63994,2013.16687 1019.8125,2013.16687 L1021.16688,2013.16687 L1021.16688,2011.8125 C1021.16688,2011.63994 1021.30681,2011.5 1021.47938,2011.5 L1022.52062,2011.5 C1022.69325,2011.5 1022.83312,2011.63994 1022.83312,2011.8125 L1022.83312,2013.16687 L1024.1875,2013.16687 C1024.36012,2013.16687 1024.5,2013.30681 1024.5,2013.47937 L1024.5,2014.52063 C1024.5,2014.69319 1024.36012,2014.83313 1024.1875,2014.83313 L1022.83312,2014.83313 L1022.83312,2016.1875 C1022.83312,2016.36006 1022.69325,2016.5 1022.52062,2016.5 L1021.47938,2016.5 C1021.30681,2016.5 1021.16688,2016.36006 1021.16688,2016.1875 L1021.16688,2014.83313 L1019.8125,2014.83313 C1019.63994,2014.83313 1019.5,2014.69319 1019.5,2014.52063 L1019.5,2013.47937 Z M1011.61125,2027 L1016.75875,2027 C1018.16562,2028.23 1019.985,2029 1022,2029 C1024.015,2029 1025.83431,2028.23 1027.24125,2027 L1032.38875,2027 C1032.941,2026.99938 1033.38825,2026.55112 1033.38756,2025.99881 C1033.38756,2025.84337 1033.351,2025.69019 1033.28125,2025.55125 C1032.32931,2023.68563 1031.32625,2021.66188 1030.64681,2019.58 C1030.17375,2018.13063 1030,2016.59938 1030,2015.075 L1030,2012 L1022,2009 L1014,2012 L1014,2015.075 C1014,2016.59938 1013.82812,2018.13063 1013.35438,2019.58 C1012.67375,2021.66188 1011.67062,2023.6875 1010.71875,2025.55125 C1010.47094,2026.04481 1010.67012,2026.64581 1011.16363,2026.89369 C1011.30256,2026.96338 1011.45581,2026.99981 1011.61125,2027 L1011.61125,2027 Z",
@@ -2070,8 +2032,7 @@ var EducationAndCourses = (function (_ref) {
   }, core.jsx("g", {
     transform: "translate(697.000000, 2156.000000)"
   }, core.jsx("g", {
-    transform: "translate(163.000000, 0.000000)",
-    id: "Fill-1"
+    transform: "translate(163.000000, 0.000000)"
   }, core.jsx("path", {
     d: "M17.6393189,12.554674 C16.2128133,12.9926758 14.9973086,12.7506748 14.3598061,12.554674 L7.10877777,10.3271653 L6.399775,16.0001875 C6.399775,17.7676944 10.6977918,19.2002 15.9998125,19.2002 C21.3018332,19.2002 25.59985,17.7676944 25.59985,16.0001875 L24.8908472,10.3266653 L17.6393189,12.554674 Z M31.1168716,4.46014242 L17.1698171,0.175125684 C16.4098141,-0.058375228 15.5898109,-0.058375228 14.8303079,0.175125684 L0.882753448,4.46014242 C-0.294251149,4.82164383 -0.294251149,6.37814991 0.882753448,6.73965133 L3.31426295,7.48665424 C2.78076086,8.14615682 2.45275958,8.95065996 2.42025945,9.8316634 C1.93875757,10.1077145 1.59975625,10.6057164 1.59975625,11.2001688 C1.59975625,11.7391709 1.88375736,12.1926726 2.29275896,12.4827238 L1.01625397,18.2266962 C0.905253536,18.7261981 1.28525502,19.2002 1.79675702,19.2002 L4.60226798,19.2002 C5.11426998,19.2002 5.49427146,18.7261981 5.38327103,18.2266962 L4.10676604,12.4827238 C4.51576764,12.1926726 4.79976875,11.7391709 4.79976875,11.2001688 C4.79976875,10.6216665 4.47626749,10.1376646 4.01676569,9.8566635 C4.05476584,9.10566057 4.43876734,8.44165798 5.05126973,8.02065633 L14.8298079,11.0251681 C15.2828097,11.1641686 16.1518131,11.3376693 17.1693171,11.0251681 L31.1168716,6.74015133 C32.2943761,6.37814991 32.2943761,4.82214384 31.1168716,4.46014242 L31.1168716,4.46014242 Z"
   }))))));
@@ -2711,8 +2672,7 @@ var EditorIcon = function EditorIcon(_ref) {
     className: className,
     style: style,
     role: "img",
-    "aria-label": title || "",
-    alt: ""
+    "aria-label": title || ""
   }, otherAttr));
 };
 
@@ -2805,7 +2765,7 @@ function _templateObject5$3() {
 }
 
 function _templateObject4$4() {
-  var data = _taggedTemplateLiteral(["\n    width:100%;\n    height:100%;\n    min-height:7.2rem;\n    padding: .8rem 4rem .8rem 6.4rem;\n    display: flex;\n    flex-direction:column;\n    box-sizing:border-box;\n    justify-content:center;\n    margin:0;\n    color: ", ";\n    line-height: 2.4rem;\n    font-size: 2.1rem;\n    font-weight: 500;\n    word-wrap:break-word;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width:100%;\n    height:100%;\n    min-height:7.2rem;\n    display: flex;\n    flex-direction:column;\n    box-sizing:border-box;\n    justify-content:center;\n    margin:0;\n    color: ", ";\n    line-height: 2.4rem;\n    font-size: 2.1rem;\n    font-weight: 500;\n    word-wrap:break-word;\n"]);
 
   _templateObject4$4 = function _templateObject4() {
     return data;
@@ -2815,7 +2775,7 @@ function _templateObject4$4() {
 }
 
 function _templateObject3$4() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";    \n    min-height: 7.2rem;\n    text-decoration: none;\n    width: 100%;\n    box-sizing: border-box;\n    position: relative;\n    display: flex;\n    height:100%;\n    flex-direction:column;\n    border-radius: .8rem;\n    border: 1px solid ", ";\n    &:hover {\n        background-color: ", ";\n        border-color: ", ";\n        span {\n            text-decoration:underline;\n        }\n    }\n    &:active \n    {   \n        background-color: ", ";\n        border-color:", ";\n        span{\n            color:#fff;\n        }\n        svg {\n            fill:#fff;\n        }\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";    \n    min-height: 7.2rem;\n    text-decoration: none;\n    width: 100%;\n    box-sizing: border-box;\n    position: relative;\n    display: flex;\n    height:100%;\n    align-items: center;\n    border-radius: .8rem;\n    border: 1px solid ", ";\n    &:hover {\n        background-color: ", ";\n        border-color: ", ";\n        span {\n            text-decoration:underline;\n        }\n    }\n    &:active \n    {   \n        background-color: ", ";\n        border-color:", ";\n        span{\n            color:#fff;\n        }\n        svg {\n            fill:#fff;\n        }\n    }\n"]);
 
   _templateObject3$4 = function _templateObject3() {
     return data;
@@ -2825,7 +2785,7 @@ function _templateObject3$4() {
 }
 
 function _templateObject2$4() {
-  var data = _taggedTemplateLiteral(["\n    position:absolute;\n    top: calc((100% - 32px) / 2);\n    left: 1.6rem;\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n    flex-shrink: 0;\n    padding: 0 1.6rem 0 1.2rem;\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: ", ";\n"]);
 
   _templateObject2$4 = function _templateObject2() {
     return data;
@@ -2835,7 +2795,7 @@ function _templateObject2$4() {
 }
 
 function _templateObject$4() {
-  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    top: 2rem;\n    right: .5rem;\n    vertical-align: middle;\n    transform: rotate(270deg);\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n    flex-shrink: 0;\n    transform: rotate(270deg);\n    padding-right: .4rem;\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: ", ";\n"]);
 
   _templateObject$4 = function _templateObject() {
     return data;
@@ -2856,10 +2816,12 @@ var IconCard = React__default.forwardRef(function (_ref, ref) {
       text = _ref.text,
       url = _ref.url,
       style = _ref.style,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      id = _ref.id;
   var haveIcon = !icon ? noIcon : null;
   return core.jsx("a", {
     ref: ref,
+    id: id,
     href: url,
     onClick: onClick,
     css: [iconCardStyle, style],
@@ -3170,8 +3132,18 @@ var TagBlock = React__default.forwardRef(function (_ref, ref) {
   }, alternativeTagText)));
 });
 
+function _templateObject8$3() {
+  var data = _taggedTemplateLiteral(["\n    transform: rotate(180deg);\n"]);
+
+  _templateObject8$3 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject7$3() {
-  var data = _taggedTemplateLiteral(["\ntransform: rotate(180deg);\npadding: 0 .8rem 0 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width:2.4rem;\n    height:2.4rem;\n    position: relative;\n    top: 3px;\n"]);
 
   _templateObject7$3 = function _templateObject7() {
     return data;
@@ -3181,7 +3153,7 @@ function _templateObject7$3() {
 }
 
 function _templateObject6$5() {
-  var data = _taggedTemplateLiteral(["\n    padding: 0 0 0 .8rem;\n    width:2.4rem;\n    height:2.4rem;\n    vertical-align: top;\n"]);
+  var data = _taggedTemplateLiteral(["\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    color: ", ";\n    svg {\n            fill:", "; \n        }\n    &:hover, &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:hover {\n        background-color:", ";\n    }\n    &:active {\n        background-color: ", ";\n    }\n    &:disabled {\n        ", "\n    }\n"]);
 
   _templateObject6$5 = function _templateObject6() {
     return data;
@@ -3191,7 +3163,7 @@ function _templateObject6$5() {
 }
 
 function _templateObject5$5() {
-  var data = _taggedTemplateLiteral(["\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    color: ", ";\n    svg {\n            fill:", "; \n        }\n    &:hover, &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:hover {\n        background-color:", ";\n    }\n    &:active {\n        background-color: ", ";\n    }\n    &:disabled {\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    &:hover, &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        background-color: ", ";\n    }\n"]);
 
   _templateObject5$5 = function _templateObject5() {
     return data;
@@ -3201,7 +3173,7 @@ function _templateObject5$5() {
 }
 
 function _templateObject4$6() {
-  var data = _taggedTemplateLiteral(["\n    &:hover, &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        background-color: ", ";\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color:transparent;\n    color:", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n\n    svg {\n        fill:", "; \n    }\n    &:hover {\n        background-color:", ";\n        text-decoration:underline;\n        border-color:", ";\n    }\n    &:active {\n        color:", ";\n        background-color:", ";\n        box-shadow:none;\n        svg {\n            fill:", "; \n        }\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject4$6 = function _templateObject4() {
     return data;
@@ -3211,7 +3183,7 @@ function _templateObject4$6() {
 }
 
 function _templateObject3$6() {
-  var data = _taggedTemplateLiteral(["\n    background-color:transparent;\n    color:", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n\n    svg {\n        fill:", "; \n    }\n    &:hover {\n        background-color:", ";\n        text-decoration:underline;\n        border-color:", ";\n    }\n    &:active {\n        color:", ";\n        background-color:", ";\n        box-shadow:none;\n        svg {\n            fill:", "; \n        }\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    padding: .8rem .8rem !important;\n    font-size: 1.6rem !important;\n    span{\n        padding-right: .2rem;\n    }\n    svg{\n        top: 1px;\n    }\n    &[aria-expanded=\"true\"]{\n        svg{\n            top: -1px;\n        }\n    }\n\n"]);
 
   _templateObject3$6 = function _templateObject3() {
     return data;
@@ -3221,7 +3193,7 @@ function _templateObject3$6() {
 }
 
 function _templateObject2$6() {
-  var data = _taggedTemplateLiteral(["\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding:.8rem 0;\n    \n    color: ", ";\n    border-radius:3.2rem;\n    width:100%;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        /*width:auto;*/\n        font-size:2.1rem;\n        padding:1.6rem 2.4rem;\n    }\n\n    &:hover {\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:active{\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding:.8rem 0;\n    display:flex;\n    justify-content: center;\n    align-items: center;\n    \n    color: ", ";\n    border-radius:3.2rem;\n    width:100%;\n    cursor:pointer;\n    background-color:", ";\n\n    span{\n        padding-right: .8rem;\n    }\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        /*width:auto;*/\n        font-size:2.1rem;\n        padding:1.6rem 2.4rem;\n    }\n\n    &:hover {\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:active{\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject2$6 = function _templateObject2() {
     return data;
@@ -3241,19 +3213,20 @@ function _templateObject$8() {
 }
 var disabled$2 = core.css(_templateObject$8(), colors.theme3.dark, colors.theme3.midLight, colors.theme3.dark);
 var expandButtonStyle = core.css(_templateObject2$6(), colors.common.white, colors.theme1.mid, colors.common.white, medium, colors.theme1.midDark, colors.theme1.xDark, disabled$2);
-var secondaryStyle$1 = core.css(_templateObject3$6(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$2);
-var invertedBackgroundStyle$2 = core.css(_templateObject4$6(), colors.common.white, colors.theme1.dark);
-var invertedSecondaryBackgroundStyle$1 = core.css(_templateObject5$5(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$2);
-var iconStyle$3 = core.css(_templateObject6$5());
-var expandedIconStyle = core.css(_templateObject7$3());
+var smallStyle = core.css(_templateObject3$6());
+var secondaryStyle$1 = core.css(_templateObject4$6(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$2);
+var invertedBackgroundStyle$2 = core.css(_templateObject5$5(), colors.common.white, colors.theme1.dark);
+var invertedSecondaryBackgroundStyle$1 = core.css(_templateObject6$5(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$2);
+var iconStyle$3 = core.css(_templateObject7$3());
+var expandedIconStyle = core.css(_templateObject8$3());
 
 /** @jsx jsx */
 var ExpandButton = function ExpandButton(_ref) {
   var text = _ref.text,
       _ref$secondaryButtonS = _ref.secondaryButtonStyle,
       secondaryButtonStyle = _ref$secondaryButtonS === void 0 ? false : _ref$secondaryButtonS,
-      _ref$invertedBackgrou = _ref.invertedBackgroundColor,
-      invertedBackgroundColor = _ref$invertedBackgrou === void 0 ? false : _ref$invertedBackgrou,
+      _ref$small = _ref.small,
+      small = _ref$small === void 0 ? false : _ref$small,
       _ref$expanded = _ref.expanded,
       expanded = _ref$expanded === void 0 ? false : _ref$expanded,
       className = _ref.className,
@@ -3263,8 +3236,9 @@ var ExpandButton = function ExpandButton(_ref) {
       onClick = _ref.onClick;
   var styles = [expandButtonStyle];
   secondaryButtonStyle && styles.push(secondaryStyle$1);
-  invertedBackgroundColor && styles.push(invertedBackgroundStyle$2);
-  invertedBackgroundColor && secondaryButtonStyle && styles.push(invertedSecondaryBackgroundStyle$1);
+  small && styles.push(smallStyle); // invertedBackgroundColor && styles.push(invertedBackgroundStyle);
+  // (invertedBackgroundColor && secondaryButtonStyle) && styles.push(invertedSecondaryBackgroundStyle);
+
   style && styles.push(style);
   return core.jsx("button", {
     id: id,
@@ -3273,7 +3247,7 @@ var ExpandButton = function ExpandButton(_ref) {
     disabled: disabled,
     "aria-expanded": expanded ? "true" : "false",
     onClick: onClick
-  }, text, core.jsx(Icon, {
+  }, core.jsx("span", null, text), core.jsx(Icon, {
     "aria-hidden": "true",
     icon: "Arrow",
     style: [iconStyle$3, expanded && expandedIconStyle]
@@ -3496,10 +3470,10 @@ var PrerequisitesBox = function PrerequisitesBox(_ref) {
   }), children);
 };
 
-function _templateObject8$3() {
+function _templateObject8$4() {
   var data = _taggedTemplateLiteral(["\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n"]);
 
-  _templateObject8$3 = function _templateObject8() {
+  _templateObject8$4 = function _templateObject8() {
     return data;
   };
 
@@ -3611,7 +3585,7 @@ var LinkWrapperColorStyle$1 = core.css(_templateObject4$8(), LinkColors$1);
 var LinkWrapperInvertedColorStyle$1 = core.css(_templateObject5$7(), LinkColorsInverted$1);
 var ElementLinkColorStyle$1 = core.css(_templateObject6$7(), LinkColors$1);
 var ElementLinkInvertedColorStyle$1 = core.css(_templateObject7$5(), LinkColorsInverted$1);
-var VisuallyHidden$1 = core.css(_templateObject8$3());
+var VisuallyHidden$1 = core.css(_templateObject8$4());
 
 var Heading = function Heading(_ref) {
   var text = _ref.text,
@@ -3691,11 +3665,13 @@ var InputText = React__default.forwardRef(function (_ref, _ref2) {
       validationError = _ref.validationError,
       name = _ref.name,
       disabled = _ref.disabled,
+      label = _ref.label,
+      _ref$hideLabel = _ref.hideLabel,
+      hideLabel = _ref$hideLabel === void 0 ? false : _ref$hideLabel,
       _ref$type = _ref.type,
       type = _ref$type === void 0 ? "text" : _ref$type,
-      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "id", "onChange", "onClear", "validationError", "name", "disabled", "type"]);
+      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "id", "onChange", "onClear", "validationError", "name", "disabled", "label", "hideLabel", "type"]);
 
-  var label = other.label;
   var inputRef = React.useRef();
 
   var _useState = React.useState(null),
@@ -3707,7 +3683,7 @@ var InputText = React__default.forwardRef(function (_ref, _ref2) {
   return core.jsx("div", {
     css: [InputWrapperStyle, wrapperStyle, invalid]
   }, label && core.jsx("label", {
-    css: Label$1,
+    css: [Label$1, hideLabel ? VisuallyHidden : null],
     htmlFor: id
   }, label), validationError, core.jsx("input", _extends({
     ref: function ref(el) {
@@ -3755,10 +3731,10 @@ function _templateObject9$1() {
   return data;
 }
 
-function _templateObject8$4() {
+function _templateObject8$5() {
   var data = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 0.4rem;\n  fill: #fff;\n"]);
 
-  _templateObject8$4 = function _templateObject8() {
+  _templateObject8$5 = function _templateObject8() {
     return data;
   };
 
@@ -3841,7 +3817,7 @@ var focusText = core.css(_templateObject4$a());
 var textArea = core.css(_templateObject5$9(), medium);
 var pictureWrapper = core.css(_templateObject6$8());
 var iconBackground = core.css(_templateObject7$6(), colors.theme2.light);
-var externalIcon = core.css(_templateObject8$4());
+var externalIcon = core.css(_templateObject8$5());
 var puffIcon = core.css(_templateObject9$1());
 
 /** @jsx jsx */
@@ -3858,10 +3834,10 @@ var FocusPuff = function FocusPuff(_ref) {
   var imageArea = imageComponent;
 
   if (imageArea == null) {
-    if (image != null) imageArea = core.jsx("picture", null, core.jsx("img", {
+    if (image != null) imageArea = core.jsx("img", {
       src: image,
       alt: imageAlt
-    }));else {
+    });else {
       imageArea = core.jsx("div", {
         className: 'iconBackground',
         css: iconBackground
@@ -3909,10 +3885,10 @@ function _templateObject9$2() {
   return data;
 }
 
-function _templateObject8$5() {
+function _templateObject8$6() {
   var data = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 0.8rem;\n  fill: ", ";\n  width:2rem;\n"]);
 
-  _templateObject8$5 = function _templateObject8() {
+  _templateObject8$6 = function _templateObject8() {
     return data;
   };
 
@@ -3995,7 +3971,7 @@ var focusText$1 = core.css(_templateObject4$b(), colors.theme3.dark);
 var textArea$1 = core.css(_templateObject5$a(), medium, large);
 var pictureWrapper$1 = core.css(_templateObject6$9(), medium, large);
 var iconBackground$1 = core.css(_templateObject7$7(), colors.theme2.light, medium);
-var externalIcon$1 = core.css(_templateObject8$5(), colors.theme1.mid);
+var externalIcon$1 = core.css(_templateObject8$6(), colors.theme1.mid);
 var puffIcon$1 = core.css(_templateObject9$2(), colors.theme2.mid);
 
 /** @jsx jsx */
@@ -4012,10 +3988,10 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
   var imageArea = imageComponent;
 
   if (imageArea == null) {
-    if (image != null) imageArea = core.jsx("picture", null, core.jsx("img", {
+    if (image != null) imageArea = core.jsx("img", {
       src: image,
       alt: imageAlt
-    }));else {
+    });else {
       imageArea = core.jsx("div", {
         css: iconBackground$1
       }, core.jsx(EditorIcon, {
@@ -7735,6 +7711,200 @@ var DateFormat = function DateFormat(_ref) {
   }
 };
 
+function _templateObject8$7() {
+  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    font-size: 1.8rem;\n    line-height: 3.2rem;\n    padding-right: 20%;\n    color: ", ";\n    font-weight: 400;\n    margin-top: 1.6rem;\n    [dir='rtl'] & {\n        padding-left: 20%;\n        padding-right: 0%;\n    }\n\n"]);
+
+  _templateObject8$7 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7$9() {
+  var data = _taggedTemplateLiteral(["\n    line-height: 2.4rem!important;\n    margin-bottom: 0;\n\n"]);
+
+  _templateObject7$9 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6$c() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.4rem;\n    cursor: pointer;\n    display: block;\n    border-top: 1px solid ", ";\n    padding: .8rem 0 1.6rem 0;\n    margin: 0 1.6rem;\n    line-height: 2.4rem;\n    margin-top: auto;\n    \n"]);
+
+  _templateObject6$c = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$f() {
+  var data = _taggedTemplateLiteral(["\n\n    display: inline-flex;\n    flex-direction:column;\n    padding: 0 1.6rem 1.6rem 1.6rem;\n\n"]);
+
+  _templateObject5$f = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$g() {
+  var data = _taggedTemplateLiteral(["\n    transform: rotate(270deg);\n"]);
+
+  _templateObject4$g = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$j() {
+  var data = _taggedTemplateLiteral(["\n    outline-offset: -2px;\n    padding: 1.6rem ;\n    box-sizing:border-box;\n    box-shadow: none !important;\n    text-decoration: none !important;\n    min-height: 7.2rem;\n    width: 100%;\n    font-size: 2.1rem;\n    display: flex;\n    font-weight: 500 !important;\n    justify-content: space-between;\n    align-items: center;\n    flex-wrap: wrap;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n    }\n\n"]);
+
+  _templateObject3$j = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$k() {
+  var data = _taggedTemplateLiteral(["\n    padding: 2.4rem 1.6rem;\n"]);
+
+  _templateObject2$k = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$n() {
+  var data = _taggedTemplateLiteral(["\n    background-color: #fff;\n    border-radius: 0.8rem;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n"]);
+
+  _templateObject$n = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var wrapper$3 = core.css(_templateObject$n());
+var linkTextMainLinkStyle = core.css(_templateObject2$k());
+var mainLinkStyle = core.css(_templateObject3$j());
+var rotateArrow = core.css(_templateObject4$g());
+var childrenWrapper = core.css(_templateObject5$f());
+var showAllLink = core.css(_templateObject6$c(), colors.theme3.midLight);
+var headingStyle = core.css(_templateObject7$9());
+var linkTextCardContentStyle = core.css(_templateObject8$7(), colors.theme3.dark);
+
+var LinkCard = React__default.forwardRef(function (_ref, ref) {
+  var text = _ref.text,
+      href = _ref.href,
+      children = _ref.children,
+      id = _ref.id,
+      _ref$secondaryArrowSt = _ref.secondaryArrowStyle,
+      secondaryArrowStyle = _ref$secondaryArrowSt === void 0 ? false : _ref$secondaryArrowSt,
+      _ref$headingLevel = _ref.headingLevel,
+      headingLevel = _ref$headingLevel === void 0 ? 2 : _ref$headingLevel,
+      onClick = _ref.onClick,
+      _ref$beforeToggleCoun = _ref.beforeToggleCount,
+      beforeToggleCount = _ref$beforeToggleCoun === void 0 ? 3 : _ref$beforeToggleCoun,
+      style = _ref.style,
+      childrenWrapperStyle = _ref.childrenWrapperStyle,
+      _ref$showAll = _ref.showAll,
+      showAll = _ref$showAll === void 0 ? false : _ref$showAll;
+
+  var _useState = React.useState(showAll),
+      _useState2 = _slicedToArray(_useState, 2),
+      show = _useState2[0],
+      setShow = _useState2[1];
+
+  React.useEffect(function () {
+    if (show) {
+      var idToFocus = id + (beforeToggleCount + 1);
+      document.getElementById(idToFocus).focus();
+    }
+
+    return function () {};
+  }, [show]);
+  var childrenArray = React__default.Children.toArray(children);
+  var itemsToShow = [];
+
+  if (childrenArray && childrenArray.length > 0) {
+    itemsToShow = show ? childrenArray : childrenArray.slice(0, beforeToggleCount);
+  }
+
+  return core.jsx("div", {
+    id: id,
+    css: [wrapper$3, style]
+  }, core.jsx(SubHeading, {
+    level: headingLevel,
+    styleLevel: 3,
+    style: headingStyle
+  }, core.jsx("a", {
+    ref: ref,
+    href: href,
+    css: mainLinkStyle,
+    onClick: onClick
+  }, core.jsx("span", null, text), core.jsx(Icon, {
+    "aria-hidden": "true",
+    style: !secondaryArrowStyle && rotateArrow,
+    icon: secondaryArrowStyle ? 'LinkArrow' : 'Arrow'
+  }))), itemsToShow.length > 0 && core.jsx("div", {
+    css: [childrenWrapper, childrenWrapperStyle]
+  }, itemsToShow.map(function (item, i) {
+    return React__default.cloneElement(item, {
+      id: id + (i + 1)
+    });
+  })), childrenArray.length > beforeToggleCount && core.jsx("span", {
+    css: showAllLink
+  }, core.jsx("a", {
+    href: "#",
+    onClick: function onClick(e) {
+      e.preventDefault();
+      setShow(!show);
+    },
+    "aria-controls": id,
+    "aria-expanded": show
+  }, show ? "Visa f\xE4rre (".concat(beforeToggleCount, ")") : "Visa alla (".concat(childrenArray.length, ")"))));
+});
+
+/** @jsx jsx */
+var LinkTextCard = React__default.forwardRef(function (_ref, ref) {
+  var text = _ref.text,
+      href = _ref.href,
+      children = _ref.children,
+      id = _ref.id,
+      _ref$headingLevel = _ref.headingLevel,
+      headingLevel = _ref$headingLevel === void 0 ? 2 : _ref$headingLevel,
+      onClick = _ref.onClick,
+      style = _ref.style,
+      dir = _ref.dir,
+      lang = _ref.lang;
+  return core.jsx("div", {
+    id: id,
+    dir: dir,
+    css: [wrapper$3, style],
+    lang: lang
+  }, core.jsx(SubHeading, {
+    level: headingLevel,
+    styleLevel: 3,
+    style: headingStyle
+  }, core.jsx("a", {
+    ref: ref,
+    href: href,
+    css: [mainLinkStyle, linkTextMainLinkStyle],
+    onClick: onClick
+  }, core.jsx("span", null, text), core.jsx(Icon, {
+    "aria-hidden": "true",
+    icon: "Arrow"
+  }), children && core.jsx("span", {
+    css: linkTextCardContentStyle
+  }, children))));
+});
+
 exports.Accordion = Accordion;
 exports.BoxWithHeadlineText = BoxWithHeadlineText;
 exports.Button = Button;
@@ -7757,6 +7927,8 @@ exports.Icon = Icon;
 exports.IconCard = IconCard;
 exports.InputRadio = InputRadio;
 exports.InputText = InputText;
+exports.LinkCard = LinkCard;
+exports.LinkTextCard = LinkTextCard;
 exports.LinkWrapperColorStyle = LinkWrapperColorStyle$1;
 exports.LinkWrapperInvertedColorStyle = LinkWrapperInvertedColorStyle$1;
 exports.Pagination = Pagination;
