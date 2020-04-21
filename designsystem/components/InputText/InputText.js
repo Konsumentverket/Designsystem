@@ -3,19 +3,18 @@ import { jsx } from '@emotion/core'
 import { InputStyle,InputWrapperStyle, ClearInput, Label, invalidStyle } from "./InputText.css"
 import {Icon} from '../Icon/Icon';
 import React, { useRef,useState } from 'react';
+import { VisuallyHidden } from '../GlobalStyles/globalStyles';
 
 
 export const InputText = React.forwardRef(({style,wrapperStyle, placeholder, id, onChange, onClear,validationError,
-    name, disabled, type="text", ...other},ref) => {
-    
-    const { label } = other
+    name, disabled, label, hideLabel = false, type="text", ...other},ref) => {
     
     let inputRef = useRef();
     let [text,setText] = useState(null)
     const invalid = validationError ? invalidStyle : null
     
     return <div css={[InputWrapperStyle,wrapperStyle, invalid]}>
-            { label && <label css={Label} htmlFor={id}>{label}</label> }
+            { label && <label css={[Label,hideLabel ? VisuallyHidden : null]} htmlFor={id}>{label}</label> }
             {validationError}
             <input 
                 ref={(el) => {

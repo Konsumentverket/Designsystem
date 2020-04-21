@@ -3665,11 +3665,13 @@ var InputText = React__default.forwardRef(function (_ref, _ref2) {
       validationError = _ref.validationError,
       name = _ref.name,
       disabled = _ref.disabled,
+      label = _ref.label,
+      _ref$hideLabel = _ref.hideLabel,
+      hideLabel = _ref$hideLabel === void 0 ? false : _ref$hideLabel,
       _ref$type = _ref.type,
       type = _ref$type === void 0 ? "text" : _ref$type,
-      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "id", "onChange", "onClear", "validationError", "name", "disabled", "type"]);
+      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "id", "onChange", "onClear", "validationError", "name", "disabled", "label", "hideLabel", "type"]);
 
-  var label = other.label;
   var inputRef = React.useRef();
 
   var _useState = React.useState(null),
@@ -3681,7 +3683,7 @@ var InputText = React__default.forwardRef(function (_ref, _ref2) {
   return core.jsx("div", {
     css: [InputWrapperStyle, wrapperStyle, invalid]
   }, label && core.jsx("label", {
-    css: Label$1,
+    css: [Label$1, hideLabel ? VisuallyHidden : null],
     htmlFor: id
   }, label), validationError, core.jsx("input", _extends({
     ref: function ref(el) {

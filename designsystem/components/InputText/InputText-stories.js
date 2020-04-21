@@ -14,7 +14,7 @@ storiesOf('Digitala Produkter|React komponenter', module)
     .add(name, () => {
                     return <>
                     <div css={css`max-width: 80%; margin-left: 2%; p{font-size: 1.8rem;}`}>
-                    <p>Type "text"</p>
+                    <p>Typ "text"</p>
                     <br />
                     <InputText 
                         placeholder={text("placeholder","Skriv ditt namn")} 
@@ -22,16 +22,37 @@ storiesOf('Digitala Produkter|React komponenter', module)
                         onChange={(e) => console.log(e.target.value)}
                     />
                     <br />
-                    <br />
-                    <p>Type "search"</p>
-                    <br />
+                    <p>Typ "search"</p>
                     <InputText 
                         placeholder={text("placeholder2","Skriv för att söka")} 
-                        id="search"
+                        id="search2"
+                        type="search"
+                        onChange={(e) => console.log(e.target.value)}
+                    />
+                    
+                    <br />
+                    <p>Typ "search" med label</p>
+                    
+                    <InputText 
+                        placeholder={text("placeholder3","Skriv för att söka")}
+                        label={"Jag är en label"}
+                        id="search3"
+                        type="search"
+                        onChange={(e) => console.log(e.target.value)}
+                    />
+                    <br />
+                    <p>Typ "search" med dold label</p>
+                    <InputText 
+                        placeholder={text("placeholder3","Skriv för att söka")}
+                        label={"Jag är en label"}
+                        hideLabel={true}
+                        id="search3"
                         type="search"
                         onChange={(e) => console.log(e.target.value)}
                     />
                     </div>
+
+
                     </>
     }
         , { notes: NotesLoader(name) }
