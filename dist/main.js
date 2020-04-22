@@ -3856,7 +3856,7 @@ var FocusPuff = function FocusPuff(_ref) {
       css: pictureWrapper
     }, imageArea), core.jsx("div", {
       css: textArea
-    }, core.jsx("h2", {
+    }, core.jsx("h3", {
       css: focusHeadline
     }, headline, isExternalLink && core.jsx(Icon, {
       title: "Extern l\xE4nk",
@@ -4008,7 +4008,7 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
       css: pictureWrapper$1
     }, imageArea), core.jsx("div", {
       css: textArea$1
-    }, core.jsx("h2", {
+    }, core.jsx("h3", {
       css: focusHeadline$1
     }, headline, isExternalLink && core.jsx(Icon, {
       title: "Extern l\xE4nk",
@@ -4660,7 +4660,7 @@ function toInteger(dirtyNumber) {
 
 function requiredArgs(required, args) {
   if (args.length < required) {
-    throw new TypeError(required + ' argument' + required > 1 ? 's' : '' + ' required, but only ' + args.length + ' present');
+    throw new TypeError(required + ' argument' + (required > 1 ? 's' : '') + ' required, but only ' + args.length + ' present');
   }
 }
 
@@ -5184,11 +5184,11 @@ function buildMatchFn(args) {
 
     if (Object.prototype.toString.call(parsePatterns) === '[object Array]') {
       value = findIndex(parsePatterns, function (pattern) {
-        return pattern.test(string);
+        return pattern.test(matchedString);
       });
     } else {
       value = findKey(parsePatterns, function (pattern) {
-        return pattern.test(string);
+        return pattern.test(matchedString);
       });
     }
 
