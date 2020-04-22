@@ -7839,6 +7839,7 @@ var LinkCard = React.forwardRef(function (_ref, ref) {
     onClick: onClick
   }, "Visa alla (", childrenArray.length, ")")));
 });
+LinkCard.displayName = "LinkCard";
 
 /** @jsx jsx */
 var LinkTextCard = React.forwardRef(function (_ref, ref) {
@@ -7887,6 +7888,7 @@ var LinkTextCard = React.forwardRef(function (_ref, ref) {
     css: linkTextCardContentStyle
   }, children)));
 });
+LinkTextCard.displayName = "LinkTextCard";
 
 export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, DateFormat, Dropdown, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, Pagination, PrerequisitesBox, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, colors, spacing };
 //# sourceMappingURL=main.es.js.map

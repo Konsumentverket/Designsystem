@@ -7846,6 +7846,7 @@ var LinkCard = React__default.forwardRef(function (_ref, ref) {
     onClick: onClick
   }, "Visa alla (", childrenArray.length, ")")));
 });
+LinkCard.displayName = "LinkCard";
 
 /** @jsx jsx */
 var LinkTextCard = React__default.forwardRef(function (_ref, ref) {
@@ -7894,6 +7895,7 @@ var LinkTextCard = React__default.forwardRef(function (_ref, ref) {
     css: linkTextCardContentStyle
   }, children)));
 });
+LinkTextCard.displayName = "LinkTextCard";
 
 exports.Accordion = Accordion;
 exports.BoxWithHeadlineText = BoxWithHeadlineText;

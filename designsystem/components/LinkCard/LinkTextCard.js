@@ -5,7 +5,7 @@ import { wrapper, mainLinkStyle, innerTextWrapperStyle, linkTextCardContentStyle
 import { Icon } from '../Icon/Icon';    
 import {SubHeading} from '../Headings/SubHeading'
 
-export const LinkTextCard = React.forwardRef(({text,href,children,id,
+const LinkTextCard = React.forwardRef(({text,href,children,id,
     headingLevel = 2, onClick, style, dir,lang}, ref) => {
 
     const renderLinkText = () => {
@@ -32,3 +32,5 @@ export const LinkTextCard = React.forwardRef(({text,href,children,id,
 
 
 })
+LinkTextCard.displayName = "LinkTextCard"
+export {LinkTextCard};
