@@ -2672,7 +2672,7 @@ var EditorIcon = function EditorIcon(_ref) {
     className: className,
     style: style,
     role: "img",
-    "aria-label": title || ""
+    "aria-label": title || icon || ""
   }, otherAttr));
 };
 
@@ -7712,7 +7712,7 @@ var DateFormat = function DateFormat(_ref) {
 };
 
 function _templateObject8$7() {
-  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    font-size: 1.8rem;\n    line-height: 3.2rem;\n    padding-right: 20%;\n    color: ", ";\n    font-weight: 400;\n    margin-top: 1.6rem;\n    [dir='rtl'] & {\n        padding-left: 20%;\n        padding-right: 0%;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    font-size: 1.8rem;\n    line-height: 3.2rem;\n    padding-right: 20%;\n    color: ", ";\n    font-weight: 400;\n    margin-top: 1.6rem;\n    display:block;\n    [dir='rtl'] & {\n        padding-left: 20%;\n        padding-right: 0%;\n    }\n\n"]);
 
   _templateObject8$7 = function _templateObject8() {
     return data;
@@ -7722,7 +7722,7 @@ function _templateObject8$7() {
 }
 
 function _templateObject7$9() {
-  var data = _taggedTemplateLiteral(["\n    line-height: 2.4rem!important;\n    margin-bottom: 0;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    line-height: 2.4rem!important;\n    margin-bottom: 0;\n    padding-bottom: 0;\n    font-size: 2.4rem;\n    display: flex;\n    font-weight: 500 !important;\n    justify-content: space-between;\n    align-items: center;\n    flex-wrap: wrap;\n    color: ", ";\n\n"]);
 
   _templateObject7$9 = function _templateObject7() {
     return data;
@@ -7752,7 +7752,7 @@ function _templateObject5$f() {
 }
 
 function _templateObject4$g() {
-  var data = _taggedTemplateLiteral(["\n    transform: rotate(270deg);\n"]);
+  var data = _taggedTemplateLiteral(["\n    transform: rotate(0deg)!important;\n"]);
 
   _templateObject4$g = function _templateObject4() {
     return data;
@@ -7762,7 +7762,7 @@ function _templateObject4$g() {
 }
 
 function _templateObject3$j() {
-  var data = _taggedTemplateLiteral(["\n    outline-offset: -2px;\n    padding: 1.6rem ;\n    box-sizing:border-box;\n    box-shadow: none !important;\n    text-decoration: none !important;\n    min-height: 7.2rem;\n    width: 100%;\n    font-size: 2.1rem;\n    display: flex;\n    font-weight: 500 !important;\n    justify-content: space-between;\n    align-items: center;\n    flex-wrap: wrap;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    outline-offset: -2px;\n    padding: 1.6rem ;\n    box-sizing:border-box;\n    box-shadow: none !important;\n    text-decoration: none !important;\n    min-height: 7.2rem;\n    width: 100%;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n        transform: rotate(-90deg);\n    }\n\n"]);
 
   _templateObject3$j = function _templateObject3() {
     return data;
@@ -7796,9 +7796,10 @@ var mainLinkStyle = core.css(_templateObject3$j());
 var rotateArrow = core.css(_templateObject4$g());
 var childrenWrapper = core.css(_templateObject5$f());
 var showAllLink = core.css(_templateObject6$c(), colors.theme3.midLight);
-var headingStyle = core.css(_templateObject7$9());
+var innerTextWrapperStyle = core.css(_templateObject7$9(), colors.theme1.mid);
 var linkTextCardContentStyle = core.css(_templateObject8$7(), colors.theme3.dark);
 
+/** @jsx jsx */
 var LinkCard = React__default.forwardRef(function (_ref, ref) {
   var text = _ref.text,
       href = _ref.href,
@@ -7812,63 +7813,38 @@ var LinkCard = React__default.forwardRef(function (_ref, ref) {
       _ref$beforeToggleCoun = _ref.beforeToggleCount,
       beforeToggleCount = _ref$beforeToggleCoun === void 0 ? 3 : _ref$beforeToggleCoun,
       style = _ref.style,
-      childrenWrapperStyle = _ref.childrenWrapperStyle,
-      _ref$showAll = _ref.showAll,
-      showAll = _ref$showAll === void 0 ? false : _ref$showAll;
-
-  var _useState = React.useState(showAll),
-      _useState2 = _slicedToArray(_useState, 2),
-      show = _useState2[0],
-      setShow = _useState2[1];
-
-  React.useEffect(function () {
-    if (show) {
-      var idToFocus = id + (beforeToggleCount + 1);
-      document.getElementById(idToFocus).focus();
-    }
-
-    return function () {};
-  }, [show]);
+      childrenWrapperStyle = _ref.childrenWrapperStyle;
   var childrenArray = React__default.Children.toArray(children);
   var itemsToShow = [];
 
   if (childrenArray && childrenArray.length > 0) {
-    itemsToShow = show ? childrenArray : childrenArray.slice(0, beforeToggleCount);
+    itemsToShow = childrenArray.slice(0, beforeToggleCount);
   }
 
   return core.jsx("div", {
     id: id,
     css: [wrapper$3, style]
-  }, core.jsx(SubHeading, {
-    level: headingLevel,
-    styleLevel: 3,
-    style: headingStyle
   }, core.jsx("a", {
     ref: ref,
     href: href,
     css: mainLinkStyle,
     onClick: onClick
+  }, core.jsx(SubHeading, {
+    level: headingLevel,
+    styleLevel: 3,
+    style: innerTextWrapperStyle
   }, core.jsx("span", null, text), core.jsx(Icon, {
     "aria-hidden": "true",
-    style: !secondaryArrowStyle && rotateArrow,
+    style: secondaryArrowStyle ? rotateArrow : null,
     icon: secondaryArrowStyle ? 'LinkArrow' : 'Arrow'
   }))), itemsToShow.length > 0 && core.jsx("div", {
     css: [childrenWrapper, childrenWrapperStyle]
-  }, itemsToShow.map(function (item, i) {
-    return React__default.cloneElement(item, {
-      id: id + (i + 1)
-    });
-  })), childrenArray.length > beforeToggleCount && core.jsx("span", {
+  }, itemsToShow), childrenArray.length > beforeToggleCount && core.jsx("span", {
     css: showAllLink
   }, core.jsx("a", {
-    href: "#",
-    onClick: function onClick(e) {
-      e.preventDefault();
-      setShow(!show);
-    },
-    "aria-controls": id,
-    "aria-expanded": show
-  }, show ? "Visa f\xE4rre (".concat(beforeToggleCount, ")") : "Visa alla (".concat(childrenArray.length, ")"))));
+    href: href,
+    onClick: onClick
+  }, "Visa alla (", childrenArray.length, ")")));
 });
 
 /** @jsx jsx */
@@ -7883,26 +7859,40 @@ var LinkTextCard = React__default.forwardRef(function (_ref, ref) {
       style = _ref.style,
       dir = _ref.dir,
       lang = _ref.lang;
+
+  var renderLinkText = function renderLinkText() {
+    if (children) {
+      return core.jsx(SubHeading, {
+        level: headingLevel,
+        styleLevel: 3,
+        style: innerTextWrapperStyle
+      }, core.jsx("span", null, text), core.jsx(Icon, {
+        "aria-hidden": "true",
+        icon: "Arrow"
+      }));
+    } else {
+      return core.jsx("div", {
+        css: innerTextWrapperStyle
+      }, core.jsx("span", null, text), core.jsx(Icon, {
+        "aria-hidden": "true",
+        icon: "Arrow"
+      }));
+    }
+  };
+
   return core.jsx("div", {
     id: id,
     dir: dir,
     css: [wrapper$3, style],
     lang: lang
-  }, core.jsx(SubHeading, {
-    level: headingLevel,
-    styleLevel: 3,
-    style: headingStyle
   }, core.jsx("a", {
     ref: ref,
     href: href,
     css: [mainLinkStyle, linkTextMainLinkStyle],
     onClick: onClick
-  }, core.jsx("span", null, text), core.jsx(Icon, {
-    "aria-hidden": "true",
-    icon: "Arrow"
-  }), children && core.jsx("span", {
+  }, renderLinkText(), children && core.jsx("span", {
     css: linkTextCardContentStyle
-  }, children))));
+  }, children)));
 });
 
 exports.Accordion = Accordion;

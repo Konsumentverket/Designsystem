@@ -88,7 +88,7 @@ const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
         return null
     }
 
-    return <Element title={title} className={className} style={style} role="img" aria-label={title || ""} {...otherAttr} />
+    return <Element title={title} className={className} style={style} role="img" aria-label={title || icon || ""} {...otherAttr} />
 }
 
 export { EditorIcon, editorIconDefinitions };
