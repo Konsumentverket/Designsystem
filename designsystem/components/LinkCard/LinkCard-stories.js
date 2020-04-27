@@ -37,11 +37,14 @@ storiesOf('Digitala Produkter|React komponenter/Kort', module)
                 </div>
                 <div css={linkCardStyle}>
                     <LinkCard id="two" href="http://www.google.com" text="Problem och vanliga frågor om bil" >
-                        {[1,2,3,4,5].map(n => <span css={linkContentStyle}><a key={n} href={`/${n}`}>Föremål i listan: {n}</a></span>)}
+                        <span css={linkContentStyle}><a href={`/long`}>Föremål i listan som är väldigt långt och radbryts:</a></span>
+                        {[1,2,3,4,5].map(n => <span css={linkContentStyle} key={n}><a href={`/${n}`}>Föremål i listan: {n}</a></span>)}
+                        
                     </LinkCard>
                 </div>
                 <div css={linkCardStyle}>
                     <LinkCard id="three" href="http://www.google.com" text="Problem och vanliga frågor om bil" >
+                        <a css={linkContentStyle} href={`/langt`}>Föremål i listan som är väldigt långt och radbryts:</a>
                         {[1,2,3].map(n => <a key={n} css={linkContentStyle} href={`/${n}`}>Föremål i listan: {n}</a>)}
                     </LinkCard>
                 </div>

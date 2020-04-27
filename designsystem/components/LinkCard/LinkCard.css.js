@@ -22,12 +22,6 @@ export const mainLinkStyle = css`
     text-decoration: none !important;
     min-height: 7.2rem;
     width: 100%;
-    font-size: 2.1rem;
-    display: flex;
-    font-weight: 500 !important;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
     span{
         max-width: 84%;
     }
@@ -71,9 +65,17 @@ export const showAllLink = css`
     
 `
 
-export const headingStyle = css`
+export const innerTextWrapperStyle = css`
     line-height: 2.4rem!important;
     margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 2.4rem;
+    display: flex;
+    font-weight: 500 !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: ${colors.theme1.mid};
 
 `
 
@@ -86,6 +88,7 @@ export const linkTextCardContentStyle = css`
     color: ${colors.theme3.dark};
     font-weight: 400;
     margin-top: 1.6rem;
+    display:block;
     [dir='rtl'] & {
         padding-left: 20%;
         padding-right: 0%;

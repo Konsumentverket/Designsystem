@@ -2665,7 +2665,7 @@ var EditorIcon = function EditorIcon(_ref) {
     className: className,
     style: style,
     role: "img",
-    "aria-label": title || ""
+    "aria-label": title || icon || ""
   }, otherAttr));
 };
 
@@ -3785,7 +3785,7 @@ function _templateObject3$c() {
 }
 
 function _templateObject2$c() {
-  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  padding-top:.8rem;\n  display:flex;\n\n  &:hover .focusWrapper {\n      background-color: ", ";      \n  }\n  &:active .focusWrapper {\n      background-color: ", ";      \n  }\n  &:hover h2, &:active h2 {\n    text-decoration:underline;\n  }\n  \n  ", " {\n    height:100%\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  padding-top:.8rem;\n  display:flex;\n\n  &:hover .focusWrapper {\n      background-color: ", ";      \n  }\n  &:active .focusWrapper {\n      background-color: ", ";      \n  }\n  &:hover h3, &:active h3 {\n    text-decoration:underline;\n  }\n  \n  ", " {\n    height:100%\n  }\n\n"]);
 
   _templateObject2$c = function _templateObject2() {
     return data;
@@ -3849,7 +3849,7 @@ var FocusPuff = function FocusPuff(_ref) {
       css: pictureWrapper
     }, imageArea), jsx("div", {
       css: textArea
-    }, jsx("h2", {
+    }, jsx("h3", {
       css: focusHeadline
     }, headline, isExternalLink && jsx(Icon, {
       title: "Extern l\xE4nk",
@@ -4001,7 +4001,7 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
       css: pictureWrapper$1
     }, imageArea), jsx("div", {
       css: textArea$1
-    }, jsx("h2", {
+    }, jsx("h3", {
       css: focusHeadline$1
     }, headline, isExternalLink && jsx(Icon, {
       title: "Extern l\xE4nk",
@@ -4653,7 +4653,7 @@ function toInteger(dirtyNumber) {
 
 function requiredArgs(required, args) {
   if (args.length < required) {
-    throw new TypeError(required + ' argument' + required > 1 ? 's' : '' + ' required, but only ' + args.length + ' present');
+    throw new TypeError(required + ' argument' + (required > 1 ? 's' : '') + ' required, but only ' + args.length + ' present');
   }
 }
 
@@ -5177,11 +5177,11 @@ function buildMatchFn(args) {
 
     if (Object.prototype.toString.call(parsePatterns) === '[object Array]') {
       value = findIndex(parsePatterns, function (pattern) {
-        return pattern.test(string);
+        return pattern.test(matchedString);
       });
     } else {
       value = findKey(parsePatterns, function (pattern) {
-        return pattern.test(string);
+        return pattern.test(matchedString);
       });
     }
 
@@ -7705,7 +7705,7 @@ var DateFormat = function DateFormat(_ref) {
 };
 
 function _templateObject8$7() {
-  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    font-size: 1.8rem;\n    line-height: 3.2rem;\n    padding-right: 20%;\n    color: ", ";\n    font-weight: 400;\n    margin-top: 1.6rem;\n    [dir='rtl'] & {\n        padding-left: 20%;\n        padding-right: 0%;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    font-size: 1.8rem;\n    line-height: 3.2rem;\n    padding-right: 20%;\n    color: ", ";\n    font-weight: 400;\n    margin-top: 1.6rem;\n    display:block;\n    [dir='rtl'] & {\n        padding-left: 20%;\n        padding-right: 0%;\n    }\n\n"]);
 
   _templateObject8$7 = function _templateObject8() {
     return data;
@@ -7715,7 +7715,7 @@ function _templateObject8$7() {
 }
 
 function _templateObject7$9() {
-  var data = _taggedTemplateLiteral(["\n    line-height: 2.4rem!important;\n    margin-bottom: 0;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    line-height: 2.4rem!important;\n    margin-bottom: 0;\n    padding-bottom: 0;\n    font-size: 2.4rem;\n    display: flex;\n    font-weight: 500 !important;\n    justify-content: space-between;\n    align-items: center;\n    flex-wrap: wrap;\n    color: ", ";\n\n"]);
 
   _templateObject7$9 = function _templateObject7() {
     return data;
@@ -7745,7 +7745,7 @@ function _templateObject5$f() {
 }
 
 function _templateObject4$g() {
-  var data = _taggedTemplateLiteral(["\n    transform: rotate(270deg);\n"]);
+  var data = _taggedTemplateLiteral(["\n    transform: rotate(0deg)!important;\n"]);
 
   _templateObject4$g = function _templateObject4() {
     return data;
@@ -7755,7 +7755,7 @@ function _templateObject4$g() {
 }
 
 function _templateObject3$j() {
-  var data = _taggedTemplateLiteral(["\n    outline-offset: -2px;\n    padding: 1.6rem ;\n    box-sizing:border-box;\n    box-shadow: none !important;\n    text-decoration: none !important;\n    min-height: 7.2rem;\n    width: 100%;\n    font-size: 2.1rem;\n    display: flex;\n    font-weight: 500 !important;\n    justify-content: space-between;\n    align-items: center;\n    flex-wrap: wrap;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    outline-offset: -2px;\n    padding: 1.6rem ;\n    box-sizing:border-box;\n    box-shadow: none !important;\n    text-decoration: none !important;\n    min-height: 7.2rem;\n    width: 100%;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n        transform: rotate(-90deg);\n    }\n\n"]);
 
   _templateObject3$j = function _templateObject3() {
     return data;
@@ -7789,9 +7789,10 @@ var mainLinkStyle = css$1(_templateObject3$j());
 var rotateArrow = css$1(_templateObject4$g());
 var childrenWrapper = css$1(_templateObject5$f());
 var showAllLink = css$1(_templateObject6$c(), colors.theme3.midLight);
-var headingStyle = css$1(_templateObject7$9());
+var innerTextWrapperStyle = css$1(_templateObject7$9(), colors.theme1.mid);
 var linkTextCardContentStyle = css$1(_templateObject8$7(), colors.theme3.dark);
 
+/** @jsx jsx */
 var LinkCard = React.forwardRef(function (_ref, ref) {
   var text = _ref.text,
       href = _ref.href,
@@ -7805,63 +7806,38 @@ var LinkCard = React.forwardRef(function (_ref, ref) {
       _ref$beforeToggleCoun = _ref.beforeToggleCount,
       beforeToggleCount = _ref$beforeToggleCoun === void 0 ? 3 : _ref$beforeToggleCoun,
       style = _ref.style,
-      childrenWrapperStyle = _ref.childrenWrapperStyle,
-      _ref$showAll = _ref.showAll,
-      showAll = _ref$showAll === void 0 ? false : _ref$showAll;
-
-  var _useState = useState(showAll),
-      _useState2 = _slicedToArray(_useState, 2),
-      show = _useState2[0],
-      setShow = _useState2[1];
-
-  useEffect(function () {
-    if (show) {
-      var idToFocus = id + (beforeToggleCount + 1);
-      document.getElementById(idToFocus).focus();
-    }
-
-    return function () {};
-  }, [show]);
+      childrenWrapperStyle = _ref.childrenWrapperStyle;
   var childrenArray = React.Children.toArray(children);
   var itemsToShow = [];
 
   if (childrenArray && childrenArray.length > 0) {
-    itemsToShow = show ? childrenArray : childrenArray.slice(0, beforeToggleCount);
+    itemsToShow = childrenArray.slice(0, beforeToggleCount);
   }
 
   return jsx("div", {
     id: id,
     css: [wrapper$3, style]
-  }, jsx(SubHeading, {
-    level: headingLevel,
-    styleLevel: 3,
-    style: headingStyle
   }, jsx("a", {
     ref: ref,
     href: href,
     css: mainLinkStyle,
     onClick: onClick
+  }, jsx(SubHeading, {
+    level: headingLevel,
+    styleLevel: 3,
+    style: innerTextWrapperStyle
   }, jsx("span", null, text), jsx(Icon, {
     "aria-hidden": "true",
-    style: !secondaryArrowStyle && rotateArrow,
+    style: secondaryArrowStyle ? rotateArrow : null,
     icon: secondaryArrowStyle ? 'LinkArrow' : 'Arrow'
   }))), itemsToShow.length > 0 && jsx("div", {
     css: [childrenWrapper, childrenWrapperStyle]
-  }, itemsToShow.map(function (item, i) {
-    return React.cloneElement(item, {
-      id: id + (i + 1)
-    });
-  })), childrenArray.length > beforeToggleCount && jsx("span", {
+  }, itemsToShow), childrenArray.length > beforeToggleCount && jsx("span", {
     css: showAllLink
   }, jsx("a", {
-    href: "#",
-    onClick: function onClick(e) {
-      e.preventDefault();
-      setShow(!show);
-    },
-    "aria-controls": id,
-    "aria-expanded": show
-  }, show ? "Visa f\xE4rre (".concat(beforeToggleCount, ")") : "Visa alla (".concat(childrenArray.length, ")"))));
+    href: href,
+    onClick: onClick
+  }, "Visa alla (", childrenArray.length, ")")));
 });
 
 /** @jsx jsx */
@@ -7876,26 +7852,40 @@ var LinkTextCard = React.forwardRef(function (_ref, ref) {
       style = _ref.style,
       dir = _ref.dir,
       lang = _ref.lang;
+
+  var renderLinkText = function renderLinkText() {
+    if (children) {
+      return jsx(SubHeading, {
+        level: headingLevel,
+        styleLevel: 3,
+        style: innerTextWrapperStyle
+      }, jsx("span", null, text), jsx(Icon, {
+        "aria-hidden": "true",
+        icon: "Arrow"
+      }));
+    } else {
+      return jsx("div", {
+        css: innerTextWrapperStyle
+      }, jsx("span", null, text), jsx(Icon, {
+        "aria-hidden": "true",
+        icon: "Arrow"
+      }));
+    }
+  };
+
   return jsx("div", {
     id: id,
     dir: dir,
     css: [wrapper$3, style],
     lang: lang
-  }, jsx(SubHeading, {
-    level: headingLevel,
-    styleLevel: 3,
-    style: headingStyle
   }, jsx("a", {
     ref: ref,
     href: href,
     css: [mainLinkStyle, linkTextMainLinkStyle],
     onClick: onClick
-  }, jsx("span", null, text), jsx(Icon, {
-    "aria-hidden": "true",
-    icon: "Arrow"
-  }), children && jsx("span", {
+  }, renderLinkText(), children && jsx("span", {
     css: linkTextCardContentStyle
-  }, children))));
+  }, children)));
 });
 
 export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, DateFormat, Dropdown, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, Pagination, PrerequisitesBox, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, colors, spacing };
