@@ -7888,6 +7888,78 @@ var LinkTextCard = React__default.forwardRef(function (_ref, ref) {
   }, children)));
 });
 
+function _templateObject4$h() {
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 1.4rem;\n"]);
+
+  _templateObject4$h = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$k() {
+  var data = _taggedTemplateLiteral(["\n  padding-bottom: .8rem;\n  font-size: 1.8rem;\n  font-weight: 400;\n"]);
+
+  _templateObject3$k = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$l() {
+  var data = _taggedTemplateLiteral(["\n  font-size: 1.4rem;\n  padding-bottom: 0.8rem;\n"]);
+
+  _templateObject2$l = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$o() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  color: ", ";\n  font-weight: 500;\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: #dadbd9;\n  }\n  h3 {\n    text-decoration: underline;\n    color: ", ";\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 1.6rem;\n  border-bottom: 1px solid ", ";\n"]);
+
+  _templateObject$o = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var wrapper$4 = core.css(_templateObject$o(), colors.theme3.dark, colors.theme1.midLight, colors.theme1.mid, colors.theme3.light);
+var news = core.css(_templateObject2$l());
+var preambleStyle = core.css(_templateObject3$k());
+var bottomText = core.css(_templateObject4$h(), colors.theme3.mid);
+
+/** @jsx jsx */
+var ListItem = function ListItem(_ref) {
+  var children = _ref.children,
+      headline = _ref.headline,
+      preamble = _ref.preamble,
+      bottomText$1 = _ref.bottomText,
+      type = _ref.type,
+      reviewedDate = _ref.reviewedDate,
+      href = _ref.href,
+      style = _ref.style;
+  return core.jsx("a", {
+    css: [wrapper$4, style],
+    className: "noStyle",
+    href: href
+  }, type && core.jsx("p", {
+    css: news
+  }, " ", type.toUpperCase(), reviewedDate && core.jsx(React__default.Fragment, null, ": ", core.jsx(DateFormat, {
+    date: reviewedDate,
+    showDate: true
+  }))), core.jsx(SubHeading, {
+    level: 3
+  }, headline), children, preamble && core.jsx("p", {
+    css: preambleStyle
+  }, preamble), bottomText$1 && core.jsx("p", {
+    css: bottomText
+  }, bottomText$1));
+};
+
 exports.Accordion = Accordion;
 exports.BoxWithHeadlineText = BoxWithHeadlineText;
 exports.Button = Button;
@@ -7914,6 +7986,7 @@ exports.LinkCard = LinkCard;
 exports.LinkTextCard = LinkTextCard;
 exports.LinkWrapperColorStyle = LinkWrapperColorStyle$1;
 exports.LinkWrapperInvertedColorStyle = LinkWrapperInvertedColorStyle$1;
+exports.ListItem = ListItem;
 exports.Pagination = Pagination;
 exports.PrerequisitesBox = PrerequisitesBox;
 exports.Source = Source;
