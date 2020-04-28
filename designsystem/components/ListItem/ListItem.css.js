@@ -2,11 +2,13 @@ import { css } from '@emotion/core'
 import { colors } from '../Colors/Colors'
 
 export const wrapper = css`
+  width: 100%;
   display: block;
   text-decoration: none;
-  color: #000;
+  color: ${colors.theme3.dark};
+  font-weight: 500;
   &:hover {
-    background-color: ${colors.theme2.midLight};
+    background-color: ${colors.theme1.midLight};
   }
   &:active {
     background-color: #dadbd9;
@@ -15,7 +17,8 @@ export const wrapper = css`
     text-decoration: underline;
     color: ${colors.theme1.mid};
   }
-  margin-top: 1.6rem;
+  padding-top: 2.4rem;
+  padding-bottom: 1.6rem;
   border-bottom: 1px solid ${colors.theme3.light};
 `
 export const news = css`
@@ -24,8 +27,9 @@ export const news = css`
 `
 
 export const preambleStyle = css`
-  margin-bottom: 2.4rem;
+  padding-bottom: .8rem;
   font-size: 1.8rem;
+  font-weight: 400;
 `
 export const bottomText = css`
   color: ${colors.theme3.mid};

@@ -7909,7 +7909,7 @@ function _templateObject4$h() {
 }
 
 function _templateObject3$k() {
-  var data = _taggedTemplateLiteral(["\n  margin-bottom: 2.4rem;\n  font-size: 1.8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding-bottom: .8rem;\n  font-size: 1.8rem;\n  font-weight: 400;\n"]);
 
   _templateObject3$k = function _templateObject3() {
     return data;
@@ -7929,7 +7929,7 @@ function _templateObject2$l() {
 }
 
 function _templateObject$o() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n  text-decoration: none;\n  color: #000;\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: #dadbd9;\n  }\n  h3 {\n    text-decoration: underline;\n    color: ", ";\n  }\n  margin-top: 1.6rem;\n  border-bottom: 1px solid ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  color: ", ";\n  font-weight: 500;\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: #dadbd9;\n  }\n  h3 {\n    text-decoration: underline;\n    color: ", ";\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 1.6rem;\n  border-bottom: 1px solid ", ";\n"]);
 
   _templateObject$o = function _templateObject() {
     return data;
@@ -7937,14 +7937,15 @@ function _templateObject$o() {
 
   return data;
 }
-var wrapper$4 = core.css(_templateObject$o(), colors.theme2.midLight, colors.theme1.mid, colors.theme3.light);
+var wrapper$4 = core.css(_templateObject$o(), colors.theme3.dark, colors.theme1.midLight, colors.theme1.mid, colors.theme3.light);
 var news = core.css(_templateObject2$l());
 var preambleStyle = core.css(_templateObject3$k());
 var bottomText = core.css(_templateObject4$h(), colors.theme3.mid);
 
 /** @jsx jsx */
 var ListItem = function ListItem(_ref) {
-  var headline = _ref.headline,
+  var children = _ref.children,
+      headline = _ref.headline,
       preamble = _ref.preamble,
       bottomText$1 = _ref.bottomText,
       type = _ref.type,
@@ -7952,20 +7953,19 @@ var ListItem = function ListItem(_ref) {
       href = _ref.href,
       style = _ref.style;
   return core.jsx("a", {
-    css: wrapper$4,
+    css: [wrapper$4, style],
     className: "noStyle",
     href: href
   }, type && core.jsx("p", {
     css: news
-  }, " ", type.toUpperCase(), " ", reviewedDate && core.jsx(React__default.Fragment, null, ": ", core.jsx(DateFormat, {
+  }, " ", type.toUpperCase(), reviewedDate && core.jsx(React__default.Fragment, null, ": ", core.jsx(DateFormat, {
     date: reviewedDate,
     showDate: true
   }))), core.jsx(SubHeading, {
     level: 3
-  }, headline), preamble && core.jsx(Preamble, {
-    text: preamble,
-    style: preambleStyle
-  }), bottomText$1 && core.jsx("p", {
+  }, headline), children, preamble && core.jsx("p", {
+    css: preambleStyle
+  }, preamble), bottomText$1 && core.jsx("p", {
     css: bottomText
   }, bottomText$1));
 };
