@@ -4,15 +4,12 @@ import { colors } from '../Colors/Colors'
 export const wrapper = css`
   display: block;
   text-decoration: none;
+  color: #000;
   &:hover {
     background-color: ${colors.theme2.midLight};
   }
   &:active {
     background-color: #dadbd9;
-  }
-  p {
-    text-decoration: none;
-    color: #000;
   }
   h3 {
     text-decoration: underline;
@@ -29,4 +26,8 @@ export const news = css`
 export const preambleStyle = css`
   margin-bottom: 2.4rem;
   font-size: 1.8rem;
+`
+export const bottomText = css`
+  color: ${colors.theme3.mid};
+  font-size: 1.4rem;
 `

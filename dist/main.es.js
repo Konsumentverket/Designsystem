@@ -7891,6 +7891,16 @@ var LinkTextCard = React.forwardRef(function (_ref, ref) {
   }, children))));
 });
 
+function _templateObject4$h() {
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 1.4rem;\n"]);
+
+  _templateObject4$h = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3$k() {
   var data = _taggedTemplateLiteral(["\n  margin-bottom: 2.4rem;\n  font-size: 1.8rem;\n"]);
 
@@ -7912,7 +7922,7 @@ function _templateObject2$l() {
 }
 
 function _templateObject$o() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n  text-decoration: none;\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: #dadbd9;\n  }\n  p {\n    text-decoration: none;\n    color: #000;\n  }\n  h3 {\n    text-decoration: underline;\n    color: ", ";\n  }\n  margin-top: 1.6rem;\n  border-bottom: 1px solid ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  text-decoration: none;\n  color: #000;\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: #dadbd9;\n  }\n  h3 {\n    text-decoration: underline;\n    color: ", ";\n  }\n  margin-top: 1.6rem;\n  border-bottom: 1px solid ", ";\n"]);
 
   _templateObject$o = function _templateObject() {
     return data;
@@ -7923,29 +7933,34 @@ function _templateObject$o() {
 var wrapper$4 = css$1(_templateObject$o(), colors.theme2.midLight, colors.theme1.mid, colors.theme3.light);
 var news = css$1(_templateObject2$l());
 var preambleStyle = css$1(_templateObject3$k());
+var bottomText = css$1(_templateObject4$h(), colors.theme3.mid);
 
 /** @jsx jsx */
 var ListItem = function ListItem(_ref) {
   var headline = _ref.headline,
       preamble = _ref.preamble,
-      source = _ref.source,
+      bottomText$1 = _ref.bottomText,
       type = _ref.type,
       reviewedDate = _ref.reviewedDate,
-      link = _ref.link,
+      href = _ref.href,
       style = _ref.style;
-  console.log(headline);
   return jsx("a", {
     css: wrapper$4,
     className: "noStyle",
-    href: link
+    href: href
   }, type && jsx("p", {
     css: news
-  }, " ", type.toUpperCase(), ": ", reviewedDate), jsx(SubHeading, {
+  }, " ", type.toUpperCase(), " ", reviewedDate && jsx(React.Fragment, null, ": ", jsx(DateFormat, {
+    date: reviewedDate,
+    showDate: true
+  }))), jsx(SubHeading, {
     level: 3
   }, headline), preamble && jsx(Preamble, {
     text: preamble,
     style: preambleStyle
-  }), source && jsx("p", null, source));
+  }), bottomText$1 && jsx("p", {
+    css: bottomText
+  }, bottomText$1));
 };
 
 export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, DateFormat, Dropdown, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, ListItem, Pagination, PrerequisitesBox, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, colors, spacing };
