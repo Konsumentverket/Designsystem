@@ -5,7 +5,7 @@ import { wrapper, mainLinkStyle, childrenWrapper, showAllLink, innerTextWrapperS
 import { Icon } from '../Icon/Icon';    
 import {SubHeading} from '../Headings/SubHeading'
 
-export const LinkCard = React.forwardRef(({text,href,children,id,secondaryArrowStyle = false,
+const LinkCard = React.forwardRef(({text,href,children,id,secondaryArrowStyle = false,
     headingLevel = 2, onClick, beforeToggleCount = 3, style, childrenWrapperStyle}, ref) => {
 
     const childrenArray = React.Children.toArray(children);
@@ -31,3 +31,6 @@ export const LinkCard = React.forwardRef(({text,href,children,id,secondaryArrowS
 
 
 })
+
+LinkCard.displayName = "LinkCard"
+export {LinkCard}

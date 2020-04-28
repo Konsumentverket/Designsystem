@@ -722,6 +722,7 @@ var Exclamationmark = (function (_ref) {
   })))))));
 });
 
+var checkPath = "M6.09703073,13.0077039 L0.262878687,7.22504644 C-0.0876262289,6.87763523 -0.0876262289,6.3143474 0.262878687,5.96690144 L1.53219243,4.70875643 C1.88269734,4.36131046 2.45103631,4.36131046 2.80154123,4.70875643 L6.73170513,8.60419634 L15.1496783,0.260558412 C15.5001832,-0.0868528038 16.0685222,-0.0868528038 16.4190271,0.260558412 L17.6883408,1.51870342 C18.0388457,1.86611463 18.0388457,2.42940246 17.6883408,2.77684843 L7.36637953,13.0077386 C7.01583955,13.3551498 6.44753564,13.3551498 6.09703073,13.0077039 L6.09703073,13.0077039 Z";
 var Check = (function (_ref) {
   var className = _ref.className,
       style = _ref.style,
@@ -736,7 +737,7 @@ var Check = (function (_ref) {
     height: "14px",
     viewBox: "0 0 18 14"
   }, otherAttr), jsx("title", null, title), jsx("path", {
-    d: "M6.09703073,13.0077039 L0.262878687,7.22504644 C-0.0876262289,6.87763523 -0.0876262289,6.3143474 0.262878687,5.96690144 L1.53219243,4.70875643 C1.88269734,4.36131046 2.45103631,4.36131046 2.80154123,4.70875643 L6.73170513,8.60419634 L15.1496783,0.260558412 C15.5001832,-0.0868528038 16.0685222,-0.0868528038 16.4190271,0.260558412 L17.6883408,1.51870342 C18.0388457,1.86611463 18.0388457,2.42940246 17.6883408,2.77684843 L7.36637953,13.0077386 C7.01583955,13.3551498 6.44753564,13.3551498 6.09703073,13.0077039 L6.09703073,13.0077039 Z"
+    d: checkPath
   }));
 });
 
@@ -7832,6 +7833,7 @@ var LinkCard = React.forwardRef(function (_ref, ref) {
     onClick: onClick
   }, "Visa alla (", childrenArray.length, ")")));
 });
+LinkCard.displayName = "LinkCard";
 
 /** @jsx jsx */
 var LinkTextCard = React.forwardRef(function (_ref, ref) {
@@ -7880,6 +7882,7 @@ var LinkTextCard = React.forwardRef(function (_ref, ref) {
     css: linkTextCardContentStyle
   }, children)));
 });
+LinkTextCard.displayName = "LinkTextCard";
 
 function _templateObject4$h() {
   var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 1.4rem;\n"]);
@@ -7953,5 +7956,5 @@ var ListItem = function ListItem(_ref) {
   }, bottomText$1));
 };
 
-export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, DateFormat, Dropdown, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, ListItem, Pagination, PrerequisitesBox, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, colors, spacing };
+export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, DateFormat, Dropdown, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, ListItem, Pagination, PrerequisitesBox, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, checkPath, colors, spacing };
 //# sourceMappingURL=main.es.js.map
