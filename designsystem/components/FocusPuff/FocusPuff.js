@@ -33,10 +33,10 @@ export const FocusPuff = ({ headline, text, url, isExternalLink, image, imageAlt
 			<div css={focusWrapper} className={'focusWrapper'}>
 				<div css={pictureWrapper}>{imageArea}</div>
 				<div css={textArea}>
-					<h2 css={focusHeadline}>
+					<h3 css={focusHeadline}>
 						{headline}
 						{isExternalLink && <Icon title="Extern länk" icon="External" style={externalIcon} />}
-					</h2>
+					</h3>
 					<p css={focusText}>{text}</p>
 				</div>
 			</div>
@@ -48,6 +48,6 @@ export const FocusPuff = ({ headline, text, url, isExternalLink, image, imageAlt
 			{puffMarkup(FocusPuff)}
 		</a>
 	) : (
-		puffMarkup(FocusPuff)
-	);
+			puffMarkup(FocusPuff)
+		);
 };

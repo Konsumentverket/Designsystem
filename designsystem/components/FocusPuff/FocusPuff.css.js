@@ -26,7 +26,7 @@ export const linkWrapper = css`
   &:active .focusWrapper {
       background-color: ${colors.theme2.dark};      
   }
-  &:hover h2, &:active h2 {
+  &:hover h3, &:active h3 {
     text-decoration:underline;
   }
   

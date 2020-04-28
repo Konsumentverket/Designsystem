@@ -3786,7 +3786,7 @@ function _templateObject3$c() {
 }
 
 function _templateObject2$c() {
-  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  padding-top:.8rem;\n  display:flex;\n\n  &:hover .focusWrapper {\n      background-color: ", ";      \n  }\n  &:active .focusWrapper {\n      background-color: ", ";      \n  }\n  &:hover h2, &:active h2 {\n    text-decoration:underline;\n  }\n  \n  ", " {\n    height:100%\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  padding-top:.8rem;\n  display:flex;\n\n  &:hover .focusWrapper {\n      background-color: ", ";      \n  }\n  &:active .focusWrapper {\n      background-color: ", ";      \n  }\n  &:hover h3, &:active h3 {\n    text-decoration:underline;\n  }\n  \n  ", " {\n    height:100%\n  }\n\n"]);
 
   _templateObject2$c = function _templateObject2() {
     return data;
@@ -3850,7 +3850,7 @@ var FocusPuff = function FocusPuff(_ref) {
       css: pictureWrapper
     }, imageArea), jsx("div", {
       css: textArea
-    }, jsx("h2", {
+    }, jsx("h3", {
       css: focusHeadline
     }, headline, isExternalLink && jsx(Icon, {
       title: "Extern l\xE4nk",
@@ -4002,7 +4002,7 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
       css: pictureWrapper$1
     }, imageArea), jsx("div", {
       css: textArea$1
-    }, jsx("h2", {
+    }, jsx("h3", {
       css: focusHeadline$1
     }, headline, isExternalLink && jsx(Icon, {
       title: "Extern l\xE4nk",
@@ -4441,7 +4441,7 @@ function _templateObject2$h() {
 }
 
 function _templateObject$k() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.7rem;\n    padding-left: 1rem;\n    padding-right: 3rem;\n    padding-bottom: 0.2rem;\n    padding-top: 2.4rem;\n    ", " {\n        padding-left: 4rem;\n        padding-right: 4rem;\n    }\n    ul {\n        padding-left: 0;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.7rem;\n    padding-left: 1rem;\n    padding-right: 3rem;\n    padding-bottom: 0.2rem;\n    padding-top: 2.4rem;\n    ", " {\n        padding-left: 3.2rem;\n        padding-right: 3.2rem;\n    }\n    ul {\n        padding-left: 0;\n        li {\n            margin-bottom: 1rem;\n        }\n    }\n"]);
 
   _templateObject$k = function _templateObject() {
     return data;
@@ -4544,9 +4544,12 @@ var Source = function Source(_ref) {
       reportErrorText = _ref.reportErrorText,
       markdownText = _ref.markdownText,
       reviewedDate = _ref.reviewedDate,
-      style = _ref.style;
+      reviewedDateText = _ref.reviewedDateText,
+      style = _ref.style,
+      english = _ref.english;
   var reviewed = reviewedDate ? new Date(reviewedDate) : null;
-  var months = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
+  var monthsSv = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
+  var monthsEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   var question = jsx(React.Fragment, null, jsx("p", null, didThisHelpText || "Hittade du svaret på din fråga?"), jsx("div", null, jsx(Button, {
     style: buttonStyle$1,
     secondaryButtonStyle: true,
@@ -4568,7 +4571,7 @@ var Source = function Source(_ref) {
     css: secondRow
   }, markdownText, reviewed && jsx("div", {
     css: rightAlign
-  }, jsx("p", null, "Granskad: ".concat(reviewed.getDate(), " ").concat(months[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))));
+  }, jsx("p", null, "".concat(reviewedDateText || "Granskad: ").concat(reviewed.getDate(), " ").concat(english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))));
 };
 
 function _templateObject3$i() {
