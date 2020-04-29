@@ -1,64 +1,76 @@
 import { css } from '@emotion/core'
 import { colors } from '../Colors/Colors';
+import { check } from '../../icons/SystemIcons/Check'
 
 export const wrapperStyle = css` 
-    position:relative;
-    display:inline-block;
-
+    position: relative;
+    display: inline-block;
 `;
 
 export const labelStyle = css` 
-    font-size:2.1rem;
-    line-height:3.2rem;
-    padding:.8rem .8rem .8rem 5.6rem;
-    border-radius:.8rem;
-    display:inline-block;
-    &:hover {
-        background-color:${colors.theme1.light};
-        text-decoration:underline;
-    }
+    font-size: 2.1rem;
+    line-height: 3.2rem;
+    border-radius: .8rem;
+    display: inline-block;
 `;
 
-export const fieldStyle = css`
+export const checkbox = css`
+  input {
     position: absolute;
-    top:.8rem;
-    left:.8rem;
-    appearance: none;
-    height:3.2rem;
-    width:3.2rem;
-    border:solid 1px ${colors.theme1.mid};
-    border-radius:.2rem;
-    background-color:${colors.common.white};
-    margin:0;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
 
-    &:checked {
-        background-color: ${colors.theme1.xDark};
-        border-color:${colors.theme1.xDark};
+  .checkbox-label {
+    font-size: 2.1rem;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .checkbox + .checkbox-label:before {
+    content: '';
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid ${colors.theme1.mid};
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    margin-right: 1.6rem;
+  }
+
+  .checkbox {
+    &:checked + label:before {
+      background: ${colors.theme1.dark};
+      border: 1px solid ${colors.theme1.mid};
     }
-    &::before{
-        content: '\\2713';
-        display: block;
-        text-align: center;
-        color: ${colors.common.white};
-        position: absolute;
-        height:3.2rem;
-        width:3.2rem;
-        font-size:2.2rem;
-        font-weight: 700;
-        line-height:3.2rem;
-        left: 0;
-        top: 0;
-   }
-   &:hover + label{
-    background-color:${colors.theme1.light};
-    text-decoration:underline;
-   }
-   &:checked + label {
-    background-color:${colors.theme1.light};
-    color:${colors.theme1.xDark};
-    text-decoration:underline;
-   }
-`;
+  }
+
+  .checkbox:focus + .checkbox-label {
+    outline: ${colors.states.focus} solid 2px;
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+
+  .checkbox:hover + .checkbox-label {
+    box-shadow:  0px 0px 0px 5px ${colors.theme1.midLight};
+    background-color: ${colors.theme1.midLight};
+    text-decoration: underline;
+  }
+
+  .checkbox:checked + .checkbox-label:before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='${encodeURIComponent('#fff')}' d='${check}'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: 6px 8px;
+    position: relative;
+  }
+`
 
 export const invertedLabelStyle = css`
     &:hover {
@@ -76,5 +88,3 @@ export const invertedfieldStyle = css`
     }
     
 `;
-
-

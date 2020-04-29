@@ -19,7 +19,7 @@ storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
   })    
 .add(name, () => {
   const [checked1, setChecked1] = useState(false)
-  const [checked2, setChecked2] = useState(false)
+  const [checked2, setChecked2] = useState(true)
 
   return <div css={{paddingLeft:'2rem', paddingTop:'2rem'}}>
     <FormCheckbox 
