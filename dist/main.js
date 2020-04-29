@@ -924,6 +924,91 @@ var Play = (function (_ref) {
   })));
 });
 
+var FileExcel = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "24px",
+    height: "32px",
+    viewBox: "0 0 24 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 Z M17.75625,15.15625 L14,21 L17.75625,26.84375 C18.075,27.34375 17.71875,28 17.125,28 L14.94375,28 C14.66875,28 14.4125,27.85 14.28125,27.60625 C13.05625,25.34375 12,23.3125 12,23.3125 C11.6,24.2375 11.375,24.5625 9.7125,27.6125 C9.58125,27.85625 9.33125,28.00625 9.05625,28.00625 L6.875,28.00625 C6.28125,28.00625 5.925,27.35 6.24375,26.85 L10.0125,21.00625 L6.24375,15.1625 C5.91875,14.6625 6.28125,14.0062057 6.875,14.0062057 L9.05,14.0062057 C9.325,14.0062057 9.58125,14.15625 9.7125,14.4 C11.34375,17.45 10.9625,16.5 12,18.68125 C12,18.68125 12.38125,17.95 14.2875,14.4 C14.41875,14.15625 14.675,14.0062057 14.95,14.0062057 L17.125,14.0062057 C17.71875,14 18.075,14.65625 17.75625,15.15625 Z M24,7.61875 L24,8 L16,8 L16,0 L16.38125,0 C16.78125,0 17.1625,0.15625 17.44375,0.4375 L23.5625,6.5625 C23.84375,6.84375 24,7.225 24,7.61875 Z"
+  }));
+});
+
+var FilePdf = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "24px",
+    height: "32px",
+    viewBox: "0 0 24 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M11.36875,16.00625 C11.05625,15.00625 11.0625,13.075 11.24375,13.075 C11.76875,13.075 11.71875,15.38125 11.36875,16.00625 Z M11.2625,18.95625 C10.78125,20.21875 10.18125,21.6625 9.4875,22.875 C10.63125,22.4375 11.925,21.8 13.41875,21.50625 C12.625,20.90625 11.8625,20.04375 11.2625,18.95625 Z M5.38125,26.75625 C5.38125,26.80625 6.20625,26.41875 7.5625,24.24375 C7.14375,24.6375 5.74375,25.775 5.38125,26.75625 Z M15.5,10 L24,10 L24,30.5 C24,31.33125 23.33125,32 22.5,32 L1.5,32 C0.66875,32 0,31.33125 0,30.5 L0,1.5 C0,0.66875 0.66875,0 1.5,0 L14,0 L14,8.5 C14,9.325 14.675,10 15.5,10 Z M15,20.7375 C13.75,19.975 12.91875,18.925 12.33125,17.375 C12.6125,16.21875 13.05625,14.4625 12.71875,13.3625 C12.425,11.525 10.06875,11.70625 9.73125,12.9375 C9.41875,14.08125 9.70625,15.69375 10.2375,17.75 C9.5125,19.475 8.44375,21.7875 7.6875,23.1125 C7.68125,23.1125 7.68125,23.11875 7.675,23.11875 C5.98125,23.9875 3.075,25.9 4.26875,27.36875 C4.61875,27.8 5.26875,27.99375 5.6125,27.99375 C6.73125,27.99375 7.84375,26.86875 9.43125,24.13125 C11.04375,23.6 12.8125,22.9375 14.36875,22.68125 C15.725,23.41875 17.3125,23.9 18.36875,23.9 C20.19375,23.9 20.31875,21.9 19.6,21.1875 C18.73125,20.3375 16.20625,20.58125 15,20.7375 L15,20.7375 Z M23.5625,6.5625 L17.4375,0.4375 C17.15625,0.15625 16.775,0 16.375,0 L16,0 L16,8 L24,8 L24,7.61875 C24,7.225 23.84375,6.84375 23.5625,6.5625 Z M18.93125,22.51875 C19.1875,22.35 18.775,21.775 16.25625,21.95625 C18.575,22.94375 18.93125,22.51875 18.93125,22.51875 Z"
+  }));
+});
+
+var FilePowerpoint = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "24px",
+    height: "32px",
+    viewBox: "0 0 24 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M12.10625,16.95 C12.65625,16.95 13.075,17.11875 13.375,17.45625 C13.975,18.1375 13.9875,19.5 13.3625,20.2125 C13.05625,20.5625 12.61875,20.74375 12.04375,20.74375 L10.3625,20.74375 L10.3625,16.95 L12.10625,16.95 L12.10625,16.95 Z M23.5625,6.5625 L17.4375,0.4375 C17.15625,0.15625 16.775,0 16.375,0 L16,0 L16,8 L24,8 L24,7.61875 C24,7.225 23.84375,6.84375 23.5625,6.5625 Z M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 Z M17.3125,18.825 C17.3125,24.46875 11.7625,23.675 10.36875,23.675 L10.36875,27.25 C10.36875,27.6625 10.03125,28 9.61875,28 L7.69375,28 C7.28125,28 6.94375,27.6625 6.94375,27.25 L6.94375,14.7625 C6.94375,14.35 7.28125,14.0125 7.69375,14.0125 L12.75625,14.0125 C15.5375,14.0125 17.3125,16.0625 17.3125,18.825 Z"
+  }));
+});
+
+var FileWord = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "24px",
+    height: "32px",
+    viewBox: "0 0 24 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 Z M17.56875,16 L19.0625,16 C19.54375,16 19.9,16.44375 19.79375,16.91875 L17.41875,27.41875 C17.34375,27.7625 17.0375,28 16.6875,28 L14.3125,28 C13.96875,28 13.66875,27.7625 13.5875,27.43125 C11.975,20.9625 12.2875,22.35625 11.9875,20.525 L11.95625,20.525 C11.8875,21.41875 11.80625,21.6125 10.35625,27.43125 C10.275,27.7625 9.975,28 9.63125,28 L7.3125,28 C6.9625,28 6.65625,27.75625 6.58125,27.4125 L4.21875,16.9125 C4.1125,16.44375 4.46875,16 4.95,16 L6.48125,16 C6.8375,16 7.15,16.25 7.21875,16.60625 C8.19375,21.48125 8.475,23.45 8.53125,24.24375 C8.63125,23.60625 8.9875,22.2 10.36875,16.575 C10.45,16.2375 10.75,16.00625 11.1,16.00625 L12.91875,16.00625 C13.26875,16.00625 13.56875,16.24375 13.65,16.58125 C15.15,22.85625 15.45,24.33125 15.5,24.66875 C15.4875,23.96875 15.3375,23.55625 16.85,16.59375 C16.9125,16.24375 17.21875,16 17.56875,16 L17.56875,16 Z M24,7.61875 L24,8 L16,8 L16,0 L16.38125,0 C16.78125,0 17.1625,0.15625 17.44375,0.4375 L23.5625,6.5625 C23.84375,6.84375 24,7.225 24,7.61875 Z"
+  }));
+});
+
+var File = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "24px",
+    height: "32px",
+    viewBox: "0 0 24 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: "M24,7.61875 L24,8 L16,8 L16,0 L16.38125,0 C16.78125,0 17.1625,0.15625 17.44375,0.4375 L23.5625,6.5625 C23.84375,6.84375 24,7.225 24,7.61875 L24,7.61875 Z M18,14.75 L18,15.25 C18,15.6625 17.6625,16 17.25,16 L6.75,16 C6.3375,16 6,15.6625 6,15.25 L6,14.75 C6,14.3375 6.3375,14 6.75,14 L17.25,14 C17.6625,14 18,14.3375 18,14.75 L18,14.75 Z M18,19.25 C18,19.6625 17.6625,20 17.25,20 L6.75,20 C6.3375,20 6,19.6625 6,19.25 L6,18.75 C6,18.3375 6.3375,18 6.75,18 L17.25,18 C17.6625,18 18,18.3375 18,18.75 L18,19.25 Z M18,23.25 C18,23.6625 17.6625,24 17.25,24 L6.75,24 C6.3375,24 6,23.6625 6,23.25 L6,22.75 C6,22.3375 6.3375,22 6.75,22 L17.25,22 C17.6625,22 18,22.3375 18,22.75 L18,23.25 Z M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 L14,8.5 Z"
+  }));
+});
+
 var iconDefinitions = {
   Adapt: Adapt,
   Close: Close,
@@ -945,7 +1030,12 @@ var iconDefinitions = {
   Picturelist: Picturelist,
   Clear: Clear,
   Camera: Camera,
-  Play: Play
+  Play: Play,
+  FileExcel: FileExcel,
+  FilePdf: FilePdf,
+  FilePowerpoint: FilePowerpoint,
+  FileWord: FileWord,
+  File: File
 };
 
 var Icon = function Icon(_ref) {
@@ -4049,7 +4139,7 @@ function _templateObject4$c() {
 }
 
 function _templateObject3$e() {
-  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    top:.8rem;\n    left:.8rem;\n    appearance: none;\n    height:3.2rem;\n    width:3.2rem;\n    border:solid 1px ", ";\n    border-radius:.2rem;\n    background-color:", ";\n    margin:0;\n\n    &:checked {\n        background-color: ", ";\n        border-color:", ";\n    }\n    &::before{\n        content: '\\2713';\n        display: block;\n        text-align: center;\n        color: ", ";\n        position: absolute;\n        height:3.2rem;\n        width:3.2rem;\n        font-size:2.2rem;\n        font-weight: 700;\n        line-height:3.2rem;\n        left: 0;\n        top: 0;\n   }\n   &:hover + label{\n    background-color:", ";\n    text-decoration:underline;\n   }\n   &:checked + label {\n    background-color:", ";\n    color:", ";\n    text-decoration:underline;\n   }\n"], ["\n    position: absolute;\n    top:.8rem;\n    left:.8rem;\n    appearance: none;\n    height:3.2rem;\n    width:3.2rem;\n    border:solid 1px ", ";\n    border-radius:.2rem;\n    background-color:", ";\n    margin:0;\n\n    &:checked {\n        background-color: ", ";\n        border-color:", ";\n    }\n    &::before{\n        content: '\\\\2713';\n        display: block;\n        text-align: center;\n        color: ", ";\n        position: absolute;\n        height:3.2rem;\n        width:3.2rem;\n        font-size:2.2rem;\n        font-weight: 700;\n        line-height:3.2rem;\n        left: 0;\n        top: 0;\n   }\n   &:hover + label{\n    background-color:", ";\n    text-decoration:underline;\n   }\n   &:checked + label {\n    background-color:", ";\n    color:", ";\n    text-decoration:underline;\n   }\n"]);
+  var data = _taggedTemplateLiteral(["\n  input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n  }\n\n  .checkbox-label {\n    font-size: 2.1rem;\n    display: inline-block;\n    position: relative;\n    vertical-align: middle;\n    cursor: pointer;\n    user-select: none;\n  }\n\n  .checkbox + .checkbox-label:before {\n    content: '';\n    background: #fff;\n    border-radius: 2px;\n    border: 1px solid ", ";\n    display: inline-block;\n    vertical-align: middle;\n    width: 32px;\n    height: 32px;\n    margin-right: 1.6rem;\n  }\n\n  .checkbox {\n    &:checked + label:before {\n      background: ", ";\n      border: 1px solid ", ";\n    }\n  }\n\n  .checkbox:focus + .checkbox-label {\n    outline: ", " solid 2px;\n    outline-offset: 2px;\n    box-shadow: none;\n  }\n\n  .checkbox:hover + .checkbox-label {\n    box-shadow:  0px 0px 0px 5px ", ";\n    background-color: ", ";\n    text-decoration: underline;\n  }\n\n  .checkbox:checked + .checkbox-label:before {\n    background-image: url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='", "' d='", "'/%3E%3C/svg%3E\");\n    background-repeat: no-repeat;\n    background-size: 100px 100px;\n    background-position: 6px 8px;\n    position: relative;\n  }\n"]);
 
   _templateObject3$e = function _templateObject3() {
     return data;
@@ -4059,7 +4149,7 @@ function _templateObject3$e() {
 }
 
 function _templateObject2$e() {
-  var data = _taggedTemplateLiteral([" \n    font-size:2.1rem;\n    line-height:3.2rem;\n    padding:.8rem .8rem .8rem 5.6rem;\n    border-radius:.8rem;\n    display:inline-block;\n    &:hover {\n        background-color:", ";\n        text-decoration:underline;\n    }\n"]);
+  var data = _taggedTemplateLiteral([" \n    font-size: 2.1rem;\n    line-height: 3.2rem;\n    border-radius: .8rem;\n    display: inline-block;\n"]);
 
   _templateObject2$e = function _templateObject2() {
     return data;
@@ -4069,7 +4159,7 @@ function _templateObject2$e() {
 }
 
 function _templateObject$g() {
-  var data = _taggedTemplateLiteral([" \n    position:relative;\n    display:inline-block;\n\n"]);
+  var data = _taggedTemplateLiteral([" \n    position: relative;\n    display: inline-block;\n"]);
 
   _templateObject$g = function _templateObject() {
     return data;
@@ -4078,8 +4168,8 @@ function _templateObject$g() {
   return data;
 }
 var wrapperStyle = core.css(_templateObject$g());
-var labelStyle = core.css(_templateObject2$e(), colors.theme1.light);
-var fieldStyle = core.css(_templateObject3$e(), colors.theme1.mid, colors.common.white, colors.theme1.xDark, colors.theme1.xDark, colors.common.white, colors.theme1.light, colors.theme1.light, colors.theme1.xDark);
+var labelStyle = core.css(_templateObject2$e());
+var checkbox = core.css(_templateObject3$e(), colors.theme1.mid, colors.theme1.dark, colors.theme1.mid, colors.states.focus, colors.theme1.midLight, colors.theme1.midLight, encodeURIComponent('#fff'), checkPath);
 var invertedLabelStyle = core.css(_templateObject4$c(), colors.common.white);
 var invertedfieldStyle = core.css(_templateObject5$b(), colors.common.white, colors.theme1.xDark, colors.common.white);
 
@@ -4095,29 +4185,28 @@ var FormCheckbox = function FormCheckbox(_ref) {
       checked = _ref$checked === void 0 ? false : _ref$checked,
       onChange = _ref.onChange,
       style = _ref.style;
-  var fieldStyles = [fieldStyle];
   var labelStyles = [labelStyle];
 
   if (invertedBackgroundColor) {
     labelStyles.push(invertedLabelStyle);
-    fieldStyles.push(invertedfieldStyle);
   }
 
   style && labelStyles.push(style);
   return core.jsx("div", {
-    css: wrapperStyle,
+    css: [wrapperStyle, checkbox],
     "data-checked": checked
   }, core.jsx("input", {
     id: id,
     name: name,
     type: "checkbox",
-    css: [fieldStyles],
+    className: "checkbox",
     value: value,
     onChange: onChange,
     checked: checked
   }), core.jsx("label", {
     htmlFor: id,
-    css: [labelStyles]
+    css: [labelStyles],
+    className: "checkbox-label"
   }, labelText));
 };
 
@@ -4172,7 +4261,7 @@ function _templateObject$h() {
 }
 var wrapperStyle$1 = core.css(_templateObject$h());
 var labelStyle$1 = core.css(_templateObject2$f(), colors.theme1.light);
-var fieldStyle$1 = core.css(_templateObject3$f(), colors.theme1.mid, colors.common.white, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.light, colors.theme1.light, colors.theme1.xDark);
+var fieldStyle = core.css(_templateObject3$f(), colors.theme1.mid, colors.common.white, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.light, colors.theme1.light, colors.theme1.xDark);
 var invertedLabelStyle$1 = core.css(_templateObject4$d(), colors.common.white);
 var invertedfieldStyle$1 = core.css(_templateObject5$c(), colors.common.white, colors.theme1.xDark, colors.common.white);
 
@@ -4188,7 +4277,7 @@ var FormRadiobutton = function FormRadiobutton(_ref) {
       checked = _ref$checked === void 0 ? false : _ref$checked,
       onChange = _ref.onChange,
       style = _ref.style;
-  var fieldStyles = [fieldStyle$1];
+  var fieldStyles = [fieldStyle];
   var labelStyles = [labelStyle$1];
 
   if (invertedBackgroundColor) {
