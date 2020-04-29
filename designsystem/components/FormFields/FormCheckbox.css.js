@@ -10,7 +10,7 @@ export const wrapperStyle = css`
 export const labelStyle = css` 
     font-size: 2.1rem;
     line-height: 3.2rem;
-    border-radius: .8rem;
+    border-radius: .8px;
     display: inline-block;
 `;
 
@@ -42,6 +42,13 @@ export const checkbox = css`
     width: 32px;
     height: 32px;
     margin-right: 1.6rem;
+  }
+
+  .checkbox:checked + .checkbox-label {
+    text-decoration: underline;
+    color: ${colors.theme1.dark};
+    box-shadow:  0px 0px 0px 5px ${colors.theme1.midLight};
+    background-color: ${colors.theme1.midLight};
   }
 
   .checkbox {

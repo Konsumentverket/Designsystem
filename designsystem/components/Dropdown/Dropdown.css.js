@@ -8,7 +8,7 @@ export const selectStyle = css`
     width: 100%;
     padding: 1.2rem 1.6rem;
     box-sizing:border-box;
-    border: 2px solid #979797;
+    border: 2px solid ${colors.theme3.midLight};
     border-radius: 0.8rem;
     -khtml-border-radius: 0.8rem; /* this is for the fruit phones */
     font-size: 1.8rem;

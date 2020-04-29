@@ -14,7 +14,7 @@ const disabled = css`
 export const fieldStyle = css`
     border-radius:.8rem;
     border:none;
-    box-shadow:inset 0px 0px 0px 1px ${colors.theme3.mid};
+    box-shadow:inset 0px 0px 0px 2px ${colors.theme3.midLight};
     font-size:1.8rem;
     line-height:2.4rem;
     display:flex;

@@ -26,7 +26,7 @@ export const searchWrapperStyle = css`
 export const searchFieldInputStyle = css`
     -webkit-appearance: none;
     background-color: ${colors.common.white};
-    box-shadow:inset 0px 0px 0px 1px ${colors.theme3.mid};
+    box-shadow:inset 0px 0px 0px 2px ${colors.theme3.midLight};
     border-radius: .8rem 0 0 .8rem;
     border:none;
     font-size:1.6rem;
@@ -58,7 +58,7 @@ export const searchFieldInputStyle = css`
     }
     &::placeholder {
         font-style:italic;
-        color: ${colors.theme1.dark};
+        color: ${colors.theme3.midDark};
     }
     &:disabled{
         ${disabled}
