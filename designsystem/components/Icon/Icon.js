@@ -22,6 +22,11 @@ import Picturelist from '../../icons/SystemIcons/Picturelist';
 import Clear from '../../icons/SystemIcons/Clear';
 import Camera from '../../icons/SystemIcons/Camera';
 import Play from '../../icons/SystemIcons/Play';
+import FileExcel from '../../icons/SystemIcons/FileExcel';
+import FilePdf from '../../icons/SystemIcons/FilePdf';
+import FilePowerpoint from '../../icons/SystemIcons/FilePowerpoint';
+import FileWord from '../../icons/SystemIcons/FileWord';
+import File from '../../icons/SystemIcons/File';
 
 const iconDefinitions = {
 	Adapt,
@@ -44,7 +49,12 @@ const iconDefinitions = {
 	Picturelist,
 	Clear,
 	Camera,
-	Play
+	Play,
+	FileExcel,
+	FilePdf,
+	FilePowerpoint,
+	FileWord,
+	File
 };
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
