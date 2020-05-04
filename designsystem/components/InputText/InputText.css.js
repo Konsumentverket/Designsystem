@@ -17,6 +17,9 @@ export const InputStyle = css`
         border-color: ${colors.theme1.mid}
     }
 
+    &::placeholder {
+        font-style: italic;
+    }
     &::-webkit-search-cancel-button{
         appearance: none;
     }
