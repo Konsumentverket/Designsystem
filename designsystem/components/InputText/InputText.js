@@ -36,7 +36,7 @@ export const InputText = React.forwardRef(({style,wrapperStyle, placeholder, id,
             />
 
             {type == "search" && text != null && text != "" ?     
-                <button tabIndex="-1" css={label ? ClearInputLabel : ClearInput} className="noState" onClick={(e) =>{
+                <button tabIndex="-1" css={label && !hideLabel ? ClearInputLabel : ClearInput} className="noState" onClick={(e) =>{
                     e.preventDefault();
                     if(inputRef == null || inputRef.current == null) return;
                     inputRef.current.value = "";
