@@ -8,7 +8,7 @@ import NotesLoader from '../NotesLoader';
 import {colors} from '../Colors/Colors'
 
 
-const baseSize = 16;
+const baseSize = 10;
 let name = 'Grid och struktur';
 storiesOf('Digitala produkter|Grunder och foundations', module)
     .add(name, () =>
