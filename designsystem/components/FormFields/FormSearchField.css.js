@@ -33,7 +33,7 @@ export const searchFieldInputStyle = css`
     line-height:2.4rem;
     display:flex;
     flex-grow:1;
-    padding: .8rem .8rem .8rem .8rem;
+    padding: .8rem 6.4rem .8rem .8rem;
     color: ${colors.theme1.xDark};
     font-style: normal;
     font-weight: 500;
