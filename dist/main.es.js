@@ -2,6 +2,8 @@ import { css as css$1, jsx, Global } from '@emotion/core';
 import React, { useRef, useState, useEffect } from 'react';
 
 function _typeof(obj) {
+  "@babel/helpers - typeof";
+
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -48,20 +50,35 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-function _objectSpread(target) {
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
 
-    if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
     }
-
-    ownKeys.forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    });
   }
 
   return target;
@@ -116,19 +133,15 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-    return arr2;
-  }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
 
 function _arrayWithHoles(arr) {
@@ -136,10 +149,11 @@ function _arrayWithHoles(arr) {
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -165,12 +179,29 @@ function _iterableToArrayLimit(arr, i) {
   return _arr;
 }
 
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
+}
+
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 var defaultTheme = {
@@ -236,26 +267,12 @@ var eccTheme = {
 var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme;
 
 var spacing = {
-  'spacing-s': '.4rem',
-  'spacing-m': '.8rem',
-  'spacing-l': '1.6rem',
-  'spacing-xl': '2.4rem',
-  'spacing-2xl': '3.2rem'
-  /*
-  const old_spacing = {
-      'spacing-xs': '0.25rem',
-      'spacing-s': '0.5rem',
-      'spacing-m/s': '0.75rem',
-      'spacing-m': '1rem',
-      'spacing-l': '1.5rem',
-      'spacing-xl': '2rem',
-      'spacing-2xl': '2.5rem',
-      'spacing-3xl': '3rem',
-      'spacing-4xl': '3.5rem',
-      'spacing-5xl': '4rem',
-    };
-  */
-
+  'xs': '.8rem',
+  's': '1.6rem',
+  'm': '2.4rem',
+  'l': '3.2rem',
+  'xl': '4.8rem',
+  'xxl': '8.8rem'
 };
 
 function _templateObject8() {
@@ -1092,7 +1109,7 @@ var Button = function Button(_ref) {
   });
   style && styles.push(style);
 
-  var props = _objectSpread({
+  var props = _objectSpread2({
     "id": id,
     "css": styles,
     "className": cssClass.join(" "),
@@ -1115,7 +1132,7 @@ var Button = function Button(_ref) {
 };
 
 function _templateObject6$2() {
-  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 10rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 3.2rem;\n        height: 3.2rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    ", " {\n        top: 1.3rem;\n        right: 12rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 10rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    ", " {\n        top: 1.4rem;\n        right: 12rem;\n    }\n\n"]);
 
   _templateObject6$2 = function _templateObject6() {
     return data;
@@ -1145,7 +1162,7 @@ function _templateObject4$2() {
 }
 
 function _templateObject3$2() {
-  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem .8rem .8rem .8rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n    box-sizing: border-box;\n    width: 100%; \n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 1px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 2px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem .8rem .8rem .8rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n    box-sizing: border-box;\n    width: 100%; \n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject3$2 = function _templateObject3() {
     return data;
@@ -1175,7 +1192,7 @@ function _templateObject$1() {
 }
 var disabled$1 = css$1(_templateObject$1(), colors.theme3.xLight, colors.theme3.midLight, colors.theme3.midLight);
 var searchWrapperStyle = css$1(_templateObject2$2(), colors.common.white);
-var searchFieldInputStyle = css$1(_templateObject3$2(), colors.common.white, colors.theme3.mid, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme1.dark, disabled$1);
+var searchFieldInputStyle = css$1(_templateObject3$2(), colors.common.white, colors.theme3.midLight, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme3.midDark, disabled$1);
 var searchFieldButtonStyle = css$1(_templateObject4$2());
 var invertedBackgroundStyle$1 = css$1(_templateObject5$2());
 var clearInputStyle = css$1(_templateObject6$2(), colors.theme1.mid, medium);
@@ -1258,37 +1275,24 @@ var FormSearchField = React.forwardRef(function (_ref, _ref2) {
 });
 
 /* eslint-disable */
-// Inspired by https://github.com/garycourt/murmurhash-js
-// Ported from https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash2.cpp#L37-L86
-function murmur2(str) {
-  // 'm' and 'r' are mixing constants generated offline.
-  // They're not really 'magic', they just happen to work well.
-  // const m = 0x5bd1e995;
-  // const r = 24;
-  // Initialize the hash
-  var h = 0; // Mix 4 bytes at a time into the hash
-
-  var k,
+// murmurhash2 via https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
+function murmurhash2_32_gc(str) {
+  var l = str.length,
+      h = l ^ l,
       i = 0,
-      len = str.length;
+      k;
 
-  for (; len >= 4; ++i, len -= 4) {
+  while (l >= 4) {
     k = str.charCodeAt(i) & 0xff | (str.charCodeAt(++i) & 0xff) << 8 | (str.charCodeAt(++i) & 0xff) << 16 | (str.charCodeAt(++i) & 0xff) << 24;
-    k =
-    /* Math.imul(k, m): */
-    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16);
-    k ^=
-    /* k >>> r: */
-    k >>> 24;
-    h =
-    /* Math.imul(k, m): */
-    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16) ^
-    /* Math.imul(h, m): */
-    (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
-  } // Handle the last few bytes of the input array
+    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
+    k ^= k >>> 24;
+    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
+    h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16) ^ k;
+    l -= 4;
+    ++i;
+  }
 
-
-  switch (len) {
+  switch (l) {
     case 3:
       h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
 
@@ -1297,18 +1301,13 @@ function murmur2(str) {
 
     case 1:
       h ^= str.charCodeAt(i) & 0xff;
-      h =
-      /* Math.imul(h, m): */
-      (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
-  } // Do a few final mixes of the hash to ensure the last few
-  // bytes are well-incorporated.
-
+      h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
+  }
 
   h ^= h >>> 13;
-  h =
-  /* Math.imul(h, m): */
-  (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
-  return ((h ^ h >>> 15) >>> 0).toString(36);
+  h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
+  h ^= h >>> 15;
+  return (h >>> 0).toString(36);
 }
 
 var unitlessKeys = {
@@ -1664,7 +1663,7 @@ var serializeStyles = function serializeStyles(args, registered, mergedProps) {
     match[1];
   }
 
-  var name = murmur2(styles) + identifierName;
+  var name = murmurhash2_32_gc(styles) + identifierName;
 
   if (process.env.NODE_ENV !== 'production') {
     // $FlowFixMe SerializedStyles type doesn't have toString property (and we don't want to add it)
@@ -3359,7 +3358,7 @@ function _templateObject2$7() {
 }
 
 function _templateObject$9() {
-  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    position: relative;\n    border-radius: 0.8rem;\n    border: 2px solid transparent;\n    display:flex;\n    align-items: center;\n    background-color: ", ";\n    &.inputHasValue{\n        border: 2px solid ", ";\n    }\n\n    &:hover{\n        border: 2px solid ", ";\n        .radiolabel {\n            text-decoration: underline;\n        }\n    }\n    \n    &:focus-within{\n        outline-offset: 2px;\n        outline: 3px solid #F59C00;\n    }\n    \n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    position: relative;\n    border-radius: 0.8rem;\n    border: 2px solid transparent;\n    display:flex;\n    align-items: center;\n    background-color: ", ";\n    &.inputHasValue{\n        border: 2px solid ", ";\n        text-decoration: underline;\n    }\n\n    &:hover{\n        border: 2px solid ", ";\n        .radiolabel {\n            text-decoration: underline;\n        }\n    }\n    \n    &:focus-within{\n        outline-offset: 2px;\n        outline: 3px solid #F59C00;\n    }\n    \n\n"]);
 
   _templateObject$9 = function _templateObject() {
     return data;
@@ -3652,7 +3651,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
     });
     return function () {};
   }, []);
-  return React.createElement(Global, {
+  return /*#__PURE__*/React.createElement(Global, {
     styles: globalStyles(fontSize, fontFamily)
   });
 };
@@ -3660,7 +3659,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
 var globalStyles = function globalStyles() {
   var fontSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "62.5%";
   var fontFamily = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
-  return css$1(_templateObject$c(), fontSize, fontFamily, spacing["spacing-m"], spacing["spacing-xl"], spacing["spacing-m"], colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
+  return css$1(_templateObject$c(), fontSize, fontFamily, spacing.m, spacing.xl, spacing.m, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
 };
 
 var LinkColors$1 = css$1(_templateObject2$a(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
@@ -3684,8 +3683,18 @@ var Heading = function Heading(_ref) {
   }, otherAttr), children);
 };
 
-function _templateObject5$8() {
+function _templateObject6$8() {
   var data = _taggedTemplateLiteral(["\n  color: #4D4D4D;\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin-bottom: .8rem;\n  display: block;\n"]);
+
+  _templateObject6$8 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$8() {
+  var data = _taggedTemplateLiteral([" \n    appearance: none;\n    position: absolute;\n    right: 1.6rem;\n    border: 0px;\n    background-color: transparent;\n    top: 5.3rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    \n"]);
 
   _templateObject5$8 = function _templateObject5() {
     return data;
@@ -3695,7 +3704,7 @@ function _templateObject5$8() {
 }
 
 function _templateObject4$9() {
-  var data = _taggedTemplateLiteral([" \n    appearance: none;\n    position: absolute;\n    right: 1.6rem;\n    border: 0px;\n    background-color: transparent;\n    top: 1.3rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 3.2rem;\n        height: 3.2rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    \n"]);
+  var data = _taggedTemplateLiteral([" \n    appearance: none;\n    position: absolute;\n    right: 1.6rem;\n    border: 0px;\n    background-color: transparent;\n    top: 1.3rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    \n"]);
 
   _templateObject4$9 = function _templateObject4() {
     return data;
@@ -3725,7 +3734,7 @@ function _templateObject2$b() {
 }
 
 function _templateObject$d() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing:border-box;\n    border: 2px solid #979797;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing:border-box;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder {\n        font-style: italic;\n    }\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n"]);
 
   _templateObject$d = function _templateObject() {
     return data;
@@ -3733,11 +3742,12 @@ function _templateObject$d() {
 
   return data;
 }
-var InputStyle = css(_templateObject$d(), colors.theme1.mid);
+var InputStyle = css(_templateObject$d(), colors.theme3.midLight, colors.theme1.mid);
 var invalidStyle$1 = css(_templateObject2$b());
 var InputWrapperStyle = css(_templateObject3$b());
 var ClearInput = css(_templateObject4$9(), colors.theme1.mid);
-var Label$1 = css(_templateObject5$8());
+var ClearInputLabel = css(_templateObject5$8(), colors.theme1.mid);
+var Label$1 = css(_templateObject6$8());
 
 var InputText = React.forwardRef(function (_ref, _ref2) {
   var style = _ref.style,
@@ -3787,7 +3797,7 @@ var InputText = React.forwardRef(function (_ref, _ref2) {
     type: type
   }, other)), type == "search" && text != null && text != "" ? jsx("button", {
     tabIndex: "-1",
-    css: ClearInput,
+    css: label && !hideLabel ? ClearInputLabel : ClearInput,
     className: "noState",
     onClick: function onClick(e) {
       e.preventDefault();
@@ -3835,10 +3845,10 @@ function _templateObject7$6() {
   return data;
 }
 
-function _templateObject6$8() {
+function _templateObject6$9() {
   var data = _taggedTemplateLiteral(["\n  margin-top:-.8rem;\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:auto;\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n"]);
 
-  _templateObject6$8 = function _templateObject6() {
+  _templateObject6$9 = function _templateObject6() {
     return data;
   };
 
@@ -3899,7 +3909,7 @@ var linkWrapper = css$1(_templateObject2$c(), colors.theme2.midDark, colors.them
 var focusHeadline = css$1(_templateObject3$c());
 var focusText = css$1(_templateObject4$a());
 var textArea = css$1(_templateObject5$9(), medium);
-var pictureWrapper = css$1(_templateObject6$8());
+var pictureWrapper = css$1(_templateObject6$9());
 var iconBackground = css$1(_templateObject7$6(), colors.theme2.light);
 var externalIcon = css$1(_templateObject8$5());
 var puffIcon = css$1(_templateObject9$1());
@@ -3989,10 +3999,10 @@ function _templateObject7$7() {
   return data;
 }
 
-function _templateObject6$9() {
+function _templateObject6$a() {
   var data = _taggedTemplateLiteral(["\n  margin-top:-.8rem;\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:auto;\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n  ", "{\n    max-width:49.11%;\n    margin-top:0;\n    margin-left:-.8rem;\n    img {\n      border-top-right-radius: 0;\n      border-bottom-left-radius:.8rem;\n    }\n  }\n\n  ", "{\n    max-width:30.4rem;\n  }\n"]);
 
-  _templateObject6$9 = function _templateObject6() {
+  _templateObject6$a = function _templateObject6() {
     return data;
   };
 
@@ -4053,7 +4063,7 @@ var linkWrapper$1 = css$1(_templateObject2$d(), colors.theme1.mid, colors.theme2
 var focusHeadline$1 = css$1(_templateObject3$d());
 var focusText$1 = css$1(_templateObject4$b(), colors.theme3.dark);
 var textArea$1 = css$1(_templateObject5$a(), medium, large);
-var pictureWrapper$1 = css$1(_templateObject6$9(), medium, large);
+var pictureWrapper$1 = css$1(_templateObject6$a(), medium, large);
 var iconBackground$1 = css$1(_templateObject7$7(), colors.theme2.light, medium);
 var externalIcon$1 = css$1(_templateObject8$6(), colors.theme1.mid);
 var puffIcon$1 = css$1(_templateObject9$2(), colors.theme2.mid);
@@ -4132,7 +4142,7 @@ function _templateObject4$c() {
 }
 
 function _templateObject3$e() {
-  var data = _taggedTemplateLiteral(["\n  input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n  }\n\n  .checkbox-label {\n    font-size: 2.1rem;\n    display: inline-block;\n    position: relative;\n    vertical-align: middle;\n    cursor: pointer;\n    user-select: none;\n  }\n\n  .checkbox + .checkbox-label:before {\n    content: '';\n    background: #fff;\n    border-radius: 2px;\n    border: 1px solid ", ";\n    display: inline-block;\n    vertical-align: middle;\n    width: 32px;\n    height: 32px;\n    margin-right: 1.6rem;\n  }\n\n  .checkbox {\n    &:checked + label:before {\n      background: ", ";\n      border: 1px solid ", ";\n    }\n  }\n\n  .checkbox:focus + .checkbox-label {\n    outline: ", " solid 2px;\n    outline-offset: 2px;\n    box-shadow: none;\n  }\n\n  .checkbox:hover + .checkbox-label {\n    box-shadow:  0px 0px 0px 5px ", ";\n    background-color: ", ";\n    text-decoration: underline;\n  }\n\n  .checkbox:checked + .checkbox-label:before {\n    background-image: url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='", "' d='", "'/%3E%3C/svg%3E\");\n    background-repeat: no-repeat;\n    background-size: 100px 100px;\n    background-position: 6px 8px;\n    position: relative;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  input {\n    position: absolute;\n    opacity: 0;\n    cursor: pointer;\n    height: 0;\n    width: 0;\n  }\n\n  .checkbox-label {\n    font-size: 2.1rem;\n    display: inline-block;\n    position: relative;\n    vertical-align: middle;\n    cursor: pointer;\n    user-select: none;\n  }\n\n  .checkbox + .checkbox-label:before {\n    content: '';\n    background: #fff;\n    border-radius: 2px;\n    border: 1px solid ", ";\n    display: inline-block;\n    vertical-align: middle;\n    width: 32px;\n    height: 32px;\n    margin-right: 1.6rem;\n  }\n\n  .checkbox:checked + .checkbox-label {\n    text-decoration: underline;\n    color: ", ";\n    box-shadow:  0px 0px 0px 5px ", ";\n    background-color: ", ";\n  }\n\n  .checkbox {\n    &:checked + label:before {\n      background: ", ";\n      border: 1px solid ", ";\n    }\n  }\n\n  .checkbox:focus + .checkbox-label {\n    outline: ", " solid 2px;\n    outline-offset: 2px;\n    box-shadow: none;\n  }\n\n  .checkbox:hover + .checkbox-label {\n    box-shadow:  0px 0px 0px 5px ", ";\n    background-color: ", ";\n    text-decoration: underline;\n  }\n\n  .checkbox:checked + .checkbox-label:before {\n    animation: fadein .2s ease-out;\n    background-image: url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='", "' d='", "'/%3E%3C/svg%3E\");\n    background-repeat: no-repeat;\n    background-size: 100px 100px;\n    background-position: 6px 8px;\n    position: relative;\n  }\n  @keyframes fadein {\n    0% {\n      opacity: 0;\n    }\n    100% {\n      opacity: 1;\n    }\n  }\n"]);
 
   _templateObject3$e = function _templateObject3() {
     return data;
@@ -4142,7 +4152,7 @@ function _templateObject3$e() {
 }
 
 function _templateObject2$e() {
-  var data = _taggedTemplateLiteral([" \n    font-size: 2.1rem;\n    line-height: 3.2rem;\n    border-radius: .8rem;\n    display: inline-block;\n"]);
+  var data = _taggedTemplateLiteral([" \n    font-size: 2.1rem;\n    line-height: 3.2rem;\n    border-radius: .8px;\n    display: inline-block;\n"]);
 
   _templateObject2$e = function _templateObject2() {
     return data;
@@ -4162,7 +4172,7 @@ function _templateObject$g() {
 }
 var wrapperStyle = css$1(_templateObject$g());
 var labelStyle = css$1(_templateObject2$e());
-var checkbox = css$1(_templateObject3$e(), colors.theme1.mid, colors.theme1.dark, colors.theme1.mid, colors.states.focus, colors.theme1.midLight, colors.theme1.midLight, encodeURIComponent('#fff'), checkPath);
+var checkbox = css$1(_templateObject3$e(), colors.theme1.mid, colors.theme1.dark, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.dark, colors.theme1.mid, colors.states.focus, colors.theme1.midLight, colors.theme1.midLight, encodeURIComponent('#fff'), checkPath);
 var invertedLabelStyle = css$1(_templateObject4$c(), colors.common.white);
 var invertedfieldStyle = css$1(_templateObject5$b(), colors.common.white, colors.theme1.xDark, colors.common.white);
 
@@ -4295,6 +4305,12 @@ var FormRadiobutton = function FormRadiobutton(_ref) {
   }, labelText)));
 };
 
+/** @jsx jsx */
+var FormWrapper = function FormWrapper(_ref) {
+  var children = _ref.children;
+  return jsx("fieldset", null, children);
+};
+
 function _templateObject$i() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  color: ", ";\n  font-size: 1.4rem;\n  svg {\n    align-content: center;\n    margin-right: 0.4rem;\n    fill: ", ";\n  }\n  p {\n    line-height: 2.4rem;\n  }\n"]);
 
@@ -4332,10 +4348,10 @@ function _templateObject7$8() {
   return data;
 }
 
-function _templateObject6$a() {
+function _templateObject6$b() {
   var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    color: ", ";\n    font-weight: 500;\n    ", "{\n        font-size: 2.1rem;\n    }\n\n"]);
 
-  _templateObject6$a = function _templateObject6() {
+  _templateObject6$b = function _templateObject6() {
     return data;
   };
 
@@ -4396,7 +4412,7 @@ var pageStyle = css$1(_templateObject2$g(), colors.theme1.mid, medium);
 var prevPageStyle = css$1(_templateObject3$g(), medium, colors.theme1.mid);
 var nextPageStyle = css$1(_templateObject4$e(), medium, colors.theme1.mid);
 var prevPageStyleHidden = css$1(_templateObject5$d());
-var distanceIndicatorStyle = css$1(_templateObject6$a(), colors.theme1.mid, medium);
+var distanceIndicatorStyle = css$1(_templateObject6$b(), colors.theme1.mid, medium);
 var currentPageStyle = css$1(_templateObject7$8(), colors.theme1.dark, colors.theme1.mid);
 
 var Pagination = function Pagination(_ref) {
@@ -4560,10 +4576,10 @@ var FactBox = function FactBox(_ref) {
   }), children, content);
 };
 
-function _templateObject6$b() {
+function _templateObject6$c() {
   var data = _taggedTemplateLiteral(["\n    ", " {\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
 
-  _templateObject6$b = function _templateObject6() {
+  _templateObject6$c = function _templateObject6() {
     return data;
   };
 
@@ -4624,7 +4640,7 @@ var firstRow = css$1(_templateObject2$i(), colors.theme3.light, medium);
 var firstRowUsabilla = css$1(_templateObject3$h(), medium);
 var secondRow = css$1(_templateObject4$f(), medium);
 var buttonStyle$1 = css$1(_templateObject5$e(), medium);
-var rightAlign = css$1(_templateObject6$b(), medium);
+var rightAlign = css$1(_templateObject6$c(), medium);
 
 /** @jsx jsx */
 var Source = function Source(_ref) {
@@ -4684,7 +4700,7 @@ function _templateObject2$j() {
 }
 
 function _templateObject$m() {
-  var data = _taggedTemplateLiteral(["\n    appearance: none;\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing:border-box;\n    border: 2px solid #979797;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><path fill='", "' d='", "' /></svg>\");\n    background-repeat: no-repeat, repeat;\n    background-position: right .7em top 50%, 0 0;\n    background-size: 1.6em auto, 100%;\n    &[data-hasvalue=\"false\"]{\n        color: ", ";    \n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    appearance: none;\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing:border-box;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><path fill='", "' d='", "' /></svg>\");\n    background-repeat: no-repeat, repeat;\n    background-position: right .7em top 50%, 0 0;\n    background-size: 1.6em auto, 100%;\n    &[data-hasvalue=\"false\"]{\n        color: ", ";    \n    }\n\n"]);
 
   _templateObject$m = function _templateObject() {
     return data;
@@ -4692,7 +4708,7 @@ function _templateObject$m() {
 
   return data;
 }
-var selectStyle = css$1(_templateObject$m(), encodeURIComponent(colors.theme1.mid), arrowPath, colors.theme3.dark);
+var selectStyle = css$1(_templateObject$m(), colors.theme3.midLight, encodeURIComponent(colors.theme1.mid), arrowPath, colors.theme3.dark);
 var selectWrapperStyle = css$1(_templateObject2$j());
 var invalidStyle$2 = css$1(_templateObject3$i());
 
@@ -7817,10 +7833,10 @@ function _templateObject7$9() {
   return data;
 }
 
-function _templateObject6$c() {
+function _templateObject6$d() {
   var data = _taggedTemplateLiteral(["\n    font-size: 1.4rem;\n    cursor: pointer;\n    display: block;\n    border-top: 1px solid ", ";\n    padding: .8rem 0 1.6rem 0;\n    margin: 0 1.6rem;\n    line-height: 2.4rem;\n    margin-top: auto;\n    \n"]);
 
-  _templateObject6$c = function _templateObject6() {
+  _templateObject6$d = function _templateObject6() {
     return data;
   };
 
@@ -7881,7 +7897,7 @@ var linkTextMainLinkStyle = css$1(_templateObject2$k());
 var mainLinkStyle = css$1(_templateObject3$j());
 var rotateArrow = css$1(_templateObject4$g());
 var childrenWrapper = css$1(_templateObject5$f());
-var showAllLink = css$1(_templateObject6$c(), colors.theme3.midLight);
+var showAllLink = css$1(_templateObject6$d(), colors.theme3.midLight);
 var innerTextWrapperStyle = css$1(_templateObject7$9(), colors.theme1.mid);
 var linkTextCardContentStyle = css$1(_templateObject8$7(), colors.theme3.dark);
 
@@ -7983,5 +7999,5 @@ var LinkTextCard = React.forwardRef(function (_ref, ref) {
 });
 LinkTextCard.displayName = "LinkTextCard";
 
-export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, DateFormat, Dropdown, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, Pagination, PrerequisitesBox, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, checkPath, colors, spacing };
+export { Accordion, BoxWithHeadlineText, Button, CampaignFocusPuff, DateFormat, Dropdown, EditorIcon, ElementLinkColorStyle$1 as ElementLinkColorStyle, ElementLinkInvertedColorStyle$1 as ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, FormWrapper, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle$1 as LinkWrapperColorStyle, LinkWrapperInvertedColorStyle$1 as LinkWrapperInvertedColorStyle, Pagination, PrerequisitesBox, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, checkPath, colors, spacing };
 //# sourceMappingURL=main.es.js.map

@@ -65,16 +65,16 @@ const globalStyles = (
       margin: 0;
       
       p {
-        padding-bottom: ${spacing["spacing-m"]};
+        padding-bottom: ${spacing.m};
         font-size: 1.8rem;
         line-height: 3.2rem;
       }
 
       ul {
         list-style: bullet inside none;
-        padding-left: ${spacing["spacing-xl"]};
+        padding-left: ${spacing.xl};
         li {
-          margin-bottom: ${spacing["spacing-m"]};
+          margin-bottom: ${spacing.m};
         }
         p {
           display: inline;

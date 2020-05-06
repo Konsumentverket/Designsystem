@@ -26,7 +26,7 @@ export const searchWrapperStyle = css`
 export const searchFieldInputStyle = css`
     -webkit-appearance: none;
     background-color: ${colors.common.white};
-    box-shadow:inset 0px 0px 0px 1px ${colors.theme3.mid};
+    box-shadow:inset 0px 0px 0px 2px ${colors.theme3.midLight};
     border-radius: .8rem 0 0 .8rem;
     border:none;
     font-size:1.6rem;
@@ -51,14 +51,14 @@ export const searchFieldInputStyle = css`
     }
 
     &:hover {
-        box-shadow:inset 0px 0px 0px 1px ${colors.theme1.mid};
+        box-shadow:inset 0px 0px 0px 2px ${colors.theme1.mid};
     }
     &:active {
-        box-shadow:inset 0px 0px 0px 1px ${colors.theme1.xDark};
+        box-shadow:inset 0px 0px 0px 2px ${colors.theme1.xDark};
     }
     &::placeholder {
         font-style:italic;
-        color: ${colors.theme1.dark};
+        color: ${colors.theme3.midDark};
     }
     &:disabled{
         ${disabled}
@@ -93,14 +93,14 @@ export const clearInputStyle = css`
     padding: 0;
     svg{
         fill: ${colors.theme1.mid};
-        width: 3.2rem;
-        height: 3.2rem;
+        width: 2.8rem;
+        height: 2.8rem;
     }
     &:focus{
         outline: none;
     }
     ${medium} {
-        top: 1.3rem;
+        top: 1.4rem;
         right: 12rem;
     }
 

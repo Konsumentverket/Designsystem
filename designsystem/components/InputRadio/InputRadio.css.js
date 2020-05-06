@@ -13,6 +13,7 @@ export const fieldWrapper = css`
     background-color: ${colors.theme3.xLight};
     &.inputHasValue{
         border: 2px solid ${colors.theme1.xDark};
+        text-decoration: underline;
     }
 
     &:hover{

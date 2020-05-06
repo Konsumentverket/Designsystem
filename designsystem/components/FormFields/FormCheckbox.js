@@ -8,7 +8,6 @@ import {
     checkbox,
     invertedLabelStyle,
     invertedfieldStyle,
-    hideDefaultCheckbox
 } from './FormCheckbox.css'
 
 

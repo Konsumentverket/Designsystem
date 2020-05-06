@@ -5,7 +5,7 @@ export const InputStyle = css`
     width: 100%;
     padding: 1.2rem 1.6rem;
     box-sizing:border-box;
-    border: 2px solid #979797;
+    border: 2px solid ${colors.theme3.midLight};
     border-radius: 0.8rem;
     -khtml-border-radius: 0.8rem; /* this is for the fruit phones */
     font-size: 1.8rem;
@@ -17,6 +17,9 @@ export const InputStyle = css`
         border-color: ${colors.theme1.mid}
     }
 
+    &::placeholder {
+        font-style: italic;
+    }
     &::-webkit-search-cancel-button{
         appearance: none;
     }
@@ -43,8 +46,29 @@ export const ClearInput = css`
     padding: 0;
     svg{
         fill: ${colors.theme1.mid};
-        width: 3.2rem;
-        height: 3.2rem;
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    &:focus{
+        outline: none;
+    }
+    
+`
+
+export const ClearInputLabel = css` 
+    appearance: none;
+    position: absolute;
+    right: 1.6rem;
+    border: 0px;
+    background-color: transparent;
+    top: 5.3rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0;
+    svg{
+        fill: ${colors.theme1.mid};
+        width: 2.8rem;
+        height: 2.8rem;
     }
     &:focus{
         outline: none;

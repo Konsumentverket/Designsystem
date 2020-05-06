@@ -10,7 +10,7 @@ export const wrapperStyle = css`
 export const labelStyle = css` 
     font-size: 2.1rem;
     line-height: 3.2rem;
-    border-radius: .8rem;
+    border-radius: .8px;
     display: inline-block;
 `;
 
@@ -44,6 +44,13 @@ export const checkbox = css`
     margin-right: 1.6rem;
   }
 
+  .checkbox:checked + .checkbox-label {
+    text-decoration: underline;
+    color: ${colors.theme1.dark};
+    box-shadow:  0px 0px 0px 5px ${colors.theme1.midLight};
+    background-color: ${colors.theme1.midLight};
+  }
+
   .checkbox {
     &:checked + label:before {
       background: ${colors.theme1.dark};
@@ -64,11 +71,20 @@ export const checkbox = css`
   }
 
   .checkbox:checked + .checkbox-label:before {
+    animation: fadein .2s ease-out;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 85 85' %3E%3Cpath fill='${encodeURIComponent('#fff')}' d='${checkPath}'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: 100px 100px;
     background-position: 6px 8px;
     position: relative;
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `
 
