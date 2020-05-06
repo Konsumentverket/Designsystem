@@ -38,7 +38,7 @@ const WrapperFunction = () => {
 
 
 let name = 'Input radio';
-storiesOf('Digitala Produkter|React komponenter', module)
+storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
     .add(name, () => <WrapperFunction />
         , { notes: NotesLoader(name) }
     );

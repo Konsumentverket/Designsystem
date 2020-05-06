@@ -6,15 +6,14 @@ import NotesLoader from '../NotesLoader';
 import { text } from '@storybook/addon-knobs';
 import { TextArea } from './TextArea';
 import { css } from '@emotion/core';
+import { SubHeading } from '../Headings/SubHeading';
 
 let name = 'TextArea';
 
-storiesOf('Digitala Produkter | React komponenter', module)
+storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
   .add(name, () => {
     return (
-      <div css={css`max-width: 80%; margin-left: 2%; p{font-size: 1.8rem;}`}>
-        <p>Type "textarea"</p>
-        <br />
+      <div css={css`max-width: 960px; margin-left: 2%; p{font-size: 1.8rem;}`}>
         <TextArea 
           label={text("label","Skriv rubrik här")} 
           placeholder={text("placeholder","Skriv din placeholder här")} 
