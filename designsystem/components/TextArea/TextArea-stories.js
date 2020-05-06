@@ -10,7 +10,7 @@ import { SubHeading } from '../Headings/SubHeading';
 
 let name = 'TextArea';
 
-storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
+storiesOf('Digitala Produkter|Komponenter/Formulärfält', module)
   .add(name, () => {
     return (
       <div css={css`max-width: 960px; margin-left: 2%; p{font-size: 1.8rem;}`}>

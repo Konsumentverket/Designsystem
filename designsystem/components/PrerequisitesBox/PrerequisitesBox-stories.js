@@ -8,7 +8,7 @@ import { colors } from '../Colors/Colors';
 let name = 'Förutsättningsruta';
 
 
-storiesOf('Digitala Produkter|React komponenter', module)
+storiesOf('Digitala Produkter|Komponenter', module)
     .add(name, () =>
     <div style={{height: "100vh",padding:"10px", }}>
       <div style={{maxWidth:"960px"}}>

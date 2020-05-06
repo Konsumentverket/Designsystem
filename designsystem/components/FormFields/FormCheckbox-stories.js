@@ -10,7 +10,7 @@ import { FormWrapper } from './FormWrapper'
 
 let name = 'Kryssruta';
 
-storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
+storiesOf('Digitala Produkter|Komponenter/Formulärfält', module)
 .addParameters({
     backgrounds: [
       { name: 'white', value: '#fff', default: true },

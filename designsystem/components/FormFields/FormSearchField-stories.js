@@ -10,7 +10,7 @@ import { iconDefinitions } from '../Icon/Icon';
 
 let name = 'Sökfält';
 
-storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
+storiesOf('Digitala Produkter|Komponenter/Formulärfält', module)
 .addParameters({
     backgrounds: [
       { name: 'white', value: '#fff', default: true },

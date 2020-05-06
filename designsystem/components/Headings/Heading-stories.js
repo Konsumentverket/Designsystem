@@ -12,7 +12,7 @@ import { colors } from '../Colors/Colors'
 
 
 let name = 'Rubriker'
-storiesOf('Digitala Produkter|React komponenter/Rubriker', module)
+storiesOf('Digitala Produkter|Komponenter/Rubriker', module)
     .add(name, () =>{
     
     const dokumentationDiv = css`

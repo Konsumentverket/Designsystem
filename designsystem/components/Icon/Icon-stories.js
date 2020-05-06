@@ -49,7 +49,7 @@ const getRandomColor = () => {
   }
 
 let name = 'Ikon';
-storiesOf('Digitala Produkter|React komponenter/Ikoner', module)
+storiesOf('Digitala Produkter|Komponenter/Ikoner', module)
     .add(name, () => {
         var selectedDefinition = select("icon", Object.keys(iconDefinitions), Object.keys(iconDefinitions)[0]);
         return <a onClick={(e) => clickToDownload(e, selectedDefinition)}>

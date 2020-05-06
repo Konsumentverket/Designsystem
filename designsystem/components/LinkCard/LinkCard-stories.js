@@ -12,7 +12,7 @@ import { css } from '@emotion/core';
 let name = 'Länkkort';
 
 
-storiesOf('Digitala Produkter|React komponenter/Kort', module)
+storiesOf('Digitala Produkter|Komponenter/Kort', module)
     .add(name, () =>  {
          
         var linkCardStyle = css`

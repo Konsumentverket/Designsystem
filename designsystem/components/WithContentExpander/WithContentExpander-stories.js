@@ -12,7 +12,7 @@ import { grayContentExpanderWrapper } from './WithContentExpander.css';
 
 
 let name = 'Innehålls expandering';
-storiesOf('Digitala Produkter|React komponenter', module)
+storiesOf('Digitala Produkter|Komponenter', module)
   .add(name, () => {
     return <>
       <div css={css`max-width: 960px; margin: 2%;`}>

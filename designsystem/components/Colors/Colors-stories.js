@@ -7,7 +7,7 @@ import NotesLoader from '../NotesLoader';
 import Page from '../../misc/Page/Page';
 import {SubHeading} from '../Headings/SubHeading'
 
-let name = 'Färgsystem - Hallå konsument';
+let name = 'Beskrivning av färger';
 
 
 var ColorComponent = ({color,name,token}) => {
@@ -53,7 +53,7 @@ var wrapperStyles = css`
     flex-flow: row wrap;
 `;
 
-storiesOf('Digitala produkter|Grunder och foundations/Färgsystem', module)
+storiesOf('Digitala produkter|Beskrivning av komponenter', module)
     .add(name, () =>
         <Page>
             
