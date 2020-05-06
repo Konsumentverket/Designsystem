@@ -4152,6 +4152,59 @@ var BeautyEngagement = (function (_ref) {
   }))));
 });
 
+var Bullhorn = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "31px",
+    height: "32px",
+    viewBox: "0 0 576 512"
+  }, otherAttr), jsx("title", null, title), jsx("path", {
+    d: "M576 240c0-23.63-12.95-44.04-32-55.12V32.01C544 23.26 537.02 0 512 0c-7.12 0-14.19 2.38-19.98 7.02l-85.03 68.03C364.28 109.19 310.66 128 256 128H64c-35.35 0-64 28.65-64 64v96c0 35.35 28.65 64 64 64h33.7c-1.39 10.48-2.18 21.14-2.18 32 0 39.77 9.26 77.35 25.56 110.94 5.19 10.69 16.52 17.06 28.4 17.06h74.28c26.05 0 41.69-29.84 25.9-50.56-16.4-21.52-26.15-48.36-26.15-77.44 0-11.11 1.62-21.79 4.41-32H256c54.66 0 108.28 18.81 150.98 52.95l85.03 68.03a32.023 32.023 0 0 0 19.98 7.02c24.92 0 32-22.78 32-32V295.13C563.05 284.04 576 263.63 576 240zm-96 141.42l-33.05-26.44C392.95 311.78 325.12 288 256 288v-96c69.12 0 136.95-23.78 190.95-66.98L480 98.58v282.84z"
+  }));
+});
+
+var Leaf = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "32px",
+    height: "23px",
+    viewBox: "0 0 576 512"
+  }, otherAttr), jsx("title", null, title), jsx("path", {
+    fill: "black",
+    d: "M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z"
+  }));
+});
+
+var Hardhat = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "32px",
+    height: "32px",
+    viewBox: "0 0 448 512"
+  }, otherAttr), jsx("title", null, title), jsx("path", {
+    fill: "black",
+    d: "M88 176h272a8 8 0 0 0 8-8v-32a8 8 0 0 0-8-8h-8a112 112 0 0 0-68.4-103.2L256 80V16a16 16 0 0 0-16-16h-32a16 16 0 0 0-16 16v64l-27.6-55.2A112 112 0 0 0 96 128h-8a8 8 0 0 0-8 8v32a8 8 0 0 0 8 8zm225.6 176h-16.7a174.08 174.08 0 0 1-145.8 0h-16.7A134.4 134.4 0 0 0 0 486.4 25.6 25.6 0 0 0 25.6 512h396.8a25.6 25.6 0 0 0 25.6-25.6A134.4 134.4 0 0 0 313.6 352zM224 320c65.22 0 118.44-48.94 126.39-112H97.61c7.95 63.06 61.17 112 126.39 112z"
+  }));
+});
+
 var BrokerServices = (function (_ref) {
   var className = _ref.className,
       style = _ref.style,
@@ -5001,6 +5054,9 @@ var editorIconDefinitions = {
   AppsAndGames: AppsAndGames,
   Auction: Auction,
   BeautyEngagement: BeautyEngagement,
+  Bullhorn: Bullhorn,
+  Leaf: Leaf,
+  Hardhat: Hardhat,
   BrokerServices: BrokerServices,
   Cars: Cars,
   Clothes: Clothes,
@@ -6945,7 +7001,7 @@ var Button = function Button(_ref) {
 };
 
 function _templateObject6$a() {
-  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 10rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    ", " {\n        right: 8rem;\n    }\n    ", " {\n        top: 1.4rem;\n        right: 12rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 10rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    ", " {\n        right: 3.5rem;\n    }\n    ", " {\n        top: 1.4rem;\n        right: 12rem;\n    }\n\n"]);
 
   _templateObject6$a = function _templateObject6() {
     return data;
