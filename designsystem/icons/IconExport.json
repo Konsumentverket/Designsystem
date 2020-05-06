@@ -184,6 +184,22 @@
             "name": "ChatWithUs",
             "title": "Chatta med oss",
             "url": "EditorIcons/svg/ChatWithUs.svg"
+        },
+        {
+            "name": "Leaf",
+            "title": "Löv",
+            "url": "EditorIcons/svg/Leaf.svg"
+        },
+        {
+            "name": "Hardhat",
+            "title": "Hårdhatt",
+            "url": "EditorIcons/svg/Hardhat.svg"
+        },
+        {
+            "name": "Bullhorn",
+            "title": "Megafon",
+            "url": "EditorIcons/svg/Bullhorn.svg"
         }
+
    ]
 }
