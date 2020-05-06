@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import { colors } from '../Colors/Colors';
-import { medium } from '../GlobalStyles/globalStyles';
+import { medium, small } from '../GlobalStyles/globalStyles';
 
 const disabled = css` 
         background-color: ${colors.theme3.xLight};
@@ -42,6 +42,10 @@ export const searchFieldInputStyle = css`
 
     &::-webkit-search-cancel-button{
         appearance: none;
+    }
+
+    ${small} {
+        padding: .8rem 4rem .8rem .8rem;
     }
 
     ${medium}{
@@ -98,6 +102,9 @@ export const clearInputStyle = css`
     }
     &:focus{
         outline: none;
+    }
+    ${small} {
+        right: 8rem;
     }
     ${medium} {
         top: 1.4rem;
