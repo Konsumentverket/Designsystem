@@ -9,7 +9,7 @@ import { FormRadiobutton } from './FormRadiobutton';
 
 let name = 'Radioknapp';
 
-storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
+storiesOf('Digitala Produkter|Komponenter/Formulärfält', module)
 .addParameters({
     backgrounds: [
       { name: 'white', value: '#fff', default: true },

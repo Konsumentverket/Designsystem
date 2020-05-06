@@ -6,10 +6,11 @@ import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
 import { text, boolean } from '@storybook/addon-knobs';
 import { FormCheckbox } from './FormCheckbox';
+import { FormWrapper } from './FormWrapper'
 
 let name = 'Kryssruta';
 
-storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
+storiesOf('Digitala Produkter|Komponenter/Formulärfält', module)
 .addParameters({
     backgrounds: [
       { name: 'white', value: '#fff', default: true },
@@ -19,18 +20,20 @@ storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
   })    
 .add(name, () => {
   const [checked1, setChecked1] = useState(false)
-  const [checked2, setChecked2] = useState(false)
+  const [checked2, setChecked2] = useState(true)
 
   return <div css={{paddingLeft:'2rem', paddingTop:'2rem'}}>
+    <FormWrapper>
     <FormCheckbox 
-      name="checkboxlist"
-      id="checkbox1"
-      invertedBackgroundColor={boolean("States för mörk bakgrund", false)}
-      labelText={text("Ledtext", "Svarsalternativ1")}
-      checked={checked1}
-      onChange={e => setChecked1(value => !value)}
-      value="value1"
-    /><br/><br/>
+        name="checkboxlist"
+        id="checkbox1"
+        invertedBackgroundColor={boolean("States för mörk bakgrund", false)}
+        labelText={text("Ledtext", "Svarsalternativ1")}
+        checked={checked1}
+        onChange={e => setChecked1(value => !value)}
+        value="value1"
+    />
+    <br/><br/>
     <FormCheckbox 
       name="checkboxlist"
       id="checkbox2"
@@ -39,6 +42,7 @@ storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)
       onChange={e => setChecked2(value => !value)}
       value="value1"
     />
+    </FormWrapper>
     </div>
 }
     , { notes: NotesLoader(name) }

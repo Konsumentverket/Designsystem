@@ -9,7 +9,7 @@ import { boolean, text, select } from '@storybook/addon-knobs';
 import { colors } from '../Colors/Colors';
 
 let name = 'TagBlock';
-storiesOf('Digitala Produkter|React komponenter/Kort', module)
+storiesOf('Digitala Produkter|Komponenter/Kort', module)
   .add(name, () => {
 
     var linkCardStyle = css`

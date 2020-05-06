@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React from 'react';
+import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
 import { Icon, iconDefinitions } from './Icon';
@@ -39,8 +39,17 @@ const iconWrapper = css`
     margin-bottom: 2.6rem;
 `
 
+const getRandomColor = () => {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
 let name = 'Ikon';
-storiesOf('Digitala Produkter|React komponenter/Ikoner', module)
+storiesOf('Digitala Produkter|Komponenter/Ikoner', module)
     .add(name, () => {
         var selectedDefinition = select("icon", Object.keys(iconDefinitions), Object.keys(iconDefinitions)[0]);
         return <a onClick={(e) => clickToDownload(e, selectedDefinition)}>
@@ -53,10 +62,16 @@ storiesOf('Digitala Produkter|React komponenter/Ikoner', module)
         </a>
     }, { notes: NotesLoader(name) }
     ).add("Alla ikoner", () => {
+
+        const [colors,setColor] = useState({})
+
         let icons = Object.keys(iconDefinitions).map((key) => (
-            <div css={iconWrapper} key={key}>
+            <div css={iconWrapper} key={key} onClick={(e) => {
+                setColor({...colors,[key]:getRandomColor()})
+                e.preventDefault();
+            }}>
                 <span>{key}</span>
-                <Icon icon={key} style={{ fill: '#000',marginTop:'10px' }} />
+                <Icon icon={key} style={{ fill: (colors[key] || '#000'),marginTop:'10px' }} />
             </div>
         ));
         return <div css={iconsWrapper}>

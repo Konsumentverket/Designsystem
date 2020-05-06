@@ -51,7 +51,8 @@ export const FormSearchField = React.forwardRef(({ className,
             disabled={disabled}
             value={value}
             name={name}
-            css={[searchFieldInputStyles]} />
+            css={[searchFieldInputStyles]}
+        />
         {inputRef && inputRef.current && inputRef.current.value.length > 0 && <span
             tabIndex="-1"
             css={clearInputStyle}

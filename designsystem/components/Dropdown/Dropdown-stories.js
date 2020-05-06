@@ -9,7 +9,7 @@ import { Dropdown } from './Dropdown';
 
 let name = 'Dropdown';
 
-storiesOf('Digitala Produkter|React komponenter/Formulärfält', module)   
+storiesOf('Digitala Produkter|Komponenter/Formulärfält', module)   
 .add(name, () =>
         <Dropdown label="Label dropdown">
             <option value="1">Option 1</option>

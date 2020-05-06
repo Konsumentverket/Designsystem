@@ -9,7 +9,7 @@ import { colors } from '../Colors/Colors';
 
 let name = 'FocusPuff';
 
-storiesOf('Digitala Produkter|React komponenter/Kort', module).add(name, () => {
+storiesOf('Digitala Produkter|Komponenter/Kort', module).add(name, () => {
   var linkCardStyle = css`
     width 32%;
     flex-grow: 0;

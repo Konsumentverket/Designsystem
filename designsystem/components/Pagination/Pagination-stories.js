@@ -7,7 +7,7 @@ import { Pagination } from './Pagination';
 let name = 'Pagination';
 
 
-storiesOf('Digitala Produkter|React komponenter', module)
+storiesOf('Digitala Produkter|Komponenter', module)
     .add(name, () => 
     <div style={{height: "100vh",padding:"10px", }}>
         <div style={{maxWidth:"960px"}}>

@@ -8,7 +8,7 @@ import { ExpandButton } from './ExpandButton';
 import { css } from '@emotion/core';
 
 let name = 'Expanderbar knapp';
-storiesOf('Digitala Produkter|React komponenter/Knappar', module)
+storiesOf('Digitala Produkter|Komponenter/Knappar', module)
 .addParameters({
     backgrounds: [
       { name: 'white', value: '#fff', default: true },

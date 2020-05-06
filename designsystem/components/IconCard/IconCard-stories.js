@@ -10,7 +10,7 @@ import { editorIconDefinitions } from '../Icon/EditorIcon';
 import { colors } from '../Colors/Colors';
 
 let name = 'Ikonkort';
-storiesOf('Digitala Produkter|React komponenter/Kort', module)
+storiesOf('Digitala Produkter|Komponenter/Kort', module)
     .add(name, () => {
 
         var linkCardStyle = css`

@@ -4,6 +4,9 @@ import { jsx } from '@emotion/core'
 import AppsAndGames from '../../icons/EditorIcons/AppsAndGames'
 import Auction from '../../icons/EditorIcons/Auction'
 import BeautyEngagement from '../../icons/EditorIcons/BeautyEngagement'
+import Bullhorn from '../../icons/EditorIcons/Bullhorn'
+import Leaf from '../../icons/EditorIcons/Leaf'
+import Hardhat from '../../icons/EditorIcons/Hardhat'
 import BrokerServices from '../../icons/EditorIcons/BrokerServices'
 import Cars from '../../icons/EditorIcons/Cars'
 import Clothes from '../../icons/EditorIcons/Clothes'
@@ -44,6 +47,9 @@ const editorIconDefinitions = {
     AppsAndGames,
     Auction,
     BeautyEngagement,
+    Bullhorn,
+    Leaf,
+    Hardhat,
     BrokerServices,
     Cars,
     Clothes,

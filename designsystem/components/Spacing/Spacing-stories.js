@@ -8,9 +8,9 @@ import NotesLoader from '../NotesLoader';
 import {colors} from '../Colors/Colors'
 
 
-const baseSize = 16;
-let name = 'Grid och struktur';
-storiesOf('Digitala produkter|Grunder och foundations', module)
+const baseSize = 10;
+let name = 'Beskrivning av grid och struktur';
+storiesOf('Digitala produkter|Beskrivning av komponenter', module)
     .add(name, () =>
         <Page>
             <h1>Avstånd med {baseSize} pixlars root</h1>

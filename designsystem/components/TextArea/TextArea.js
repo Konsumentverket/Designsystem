@@ -18,7 +18,8 @@ export const TextArea = ({style, wrapperStyle, placeholder, text, id, onChange, 
     <div css={[TextAreaWrapperStyle, wrapperStyle, invalid]}>
       { label && <label css={[Label,(hiddenLabel ? VisuallyHidden : null)]} htmlFor={id || name}>{label}</label> }
       {validationError}
-      <textarea 
+      <textarea
+        rows="2"
         id={id} 
         ref={inputRef} 
         {...other} 

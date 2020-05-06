@@ -8,7 +8,7 @@ import { DateFormat, Formats } from './DateFormat'
 
 
 let name = 'Automatisk datumformatering';
-storiesOf('Digitala Produkter|React komponenter/Tid och datum', module)
+storiesOf('Digitala Produkter|Komponenter/Tid och datum', module)
 .add(name, () => {
   return <>
     <div>

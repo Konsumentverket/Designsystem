@@ -10,7 +10,7 @@ import { css } from '@emotion/core';
 
 
 let name = 'Valideringssvar';
-storiesOf('Digitala Produkter|React komponenter', module)
+storiesOf('Digitala Produkter|Komponenter/Formulärfält', module)
   .add(name, () => {
     return <>
       <div css={css`max-width: 80%; margin-left: 2%; p{font-size: 1.8rem;}`}>
