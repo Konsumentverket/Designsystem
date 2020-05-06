@@ -65,7 +65,7 @@ const globalStyles = (
       margin: 0;
       
       p {
-        padding-bottom: ${spacing.m};
+        padding-bottom: ${spacing.s};
         font-size: 1.8rem;
         line-height: 3.2rem;
       }
