@@ -38,6 +38,7 @@ export { FormWrapper } from './FormFields/FormWrapper'
 export { ValidationResponse } from './ValidationResponse/ValidationResponse.js'
 export { Dropdown } from './Dropdown/Dropdown.js'
 export { ExpandButton } from './Button/ExpandButton.js'
+export { ListItem } from './ListItem/ListItem.js'
 
 //misc
 export { Source } from './Source/Source.js'
