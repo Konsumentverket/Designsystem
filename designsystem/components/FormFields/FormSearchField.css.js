@@ -45,7 +45,7 @@ export const searchFieldInputStyle = css`
     }
 
     ${small} {
-        padding: .8rem 4rem .8rem .8rem;
+        padding: .8rem 4.5rem .8rem .8rem;
     }
 
     ${medium}{
@@ -105,6 +105,7 @@ export const clearInputStyle = css`
     }
     ${small} {
         right: 8rem;
+
     }
     ${medium} {
         top: 1.4rem;
