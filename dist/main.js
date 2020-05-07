@@ -7006,7 +7006,7 @@ var Button = function Button(_ref) {
 };
 
 function _templateObject6$a() {
-  var data = _taggedTemplateLiteral(["\n    appearance: none;\n    position: absolute;\n    right: 10rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    ", " {\n        right: 8rem;\n\n    }\n    ", " {\n        top: 1.4rem;\n        right: 12rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 10rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    ", " {\n        right: 8rem;\n\n    }\n    ", " {\n        top: 1.4rem;\n        right: 12rem;\n    }\n\n"]);
 
   _templateObject6$a = function _templateObject6() {
     return data;
