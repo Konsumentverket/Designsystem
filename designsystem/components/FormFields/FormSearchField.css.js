@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import { colors } from '../Colors/Colors';
-import { medium, small } from '../GlobalStyles/globalStyles';
+import { medium } from '../GlobalStyles/globalStyles';
 
 const disabled = css` 
         background-color: ${colors.theme3.xLight};
@@ -33,7 +33,7 @@ export const searchFieldInputStyle = css`
     line-height:2.4rem;
     display:flex;
     flex-grow:1;
-    padding: .8rem 6.4rem .8rem .8rem;
+    padding: .8rem 4.5rem .8rem .8rem;
     color: ${colors.theme1.xDark};
     font-style: normal;
     font-weight: 500;
@@ -42,10 +42,6 @@ export const searchFieldInputStyle = css`
 
     &::-webkit-search-cancel-button{
         appearance: none;
-    }
-
-    ${small} {
-        padding: .8rem 4.5rem .8rem .8rem;
     }
 
     ${medium}{
@@ -88,7 +84,7 @@ export const clearInputStyle = css`
 
     appearance: none;
     position: absolute;
-    right: 10rem;
+    right: 8rem;
     border: 0px;
     background-color: transparent;
     top: 0.5rem;
@@ -103,10 +99,7 @@ export const clearInputStyle = css`
     &:focus{
         outline: none;
     }
-    ${small} {
-        right: 8rem;
 
-    }
     ${medium} {
         top: 1.4rem;
         right: 12rem;
