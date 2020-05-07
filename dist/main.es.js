@@ -7727,7 +7727,7 @@ function _templateObject3$j() {
 }
 
 function _templateObject2$k() {
-  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    padding-bottom: 2rem;\n    border-bottom: .1rem solid ", ";\n    display: flex;\n    flex-direction: column;\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    padding-bottom: 2rem;\n    padding-top: 2.4rem;\n    border-bottom: .1rem solid ", ";\n    display: flex;\n    flex-direction: column;\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject2$k = function _templateObject2() {
     return data;
@@ -7757,6 +7757,7 @@ var Source = function Source(_ref) {
   var usabilla = _ref.usabilla,
       didThisHelpText = _ref.didThisHelpText,
       reportErrorText = _ref.reportErrorText,
+      sourcesCollection = _ref.sourcesCollection,
       markdownText = _ref.markdownText,
       reviewedDate = _ref.reviewedDate,
       reviewedDateText = _ref.reviewedDateText,
@@ -7784,7 +7785,11 @@ var Source = function Source(_ref) {
     css: usabilla ? firstRowUsabilla : firstRow
   }, usabilla ? usabilla : question), jsx("div", {
     css: secondRow
-  }, markdownText, reviewed && jsx("div", {
+  }, sourcesCollection && jsx("p", null, english ? 'Source: ' : 'Källa: ', " ", sourcesCollection.items.map(function (item) {
+    return jsx("a", {
+      href: item.linkUrl
+    }, item.linkText);
+  })), markdownText, reviewed && jsx("div", {
     css: rightAlign
   }, jsx("p", null, "".concat(reviewedDateText || "Granskad: ").concat(reviewed.getDate(), " ").concat(english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))));
 };

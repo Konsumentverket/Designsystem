@@ -4,7 +4,7 @@ import React from 'react';
 import { sourceStyle, firstRow, firstRowUsabilla, buttonStyle, secondRow, rightAlign } from './Source.css';
 import { Button } from '../Button/Button';
 
-export const Source = ({ usabilla, didThisHelpText, reportErrorText, markdownText, reviewedDate, reviewedDateText, style, english }) => {
+export const Source = ({ usabilla, didThisHelpText, reportErrorText, sourcesCollection, markdownText, reviewedDate, reviewedDateText, style, english }) => {
 
     const reviewed = reviewedDate ? new Date(reviewedDate) : null;
     const monthsSv = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
@@ -27,6 +27,9 @@ export const Source = ({ usabilla, didThisHelpText, reportErrorText, markdownTex
             {usabilla ? usabilla : question}
         </div>
         <div css={secondRow}>
+            {sourcesCollection && <p>{english ? 'Source: ' : 'Källa: '} {sourcesCollection.items.map(item => {
+                return <a href={item.linkUrl}>{item.linkText}</a>
+            })}</p>}
             {markdownText}
             {reviewed && <div css={rightAlign}><p>{`${reviewedDateText || "Granskad: "}${reviewed.getDate()} ${english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()]} ${reviewed.getFullYear()}`}</p></div>}
         </div>
