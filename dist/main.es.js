@@ -255,6 +255,8 @@ var eccTheme = {
   theme3: {
     "xLight": "#F2F0F0",
     "light": "#D0D0D0",
+    "mid": "#6B6B6B",
+    "dark": "#4D4D4D",
     "xDark": "#161616"
   }
 };
@@ -7645,7 +7647,7 @@ function _templateObject2$j() {
 }
 
 function _templateObject$k() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  color: ", ";\n  font-weight: 500;\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: #dadbd9;\n  }\n  h3 {\n    text-decoration: underline;\n    color: ", ";\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 1.6rem;\n  border-bottom: 1px solid ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  p {\n    color: ", ";\n  }\n  font-weight: 500;\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: #dadbd9;\n  }\n  h3 {\n    text-decoration: underline;\n    color: ", ";\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 1.6rem;\n  border-bottom: 1px solid ", ";\n"]);
 
   _templateObject$k = function _templateObject() {
     return data;

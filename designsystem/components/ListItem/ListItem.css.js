@@ -5,7 +5,9 @@ export const wrapper = css`
   width: 100%;
   display: block;
   text-decoration: none;
-  color: ${colors.theme3.dark};
+  p {
+    color: ${colors.theme3.dark};
+  }
   font-weight: 500;
   &:hover {
     background-color: ${colors.theme1.midLight};
