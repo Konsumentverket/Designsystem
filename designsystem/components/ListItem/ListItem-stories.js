@@ -8,7 +8,7 @@ import { ListItem } from './ListItem';
 
 let name = 'ListItem'
 
-storiesOf('Digitala Produkter|React komponenter/Listor', module).add(name, () => {
+storiesOf('Digitala Produkter|Komponenter/Listor', module).add(name, () => {
 
     return <div style={{height: "100vh",padding:"50px", }}>
         <ListItem type="Sidtyp"
