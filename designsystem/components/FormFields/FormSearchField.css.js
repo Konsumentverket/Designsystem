@@ -37,7 +37,9 @@ export const searchFieldInputStyle = css`
     border:none;
     font-size:1.6rem;
     line-height:2.4rem;
-    padding: .8rem .8rem .8rem .8rem;
+    display:flex;
+    flex-grow:1;
+    padding: .8rem 4.5rem .8rem .8rem;
     color: ${colors.theme1.xDark};
     font-style: normal;
     font-weight: 500;
@@ -88,7 +90,7 @@ export const clearInputStyle = css`
 
     appearance: none;
     position: absolute;
-    right: 10rem;
+    right: 8rem;
     border: 0px;
     background-color: transparent;
     top: 0.5rem;
@@ -103,6 +105,7 @@ export const clearInputStyle = css`
     &:focus{
         outline: none;
     }
+
     ${medium} {
         top: 1.4rem;
         right: 1.6rem;
