@@ -6978,7 +6978,7 @@ var Button = function Button(_ref) {
 };
 
 function _templateObject6$a() {
-  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 10rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    ", " {\n        right: 8rem;\n    }\n    ", " {\n        top: 1.4rem;\n        right: 12rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 8rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n    ", " {\n        top: 1.4rem;\n        right: 12rem;\n    }\n\n"]);
 
   _templateObject6$a = function _templateObject6() {
     return data;
@@ -7008,7 +7008,7 @@ function _templateObject4$a() {
 }
 
 function _templateObject3$c() {
-  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 2px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem 6.4rem .8rem .8rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n    box-sizing: border-box;\n    width: 100%; \n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", " {\n        padding: .8rem 4rem .8rem .8rem;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 2px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem 4.5rem .8rem .8rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n    box-sizing: border-box;\n    width: 100%; \n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject3$c = function _templateObject3() {
     return data;
@@ -7038,10 +7038,10 @@ function _templateObject$d() {
 }
 var disabled$1 = css$1(_templateObject$d(), colors.theme3.xLight, colors.theme3.midLight, colors.theme3.midLight);
 var searchWrapperStyle = css$1(_templateObject2$d(), colors.common.white);
-var searchFieldInputStyle = css$1(_templateObject3$c(), colors.common.white, colors.theme3.midLight, colors.theme1.xDark, small, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme3.midDark, disabled$1);
+var searchFieldInputStyle = css$1(_templateObject3$c(), colors.common.white, colors.theme3.midLight, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme3.midDark, disabled$1);
 var searchFieldButtonStyle = css$1(_templateObject4$a());
 var invertedBackgroundStyle$1 = css$1(_templateObject5$a());
-var clearInputStyle = css$1(_templateObject6$a(), colors.theme1.mid, small, medium);
+var clearInputStyle = css$1(_templateObject6$a(), colors.theme1.mid, medium);
 
 var FormSearchField = React.forwardRef(function (_ref, _ref2) {
   var className = _ref.className,
