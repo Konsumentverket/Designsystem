@@ -23,6 +23,12 @@ export const searchWrapperStyle = css`
     border-radius:.8rem;
 `;
 
+export const searchFieldInputWrapperStyles = css`
+    display:flex;
+    flex-grow:1;
+    position: relative;
+`
+
 export const searchFieldInputStyle = css`
     -webkit-appearance: none;
     background-color: ${colors.common.white};
@@ -31,8 +37,6 @@ export const searchFieldInputStyle = css`
     border:none;
     font-size:1.6rem;
     line-height:2.4rem;
-    display:flex;
-    flex-grow:1;
     padding: .8rem .8rem .8rem .8rem;
     color: ${colors.theme1.xDark};
     font-style: normal;
@@ -101,7 +105,14 @@ export const clearInputStyle = css`
     }
     ${medium} {
         top: 1.4rem;
-        right: 12rem;
+        right: 1.6rem;
     }
 
+`
+
+export const labelStyle = css`
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    margin-bottom: 0.8rem;
+    display: block;
 `

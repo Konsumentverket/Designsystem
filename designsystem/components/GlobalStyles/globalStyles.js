@@ -2,6 +2,12 @@ import { css, Global } from '@emotion/core'
 import { spacing } from '../Spacing/Spacing'
 import { colors } from '../Colors/Colors';
 import React, { useEffect } from 'react';
+import { checkPath } from '../../icons/SystemIcons/Check';
+import { filePdfPath } from '../../icons/SystemIcons/FilePdf';
+import { fileWordPath } from '../../icons/SystemIcons/FileWord';
+import { filePowerpointPath } from '../../icons/SystemIcons/FilePowerpoint';
+import { fileExcelPath } from '../../icons/SystemIcons/FileExcel';
+import { filePath } from '../../icons/SystemIcons/File';
 
 export const GlobalStyles = ({
   fontSize = "62.5%",
@@ -23,6 +29,13 @@ export const GlobalStyles = ({
 
   return <Global styles={globalStyles(fontSize, fontFamily)} />
 }
+
+const fileIcon = (fileSvgPath) => `
+  &:before{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 30' %3E%3Cpath fill='${encodeURIComponent(colors.theme1.mid)}' d='${fileSvgPath}'/%3E%3C/svg%3E");
+  }
+`
+
 
 const globalStyles = (
   fontSize = "62.5%",
@@ -88,13 +101,60 @@ const globalStyles = (
         margin-bottom: .8rem;
       }
   a{
-    &:not(.noStyle){    
+    &:not(.noStyle){
         text-decoration:underline;
         font-weight:700;
         color:${colors.theme1.mid};
         svg {
           fill: ${colors.theme1.mid};
         }
+
+        &[href$=".pdf"],
+        &[href$=".doc"],
+        &[href$=".docx"],
+        &[href$=".ppt"],
+        &[href$=".pptx"],
+        &[href$=".txt"],
+        &[href$=".xlt"],
+        &[href$=".xltx"]{
+          margin-left: 3.2rem;
+          position: relative;
+          display: inline-flex;
+          &:hover {
+            box-shadow: 0 0 0 2px ${colors.theme1.midLight};
+          }
+          &:before{
+            content: '';
+            display:inline-block;
+            background-repeat: no-repeat;
+            background-size: 22px 30px;
+            background-position: 0px 0px;
+            width: 22px;
+            height: 30px;
+            position: absolute;
+            left: -3.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        
+        &[href$=".pdf"] { ${fileIcon(filePdfPath)} }
+         
+        &[href$=".ppt"],
+        &[href$=".pptx"] { ${fileIcon(filePowerpointPath)} }
+        
+        &[href$=".doc"],
+        &[href$=".docx"] { ${fileIcon(fileWordPath)} }
+
+        &[href$=".xlt"],
+        &[href$=".xltx"] { ${fileIcon(fileExcelPath)} }
+
+        &[href$=".txt"] { ${fileIcon(filePath)} }
+
+
+        
+        
+
         &:hover {
           box-shadow: 0 0 0 4px ${colors.theme1.midLight};
           border-radius: .8rem;

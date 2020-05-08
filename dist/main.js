@@ -252,6 +252,115 @@ var eccTheme = {
 };
 var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme;
 
+var checkPath = "M6.09703073,13.0077039 L0.262878687,7.22504644 C-0.0876262289,6.87763523 -0.0876262289,6.3143474 0.262878687,5.96690144 L1.53219243,4.70875643 C1.88269734,4.36131046 2.45103631,4.36131046 2.80154123,4.70875643 L6.73170513,8.60419634 L15.1496783,0.260558412 C15.5001832,-0.0868528038 16.0685222,-0.0868528038 16.4190271,0.260558412 L17.6883408,1.51870342 C18.0388457,1.86611463 18.0388457,2.42940246 17.6883408,2.77684843 L7.36637953,13.0077386 C7.01583955,13.3551498 6.44753564,13.3551498 6.09703073,13.0077039 L6.09703073,13.0077039 Z";
+var Check = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    "aria-hidden": "true",
+    className: className,
+    css: style,
+    width: "18px",
+    height: "14px",
+    viewBox: "0 0 18 14"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: checkPath
+  }));
+});
+
+var filePdfPath = "M11.36875,16.00625 C11.05625,15.00625 11.0625,13.075 11.24375,13.075 C11.76875,13.075 11.71875,15.38125 11.36875,16.00625 Z M11.2625,18.95625 C10.78125,20.21875 10.18125,21.6625 9.4875,22.875 C10.63125,22.4375 11.925,21.8 13.41875,21.50625 C12.625,20.90625 11.8625,20.04375 11.2625,18.95625 Z M5.38125,26.75625 C5.38125,26.80625 6.20625,26.41875 7.5625,24.24375 C7.14375,24.6375 5.74375,25.775 5.38125,26.75625 Z M15.5,10 L24,10 L24,30.5 C24,31.33125 23.33125,32 22.5,32 L1.5,32 C0.66875,32 0,31.33125 0,30.5 L0,1.5 C0,0.66875 0.66875,0 1.5,0 L14,0 L14,8.5 C14,9.325 14.675,10 15.5,10 Z M15,20.7375 C13.75,19.975 12.91875,18.925 12.33125,17.375 C12.6125,16.21875 13.05625,14.4625 12.71875,13.3625 C12.425,11.525 10.06875,11.70625 9.73125,12.9375 C9.41875,14.08125 9.70625,15.69375 10.2375,17.75 C9.5125,19.475 8.44375,21.7875 7.6875,23.1125 C7.68125,23.1125 7.68125,23.11875 7.675,23.11875 C5.98125,23.9875 3.075,25.9 4.26875,27.36875 C4.61875,27.8 5.26875,27.99375 5.6125,27.99375 C6.73125,27.99375 7.84375,26.86875 9.43125,24.13125 C11.04375,23.6 12.8125,22.9375 14.36875,22.68125 C15.725,23.41875 17.3125,23.9 18.36875,23.9 C20.19375,23.9 20.31875,21.9 19.6,21.1875 C18.73125,20.3375 16.20625,20.58125 15,20.7375 L15,20.7375 Z M23.5625,6.5625 L17.4375,0.4375 C17.15625,0.15625 16.775,0 16.375,0 L16,0 L16,8 L24,8 L24,7.61875 C24,7.225 23.84375,6.84375 23.5625,6.5625 Z M18.93125,22.51875 C19.1875,22.35 18.775,21.775 16.25625,21.95625 C18.575,22.94375 18.93125,22.51875 18.93125,22.51875 Z";
+var FilePdf = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "24px",
+    height: "32px",
+    viewBox: "0 0 24 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: filePdfPath
+  }));
+});
+
+var fileWordPath = "M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 Z M17.56875,16 L19.0625,16 C19.54375,16 19.9,16.44375 19.79375,16.91875 L17.41875,27.41875 C17.34375,27.7625 17.0375,28 16.6875,28 L14.3125,28 C13.96875,28 13.66875,27.7625 13.5875,27.43125 C11.975,20.9625 12.2875,22.35625 11.9875,20.525 L11.95625,20.525 C11.8875,21.41875 11.80625,21.6125 10.35625,27.43125 C10.275,27.7625 9.975,28 9.63125,28 L7.3125,28 C6.9625,28 6.65625,27.75625 6.58125,27.4125 L4.21875,16.9125 C4.1125,16.44375 4.46875,16 4.95,16 L6.48125,16 C6.8375,16 7.15,16.25 7.21875,16.60625 C8.19375,21.48125 8.475,23.45 8.53125,24.24375 C8.63125,23.60625 8.9875,22.2 10.36875,16.575 C10.45,16.2375 10.75,16.00625 11.1,16.00625 L12.91875,16.00625 C13.26875,16.00625 13.56875,16.24375 13.65,16.58125 C15.15,22.85625 15.45,24.33125 15.5,24.66875 C15.4875,23.96875 15.3375,23.55625 16.85,16.59375 C16.9125,16.24375 17.21875,16 17.56875,16 L17.56875,16 Z M24,7.61875 L24,8 L16,8 L16,0 L16.38125,0 C16.78125,0 17.1625,0.15625 17.44375,0.4375 L23.5625,6.5625 C23.84375,6.84375 24,7.225 24,7.61875 Z";
+var FileWord = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "24px",
+    height: "32px",
+    viewBox: "0 0 24 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: fileWordPath
+  }));
+});
+
+var filePowerpointPath = "M12.10625,16.95 C12.65625,16.95 13.075,17.11875 13.375,17.45625 C13.975,18.1375 13.9875,19.5 13.3625,20.2125 C13.05625,20.5625 12.61875,20.74375 12.04375,20.74375 L10.3625,20.74375 L10.3625,16.95 L12.10625,16.95 L12.10625,16.95 Z M23.5625,6.5625 L17.4375,0.4375 C17.15625,0.15625 16.775,0 16.375,0 L16,0 L16,8 L24,8 L24,7.61875 C24,7.225 23.84375,6.84375 23.5625,6.5625 Z M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 Z M17.3125,18.825 C17.3125,24.46875 11.7625,23.675 10.36875,23.675 L10.36875,27.25 C10.36875,27.6625 10.03125,28 9.61875,28 L7.69375,28 C7.28125,28 6.94375,27.6625 6.94375,27.25 L6.94375,14.7625 C6.94375,14.35 7.28125,14.0125 7.69375,14.0125 L12.75625,14.0125 C15.5375,14.0125 17.3125,16.0625 17.3125,18.825 Z";
+var FilePowerpoint = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "24px",
+    height: "32px",
+    viewBox: "0 0 24 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: filePowerpointPath
+  }));
+});
+
+var fileExcelPath = "M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 Z M17.75625,15.15625 L14,21 L17.75625,26.84375 C18.075,27.34375 17.71875,28 17.125,28 L14.94375,28 C14.66875,28 14.4125,27.85 14.28125,27.60625 C13.05625,25.34375 12,23.3125 12,23.3125 C11.6,24.2375 11.375,24.5625 9.7125,27.6125 C9.58125,27.85625 9.33125,28.00625 9.05625,28.00625 L6.875,28.00625 C6.28125,28.00625 5.925,27.35 6.24375,26.85 L10.0125,21.00625 L6.24375,15.1625 C5.91875,14.6625 6.28125,14.0062057 6.875,14.0062057 L9.05,14.0062057 C9.325,14.0062057 9.58125,14.15625 9.7125,14.4 C11.34375,17.45 10.9625,16.5 12,18.68125 C12,18.68125 12.38125,17.95 14.2875,14.4 C14.41875,14.15625 14.675,14.0062057 14.95,14.0062057 L17.125,14.0062057 C17.71875,14 18.075,14.65625 17.75625,15.15625 Z M24,7.61875 L24,8 L16,8 L16,0 L16.38125,0 C16.78125,0 17.1625,0.15625 17.44375,0.4375 L23.5625,6.5625 C23.84375,6.84375 24,7.225 24,7.61875 Z";
+var FileExcel = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "24px",
+    height: "32px",
+    viewBox: "0 0 24 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: fileExcelPath
+  }));
+});
+
+var filePath = "M24,7.61875 L24,8 L16,8 L16,0 L16.38125,0 C16.78125,0 17.1625,0.15625 17.44375,0.4375 L23.5625,6.5625 C23.84375,6.84375 24,7.225 24,7.61875 L24,7.61875 Z M18,14.75 L18,15.25 C18,15.6625 17.6625,16 17.25,16 L6.75,16 C6.3375,16 6,15.6625 6,15.25 L6,14.75 C6,14.3375 6.3375,14 6.75,14 L17.25,14 C17.6625,14 18,14.3375 18,14.75 L18,14.75 Z M18,19.25 C18,19.6625 17.6625,20 17.25,20 L6.75,20 C6.3375,20 6,19.6625 6,19.25 L6,18.75 C6,18.3375 6.3375,18 6.75,18 L17.25,18 C17.6625,18 18,18.3375 18,18.75 L18,19.25 Z M18,23.25 C18,23.6625 17.6625,24 17.25,24 L6.75,24 C6.3375,24 6,23.6625 6,23.25 L6,22.75 C6,22.3375 6.3375,22 6.75,22 L17.25,22 C17.6625,22 18,22.3375 18,22.75 L18,23.25 Z M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 L14,8.5 Z";
+var File = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "24px",
+    height: "32px",
+    viewBox: "0 0 24 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: filePath
+  }));
+});
+
 function _templateObject8() {
   var data = _taggedTemplateLiteral(["\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px;\n"]);
 
@@ -323,7 +432,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a{\n    &:not(.noStyle){    \n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        svg {\n          fill: ", ";\n        }\n        &:hover {\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n          box-shadow: 0 0 0 4px #fff;\n        }\n        &:active {\n          box-shadow: 0 0 0 4px #fff;\n          background-color:#fff;\n      }\n    }\n  }\n\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n\n    i {\n      font-style: italic;\n    }\n    strong {\n      font-weight: 700;\n    }\n    u {\n      text-decoration: underline;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a{\n    &:not(.noStyle){\n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        svg {\n          fill: ", ";\n        }\n\n        &[href$=\".pdf\"],\n        &[href$=\".doc\"],\n        &[href$=\".docx\"],\n        &[href$=\".ppt\"],\n        &[href$=\".pptx\"],\n        &[href$=\".txt\"],\n        &[href$=\".xlt\"],\n        &[href$=\".xltx\"]{\n          margin-left: 3.2rem;\n          position: relative;\n          display: inline-flex;\n          &:hover {\n            box-shadow: 0 0 0 2px ", ";\n          }\n          &:before{\n            content: '';\n            display:inline-block;\n            background-repeat: no-repeat;\n            background-size: 22px 30px;\n            background-position: 0px 0px;\n            width: 22px;\n            height: 30px;\n            position: absolute;\n            left: -3.2rem;\n            top: 50%;\n            transform: translateY(-50%);\n          }\n        }\n        \n        &[href$=\".pdf\"] { ", " }\n         \n        &[href$=\".ppt\"],\n        &[href$=\".pptx\"] { ", " }\n        \n        &[href$=\".doc\"],\n        &[href$=\".docx\"] { ", " }\n\n        &[href$=\".xlt\"],\n        &[href$=\".xltx\"] { ", " }\n\n        &[href$=\".txt\"] { ", " }\n\n\n        \n        \n\n        &:hover {\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n          box-shadow: 0 0 0 4px #fff;\n        }\n        &:active {\n          box-shadow: 0 0 0 4px #fff;\n          background-color:#fff;\n      }\n    }\n  }\n\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n\n    i {\n      font-style: italic;\n    }\n    strong {\n      font-weight: 700;\n    }\n    u {\n      text-decoration: underline;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -355,10 +464,14 @@ var GlobalStyles = function GlobalStyles(_ref) {
   });
 };
 
+var fileIcon = function fileIcon(fileSvgPath) {
+  return "\n  &:before{\n    background-image: url(\"data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 30' %3E%3Cpath fill='".concat(encodeURIComponent(colors.theme1.mid), "' d='").concat(fileSvgPath, "'/%3E%3C/svg%3E\");\n  }\n");
+};
+
 var globalStyles = function globalStyles() {
   var fontSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "62.5%";
   var fontFamily = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
-  return core.css(_templateObject(), fontSize, fontFamily, spacing.m, spacing.xl, spacing.m, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
+  return core.css(_templateObject(), fontSize, fontFamily, spacing.m, spacing.xl, spacing.m, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, fileIcon(filePdfPath), fileIcon(filePowerpointPath), fileIcon(fileWordPath), fileIcon(fileExcelPath), fileIcon(filePath), colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
 };
 
 var LinkColors = core.css(_templateObject2(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
@@ -3711,25 +3824,6 @@ var Exclamationmark = (function (_ref) {
   })))))));
 });
 
-var checkPath = "M6.09703073,13.0077039 L0.262878687,7.22504644 C-0.0876262289,6.87763523 -0.0876262289,6.3143474 0.262878687,5.96690144 L1.53219243,4.70875643 C1.88269734,4.36131046 2.45103631,4.36131046 2.80154123,4.70875643 L6.73170513,8.60419634 L15.1496783,0.260558412 C15.5001832,-0.0868528038 16.0685222,-0.0868528038 16.4190271,0.260558412 L17.6883408,1.51870342 C18.0388457,1.86611463 18.0388457,2.42940246 17.6883408,2.77684843 L7.36637953,13.0077386 C7.01583955,13.3551498 6.44753564,13.3551498 6.09703073,13.0077039 L6.09703073,13.0077039 Z";
-var Check = (function (_ref) {
-  var className = _ref.className,
-      style = _ref.style,
-      title = _ref.title,
-      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
-
-  return core.jsx("svg", _extends({
-    "aria-hidden": "true",
-    className: className,
-    css: style,
-    width: "18px",
-    height: "14px",
-    viewBox: "0 0 18 14"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: checkPath
-  }));
-});
-
 var Oval = (function (_ref) {
   var className = _ref.className,
       style = _ref.style,
@@ -3919,91 +4013,6 @@ var Play = (function (_ref) {
     fill: "#FFFFFF",
     d: "M363.7,272l-176,101c-15.8,8.8-35.7-2.5-35.7-21V144c0-18.4,19.8-29.8,35.7-21l176,107 C380.1,239.2,380.1,262.9,363.7,272z"
   })));
-});
-
-var FileExcel = (function (_ref) {
-  var className = _ref.className,
-      style = _ref.style,
-      title = _ref.title,
-      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
-
-  return core.jsx("svg", _extends({
-    className: className,
-    css: style,
-    width: "24px",
-    height: "32px",
-    viewBox: "0 0 24 32"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 Z M17.75625,15.15625 L14,21 L17.75625,26.84375 C18.075,27.34375 17.71875,28 17.125,28 L14.94375,28 C14.66875,28 14.4125,27.85 14.28125,27.60625 C13.05625,25.34375 12,23.3125 12,23.3125 C11.6,24.2375 11.375,24.5625 9.7125,27.6125 C9.58125,27.85625 9.33125,28.00625 9.05625,28.00625 L6.875,28.00625 C6.28125,28.00625 5.925,27.35 6.24375,26.85 L10.0125,21.00625 L6.24375,15.1625 C5.91875,14.6625 6.28125,14.0062057 6.875,14.0062057 L9.05,14.0062057 C9.325,14.0062057 9.58125,14.15625 9.7125,14.4 C11.34375,17.45 10.9625,16.5 12,18.68125 C12,18.68125 12.38125,17.95 14.2875,14.4 C14.41875,14.15625 14.675,14.0062057 14.95,14.0062057 L17.125,14.0062057 C17.71875,14 18.075,14.65625 17.75625,15.15625 Z M24,7.61875 L24,8 L16,8 L16,0 L16.38125,0 C16.78125,0 17.1625,0.15625 17.44375,0.4375 L23.5625,6.5625 C23.84375,6.84375 24,7.225 24,7.61875 Z"
-  }));
-});
-
-var FilePdf = (function (_ref) {
-  var className = _ref.className,
-      style = _ref.style,
-      title = _ref.title,
-      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
-
-  return core.jsx("svg", _extends({
-    className: className,
-    css: style,
-    width: "24px",
-    height: "32px",
-    viewBox: "0 0 24 32"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M11.36875,16.00625 C11.05625,15.00625 11.0625,13.075 11.24375,13.075 C11.76875,13.075 11.71875,15.38125 11.36875,16.00625 Z M11.2625,18.95625 C10.78125,20.21875 10.18125,21.6625 9.4875,22.875 C10.63125,22.4375 11.925,21.8 13.41875,21.50625 C12.625,20.90625 11.8625,20.04375 11.2625,18.95625 Z M5.38125,26.75625 C5.38125,26.80625 6.20625,26.41875 7.5625,24.24375 C7.14375,24.6375 5.74375,25.775 5.38125,26.75625 Z M15.5,10 L24,10 L24,30.5 C24,31.33125 23.33125,32 22.5,32 L1.5,32 C0.66875,32 0,31.33125 0,30.5 L0,1.5 C0,0.66875 0.66875,0 1.5,0 L14,0 L14,8.5 C14,9.325 14.675,10 15.5,10 Z M15,20.7375 C13.75,19.975 12.91875,18.925 12.33125,17.375 C12.6125,16.21875 13.05625,14.4625 12.71875,13.3625 C12.425,11.525 10.06875,11.70625 9.73125,12.9375 C9.41875,14.08125 9.70625,15.69375 10.2375,17.75 C9.5125,19.475 8.44375,21.7875 7.6875,23.1125 C7.68125,23.1125 7.68125,23.11875 7.675,23.11875 C5.98125,23.9875 3.075,25.9 4.26875,27.36875 C4.61875,27.8 5.26875,27.99375 5.6125,27.99375 C6.73125,27.99375 7.84375,26.86875 9.43125,24.13125 C11.04375,23.6 12.8125,22.9375 14.36875,22.68125 C15.725,23.41875 17.3125,23.9 18.36875,23.9 C20.19375,23.9 20.31875,21.9 19.6,21.1875 C18.73125,20.3375 16.20625,20.58125 15,20.7375 L15,20.7375 Z M23.5625,6.5625 L17.4375,0.4375 C17.15625,0.15625 16.775,0 16.375,0 L16,0 L16,8 L24,8 L24,7.61875 C24,7.225 23.84375,6.84375 23.5625,6.5625 Z M18.93125,22.51875 C19.1875,22.35 18.775,21.775 16.25625,21.95625 C18.575,22.94375 18.93125,22.51875 18.93125,22.51875 Z"
-  }));
-});
-
-var FilePowerpoint = (function (_ref) {
-  var className = _ref.className,
-      style = _ref.style,
-      title = _ref.title,
-      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
-
-  return core.jsx("svg", _extends({
-    className: className,
-    css: style,
-    width: "24px",
-    height: "32px",
-    viewBox: "0 0 24 32"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M12.10625,16.95 C12.65625,16.95 13.075,17.11875 13.375,17.45625 C13.975,18.1375 13.9875,19.5 13.3625,20.2125 C13.05625,20.5625 12.61875,20.74375 12.04375,20.74375 L10.3625,20.74375 L10.3625,16.95 L12.10625,16.95 L12.10625,16.95 Z M23.5625,6.5625 L17.4375,0.4375 C17.15625,0.15625 16.775,0 16.375,0 L16,0 L16,8 L24,8 L24,7.61875 C24,7.225 23.84375,6.84375 23.5625,6.5625 Z M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 Z M17.3125,18.825 C17.3125,24.46875 11.7625,23.675 10.36875,23.675 L10.36875,27.25 C10.36875,27.6625 10.03125,28 9.61875,28 L7.69375,28 C7.28125,28 6.94375,27.6625 6.94375,27.25 L6.94375,14.7625 C6.94375,14.35 7.28125,14.0125 7.69375,14.0125 L12.75625,14.0125 C15.5375,14.0125 17.3125,16.0625 17.3125,18.825 Z"
-  }));
-});
-
-var FileWord = (function (_ref) {
-  var className = _ref.className,
-      style = _ref.style,
-      title = _ref.title,
-      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
-
-  return core.jsx("svg", _extends({
-    className: className,
-    css: style,
-    width: "24px",
-    height: "32px",
-    viewBox: "0 0 24 32"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 Z M17.56875,16 L19.0625,16 C19.54375,16 19.9,16.44375 19.79375,16.91875 L17.41875,27.41875 C17.34375,27.7625 17.0375,28 16.6875,28 L14.3125,28 C13.96875,28 13.66875,27.7625 13.5875,27.43125 C11.975,20.9625 12.2875,22.35625 11.9875,20.525 L11.95625,20.525 C11.8875,21.41875 11.80625,21.6125 10.35625,27.43125 C10.275,27.7625 9.975,28 9.63125,28 L7.3125,28 C6.9625,28 6.65625,27.75625 6.58125,27.4125 L4.21875,16.9125 C4.1125,16.44375 4.46875,16 4.95,16 L6.48125,16 C6.8375,16 7.15,16.25 7.21875,16.60625 C8.19375,21.48125 8.475,23.45 8.53125,24.24375 C8.63125,23.60625 8.9875,22.2 10.36875,16.575 C10.45,16.2375 10.75,16.00625 11.1,16.00625 L12.91875,16.00625 C13.26875,16.00625 13.56875,16.24375 13.65,16.58125 C15.15,22.85625 15.45,24.33125 15.5,24.66875 C15.4875,23.96875 15.3375,23.55625 16.85,16.59375 C16.9125,16.24375 17.21875,16 17.56875,16 L17.56875,16 Z M24,7.61875 L24,8 L16,8 L16,0 L16.38125,0 C16.78125,0 17.1625,0.15625 17.44375,0.4375 L23.5625,6.5625 C23.84375,6.84375 24,7.225 24,7.61875 Z"
-  }));
-});
-
-var File = (function (_ref) {
-  var className = _ref.className,
-      style = _ref.style,
-      title = _ref.title,
-      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
-
-  return core.jsx("svg", _extends({
-    className: className,
-    css: style,
-    width: "24px",
-    height: "32px",
-    viewBox: "0 0 24 32"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M24,7.61875 L24,8 L16,8 L16,0 L16.38125,0 C16.78125,0 17.1625,0.15625 17.44375,0.4375 L23.5625,6.5625 C23.84375,6.84375 24,7.225 24,7.61875 L24,7.61875 Z M18,14.75 L18,15.25 C18,15.6625 17.6625,16 17.25,16 L6.75,16 C6.3375,16 6,15.6625 6,15.25 L6,14.75 C6,14.3375 6.3375,14 6.75,14 L17.25,14 C17.6625,14 18,14.3375 18,14.75 L18,14.75 Z M18,19.25 C18,19.6625 17.6625,20 17.25,20 L6.75,20 C6.3375,20 6,19.6625 6,19.25 L6,18.75 C6,18.3375 6.3375,18 6.75,18 L17.25,18 C17.6625,18 18,18.3375 18,18.75 L18,19.25 Z M18,23.25 C18,23.6625 17.6625,24 17.25,24 L6.75,24 C6.3375,24 6,23.6625 6,23.25 L6,22.75 C6,22.3375 6.3375,22 6.75,22 L17.25,22 C17.6625,22 18,22.3375 18,22.75 L18,23.25 Z M14,8.5 L14,0 L1.5,0 C0.66875,0 0,0.66875 0,1.5 L0,30.5 C0,31.33125 0.66875,32 1.5,32 L22.5,32 C23.33125,32 24,31.33125 24,30.5 L24,10 L15.5,10 C14.675,10 14,9.325 14,8.5 L14,8.5 Z"
-  }));
 });
 
 var iconDefinitions = {
@@ -6938,8 +6947,28 @@ var Button = function Button(_ref) {
   return href ? core.jsx("a", props, leftIcon, text, rightIcon) : core.jsx("button", props, leftIcon, text, rightIcon);
 };
 
+function _templateObject8$7() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.8rem;\n    line-height: 3.2rem;\n    margin-bottom: 0.8rem;\n    display: block;\n"]);
+
+  _templateObject8$7 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7$8() {
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 10rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    ", " {\n        top: 1.4rem;\n        right: 1.6rem;\n    }\n\n"]);
+
+  _templateObject7$8 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject6$a() {
-  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 10rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    ", " {\n        top: 1.4rem;\n        right: 12rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    box-shadow:none;\n    &:hover, &:active {\n        box-shadow:none;\n    }\n"]);
 
   _templateObject6$a = function _templateObject6() {
     return data;
@@ -6949,7 +6978,7 @@ function _templateObject6$a() {
 }
 
 function _templateObject5$a() {
-  var data = _taggedTemplateLiteral(["\n    box-shadow:none;\n    &:hover, &:active {\n        box-shadow:none;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    white-space: nowrap;\n    width:auto;\n    display:flex;\n    border-radius: 0 .8rem .8rem 0;\n    margin-right:-.8rem;\n"]);
 
   _templateObject5$a = function _templateObject5() {
     return data;
@@ -6959,7 +6988,7 @@ function _templateObject5$a() {
 }
 
 function _templateObject4$a() {
-  var data = _taggedTemplateLiteral(["\n    white-space: nowrap;\n    width:auto;\n    display:flex;\n    border-radius: 0 .8rem .8rem 0;\n    margin-right:-.8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 2px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    padding: .8rem .8rem .8rem .8rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n    box-sizing: border-box;\n    width: 100%; \n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject4$a = function _templateObject4() {
     return data;
@@ -6969,7 +6998,7 @@ function _templateObject4$a() {
 }
 
 function _templateObject3$c() {
-  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 2px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem .8rem .8rem .8rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n    box-sizing: border-box;\n    width: 100%; \n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    display:flex;\n    flex-grow:1;\n    position: relative;\n"]);
 
   _templateObject3$c = function _templateObject3() {
     return data;
@@ -6999,19 +7028,24 @@ function _templateObject$d() {
 }
 var disabled$1 = core.css(_templateObject$d(), colors.theme3.xLight, colors.theme3.midLight, colors.theme3.midLight);
 var searchWrapperStyle = core.css(_templateObject2$d(), colors.common.white);
-var searchFieldInputStyle = core.css(_templateObject3$c(), colors.common.white, colors.theme3.midLight, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme3.midDark, disabled$1);
-var searchFieldButtonStyle = core.css(_templateObject4$a());
-var invertedBackgroundStyle$1 = core.css(_templateObject5$a());
-var clearInputStyle = core.css(_templateObject6$a(), colors.theme1.mid, medium);
+var searchFieldInputWrapperStyles = core.css(_templateObject3$c());
+var searchFieldInputStyle = core.css(_templateObject4$a(), colors.common.white, colors.theme3.midLight, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme3.midDark, disabled$1);
+var searchFieldButtonStyle = core.css(_templateObject5$a());
+var invertedBackgroundStyle$1 = core.css(_templateObject6$a());
+var clearInputStyle = core.css(_templateObject7$8(), colors.theme1.mid, medium);
+var labelStyle = core.css(_templateObject8$7());
 
 var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
   var className = _ref.className,
       icon = _ref.icon,
       fieldtext = _ref.fieldtext,
       labeltext = _ref.labeltext,
+      _ref$showLabel = _ref.showLabel,
+      showLabel = _ref$showLabel === void 0 ? false : _ref$showLabel,
       onClick = _ref.onClick,
       onClear = _ref.onClear,
       onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
       _ref$invertedBackgrou = _ref.invertedBackgroundColor,
       invertedBackgroundColor = _ref$invertedBackgrou === void 0 ? false : _ref$invertedBackgrou,
       buttontext = _ref.buttontext,
@@ -7022,7 +7056,9 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
       value = _ref.value,
       name = _ref.name,
       id = _ref.id,
-      other = _objectWithoutProperties(_ref, ["className", "icon", "fieldtext", "labeltext", "onClick", "onClear", "onChange", "invertedBackgroundColor", "buttontext", "style", "disabled", "type", "inputtype", "value", "name", "id"]);
+      autocomplete = _ref.autocomplete,
+      validationError = _ref.validationError,
+      other = _objectWithoutProperties(_ref, ["className", "icon", "fieldtext", "labeltext", "showLabel", "onClick", "onClear", "onChange", "onBlur", "invertedBackgroundColor", "buttontext", "style", "disabled", "type", "inputtype", "value", "name", "id", "autocomplete", "validationError"]);
 
   var styles = [searchWrapperStyle];
   style && styles.push(style);
@@ -7035,15 +7071,18 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
   }).forEach(function (x) {
     return ariaAttrs[x] = other[x];
   });
-  return core.jsx("div", {
+  return core.jsx(React__default.Fragment, null, core.jsx("label", {
+    css: showLabel ? labelStyle : VisuallyHidden$1,
+    htmlFor: id || name
+  }, labeltext || fieldtext), validationError, core.jsx("div", {
     css: [styles],
     className: className,
     role: "search"
-  }, core.jsx("label", {
-    css: VisuallyHidden$1,
-    htmlFor: id || name
-  }, labeltext || fieldtext), core.jsx("input", _extends({}, other, {
+  }, core.jsx("div", {
+    css: searchFieldInputWrapperStyles
+  }, core.jsx("input", _extends({}, other, {
     onChange: onChange,
+    onBlur: onBlur,
     id: id || name,
     ref: function ref(el) {
       inputRef.current = el;
@@ -7054,6 +7093,7 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
     disabled: disabled,
     value: value,
     name: name,
+    autoComplete: autocomplete,
     css: [searchFieldInputStyles]
   })), inputRef && inputRef.current && inputRef.current.value.length > 0 && core.jsx("span", {
     tabIndex: "-1",
@@ -7071,14 +7111,14 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
     }
   }, core.jsx(Icon, {
     icon: "Clear"
-  })), core.jsx(Button, {
+  }))), core.jsx(Button, {
     style: searchFieldButtonStyle,
     disabled: disabled,
     onClick: onClick,
     iconLeft: icon,
     text: buttontext //{...ariaAttrs}
 
-  }));
+  })));
 });
 
 function _templateObject4$b() {
@@ -7221,7 +7261,7 @@ function _templateObject$f() {
   return data;
 }
 var wrapperStyle = core.css(_templateObject$f());
-var labelStyle = core.css(_templateObject2$f());
+var labelStyle$1 = core.css(_templateObject2$f());
 var checkbox = core.css(_templateObject3$e(), colors.theme1.mid, colors.theme1.dark, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.dark, colors.theme1.mid, colors.states.focus, colors.theme1.midLight, colors.theme1.midLight, encodeURIComponent('#fff'), checkPath);
 var invertedLabelStyle = core.css(_templateObject4$c(), colors.common.white);
 var invertedfieldStyle = core.css(_templateObject5$b(), colors.common.white, colors.theme1.xDark, colors.common.white);
@@ -7238,7 +7278,7 @@ var FormCheckbox = function FormCheckbox(_ref) {
       checked = _ref$checked === void 0 ? false : _ref$checked,
       onChange = _ref.onChange,
       style = _ref.style;
-  var labelStyles = [labelStyle];
+  var labelStyles = [labelStyle$1];
 
   if (invertedBackgroundColor) {
     labelStyles.push(invertedLabelStyle);
@@ -7313,7 +7353,7 @@ function _templateObject$g() {
   return data;
 }
 var wrapperStyle$1 = core.css(_templateObject$g());
-var labelStyle$1 = core.css(_templateObject2$g(), colors.theme1.light);
+var labelStyle$2 = core.css(_templateObject2$g(), colors.theme1.light);
 var fieldStyle = core.css(_templateObject3$f(), colors.theme1.mid, colors.common.white, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.light, colors.theme1.light, colors.theme1.xDark);
 var invertedLabelStyle$1 = core.css(_templateObject4$d(), colors.common.white);
 var invertedfieldStyle$1 = core.css(_templateObject5$c(), colors.common.white, colors.theme1.xDark, colors.common.white);
@@ -7331,7 +7371,7 @@ var FormRadiobutton = function FormRadiobutton(_ref) {
       onChange = _ref.onChange,
       style = _ref.style;
   var fieldStyles = [fieldStyle];
-  var labelStyles = [labelStyle$1];
+  var labelStyles = [labelStyle$2];
 
   if (invertedBackgroundColor) {
     labelStyles.push(invertedLabelStyle$1);
@@ -7455,20 +7495,20 @@ var Dropdown = function Dropdown(_ref) {
   }, other), children));
 };
 
-function _templateObject8$7() {
+function _templateObject8$8() {
   var data = _taggedTemplateLiteral(["\n    transform: rotate(180deg);\n"]);
 
-  _templateObject8$7 = function _templateObject8() {
+  _templateObject8$8 = function _templateObject8() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject7$8() {
+function _templateObject7$9() {
   var data = _taggedTemplateLiteral(["\n    width:2.4rem;\n    height:2.4rem;\n    position: relative;\n    top: 3px;\n"]);
 
-  _templateObject7$8 = function _templateObject7() {
+  _templateObject7$9 = function _templateObject7() {
     return data;
   };
 
@@ -7540,8 +7580,8 @@ var smallStyle = core.css(_templateObject3$h());
 var secondaryStyle$1 = core.css(_templateObject4$e(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$2);
 var invertedBackgroundStyle$2 = core.css(_templateObject5$d(), colors.common.white, colors.theme1.dark);
 var invertedSecondaryBackgroundStyle$1 = core.css(_templateObject6$b(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$2);
-var iconStyle$3 = core.css(_templateObject7$8());
-var expandedIconStyle = core.css(_templateObject8$7());
+var iconStyle$3 = core.css(_templateObject7$9());
+var expandedIconStyle = core.css(_templateObject8$8());
 
 /** @jsx jsx */
 var ExpandButton = function ExpandButton(_ref) {
@@ -7680,10 +7720,10 @@ var Source = function Source(_ref) {
   }, core.jsx("p", null, "".concat(reviewedDateText || "Granskad: ").concat(reviewed.getDate(), " ").concat(english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))));
 };
 
-function _templateObject7$9() {
+function _templateObject7$a() {
   var data = _taggedTemplateLiteral(["\n\n    background-color:", ";\n    color: #fff!important;\n\n    &:hover{\n        color: ", "!important;\n    }\n\n\n"]);
 
-  _templateObject7$9 = function _templateObject7() {
+  _templateObject7$a = function _templateObject7() {
     return data;
   };
 
@@ -7755,7 +7795,7 @@ var prevPageStyle = core.css(_templateObject3$j(), medium, colors.theme1.mid);
 var nextPageStyle = core.css(_templateObject4$g(), medium, colors.theme1.mid);
 var prevPageStyleHidden = core.css(_templateObject5$f());
 var distanceIndicatorStyle = core.css(_templateObject6$d(), colors.theme1.mid, medium);
-var currentPageStyle = core.css(_templateObject7$9(), colors.theme1.dark, colors.theme1.mid);
+var currentPageStyle = core.css(_templateObject7$a(), colors.theme1.dark, colors.theme1.mid);
 
 var Pagination = function Pagination(_ref) {
   var pageSize = _ref.pageSize,
@@ -7877,10 +7917,10 @@ var Pagination = function Pagination(_ref) {
   }, "N\xE4sta sida"));
 };
 
-function _templateObject7$a() {
+function _templateObject7$b() {
   var data = _taggedTemplateLiteral(["\n  color: ", ";\n  h1,\n  h2,\n  h3,\n  h4,\n  h5,\n  h6 {\n    color: ", ";\n  }\n  &:hover {\n    text-decoration: underline !important;\n  }\n"]);
 
-  _templateObject7$a = function _templateObject7() {
+  _templateObject7$b = function _templateObject7() {
     return data;
   };
 
@@ -7954,7 +7994,7 @@ var IconStyle = function IconStyle(fontSize) {
 var IconExpandedStyle = core.css(_templateObject4$h());
 var IconFullWidth = core.css(_templateObject5$g());
 var collapseButtonStyle = core.css(_templateObject6$e(), colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
-var baseLinkStyle = core.css(_templateObject7$a(), colors.theme1.mid, colors.theme1.mid);
+var baseLinkStyle = core.css(_templateObject7$b(), colors.theme1.mid, colors.theme1.mid);
 
 var measureElement = function measureElement(element) {
   var DOMNode = ReactDOM.findDOMNode(element);

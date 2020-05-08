@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React, { useRef } from 'react';
-import { searchWrapperStyle, searchFieldInputStyle, searchFieldButtonStyle, invertedBackgroundStyle, clearInputStyle } from './FormSearchField.css';
+import { searchWrapperStyle, searchFieldInputStyle, searchFieldButtonStyle, invertedBackgroundStyle, clearInputStyle,labelStyle, searchFieldInputWrapperStyles } from './FormSearchField.css';
 import { Button } from '../Button/Button';
 import { Icon } from '../Icon/Icon';
 import { VisuallyHidden } from '../GlobalStyles/globalStyles';
@@ -10,9 +10,11 @@ export const FormSearchField = React.forwardRef(({ className,
     icon,
     fieldtext,
     labeltext,
+    showLabel = false,
     onClick,
     onClear,
     onChange,
+    onBlur,
     invertedBackgroundColor = false,
     buttontext,
     style,
@@ -22,6 +24,8 @@ export const FormSearchField = React.forwardRef(({ className,
     value,
     name,
     id,
+    autocomplete,
+    validationError,
     ...other }, ref) => {
 
     var styles = [searchWrapperStyle];
@@ -33,50 +37,55 @@ export const FormSearchField = React.forwardRef(({ className,
     const ariaAttrs = {};
     Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x])
 
-    return <div
-        css={[styles]}
-        className={className} 
-        role="search">
-        <label css={VisuallyHidden} htmlFor={id || name}>{labeltext || fieldtext}</label>
-        <input
-            {...other}
-            onChange={onChange}
-            id={id || name}
-            ref={(el) => {
-                inputRef.current = el
-                return typeof ref === 'function' ? ref(el) : null
-            }}
-            type={inputtype || "search"}
-            placeholder={fieldtext}
-            disabled={disabled}
-            value={value}
-            name={name}
-            css={[searchFieldInputStyles]} />
-        {inputRef && inputRef.current && inputRef.current.value.length > 0 && <span
-            tabIndex="-1"
-            css={clearInputStyle}
-            className="noState"
-            onClick={e => {
-                e.preventDefault()
-                if (inputRef == null || inputRef.current == null) return
-                inputRef.current.value = ""
-                inputRef.current.dispatchEvent(new Event('change'))
-                if (onClear) {
-                    onClear(e)
-                }
-            }}>
-            <Icon icon="Clear" />
-        </span>
-        }
-        <Button
-            style={searchFieldButtonStyle}
-            disabled={disabled}
-            onClick={onClick}
-            iconLeft={icon}
-            text={buttontext}
-            //{...ariaAttrs}
-        />
-    </div>
+    return <>
+        <label css={showLabel ? labelStyle : VisuallyHidden} htmlFor={id || name}>{labeltext || fieldtext}</label>
+        {validationError}
+        <div css={[styles]} className={className}  role="search"> 
+            <div css={searchFieldInputWrapperStyles}>
+                <input
+                    {...other}
+                    onChange={onChange}
+                    onBlur={onBlur}
+                    id={id || name}
+                    ref={(el) => {
+                        inputRef.current = el
+                        return typeof ref === 'function' ? ref(el) : null
+                    }}
+                    type={inputtype || "search"}
+                    placeholder={fieldtext}
+                    disabled={disabled}
+                    value={value}
+                    name={name}
+                    autoComplete={autocomplete}
+                    css={[searchFieldInputStyles]} 
+                />
+            {inputRef && inputRef.current && inputRef.current.value.length > 0 && <span
+                tabIndex="-1"
+                css={clearInputStyle}
+                className="noState"
+                onClick={e => {
+                    e.preventDefault()
+                    if (inputRef == null || inputRef.current == null) return
+                    inputRef.current.value = ""
+                    inputRef.current.dispatchEvent(new Event('change'))
+                    if (onClear) {
+                        onClear(e)
+                    }
+                }}>
+                <Icon icon="Clear" />
+                
+            </span>
+            }
+            </div>
+            <Button
+                style={searchFieldButtonStyle}
+                disabled={disabled}
+                onClick={onClick}
+                iconLeft={icon}
+                text={buttontext}
+                //{...ariaAttrs}
+            />
+    </div></>
 
 })
 

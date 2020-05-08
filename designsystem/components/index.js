@@ -42,4 +42,4 @@ export { ExpandButton } from './Button/ExpandButton.js'
 //misc
 export { Source } from './Source/Source.js'
 export { Pagination } from './Pagination/Pagination.js'
-export { WithContentExpander } from './WithContentExpander/WithContentExpander'
+export { WithContentExpander } from './WithContentExpander/WithContentExpander.js'
