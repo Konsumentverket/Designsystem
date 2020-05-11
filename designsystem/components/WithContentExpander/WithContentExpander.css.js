@@ -24,6 +24,7 @@ export const grayContentExpanderWrapper = css`
         margin-bottom: 0rem!important;
         a{
             padding: 2.4rem;
+            box-sizing: border-box;
             &:hover {
                 text-decoration: underline;
                 background-color: inherit;

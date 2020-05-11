@@ -8104,7 +8104,7 @@ function _templateObject2$m() {
 }
 
 function _templateObject$n() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.5rem;\n\n    .full-width {\n        border: 2px solid transparent;\n        &.expanded,:hover{\n            border: .2rem solid ", ";\n        }\n    }\n\n    :focus-within {\n        .tabnav &{\n            outline: .2rem solid ", ";\n            outline-offset: .2rem;\n        }\n    }\n    .link-element{ \n        margin-bottom: 0rem!important;\n        a{\n            padding: 2.4rem;\n            &:hover {\n                text-decoration: underline;\n                background-color: inherit;\n                cursor: pointer;\n            }\n            &[aria-expanded=\"true\"] {\n                h2,h3,h4{\n                    text-decoration: underline!important;\n                }\n            }\n        }\n    }\n    .expand-section{\n        padding: 0 2.4rem;\n    }\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.5rem;\n\n    .full-width {\n        border: 2px solid transparent;\n        &.expanded,:hover{\n            border: .2rem solid ", ";\n        }\n    }\n\n    :focus-within {\n        .tabnav &{\n            outline: .2rem solid ", ";\n            outline-offset: .2rem;\n        }\n    }\n    .link-element{ \n        margin-bottom: 0rem!important;\n        a{\n            padding: 2.4rem;\n            box-sizing: border-box;\n            &:hover {\n                text-decoration: underline;\n                background-color: inherit;\n                cursor: pointer;\n            }\n            &[aria-expanded=\"true\"] {\n                h2,h3,h4{\n                    text-decoration: underline!important;\n                }\n            }\n        }\n    }\n    .expand-section{\n        padding: 0 2.4rem;\n    }\n\n\n"]);
 
   _templateObject$n = function _templateObject() {
     return data;
@@ -8233,5 +8233,5 @@ var WithContentExpander = function WithContentExpander(_ref) {
   }))));
 };
 
-export { Button, CampaignFocusPuff, DateFormat, Dropdown, EditorIcon, ElementLinkColorStyle, ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, FormWrapper, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle, LinkWrapperInvertedColorStyle, ListItem, Pagination, PrerequisitesBox, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, WithContentExpander, checkPath, colors, spacing };
+export { Button, CampaignFocusPuff, DateFormat, Dropdown, EditorIcon, ElementLinkColorStyle, ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, FormWrapper, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle, LinkWrapperInvertedColorStyle, ListItem, Pagination, PrerequisitesBox, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, WithContentExpander, checkPath, colors, grayContentExpanderWrapper, spacing };
 //# sourceMappingURL=main.es.js.map
