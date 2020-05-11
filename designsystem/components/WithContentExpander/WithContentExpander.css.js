@@ -57,7 +57,6 @@ export const ComponentWrapperStyle = css`
         }
 
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
 
     }
@@ -79,6 +78,7 @@ export const ComponentWrapperStyle = css`
       font-size: inherit;
       vertical-align: middle;
       fill: ${colors.theme1.mid};
+      flex-shrink: 0;
     }
   }
 
