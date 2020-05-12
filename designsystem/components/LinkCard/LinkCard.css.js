@@ -1,5 +1,6 @@
 import { css } from "@emotion/core";
 import { colors } from "../Colors/Colors";
+import { spacing } from "../Spacing/Spacing";
 
 export const wrapper = css`
     background-color: #fff;
@@ -20,7 +21,7 @@ export const mainLinkStyle = css`
     box-sizing:border-box;
     box-shadow: none !important;
     text-decoration: none !important;
-    min-height: 7.2rem;
+
     width: 100%;
     span{
         max-width: 84%;
