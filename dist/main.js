@@ -8061,7 +8061,7 @@ function _templateObject7$b() {
 }
 
 function _templateObject6$e() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  padding: 0.8rem 4rem 0.8rem 1.6rem;\n  border: solid 1px ", ";\n  color: ", ";\n  border-radius: 3.2rem;\n  transition: visibility 0.1s, opacity 0.1s ease-in-out;\n  font-weight: 700;\n  float: right;\n  margin-bottom: 1.6rem;\n\n  cursor: pointer;\n\n  .expanded > & {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  &:hover {\n    text-decoration: underline;\n    background-color: ", ";\n    border-color: ", ";\n  }\n\n  &:active {\n    text-decoration: underline;\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    svg {\n      fill: #fff;\n    }\n  }\n\n  > svg {\n    transform: rotate(180deg);\n    height: 1.6rem;\n    fill: ", ";\n    height: 1.6rem;\n    position: absolute;\n    width: 1.6rem;\n    top: 1.2rem;\n    right: 1.6rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: ", ";\n  position: relative;\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  padding: 0.8rem 4rem 0.8rem 1.6rem;\n  border: solid 1px ", ";\n  color: ", ";\n  border-radius: 3.2rem;\n  transition: visibility 0.1s, opacity 0.1s ease-in-out;\n  font-weight: 700;\n  float: right;\n  margin-bottom: 1.6rem;\n\n  cursor: pointer;\n\n  .expanded > & {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  &:hover {\n    text-decoration: underline;\n    background-color: ", ";\n    border-color: ", ";\n  }\n\n  &:active {\n    text-decoration: underline;\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    svg {\n      fill: #fff;\n    }\n  }\n\n  > svg {\n    transform: rotate(180deg);\n    height: 1.6rem;\n    fill: ", ";\n    height: 1.6rem;\n    position: absolute;\n    width: 1.6rem;\n    top: 1.2rem;\n    right: 1.6rem;\n  }\n"]);
 
   _templateObject6$e = function _templateObject6() {
     return data;
@@ -8126,7 +8126,7 @@ var IconStyle = function IconStyle(fontSize) {
 };
 var IconExpandedStyle = core.css(_templateObject4$i());
 var IconFullWidth = core.css(_templateObject5$g());
-var collapseButtonStyle = core.css(_templateObject6$e(), colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
+var collapseButtonStyle = core.css(_templateObject6$e(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
 var baseLinkStyle = core.css(_templateObject7$b(), colors.theme1.mid, colors.theme1.mid);
 
 var measureElement = function measureElement(element) {

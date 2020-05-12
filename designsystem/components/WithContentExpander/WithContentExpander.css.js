@@ -1,6 +1,7 @@
 import { css } from "@emotion/core";
 import { small,medium } from "../GlobalStyles/globalStyles";
 import { colors } from "../Colors/Colors";
+import { spacing } from "../Spacing/Spacing";
 
 
 export const grayContentExpanderWrapper = css`
@@ -116,6 +117,7 @@ export const IconFullWidth = css`
 `
 
 export const collapseButtonStyle = css`
+  margin-top: ${spacing.xs};
   position: relative;
   font-size: 1.6rem;
   line-height: 2.4rem;
