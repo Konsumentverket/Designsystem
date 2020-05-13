@@ -6231,7 +6231,7 @@ function _templateObject2$a() {
 }
 
 function _templateObject$a() {
-  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    position: relative;\n    border-radius: 0.8rem;\n    border: 2px solid transparent;\n    display:flex;\n    align-items: center;\n    background-color: ", ";\n    &.inputHasValue{\n        border: 2px solid ", ";\n        text-decoration: underline;\n    }\n\n    &:hover{\n        border: 2px solid ", ";\n        .radiolabel {\n            text-decoration: underline;\n        }\n    }\n    \n    &:focus-within{\n        .tabnav &{\n            outline-offset: 2px;\n            outline: 3px solid ", "\n        }\n    }\n    \n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    position: relative;\n    border-radius: 0.8rem;\n    border: 2px solid transparent;\n    display:flex;\n    align-items: center;\n    background-color: ", ";\n    &.inputHasValue{\n        border: 2px solid ", ";\n        text-decoration: underline;\n        font-weight: bold;\n    }\n\n    &:hover{\n        border: 2px solid ", ";\n        .radiolabel {\n            text-decoration: underline;\n        }\n    }\n    \n    &:focus-within{\n        .tabnav &{\n            outline-offset: 2px;\n            outline: 3px solid ", ";\n        }\n    }\n    \n\n"]);
 
   _templateObject$a = function _templateObject() {
     return data;
@@ -6257,7 +6257,7 @@ var InputRadio = function InputRadio(_ref) {
   var inputRef = useRef(null);
   return jsx("div", {
     css: [fieldWrapper, fieldWrapperStyle],
-    className: inputRef != null && inputRef.current != null && inputRef.current.checked || checked ? "inputHasValue" : ""
+    className: checked ? "inputHasValue" : ""
   }, jsx("label", {
     className: "radiolabel",
     css: [fieldLabel, fieldLabelStyle],
