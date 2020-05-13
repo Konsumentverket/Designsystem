@@ -60,9 +60,6 @@ Navigera till \designsystem\ mappen och kör följande script:
 
 I projektets root katalog för föjande kommando:
 ```
-    npx webpack
+    npm start
 ```
-## Lägg till nya komponenter
-
-TODO
 

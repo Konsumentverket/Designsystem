@@ -231,7 +231,7 @@ var eccTheme = {
     "midDark": "#314575",
     "mid": "#4663a9",
     "midLight": "#E4E8F2",
-    "light": "#e7f0f4"
+    "light": "#D7E6ED"
   },
   theme2: {
     "midLight": "#eaeae9",
@@ -7793,7 +7793,7 @@ function _templateObject2$k() {
 }
 
 function _templateObject$l() {
-  var data = _taggedTemplateLiteral(["\n    padding: 0rem 1.6rem 2.4rem 1.6rem;\n    ", " {\n        padding: 0rem 3.2rem .8rem 3.2rem;\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n    }\n    background-color: ", ";\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: 1.6rem;\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 1.6rem 1.6rem 2.4rem 1.6rem;\n    ", " {\n        padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n    }\n    background-color: ", ";\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: 1.6rem;\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
 
   _templateObject$l = function _templateObject() {
     return data;

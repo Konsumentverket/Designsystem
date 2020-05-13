@@ -4,3 +4,4 @@ package-lock.json
 *.lock
 *.njsproj
 *.sln
+.DS_Store

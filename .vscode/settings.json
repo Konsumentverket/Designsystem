@@ -17,5 +17,11 @@
         "statusBar.border": "#910a4f",
         "titleBar.border": "#910a4f"
     },
+    "editor.rulers": [
+    {
+      "column": 90,
+      "color": "#910a4f"
+    }
+  ],
     "peacock.color": "#910a4f"
 }
