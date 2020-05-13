@@ -26,7 +26,7 @@ export const fieldWrapper = css`
     &:focus-within{
         .tabnav &{
             outline-offset: 2px;
-            outline: 3px solid #F59C00;
+            outline: 3px solid ${colors.states.focus}
         }
     }
     
