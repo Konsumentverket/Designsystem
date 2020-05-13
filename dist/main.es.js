@@ -6211,7 +6211,7 @@ var LinkTextCard = React.forwardRef(function (_ref, ref) {
 LinkTextCard.displayName = "LinkTextCard";
 
 function _templateObject3$9() {
-  var data = _taggedTemplateLiteral(["\n    color: #464646;\n    width: 100%;\n    font-size: 21px;\n    line-height: 28px;\n    padding: 18px 0; \n    display: flex;\n"]);
+  var data = _taggedTemplateLiteral(["\n    color: #464646;\n    width: 100%;\n    font-size: 21px;\n    line-height: 28px;\n    padding: 18px 0; \n    display: flex;\n    user-select: none;   \n"]);
 
   _templateObject3$9 = function _templateObject3() {
     return data;
@@ -6221,7 +6221,7 @@ function _templateObject3$9() {
 }
 
 function _templateObject2$a() {
-  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    width: 2.4rem;\n    height: 2.4rem;\n    vertical-align: middle;\n    border-radius: 50%;\n    border: 2px solid ", ";\n    background: #fff;\n    margin: 0;\n    margin-left: 2.4rem;\n    margin-right: 1.6rem;\n    flex-shrink: 0;\n\n    &:focus{\n        outline:none!important;\n    }    \n\n    &:checked{\n        outline: none;\n        border: 4px solid ", ";\n        background-color: ", ";\n        position: relative;\n        \n        &+label{ \n            text-decoration: underline;\n            font-weight: 500;\n            color: ", ";\n        } \n\n        &:before{\n            content: \"\";\n            width: 1.6rem;\n            height: 1.6rem;\n            border-radius: 50%;\n            display:block;\n            border: 2px solid #fff;\n            background: transparent;\n            position: absolute;\n            top:-2px;\n            left:-2px;\n        }\n\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    width: 2.4rem;\n    height: 2.4rem;\n    vertical-align: middle;\n    border-radius: 50%;\n    border: 2px solid ", ";\n    background: #fff;\n    margin: 0;\n    margin-left: 2.4rem;\n    margin-right: 1.6rem;\n    flex-shrink: 0;\n    \n    &:focus{\n        outline:none!important;\n    }    \n\n    &:checked{\n        outline: none;\n        border: 4px solid ", ";\n        background-color: ", ";\n        position: relative;\n        \n        &+label{ \n            text-decoration: underline;\n            font-weight: 500;\n            color: ", ";\n        } \n\n        &:before{\n            content: \"\";\n            width: 1.6rem;\n            height: 1.6rem;\n            border-radius: 50%;\n            display:block;\n            border: 2px solid #fff;\n            background: transparent;\n            position: absolute;\n            top:-2px;\n            left:-2px;\n        }\n\n    }\n\n"]);
 
   _templateObject2$a = function _templateObject2() {
     return data;
@@ -6231,7 +6231,7 @@ function _templateObject2$a() {
 }
 
 function _templateObject$a() {
-  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    position: relative;\n    border-radius: 0.8rem;\n    border: 2px solid transparent;\n    display:flex;\n    align-items: center;\n    background-color: ", ";\n    &.inputHasValue{\n        border: 2px solid ", ";\n        text-decoration: underline;\n    }\n\n    &:hover{\n        border: 2px solid ", ";\n        .radiolabel {\n            text-decoration: underline;\n        }\n    }\n    \n    &:focus-within{\n        outline-offset: 2px;\n        outline: 3px solid #F59C00;\n    }\n    \n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    position: relative;\n    border-radius: 0.8rem;\n    border: 2px solid transparent;\n    display:flex;\n    align-items: center;\n    background-color: ", ";\n    &.inputHasValue{\n        border: 2px solid ", ";\n        text-decoration: underline;\n    }\n\n    &:hover{\n        border: 2px solid ", ";\n        .radiolabel {\n            text-decoration: underline;\n        }\n    }\n    \n    &:focus-within{\n        .tabnav &{\n            outline-offset: 2px;\n            outline: 3px solid #F59C00;\n        }\n    }\n    \n\n"]);
 
   _templateObject$a = function _templateObject() {
     return data;
@@ -6251,7 +6251,7 @@ var InputRadio = function InputRadio(_ref) {
       fieldWrapperStyle = _ref.fieldWrapperStyle,
       fieldInputStyle = _ref.fieldInputStyle,
       fieldLabelStyle = _ref.fieldLabelStyle,
-      onChange = _ref.onChange,
+      _onChange = _ref.onChange,
       value = _ref.value,
       checked = _ref.checked;
   var inputRef = useRef(null);
@@ -6268,13 +6268,17 @@ var InputRadio = function InputRadio(_ref) {
     id: id,
     name: name,
     type: "radio",
-    onChange: onChange,
+    onChange: function onChange(e) {
+      if (_onChange && !document.body.classList.contains('tabnav')) {
+        _onChange(e);
+      }
+    },
     value: value,
     checked: checked,
-    onClick: function onClick(e) {
-      if (e.clientX !== 0 && e.clientY !== 0) {
-        //its a mouse click
-        e.target.blur();
+    onKeyUp: function onKeyUp(e) {
+      //32 == space
+      if (e.which === 32 || e.key == 'Enter') {
+        _onChange(e);
       }
     }
   }), labelText));

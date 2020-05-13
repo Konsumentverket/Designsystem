@@ -24,8 +24,10 @@ export const fieldWrapper = css`
     }
     
     &:focus-within{
-        outline-offset: 2px;
-        outline: 3px solid #F59C00;
+        .tabnav &{
+            outline-offset: 2px;
+            outline: 3px solid #F59C00;
+        }
     }
     
 
@@ -44,7 +46,7 @@ export const fieldInput = css`
     margin-left: 2.4rem;
     margin-right: 1.6rem;
     flex-shrink: 0;
-
+    
     &:focus{
         outline:none!important;
     }    
@@ -85,4 +87,5 @@ export const fieldLabel = css`
     line-height: 28px;
     padding: 18px 0; 
     display: flex;
+    user-select: none;   
 `
