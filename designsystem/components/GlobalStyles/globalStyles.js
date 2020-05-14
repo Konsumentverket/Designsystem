@@ -17,7 +17,7 @@ export const GlobalStyles = ({
   useEffect(() => {
     document.addEventListener('keyup', e => {
       if (e.key === "Tab" && !document.body.classList.contains("tabnav")) {
-        document.body.className += "tabnav"
+        document.body.classList.add("tabnav");
       }
     })
     document.addEventListener('click', e => {
