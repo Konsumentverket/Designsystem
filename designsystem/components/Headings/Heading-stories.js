@@ -38,18 +38,20 @@ storiesOf('Digitala Produkter|Komponenter/Rubriker', module)
                 <SubHeading text="Rubrik h2" /><pre>Mobil: 24px/32px<br/>Desktop: 34px/48px</pre>
             </div>
             <div css={dokumentationDiv}>
-                <SubHeading text="Rubrik h3" level="3" /><pre>Mobil: 20px/32px<br/>Desktop: 24px/32px</pre>
+                <SubHeading text="Rubrik h3" level="3" /><pre>Mobil: 20px/32px<br/>Desktop: 28px/32px</pre>
             </div>
             <div css={dokumentationDiv}>
-                <SubHeading text="Rubrik h4" level="4" /><pre>Mobil: 18px/32px<br/>Desktop: 20px/32px</pre>
+                <SubHeading text="Rubrik h4" level="4" /><pre>Mobil: 18px/32px<br/>Desktop: 24px/32px</pre>
             </div>
             <div css={dokumentationDiv}>
-                <SubHeading text="Rubrik h5" level="5" /><pre>Mobil: 16px/32px<br/>Desktop: 18px/32px</pre>
+                <SubHeading text="Rubrik h5" level="5" /><pre>Mobil: 18px/32px<br/>Desktop: 20px/32px</pre>
             </div>
             <div css={dokumentationDiv}>
-                <SubHeading text="Rubrik h6" level="6" /><pre>Mobil: 16px/24px<br/>Desktop: 16px/24px</pre>
+                <SubHeading text="Rubrik h6" level="6" /><pre>Mobil: 16px/24px<br/>Desktop: 18px/24px</pre>
             </div>
-
+            <div css={dokumentationDiv}>
+                <SubHeading text="Rubrik h7" level="7" /><pre>Mobil: 16px/24px<br/>Desktop: 16px/24px</pre>
+            </div>
             <p css={css`margin-top: 50px;`}>Custom sizes:</p>
             <SubHeading text="Rubrik h1 with h2 styling" level="1" styleLevel="2" />
             <SubHeading text="Rubrik h2 with h3 styling" level="2" styleLevel="3" />
