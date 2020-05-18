@@ -10,7 +10,7 @@ export const InputRadio = ({
     }) => { 
         const inputRef = useRef(null);
         return <div css={[fieldWrapper, fieldWrapperStyle]} 
-                    className={(inputRef != null && inputRef.current != null && inputRef.current.checked) || checked ? "inputHasValue" : ""} 
+                    className={checked ? "inputHasValue" : ""} 
                 >
                 <label className="radiolabel" css={[fieldLabel, fieldLabelStyle]} htmlFor={id}>
                     <input ref={inputRef} css={[fieldInput,fieldInputStyle]} id={id} name={name} type="radio" 

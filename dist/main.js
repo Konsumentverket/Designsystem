@@ -450,7 +450,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
   React.useEffect(function () {
     document.addEventListener('keyup', function (e) {
       if (e.key === "Tab" && !document.body.classList.contains("tabnav")) {
-        document.body.className += "tabnav";
+        document.body.classList.add("tabnav");
       }
     });
     document.addEventListener('click', function (e) {
@@ -5194,8 +5194,18 @@ var small = mediaQueryMaxWidth(viewportSmall);
 var medium = mediaQueryMinWidth(viewportMedium);
 var large = mediaQueryMinWidth(viewportLarge);
 
+function _templateObject8$2() {
+  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:2.4rem;\n"]);
+
+  _templateObject8$2 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject7$2() {
-  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:2.4rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:2.4rem;\n      ", "{\n            font-size:1.8rem;      \n      }\n\n"]);
 
   _templateObject7$2 = function _templateObject7() {
     return data;
@@ -5205,7 +5215,7 @@ function _templateObject7$2() {
 }
 
 function _templateObject6$2() {
-  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:1.8rem;      \n      }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n      font-size:1.8rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:2rem;      \n      }\n\n"]);
 
   _templateObject6$2 = function _templateObject6() {
     return data;
@@ -5215,7 +5225,7 @@ function _templateObject6$2() {
 }
 
 function _templateObject5$2() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:1.8rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:2.0rem;\n            \n      }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n      font-size:1.8rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:2.4rem;\n            \n      }\n\n"]);
 
   _templateObject5$2 = function _templateObject5() {
     return data;
@@ -5225,7 +5235,7 @@ function _templateObject5$2() {
 }
 
 function _templateObject4$2() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:2.0rem;\n      line-height:3.2rem;\n\n\n      ", "{\n            font-size:2.4rem;\n            line-height:3.2rem;\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n      font-size:2.0rem;\n      line-height:3.2rem;\n\n\n      ", "{\n            font-size:2.8rem;\n            line-height:3.2rem;\n      }\n"]);
 
   _templateObject4$2 = function _templateObject4() {
     return data;
@@ -5269,7 +5279,8 @@ var h2Style = core.css(_templateObject3$2(), medium);
 var h3Style = core.css(_templateObject4$2(), medium);
 var h4Style = core.css(_templateObject5$2(), medium);
 var h5Style = core.css(_templateObject6$2(), medium);
-var h6Style = core.css(_templateObject7$2());
+var h6Style = core.css(_templateObject7$2(), medium);
+var h7Style = core.css(_templateObject8$2());
 
 var SubHeading = function SubHeading(_ref) {
   var children = _ref.children,
@@ -5280,8 +5291,8 @@ var SubHeading = function SubHeading(_ref) {
       styleLevel = _ref.styleLevel,
       otherAttr = _objectWithoutProperties(_ref, ["children", "text", "style", "level", "styleLevel"]);
 
-  var headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-  var stylings = [h1Style, h2Style, h3Style, h4Style, h5Style, h6Style];
+  var headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7'];
+  var stylings = [h1Style, h2Style, h3Style, h4Style, h5Style, h6Style, h7Style];
   var SelectedHeading = headings[level - 1] || 'h2';
   var SelectedStyling = stylings[styleLevel ? styleLevel - 1 : level - 1];
   return core.jsx(SelectedHeading, _extends({
@@ -5475,10 +5486,10 @@ function _templateObject9() {
   return data;
 }
 
-function _templateObject8$2() {
+function _templateObject8$3() {
   var data = _taggedTemplateLiteral(["\n    margin:0 1.6rem .8rem 0;\n    list-style-type:none;\n    &:before{\n        content:none !important;\n    }\n    &:last-child{\n        margin-right:0;\n    }\n"]);
 
-  _templateObject8$2 = function _templateObject8() {
+  _templateObject8$3 = function _templateObject8() {
     return data;
   };
 
@@ -5561,7 +5572,7 @@ var tagHeading = core.css(_templateObject4$4());
 var tagIconHeading = core.css(_templateObject5$4());
 var tagsArea = core.css(_templateObject6$4());
 var tagsList = core.css(_templateObject7$3());
-var tagsListItem = core.css(_templateObject8$2());
+var tagsListItem = core.css(_templateObject8$3());
 var tagItem = core.css(_templateObject9());
 var tagItemText = core.css(_templateObject10());
 var iconStyle$1 = core.css(_templateObject11());
@@ -5694,10 +5705,10 @@ function _templateObject9$1() {
   return data;
 }
 
-function _templateObject8$3() {
+function _templateObject8$4() {
   var data = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 0.4rem;\n  fill: #fff;\n"]);
 
-  _templateObject8$3 = function _templateObject8() {
+  _templateObject8$4 = function _templateObject8() {
     return data;
   };
 
@@ -5780,7 +5791,7 @@ var focusText = core.css(_templateObject4$5());
 var textArea = core.css(_templateObject5$5(), medium);
 var pictureWrapper = core.css(_templateObject6$5());
 var iconBackground = core.css(_templateObject7$4(), colors.theme2.light);
-var externalIcon = core.css(_templateObject8$3());
+var externalIcon = core.css(_templateObject8$4());
 var puffIcon = core.css(_templateObject9$1());
 
 /** @jsx jsx */
@@ -5848,10 +5859,10 @@ function _templateObject9$2() {
   return data;
 }
 
-function _templateObject8$4() {
+function _templateObject8$5() {
   var data = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 0.8rem;\n  fill: ", ";\n  width:2rem;\n"]);
 
-  _templateObject8$4 = function _templateObject8() {
+  _templateObject8$5 = function _templateObject8() {
     return data;
   };
 
@@ -5934,7 +5945,7 @@ var focusText$1 = core.css(_templateObject4$6(), colors.theme3.dark);
 var textArea$1 = core.css(_templateObject5$6(), medium, large);
 var pictureWrapper$1 = core.css(_templateObject6$6(), medium, large);
 var iconBackground$1 = core.css(_templateObject7$5(), colors.theme2.light, medium);
-var externalIcon$1 = core.css(_templateObject8$4(), colors.theme1.mid);
+var externalIcon$1 = core.css(_templateObject8$5(), colors.theme1.mid);
 var puffIcon$1 = core.css(_templateObject9$2(), colors.theme2.mid);
 
 /** @jsx jsx */
@@ -6031,10 +6042,10 @@ var FactBox = function FactBox(_ref) {
   }), children, content);
 };
 
-function _templateObject8$5() {
+function _templateObject8$6() {
   var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    font-size: 1.8rem;\n    line-height: 3.2rem;\n    padding-right: 20%;\n    color: ", ";\n    font-weight: 400;\n    margin-top: 1.6rem;\n    display:block;\n    [dir='rtl'] & {\n        padding-left: 20%;\n        padding-right: 0%;\n    }\n\n"]);
 
-  _templateObject8$5 = function _templateObject8() {
+  _templateObject8$6 = function _templateObject8() {
     return data;
   };
 
@@ -6117,7 +6128,7 @@ var rotateArrow = core.css(_templateObject4$7());
 var childrenWrapper = core.css(_templateObject5$7());
 var showAllLink = core.css(_templateObject6$7(), colors.theme3.midLight);
 var innerTextWrapperStyle = core.css(_templateObject7$6(), colors.theme1.mid);
-var linkTextCardContentStyle = core.css(_templateObject8$5(), colors.theme3.dark);
+var linkTextCardContentStyle = core.css(_templateObject8$6(), colors.theme3.dark);
 
 /** @jsx jsx */
 var LinkCard = React__default.forwardRef(function (_ref, ref) {
@@ -6238,7 +6249,7 @@ function _templateObject2$a() {
 }
 
 function _templateObject$a() {
-  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    position: relative;\n    border-radius: 0.8rem;\n    border: 2px solid transparent;\n    display:flex;\n    align-items: center;\n    background-color: ", ";\n    &.inputHasValue{\n        border: 2px solid ", ";\n        text-decoration: underline;\n    }\n\n    &:hover{\n        border: 2px solid ", ";\n        .radiolabel {\n            text-decoration: underline;\n        }\n    }\n    \n    &:focus-within{\n        .tabnav &{\n            outline-offset: 2px;\n            outline: 3px solid #F59C00;\n        }\n    }\n    \n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    width: 100%;\n    position: relative;\n    border-radius: 0.8rem;\n    border: 2px solid transparent;\n    display:flex;\n    align-items: center;\n    background-color: ", ";\n    &.inputHasValue{\n        border: 2px solid ", ";\n        text-decoration: underline;\n        font-weight: bold;\n    }\n\n    &:hover{\n        border: 2px solid ", ";\n        .radiolabel {\n            text-decoration: underline;\n        }\n    }\n    \n    &:focus-within{\n        .tabnav &{\n            outline-offset: 2px;\n            outline: 3px solid ", ";\n        }\n    }\n    \n\n"]);
 
   _templateObject$a = function _templateObject() {
     return data;
@@ -6246,7 +6257,7 @@ function _templateObject$a() {
 
   return data;
 }
-var fieldWrapper = core.css(_templateObject$a(), colors.theme3.xLight, colors.theme1.xDark, colors.theme1.mid);
+var fieldWrapper = core.css(_templateObject$a(), colors.theme3.xLight, colors.theme1.xDark, colors.theme1.mid, colors.states.focus);
 var fieldInput = core.css(_templateObject2$a(), colors.theme1.mid, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark);
 var fieldLabel = core.css(_templateObject3$9());
 
@@ -6264,7 +6275,7 @@ var InputRadio = function InputRadio(_ref) {
   var inputRef = React.useRef(null);
   return core.jsx("div", {
     css: [fieldWrapper, fieldWrapperStyle],
-    className: inputRef != null && inputRef.current != null && inputRef.current.checked || checked ? "inputHasValue" : ""
+    className: checked ? "inputHasValue" : ""
   }, core.jsx("label", {
     className: "radiolabel",
     css: [fieldLabel, fieldLabelStyle],
@@ -6860,10 +6871,10 @@ var InputText = React__default.forwardRef(function (_ref, _ref2) {
   })) : null);
 });
 
-function _templateObject8$6() {
+function _templateObject8$7() {
   var data = _taggedTemplateLiteral(["\n    \n    fill:", ";\n    width: 2.4rem;\n    height: 2.4rem;\n    top: 1.8rem;\n    vertical-align: top;\n    ", "{\n        position:absolute; \n      }\n"]);
 
-  _templateObject8$6 = function _templateObject8() {
+  _templateObject8$7 = function _templateObject8() {
     return data;
   };
 
@@ -6946,7 +6957,7 @@ var invertedBackgroundStyle = core.css(_templateObject4$9(), colors.common.white
 var invertedSecondaryBackgroundStyle = core.css(_templateObject5$9(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled);
 var buttonIconLeft = core.css(_templateObject6$9(), medium);
 var buttonIconRight = core.css(_templateObject7$7(), medium);
-var iconStyle$2 = core.css(_templateObject8$6(), colors.common.white, medium);
+var iconStyle$2 = core.css(_templateObject8$7(), colors.common.white, medium);
 
 var Button = function Button(_ref) {
   var text = _ref.text,
@@ -7007,10 +7018,10 @@ var Button = function Button(_ref) {
   return href ? core.jsx("a", props, leftIcon, text, rightIcon) : core.jsx("button", props, leftIcon, text, rightIcon);
 };
 
-function _templateObject8$7() {
+function _templateObject8$8() {
   var data = _taggedTemplateLiteral(["\n    font-size: 1.8rem;\n    line-height: 3.2rem;\n    margin-bottom: 0.8rem;\n    display: block;\n"]);
 
-  _templateObject8$7 = function _templateObject8() {
+  _templateObject8$8 = function _templateObject8() {
     return data;
   };
 
@@ -7093,7 +7104,7 @@ var searchFieldInputStyle = core.css(_templateObject4$a(), colors.common.white, 
 var searchFieldButtonStyle = core.css(_templateObject5$a());
 var invertedBackgroundStyle$1 = core.css(_templateObject6$a());
 var clearInputStyle = core.css(_templateObject7$8(), colors.theme1.mid, medium);
-var labelStyle = core.css(_templateObject8$7());
+var labelStyle = core.css(_templateObject8$8());
 
 var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
   var className = _ref.className,
@@ -7555,10 +7566,10 @@ var Dropdown = function Dropdown(_ref) {
   }, other), children));
 };
 
-function _templateObject8$8() {
+function _templateObject8$9() {
   var data = _taggedTemplateLiteral(["\n    transform: rotate(180deg);\n"]);
 
-  _templateObject8$8 = function _templateObject8() {
+  _templateObject8$9 = function _templateObject8() {
     return data;
   };
 
@@ -7641,7 +7652,7 @@ var secondaryStyle$1 = core.css(_templateObject4$e(), colors.theme1.mid, colors.
 var invertedBackgroundStyle$2 = core.css(_templateObject5$d(), colors.common.white, colors.theme1.dark);
 var invertedSecondaryBackgroundStyle$1 = core.css(_templateObject6$b(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$2);
 var iconStyle$3 = core.css(_templateObject7$9());
-var expandedIconStyle = core.css(_templateObject8$8());
+var expandedIconStyle = core.css(_templateObject8$9());
 
 /** @jsx jsx */
 var ExpandButton = function ExpandButton(_ref) {
@@ -7678,7 +7689,7 @@ var ExpandButton = function ExpandButton(_ref) {
 };
 
 function _templateObject4$f() {
-  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 1.4rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 1.4rem;\n  padding-bottom: 0;\n"]);
 
   _templateObject4$f = function _templateObject4() {
     return data;
@@ -7708,7 +7719,7 @@ function _templateObject2$j() {
 }
 
 function _templateObject$k() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  p {\n    color: ", ";\n  }\n  font-weight: 500;\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: #dadbd9;\n  }\n  h3 {\n    text-decoration: underline;\n    color: ", ";\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 1.6rem;\n  border-bottom: 1px solid ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  p {\n    color: ", ";\n  }\n  font-weight: 500;\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: #dadbd9;\n  }\n  h3 {\n    text-decoration: underline;\n    color: ", ";\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n  border-bottom: 1px solid ", ";\n"]);
 
   _templateObject$k = function _templateObject() {
     return data;

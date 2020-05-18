@@ -14,6 +14,7 @@ export const fieldWrapper = css`
     &.inputHasValue{
         border: 2px solid ${colors.theme1.xDark};
         text-decoration: underline;
+        font-weight: bold;
     }
 
     &:hover{
@@ -26,7 +27,7 @@ export const fieldWrapper = css`
     &:focus-within{
         .tabnav &{
             outline-offset: 2px;
-            outline: 3px solid #F59C00;
+            outline: 3px solid ${colors.states.focus};
         }
     }
     

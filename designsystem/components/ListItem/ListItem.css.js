@@ -20,7 +20,7 @@ export const wrapper = css`
     color: ${colors.theme1.mid};
   }
   padding-top: 2.4rem;
-  padding-bottom: 1.6rem;
+  padding-bottom: 2.4rem;
   border-bottom: 1px solid ${colors.theme3.light};
 `
 export const news = css`
@@ -36,4 +36,5 @@ export const preambleStyle = css`
 export const bottomText = css`
   color: ${colors.theme3.mid};
   font-size: 1.4rem;
+  padding-bottom: 0;
 `
