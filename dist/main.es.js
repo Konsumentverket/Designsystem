@@ -7861,6 +7861,53 @@ var Source = function Source(_ref) {
   }, jsx("p", null, "".concat(reviewedDateText || "Granskad: ").concat(reviewed.getDate(), " ").concat(english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))));
 };
 
+function _templateObject$m() {
+  var data = _taggedTemplateLiteral(["\n  height: ", "rem;\n  background-repeat: no-repeat;\n  background-image: \n    ", "\n    linear-gradient(", " 100%, transparent 0);\n    background-size:\n      ", "\n      100% 100%;\n    background-position:\n      ", "\n      0 0;\n"]);
+
+  _templateObject$m = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+var linearGradient = function linearGradient(rows) {
+  return new Array(rows).fill(0).map(function () {
+    return "linear-gradient(".concat(colors.theme3.xLight, " 100%, transparent 0),");
+  });
+};
+
+var randomIntFromInterval = function randomIntFromInterval(min, max) {
+  return Math.random() * (max - min + 1) + min;
+};
+
+var backgroundSize = function backgroundSize(rows) {
+  return new Array(rows).fill(0).map(function () {
+    return "".concat(randomIntFromInterval(80, 90), "% ").concat(spacing.m, ",");
+  });
+};
+
+var backgroundPosition = function backgroundPosition(rows) {
+  return new Array(rows).fill(0).map(function (a, i) {
+    return "".concat(spacing.xs, " calc(").concat(spacing.xs, " * ").concat(i * 6, "),");
+  });
+};
+
+var wrapper$5 = function wrapper(rows, height) {
+  return css$1(_templateObject$m(), height, linearGradient(rows), colors.common.white, backgroundSize(rows), backgroundPosition(rows));
+};
+
+/** @jsx jsx */
+var Skeleton = function Skeleton(_ref) {
+  var _ref$rows = _ref.rows,
+      rows = _ref$rows === void 0 ? 8 : _ref$rows,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? 48 : _ref$height;
+  return jsx("div", {
+    css: wrapper$5(rows, height)
+  });
+};
+
 function _templateObject7$a() {
   var data = _taggedTemplateLiteral(["\n\n    background-color:", ";\n    color: #fff!important;\n\n    &:hover{\n        color: ", "!important;\n    }\n\n\n"]);
 
@@ -7921,16 +7968,16 @@ function _templateObject2$l() {
   return data;
 }
 
-function _templateObject$m() {
+function _templateObject$n() {
   var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n\n    ", "{\n        justify-content: space-between;\n        padding-bottom: 4.8rem;\n    }\n"]);
 
-  _templateObject$m = function _templateObject() {
+  _templateObject$n = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var paginationWrapperStyle = css$1(_templateObject$m(), large);
+var paginationWrapperStyle = css$1(_templateObject$n(), large);
 var pageStyle = css$1(_templateObject2$l(), colors.theme1.mid, medium);
 var prevPageStyle = css$1(_templateObject3$k(), medium, colors.theme1.mid);
 var nextPageStyle = css$1(_templateObject4$h(), medium, colors.theme1.mid);
@@ -8109,7 +8156,7 @@ function _templateObject3$l() {
 }
 
 function _templateObject2$m() {
-  var data = _taggedTemplateLiteral(["\n\n  .link-element a {\n\n    .link-element-container {\n\n        h1, h2, h3, h4 {\n            width: 85%;\n            white-space: pre-line;\n            margin-bottom: 0;\n        }\n\n        display: flex;\n        align-items: center;\n\n    }\n\n    font-weight: 600;\n    display: inline-block;\n    position: relative;\n    text-decoration: none;\n    position: relative;\n    ", " {\n      width: 100%;\n    }\n\n    .full-width& {\n      display: block;\n    }\n\n    svg {\n      font-size: inherit;\n      vertical-align: middle;\n      fill: ", ";\n      flex-shrink: 0;\n    }\n  }\n\n  .expand-section {\n    max-height: 0;\n    overflow: hidden;\n    height: auto;\n    transition: all 0.3s ease-in-out;\n\n    &.expanded {\n      max-height: 400rem;\n    }\n    &:not(.expanded) {\n      visibility: hidden;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n  .link-element a {\n\n    .link-element-container {\n\n        h1, h2, h3, h4 {\n            width: 85%;\n            white-space: pre-line;\n            margin-bottom: 0;\n        }\n\n        display: flex;\n        align-items: center;\n\n    }\n\n    font-weight: 600;\n    display: inline-block;\n    position: relative;\n    text-decoration: none;\n    position: relative;\n    ", " {\n      width: 100%;\n    }\n\n    .full-width& {\n      display: block;\n    }\n\n    svg {\n      font-size: inherit;\n      vertical-align: middle;\n      fill: ", ";\n      flex-shrink: 0;\n    }\n  }\n\n  .expand-section {\n    max-height: 0;\n    overflow: hidden;\n    height: auto;\n    transition: all 0.3s ease-in-out;\n\n    &:not(.expanded) {\n      visibility: hidden;\n    }\n  }\n"]);
 
   _templateObject2$m = function _templateObject2() {
     return data;
@@ -8118,16 +8165,16 @@ function _templateObject2$m() {
   return data;
 }
 
-function _templateObject$n() {
+function _templateObject$o() {
   var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.5rem;\n\n    .full-width {\n        border: 2px solid transparent;\n        &.expanded,:hover{\n            border: .2rem solid ", ";\n        }\n    }\n\n    :focus-within {\n        .tabnav &{\n            outline: .2rem solid ", ";\n            outline-offset: .2rem;\n        }\n    }\n    .link-element{ \n        margin-bottom: 0rem!important;\n        a{\n            padding: 2.4rem;\n            box-sizing: border-box;\n            &:hover {\n                text-decoration: underline;\n                background-color: inherit;\n                cursor: pointer;\n            }\n            &[aria-expanded=\"true\"] {\n                h2,h3,h4{\n                    text-decoration: underline!important;\n                }\n            }\n        }\n    }\n    .expand-section{\n        padding: 0 2.4rem;\n    }\n\n\n"]);
 
-  _templateObject$n = function _templateObject() {
+  _templateObject$o = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var grayContentExpanderWrapper = css$1(_templateObject$n(), colors.theme3.xLight, colors.theme1.mid, colors.states.focus);
+var grayContentExpanderWrapper = css$1(_templateObject$o(), colors.theme3.xLight, colors.theme1.mid, colors.states.focus);
 var ComponentWrapperStyle = css$1(_templateObject2$m(), small, colors.theme1.mid);
 var IconStyle = function IconStyle(fontSize) {
   return css$1(_templateObject3$l(), fontSize, fontSize, medium);
@@ -8248,5 +8295,5 @@ var WithContentExpander = function WithContentExpander(_ref) {
   }))));
 };
 
-export { Button, CampaignFocusPuff, DateFormat, Dropdown, EditorIcon, ElementLinkColorStyle, ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, FormWrapper, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle, LinkWrapperInvertedColorStyle, ListItem, Pagination, PrerequisitesBox, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, WithContentExpander, checkPath, colors, grayContentExpanderWrapper, spacing };
+export { Button, CampaignFocusPuff, DateFormat, Dropdown, EditorIcon, ElementLinkColorStyle, ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, FormWrapper, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle, LinkWrapperInvertedColorStyle, ListItem, Pagination, PrerequisitesBox, Skeleton, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, WithContentExpander, checkPath, colors, grayContentExpanderWrapper, spacing };
 //# sourceMappingURL=main.es.js.map

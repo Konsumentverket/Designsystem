@@ -89,9 +89,6 @@ export const ComponentWrapperStyle = css`
     height: auto;
     transition: all 0.3s ease-in-out;
 
-    &.expanded {
-      max-height: 400rem;
-    }
     &:not(.expanded) {
       visibility: hidden;
     }
