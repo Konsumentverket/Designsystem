@@ -42,6 +42,7 @@ export { ListItem } from './ListItem/ListItem.js'
 
 //misc
 export { Source } from './Source/Source.js'
+export { Skeleton } from './Skeleton/Skeleton.js'
 export { Pagination } from './Pagination/Pagination.js'
 export { WithContentExpander } from './WithContentExpander/WithContentExpander.js'
 export { grayContentExpanderWrapper } from './WithContentExpander/WithContentExpander.css.js'
