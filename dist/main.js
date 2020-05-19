@@ -488,7 +488,7 @@ var fileIcon = function fileIcon(fileSvgPath) {
 var globalStyles = function globalStyles() {
   var fontSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "62.5%";
   var fontFamily = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
-  return core.css(_templateObject(), fontSize, fontFamily, spacing.s, spacing.xl, spacing.m, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, fileIcon(filePdfPath), fileIcon(filePowerpointPath), fileIcon(fileWordPath), fileIcon(fileExcelPath), fileIcon(filePath), colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
+  return core.css(_templateObject(), fontSize, fontFamily, spacing.s, spacing.xl, spacing.s, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, fileIcon(filePdfPath), fileIcon(filePowerpointPath), fileIcon(fileWordPath), fileIcon(fileExcelPath), fileIcon(filePath), colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
 };
 
 var LinkColors = core.css(_templateObject2(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
