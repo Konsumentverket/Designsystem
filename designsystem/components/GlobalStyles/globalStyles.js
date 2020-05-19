@@ -87,7 +87,7 @@ const globalStyles = (
         list-style: bullet inside none;
         padding-left: ${spacing.xl};
         li {
-          margin-bottom: ${spacing.m};
+          margin-bottom: ${spacing.s};
         }
         p {
           display: inline;
