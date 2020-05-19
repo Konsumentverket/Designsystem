@@ -26,6 +26,7 @@ export const wrapper = css`
 export const news = css`
   font-size: 1.4rem;
   padding-bottom: 0.8rem;
+  line-height: 2.4rem;
 `
 
 export const preambleStyle = css`
@@ -37,4 +38,16 @@ export const bottomText = css`
   color: ${colors.theme3.mid};
   font-size: 1.4rem;
   padding-bottom: 0;
+`
+
+export const invertedLink = css`
+  &:hover {
+    background-color: ${colors.common.white};
+  }
+  &:active {
+    background-color: ${colors.common.white};
+    h3 {
+      color: ${colors.theme1.xDark};
+    }
+  }
 `
