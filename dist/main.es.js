@@ -7671,8 +7671,18 @@ var ExpandButton = function ExpandButton(_ref) {
   }));
 };
 
-function _templateObject5$e() {
+function _templateObject6$c() {
   var data = _taggedTemplateLiteral(["\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: ", ";\n    h3 {\n      color: ", ";\n    }\n  }\n"]);
+
+  _templateObject6$c = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$e() {
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 1.4rem;\n  line-height: 2.4rem;\n  padding-bottom: 0;\n"]);
 
   _templateObject5$e = function _templateObject5() {
     return data;
@@ -7682,7 +7692,7 @@ function _templateObject5$e() {
 }
 
 function _templateObject4$f() {
-  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 1.4rem;\n  padding-bottom: 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding-bottom: .8rem;\n  font-size: 1.8rem;\n  font-weight: 400;\n  color: ", ";\n"]);
 
   _templateObject4$f = function _templateObject4() {
     return data;
@@ -7692,7 +7702,7 @@ function _templateObject4$f() {
 }
 
 function _templateObject3$i() {
-  var data = _taggedTemplateLiteral(["\n  padding-bottom: .8rem;\n  font-size: 1.8rem;\n  font-weight: 400;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: ", ";\n  padding-bottom: ", ";\n  text-decoration: underline;\n  font-weight: 700;\n  display: block;\n  padding-top: .4rem;\n"]);
 
   _templateObject3$i = function _templateObject3() {
     return data;
@@ -7702,7 +7712,7 @@ function _templateObject3$i() {
 }
 
 function _templateObject2$j() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 1.4rem;\n  padding-bottom: 0.8rem;\n  line-height: 2.4rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 1.4rem;\n  padding-bottom: 0.8rem;\n  line-height: 2.4rem;\n  color: ", ";\n"]);
 
   _templateObject2$j = function _templateObject2() {
     return data;
@@ -7712,7 +7722,7 @@ function _templateObject2$j() {
 }
 
 function _templateObject$k() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  p {\n    color: ", ";\n  }\n  font-weight: 500;\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: #dadbd9;\n  }\n  h3 {\n    text-decoration: underline;\n    color: ", ";\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n  border-bottom: 1px solid ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  font-weight: 500;\n  p {\n    color: ", ";\n  }\n  p.listItemHeadline {\n      color: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n    p {\n      text-decoration: none;\n    }\n  }\n  &:active {\n    background-color: ", ";\n    .listItemHeadline {\n      color: ", ";\n    }\n    p {\n      text-decoration: none;\n    }\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n  border-bottom: 1px solid ", ";\n"]);
 
   _templateObject$k = function _templateObject() {
     return data;
@@ -7720,16 +7730,17 @@ function _templateObject$k() {
 
   return data;
 }
-var wrapper$4 = css$1(_templateObject$k(), colors.theme3.dark, colors.theme1.midLight, colors.theme1.mid, colors.theme3.light);
-var news = css$1(_templateObject2$j());
-var preambleStyle = css$1(_templateObject3$i());
-var bottomText = css$1(_templateObject4$f(), colors.theme3.mid);
-var invertedLink = css$1(_templateObject5$e(), colors.common.white, colors.common.white, colors.theme1.xDark);
+var wrapper$4 = css$1(_templateObject$k(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.light);
+var news = css$1(_templateObject2$j(), colors.theme3.dark);
+var headline = css$1(_templateObject3$i(), spacing.m, spacing.xs);
+var preambleStyle = css$1(_templateObject4$f(), colors.theme3.dark);
+var bottomText = css$1(_templateObject5$e(), colors.theme3.mid);
+var invertedLink = css$1(_templateObject6$c(), colors.common.white, colors.common.white, colors.theme1.xDark);
 
 /** @jsx jsx */
 var ListItem = function ListItem(_ref) {
   var children = _ref.children,
-      headline = _ref.headline,
+      headline$1 = _ref.headline,
       preamble = _ref.preamble,
       bottomText$1 = _ref.bottomText,
       type = _ref.type,
@@ -7748,20 +7759,20 @@ var ListItem = function ListItem(_ref) {
   }, " ", type.toUpperCase(), reviewedDate && jsx(React.Fragment, null, ": ", jsx(DateFormat, {
     date: reviewedDate,
     showDate: true
-  }))), jsx(SubHeading, {
-    level: headlineLevel || 3,
-    styleLevel: headlineStyleLevel || 3
-  }, headline), children, preamble && jsx("p", {
+  }))), jsx("p", {
+    css: headline,
+    className: "listItemHeadline"
+  }, headline$1), children, preamble && jsx("p", {
     css: preambleStyle
   }, preamble), bottomText$1 && jsx("p", {
     css: bottomText
   }, bottomText$1));
 };
 
-function _templateObject6$c() {
+function _templateObject6$d() {
   var data = _taggedTemplateLiteral(["\n    ", " {\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
 
-  _templateObject6$c = function _templateObject6() {
+  _templateObject6$d = function _templateObject6() {
     return data;
   };
 
@@ -7822,7 +7833,7 @@ var firstRow = css$1(_templateObject2$k(), colors.theme3.light, medium);
 var firstRowUsabilla = css$1(_templateObject3$j(), medium);
 var secondRow = css$1(_templateObject4$g(), medium);
 var buttonStyle$1 = css$1(_templateObject5$f(), medium);
-var rightAlign = css$1(_templateObject6$c(), medium);
+var rightAlign = css$1(_templateObject6$d(), medium);
 
 /** @jsx jsx */
 var Source = function Source(_ref) {
@@ -7923,10 +7934,10 @@ function _templateObject7$a() {
   return data;
 }
 
-function _templateObject6$d() {
+function _templateObject6$e() {
   var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    color: ", ";\n    font-weight: 500;\n    ", "{\n        font-size: 2.1rem;\n    }\n\n"]);
 
-  _templateObject6$d = function _templateObject6() {
+  _templateObject6$e = function _templateObject6() {
     return data;
   };
 
@@ -7987,7 +7998,7 @@ var pageStyle = css$1(_templateObject2$l(), colors.theme1.mid, medium);
 var prevPageStyle = css$1(_templateObject3$k(), medium, colors.theme1.mid);
 var nextPageStyle = css$1(_templateObject4$h(), medium, colors.theme1.mid);
 var prevPageStyleHidden = css$1(_templateObject5$g());
-var distanceIndicatorStyle = css$1(_templateObject6$d(), colors.theme1.mid, medium);
+var distanceIndicatorStyle = css$1(_templateObject6$e(), colors.theme1.mid, medium);
 var currentPageStyle = css$1(_templateObject7$a(), colors.theme1.dark, colors.theme1.mid);
 
 var Pagination = function Pagination(_ref) {
@@ -8120,10 +8131,10 @@ function _templateObject7$b() {
   return data;
 }
 
-function _templateObject6$e() {
+function _templateObject6$f() {
   var data = _taggedTemplateLiteral(["\n  margin-top: ", ";\n  position: relative;\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  padding: 0.8rem 4rem 0.8rem 1.6rem;\n  border: solid 1px ", ";\n  color: ", ";\n  border-radius: 3.2rem;\n  transition: visibility 0.1s, opacity 0.1s ease-in-out;\n  font-weight: 700;\n  float: right;\n  margin-bottom: 1.6rem;\n\n  cursor: pointer;\n\n  .expanded > & {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  &:hover {\n    text-decoration: underline;\n    background-color: ", ";\n    border-color: ", ";\n  }\n\n  &:active {\n    text-decoration: underline;\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    svg {\n      fill: #fff;\n    }\n  }\n\n  > svg {\n    transform: rotate(180deg);\n    height: 1.6rem;\n    fill: ", ";\n    height: 1.6rem;\n    position: absolute;\n    width: 1.6rem;\n    top: 1.2rem;\n    right: 1.6rem;\n  }\n"]);
 
-  _templateObject6$e = function _templateObject6() {
+  _templateObject6$f = function _templateObject6() {
     return data;
   };
 
@@ -8186,7 +8197,7 @@ var IconStyle = function IconStyle(fontSize) {
 };
 var IconExpandedStyle = css$1(_templateObject4$i());
 var IconFullWidth = css$1(_templateObject5$h());
-var collapseButtonStyle = css$1(_templateObject6$e(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
+var collapseButtonStyle = css$1(_templateObject6$f(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
 var baseLinkStyle = css$1(_templateObject7$b(), colors.theme1.mid, colors.theme1.mid);
 
 var measureElement = function measureElement(element) {
