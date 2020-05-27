@@ -49,20 +49,35 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-function _objectSpread(target) {
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
 
-    if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
+    if (i % 2) {
+      ownKeys(source, true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(source).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
     }
-
-    ownKeys.forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    });
   }
 
   return target;
@@ -466,7 +481,7 @@ var fileIcon = function fileIcon(fileSvgPath) {
 var globalStyles = function globalStyles() {
   var fontSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "62.5%";
   var fontFamily = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
-  return css$1(_templateObject(), fontSize, fontFamily, spacing.s, spacing.xl, spacing.m, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, fileIcon(filePdfPath), fileIcon(filePowerpointPath), fileIcon(fileWordPath), fileIcon(fileExcelPath), fileIcon(filePath), colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
+  return css$1(_templateObject(), fontSize, fontFamily, spacing.s, spacing.xl, spacing.s, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, fileIcon(filePdfPath), fileIcon(filePowerpointPath), fileIcon(fileWordPath), fileIcon(fileExcelPath), fileIcon(filePath), colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
 };
 
 var LinkColors = css$1(_templateObject2(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
@@ -6315,37 +6330,24 @@ var InputRadio = function InputRadio(_ref) {
 };
 
 /* eslint-disable */
-// Inspired by https://github.com/garycourt/murmurhash-js
-// Ported from https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash2.cpp#L37-L86
-function murmur2(str) {
-  // 'm' and 'r' are mixing constants generated offline.
-  // They're not really 'magic', they just happen to work well.
-  // const m = 0x5bd1e995;
-  // const r = 24;
-  // Initialize the hash
-  var h = 0; // Mix 4 bytes at a time into the hash
-
-  var k,
+// murmurhash2 via https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
+function murmurhash2_32_gc(str) {
+  var l = str.length,
+      h = l ^ l,
       i = 0,
-      len = str.length;
+      k;
 
-  for (; len >= 4; ++i, len -= 4) {
+  while (l >= 4) {
     k = str.charCodeAt(i) & 0xff | (str.charCodeAt(++i) & 0xff) << 8 | (str.charCodeAt(++i) & 0xff) << 16 | (str.charCodeAt(++i) & 0xff) << 24;
-    k =
-    /* Math.imul(k, m): */
-    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16);
-    k ^=
-    /* k >>> r: */
-    k >>> 24;
-    h =
-    /* Math.imul(k, m): */
-    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16) ^
-    /* Math.imul(h, m): */
-    (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
-  } // Handle the last few bytes of the input array
+    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
+    k ^= k >>> 24;
+    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
+    h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16) ^ k;
+    l -= 4;
+    ++i;
+  }
 
-
-  switch (len) {
+  switch (l) {
     case 3:
       h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
 
@@ -6354,18 +6356,13 @@ function murmur2(str) {
 
     case 1:
       h ^= str.charCodeAt(i) & 0xff;
-      h =
-      /* Math.imul(h, m): */
-      (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
-  } // Do a few final mixes of the hash to ensure the last few
-  // bytes are well-incorporated.
-
+      h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
+  }
 
   h ^= h >>> 13;
-  h =
-  /* Math.imul(h, m): */
-  (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
-  return ((h ^ h >>> 15) >>> 0).toString(36);
+  h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
+  h ^= h >>> 15;
+  return (h >>> 0).toString(36);
 }
 
 var unitlessKeys = {
@@ -6426,7 +6423,6 @@ function memoize(fn) {
 }
 
 var ILLEGAL_ESCAPE_SEQUENCE_ERROR = "You have illegal escape sequence in your template literal, most likely inside content's property value.\nBecause you write your CSS inside a JavaScript string you actually have to do double escaping, so for example \"content: '\\00d7';\" should become \"content: '\\\\00d7';\".\nYou can read more about this here:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences";
-var UNDEFINED_AS_OBJECT_KEY_ERROR = "You have passed in falsy value as style object's key (can happen when in example you pass unexported component as computed key).";
 var hyphenateRegex = /[A-Z]|^ms/g;
 var animationRegex = /_EMO_([^_]+?)_([^]*?)_EMO_/g;
 
@@ -6434,15 +6430,15 @@ var isCustomProperty = function isCustomProperty(property) {
   return property.charCodeAt(1) === 45;
 };
 
-var isProcessableValue = function isProcessableValue(value) {
-  return value != null && typeof value !== 'boolean';
-};
-
 var processStyleName = memoize(function (styleName) {
   return isCustomProperty(styleName) ? styleName : styleName.replace(hyphenateRegex, '-$&').toLowerCase();
 });
 
 var processStyleValue = function processStyleValue(key, value) {
+  if (value == null || typeof value === 'boolean') {
+    return '';
+  }
+
   switch (key) {
     case 'animation':
     case 'animationName':
@@ -6615,7 +6611,7 @@ function createStringFromObject(mergedProps, registered, obj) {
       if (_typeof(value) !== 'object') {
         if (registered != null && registered[value] !== undefined) {
           string += _key + "{" + registered[value] + "}";
-        } else if (isProcessableValue(value)) {
+        } else {
           string += processStyleName(_key) + ":" + processStyleValue(_key, value) + ";";
         }
       } else {
@@ -6625,9 +6621,7 @@ function createStringFromObject(mergedProps, registered, obj) {
 
         if (Array.isArray(value) && typeof value[0] === 'string' && (registered == null || registered[value[0]] === undefined)) {
           for (var _i = 0; _i < value.length; _i++) {
-            if (isProcessableValue(value[_i])) {
-              string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
-            }
+            string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
           }
         } else {
           var interpolated = handleInterpolation(mergedProps, registered, value, false);
@@ -6642,10 +6636,6 @@ function createStringFromObject(mergedProps, registered, obj) {
 
             default:
               {
-                if (process.env.NODE_ENV !== 'production' && _key === 'undefined') {
-                  console.error(UNDEFINED_AS_OBJECT_KEY_ERROR);
-                }
-
                 string += _key + "{" + interpolated + "}";
               }
           }
@@ -6721,7 +6711,7 @@ var serializeStyles = function serializeStyles(args, registered, mergedProps) {
     match[1];
   }
 
-  var name = murmur2(styles) + identifierName;
+  var name = murmurhash2_32_gc(styles) + identifierName;
 
   if (process.env.NODE_ENV !== 'production') {
     // $FlowFixMe SerializedStyles type doesn't have toString property (and we don't want to add it)
@@ -7008,7 +6998,7 @@ var Button = function Button(_ref) {
   });
   style && styles.push(style);
 
-  var props = _objectSpread({
+  var props = _objectSpread2({
     "id": id,
     "css": styles,
     "className": cssClass.join(" "),
@@ -7700,80 +7690,8 @@ var ExpandButton = function ExpandButton(_ref) {
   }));
 };
 
-function _templateObject4$f() {
-  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 1.4rem;\n  padding-bottom: 0;\n"]);
-
-  _templateObject4$f = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3$i() {
-  var data = _taggedTemplateLiteral(["\n  padding-bottom: .8rem;\n  font-size: 1.8rem;\n  font-weight: 400;\n"]);
-
-  _templateObject3$i = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2$j() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 1.4rem;\n  padding-bottom: 0.8rem;\n"]);
-
-  _templateObject2$j = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject$k() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  p {\n    color: ", ";\n  }\n  font-weight: 500;\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: #dadbd9;\n  }\n  h3 {\n    text-decoration: underline;\n    color: ", ";\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n  border-bottom: 1px solid ", ";\n"]);
-
-  _templateObject$k = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-var wrapper$4 = css$1(_templateObject$k(), colors.theme3.dark, colors.theme1.midLight, colors.theme1.mid, colors.theme3.light);
-var news = css$1(_templateObject2$j());
-var preambleStyle = css$1(_templateObject3$i());
-var bottomText = css$1(_templateObject4$f(), colors.theme3.mid);
-
-/** @jsx jsx */
-var ListItem = function ListItem(_ref) {
-  var children = _ref.children,
-      headline = _ref.headline,
-      preamble = _ref.preamble,
-      bottomText$1 = _ref.bottomText,
-      type = _ref.type,
-      reviewedDate = _ref.reviewedDate,
-      href = _ref.href,
-      style = _ref.style;
-  return jsx("a", {
-    css: [wrapper$4, style],
-    className: "noStyle",
-    href: href
-  }, type && jsx("p", {
-    css: news
-  }, " ", type.toUpperCase(), reviewedDate && jsx(React.Fragment, null, ": ", jsx(DateFormat, {
-    date: reviewedDate,
-    showDate: true
-  }))), jsx(SubHeading, {
-    level: 3
-  }, headline), children, preamble && jsx("p", {
-    css: preambleStyle
-  }, preamble), bottomText$1 && jsx("p", {
-    css: bottomText
-  }, bottomText$1));
-};
-
 function _templateObject6$c() {
-  var data = _taggedTemplateLiteral(["\n    ", " {\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n  &:hover {\n    background-color: ", ";\n  }\n  &:active {\n    background-color: ", ";\n    h3 {\n      color: ", ";\n    }\n  }\n"]);
 
   _templateObject6$c = function _templateObject6() {
     return data;
@@ -7783,9 +7701,107 @@ function _templateObject6$c() {
 }
 
 function _templateObject5$e() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: 2.4rem;\n    margin-bottom: 1.6rem;\n    padding: 0 2.4rem;\n    &:first-of-type {\n        margin-left: 0;\n    }\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 2.4rem;\n        &:first-of-type {\n            margin-left: 2.4rem;\n        }\n        margin-left: 2.4rem;\n        margin-bottom: 0;\n        margin-top: -.4rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 1.4rem;\n  line-height: 2.4rem;\n  padding-bottom: 0;\n"]);
 
   _templateObject5$e = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$f() {
+  var data = _taggedTemplateLiteral(["\n  padding-bottom: .8rem;\n  font-size: 1.8rem;\n  font-weight: 400;\n  color: ", ";\n"]);
+
+  _templateObject4$f = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$i() {
+  var data = _taggedTemplateLiteral(["\n  font-size: ", ";\n  padding-bottom: ", ";\n  text-decoration: underline;\n  font-weight: 700;\n  display: block;\n  padding-top: .4rem;\n"]);
+
+  _templateObject3$i = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$j() {
+  var data = _taggedTemplateLiteral(["\n  font-size: 1.4rem;\n  padding-bottom: 0.8rem;\n  line-height: 2.4rem;\n  color: ", ";\n"]);
+
+  _templateObject2$j = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$k() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  font-weight: 500;\n  p {\n    color: ", ";\n  }\n  p.listItemHeadline {\n      color: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n    p {\n      text-decoration: none;\n    }\n  }\n  &:active {\n    background-color: ", ";\n    .listItemHeadline {\n      color: ", ";\n    }\n    p {\n      text-decoration: none;\n    }\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n  border-bottom: 1px solid ", ";\n"]);
+
+  _templateObject$k = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var wrapper$4 = css$1(_templateObject$k(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.light);
+var news = css$1(_templateObject2$j(), colors.theme3.dark);
+var headline = css$1(_templateObject3$i(), spacing.m, spacing.xs);
+var preambleStyle = css$1(_templateObject4$f(), colors.theme3.dark);
+var bottomText = css$1(_templateObject5$e(), colors.theme3.mid);
+var invertedLink = css$1(_templateObject6$c(), colors.common.white, colors.common.white, colors.theme1.xDark);
+
+/** @jsx jsx */
+var ListItem = function ListItem(_ref) {
+  var children = _ref.children,
+      headline$1 = _ref.headline,
+      preamble = _ref.preamble,
+      bottomText$1 = _ref.bottomText,
+      type = _ref.type,
+      reviewedDate = _ref.reviewedDate,
+      href = _ref.href,
+      headlineLevel = _ref.headlineLevel,
+      headlineStyleLevel = _ref.headlineStyleLevel,
+      style = _ref.style,
+      invertedLinkStyle = _ref.invertedLinkStyle;
+  return jsx("a", {
+    css: [wrapper$4, invertedLinkStyle && invertedLink, style],
+    className: "noStyle",
+    href: href
+  }, type && jsx("p", {
+    css: news
+  }, " ", type.toUpperCase(), reviewedDate && jsx(React.Fragment, null, ": ", jsx(DateFormat, {
+    date: reviewedDate,
+    showDate: true
+  }))), jsx("p", {
+    css: headline,
+    className: "listItemHeadline"
+  }, headline$1), children, preamble && jsx("p", {
+    css: preambleStyle
+  }, preamble), bottomText$1 && jsx("p", {
+    css: bottomText
+  }, bottomText$1));
+};
+
+function _templateObject6$d() {
+  var data = _taggedTemplateLiteral(["\n    ", " {\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
+
+  _templateObject6$d = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$f() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: 2.4rem;\n    margin-bottom: 1.6rem;\n    padding: 0 2.4rem;\n    &:first-of-type {\n        margin-left: 0;\n    }\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 2.4rem;\n        &:first-of-type {\n            margin-left: 2.4rem;\n        }\n        margin-left: 2.4rem;\n        margin-bottom: 0;\n        margin-top: -.4rem;\n    }\n"]);
+
+  _templateObject5$f = function _templateObject5() {
     return data;
   };
 
@@ -7835,8 +7851,8 @@ var sourceStyle = css$1(_templateObject$l(), medium, colors.theme1.light, medium
 var firstRow = css$1(_templateObject2$k(), colors.theme3.light, medium);
 var firstRowUsabilla = css$1(_templateObject3$j(), medium);
 var secondRow = css$1(_templateObject4$g(), medium);
-var buttonStyle$1 = css$1(_templateObject5$e(), medium);
-var rightAlign = css$1(_templateObject6$c(), medium);
+var buttonStyle$1 = css$1(_templateObject5$f(), medium);
+var rightAlign = css$1(_templateObject6$d(), medium);
 
 /** @jsx jsx */
 var Source = function Source(_ref) {
@@ -7937,20 +7953,20 @@ function _templateObject7$a() {
   return data;
 }
 
-function _templateObject6$d() {
+function _templateObject6$e() {
   var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    color: ", ";\n    font-weight: 500;\n    ", "{\n        font-size: 2.1rem;\n    }\n\n"]);
 
-  _templateObject6$d = function _templateObject6() {
+  _templateObject6$e = function _templateObject6() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject5$f() {
+function _templateObject5$g() {
   var data = _taggedTemplateLiteral(["\n    visibility: hidden;\n"]);
 
-  _templateObject5$f = function _templateObject5() {
+  _templateObject5$g = function _templateObject5() {
     return data;
   };
 
@@ -8000,8 +8016,8 @@ var paginationWrapperStyle = css$1(_templateObject$n(), large);
 var pageStyle = css$1(_templateObject2$l(), colors.theme1.mid, medium);
 var prevPageStyle = css$1(_templateObject3$k(), medium, colors.theme1.mid);
 var nextPageStyle = css$1(_templateObject4$h(), medium, colors.theme1.mid);
-var prevPageStyleHidden = css$1(_templateObject5$f());
-var distanceIndicatorStyle = css$1(_templateObject6$d(), colors.theme1.mid, medium);
+var prevPageStyleHidden = css$1(_templateObject5$g());
+var distanceIndicatorStyle = css$1(_templateObject6$e(), colors.theme1.mid, medium);
 var currentPageStyle = css$1(_templateObject7$a(), colors.theme1.dark, colors.theme1.mid);
 
 var Pagination = function Pagination(_ref) {
@@ -8134,20 +8150,20 @@ function _templateObject7$b() {
   return data;
 }
 
-function _templateObject6$e() {
+function _templateObject6$f() {
   var data = _taggedTemplateLiteral(["\n  margin-top: ", ";\n  position: relative;\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  padding: 0.8rem 4rem 0.8rem 1.6rem;\n  border: solid 1px ", ";\n  color: ", ";\n  border-radius: 3.2rem;\n  transition: visibility 0.1s, opacity 0.1s ease-in-out;\n  font-weight: 700;\n  float: right;\n  margin-bottom: 1.6rem;\n\n  cursor: pointer;\n\n  .expanded > & {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  &:hover {\n    text-decoration: underline;\n    background-color: ", ";\n    border-color: ", ";\n  }\n\n  &:active {\n    text-decoration: underline;\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    svg {\n      fill: #fff;\n    }\n  }\n\n  > svg {\n    transform: rotate(180deg);\n    height: 1.6rem;\n    fill: ", ";\n    height: 1.6rem;\n    position: absolute;\n    width: 1.6rem;\n    top: 1.2rem;\n    right: 1.6rem;\n  }\n"]);
 
-  _templateObject6$e = function _templateObject6() {
+  _templateObject6$f = function _templateObject6() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject5$g() {
+function _templateObject5$h() {
   var data = _taggedTemplateLiteral(["\n    margin-left:auto!important;\n"]);
 
-  _templateObject5$g = function _templateObject5() {
+  _templateObject5$h = function _templateObject5() {
     return data;
   };
 
@@ -8199,8 +8215,8 @@ var IconStyle = function IconStyle(fontSize) {
   return css$1(_templateObject3$l(), fontSize, fontSize, medium);
 };
 var IconExpandedStyle = css$1(_templateObject4$i());
-var IconFullWidth = css$1(_templateObject5$g());
-var collapseButtonStyle = css$1(_templateObject6$e(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
+var IconFullWidth = css$1(_templateObject5$h());
+var collapseButtonStyle = css$1(_templateObject6$f(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
 var baseLinkStyle = css$1(_templateObject7$b(), colors.theme1.mid, colors.theme1.mid);
 
 var measureElement = function measureElement(element) {
