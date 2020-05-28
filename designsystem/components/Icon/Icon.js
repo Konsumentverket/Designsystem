@@ -27,6 +27,7 @@ import FilePdf from '../../icons/SystemIcons/FilePdf';
 import FilePowerpoint from '../../icons/SystemIcons/FilePowerpoint';
 import FileWord from '../../icons/SystemIcons/FileWord';
 import File from '../../icons/SystemIcons/File';
+import Warn from '../../icons/SystemIcons/Warn';
 
 const iconDefinitions = {
 	Adapt,
@@ -54,7 +55,8 @@ const iconDefinitions = {
 	FilePdf,
 	FilePowerpoint,
 	FileWord,
-	File
+	File,
+	Warn
 };
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
