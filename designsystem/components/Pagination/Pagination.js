@@ -4,7 +4,7 @@ import React from 'react'
 import { paginationWrapperStyle,pageStyle,prevPageStyle,nextPageStyle,distanceIndicatorStyle,currentPageStyle,prevPageStyleHidden } from './Pagination.css';
 
 
-export const Pagination = ({pageSize, total, currentPage, baseUrl, onClick, style}) => {
+export const Pagination = ({pageSize, total, currentPage, baseUrl, onClick, style, seoCallback}) => {
     if(total == 0) return null;
 
     if(!onClick){ onClick = () => {} }
@@ -51,6 +51,11 @@ export const Pagination = ({pageSize, total, currentPage, baseUrl, onClick, styl
     const lastPage = Math.max(...links);
     const isLastPage = lastPage == currentPage;
     
+    const prevPage = isFirstPage ? null : createHref(currentPage-1)
+    const nextPage = isLastPage ? null :  createHref(currentPage+1) 
+
+    const SeoCallbackResult = seoCallback ? seoCallback(prevPage,nextPage) : null;
+
     const getClass = (pageNumber) => {
         if(lastPage === pageNumber)
             return "last";
@@ -70,6 +75,7 @@ export const Pagination = ({pageSize, total, currentPage, baseUrl, onClick, styl
         )}
         {lastLink()}
         {isLastPage ? <span css={[nextPageStyle,prevPageStyleHidden]}>Nästa sida</span> : <a href={createHref(currentPage+1)} onClick={(e)=> onClick(e,currentPage+1)} css={nextPageStyle}>Nästa sida</a>}
+        {SeoCallbackResult}
     </nav>
 
 }

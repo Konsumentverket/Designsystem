@@ -8036,7 +8036,8 @@ var Pagination = function Pagination(_ref) {
       currentPage = _ref.currentPage,
       baseUrl = _ref.baseUrl,
       _onClick = _ref.onClick,
-      style = _ref.style;
+      style = _ref.style,
+      seoCallback = _ref.seoCallback;
   if (total == 0) return null;
 
   if (!_onClick) {
@@ -8109,6 +8110,9 @@ var Pagination = function Pagination(_ref) {
   var isFirstPage = currentPage == 1;
   var lastPage = Math.max.apply(Math, _toConsumableArray(links));
   var isLastPage = lastPage == currentPage;
+  var prevPage = isFirstPage ? null : createHref(currentPage - 1);
+  var nextPage = isLastPage ? null : createHref(currentPage + 1);
+  var SeoCallbackResult = seoCallback ? seoCallback(prevPage, nextPage) : null;
 
   var getClass = function getClass(pageNumber) {
     if (lastPage === pageNumber) return "last";
@@ -8147,7 +8151,7 @@ var Pagination = function Pagination(_ref) {
       return _onClick(e, currentPage + 1);
     },
     css: nextPageStyle
-  }, "N\xE4sta sida"));
+  }, "N\xE4sta sida"), SeoCallbackResult);
 };
 
 function _templateObject7$b() {
