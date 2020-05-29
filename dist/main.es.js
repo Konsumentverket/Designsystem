@@ -7937,8 +7937,9 @@ var DisplayAlphabet = function DisplayAlphabet(_ref) {
       visibleLetters = _ref.visibleLetters;
   return jsx("div", null, jsx("div", {
     css: alphabetWrapper
-  }, alphabet.map(function (letter, i) {
+  }, alphabet.map(function (letter) {
     return jsx("a", {
+      key: letter,
       tabIndex: visibleLetters && Array.isArray(visibleLetters) ? !visibleLetters.some(function (v) {
         return v === letter;
       }) ? '-1' : null : null,

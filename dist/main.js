@@ -7944,8 +7944,9 @@ var DisplayAlphabet = function DisplayAlphabet(_ref) {
       visibleLetters = _ref.visibleLetters;
   return core.jsx("div", null, core.jsx("div", {
     css: alphabetWrapper
-  }, alphabet.map(function (letter, i) {
+  }, alphabet.map(function (letter) {
     return core.jsx("a", {
+      key: letter,
       tabIndex: visibleLetters && Array.isArray(visibleLetters) ? !visibleLetters.some(function (v) {
         return v === letter;
       }) ? '-1' : null : null,
