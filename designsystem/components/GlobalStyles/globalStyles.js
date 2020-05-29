@@ -80,7 +80,11 @@ const globalStyles = (
       p {
         padding-bottom: ${spacing.s};
         font-size: 1.8rem;
-        line-height: 3.2rem;
+        line-height: ${spacing.l};
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
       }
 
       ul {
