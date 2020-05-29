@@ -19,8 +19,9 @@ export const DisplayAlphabet = ({
   visibleLetters
 }) => <div>
     <div css={css.alphabetWrapper}>
-      {alphabet.map((letter, i) =>
+      {alphabet.map(letter =>
         <a
+          key={letter}
           tabIndex={(visibleLetters && Array.isArray(visibleLetters)) ? !visibleLetters.some(v => v === letter) ? '-1' : null : null}
           css={[
             css.link,
