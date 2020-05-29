@@ -18,7 +18,7 @@ export const ListItem = ({
   invertedLinkStyle,
   disabled
 }) => <a
-  css={[css.wrapper, invertedLinkStyle && css.invertedLink, disabled && css.disabled]}
+  css={[css.wrapper, invertedLinkStyle && css.invertedLink, disabled && css.disabled, style]}
   className='noStyle'
   tabIndex={disabled ? '-1' : null}
   href={href}
