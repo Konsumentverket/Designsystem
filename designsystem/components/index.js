@@ -10,7 +10,7 @@ export { DateFormat, Formats } from './DateFormat/DateFormat.js'
 export { Icon } from './Icon/Icon.js'
 export { checkPath } from '../icons/SystemIcons/Check'
 export { warnPath } from '../icons/SystemIcons/Warn'
-export { EditorIcon } from './Icon/EditorIcon.js' 
+export { EditorIcon } from './Icon/EditorIcon.js'
 
 //headings
 export { Heading } from './Headings/Heading.js'
@@ -40,6 +40,7 @@ export { ValidationResponse } from './ValidationResponse/ValidationResponse.js'
 export { Dropdown } from './Dropdown/Dropdown.js'
 export { ExpandButton } from './Button/ExpandButton.js'
 export { ListItem } from './ListItem/ListItem.js'
+export { DisplayAlphabet } from './DisplayAlphabet/DisplayAlphabet'
 
 //misc
 export { Source } from './Source/Source.js'

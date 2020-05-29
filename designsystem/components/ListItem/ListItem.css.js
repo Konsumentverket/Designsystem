@@ -40,6 +40,16 @@ export const news = css`
   color: ${colors.theme3.dark};
 `
 
+export const disabled = css`
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none !important;
+`
+
+export const headlineDisabled = css`
+  color: ${colors.theme3.midDark} !important;
+  text-decoration: none !important;
+`
 export const headline = css`
   font-size: ${spacing.m};
   padding-bottom: ${spacing.xs};
