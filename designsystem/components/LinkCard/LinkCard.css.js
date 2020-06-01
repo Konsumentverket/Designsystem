@@ -9,6 +9,9 @@ export const wrapper = css`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    border: 1px solid ${colors.theme3.midLight};
+    overflow: hidden;
+
 `
 
 export const linkTextMainLinkStyle = css`
@@ -16,11 +19,29 @@ export const linkTextMainLinkStyle = css`
 `
 
 export const mainLinkStyle = css`
-    outline-offset: -2px;
-    padding: 1.6rem ;
+    padding: 1.6rem;
     box-sizing:border-box;
-    box-shadow: none !important;
     text-decoration: none !important;
+    
+    &:hover{
+        border-radius: .8rem .8rem 0 0 !important;
+        box-shadow: none !important;
+    }
+
+    &:visited svg{
+        fill: ${colors.theme1.mid}!important;
+    }
+
+    .tabnav &:focus {
+        outline: none;
+        
+        > *{
+            outline: 4px solid ${colors.states.focus};
+            outline-offset: 6px;
+        }
+    }
+
+
 
     width: 100%;
     span{
@@ -50,7 +71,10 @@ export const childrenWrapper = css`
 
     display: inline-flex;
     flex-direction:column;
-    padding: 0 1.6rem 1.6rem 1.6rem;
+    padding: 0 0 1.6rem 0;
+    a:hover{
+        border-radius: 0 !important;
+    }
 
 `
 
@@ -94,5 +118,12 @@ export const linkTextCardContentStyle = css`
         padding-left: 20%;
         padding-right: 0%;
     }
+
+`
+
+export const customFontSize = css` 
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+    font-weight: normal;
 
 `

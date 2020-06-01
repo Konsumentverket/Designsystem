@@ -10,5 +10,5 @@ export const SubHeading = ({ children, text, style, level = 2,styleLevel, ...oth
     const SelectedHeading = headings[level - 1] || 'h2'
     const SelectedStyling = stylings[styleLevel ? styleLevel -1 : level - 1]
 
-    return <SelectedHeading css={[commonSubHeadingStyle, SelectedStyling, style]} {...otherAttr}> {children}{text}</SelectedHeading>
+    return <SelectedHeading css={[commonSubHeadingStyle, style, SelectedStyling]} {...otherAttr}> {children}{text}</SelectedHeading>
 }

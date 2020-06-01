@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react';
-import { wrapper, mainLinkStyle, childrenWrapper, showAllLink, innerTextWrapperStyle, rotateArrow } from './LinkCard.css';
+import { wrapper, mainLinkStyle, childrenWrapper, showAllLink, innerTextWrapperStyle, rotateArrow,customFontSize } from './LinkCard.css';
 import { Icon } from '../Icon/Icon';    
 import {SubHeading} from '../Headings/SubHeading'
 
@@ -16,7 +16,7 @@ const LinkCard = React.forwardRef(({text,href,children,id,secondaryArrowStyle = 
     return <div id={id} css={[wrapper,style]}>
             <a ref={ref} href={href} css={mainLinkStyle} onClick={onClick}>
                 <SubHeading level={headingLevel} styleLevel={3} style={innerTextWrapperStyle}>    
-                    <span>{text}</span>
+                    <span css={customFontSize}>{text}</span>
                     <Icon aria-hidden='true' style={secondaryArrowStyle ? rotateArrow : null} icon={secondaryArrowStyle ? 'LinkArrow':'Arrow'} />
                 </SubHeading>
             </a>
