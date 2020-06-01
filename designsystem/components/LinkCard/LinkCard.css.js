@@ -72,8 +72,11 @@ export const childrenWrapper = css`
     display: inline-flex;
     flex-direction:column;
     padding: 0 0 1.6rem 0;
-    a:hover{
-        border-radius: 0 !important;
+    a{
+        font-weight: normal !important;
+        &:hover{
+            border-radius: 0 !important;
+        }
     }
 
 `
@@ -87,6 +90,9 @@ export const showAllLink = css`
     margin: 0 1.6rem;
     line-height: 2.4rem;
     margin-top: auto;
+    a{
+        font-weight: 500 !important;
+    }
     
 `
 
@@ -124,6 +130,6 @@ export const linkTextCardContentStyle = css`
 export const customFontSize = css` 
     font-size: 2.1rem;
     line-height: 2.4rem;
-    font-weight: normal;
+    font-weight: 500;
 
 `
