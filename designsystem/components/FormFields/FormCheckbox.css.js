@@ -58,7 +58,7 @@ export const checkbox = css`
     }
   }
 
-  .checkbox:focus + .checkbox-label {
+  .tabnav & .checkbox:focus + .checkbox-label {
     outline: ${colors.states.focus} solid 2px;
     outline-offset: 2px;
     box-shadow: none;
