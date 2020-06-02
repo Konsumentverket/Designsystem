@@ -7,7 +7,7 @@ import { text } from '@storybook/addon-knobs';
 import { css } from '@emotion/core';
 import { WithContentExpander } from './WithContentExpander';
 import { SubHeading } from '../Headings/SubHeading';
-import { grayContentExpanderWrapper } from './WithContentExpander.css';
+import { grayContentExpanderWrapper, grayFocusedOnExpansionWrapper } from './WithContentExpander.css';
 import { Button } from '../Button/Button';
 
 
@@ -27,6 +27,16 @@ storiesOf('Digitala Produkter|Komponenter', module)
 
         <SubHeading styleLevel={4}>Expanderingselement i grå box med states</SubHeading>
         <div css={grayContentExpanderWrapper}>
+            <WithContentExpander
+                linkElement={<SubHeading text="Klicka här för att expandera innehållet" />}
+                wrappedComponent={<p>Jag är det innehållet som expanderades</p>}
+            />
+        </div>
+
+        <br /><br /><br /><br /><br />
+
+        <SubHeading styleLevel={4}>Expanderingselement i grå box med states</SubHeading>
+        <div css={grayFocusedOnExpansionWrapper}>
             <WithContentExpander
                 linkElement={<SubHeading text="Klicka här för att expandera innehållet" />}
                 wrappedComponent={<p>Jag är det innehållet som expanderades</p>}

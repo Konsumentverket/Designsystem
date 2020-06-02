@@ -2395,7 +2395,7 @@ var IconCard = React.forwardRef(function (_ref, ref) {
 });
 
 function _templateObject$3() {
-  var data = _taggedTemplateLiteral(["\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius:1.6rem;\n    color: ", ";\n    padding: .4rem 1.6rem;\n    display: table;\n    min-height: 3rem;\n    text-decoration: none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:inline-block;\n    vertical-align:middle;\n    box-sizing:border-box;\n    &:hover {\n        background-color: ", ";\n        box-shadow:inset 0px 0px 0px 1px ", ";\n        text-decoration:underline;\n    }\n    &:active {\n        color:#fff;\n        background-color: ", ";\n        box-shadow:none;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    box-shadow:inset 0px 0px 0px 1px ", ";\n    border-radius:1.6rem;\n    color: ", ";\n    padding: .4rem 1.6rem;\n    display: table;\n    min-height: 3rem;\n    text-decoration: none;\n    font-size:1.6rem;\n    font-weight: 500;\n    line-height:2.4rem;\n    display:inline-block;\n    vertical-align:middle;\n    box-sizing:border-box;\n\n    &:hover {\n        background-color: ", ";\n        box-shadow:inset 0px 0px 0px 1px ", ";\n        text-decoration:underline;\n    }\n    &:active {\n        color:#fff;\n        background-color: ", ";\n        box-shadow:none;\n    }\n"]);
 
   _templateObject$3 = function _templateObject() {
     return data;
@@ -5264,8 +5264,18 @@ var Pagination = function Pagination(_ref) {
   }, "N\xE4sta sida"), SeoCallbackResult);
 };
 
-function _templateObject7$c() {
+function _templateObject8$b() {
   var data = _taggedTemplateLiteral(["\n  color: ", ";\n  h1,\n  h2,\n  h3,\n  h4,\n  h5,\n  h6 {\n    color: ", ";\n  }\n  &:hover {\n    text-decoration: underline !important;\n  }\n"]);
+
+  _templateObject8$b = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7$c() {
+  var data = _taggedTemplateLiteral(["\n  margin-top: ", ";\n  position: relative;\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  padding: 0.8rem 4rem 0.8rem 1.6rem;\n  border: solid 1px ", ";\n  color: ", ";\n  border-radius: 3.2rem;\n  transition: visibility 0.1s, opacity 0.1s ease-in-out;\n  font-weight: 700;\n  float: right;\n  margin-bottom: 1.6rem;\n\n  cursor: pointer;\n\n  .expanded > & {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  &:hover {\n    text-decoration: underline;\n    background-color: ", ";\n    border-color: ", ";\n  }\n\n  &:active {\n    text-decoration: underline;\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    svg {\n      fill: #fff;\n    }\n  }\n\n  > svg {\n    transform: rotate(180deg);\n    height: 1.6rem;\n    fill: ", ";\n    height: 1.6rem;\n    position: absolute;\n    width: 1.6rem;\n    top: 1.2rem;\n    right: 1.6rem;\n  }\n"]);
 
   _templateObject7$c = function _templateObject7() {
     return data;
@@ -5275,7 +5285,7 @@ function _templateObject7$c() {
 }
 
 function _templateObject6$g() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: ", ";\n  position: relative;\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  padding: 0.8rem 4rem 0.8rem 1.6rem;\n  border: solid 1px ", ";\n  color: ", ";\n  border-radius: 3.2rem;\n  transition: visibility 0.1s, opacity 0.1s ease-in-out;\n  font-weight: 700;\n  float: right;\n  margin-bottom: 1.6rem;\n\n  cursor: pointer;\n\n  .expanded > & {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  &:hover {\n    text-decoration: underline;\n    background-color: ", ";\n    border-color: ", ";\n  }\n\n  &:active {\n    text-decoration: underline;\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    svg {\n      fill: #fff;\n    }\n  }\n\n  > svg {\n    transform: rotate(180deg);\n    height: 1.6rem;\n    fill: ", ";\n    height: 1.6rem;\n    position: absolute;\n    width: 1.6rem;\n    top: 1.2rem;\n    right: 1.6rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-left:auto!important;\n"]);
 
   _templateObject6$g = function _templateObject6() {
     return data;
@@ -5285,7 +5295,7 @@ function _templateObject6$g() {
 }
 
 function _templateObject5$i() {
-  var data = _taggedTemplateLiteral(["\n    margin-left:auto!important;\n"]);
+  var data = _taggedTemplateLiteral(["\n  transform: rotate(180deg);\n"]);
 
   _templateObject5$i = function _templateObject5() {
     return data;
@@ -5295,7 +5305,7 @@ function _templateObject5$i() {
 }
 
 function _templateObject4$j() {
-  var data = _taggedTemplateLiteral(["\n  transform: rotate(180deg);\n"]);
+  var data = _taggedTemplateLiteral(["\n    transition: transform .2s ease-out;\n    width: ", ";\n    height: ", ";\n    margin-left: .5rem;\n    display:flex;\n    ", " {\n        margin-left: 1rem;\n    }\n"]);
 
   _templateObject4$j = function _templateObject4() {
     return data;
@@ -5305,7 +5315,7 @@ function _templateObject4$j() {
 }
 
 function _templateObject3$m() {
-  var data = _taggedTemplateLiteral(["\n    transition: transform .2s ease-out;\n    width: ", ";\n    height: ", ";\n    margin-left: .5rem;\n    display:flex;\n    ", " {\n        margin-left: 1rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n  .link-element a {\n\n    .link-element-container {\n\n        h1, h2, h3, h4 {\n            width: 85%;\n            white-space: pre-line;\n            margin-bottom: 0;\n        }\n\n        display: flex;\n        align-items: center;\n\n    }\n\n    font-weight: 600;\n    display: inline-block;\n    position: relative;\n    text-decoration: none;\n    position: relative;\n    ", " {\n      width: 100%;\n    }\n\n    .full-width& {\n      display: block;\n    }\n\n    svg {\n      font-size: inherit;\n      vertical-align: middle;\n      fill: ", ";\n      flex-shrink: 0;\n    }\n  }\n\n  .expand-section {\n    max-height: 0;\n    overflow: hidden;\n    height: auto;\n    transition: all 0.3s ease-in-out;\n\n    &.expanded {\n      max-height: 100%;\n    }\n    &:not(.expanded) {\n      visibility: hidden;\n    }\n  }\n"]);
 
   _templateObject3$m = function _templateObject3() {
     return data;
@@ -5315,7 +5325,7 @@ function _templateObject3$m() {
 }
 
 function _templateObject2$n() {
-  var data = _taggedTemplateLiteral(["\n\n  .link-element a {\n\n    .link-element-container {\n\n        h1, h2, h3, h4 {\n            width: 85%;\n            white-space: pre-line;\n            margin-bottom: 0;\n        }\n\n        display: flex;\n        align-items: center;\n\n    }\n\n    font-weight: 600;\n    display: inline-block;\n    position: relative;\n    text-decoration: none;\n    position: relative;\n    ", " {\n      width: 100%;\n    }\n\n    .full-width& {\n      display: block;\n    }\n\n    svg {\n      font-size: inherit;\n      vertical-align: middle;\n      fill: ", ";\n      flex-shrink: 0;\n    }\n  }\n\n  .expand-section {\n    max-height: 0;\n    overflow: hidden;\n    height: auto;\n    transition: all 0.3s ease-in-out;\n\n    &.expanded {\n      max-height: 100%;\n    }\n    &:not(.expanded) {\n      visibility: hidden;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n  > .expanded > .link-element {\n    background-color: ", ";\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n    &:hover {\n      border-bottom-left-radius: 0;\n      border-bottom-right-radius: 0;\n    }\n  }\n  > div > .link-element {\n    border-radius: ", ";\n    background-color: ", ";\n    margin-bottom: 0rem!important;\n    border: 2px solid transparent;\n    &:hover {\n      border: .2rem solid ", ";\n      border-radius: ", ";\n      background-color: ", ";\n    }\n    a{\n        margin: 0 1px 1px 1px;\n        padding: ", ";\n        box-sizing: border-box;\n        &:hover {\n            text-decoration: underline;\n            cursor: pointer;\n        }\n        &[aria-expanded=\"true\"] {\n            h2,h3,h4{\n                text-decoration: underline!important;\n            }\n        }\n    }\n  }\n  > div > .expand-section {\n      background-color: ", ";\n      border: 2px solid transparent;\n      padding: ", ";\n      position: fixed;\n  }\n  > div > .expand-section.expanded {\n    border: 2px solid ", ";\n    border-bottom-left-radius: ", ";\n    border-bottom-right-radius: ", ";\n    border-top: none;\n    position: relative;\n  }\n\n"]);
 
   _templateObject2$n = function _templateObject2() {
     return data;
@@ -5334,14 +5344,15 @@ function _templateObject$p() {
   return data;
 }
 var grayContentExpanderWrapper = css$1(_templateObject$p(), colors.theme3.xLight, colors.theme1.mid, colors.states.focus);
-var ComponentWrapperStyle = css$1(_templateObject2$n(), small, colors.theme1.mid);
+var grayFocusedOnExpansionWrapper = css$1(_templateObject2$n(), colors.theme3.light, spacing.xs, colors.theme3.xLight, colors.theme1.mid, spacing.xs, colors.theme1.light, spacing.s, colors.common.white, spacing.s, colors.theme3.light, spacing.xs, spacing.xs);
+var ComponentWrapperStyle = css$1(_templateObject3$m(), small, colors.theme1.mid);
 var IconStyle = function IconStyle(fontSize) {
-  return css$1(_templateObject3$m(), fontSize, fontSize, medium);
+  return css$1(_templateObject4$j(), fontSize, fontSize, medium);
 };
-var IconExpandedStyle = css$1(_templateObject4$j());
-var IconFullWidth = css$1(_templateObject5$i());
-var collapseButtonStyle = css$1(_templateObject6$g(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
-var baseLinkStyle = css$1(_templateObject7$c(), colors.theme1.mid, colors.theme1.mid);
+var IconExpandedStyle = css$1(_templateObject5$i());
+var IconFullWidth = css$1(_templateObject6$g());
+var collapseButtonStyle = css$1(_templateObject7$c(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
+var baseLinkStyle = css$1(_templateObject8$b(), colors.theme1.mid, colors.theme1.mid);
 
 var measureElement = function measureElement(element) {
   var DOMNode = ReactDOM.findDOMNode(element);
@@ -5454,5 +5465,5 @@ var WithContentExpander = function WithContentExpander(_ref) {
   }))));
 };
 
-export { Button, CampaignFocusPuff, DateFormat, DisplayAlphabet, Dropdown, EditorIcon, ElementLinkColorStyle, ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, FormWrapper, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle, LinkWrapperInvertedColorStyle, ListItem, Pagination, PrerequisitesBox, Skeleton, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, WithContentExpander, checkPath, colors, grayContentExpanderWrapper, spacing, warnPath };
+export { Button, CampaignFocusPuff, DateFormat, DisplayAlphabet, Dropdown, EditorIcon, ElementLinkColorStyle, ElementLinkInvertedColorStyle, ExpandButton, FactBox, FocusPuff, FormCheckbox, FormRadiobutton, FormSearchField, FormWrapper, Formats, GlobalStyles, Heading, Icon, IconCard, InputRadio, InputText, LinkCard, LinkTextCard, LinkWrapperColorStyle, LinkWrapperInvertedColorStyle, ListItem, Pagination, PrerequisitesBox, Skeleton, Source, SubHeading, Tag, TagBlock, TextArea, ValidationResponse, WithContentExpander, checkPath, colors, grayContentExpanderWrapper, grayFocusedOnExpansionWrapper, spacing, warnPath };
 //# sourceMappingURL=main.es.js.map

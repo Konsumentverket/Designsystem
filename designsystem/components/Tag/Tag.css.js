@@ -10,10 +10,12 @@ export const tagStyle = css`
     min-height: 3rem;
     text-decoration: none;
     font-size:1.6rem;
+    font-weight: 500;
     line-height:2.4rem;
     display:inline-block;
     vertical-align:middle;
     box-sizing:border-box;
+
     &:hover {
         background-color: ${colors.theme1.midLight};
         box-shadow:inset 0px 0px 0px 1px ${colors.theme1.xDark};
