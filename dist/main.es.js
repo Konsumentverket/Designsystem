@@ -6070,7 +6070,7 @@ var FactBox = function FactBox(_ref) {
 };
 
 function _templateObject9$3() {
-  var data = _taggedTemplateLiteral([" \n    font-size: 2.1rem;\n    line-height: 2.4rem;\n    font-weight: normal;\n\n"]);
+  var data = _taggedTemplateLiteral([" \n    font-size: 2.1rem;\n    line-height: 2.4rem;\n    font-weight: 500;\n\n"]);
 
   _templateObject9$3 = function _templateObject9() {
     return data;
@@ -6100,7 +6100,7 @@ function _templateObject7$6() {
 }
 
 function _templateObject6$7() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.4rem;\n    cursor: pointer;\n    display: block;\n    border-top: 1px solid ", ";\n    padding: .8rem 0 1.6rem 0;\n    margin: 0 1.6rem;\n    line-height: 2.4rem;\n    margin-top: auto;\n    \n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.4rem;\n    cursor: pointer;\n    display: block;\n    border-top: 1px solid ", ";\n    padding: .8rem 0 1.6rem 0;\n    margin: 0 1.6rem;\n    line-height: 2.4rem;\n    margin-top: auto;\n    a{\n        font-weight: 500 !important;\n    }\n    \n"]);
 
   _templateObject6$7 = function _templateObject6() {
     return data;
@@ -6110,7 +6110,7 @@ function _templateObject6$7() {
 }
 
 function _templateObject5$7() {
-  var data = _taggedTemplateLiteral(["\n\n    display: inline-flex;\n    flex-direction:column;\n    padding: 0 0 1.6rem 0;\n    a:hover{\n        border-radius: 0 !important;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    display: inline-flex;\n    flex-direction:column;\n    padding: 0 0 1.6rem 0;\n    a{\n        font-weight: normal !important;\n        &:hover{\n            border-radius: 0 !important;\n        }\n    }\n\n"]);
 
   _templateObject5$7 = function _templateObject5() {
     return data;
