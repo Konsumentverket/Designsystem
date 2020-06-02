@@ -45,6 +45,58 @@ export const grayContentExpanderWrapper = css`
 
 `
 
+export const grayFocusedOnExpansionWrapper = css`
+
+  .expanded > .link-element {
+    background-color: ${colors.theme3.light};
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    &:hover {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  div > .link-element {
+    border-radius: ${spacing.xs};
+    background-color: ${colors.theme3.xLight};
+    margin-bottom: 0rem!important;
+    border: 2px solid transparent;
+    &:hover {
+      border: .2rem solid ${colors.theme1.mid};
+      border-radius: ${spacing.xs};
+      background-color: ${colors.theme1.light};
+    }
+    a{
+        margin: 0 1px 1px 1px;
+        padding: ${spacing.s};
+        box-sizing: border-box;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        &[aria-expanded="true"] {
+            h2,h3,h4{
+                text-decoration: underline!important;
+            }
+        }
+    }
+  }
+  div > .expand-section {
+      background-color: ${colors.common.white};
+      border: 2px solid transparent;
+      padding: ${spacing.s};
+      position: fixed;
+  }
+  div > .expand-section.expanded {
+    border: 2px solid ${colors.theme3.light};
+    border-bottom-left-radius: ${spacing.xs};
+    border-bottom-right-radius: ${spacing.xs};
+    border-top: none;
+    position: relative;
+  }
+
+`
+
 export const ComponentWrapperStyle = css`
 
   .link-element a {
