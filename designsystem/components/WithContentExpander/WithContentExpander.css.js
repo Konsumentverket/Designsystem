@@ -47,7 +47,7 @@ export const grayContentExpanderWrapper = css`
 
 export const grayFocusedOnExpansionWrapper = css`
 
-  .expanded > .link-element {
+  > .expanded > .link-element {
     background-color: ${colors.theme3.light};
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -56,7 +56,7 @@ export const grayFocusedOnExpansionWrapper = css`
       border-bottom-right-radius: 0;
     }
   }
-  div > .link-element {
+  > div > .link-element {
     border-radius: ${spacing.xs};
     background-color: ${colors.theme3.xLight};
     margin-bottom: 0rem!important;
@@ -81,13 +81,13 @@ export const grayFocusedOnExpansionWrapper = css`
         }
     }
   }
-  div > .expand-section {
+  > div > .expand-section {
       background-color: ${colors.common.white};
       border: 2px solid transparent;
       padding: ${spacing.s};
       position: fixed;
   }
-  div > .expand-section.expanded {
+  > div > .expand-section.expanded {
     border: 2px solid ${colors.theme3.light};
     border-bottom-left-radius: ${spacing.xs};
     border-bottom-right-radius: ${spacing.xs};
