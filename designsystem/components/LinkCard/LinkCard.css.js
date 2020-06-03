@@ -100,7 +100,7 @@ export const innerTextWrapperStyle = css`
     line-height: 2.4rem!important;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     display: flex;
     font-weight: 500 !important;
     justify-content: space-between;
