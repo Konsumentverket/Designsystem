@@ -1,6 +1,7 @@
 import { css } from '@emotion/core'
 import { spacing } from '../Spacing/Spacing'
 import { colors } from '../Colors/Colors'
+import { medium } from '../GlobalStyles/globalStyles'
 
 export const alphabetWrapper = css`
   display: flex;
@@ -11,9 +12,14 @@ export const alphabetWrapper = css`
 
 export const link = css`
   display: block;
-  font-size: ${spacing.m};
-  line-height: ${spacing.l};
-  margin-left: ${spacing.s};
+  font-size: ${spacing.l};
+  line-height: ${spacing.xl};
+  /* margin-bottom: ${spacing.xs}; */
+  margin-right: ${spacing.s};
+  ${medium} {
+    font-size: ${spacing.m};
+    line-height: ${spacing.l};
+  }
 `
 export const invalidLetter = css`
   color: ${colors.theme3.midDark} !important;
@@ -37,15 +43,21 @@ export const activeLetter = css`
 
 export const linkShowAllWrapper = css`
   display: flex;
-  justify-content: flex-end;
-  padding-right: ${spacing.l};
-  margin-top: ${spacing.l};
+  justify-content: flex-start;
+  padding-right: 0;
+  margin-top: ${spacing.s};
+  ${medium} {
+    padding-right: ${spacing.l};
+    justify-content: flex-end;
+  }
 `
 
 export const linkShowAll = css`
   display: flex;
   font-size: 1.8rem;
   line-height: ${spacing.l};
-  margin-left: ${spacing.s};
+  ${medium} {
+    margin-left: ${spacing.s};
+  }
 
 `
