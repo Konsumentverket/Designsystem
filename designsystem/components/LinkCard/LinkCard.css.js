@@ -26,6 +26,11 @@ export const mainLinkStyle = css`
     &:hover{
         border-radius: .8rem .8rem 0 0 !important;
         box-shadow: none !important;
+        text-decoration: underline!important;
+    }
+    &:active {
+        background-color: ${colors.theme1.xDark}!important;
+        color: ${colors.common.white}!important;
     }
 
     &:visited svg{
