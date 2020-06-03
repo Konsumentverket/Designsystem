@@ -32,8 +32,8 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.21",
+    "date-fns": "^2.14.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "date-fns": "^2.11.0"
+    "react-dom": "^16.12.0"
   }
 }
