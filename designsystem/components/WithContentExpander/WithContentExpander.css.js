@@ -93,6 +93,9 @@ export const grayFocusedOnExpansionWrapper = css`
     border-bottom-right-radius: ${spacing.xs};
     border-top: none;
     position: relative;
+    > div {
+      margin-top: 0;
+    }
   }
 
 `
