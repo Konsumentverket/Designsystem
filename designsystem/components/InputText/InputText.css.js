@@ -54,6 +54,13 @@ export const ClearInput = css`
     }
     
 `
+export const LoadingStyle = css`
+
+    position: absolute;
+    right: 2.4rem;
+    top: 1.6rem;
+
+`
 
 export const ClearInputLabel = css` 
     appearance: none;
