@@ -140,7 +140,7 @@ export const ComponentWrapperStyle = css`
 
   .expand-section {
     max-height: 0;
-    overflow: visible;
+    overflow: hidden;
     height: auto;
     transition: all 0.3s ease-in-out;
     display: flex;
@@ -148,6 +148,12 @@ export const ComponentWrapperStyle = css`
 
     &.expanded {
       max-height: 100%;
+      overflow: visible;
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+      &::-webkit-scrollbar{
+        display:none;
+      }
     }
     &:not(.expanded) {
       visibility: hidden;
