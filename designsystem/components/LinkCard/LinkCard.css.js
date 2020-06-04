@@ -26,6 +26,11 @@ export const mainLinkStyle = css`
     &:hover{
         border-radius: .8rem .8rem 0 0 !important;
         box-shadow: none !important;
+        text-decoration: underline!important;
+    }
+    &:active {
+        background-color: ${colors.theme1.xDark}!important;
+        color: ${colors.common.white}!important;
     }
 
     &:visited svg{
@@ -100,7 +105,7 @@ export const innerTextWrapperStyle = css`
     line-height: 2.4rem!important;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-size: 2.4rem;
+    font-size: 2.1rem;
     display: flex;
     font-weight: 500 !important;
     justify-content: space-between;

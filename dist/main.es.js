@@ -2,7 +2,6 @@ import { jsx, Global, css as css$1 } from '@emotion/core';
 import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import { format, parseISO } from 'date-fns';
 import sv from 'date-fns/locale/sv';
-import 'date-fns/locale';
 import ReactDOM from 'react-dom';
 
 function _typeof(obj) {
@@ -3002,7 +3001,7 @@ function _templateObject8$6() {
 }
 
 function _templateObject7$6() {
-  var data = _taggedTemplateLiteral(["\n    line-height: 2.4rem!important;\n    margin-bottom: 0;\n    padding-bottom: 0;\n    font-size: 2.4rem;\n    display: flex;\n    font-weight: 500 !important;\n    justify-content: space-between;\n    align-items: center;\n    flex-wrap: wrap;\n    color: ", ";\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    line-height: 2.4rem!important;\n    margin-bottom: 0;\n    padding-bottom: 0;\n    font-size: 2.1rem;\n    display: flex;\n    font-weight: 500 !important;\n    justify-content: space-between;\n    align-items: center;\n    flex-wrap: wrap;\n    color: ", ";\n\n"]);
 
   _templateObject7$6 = function _templateObject7() {
     return data;
@@ -3042,7 +3041,7 @@ function _templateObject4$7() {
 }
 
 function _templateObject3$8() {
-  var data = _taggedTemplateLiteral(["\n    padding: 1.6rem;\n    box-sizing:border-box;\n    text-decoration: none !important;\n    \n    &:hover{\n        border-radius: .8rem .8rem 0 0 !important;\n        box-shadow: none !important;\n    }\n\n    &:visited svg{\n        fill: ", "!important;\n    }\n\n    .tabnav &:focus {\n        outline: none;\n        \n        > *{\n            outline: 4px solid ", ";\n            outline-offset: 6px;\n        }\n    }\n\n\n\n    width: 100%;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n        transform: rotate(-90deg);\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 1.6rem;\n    box-sizing:border-box;\n    text-decoration: none !important;\n    \n    &:hover{\n        border-radius: .8rem .8rem 0 0 !important;\n        box-shadow: none !important;\n        text-decoration: underline!important;\n    }\n    &:active {\n        background-color: ", "!important;\n        color: ", "!important;\n    }\n\n    &:visited svg{\n        fill: ", "!important;\n    }\n\n    .tabnav &:focus {\n        outline: none;\n        \n        > *{\n            outline: 4px solid ", ";\n            outline-offset: 6px;\n        }\n    }\n\n\n\n    width: 100%;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n        transform: rotate(-90deg);\n    }\n\n"]);
 
   _templateObject3$8 = function _templateObject3() {
     return data;
@@ -3072,7 +3071,7 @@ function _templateObject$9() {
 }
 var wrapper$2 = css$1(_templateObject$9(), colors.theme3.midLight);
 var linkTextMainLinkStyle = css$1(_templateObject2$9());
-var mainLinkStyle = css$1(_templateObject3$8(), colors.theme1.mid, colors.states.focus);
+var mainLinkStyle = css$1(_templateObject3$8(), colors.theme1.xDark, colors.common.white, colors.theme1.mid, colors.states.focus);
 var rotateArrow = css$1(_templateObject4$7());
 var childrenWrapper = css$1(_templateObject5$7());
 var showAllLink = css$1(_templateObject6$7(), colors.theme3.midLight);
@@ -3981,7 +3980,7 @@ function _templateObject8$8() {
 }
 
 function _templateObject7$8() {
-  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 8rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n    ", " {\n        top: 1.4rem;\n        right: 1.6rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 0px;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n    ", " {\n        top: 1.4rem;\n        right: 1.6rem;\n    }\n\n"]);
 
   _templateObject7$8 = function _templateObject7() {
     return data;
@@ -4763,7 +4762,7 @@ var ListItem = function ListItem(_ref) {
 };
 
 function _templateObject6$d() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  font-size: 1.8rem;\n  line-height: ", ";\n  margin-left: ", ";\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  font-size: 1.8rem;\n  line-height: ", ";\n  ", " {\n    margin-left: ", ";\n  }\n\n"]);
 
   _templateObject6$d = function _templateObject6() {
     return data;
@@ -4773,7 +4772,7 @@ function _templateObject6$d() {
 }
 
 function _templateObject5$f() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: flex-end;\n  padding-right: ", ";\n  margin-top: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: flex-start;\n  padding-right: 0;\n  margin-top: ", ";\n  ", " {\n    padding-right: ", ";\n    justify-content: flex-end;\n  }\n"]);
 
   _templateObject5$f = function _templateObject5() {
     return data;
@@ -4803,7 +4802,7 @@ function _templateObject3$j() {
 }
 
 function _templateObject2$k() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n  font-size: ", ";\n  line-height: ", ";\n  margin-left: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  font-size: ", ";\n  line-height: ", ";\n  /* margin-bottom: ", "; */\n  margin-right: ", ";\n  ", " {\n    font-size: ", ";\n    line-height: ", ";\n  }\n"]);
 
   _templateObject2$k = function _templateObject2() {
     return data;
@@ -4822,11 +4821,11 @@ function _templateObject$l() {
   return data;
 }
 var alphabetWrapper = css$1(_templateObject$l(), spacing.l);
-var link = css$1(_templateObject2$k(), spacing.m, spacing.l, spacing.s);
+var link = css$1(_templateObject2$k(), spacing.l, spacing.xl, spacing.xs, spacing.s, medium, spacing.m, spacing.l);
 var invalidLetter = css$1(_templateObject3$j(), colors.theme3.midDark);
 var activeLetter = css$1(_templateObject4$g(), colors.theme1.dark, colors.theme1.dark, colors.common.white, colors.theme1.dark);
-var linkShowAllWrapper = css$1(_templateObject5$f(), spacing.l, spacing.l);
-var linkShowAll = css$1(_templateObject6$d(), spacing.l, spacing.s);
+var linkShowAllWrapper = css$1(_templateObject5$f(), spacing.s, medium, spacing.l);
+var linkShowAll = css$1(_templateObject6$d(), spacing.l, medium, spacing.s);
 
 /** @jsx jsx */
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å', 'Ä', 'Ö'];
