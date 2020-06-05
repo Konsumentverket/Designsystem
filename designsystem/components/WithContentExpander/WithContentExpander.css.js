@@ -8,40 +8,42 @@ export const grayContentExpanderWrapper = css`
     background-color: ${colors.theme3.xLight};
     border-radius: 0.5rem;
 
-    .full-width {
-        border: 2px solid transparent;
-        &.expanded,:hover{
-            border: .2rem solid ${colors.theme1.mid};
-        }
-    }
-
     :focus-within {
-        .tabnav &{
-            outline: .2rem solid ${colors.states.focus};
-            outline-offset: .2rem;
-        }
-    }
-    .link-element{ 
-        margin-bottom: 0rem!important;
-        a{
-            padding: 2.4rem;
-            box-sizing: border-box;
-            &:hover {
-                text-decoration: underline;
-                background-color: inherit;
-                cursor: pointer;
-            }
-            &[aria-expanded="true"] {
-                h2,h3,h4{
-                    text-decoration: underline!important;
-                }
-            }
-        }
-    }
-    .expand-section{
-        padding: 0 2.4rem;
+      .tabnav &{
+          outline: .2rem solid ${colors.states.focus};
+          outline-offset: .2rem;
+      }
     }
 
+    > .withContentExpander {
+      .full-width {
+          border: 2px solid transparent;
+          &.expanded,:hover{
+              border: .2rem solid ${colors.theme1.mid};
+          }
+      }
+
+      > .link-element { 
+          margin-bottom: 0rem!important;
+          a{
+              padding: 2.4rem;
+              box-sizing: border-box;
+              &:hover {
+                  text-decoration: underline;
+                  background-color: inherit;
+                  cursor: pointer;
+              }
+              &[aria-expanded="true"] {
+                  h2,h3,h4{
+                      text-decoration: underline!important;
+                  }
+              }
+          }
+      }
+      > .expand-section{
+          padding: 0 2.4rem;
+      }
+    }
 
 `
 

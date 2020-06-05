@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import { InputStyle,InputWrapperStyle, ClearInput, ClearInputLabel, Label, invalidStyle, LoadingStyle } from "./InputText.css"
+import { InputStyle,InputWrapperStyle, ClearInput, Label, invalidStyle, LoadingStyle } from "./InputText.css"
 import {Icon} from '../Icon/Icon';
 import React, { useRef,useState } from 'react';
 import { VisuallyHidden } from '../GlobalStyles/globalStyles';
@@ -37,7 +37,7 @@ export const InputText = React.forwardRef(({style,wrapperStyle, placeholder, id,
             />
 
             {type == "search" && !loading && text != null && text != "" ?     
-                <span tabIndex="-1" css={label && !hideLabel ? ClearInputLabel : ClearInput} className="noState" onClick={(e) =>{
+                <span tabIndex="-1" css={ClearInput} className="noState" onClick={(e) =>{
                     e.preventDefault();
                     if(inputRef == null || inputRef.current == null) return;
                     inputRef.current.value = "";

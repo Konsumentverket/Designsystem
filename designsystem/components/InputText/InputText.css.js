@@ -40,7 +40,7 @@ export const ClearInput = css`
     right: 1.6rem;
     border: 0px;
     background-color: transparent;
-    top: 1.3rem;
+    bottom: 1.1rem;
     width: 3.2rem;
     height: 3.2rem;
     padding: 0;
@@ -58,29 +58,8 @@ export const LoadingStyle = css`
 
     position: absolute;
     right: 2.4rem;
-    top: 1.6rem;
+    bottom: 2.2rem;
 
-`
-
-export const ClearInputLabel = css` 
-    appearance: none;
-    position: absolute;
-    right: 1.6rem;
-    border: 0px;
-    background-color: transparent;
-    top: 5.3rem;
-    width: 3.2rem;
-    height: 3.2rem;
-    padding: 0;
-    svg{
-        fill: ${colors.theme1.mid};
-        width: 2.8rem;
-        height: 2.8rem;
-    }
-    &:focus{
-        outline: none;
-    }
-    
 `
 export const Label = css`
   color: #4D4D4D;
