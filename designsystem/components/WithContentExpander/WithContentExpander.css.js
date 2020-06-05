@@ -143,9 +143,17 @@ export const ComponentWrapperStyle = css`
     overflow: hidden;
     height: auto;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
 
     &.expanded {
       max-height: 100%;
+      overflow: visible;
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+      &::-webkit-scrollbar{
+        display:none;
+      }
     }
     &:not(.expanded) {
       visibility: hidden;
@@ -182,8 +190,8 @@ export const collapseButtonStyle = css`
   border-radius: 3.2rem;
   transition: visibility 0.1s, opacity 0.1s ease-in-out;
   font-weight: 700;
-  float: right;
   margin-bottom: 1.6rem;
+  margin-left:auto;
 
   cursor: pointer;
 

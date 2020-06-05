@@ -9,7 +9,6 @@ var React = require('react');
 var React__default = _interopDefault(React);
 var dateFns = require('date-fns');
 var sv = _interopDefault(require('date-fns/locale/sv'));
-require('date-fns/locale');
 var ReactDOM = _interopDefault(require('react-dom'));
 
 function _typeof(obj) {
@@ -2248,12 +2247,13 @@ var SubHeading = function SubHeading(_ref) {
       style = _ref.style,
       _ref$level = _ref.level,
       level = _ref$level === void 0 ? 2 : _ref$level,
+      tag = _ref.tag,
       styleLevel = _ref.styleLevel,
-      otherAttr = _objectWithoutProperties(_ref, ["children", "text", "style", "level", "styleLevel"]);
+      otherAttr = _objectWithoutProperties(_ref, ["children", "text", "style", "level", "tag", "styleLevel"]);
 
   var headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7'];
   var stylings = [h1Style, h2Style, h3Style, h4Style, h5Style, h6Style, h7Style];
-  var SelectedHeading = headings[level - 1] || 'h2';
+  var SelectedHeading = tag || headings[level - 1] || 'h2';
   var SelectedStyling = stylings[styleLevel ? styleLevel - 1 : level - 1];
   return core.jsx(SelectedHeading, _extends({
     css: [commonSubHeadingStyle, style, SelectedStyling]
@@ -3023,7 +3023,7 @@ function _templateObject8$6() {
 }
 
 function _templateObject7$6() {
-  var data = _taggedTemplateLiteral(["\n    line-height: 2.4rem!important;\n    margin-bottom: 0;\n    padding-bottom: 0;\n    font-size: 2.4rem;\n    display: flex;\n    font-weight: 500 !important;\n    justify-content: space-between;\n    align-items: center;\n    flex-wrap: wrap;\n    color: ", ";\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    line-height: 2.4rem!important;\n    margin-bottom: 0;\n    padding-bottom: 0;\n    font-size: 2.1rem;\n    display: flex;\n    font-weight: 500 !important;\n    justify-content: space-between;\n    align-items: center;\n    flex-wrap: wrap;\n    color: ", ";\n\n"]);
 
   _templateObject7$6 = function _templateObject7() {
     return data;
@@ -3063,7 +3063,7 @@ function _templateObject4$7() {
 }
 
 function _templateObject3$8() {
-  var data = _taggedTemplateLiteral(["\n    padding: 1.6rem;\n    box-sizing:border-box;\n    text-decoration: none !important;\n    \n    &:hover{\n        border-radius: .8rem .8rem 0 0 !important;\n        box-shadow: none !important;\n    }\n\n    &:visited svg{\n        fill: ", "!important;\n    }\n\n    .tabnav &:focus {\n        outline: none;\n        \n        > *{\n            outline: 4px solid ", ";\n            outline-offset: 6px;\n        }\n    }\n\n\n\n    width: 100%;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n        transform: rotate(-90deg);\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 1.6rem;\n    box-sizing:border-box;\n    text-decoration: none !important;\n    \n    &:hover{\n        border-radius: .8rem .8rem 0 0 !important;\n        box-shadow: none !important;\n        text-decoration: underline!important;\n    }\n    &:active {\n        background-color: ", "!important;\n        color: ", "!important;\n    }\n\n    &:visited svg{\n        fill: ", "!important;\n    }\n\n    .tabnav &:focus {\n        outline: none;\n        \n        > *{\n            outline: 4px solid ", ";\n            outline-offset: 6px;\n        }\n    }\n\n\n\n    width: 100%;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n        transform: rotate(-90deg);\n    }\n\n"]);
 
   _templateObject3$8 = function _templateObject3() {
     return data;
@@ -3093,7 +3093,7 @@ function _templateObject$9() {
 }
 var wrapper$2 = core.css(_templateObject$9(), colors.theme3.midLight);
 var linkTextMainLinkStyle = core.css(_templateObject2$9());
-var mainLinkStyle = core.css(_templateObject3$8(), colors.theme1.mid, colors.states.focus);
+var mainLinkStyle = core.css(_templateObject3$8(), colors.theme1.xDark, colors.common.white, colors.theme1.mid, colors.states.focus);
 var rotateArrow = core.css(_templateObject4$7());
 var childrenWrapper = core.css(_templateObject5$7());
 var showAllLink = core.css(_templateObject6$7(), colors.theme3.midLight);
@@ -3687,8 +3687,18 @@ function css() {
   return serializeStyles(args);
 }
 
-function _templateObject6$8() {
+function _templateObject7$7() {
   var data = _taggedTemplateLiteral(["\n  color: #4D4D4D;\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin-bottom: .8rem;\n  display: block;\n"]);
+
+  _templateObject7$7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6$8() {
+  var data = _taggedTemplateLiteral([" \n    appearance: none;\n    position: absolute;\n    right: 1.6rem;\n    border: 0px;\n    background-color: transparent;\n    top: 5.3rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    \n"]);
 
   _templateObject6$8 = function _templateObject6() {
     return data;
@@ -3698,7 +3708,7 @@ function _templateObject6$8() {
 }
 
 function _templateObject5$8() {
-  var data = _taggedTemplateLiteral([" \n    appearance: none;\n    position: absolute;\n    right: 1.6rem;\n    border: 0px;\n    background-color: transparent;\n    top: 5.3rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    \n"]);
+  var data = _taggedTemplateLiteral(["\n\n    position: absolute;\n    right: 2.4rem;\n    top: 1.6rem;\n\n"]);
 
   _templateObject5$8 = function _templateObject5() {
     return data;
@@ -3750,8 +3760,55 @@ var InputStyle = css(_templateObject$b(), colors.theme3.midLight, colors.theme1.
 var invalidStyle = css(_templateObject2$b());
 var InputWrapperStyle = css(_templateObject3$a());
 var ClearInput = css(_templateObject4$8(), colors.theme1.mid);
-var ClearInputLabel = css(_templateObject5$8(), colors.theme1.mid);
-var Label = css(_templateObject6$8());
+var LoadingStyle = css(_templateObject5$8());
+var ClearInputLabel = css(_templateObject6$8(), colors.theme1.mid);
+var Label = css(_templateObject7$7());
+
+function _templateObject$c() {
+  var data = _taggedTemplateLiteral(["\n    display: inline-block;\n    width: ", ";\n    height: ", ";\n  \n  &:after {\n    content: \" \";\n    display: block;\n    width: ", ";\n    height: ", ";\n    border-radius: 50%;\n    border: ", " solid ", ";\n    border-color: ", " transparent ", " transparent;\n    animation: lds-dual-ring 1.2s linear infinite;\n  }\n  @keyframes lds-dual-ring {\n    0% {\n      transform: rotate(0deg);\n    }\n    100% {\n      transform: rotate(360deg);\n    }\n  }\n\n"]);
+
+  _templateObject$c = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+var loaderStyle = function loaderStyle(_ref) {
+  var _ref$color = _ref.color,
+      color = _ref$color === void 0 ? colors.theme2.midLight : _ref$color,
+      _ref$width = _ref.width,
+      width = _ref$width === void 0 ? '80px' : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? "80px" : _ref$height,
+      _ref$border = _ref.border,
+      border = _ref$border === void 0 ? "6px" : _ref$border;
+  return core.css(_templateObject$c(), width, height, width, height, border, color, color, color);
+};
+
+var Loading = (function (_ref2) {
+  var color = _ref2.color,
+      _ref2$size = _ref2.size,
+      size = _ref2$size === void 0 ? "small" : _ref2$size,
+      style = _ref2.style;
+  var sizeStyle = null;
+
+  switch (size) {
+    case "small":
+      sizeStyle = {
+        width: '20px',
+        height: '20px',
+        border: '3px',
+        color: color
+      };
+  }
+
+  return core.jsx("div", {
+    css: [loaderStyle(sizeStyle), style],
+    "aria-busy": "true",
+    className: "lds-dual-ring"
+  });
+});
 
 var InputText = React__default.forwardRef(function (_ref, _ref2) {
   var style = _ref.style,
@@ -3766,9 +3823,11 @@ var InputText = React__default.forwardRef(function (_ref, _ref2) {
       label = _ref.label,
       _ref$hideLabel = _ref.hideLabel,
       hideLabel = _ref$hideLabel === void 0 ? false : _ref$hideLabel,
+      _ref$loading = _ref.loading,
+      loading = _ref$loading === void 0 ? false : _ref$loading,
       _ref$type = _ref.type,
       type = _ref$type === void 0 ? "text" : _ref$type,
-      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "id", "onChange", "onClear", "validationError", "name", "disabled", "label", "hideLabel", "type"]);
+      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "id", "onChange", "onClear", "validationError", "name", "disabled", "label", "hideLabel", "loading", "type"]);
 
   var inputRef = React.useRef();
 
@@ -3799,7 +3858,7 @@ var InputText = React__default.forwardRef(function (_ref, _ref2) {
       setText(e.target.value);
     },
     type: type
-  }, other)), type == "search" && text != null && text != "" ? core.jsx("button", {
+  }, other)), type == "search" && !loading && text != null && text != "" ? core.jsx("span", {
     tabIndex: "-1",
     css: label && !hideLabel ? ClearInputLabel : ClearInput,
     className: "noState",
@@ -3816,7 +3875,9 @@ var InputText = React__default.forwardRef(function (_ref, _ref2) {
     }
   }, core.jsx(Icon, {
     icon: "Clear"
-  })) : null);
+  })) : null, loading && core.jsx(Loading, {
+    style: LoadingStyle
+  }));
 });
 
 function _templateObject8$7() {
@@ -3829,10 +3890,10 @@ function _templateObject8$7() {
   return data;
 }
 
-function _templateObject7$7() {
+function _templateObject7$8() {
   var data = _taggedTemplateLiteral(["\n    position:relative;\n    svg {\n        padding-left:.8rem;\n    } \n    ", "{\n        padding-right:4.8rem;\n        svg {\n            right:1.6rem;\n        }\n    } \n"]);
 
-  _templateObject7$7 = function _templateObject7() {
+  _templateObject7$8 = function _templateObject7() {
     return data;
   };
 
@@ -3889,22 +3950,22 @@ function _templateObject2$c() {
   return data;
 }
 
-function _templateObject$c() {
+function _templateObject$d() {
   var data = _taggedTemplateLiteral([" \n        color:", ";\n        background-color: ", ";\n        text-decoration:none;\n        box-shadow:none;\n        cursor:inherit;\n        svg {\n            fill:", ";\n        }\n"]);
 
-  _templateObject$c = function _templateObject() {
+  _templateObject$d = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var disabled = core.css(_templateObject$c(), colors.theme3.dark, colors.theme3.midLight, colors.theme3.dark);
+var disabled = core.css(_templateObject$d(), colors.theme3.dark, colors.theme3.midLight, colors.theme3.dark);
 var buttonStyle = core.css(_templateObject2$c(), colors.common.white, colors.theme1.mid, colors.common.white, medium, colors.theme1.midDark, colors.theme1.xDark, disabled);
 var secondaryStyle = core.css(_templateObject3$b(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled);
 var invertedBackgroundStyle = core.css(_templateObject4$9(), colors.common.white, colors.theme1.dark);
 var invertedSecondaryBackgroundStyle = core.css(_templateObject5$9(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled);
 var buttonIconLeft = core.css(_templateObject6$9(), medium);
-var buttonIconRight = core.css(_templateObject7$7(), medium);
+var buttonIconRight = core.css(_templateObject7$8(), medium);
 var iconStyle$2 = core.css(_templateObject8$7(), colors.common.white, medium);
 
 var Button = function Button(_ref) {
@@ -3976,10 +4037,10 @@ function _templateObject8$8() {
   return data;
 }
 
-function _templateObject7$8() {
-  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 8rem;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n    ", " {\n        top: 1.4rem;\n        right: 1.6rem;\n    }\n\n"]);
+function _templateObject7$9() {
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 0px;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n    ", " {\n        top: 1.4rem;\n        right: 1.6rem;\n    }\n\n"]);
 
-  _templateObject7$8 = function _templateObject7() {
+  _templateObject7$9 = function _templateObject7() {
     return data;
   };
 
@@ -4036,22 +4097,22 @@ function _templateObject2$d() {
   return data;
 }
 
-function _templateObject$d() {
+function _templateObject$e() {
   var data = _taggedTemplateLiteral([" \n        background-color: ", ";\n        text-decoration:none;\n        box-shadow:inset 0px 0px 0px 1px ", ";\n        cursor:inherit;\n        &::placeholder {\n            color: ", ";\n        }\n"]);
 
-  _templateObject$d = function _templateObject() {
+  _templateObject$e = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var disabled$1 = core.css(_templateObject$d(), colors.theme3.xLight, colors.theme3.midLight, colors.theme3.midLight);
+var disabled$1 = core.css(_templateObject$e(), colors.theme3.xLight, colors.theme3.midLight, colors.theme3.midLight);
 var searchWrapperStyle = core.css(_templateObject2$d(), colors.common.white);
 var searchFieldInputWrapperStyles = core.css(_templateObject3$c());
 var searchFieldInputStyle = core.css(_templateObject4$a(), colors.common.white, colors.theme3.midLight, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme3.midDark, disabled$1);
 var searchFieldButtonStyle = core.css(_templateObject5$a());
 var invertedBackgroundStyle$1 = core.css(_templateObject6$a());
-var clearInputStyle = core.css(_templateObject7$8(), colors.theme1.mid, medium);
+var clearInputStyle = core.css(_templateObject7$9(), colors.theme1.mid, medium);
 var labelStyle = core.css(_templateObject8$8());
 
 var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
@@ -4170,16 +4231,16 @@ function _templateObject2$e() {
   return data;
 }
 
-function _templateObject$e() {
+function _templateObject$f() {
   var data = _taggedTemplateLiteral(["\n    padding: 1.2rem 1.6rem;\n    box-sizing: border-box;\n    border: 2px solid #979797;\n    font-family: Arial;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n    margin-bottom: 2.4rem;\n    max-width: 100%;\n    min-width: 100%;\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n"]);
 
-  _templateObject$e = function _templateObject() {
+  _templateObject$f = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var TextAreaStyle = css(_templateObject$e(), colors.theme1.mid);
+var TextAreaStyle = css(_templateObject$f(), colors.theme1.mid);
 var TextAreaWrapperStyle = css(_templateObject2$e());
 var Label$1 = css(_templateObject3$d());
 var invalidStyle$1 = css(_templateObject4$b());
@@ -4270,16 +4331,16 @@ function _templateObject2$f() {
   return data;
 }
 
-function _templateObject$f() {
+function _templateObject$g() {
   var data = _taggedTemplateLiteral([" \n    position: relative;\n    display: inline-block;\n"]);
 
-  _templateObject$f = function _templateObject() {
+  _templateObject$g = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var wrapperStyle = core.css(_templateObject$f());
+var wrapperStyle = core.css(_templateObject$g());
 var labelStyle$1 = core.css(_templateObject2$f());
 var checkbox = core.css(_templateObject3$e(), colors.theme1.mid, colors.theme1.dark, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.dark, colors.theme1.mid, colors.states.focus, colors.theme1.midLight, colors.theme1.midLight, encodeURIComponent('#fff'), checkPath);
 var invertedLabelStyle = core.css(_templateObject4$c(), colors.common.white);
@@ -4362,16 +4423,16 @@ function _templateObject2$g() {
   return data;
 }
 
-function _templateObject$g() {
+function _templateObject$h() {
   var data = _taggedTemplateLiteral([" \n    position:relative;\n    display:inline-block;\n\n"]);
 
-  _templateObject$g = function _templateObject() {
+  _templateObject$h = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var wrapperStyle$1 = core.css(_templateObject$g());
+var wrapperStyle$1 = core.css(_templateObject$h());
 var labelStyle$2 = core.css(_templateObject2$g(), colors.theme1.light);
 var fieldStyle = core.css(_templateObject3$f(), colors.theme1.mid, colors.common.white, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.light, colors.theme1.light, colors.theme1.xDark);
 var invertedLabelStyle$1 = core.css(_templateObject4$d(), colors.common.white);
@@ -4420,17 +4481,17 @@ var FormWrapper = function FormWrapper(_ref) {
   return core.jsx("fieldset", null, children);
 };
 
-function _templateObject$h() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  color: ", ";\n  font-size: 1.4rem;\n  svg {\n    align-content: center;\n    margin-right: 0.4rem;\n    fill: ", ";\n  }\n  p {\n    line-height: 2.4rem;\n    padding-bottom: 0;\n  }\n"]);
+function _templateObject$i() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  color: ", ";\n  font-size: 1.4rem;\n  svg {\n    align-content: center;\n    flex-shrink: 0;\n    margin-right: 0.4rem;\n    fill: ", ";\n  }\n  p {\n    line-height: 2.4rem;\n    padding-bottom: 0;\n  }\n"]);
 
-  _templateObject$h = function _templateObject() {
+  _templateObject$i = function _templateObject() {
     return data;
   };
 
   return data;
 }
 var wrapper$3 = function wrapper(success) {
-  return css(_templateObject$h(), success ? colors.common.success : colors.common.warning, success ? colors.common.success : colors.common.warning);
+  return css(_templateObject$i(), success ? colors.common.success : colors.common.warning, success ? colors.common.success : colors.common.warning);
 };
 
 /** @jsx jsx */
@@ -4467,16 +4528,16 @@ function _templateObject2$h() {
   return data;
 }
 
-function _templateObject$i() {
+function _templateObject$j() {
   var data = _taggedTemplateLiteral(["\n    appearance: none;\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing:border-box;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    background-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><path fill='", "' d='", "' /></svg>\");\n    background-repeat: no-repeat, repeat;\n    background-position: right .7em top 50%, 0 0;\n    background-size: 1.6em auto, 100%;\n    &[data-hasvalue=\"false\"]{\n        color: ", ";    \n    }\n\n"]);
 
-  _templateObject$i = function _templateObject() {
+  _templateObject$j = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var selectStyle = core.css(_templateObject$i(), colors.theme3.midLight, encodeURIComponent(colors.theme1.mid), arrowPath, colors.theme3.dark);
+var selectStyle = core.css(_templateObject$j(), colors.theme3.midLight, encodeURIComponent(colors.theme1.mid), arrowPath, colors.theme3.dark);
 var selectWrapperStyle = core.css(_templateObject2$h());
 var invalidStyle$2 = core.css(_templateObject3$g());
 
@@ -4524,10 +4585,10 @@ function _templateObject8$9() {
   return data;
 }
 
-function _templateObject7$9() {
+function _templateObject7$a() {
   var data = _taggedTemplateLiteral(["\n    width:2.4rem;\n    height:2.4rem;\n    position: relative;\n    top: 3px;\n"]);
 
-  _templateObject7$9 = function _templateObject7() {
+  _templateObject7$a = function _templateObject7() {
     return data;
   };
 
@@ -4584,22 +4645,22 @@ function _templateObject2$i() {
   return data;
 }
 
-function _templateObject$j() {
+function _templateObject$k() {
   var data = _taggedTemplateLiteral([" \n        color:", ";\n        background-color: ", ";\n        text-decoration:none;\n        box-shadow:none;\n        cursor:inherit;\n        svg {\n            fill:", ";\n        }\n"]);
 
-  _templateObject$j = function _templateObject() {
+  _templateObject$k = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var disabled$2 = core.css(_templateObject$j(), colors.theme3.dark, colors.theme3.midLight, colors.theme3.dark);
+var disabled$2 = core.css(_templateObject$k(), colors.theme3.dark, colors.theme3.midLight, colors.theme3.dark);
 var expandButtonStyle = core.css(_templateObject2$i(), colors.common.white, colors.theme1.mid, colors.common.white, medium, colors.theme1.midDark, colors.theme1.xDark, disabled$2);
 var smallStyle = core.css(_templateObject3$h());
 var secondaryStyle$1 = core.css(_templateObject4$e(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$2);
 var invertedBackgroundStyle$2 = core.css(_templateObject5$d(), colors.common.white, colors.theme1.dark);
 var invertedSecondaryBackgroundStyle$1 = core.css(_templateObject6$b(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$2);
-var iconStyle$3 = core.css(_templateObject7$9());
+var iconStyle$3 = core.css(_templateObject7$a());
 var expandedIconStyle = core.css(_templateObject8$9());
 
 /** @jsx jsx */
@@ -4646,10 +4707,10 @@ function _templateObject8$a() {
   return data;
 }
 
-function _templateObject7$a() {
+function _templateObject7$b() {
   var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 1.4rem;\n  line-height: 2.4rem;\n  padding-bottom: 0;\n"]);
 
-  _templateObject7$a = function _templateObject7() {
+  _templateObject7$b = function _templateObject7() {
     return data;
   };
 
@@ -4706,22 +4767,22 @@ function _templateObject2$j() {
   return data;
 }
 
-function _templateObject$k() {
+function _templateObject$l() {
   var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  font-weight: 500;\n  p {\n    color: ", ";\n  }\n  p.listItemHeadline {\n      color: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n    p {\n      text-decoration: none;\n    }\n  }\n  &:active {\n    background-color: ", ";\n    .listItemHeadline {\n      color: ", ";\n    }\n    p {\n      text-decoration: none;\n    }\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n  border-bottom: 1px solid ", ";\n"]);
 
-  _templateObject$k = function _templateObject() {
+  _templateObject$l = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var wrapper$4 = core.css(_templateObject$k(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.light);
+var wrapper$4 = core.css(_templateObject$l(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.light);
 var news = core.css(_templateObject2$j(), colors.theme3.dark);
 var disabled$3 = core.css(_templateObject3$i());
 var headlineDisabled = core.css(_templateObject4$f(), colors.theme3.midDark);
 var headline = core.css(_templateObject5$e(), spacing.m, spacing.xs);
 var preambleStyle = core.css(_templateObject6$c(), colors.theme3.dark);
-var bottomText = core.css(_templateObject7$a(), colors.theme3.mid);
+var bottomText = core.css(_templateObject7$b(), colors.theme3.mid);
 var invertedLink = core.css(_templateObject8$a(), colors.common.white, colors.common.white, colors.theme1.xDark);
 
 /** @jsx jsx */
@@ -4759,7 +4820,7 @@ var ListItem = function ListItem(_ref) {
 };
 
 function _templateObject6$d() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  font-size: 1.8rem;\n  line-height: ", ";\n  margin-left: ", ";\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  font-size: 1.8rem;\n  line-height: ", ";\n  ", " {\n    margin-left: ", ";\n  }\n\n"]);
 
   _templateObject6$d = function _templateObject6() {
     return data;
@@ -4769,7 +4830,7 @@ function _templateObject6$d() {
 }
 
 function _templateObject5$f() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: flex-end;\n  padding-right: ", ";\n  margin-top: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: flex-start;\n  padding-right: 0;\n  margin-top: ", ";\n  ", " {\n    padding-right: ", ";\n    justify-content: flex-end;\n  }\n"]);
 
   _templateObject5$f = function _templateObject5() {
     return data;
@@ -4799,7 +4860,7 @@ function _templateObject3$j() {
 }
 
 function _templateObject2$k() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n  font-size: ", ";\n  line-height: ", ";\n  margin-left: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  font-size: ", ";\n  line-height: ", ";\n  /* margin-bottom: ", "; */\n  margin-right: ", ";\n  ", " {\n    font-size: ", ";\n    line-height: ", ";\n  }\n"]);
 
   _templateObject2$k = function _templateObject2() {
     return data;
@@ -4808,21 +4869,21 @@ function _templateObject2$k() {
   return data;
 }
 
-function _templateObject$l() {
+function _templateObject$m() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  margin-top: ", ";\n"]);
 
-  _templateObject$l = function _templateObject() {
+  _templateObject$m = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var alphabetWrapper = core.css(_templateObject$l(), spacing.l);
-var link = core.css(_templateObject2$k(), spacing.m, spacing.l, spacing.s);
+var alphabetWrapper = core.css(_templateObject$m(), spacing.l);
+var link = core.css(_templateObject2$k(), spacing.l, spacing.xl, spacing.xs, spacing.s, medium, spacing.m, spacing.l);
 var invalidLetter = core.css(_templateObject3$j(), colors.theme3.midDark);
 var activeLetter = core.css(_templateObject4$g(), colors.theme1.dark, colors.theme1.dark, colors.common.white, colors.theme1.dark);
-var linkShowAllWrapper = core.css(_templateObject5$f(), spacing.l, spacing.l);
-var linkShowAll = core.css(_templateObject6$d(), spacing.l, spacing.s);
+var linkShowAllWrapper = core.css(_templateObject5$f(), spacing.s, medium, spacing.l);
+var linkShowAll = core.css(_templateObject6$d(), spacing.l, medium, spacing.s);
 
 /** @jsx jsx */
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å', 'Ä', 'Ö'];
@@ -4907,16 +4968,16 @@ function _templateObject2$l() {
   return data;
 }
 
-function _templateObject$m() {
+function _templateObject$n() {
   var data = _taggedTemplateLiteral(["\n    padding: 1.6rem 1.6rem 2.4rem 1.6rem;\n    ", " {\n        padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n    }\n    background-color: ", ";\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: 1.6rem;\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
 
-  _templateObject$m = function _templateObject() {
+  _templateObject$n = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var sourceStyle = core.css(_templateObject$m(), medium, colors.theme1.light, medium);
+var sourceStyle = core.css(_templateObject$n(), medium, colors.theme1.light, medium);
 var firstRow = core.css(_templateObject2$l(), colors.theme3.light, medium);
 var firstRowUsabilla = core.css(_templateObject3$k(), medium);
 var secondRow = core.css(_templateObject4$h(), medium);
@@ -4965,10 +5026,10 @@ var Source = function Source(_ref) {
   }, core.jsx("p", null, "".concat(reviewedDateText || "Granskad: ").concat(reviewed.getDate(), " ").concat(english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))));
 };
 
-function _templateObject$n() {
+function _templateObject$o() {
   var data = _taggedTemplateLiteral(["\n  height: ", "rem;\n  background-repeat: no-repeat;\n  background-image: \n    ", "\n    linear-gradient(", " 100%, transparent 0);\n    background-size:\n      ", "\n      100% 100%;\n    background-position:\n      ", "\n      0 0;\n"]);
 
-  _templateObject$n = function _templateObject() {
+  _templateObject$o = function _templateObject() {
     return data;
   };
 
@@ -4998,7 +5059,7 @@ var backgroundPosition = function backgroundPosition(rows) {
 };
 
 var wrapper$5 = function wrapper(rows, height) {
-  return core.css(_templateObject$n(), height, linearGradient(rows), colors.common.white, backgroundSize(rows), backgroundPosition(rows));
+  return core.css(_templateObject$o(), height, linearGradient(rows), colors.common.white, backgroundSize(rows), backgroundPosition(rows));
 };
 
 /** @jsx jsx */
@@ -5012,10 +5073,10 @@ var Skeleton = function Skeleton(_ref) {
   });
 };
 
-function _templateObject7$b() {
+function _templateObject7$c() {
   var data = _taggedTemplateLiteral(["\n\n    background-color:", ";\n    color: #fff!important;\n\n    &:hover{\n        color: ", "!important;\n    }\n\n\n"]);
 
-  _templateObject7$b = function _templateObject7() {
+  _templateObject7$c = function _templateObject7() {
     return data;
   };
 
@@ -5072,22 +5133,22 @@ function _templateObject2$m() {
   return data;
 }
 
-function _templateObject$o() {
+function _templateObject$p() {
   var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n\n    ", "{\n        justify-content: space-between;\n        padding-bottom: 4.8rem;\n    }\n"]);
 
-  _templateObject$o = function _templateObject() {
+  _templateObject$p = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var paginationWrapperStyle = core.css(_templateObject$o(), large);
+var paginationWrapperStyle = core.css(_templateObject$p(), large);
 var pageStyle = core.css(_templateObject2$m(), colors.theme1.mid, medium);
 var prevPageStyle = core.css(_templateObject3$l(), medium, colors.theme1.mid);
 var nextPageStyle = core.css(_templateObject4$i(), medium, colors.theme1.mid);
 var prevPageStyleHidden = core.css(_templateObject5$h());
 var distanceIndicatorStyle = core.css(_templateObject6$f(), colors.theme1.mid, medium);
-var currentPageStyle = core.css(_templateObject7$b(), colors.theme1.dark, colors.theme1.mid);
+var currentPageStyle = core.css(_templateObject7$c(), colors.theme1.dark, colors.theme1.mid);
 
 var Pagination = function Pagination(_ref) {
   var pageSize = _ref.pageSize,
@@ -5223,10 +5284,10 @@ function _templateObject8$b() {
   return data;
 }
 
-function _templateObject7$c() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: ", ";\n  position: relative;\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  padding: 0.8rem 4rem 0.8rem 1.6rem;\n  border: solid 1px ", ";\n  color: ", ";\n  border-radius: 3.2rem;\n  transition: visibility 0.1s, opacity 0.1s ease-in-out;\n  font-weight: 700;\n  float: right;\n  margin-bottom: 1.6rem;\n\n  cursor: pointer;\n\n  .expanded > & {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  &:hover {\n    text-decoration: underline;\n    background-color: ", ";\n    border-color: ", ";\n  }\n\n  &:active {\n    text-decoration: underline;\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    svg {\n      fill: #fff;\n    }\n  }\n\n  > svg {\n    transform: rotate(180deg);\n    height: 1.6rem;\n    fill: ", ";\n    height: 1.6rem;\n    position: absolute;\n    width: 1.6rem;\n    top: 1.2rem;\n    right: 1.6rem;\n  }\n"]);
+function _templateObject7$d() {
+  var data = _taggedTemplateLiteral(["\n  margin-top: ", ";\n  position: relative;\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  padding: 0.8rem 4rem 0.8rem 1.6rem;\n  border: solid 1px ", ";\n  color: ", ";\n  border-radius: 3.2rem;\n  transition: visibility 0.1s, opacity 0.1s ease-in-out;\n  font-weight: 700;\n  margin-bottom: 1.6rem;\n  margin-left:auto;\n\n  cursor: pointer;\n\n  .expanded > & {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  &:hover {\n    text-decoration: underline;\n    background-color: ", ";\n    border-color: ", ";\n  }\n\n  &:active {\n    text-decoration: underline;\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    svg {\n      fill: #fff;\n    }\n  }\n\n  > svg {\n    transform: rotate(180deg);\n    height: 1.6rem;\n    fill: ", ";\n    height: 1.6rem;\n    position: absolute;\n    width: 1.6rem;\n    top: 1.2rem;\n    right: 1.6rem;\n  }\n"]);
 
-  _templateObject7$c = function _templateObject7() {
+  _templateObject7$d = function _templateObject7() {
     return data;
   };
 
@@ -5264,7 +5325,7 @@ function _templateObject4$j() {
 }
 
 function _templateObject3$m() {
-  var data = _taggedTemplateLiteral(["\n\n  &.full-width > .link-element a {\n    display: block;\n  }\n\n  > .link-element a {\n\n    .link-element-container {\n\n        h1, h2, h3, h4 {\n            white-space: pre-line;\n            margin-bottom: 0;\n        }\n\n        display: flex;\n        align-items: center;\n\n    }\n\n    font-weight: 600;\n    display: inline-block;\n    position: relative;\n    text-decoration: none;\n    position: relative;\n    ", " {\n      width: 100%;\n    }\n\n    svg {\n      font-size: inherit;\n      vertical-align: middle;\n      fill: ", ";\n      flex-shrink: 0;\n    }\n  }\n\n  .expand-section {\n    max-height: 0;\n    overflow: hidden;\n    height: auto;\n    transition: all 0.3s ease-in-out;\n\n    &.expanded {\n      max-height: 100%;\n    }\n    &:not(.expanded) {\n      visibility: hidden;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n  &.full-width > .link-element a {\n    display: block;\n  }\n\n  > .link-element a {\n\n    .link-element-container {\n\n        h1, h2, h3, h4 {\n            white-space: pre-line;\n            margin-bottom: 0;\n        }\n\n        display: flex;\n        align-items: center;\n\n    }\n\n    font-weight: 600;\n    display: inline-block;\n    position: relative;\n    text-decoration: none;\n    position: relative;\n    ", " {\n      width: 100%;\n    }\n\n    svg {\n      font-size: inherit;\n      vertical-align: middle;\n      fill: ", ";\n      flex-shrink: 0;\n    }\n  }\n\n  .expand-section {\n    max-height: 0;\n    overflow: hidden;\n    height: auto;\n    transition: all 0.3s ease-in-out;\n    display: flex;\n    flex-direction: column;\n\n    &.expanded {\n      max-height: 100%;\n      overflow: visible;\n      -ms-overflow-style: none;\n      overflow: -moz-scrollbars-none;\n      &::-webkit-scrollbar{\n        display:none;\n      }\n    }\n    &:not(.expanded) {\n      visibility: hidden;\n    }\n  }\n"]);
 
   _templateObject3$m = function _templateObject3() {
     return data;
@@ -5283,16 +5344,16 @@ function _templateObject2$n() {
   return data;
 }
 
-function _templateObject$p() {
+function _templateObject$q() {
   var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 0.5rem;\n\n    .full-width {\n        border: 2px solid transparent;\n        :hover{\n            border: .2rem solid ", ";\n            border-radius: ", ";\n        }\n    }\n\n    :focus-within {\n        .tabnav &{\n            outline: .2rem solid ", ";\n            outline-offset: .2rem;\n        }\n    }\n    > div > .link-element{ \n        margin-bottom: 0rem!important;\n        a{\n            padding: 2.4rem;\n            box-sizing: border-box;\n            &:hover {\n                text-decoration: underline;\n                background-color: inherit;\n                cursor: pointer;\n            }\n            &[aria-expanded=\"true\"] {\n                h2,h3,h4{\n                    text-decoration: underline!important;\n                }\n            }\n        }\n    }\n    > div > .expand-section{\n        padding: 0 2.4rem;\n    }\n\n\n"]);
 
-  _templateObject$p = function _templateObject() {
+  _templateObject$q = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var grayContentExpanderWrapper = core.css(_templateObject$p(), colors.theme3.xLight, colors.theme1.mid, spacing.xs, colors.states.focus);
+var grayContentExpanderWrapper = core.css(_templateObject$q(), colors.theme3.xLight, colors.theme1.mid, spacing.xs, colors.states.focus);
 var grayFocusedOnExpansionWrapper = core.css(_templateObject2$n(), colors.theme3.light, spacing.xs, colors.theme3.xLight, colors.theme1.mid, spacing.xs, colors.theme1.light, spacing.s, colors.common.white, spacing.s, colors.theme3.light, spacing.xs, spacing.xs);
 var ComponentWrapperStyle = core.css(_templateObject3$m(), small, colors.theme1.mid);
 var IconStyle = function IconStyle(fontSize) {
@@ -5300,7 +5361,7 @@ var IconStyle = function IconStyle(fontSize) {
 };
 var IconExpandedStyle = core.css(_templateObject5$i());
 var IconFullWidth = core.css(_templateObject6$g());
-var collapseButtonStyle = core.css(_templateObject7$c(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
+var collapseButtonStyle = core.css(_templateObject7$d(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
 var baseLinkStyle = core.css(_templateObject8$b(), colors.theme1.mid, colors.theme1.mid);
 
 var measureElement = function measureElement(element) {
@@ -5338,12 +5399,17 @@ var WithContentExpander = function WithContentExpander(_ref) {
       setLinkElementFontSize = _useState4[1];
 
   var linkContainerRef = React.useRef();
+  var linkRef = React.useRef();
   var topOfComponent = React.useRef();
 
   var doExpansion = function doExpansion(e) {
     setExpanded(!expanded);
-    e.stopPropagation();
-    e.preventDefault();
+
+    if (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+
     return false;
   };
 
@@ -5375,6 +5441,7 @@ var WithContentExpander = function WithContentExpander(_ref) {
     }
   }, core.jsx("a", {
     href: linkHref,
+    ref: linkRef,
     onClick: function onClick(e) {
       return e.preventDefault();
     },
@@ -5396,16 +5463,27 @@ var WithContentExpander = function WithContentExpander(_ref) {
   }, wrappedComponent, hasCollapseButton && core.jsx("div", {
     tabIndex: "0",
     onClick: function onClick(e) {
-      var DOMNode = ReactDOM.findDOMNode(linkContainerRef.current);
+      var DOMNode = ReactDOM.findDOMNode(linkRef.current);
       DOMNode.scrollIntoView({
         behavior: "smooth",
         block: "center"
       });
       doExpansion(e);
+      DOMNode.focus({
+        preventScroll: true
+      });
     },
     onKeyDown: function onKeyDown(e) {
       if (e.key === "Enter") {
-        doExpansion();
+        var DOMNode = ReactDOM.findDOMNode(linkRef.current);
+        DOMNode.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+        doExpansion(e);
+        DOMNode.focus({
+          preventScroll: true
+        });
       }
     },
     css: collapseButtonStyle

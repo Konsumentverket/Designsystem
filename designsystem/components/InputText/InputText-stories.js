@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core'
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
-import { text } from '@storybook/addon-knobs';
+import { text, boolean } from '@storybook/addon-knobs';
 import { InputText } from './InputText';
 import { css } from '@emotion/core';
 
@@ -18,6 +18,7 @@ storiesOf('Digitala Produkter|Komponenter/Formulärfält', module)
                     <br />
                     <InputText 
                         placeholder={text("placeholder","Skriv ditt namn")} 
+                        loading={true} 
                         id="text"
                         onChange={(e) => console.log(e.target.value)}
                     />

@@ -90,7 +90,7 @@ export const clearInputStyle = css`
 
     appearance: none;
     position: absolute;
-    right: 8rem;
+    right: 0px;
     border: 0px;
     background-color: transparent;
     top: 0.5rem;

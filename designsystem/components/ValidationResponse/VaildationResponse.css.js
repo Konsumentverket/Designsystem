@@ -8,6 +8,7 @@ export const wrapper = success => css`
   font-size: 1.4rem;
   svg {
     align-content: center;
+    flex-shrink: 0;
     margin-right: 0.4rem;
     fill: ${success ? colors.common.success : colors.common.warning};
   }

@@ -3,7 +3,6 @@
 import { jsx } from '@emotion/core'
 import React from 'react'
 import * as css from './DisplayAlphabet.css.js'
-import { vi } from 'date-fns/locale'
 
 const alphabet = [
   'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',

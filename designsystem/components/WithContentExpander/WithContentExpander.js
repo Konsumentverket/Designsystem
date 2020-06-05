@@ -27,13 +27,16 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
     const [expanded, setExpanded] = useState(open)
     const [linkElementFontSize, setLinkElementFontSize] = useState("16px")
     const linkContainerRef = useRef()
+    const linkRef = useRef()
     const topOfComponent = useRef()
 
 
     const doExpansion = e => {
         setExpanded(!expanded)
-        e.stopPropagation()
-        e.preventDefault()
+        if(e){
+            e.stopPropagation()
+            e.preventDefault()
+        }
         return false
     }
 
@@ -55,7 +58,7 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
 
     return <div className={`${isFullWidth ? "full-width" : null} ${expanded ? "expanded" : null}`} id={wrapperId} css={[ComponentWrapperStyle,wrapperStyle]} ref={topOfComponent}>
         <div className="link-element" onClick={e => doExpansion(e)}>
-            <a href={linkHref} onClick={(e) => e.preventDefault()} aria-haspopup="true" aria-expanded={expanded ? "true" : "false"} aria-label={linkElement.props.children || ""} className="noStyle" css={[baseLinkStyle, linkStyle]}>
+            <a href={linkHref} ref={linkRef} onClick={(e) => e.preventDefault()} aria-haspopup="true" aria-expanded={expanded ? "true" : "false"} aria-label={linkElement.props.children || ""} className="noStyle" css={[baseLinkStyle, linkStyle]}>
                 <div className="link-element-container" ref={linkContainerRef}>
                   {linkElement}
                   <Icon
@@ -73,12 +76,19 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
                 && <div
                     tabIndex="0"
                     onClick={(e) => {
-                        const DOMNode = ReactDOM.findDOMNode(linkContainerRef.current);
+                        const DOMNode = ReactDOM.findDOMNode(linkRef.current);
                         DOMNode.scrollIntoView({ behavior: "smooth", block: "center" })
                         doExpansion(e);
+                        DOMNode.focus({preventScroll:true})
+                        
                     }}
                     onKeyDown={(e) => {
-                        if (e.key === "Enter") {doExpansion()}
+                        if (e.key === "Enter") {
+                            const DOMNode = ReactDOM.findDOMNode(linkRef.current);
+                            DOMNode.scrollIntoView({ behavior: "smooth", block: "center" })
+                            doExpansion(e);
+                            DOMNode.focus({preventScroll:true})
+                        }
                     }}
                     css={collapseButtonStyle}>Fäll ihop<Icon icon="Arrow" /></div>}
         </div>
