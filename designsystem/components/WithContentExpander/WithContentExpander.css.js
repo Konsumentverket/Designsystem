@@ -104,12 +104,15 @@ export const grayFocusedOnExpansionWrapper = css`
 
 export const ComponentWrapperStyle = css`
 
-  .link-element a {
+  &.full-width > .link-element a {
+    display: block;
+  }
+
+  > .link-element a {
 
     .link-element-container {
 
         h1, h2, h3, h4 {
-            width: 85%;
             white-space: pre-line;
             margin-bottom: 0;
         }
@@ -126,10 +129,6 @@ export const ComponentWrapperStyle = css`
     position: relative;
     ${small} {
       width: 100%;
-    }
-
-    .full-width& {
-      display: block;
     }
 
     svg {
