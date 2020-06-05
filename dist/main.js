@@ -4988,7 +4988,6 @@ var Source = function Source(_ref) {
   var reviewed = reviewedDate ? new Date(reviewedDate) : null;
   var monthsSv = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
   var monthsEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  console.log("eng?" + english);
   var question = core.jsx(React__default.Fragment, null, core.jsx("p", null, didThisHelpText || "Hittade du svaret på din fråga?"), core.jsx("div", null, core.jsx(Button, {
     style: buttonStyle$1,
     secondaryButtonStyle: true,
