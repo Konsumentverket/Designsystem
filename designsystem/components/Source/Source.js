@@ -10,7 +10,6 @@ export const Source = ({ usabilla, didThisHelpText, reportErrorText, sourcesColl
     const monthsSv = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
     const monthsEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-
     const question = (<>
         <p>{didThisHelpText || "Hittade du svaret på din fråga?"}</p>
         <div>
@@ -31,7 +30,7 @@ export const Source = ({ usabilla, didThisHelpText, reportErrorText, sourcesColl
                 return <a href={item.linkUrl}>{item.linkText}</a>
             })}</p>}
             {markdownText}
-            {reviewed && <div css={rightAlign}><p>{`${reviewedDateText || "Granskad: "}${reviewed.getDate()} ${english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()]} ${reviewed.getFullYear()}`}</p></div>}
+            {reviewed && <div css={rightAlign}><p>{`${reviewedDateText || english ? 'Proofread: ' : 'Granskad: '}${reviewed.getDate()} ${english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()]} ${reviewed.getFullYear()}`}</p></div>}
         </div>
     </div>
 }
