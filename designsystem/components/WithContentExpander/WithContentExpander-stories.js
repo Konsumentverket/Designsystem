@@ -35,7 +35,7 @@ storiesOf('Digitala Produkter|Komponenter', module)
 
         <br /><br /><br /><br /><br />
 
-        <SubHeading styleLevel={4}>Expanderingselement i grå box med states</SubHeading>
+        <SubHeading styleLevel={4}>Expanderingselement som är mörkare när den är utfälld</SubHeading>
         <div css={grayFocusedOnExpansionWrapper}>
             <WithContentExpander
                 linkElement={<SubHeading text="Klicka här för att expandera innehållet" />}
