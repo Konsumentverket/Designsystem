@@ -26,6 +26,7 @@ export const iconCardStyle = css`
     box-sizing: border-box;
     position: relative;
     display: flex;
+    flex-direction: row;
     height:100%;
     align-items: center;
     border-radius: .8rem;
@@ -52,13 +53,6 @@ export const iconCardStyle = css`
 
 export const iconText = css`
     width:100%;
-    height:100%;
-    min-height:7.2rem;
-    display: flex;
-    flex-direction:column;
-    box-sizing:border-box;
-    justify-content:center;
-    margin:0;
     color: ${colors.theme1.mid};
     line-height: 2.4rem;
     font-size: 2.1rem;

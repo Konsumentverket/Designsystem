@@ -2272,7 +2272,7 @@ function _templateObject5$3() {
 }
 
 function _templateObject4$3() {
-  var data = _taggedTemplateLiteral(["\n    width:100%;\n    height:100%;\n    min-height:7.2rem;\n    display: flex;\n    flex-direction:column;\n    box-sizing:border-box;\n    justify-content:center;\n    margin:0;\n    color: ", ";\n    line-height: 2.4rem;\n    font-size: 2.1rem;\n    font-weight: 500;\n    word-wrap:break-word;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width:100%;\n    color: ", ";\n    line-height: 2.4rem;\n    font-size: 2.1rem;\n    font-weight: 500;\n    word-wrap:break-word;\n"]);
 
   _templateObject4$3 = function _templateObject4() {
     return data;
@@ -2282,7 +2282,7 @@ function _templateObject4$3() {
 }
 
 function _templateObject3$3() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";    \n    min-height: 7.2rem;\n    text-decoration: none;\n    width: 100%;\n    box-sizing: border-box;\n    position: relative;\n    display: flex;\n    height:100%;\n    align-items: center;\n    border-radius: .8rem;\n    border: 1px solid ", ";\n    &:hover {\n        background-color: ", ";\n        border-color: ", ";\n        span {\n            text-decoration:underline;\n        }\n    }\n    &:active \n    {   \n        background-color: ", ";\n        border-color:", ";\n        span{\n            color:#fff;\n        }\n        svg {\n            fill:#fff;\n        }\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";    \n    min-height: 7.2rem;\n    text-decoration: none;\n    width: 100%;\n    box-sizing: border-box;\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    height:100%;\n    align-items: center;\n    border-radius: .8rem;\n    border: 1px solid ", ";\n    &:hover {\n        background-color: ", ";\n        border-color: ", ";\n        span {\n            text-decoration:underline;\n        }\n    }\n    &:active \n    {   \n        background-color: ", ";\n        border-color:", ";\n        span{\n            color:#fff;\n        }\n        svg {\n            fill:#fff;\n        }\n    }\n"]);
 
   _templateObject3$3 = function _templateObject3() {
     return data;
@@ -3711,7 +3711,7 @@ function _templateObject5$8() {
 }
 
 function _templateObject4$8() {
-  var data = _taggedTemplateLiteral([" \n    appearance: none;\n    position: absolute;\n    right: 1.6rem;\n    border: 0px;\n    background-color: transparent;\n    bottom: 1.1rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    \n"]);
+  var data = _taggedTemplateLiteral([" \n    appearance: none;\n    position: absolute;\n    right: 1.6rem;\n    border: 0px;\n    background-color: transparent;\n    bottom: 1.4rem;\n    width: 2.8rem;\n    height: 2.8rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    \n"]);
 
   _templateObject4$8 = function _templateObject4() {
     return data;
@@ -3741,7 +3741,7 @@ function _templateObject2$b() {
 }
 
 function _templateObject$b() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    box-sizing:border-box;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder {\n        font-style: italic;\n    }\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    height: 5.4rem;\n    box-sizing: border-box;\n    -webkit-appearance: textfield; /* safari fix */\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder {\n        font-style: italic;\n    }\n    &::-ms-clear{\n        display:none;\n        width: 0;\n        height: 0; \n    }\n    &::-webkit-search-cancel-button{\n    \n        appearance: none;\n        \n    }\n"]);
 
   _templateObject$b = function _templateObject() {
     return data;
@@ -5278,7 +5278,7 @@ function _templateObject8$b() {
 }
 
 function _templateObject7$c() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: ", ";\n  position: relative;\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  padding: 0.8rem 4rem 0.8rem 1.6rem;\n  border: solid 1px ", ";\n  color: ", ";\n  border-radius: 3.2rem;\n  transition: visibility 0.1s, opacity 0.1s ease-in-out;\n  font-weight: 700;\n  margin-bottom: 1.6rem;\n  margin-left:auto;\n\n  cursor: pointer;\n\n  .expanded > & {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  &:hover {\n    text-decoration: underline;\n    background-color: ", ";\n    border-color: ", ";\n  }\n\n  &:active {\n    text-decoration: underline;\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    svg {\n      fill: #fff;\n    }\n  }\n\n  > svg {\n    transform: rotate(180deg);\n    height: 1.6rem;\n    fill: ", ";\n    height: 1.6rem;\n    position: absolute;\n    width: 1.6rem;\n    top: 1.2rem;\n    right: 1.6rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: ", ";\n  position: relative;\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  padding: 0.8rem 4rem 0.8rem 1.6rem;\n  border: solid 1px ", ";\n  color: ", ";\n  border-radius: 3.2rem;\n  transition: visibility 0.1s, opacity 0.1s ease-in-out;\n  font-weight: 700;\n  margin-bottom: 1.6rem;\n  margin-left:auto;\n  align-self: center;\n\n  cursor: pointer;\n\n  .expanded > & {\n    visibility: visible;\n    opacity: 1;\n  }\n\n  &:hover {\n    text-decoration: underline;\n    background-color: ", ";\n    border-color: ", ";\n  }\n\n  &:active {\n    text-decoration: underline;\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    svg {\n      fill: #fff;\n    }\n  }\n\n  > svg {\n    transform: rotate(180deg);\n    height: 1.6rem;\n    fill: ", ";\n    height: 1.6rem;\n    position: absolute;\n    width: 1.6rem;\n    top: 1.2rem;\n    right: 1.6rem;\n  }\n"]);
 
   _templateObject7$c = function _templateObject7() {
     return data;

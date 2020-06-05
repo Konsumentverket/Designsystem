@@ -193,6 +193,7 @@ export const collapseButtonStyle = css`
   font-weight: 700;
   margin-bottom: 1.6rem;
   margin-left:auto;
+  align-self: center;
 
   cursor: pointer;
 
