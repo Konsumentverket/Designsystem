@@ -16,17 +16,15 @@ export const ListItem = ({
   headlineStyleLevel,
   style,
   invertedLinkStyle,
-  disabled
 }) => <a
-  css={[css.wrapper, invertedLinkStyle && css.invertedLink, disabled && css.disabled, style]}
+  css={[css.wrapper, invertedLinkStyle && css.invertedLink, style]}
   className='noStyle'
-  tabIndex={disabled ? '-1' : null}
   href={href}
 >
     {type && <p css={css.news}>{type.toUpperCase()}
       {reviewedDate && <>: <DateFormat date={reviewedDate} showDate={true} /></>}</p>}
     <p
-      css={[disabled ? css.headlineDisabled : null, css.headline]}
+      css={css.headline}
       className="listItemHeadline">
       {headline}
     </p>
