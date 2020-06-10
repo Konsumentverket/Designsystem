@@ -70,7 +70,7 @@ export const grayFocusedOnExpansionWrapper = css`
     }
     a{
         margin: 0 1px 1px 1px;
-        padding: ${spacing.s};
+        padding: ${spacing.s} ${spacing.m};
         box-sizing: border-box;
         &:hover {
             text-decoration: underline;
@@ -86,7 +86,7 @@ export const grayFocusedOnExpansionWrapper = css`
   > div > .expand-section {
       background-color: ${colors.common.white};
       border: 2px solid transparent;
-      padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};
+      padding: ${spacing.s} ${spacing.m} ${spacing.m} ${spacing.m};
       position: fixed;
   }
   > div > .expand-section.expanded {
