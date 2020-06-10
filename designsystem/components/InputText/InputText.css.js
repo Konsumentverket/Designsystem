@@ -4,14 +4,14 @@ import { colors } from '../Colors/Colors';
 export const InputStyle = css`
     width: 100%;
     padding: 1.2rem 1.6rem;
-    box-sizing:border-box;
     border: 2px solid ${colors.theme3.midLight};
     border-radius: 0.8rem;
     -khtml-border-radius: 0.8rem; /* this is for the fruit phones */
     font-size: 1.8rem;
     line-height: 3rem;
+    height: 5.4rem;
+    box-sizing: border-box;
     -webkit-appearance: textfield; /* safari fix */
-
     &:focus{
         outline: none;
         border-color: ${colors.theme1.mid}
@@ -20,8 +20,15 @@ export const InputStyle = css`
     &::placeholder {
         font-style: italic;
     }
+    &::-ms-clear{
+        display:none;
+        width: 0;
+        height: 0; 
+    }
     &::-webkit-search-cancel-button{
+    
         appearance: none;
+        
     }
 `
 export const invalidStyle = css`
@@ -40,9 +47,9 @@ export const ClearInput = css`
     right: 1.6rem;
     border: 0px;
     background-color: transparent;
-    bottom: 1.1rem;
-    width: 3.2rem;
-    height: 3.2rem;
+    bottom: 1.4rem;
+    width: 2.8rem;
+    height: 2.8rem;
     padding: 0;
     svg{
         fill: ${colors.theme1.mid};

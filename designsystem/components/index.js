@@ -40,6 +40,7 @@ export { ValidationResponse } from './ValidationResponse/ValidationResponse.js'
 export { Dropdown } from './Dropdown/Dropdown.js'
 export { ExpandButton } from './Button/ExpandButton.js'
 export { ListItem } from './ListItem/ListItem.js'
+export { ListItemDisabled } from './ListItemDisabled/ListItemDisabled'
 export { DisplayAlphabet } from './DisplayAlphabet/DisplayAlphabet'
 
 //misc

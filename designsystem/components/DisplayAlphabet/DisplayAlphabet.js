@@ -11,6 +11,9 @@ const alphabet = [
   'Y', 'Z', 'Å', 'Ä', 'Ö'
 ]
 
+const isVisibleLetter = (visibleLetters, letter) =>
+  (visibleLetters && Array.isArray(visibleLetters)) && visibleLetters.some(v => v === letter)
+
 export const DisplayAlphabet = ({
   onClickLetter,
   onClickShowAll,
@@ -18,19 +21,19 @@ export const DisplayAlphabet = ({
   visibleLetters
 }) => <div>
     <div css={css.alphabetWrapper}>
-      {alphabet.map(letter =>
+      {alphabet.map(letter => isVisibleLetter(visibleLetters, letter) ?
         <a
           key={letter}
-          tabIndex={(visibleLetters && Array.isArray(visibleLetters)) ? !visibleLetters.some(v => v === letter) ? '-1' : null : null}
           css={[
             css.link,
-            (visibleLetters && Array.isArray(visibleLetters)) ? !visibleLetters.some(v => v === letter) ? css.invalidLetter : null : null,
             letter === activeLetter ? css.activeLetter : null
           ]}
           href={visibleLetters.some(v => v === letter) ? `?letter=${letter}` : `/`}
           data-letter={letter}
           onClick={onClickLetter}
-        >{letter}</a>)}
+        >{letter}</a>
+        :
+        <div css={css.invalidLetter}>{letter}</div>)}
     </div>
     <div css={css.linkShowAllWrapper}>
       <a css={css.linkShowAll}
