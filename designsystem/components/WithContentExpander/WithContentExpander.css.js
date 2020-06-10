@@ -86,7 +86,7 @@ export const grayFocusedOnExpansionWrapper = css`
   > div > .expand-section {
       background-color: ${colors.common.white};
       border: 2px solid transparent;
-      padding: ${spacing.s};
+      padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};
       position: fixed;
   }
   > div > .expand-section.expanded {

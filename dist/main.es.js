@@ -2987,7 +2987,7 @@ var FactBox = function FactBox(_ref) {
       style = _ref.style;
   if (!content && !children) return null;
   return jsx("div", {
-    css: [wrapper$1, secondaryColor && secondaryColorStyle, style]
+    css: [wrapper$1, LinkWrapperInvertedColorStyle, secondaryColor && secondaryColorStyle, style]
   }, headline && jsx(SubHeading, {
     level: headlineLevel,
     text: headline,
@@ -5318,7 +5318,7 @@ function _templateObject3$m() {
 }
 
 function _templateObject2$n() {
-  var data = _taggedTemplateLiteral(["\n\n  > .expanded > .link-element {\n    background-color: ", ";\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n    &:hover {\n      border-bottom-left-radius: 0;\n      border-bottom-right-radius: 0;\n    }\n  }\n  > div > .link-element {\n    border-radius: ", ";\n    background-color: ", ";\n    margin-bottom: 0rem!important;\n    border: 2px solid transparent;\n    &:hover {\n      border: .2rem solid ", ";\n      border-radius: ", ";\n      background-color: ", ";\n    }\n    a{\n        margin: 0 1px 1px 1px;\n        padding: ", ";\n        box-sizing: border-box;\n        &:hover {\n            text-decoration: underline;\n            cursor: pointer;\n        }\n        &[aria-expanded=\"true\"] {\n            h2,h3,h4{\n                text-decoration: underline!important;\n            }\n        }\n    }\n  }\n  > div > .expand-section {\n      background-color: ", ";\n      border: 2px solid transparent;\n      padding: ", ";\n      position: fixed;\n  }\n  > div > .expand-section.expanded {\n    border: 2px solid ", ";\n    border-bottom-left-radius: ", ";\n    border-bottom-right-radius: ", ";\n    border-top: none;\n    position: relative;\n    > div {\n      margin-top: 0;\n    }\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n  > .expanded > .link-element {\n    background-color: ", ";\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0;\n    &:hover {\n      border-bottom-left-radius: 0;\n      border-bottom-right-radius: 0;\n    }\n  }\n  > div > .link-element {\n    border-radius: ", ";\n    background-color: ", ";\n    margin-bottom: 0rem!important;\n    border: 2px solid transparent;\n    &:hover {\n      border: .2rem solid ", ";\n      border-radius: ", ";\n      background-color: ", ";\n    }\n    a{\n        margin: 0 1px 1px 1px;\n        padding: ", ";\n        box-sizing: border-box;\n        &:hover {\n            text-decoration: underline;\n            cursor: pointer;\n        }\n        &[aria-expanded=\"true\"] {\n            h2,h3,h4{\n                text-decoration: underline!important;\n            }\n        }\n    }\n  }\n  > div > .expand-section {\n      background-color: ", ";\n      border: 2px solid transparent;\n      padding: ", " ", " ", " ", ";\n      position: fixed;\n  }\n  > div > .expand-section.expanded {\n    border: 2px solid ", ";\n    border-bottom-left-radius: ", ";\n    border-bottom-right-radius: ", ";\n    border-top: none;\n    position: relative;\n    > div {\n      margin-top: 0;\n    }\n  }\n\n"]);
 
   _templateObject2$n = function _templateObject2() {
     return data;
@@ -5337,7 +5337,7 @@ function _templateObject$q() {
   return data;
 }
 var grayContentExpanderWrapper = css$1(_templateObject$q(), colors.theme3.xLight, colors.states.focus, colors.theme1.mid);
-var grayFocusedOnExpansionWrapper = css$1(_templateObject2$n(), colors.theme3.light, spacing.xs, colors.theme3.xLight, colors.theme1.mid, spacing.xs, colors.theme1.light, spacing.s, colors.common.white, spacing.s, colors.theme3.light, spacing.xs, spacing.xs);
+var grayFocusedOnExpansionWrapper = css$1(_templateObject2$n(), colors.theme3.light, spacing.xs, colors.theme3.xLight, colors.theme1.mid, spacing.xs, colors.theme1.light, spacing.s, colors.common.white, spacing.s, spacing.s, spacing.m, spacing.s, colors.theme3.light, spacing.xs, spacing.xs);
 var ComponentWrapperStyle = css$1(_templateObject3$m(), small, colors.theme1.mid);
 var IconStyle = function IconStyle(fontSize) {
   return css$1(_templateObject4$j(), fontSize, fontSize, medium);
