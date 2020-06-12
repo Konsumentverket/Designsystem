@@ -33,8 +33,11 @@ export const mainLinkStyle = css`
         color: ${colors.common.white}!important;
     }
 
-    &:visited svg{
-        fill: ${colors.theme1.mid}!important;
+    &:visited {
+        color: ${colors.theme1.mid}!important;
+        svg{
+            fill: ${colors.theme1.mid}!important;
+        }
     }
 
     .tabnav &:focus {

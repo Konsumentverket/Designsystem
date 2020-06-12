@@ -3063,7 +3063,7 @@ function _templateObject4$7() {
 }
 
 function _templateObject3$8() {
-  var data = _taggedTemplateLiteral(["\n    padding: 1.6rem;\n    box-sizing:border-box;\n    text-decoration: none !important;\n    \n    &:hover{\n        border-radius: .8rem .8rem 0 0 !important;\n        box-shadow: none !important;\n        text-decoration: underline!important;\n    }\n    &:active {\n        background-color: ", "!important;\n        color: ", "!important;\n    }\n\n    &:visited svg{\n        fill: ", "!important;\n    }\n\n    .tabnav &:focus {\n        outline: none;\n        \n        > *{\n            outline: 4px solid ", ";\n            outline-offset: 6px;\n        }\n    }\n\n\n\n    width: 100%;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n        transform: rotate(-90deg);\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 1.6rem;\n    box-sizing:border-box;\n    text-decoration: none !important;\n    \n    &:hover{\n        border-radius: .8rem .8rem 0 0 !important;\n        box-shadow: none !important;\n        text-decoration: underline!important;\n    }\n    &:active {\n        background-color: ", "!important;\n        color: ", "!important;\n    }\n\n    &:visited {\n        color: ", "!important;\n        svg{\n            fill: ", "!important;\n        }\n    }\n\n    .tabnav &:focus {\n        outline: none;\n        \n        > *{\n            outline: 4px solid ", ";\n            outline-offset: 6px;\n        }\n    }\n\n\n\n    width: 100%;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n        transform: rotate(-90deg);\n    }\n\n"]);
 
   _templateObject3$8 = function _templateObject3() {
     return data;
@@ -3093,7 +3093,7 @@ function _templateObject$9() {
 }
 var wrapper$2 = core.css(_templateObject$9(), colors.theme3.midLight);
 var linkTextMainLinkStyle = core.css(_templateObject2$9());
-var mainLinkStyle = core.css(_templateObject3$8(), colors.theme1.xDark, colors.common.white, colors.theme1.mid, colors.states.focus);
+var mainLinkStyle = core.css(_templateObject3$8(), colors.theme1.xDark, colors.common.white, colors.theme1.mid, colors.theme1.mid, colors.states.focus);
 var rotateArrow = core.css(_templateObject4$7());
 var childrenWrapper = core.css(_templateObject5$7());
 var showAllLink = core.css(_templateObject6$7(), colors.theme3.midLight);
@@ -3738,7 +3738,7 @@ function _templateObject2$b() {
 }
 
 function _templateObject$b() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    height: 5.4rem;\n    box-sizing: border-box;\n    -webkit-appearance: textfield; /* safari fix */\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder {\n        font-style: italic;\n    }\n    &::-ms-clear{\n        display:none;\n        width: 0;\n        height: 0; \n    }\n    &::-webkit-search-cancel-button{\n    \n        appearance: none;\n        \n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    font-size: 1.8rem;\n    line-height: 3rem;\n    height: 5.4rem;\n    box-sizing: border-box;\n    -webkit-appearance: none;\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder {\n        font-style: italic;\n    }\n    &::-ms-clear{\n        display:none;\n        width: 0;\n        height: 0; \n    }\n    &::-webkit-search-cancel-button{\n    \n        appearance: none;\n        \n    }\n"]);
 
   _templateObject$b = function _templateObject() {
     return data;

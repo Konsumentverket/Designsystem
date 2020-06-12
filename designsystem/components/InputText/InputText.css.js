@@ -6,12 +6,11 @@ export const InputStyle = css`
     padding: 1.2rem 1.6rem;
     border: 2px solid ${colors.theme3.midLight};
     border-radius: 0.8rem;
-    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */
     font-size: 1.8rem;
     line-height: 3rem;
     height: 5.4rem;
     box-sizing: border-box;
-    -webkit-appearance: textfield; /* safari fix */
+    -webkit-appearance: none;
     &:focus{
         outline: none;
         border-color: ${colors.theme1.mid}
