@@ -23,10 +23,9 @@ export const link = css`
 `
 export const invalidLetter = css`
   color: ${colors.theme3.midDark} !important;
-  pointer-events: none;
-  cursor: default;
-  text-decoration: none !important;
-
+  font-size: ${spacing.m};
+  line-height: ${spacing.l};
+  margin-right: ${spacing.s};
 `
 
 export const activeLetter = css`
