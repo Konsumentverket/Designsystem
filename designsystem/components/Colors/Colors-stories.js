@@ -23,7 +23,7 @@ var ColorComponent = ({color,name,token}) => {
         .color-preview{
             height: 100px;
             background-color: ${color};
-            border-bottom: 1px solid ${colors.theme3.light};
+            border-bottom: 1px solid ${colors.theme3.midLight};
         }
         .color-info{
             margin: 0 0 5px 5px;
