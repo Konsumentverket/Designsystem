@@ -24,7 +24,7 @@ const defaultTheme = {
         "midDark": "#6B6B6B",
         "mid": "#6B6B6B",
         "midLight": "#D0D0D0",
-        "light": "#D0D0D0",
+        "light": "#E5E3E3",
         "xLight": "#F2F0F0"
     },
     states: {

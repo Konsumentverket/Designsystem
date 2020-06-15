@@ -32,7 +32,7 @@ export const firstRow = css`
     }
     padding-bottom: 2rem;
     padding-top: 2.4rem;
-    border-bottom: .1rem solid ${colors.theme3.light};
+    border-bottom: .1rem solid ${colors.theme3.midLight};
     display: flex;
     flex-direction: column;
     ${medium} {

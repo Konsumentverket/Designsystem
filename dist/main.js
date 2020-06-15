@@ -217,7 +217,7 @@ var defaultTheme = {
     "midDark": "#6B6B6B",
     "mid": "#6B6B6B",
     "midLight": "#D0D0D0",
-    "light": "#D0D0D0",
+    "light": "#E5E3E3",
     "xLight": "#F2F0F0"
   },
   states: {
@@ -4788,7 +4788,7 @@ function _templateObject$l() {
 
   return data;
 }
-var wrapper$4 = core.css(_templateObject$l(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.light);
+var wrapper$4 = core.css(_templateObject$l(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.midLight);
 var news = core.css(_templateObject2$j(), colors.theme3.dark);
 var disabled$3 = core.css(_templateObject3$i());
 var headlineDisabled = core.css(_templateObject4$f(), colors.theme3.midDark);
@@ -5114,7 +5114,7 @@ function _templateObject$o() {
   return data;
 }
 var sourceStyle = core.css(_templateObject$o(), medium, colors.theme1.light, medium);
-var firstRow = core.css(_templateObject2$m(), colors.theme3.light, medium);
+var firstRow = core.css(_templateObject2$m(), colors.theme3.midLight, medium);
 var firstRowUsabilla = core.css(_templateObject3$l(), medium);
 var secondRow = core.css(_templateObject4$i(), medium);
 var buttonStyle$1 = core.css(_templateObject5$h(), medium);
