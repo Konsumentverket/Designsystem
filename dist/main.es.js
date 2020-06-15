@@ -3741,7 +3741,7 @@ function _templateObject2$b() {
 }
 
 function _templateObject$b() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem 1.6rem;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    font-size: 1.8rem;\n    line-height: 3rem;\n    height: 5.4rem;\n    box-sizing: border-box;\n    -webkit-appearance: none;\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder {\n        font-style: italic;\n    }\n    &::-ms-clear{\n        display:none;\n        width: 0;\n        height: 0; \n    }\n    &::-webkit-search-cancel-button{\n    \n        appearance: none;\n        \n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem ", " 1.2rem 1.6rem;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    font-size: 1.8rem;\n    line-height: 3rem;\n    height: 5.4rem;\n    box-sizing: border-box;\n    -webkit-appearance: none;\n\n    .tabnav &[aria-expanded=true]{\n        outline: none!important;\n    }\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder {\n        font-style: italic;\n    }\n    &::-ms-clear{\n        display:none;\n        width: 0;\n        height: 0; \n    }\n    &::-webkit-search-cancel-button{\n        appearance: none;   \n    }\n"]);
 
   _templateObject$b = function _templateObject() {
     return data;
@@ -3749,7 +3749,9 @@ function _templateObject$b() {
 
   return data;
 }
-var InputStyle = css(_templateObject$b(), colors.theme3.midLight, colors.theme1.mid);
+var InputStyle = function InputStyle(hasInnerContent) {
+  return css(_templateObject$b(), hasInnerContent ? '4.5rem' : '1.6rem', colors.theme3.midLight, colors.theme1.mid);
+};
 var invalidStyle = css(_templateObject2$b());
 var InputWrapperStyle = css(_templateObject3$a());
 var ClearInput = css(_templateObject4$8(), colors.theme1.mid);
@@ -3829,6 +3831,35 @@ var InputText = React.forwardRef(function (_ref, _ref2) {
       setText = _useState2[1];
 
   var invalid = validationError ? invalidStyle : null;
+  var innerContent = null;
+
+  if (type == "search" && !loading && text != null && text != "") {
+    innerContent = jsx("a", {
+      href: "#",
+      css: ClearInput,
+      className: "noStyle",
+      onClick: function onClick(e) {
+        e.preventDefault();
+        if (inputRef == null || inputRef.current == null) return;
+        inputRef.current.value = "";
+        setText("");
+        inputRef.current.dispatchEvent(new Event('change'));
+
+        if (onClear) {
+          onClear(e);
+        }
+      }
+    }, jsx(Icon, {
+      icon: "Clear"
+    }));
+  }
+
+  if (loading) {
+    innerContent = jsx(Loading, {
+      style: LoadingStyle
+    });
+  }
+
   return jsx("div", {
     css: [InputWrapperStyle, wrapperStyle, invalid]
   }, label && jsx("label", {
@@ -3839,7 +3870,7 @@ var InputText = React.forwardRef(function (_ref, _ref2) {
       inputRef.current = el;
       return typeof _ref2 === 'function' ? _ref2(el) : null;
     },
-    css: [InputStyle, style],
+    css: [InputStyle(innerContent != null), style],
     name: name,
     disabled: disabled,
     placeholder: placeholder,
@@ -3850,26 +3881,7 @@ var InputText = React.forwardRef(function (_ref, _ref2) {
       setText(e.target.value);
     },
     type: type
-  }, other)), type == "search" && !loading && text != null && text != "" ? jsx("span", {
-    tabIndex: "-1",
-    css: ClearInput,
-    className: "noState",
-    onClick: function onClick(e) {
-      e.preventDefault();
-      if (inputRef == null || inputRef.current == null) return;
-      inputRef.current.value = "";
-      setText("");
-      inputRef.current.dispatchEvent(new Event('change'));
-
-      if (onClear) {
-        onClear(e);
-      }
-    }
-  }, jsx(Icon, {
-    icon: "Clear"
-  })) : null, loading && jsx(Loading, {
-    style: LoadingStyle
-  }));
+  }, other)), innerContent);
 });
 
 function _templateObject8$7() {

@@ -1,9 +1,9 @@
 import css from "@emotion/css";
 import { colors } from '../Colors/Colors';
 
-export const InputStyle = css`
+export const InputStyle = (hasInnerContent) => css`
     width: 100%;
-    padding: 1.2rem 1.6rem;
+    padding: 1.2rem ${hasInnerContent ? '4.5rem' : '1.6rem'} 1.2rem 1.6rem;
     border: 2px solid ${colors.theme3.midLight};
     border-radius: 0.8rem;
     font-size: 1.8rem;
@@ -11,6 +11,11 @@ export const InputStyle = css`
     height: 5.4rem;
     box-sizing: border-box;
     -webkit-appearance: none;
+
+    .tabnav &[aria-expanded=true]{
+        outline: none!important;
+    }
+
     &:focus{
         outline: none;
         border-color: ${colors.theme1.mid}
@@ -25,9 +30,7 @@ export const InputStyle = css`
         height: 0; 
     }
     &::-webkit-search-cancel-button{
-    
-        appearance: none;
-        
+        appearance: none;   
     }
 `
 export const invalidStyle = css`

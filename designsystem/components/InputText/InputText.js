@@ -14,6 +14,24 @@ export const InputText = React.forwardRef(({style,wrapperStyle, placeholder, id,
     let [text,setText] = useState(null)
     const invalid = validationError ? invalidStyle : null
     
+    let innerContent = null;
+    
+    if(type == "search" && !loading && text != null && text != "") {
+        innerContent = <a href="#" css={ClearInput} className="noStyle" onClick={(e) =>{
+            e.preventDefault();
+            if(inputRef == null || inputRef.current == null) return;
+            inputRef.current.value = "";
+            setText("");
+            inputRef.current.dispatchEvent(new Event('change'));
+            if(onClear){
+                onClear(e);
+            }
+        }}><Icon icon="Clear" /></a>
+    }
+    if(loading){
+        innerContent = <Loading style={LoadingStyle} />;
+    }
+
     return <div css={[InputWrapperStyle,wrapperStyle, invalid]}>
             { label && <label css={[Label,hideLabel ? VisuallyHidden : null]} htmlFor={id}>{label}</label> }
             {validationError}
@@ -22,7 +40,7 @@ export const InputText = React.forwardRef(({style,wrapperStyle, placeholder, id,
                     inputRef.current = el
                     return typeof ref === 'function' ? ref(el) : null
                 }}
-                css={[InputStyle,style]} 
+                css={[InputStyle(innerContent != null),style]} 
                 name={name} 
                 disabled={disabled} 
                 placeholder={placeholder} 
@@ -33,23 +51,9 @@ export const InputText = React.forwardRef(({style,wrapperStyle, placeholder, id,
                     }
                 } 
                 type={type} 
-                {...other}  
+                {...other}
             />
 
-            {type == "search" && !loading && text != null && text != "" ?     
-                <span tabIndex="-1" css={ClearInput} className="noState" onClick={(e) =>{
-                    e.preventDefault();
-                    if(inputRef == null || inputRef.current == null) return;
-                    inputRef.current.value = "";
-                    setText("");
-                    inputRef.current.dispatchEvent(new Event('change'));
-                    if(onClear){
-                        onClear(e);
-                    }
-                }}>
-                    <Icon icon="Clear" /></span> : 
-                null}
-
-            { loading && <Loading style={LoadingStyle} /> }
+            {innerContent}
         </div> 
 })
