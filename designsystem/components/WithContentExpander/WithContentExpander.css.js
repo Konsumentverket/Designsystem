@@ -164,6 +164,8 @@ export const ComponentWrapperStyle = css`
     }
     &:not(.expanded) {
       visibility: hidden;
+      display: none;
+
     }
   }
 `;
@@ -205,6 +207,7 @@ export const collapseButtonStyle = css`
 
   .expanded > & {
     visibility: visible;
+    display:block;
     opacity: 1;
   }
 
