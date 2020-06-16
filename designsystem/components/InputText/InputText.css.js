@@ -12,10 +12,6 @@ export const InputStyle = (hasInnerContent) => css`
     box-sizing: border-box;
     -webkit-appearance: none;
 
-    .tabnav &[aria-expanded=true]{
-        outline: none!important;
-    }
-
     &:focus{
         outline: none;
         border-color: ${colors.theme1.mid}

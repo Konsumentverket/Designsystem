@@ -3748,7 +3748,7 @@ function _templateObject2$b() {
 }
 
 function _templateObject$b() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem ", " 1.2rem 1.6rem;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    font-size: 1.8rem;\n    line-height: 3rem;\n    height: 5.4rem;\n    box-sizing: border-box;\n    -webkit-appearance: none;\n\n    .tabnav &[aria-expanded=true]{\n        outline: none!important;\n    }\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder {\n        font-style: italic;\n    }\n    &::-ms-clear{\n        display:none;\n        width: 0;\n        height: 0; \n    }\n    &::-webkit-search-cancel-button{\n        appearance: none;   \n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem ", " 1.2rem 1.6rem;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    font-size: 1.8rem;\n    line-height: 3rem;\n    height: 5.4rem;\n    box-sizing: border-box;\n    -webkit-appearance: none;\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder {\n        font-style: italic;\n    }\n    &::-ms-clear{\n        display:none;\n        width: 0;\n        height: 0; \n    }\n    &::-webkit-search-cancel-button{\n        appearance: none;   \n    }\n"]);
 
   _templateObject$b = function _templateObject() {
     return data;
