@@ -4052,7 +4052,7 @@ function _templateObject8$8() {
 }
 
 function _templateObject7$8() {
-  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 0px;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 3.2rem;\n    height: 3.2rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n    ", " {\n        top: 1.4rem;\n        right: 1.6rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 0px;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 2.8rem;\n    height: 2.8rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n    ", " {\n        top: 1.4rem;\n        right: 1.6rem;\n    }\n\n"]);
 
   _templateObject7$8 = function _templateObject7() {
     return data;
@@ -4189,10 +4189,10 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
     name: name,
     autoComplete: autocomplete,
     css: [searchFieldInputStyles]
-  })), inputRef && inputRef.current && inputRef.current.value.length > 0 && core.jsx("span", {
-    tabIndex: "-1",
+  })), inputRef && inputRef.current && inputRef.current.value.length > 0 && core.jsx("a", {
+    href: "#",
     css: clearInputStyle,
-    className: "noState",
+    className: "noStyle",
     onClick: function onClick(e) {
       e.preventDefault();
       if (inputRef == null || inputRef.current == null) return;

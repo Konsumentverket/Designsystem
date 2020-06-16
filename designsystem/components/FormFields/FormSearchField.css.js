@@ -94,8 +94,8 @@ export const clearInputStyle = css`
     border: 0px;
     background-color: transparent;
     top: 0.5rem;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 2.8rem;
+    height: 2.8rem;
     padding: 0;
     svg{
         fill: ${colors.theme1.mid};

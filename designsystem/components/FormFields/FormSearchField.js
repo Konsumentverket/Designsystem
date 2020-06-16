@@ -59,10 +59,10 @@ export const FormSearchField = React.forwardRef(({ className,
                     autoComplete={autocomplete}
                     css={[searchFieldInputStyles]} 
                 />
-            {inputRef && inputRef.current && inputRef.current.value.length > 0 && <span
-                tabIndex="-1"
+            {inputRef && inputRef.current && inputRef.current.value.length > 0 && <a
+                href="#"
                 css={clearInputStyle}
-                className="noState"
+                className="noStyle"
                 onClick={e => {
                     e.preventDefault()
                     if (inputRef == null || inputRef.current == null) return
@@ -74,7 +74,7 @@ export const FormSearchField = React.forwardRef(({ className,
                 }}>
                 <Icon icon="Clear" />
                 
-            </span>
+            </a>
             }
             </div>
             <Button
