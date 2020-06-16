@@ -1,10 +1,22 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react';
-import { sourceStyle, firstRow, firstRowUsabilla, buttonStyle, secondRow, rightAlign } from './Source.css';
+import { sourceStyle, firstRow, firstRowUsabilla, buttonStyle, secondRow, rightAlign, externalUrl } from './Source.css';
 import { Button } from '../Button/Button';
+import isInternalUrl from './isInternalUrl';
+import { Icon } from '../Icon/Icon';
 
-export const Source = ({ usabilla, didThisHelpText, reportErrorText, sourcesCollection, markdownText, reviewedDate, reviewedDateText, style, english }) => {
+export const Source = ({ 
+    usabilla, 
+    baseUrl,
+    didThisHelpText, 
+    reportErrorText, 
+    sourcesCollection, 
+    markdownText, 
+    reviewedDate, 
+    reviewedDateText, 
+    style, 
+    english }) => {
 
     const reviewed = reviewedDate ? new Date(reviewedDate) : null;
     const monthsSv = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
@@ -26,9 +38,18 @@ export const Source = ({ usabilla, didThisHelpText, reportErrorText, sourcesColl
             {usabilla ? usabilla : question}
         </div>
         <div css={secondRow}>
-            {sourcesCollection && <p>{english ? 'Source: ' : 'Källa: '} {sourcesCollection.items.map(item => {
-                return <a href={item.linkUrl}>{item.linkText}</a>
-            })}</p>}
+            {sourcesCollection.items.length > 0 && 
+            <p>
+                {english ? 'Source: ' : 'Källa: '} 
+                {sourcesCollection.items.map((item, idx) => {
+                    return isInternalUrl(baseUrl, item.linkUrl) ? 
+                        <a href={item.linkUrl} key={"link-"+idx}>{item.linkText}</a> : 
+                        <a href={item.linkUrl} key={"link-"+idx} css={externalUrl}>
+                            {item.linkText}
+                            <Icon title="Extern länk" icon="External" />
+                        </a>
+                })}
+            </p>}
             {markdownText}
             {reviewed && <div css={rightAlign}><p>{`${reviewedDateText || english ? 'Proofread: ' : 'Granskad: '}${reviewed.getDate()} ${english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()]} ${reviewed.getFullYear()}`}</p></div>}
         </div>

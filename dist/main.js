@@ -12,6 +12,8 @@ var sv = _interopDefault(require('date-fns/locale/sv'));
 var ReactDOM = _interopDefault(require('react-dom'));
 
 function _typeof(obj) {
+  "@babel/helpers - typeof";
+
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -77,13 +79,13 @@ function _objectSpread2(target) {
     var source = arguments[i] != null ? arguments[i] : {};
 
     if (i % 2) {
-      ownKeys(source, true).forEach(function (key) {
+      ownKeys(Object(source), true).forEach(function (key) {
         _defineProperty(target, key, source[key]);
       });
     } else if (Object.getOwnPropertyDescriptors) {
       Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
     } else {
-      ownKeys(source).forEach(function (key) {
+      ownKeys(Object(source)).forEach(function (key) {
         Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
       });
     }
@@ -165,6 +167,10 @@ function _iterableToArray(iter) {
 }
 
 function _iterableToArrayLimit(arr, i) {
+  if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
+    return;
+  }
+
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -3279,24 +3285,37 @@ var InputRadio = function InputRadio(_ref) {
 };
 
 /* eslint-disable */
-// murmurhash2 via https://github.com/garycourt/murmurhash-js/blob/master/murmurhash2_gc.js
-function murmurhash2_32_gc(str) {
-  var l = str.length,
-      h = l ^ l,
+// Inspired by https://github.com/garycourt/murmurhash-js
+// Ported from https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash2.cpp#L37-L86
+function murmur2(str) {
+  // 'm' and 'r' are mixing constants generated offline.
+  // They're not really 'magic', they just happen to work well.
+  // const m = 0x5bd1e995;
+  // const r = 24;
+  // Initialize the hash
+  var h = 0; // Mix 4 bytes at a time into the hash
+
+  var k,
       i = 0,
-      k;
+      len = str.length;
 
-  while (l >= 4) {
+  for (; len >= 4; ++i, len -= 4) {
     k = str.charCodeAt(i) & 0xff | (str.charCodeAt(++i) & 0xff) << 8 | (str.charCodeAt(++i) & 0xff) << 16 | (str.charCodeAt(++i) & 0xff) << 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    k ^= k >>> 24;
-    k = (k & 0xffff) * 0x5bd1e995 + (((k >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-    h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16) ^ k;
-    l -= 4;
-    ++i;
-  }
+    k =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16);
+    k ^=
+    /* k >>> r: */
+    k >>> 24;
+    h =
+    /* Math.imul(k, m): */
+    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16) ^
+    /* Math.imul(h, m): */
+    (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Handle the last few bytes of the input array
 
-  switch (l) {
+
+  switch (len) {
     case 3:
       h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
 
@@ -3305,13 +3324,18 @@ function murmurhash2_32_gc(str) {
 
     case 1:
       h ^= str.charCodeAt(i) & 0xff;
-      h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  }
+      h =
+      /* Math.imul(h, m): */
+      (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  } // Do a few final mixes of the hash to ensure the last few
+  // bytes are well-incorporated.
+
 
   h ^= h >>> 13;
-  h = (h & 0xffff) * 0x5bd1e995 + (((h >>> 16) * 0x5bd1e995 & 0xffff) << 16);
-  h ^= h >>> 15;
-  return (h >>> 0).toString(36);
+  h =
+  /* Math.imul(h, m): */
+  (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
+  return ((h ^ h >>> 15) >>> 0).toString(36);
 }
 
 var unitlessKeys = {
@@ -3372,6 +3396,7 @@ function memoize(fn) {
 }
 
 var ILLEGAL_ESCAPE_SEQUENCE_ERROR = "You have illegal escape sequence in your template literal, most likely inside content's property value.\nBecause you write your CSS inside a JavaScript string you actually have to do double escaping, so for example \"content: '\\00d7';\" should become \"content: '\\\\00d7';\".\nYou can read more about this here:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences";
+var UNDEFINED_AS_OBJECT_KEY_ERROR = "You have passed in falsy value as style object's key (can happen when in example you pass unexported component as computed key).";
 var hyphenateRegex = /[A-Z]|^ms/g;
 var animationRegex = /_EMO_([^_]+?)_([^]*?)_EMO_/g;
 
@@ -3379,15 +3404,15 @@ var isCustomProperty = function isCustomProperty(property) {
   return property.charCodeAt(1) === 45;
 };
 
+var isProcessableValue = function isProcessableValue(value) {
+  return value != null && typeof value !== 'boolean';
+};
+
 var processStyleName = memoize(function (styleName) {
   return isCustomProperty(styleName) ? styleName : styleName.replace(hyphenateRegex, '-$&').toLowerCase();
 });
 
 var processStyleValue = function processStyleValue(key, value) {
-  if (value == null || typeof value === 'boolean') {
-    return '';
-  }
-
   switch (key) {
     case 'animation':
     case 'animationName':
@@ -3560,7 +3585,7 @@ function createStringFromObject(mergedProps, registered, obj) {
       if (_typeof(value) !== 'object') {
         if (registered != null && registered[value] !== undefined) {
           string += _key + "{" + registered[value] + "}";
-        } else {
+        } else if (isProcessableValue(value)) {
           string += processStyleName(_key) + ":" + processStyleValue(_key, value) + ";";
         }
       } else {
@@ -3570,7 +3595,9 @@ function createStringFromObject(mergedProps, registered, obj) {
 
         if (Array.isArray(value) && typeof value[0] === 'string' && (registered == null || registered[value[0]] === undefined)) {
           for (var _i = 0; _i < value.length; _i++) {
-            string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
+            if (isProcessableValue(value[_i])) {
+              string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
+            }
           }
         } else {
           var interpolated = handleInterpolation(mergedProps, registered, value, false);
@@ -3585,6 +3612,10 @@ function createStringFromObject(mergedProps, registered, obj) {
 
             default:
               {
+                if (process.env.NODE_ENV !== 'production' && _key === 'undefined') {
+                  console.error(UNDEFINED_AS_OBJECT_KEY_ERROR);
+                }
+
                 string += _key + "{" + interpolated + "}";
               }
           }
@@ -3660,7 +3691,7 @@ var serializeStyles = function serializeStyles(args, registered, mergedProps) {
     match[1];
   }
 
-  var name = murmurhash2_32_gc(styles) + identifierName;
+  var name = murmur2(styles) + identifierName;
 
   if (process.env.NODE_ENV !== 'production') {
     // $FlowFixMe SerializedStyles type doesn't have toString property (and we don't want to add it)
@@ -5047,6 +5078,16 @@ var DisplayAlphabet = function DisplayAlphabet(_ref) {
   }, "Visa Alla A-\xD6")));
 };
 
+function _templateObject7$c() {
+  var data = _taggedTemplateLiteral(["\n    svg {\n        margin-left: 6px;\n        position: relative;\n        top: 1px;        \n    }\n"]);
+
+  _templateObject7$c = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject6$f() {
   var data = _taggedTemplateLiteral(["\n    ", " {\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
 
@@ -5058,7 +5099,7 @@ function _templateObject6$f() {
 }
 
 function _templateObject5$h() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: 2.4rem;\n    margin-bottom: 1.6rem;\n    padding: 0 2.4rem;\n    &:first-of-type {\n        margin-left: 0;\n    }\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 2.4rem;\n        &:first-of-type {\n            margin-left: 2.4rem;\n        }\n        margin-left: 2.4rem;\n        margin-bottom: 0;\n        margin-top: -.4rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: ", ";\n    margin-bottom: ", ";\n    padding: 0 ", ";\n\n    &:first-of-type {\n        margin-left: 0;\n    }\n\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 ", ";\n\n        &:first-of-type {\n            margin-left: ", ";\n        }\n\n        margin-left: ", ";\n        margin-bottom: 0;\n        margin-top: -.4rem;\n    }\n"]);
 
   _templateObject5$h = function _templateObject5() {
     return data;
@@ -5068,7 +5109,7 @@ function _templateObject5$h() {
 }
 
 function _templateObject4$i() {
-  var data = _taggedTemplateLiteral(["\n    padding-top: 2.4rem;\n    flex-direction: column;\n    display: flex;\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding-top: ", ";\n    flex-direction: column;\n    display: flex;\n\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject4$i = function _templateObject4() {
     return data;
@@ -5078,7 +5119,7 @@ function _templateObject4$i() {
 }
 
 function _templateObject3$l() {
-  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    display: flex;\n    flex-direction: column;\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    display: flex;\n    flex-direction: column;\n\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject3$l = function _templateObject3() {
     return data;
@@ -5088,7 +5129,7 @@ function _templateObject3$l() {
 }
 
 function _templateObject2$m() {
-  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    padding-bottom: 2rem;\n    padding-top: 2.4rem;\n    border-bottom: .1rem solid ", ";\n    display: flex;\n    flex-direction: column;\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    padding-bottom: ", ";\n    padding-top: ", ";\n    border-bottom: .1rem solid ", ";\n    display: flex;\n    flex-direction: column;\n\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject2$m = function _templateObject2() {
     return data;
@@ -5098,7 +5139,7 @@ function _templateObject2$m() {
 }
 
 function _templateObject$o() {
-  var data = _taggedTemplateLiteral(["\n    padding: 1.6rem 1.6rem 2.4rem 1.6rem;\n    ", " {\n        padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n    }\n    background-color: ", ";\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: 1.6rem;\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: 1.6rem;\n    border-radius: .8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: ", " ", " ", " ", ";\n    ", " {\n        padding: ", " ", " ", " ", ";\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: ", ";\n    }\n    background-color: ", ";\n\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: ", ";\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: ", ";\n    border-radius: ", ";\n"]);
 
   _templateObject$o = function _templateObject() {
     return data;
@@ -5106,16 +5147,23 @@ function _templateObject$o() {
 
   return data;
 }
-var sourceStyle = core.css(_templateObject$o(), medium, colors.theme1.light, medium);
-var firstRow = core.css(_templateObject2$m(), colors.theme3.midLight, medium);
+var sourceStyle = core.css(_templateObject$o(), spacing.s, spacing.s, spacing.m, spacing.s, medium, spacing.m, spacing.l, spacing.m, spacing.m, spacing.l, colors.theme1.light, medium, spacing.s, spacing.s, spacing.xs);
+var firstRow = core.css(_templateObject2$m(), spacing.s, spacing.m, colors.theme3.midLight, medium);
 var firstRowUsabilla = core.css(_templateObject3$l(), medium);
-var secondRow = core.css(_templateObject4$i(), medium);
-var buttonStyle$1 = core.css(_templateObject5$h(), medium);
+var secondRow = core.css(_templateObject4$i(), spacing.m, medium);
+var buttonStyle$1 = core.css(_templateObject5$h(), spacing.m, spacing.s, spacing.m, medium, spacing.m, spacing.m, spacing.m);
 var rightAlign = core.css(_templateObject6$f(), medium);
+var externalUrl = core.css(_templateObject7$c());
+
+var isInternalUrl = (function (baseUrl, url) {
+  var isInternal = new RegExp('^(\/)|([a-z]+:\/\/|\/\/)?(' + baseUrl + ')', 'i');
+  return isInternal.test(url);
+});
 
 /** @jsx jsx */
 var Source = function Source(_ref) {
   var usabilla = _ref.usabilla,
+      baseUrl = _ref.baseUrl,
       didThisHelpText = _ref.didThisHelpText,
       reportErrorText = _ref.reportErrorText,
       sourcesCollection = _ref.sourcesCollection,
@@ -5146,10 +5194,18 @@ var Source = function Source(_ref) {
     css: usabilla ? firstRowUsabilla : firstRow
   }, usabilla ? usabilla : question), core.jsx("div", {
     css: secondRow
-  }, sourcesCollection && core.jsx("p", null, english ? 'Source: ' : 'Källa: ', " ", sourcesCollection.items.map(function (item) {
-    return core.jsx("a", {
-      href: item.linkUrl
-    }, item.linkText);
+  }, sourcesCollection.items.length > 0 && core.jsx("p", null, english ? 'Source: ' : 'Källa: ', sourcesCollection.items.map(function (item, idx) {
+    return isInternalUrl(baseUrl, item.linkUrl) ? core.jsx("a", {
+      href: item.linkUrl,
+      key: "link-" + idx
+    }, item.linkText) : core.jsx("a", {
+      href: item.linkUrl,
+      key: "link-" + idx,
+      css: externalUrl
+    }, item.linkText, core.jsx(Icon, {
+      title: "Extern l\xE4nk",
+      icon: "External"
+    }));
   })), markdownText, reviewed && core.jsx("div", {
     css: rightAlign
   }, core.jsx("p", null, "".concat(reviewedDateText || english ? 'Proofread: ' : 'Granskad: ').concat(reviewed.getDate(), " ").concat(english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))));
@@ -5202,10 +5258,10 @@ var Skeleton = function Skeleton(_ref) {
   });
 };
 
-function _templateObject7$c() {
+function _templateObject7$d() {
   var data = _taggedTemplateLiteral(["\n\n    background-color:", ";\n    color: #fff!important;\n\n    &:hover{\n        color: ", "!important;\n    }\n\n\n"]);
 
-  _templateObject7$c = function _templateObject7() {
+  _templateObject7$d = function _templateObject7() {
     return data;
   };
 
@@ -5277,7 +5333,7 @@ var prevPageStyle = core.css(_templateObject3$m(), medium, colors.theme1.mid);
 var nextPageStyle = core.css(_templateObject4$j(), medium, colors.theme1.mid);
 var prevPageStyleHidden = core.css(_templateObject5$i());
 var distanceIndicatorStyle = core.css(_templateObject6$g(), colors.theme1.mid, medium);
-var currentPageStyle = core.css(_templateObject7$c(), colors.theme1.dark, colors.theme1.mid);
+var currentPageStyle = core.css(_templateObject7$d(), colors.theme1.dark, colors.theme1.mid);
 
 var Pagination = function Pagination(_ref) {
   var pageSize = _ref.pageSize,
@@ -5413,10 +5469,10 @@ function _templateObject8$c() {
   return data;
 }
 
-function _templateObject7$d() {
+function _templateObject7$e() {
   var data = _taggedTemplateLiteral(["\n  margin-top: ", ";\n  position: relative;\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  padding: 0.8rem 4rem 0.8rem 1.6rem;\n  border: solid 1px ", ";\n  color: ", ";\n  border-radius: 3.2rem;\n  transition: visibility 0.1s, opacity 0.1s ease-in-out;\n  font-weight: 700;\n  margin-bottom: 1.6rem;\n  margin-left:auto;\n  align-self: center;\n\n  cursor: pointer;\n\n  .expanded > & {\n    visibility: visible;\n    display:block;\n    opacity: 1;\n  }\n\n  &:hover {\n    text-decoration: underline;\n    background-color: ", ";\n    border-color: ", ";\n  }\n\n  &:active {\n    text-decoration: underline;\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    svg {\n      fill: #fff;\n    }\n  }\n\n  > svg {\n    transform: rotate(180deg);\n    height: 1.6rem;\n    fill: ", ";\n    height: 1.6rem;\n    position: absolute;\n    width: 1.6rem;\n    top: 1.2rem;\n    right: 1.6rem;\n  }\n"]);
 
-  _templateObject7$d = function _templateObject7() {
+  _templateObject7$e = function _templateObject7() {
     return data;
   };
 
@@ -5490,7 +5546,7 @@ var IconStyle = function IconStyle(fontSize) {
 };
 var IconExpandedStyle = core.css(_templateObject5$j());
 var IconFullWidth = core.css(_templateObject6$h());
-var collapseButtonStyle = core.css(_templateObject7$d(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
+var collapseButtonStyle = core.css(_templateObject7$e(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
 var baseLinkStyle = core.css(_templateObject8$c(), colors.theme1.mid, colors.theme1.mid);
 
 var measureElement = function measureElement(element) {
