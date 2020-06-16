@@ -2240,9 +2240,12 @@ var SubHeading = function SubHeading(_ref) {
   var stylings = [h1Style, h2Style, h3Style, h4Style, h5Style, h6Style, h7Style];
   var SelectedHeading = tag || headings[level - 1] || 'h2';
   var SelectedStyling = stylings[styleLevel ? styleLevel - 1 : level - 1];
+  var alignment = tag == "legend" ? "center" : null; // Ugly fix for firefox
+
   return core.jsx(SelectedHeading, _extends({
-    css: [commonSubHeadingStyle, style, SelectedStyling]
-  }, otherAttr), " ", children, text);
+    css: [commonSubHeadingStyle, style, SelectedStyling],
+    align: alignment
+  }, otherAttr), children, text);
 };
 
 var Heading = function Heading(_ref) {
