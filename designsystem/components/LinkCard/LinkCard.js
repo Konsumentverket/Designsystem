@@ -10,9 +10,11 @@ const LinkCard = React.forwardRef(({text,href,children,id,secondaryArrowStyle = 
 
     const childrenArray = React.Children.toArray(children);
     let itemsToShow = [];
+
     if(childrenArray && childrenArray.length > 0){
-        itemsToShow = childrenArray.slice(0,beforeToggleCount)
+        itemsToShow = childrenArray.slice(0,beforeToggleCount).filter(Boolean)
     }
+
     return <div id={id} css={[wrapper,style]}>
             <a ref={ref} href={href} css={mainLinkStyle} onClick={onClick}>
                 <SubHeading level={headingLevel} styleLevel={3} style={innerTextWrapperStyle}>    

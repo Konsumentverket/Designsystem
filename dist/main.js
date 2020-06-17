@@ -3129,7 +3129,7 @@ var LinkCard = React__default.forwardRef(function (_ref, ref) {
   var itemsToShow = [];
 
   if (childrenArray && childrenArray.length > 0) {
-    itemsToShow = childrenArray.slice(0, beforeToggleCount);
+    itemsToShow = childrenArray.slice(0, beforeToggleCount).filter(Boolean);
   }
 
   return core.jsx("div", {
