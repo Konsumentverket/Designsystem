@@ -101,9 +101,8 @@ export const rightAlign = css`
     }
 `;
 
-export const externalUrl = css`
+export const sourceLink = css`
     svg {
-        margin-left: 6px;
         position: relative;
         top: 1px;        
     }

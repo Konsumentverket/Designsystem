@@ -450,7 +450,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a{\n    &:not(.noStyle){\n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        svg {\n          fill: ", ";\n        }\n\n        &[href$=\".pdf\"],\n        &[href$=\".doc\"],\n        &[href$=\".docx\"],\n        &[href$=\".ppt\"],\n        &[href$=\".pptx\"],\n        &[href$=\".txt\"],\n        &[href$=\".xlt\"],\n        &[href$=\".xltx\"]{\n          margin-left: 3.2rem;\n          position: relative;\n          display: inline-flex;\n          &:hover {\n            box-shadow: 0 0 0 2px ", ";\n          }\n          &:before{\n            content: '';\n            display:inline-block;\n            background-repeat: no-repeat;\n            background-size: 22px 30px;\n            background-position: 0px 0px;\n            width: 22px;\n            height: 30px;\n            position: absolute;\n            left: -3.2rem;\n            top: 50%;\n            transform: translateY(-50%);\n          }\n        }\n        \n        &[href$=\".pdf\"] { ", " }\n         \n        &[href$=\".ppt\"],\n        &[href$=\".pptx\"] { ", " }\n        \n        &[href$=\".doc\"],\n        &[href$=\".docx\"] { ", " }\n\n        &[href$=\".xlt\"],\n        &[href$=\".xltx\"] { ", " }\n\n        &[href$=\".txt\"] { ", " }\n\n\n        \n        \n\n        &:hover {\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n          box-shadow: 0 0 0 4px #fff;\n        }\n        &:active {\n          box-shadow: 0 0 0 4px #fff;\n          background-color:#fff;\n      }\n    }\n  }\n\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n\n    i {\n      font-style: italic;\n    }\n    strong {\n      font-weight: 700;\n    }\n    u {\n      text-decoration: underline;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a {\n    &.external {\n      svg.external {\n        margin-left: 3px;\n      }\n    }\n\n    &:not(.noStyle){\n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        svg {\n          fill: ", ";\n        }\n\n        &[href$=\".pdf\"],\n        &[href$=\".doc\"],\n        &[href$=\".docx\"],\n        &[href$=\".ppt\"],\n        &[href$=\".pptx\"],\n        &[href$=\".txt\"],\n        &[href$=\".xlt\"],\n        &[href$=\".xltx\"]{\n          margin-left: 3.2rem;\n          position: relative;\n          display: inline-flex;\n          &:hover {\n            box-shadow: 0 0 0 2px ", ";\n          }\n          &:before{\n            content: '';\n            display:inline-block;\n            background-repeat: no-repeat;\n            background-size: 22px 30px;\n            background-position: 0px 0px;\n            width: 22px;\n            height: 30px;\n            position: absolute;\n            left: -3.2rem;\n            top: 50%;\n            transform: translateY(-50%);\n          }\n        }\n        \n        &[href$=\".pdf\"] { ", " }\n         \n        &[href$=\".ppt\"],\n        &[href$=\".pptx\"] { ", " }\n        \n        &[href$=\".doc\"],\n        &[href$=\".docx\"] { ", " }\n\n        &[href$=\".xlt\"],\n        &[href$=\".xltx\"] { ", " }\n\n        &[href$=\".txt\"] { ", " }\n\n        &:hover {\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n          box-shadow: 0 0 0 4px #fff;\n        }\n        &:active {\n          box-shadow: 0 0 0 4px #fff;\n          background-color:#fff;\n      }\n    }\n  }\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n\n    i {\n      font-style: italic;\n    }\n    strong {\n      font-weight: 700;\n    }\n    u {\n      text-decoration: underline;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -5072,7 +5072,7 @@ var DisplayAlphabet = function DisplayAlphabet(_ref) {
 };
 
 function _templateObject7$c() {
-  var data = _taggedTemplateLiteral(["\n    svg {\n        margin-left: 6px;\n        position: relative;\n        top: 1px;        \n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    svg {\n        position: relative;\n        top: 1px;        \n    }\n"]);
 
   _templateObject7$c = function _templateObject7() {
     return data;
@@ -5146,11 +5146,16 @@ var firstRowUsabilla = css$1(_templateObject3$l(), medium);
 var secondRow = css$1(_templateObject4$i(), spacing.m, medium);
 var buttonStyle$1 = css$1(_templateObject5$h(), spacing.m, spacing.s, spacing.m, medium, spacing.m, spacing.m, spacing.m);
 var rightAlign = css$1(_templateObject6$f(), medium);
-var externalUrl = css$1(_templateObject7$c());
+var sourceLink = css$1(_templateObject7$c());
 
-var isInternalUrl = (function (baseUrl, url) {
-  var isInternal = new RegExp('^(\/)|([a-z]+:\/\/|\/\/)?(' + baseUrl + ')', 'i');
-  return isInternal.test(url);
+var isExternal = (function (baseUrl, url) {
+  var matchInternal = new RegExp("^(\/)|(" + baseUrl + ")", "i");
+
+  if (typeof url == 'undefined' || url == "#") {
+    return false;
+  } else {
+    return !matchInternal.test(url);
+  }
 });
 
 /** @jsx jsx */
@@ -5188,15 +5193,14 @@ var Source = function Source(_ref) {
   }, usabilla ? usabilla : question), jsx("div", {
     css: secondRow
   }, sourcesCollection.items.length > 0 && jsx("p", null, english ? 'Source: ' : 'Källa: ', sourcesCollection.items.map(function (item, idx) {
-    return isInternalUrl(baseUrl, item.linkUrl) ? jsx("a", {
-      href: item.linkUrl,
-      key: "link-" + idx
-    }, item.linkText) : jsx("a", {
+    return jsx("a", {
       href: item.linkUrl,
       key: "link-" + idx,
-      css: externalUrl
-    }, item.linkText, jsx(Icon, {
+      css: sourceLink,
+      className: isExternal(baseUrl, item.linkUrl) ? "external" : null
+    }, item.linkText, isExternal(baseUrl, item.linkUrl) && jsx(Icon, {
       title: "Extern l\xE4nk",
+      className: "external",
       icon: "External"
     }));
   })), markdownText, reviewed && jsx("div", {

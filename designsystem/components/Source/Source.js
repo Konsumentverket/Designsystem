@@ -1,9 +1,17 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react';
-import { sourceStyle, firstRow, firstRowUsabilla, buttonStyle, secondRow, rightAlign, externalUrl } from './Source.css';
+import { 
+    sourceStyle, 
+    firstRow, 
+    firstRowUsabilla, 
+    buttonStyle, 
+    secondRow, 
+    rightAlign, 
+    sourceLink 
+} from './Source.css';
 import { Button } from '../Button/Button';
-import isInternalUrl from './isInternalUrl';
+import isExternal from './isExternalUrl';
 import { Icon } from '../Icon/Icon';
 
 export const Source = ({ 
@@ -42,12 +50,14 @@ export const Source = ({
             <p>
                 {english ? 'Source: ' : 'Källa: '} 
                 {sourcesCollection.items.map((item, idx) => {
-                    return isInternalUrl(baseUrl, item.linkUrl) ? 
-                        <a href={item.linkUrl} key={"link-"+idx}>{item.linkText}</a> : 
-                        <a href={item.linkUrl} key={"link-"+idx} css={externalUrl}>
+                    return (
+                        <a href={item.linkUrl} key={"link-"+idx}
+                            css={sourceLink}
+                            className={isExternal(baseUrl, item.linkUrl) ? "external" : null}>
                             {item.linkText}
-                            <Icon title="Extern länk" icon="External" />
+                            {isExternal(baseUrl, item.linkUrl) && <Icon title="Extern länk" className="external" icon="External" />}
                         </a>
+                    )   
                 })}
             </p>}
             {markdownText}
