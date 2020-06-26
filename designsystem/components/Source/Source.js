@@ -5,20 +5,16 @@ import {
     sourceStyle, 
     firstRow, 
     firstRowUsabilla, 
-    buttonStyle, 
     secondRow, 
     rightAlign, 
     sourceLink 
 } from './Source.css';
-import { Button } from '../Button/Button';
 import isExternal from './isExternalUrl';
 import { Icon } from '../Icon/Icon';
 
 export const Source = ({ 
     usabilla, 
     baseUrl,
-    didThisHelpText, 
-    reportErrorText, 
     sourcesCollection, 
     markdownText, 
     reviewedDate, 
@@ -30,21 +26,10 @@ export const Source = ({
     const monthsSv = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
     const monthsEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-    const question = (<>
-        <p>{didThisHelpText || "Hittade du svaret på din fråga?"}</p>
-        <div>
-            <Button style={buttonStyle} secondaryButtonStyle={true} text={"Ja"} />
-            <Button style={buttonStyle} secondaryButtonStyle={true} text={"Nej"} />
-        </div>
-        <div css={rightAlign}>
-            <a href="#">{reportErrorText || "Rapportera fel på denna sida"}</a>
-        </div>
-    </>)
-
     return <div css={[sourceStyle, style]}>
-        <div css={usabilla ? firstRowUsabilla : firstRow}>
-            {usabilla ? usabilla : question}
-        </div>
+        {usabilla && 
+            <div css={usabilla ? firstRowUsabilla : firstRow}>{usabilla}</div>        
+        }
         <div css={secondRow}>
             {sourcesCollection.items.length > 0 && 
             <p>

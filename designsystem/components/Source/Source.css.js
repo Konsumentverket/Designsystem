@@ -5,23 +5,21 @@ import { spacing } from "../Spacing/Spacing";
 
 export const sourceStyle = css`
     padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};
+
     ${medium} {
-        padding: ${spacing.m} ${spacing.l} ${spacing.m} ${spacing.m};
+        padding: ${spacing.m} ${spacing.l} ${spacing.m} ${spacing.l};
     }
 
     a {
         font-size: 1.8rem;
         line-height: ${spacing.l};
+        margin-right: ${spacing.s};
     }
     background-color: ${colors.theme1.light};
 
     ${medium} {
         p > a {
             margin-bottom: 0;
-            margin-left: ${spacing.s};
-        }
-        p > a:first-of-type {
-            margin-left: 0;
         }
     }
     margin-bottom: ${spacing.s};
