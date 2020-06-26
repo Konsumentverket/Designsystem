@@ -5132,7 +5132,7 @@ function _templateObject2$m() {
 }
 
 function _templateObject$o() {
-  var data = _taggedTemplateLiteral(["\n    padding: ", " ", " ", " ", ";\n    ", " {\n        padding: ", " ", " ", " ", ";\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: ", ";\n    }\n    background-color: ", ";\n\n    ", " {\n        p > a {\n            margin-bottom: 0;\n            margin-left: ", ";\n        }\n        p > a:first-of-type {\n            margin-left: 0;\n        }\n    }\n    margin-bottom: ", ";\n    border-radius: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: ", " ", " ", " ", ";\n\n    ", " {\n        padding: ", " ", " ", " ", ";\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: ", ";\n        margin-right: ", ";\n    }\n    background-color: ", ";\n\n    ", " {\n        p > a {\n            margin-bottom: 0;\n        }\n    }\n    margin-bottom: ", ";\n    border-radius: ", ";\n"]);
 
   _templateObject$o = function _templateObject() {
     return data;
@@ -5140,7 +5140,7 @@ function _templateObject$o() {
 
   return data;
 }
-var sourceStyle = css$1(_templateObject$o(), spacing.s, spacing.s, spacing.m, spacing.s, medium, spacing.m, spacing.l, spacing.m, spacing.m, spacing.l, colors.theme1.light, medium, spacing.s, spacing.s, spacing.xs);
+var sourceStyle = css$1(_templateObject$o(), spacing.s, spacing.s, spacing.m, spacing.s, medium, spacing.m, spacing.l, spacing.m, spacing.l, spacing.l, spacing.s, colors.theme1.light, medium, spacing.s, spacing.xs);
 var firstRow = css$1(_templateObject2$m(), spacing.s, spacing.m, colors.theme3.midLight, medium);
 var firstRowUsabilla = css$1(_templateObject3$l(), medium);
 var secondRow = css$1(_templateObject4$i(), spacing.m, medium);
@@ -5162,8 +5162,6 @@ var isExternal = (function (baseUrl, url) {
 var Source = function Source(_ref) {
   var usabilla = _ref.usabilla,
       baseUrl = _ref.baseUrl,
-      didThisHelpText = _ref.didThisHelpText,
-      reportErrorText = _ref.reportErrorText,
       sourcesCollection = _ref.sourcesCollection,
       markdownText = _ref.markdownText,
       reviewedDate = _ref.reviewedDate,
@@ -5173,26 +5171,13 @@ var Source = function Source(_ref) {
   var reviewed = reviewedDate ? new Date(reviewedDate) : null;
   var monthsSv = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
   var monthsEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  var question = jsx(React.Fragment, null, jsx("p", null, didThisHelpText || "Hittade du svaret på din fråga?"), jsx("div", null, jsx(Button, {
-    style: buttonStyle$1,
-    secondaryButtonStyle: true,
-    text: "Ja"
-  }), jsx(Button, {
-    style: buttonStyle$1,
-    secondaryButtonStyle: true,
-    text: "Nej"
-  })), jsx("div", {
-    css: rightAlign
-  }, jsx("a", {
-    href: "#"
-  }, reportErrorText || "Rapportera fel på denna sida")));
   return jsx("div", {
     css: [sourceStyle, style]
-  }, jsx("div", {
+  }, usabilla && jsx("div", {
     css: usabilla ? firstRowUsabilla : firstRow
-  }, usabilla ? usabilla : question), jsx("div", {
+  }, usabilla), jsx("div", {
     css: secondRow
-  }, sourcesCollection.items.length > 0 && jsx("p", null, english ? 'Source: ' : 'Källa: ', sourcesCollection.items.map(function (item, idx) {
+  }, sourcesCollection && sourcesCollection.items.length > 0 && jsx("p", null, english ? 'Source: ' : 'Källa: ', sourcesCollection.items.map(function (item, idx) {
     return jsx("a", {
       href: item.linkUrl,
       key: "link-" + idx,

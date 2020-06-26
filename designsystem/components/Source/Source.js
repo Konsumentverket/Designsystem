@@ -31,7 +31,7 @@ export const Source = ({
             <div css={usabilla ? firstRowUsabilla : firstRow}>{usabilla}</div>        
         }
         <div css={secondRow}>
-            {sourcesCollection.items.length > 0 && 
+            {sourcesCollection && sourcesCollection.items.length > 0 && 
             <p>
                 {english ? 'Source: ' : 'Källa: '} 
                 {sourcesCollection.items.map((item, idx) => {
