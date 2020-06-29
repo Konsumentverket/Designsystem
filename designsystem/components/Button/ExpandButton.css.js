@@ -3,14 +3,14 @@ import { colors } from '../Colors/Colors';
 import { medium } from '../GlobalStyles/globalStyles';
 
 const disabled = css` 
-        color:${colors.theme3.dark};
-        background-color: ${colors.theme3.midLight};
-        text-decoration:none;
-        box-shadow:none;
-        cursor:inherit;
-        svg {
-            fill:${colors.theme3.dark};
-        }
+    color: ${colors.theme3.mid};
+    background-color: ${colors.theme3.midLight};
+    text-decoration:none;
+    box-shadow:none;
+    cursor:inherit;
+    svg {
+        fill:${colors.theme3.mid};
+    }
 `;
 
 export const expandButtonStyle = css`
