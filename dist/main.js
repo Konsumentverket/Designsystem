@@ -3905,7 +3905,7 @@ function _templateObject7$7() {
 }
 
 function _templateObject6$9() {
-  var data = _taggedTemplateLiteral(["\n    position:relative;\n    svg {\n         padding-right:.8rem;\n        vertical-align: text-top;\n     }\n     ", "{\n        svg {\n            float:left;\n        }\n      } \n"]);
+  var data = _taggedTemplateLiteral(["\n    position:relative;\n    svg {\n        padding-right:.8rem;\n        vertical-align: text-top;\n     }\n     ", "{\n        svg {\n            float:left;\n        }\n      } \n"]);
 
   _templateObject6$9 = function _templateObject6() {
     return data;
@@ -3945,7 +3945,7 @@ function _templateObject3$b() {
 }
 
 function _templateObject2$c() {
-  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    display:flex;\n    justify-content: center;\n    align-items: center;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    box-sizing: border-box;\n    cursor:pointer;\n    /* text-align: center; */\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:fit-content;\n        /* text-align:left; */\n        padding:1.6rem 2.4rem;\n        justify-content: space-between;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    display:flex;\n    justify-content: center;\n    align-items: center;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    box-sizing: border-box;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:fit-content;\n        padding:1.6rem 2.4rem;\n        justify-content: space-between;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
 
   _templateObject2$c = function _templateObject2() {
     return data;
@@ -5143,7 +5143,8 @@ var Source = function Source(_ref) {
       reviewedDate = _ref.reviewedDate,
       reviewedDateText = _ref.reviewedDateText,
       style = _ref.style,
-      english = _ref.english;
+      english = _ref.english,
+      bottomContent = _ref.bottomContent;
   var reviewed = reviewedDate ? new Date(reviewedDate) : null;
   var monthsSv = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
   var monthsEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -5166,7 +5167,7 @@ var Source = function Source(_ref) {
     }));
   })), markdownText, reviewed && core.jsx("div", {
     css: rightAlign
-  }, core.jsx("p", null, "".concat(reviewedDateText || english ? 'Proofread: ' : 'Granskad: ').concat(reviewed.getDate(), " ").concat(english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))));
+  }, core.jsx("p", null, "".concat(reviewedDateText || english ? 'Proofread: ' : 'Granskad: ').concat(reviewed.getDate(), " ").concat(english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))), bottomContent && core.jsx("div", null, bottomContent));
 };
 
 function _templateObject$p() {

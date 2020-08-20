@@ -20,7 +20,9 @@ export const Source = ({
     reviewedDate, 
     reviewedDateText, 
     style, 
-    english }) => {
+    english,
+    bottomContent,
+}) => {
 
     const reviewed = reviewedDate ? new Date(reviewedDate) : null;
     const monthsSv = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
@@ -48,5 +50,11 @@ export const Source = ({
             {markdownText}
             {reviewed && <div css={rightAlign}><p>{`${reviewedDateText || english ? 'Proofread: ' : 'Granskad: '}${reviewed.getDate()} ${english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()]} ${reviewed.getFullYear()}`}</p></div>}
         </div>
+        {bottomContent && 
+            <div>
+                {bottomContent}
+            </div>
+        }
+
     </div>
 }
