@@ -75,6 +75,7 @@ export const searchFieldButtonStyle = css`
     white-space: nowrap;
     width:auto;
     display:flex;
+    align-items: center;
     border-radius: 0 .8rem .8rem 0;
     margin-right:-.8rem;
 `;
