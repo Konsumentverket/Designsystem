@@ -100,7 +100,13 @@ const globalStyles = (
       h3, h4, h5, h6 {
         margin-bottom: .8rem;
       }
-  a{
+  a {
+    &.external {
+      svg.external {
+        margin-left: 3px;
+      }
+    }
+
     &:not(.noStyle){
         text-decoration:underline;
         font-weight:700;
@@ -151,10 +157,6 @@ const globalStyles = (
 
         &[href$=".txt"] { ${fileIcon(filePath)} }
 
-
-        
-        
-
         &:hover {
           box-shadow: 0 0 0 4px ${colors.theme1.midLight};
           border-radius: .8rem;
@@ -197,7 +199,6 @@ const globalStyles = (
       }
     }
   }
-
 
       &:not(.tabnav){
         *:focus {

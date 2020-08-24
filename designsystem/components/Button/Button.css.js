@@ -3,19 +3,21 @@ import { colors } from '../Colors/Colors';
 import { medium } from '../GlobalStyles/globalStyles';
 
 const disabled = css` 
-        color:${colors.theme3.dark};
+        color: ${colors.theme3.mid};
         background-color: ${colors.theme3.midLight};
         text-decoration:none;
         box-shadow:none;
         cursor:inherit;
         svg {
-            fill:${colors.theme3.dark};
+            fill:${colors.theme3.mid};
         }
 `;
 
 export const buttonStyle = css`
     text-decoration: none;
-    display:inline-block;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     font-size:1.6rem;
     line-height:2.4rem;
     font-weight:500;
@@ -25,7 +27,6 @@ export const buttonStyle = css`
     width:100%;
     box-sizing: border-box;
     cursor:pointer;
-    text-align: center;
     background-color:${colors.theme1.mid};
 
     svg {
@@ -34,9 +35,9 @@ export const buttonStyle = css`
 
     ${medium}{
         font-size:2.1rem;
-        width:auto;
-        text-align:left;
+        width:fit-content;
         padding:1.6rem 2.4rem;
+        justify-content: space-between;
     }
 
       &:hover, &.selectedButtonStyle {
@@ -110,12 +111,12 @@ export const invertedSecondaryBackgroundStyle = css`
 export const buttonIconLeft = css`
     position:relative;
     svg {
-         padding-right:.8rem;
+        padding-right:.8rem;
+        vertical-align: text-top;
      }
      ${medium}{
-        padding-left:4.8rem;
         svg {
-            left:1.6rem;
+            float:left;
         }
       } 
 `
@@ -124,11 +125,11 @@ export const buttonIconRight = css`
     position:relative;
     svg {
         padding-left:.8rem;
+        vertical-align: text-top;
     } 
     ${medium}{
-        padding-right:4.8rem;
         svg {
-            right:1.6rem;
+            float: right;
         }
     } 
 `
@@ -136,13 +137,14 @@ export const buttonIconRight = css`
 export const iconStyle = css`
     
     fill:${colors.common.white};
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 1.6rem;
+    height: 1.6rem;
     top: 1.8rem;
-    vertical-align: top;
+    vertical-align: baseline;
     ${medium}{
-        position:absolute; 
-      }
+        width: 2.4rem;
+        height: 2.4rem;
+    }
 `
 
 
