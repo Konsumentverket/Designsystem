@@ -45,6 +45,7 @@ export { DisplayAlphabet } from './DisplayAlphabet/DisplayAlphabet'
 
 //misc
 export { Source } from './Source/Source.js'
+export { Polyfill } from './Polyfill/Polyfill.js'
 export { Skeleton } from './Skeleton/Skeleton.js'
 export { Pagination } from './Pagination/Pagination.js'
 export { WithContentExpander } from './WithContentExpander/WithContentExpander.js'
