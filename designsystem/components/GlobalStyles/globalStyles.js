@@ -126,6 +126,7 @@ const globalStyles = (
           margin-left: 3.2rem;
           position: relative;
           display: inline-flex;
+          align-items: center;
           &:hover {
             box-shadow: 0 0 0 2px ${colors.theme1.midLight};
           }
@@ -242,9 +243,11 @@ const LinkColorsInverted = css`
  color:${colors.theme1.mid} !important;
    &:hover {
      background-color:#fff !important;
+     box-shadow: 0 0 0 4px #FFF !important;
    }
    &:active {
      background-color:#fff !important;
+     box-shadow: 0 0 0 4px #FFF !important;
      color:${colors.theme1.xDark} !important;
    }
    &:visited{
