@@ -1,22 +1,9 @@
-import { jsx, Global, css as css$1 } from '@emotion/core';
+import { jsx, Global, css } from '@emotion/core';
 import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
 import { format, parseISO } from 'date-fns';
 import sv from 'date-fns/locale/sv';
+import css$1 from '@emotion/css';
 import ReactDOM from 'react-dom';
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function (obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function (obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {
@@ -468,16 +455,16 @@ var fileIcon = function fileIcon(fileSvgPath) {
 var globalStyles = function globalStyles() {
   var fontSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "62.5%";
   var fontFamily = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
-  return css$1(_templateObject(), fontSize, fontFamily, spacing.s, spacing.xl, spacing.s, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, fileIcon(filePdfPath), fileIcon(filePowerpointPath), fileIcon(fileWordPath), fileIcon(fileExcelPath), fileIcon(filePath), colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
+  return css(_templateObject(), fontSize, fontFamily, spacing.s, spacing.xl, spacing.s, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, fileIcon(filePdfPath), fileIcon(filePowerpointPath), fileIcon(fileWordPath), fileIcon(fileExcelPath), fileIcon(filePath), colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
 };
 
-var LinkColors = css$1(_templateObject2(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
-var LinkColorsInverted = css$1(_templateObject3(), colors.theme1.mid, colors.theme1.xDark, colors.states.visited);
-var LinkWrapperColorStyle = css$1(_templateObject4(), LinkColors);
-var LinkWrapperInvertedColorStyle = css$1(_templateObject5(), LinkColorsInverted);
-var ElementLinkColorStyle = css$1(_templateObject6(), LinkColors);
-var ElementLinkInvertedColorStyle = css$1(_templateObject7(), LinkColorsInverted);
-var VisuallyHidden = css$1(_templateObject8());
+var LinkColors = css(_templateObject2(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
+var LinkColorsInverted = css(_templateObject3(), colors.theme1.mid, colors.theme1.xDark, colors.states.visited);
+var LinkWrapperColorStyle = css(_templateObject4(), LinkColors);
+var LinkWrapperInvertedColorStyle = css(_templateObject5(), LinkColorsInverted);
+var ElementLinkColorStyle = css(_templateObject6(), LinkColors);
+var ElementLinkInvertedColorStyle = css(_templateObject7(), LinkColorsInverted);
+var VisuallyHidden = css(_templateObject8());
 
 /** @jsx jsx */
 //const dateAndTimeFormat = "d MMMM yyyy 'kl.' HH:mm";
@@ -2108,13 +2095,13 @@ function _templateObject2$1() {
   return data;
 }
 
-var LinkColors$1 = css$1(_templateObject2$1(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
-var LinkColorsInverted$1 = css$1(_templateObject3$1(), colors.theme1.mid, colors.theme1.xDark, colors.states.visited);
-var LinkWrapperColorStyle$1 = css$1(_templateObject4$1(), LinkColors$1);
-var LinkWrapperInvertedColorStyle$1 = css$1(_templateObject5$1(), LinkColorsInverted$1);
-var ElementLinkColorStyle$1 = css$1(_templateObject6$1(), LinkColors$1);
-var ElementLinkInvertedColorStyle$1 = css$1(_templateObject7$1(), LinkColorsInverted$1);
-var VisuallyHidden$1 = css$1(_templateObject8$1());
+var LinkColors$1 = css(_templateObject2$1(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
+var LinkColorsInverted$1 = css(_templateObject3$1(), colors.theme1.mid, colors.theme1.xDark, colors.states.visited);
+var LinkWrapperColorStyle$1 = css(_templateObject4$1(), LinkColors$1);
+var LinkWrapperInvertedColorStyle$1 = css(_templateObject5$1(), LinkColorsInverted$1);
+var ElementLinkColorStyle$1 = css(_templateObject6$1(), LinkColors$1);
+var ElementLinkInvertedColorStyle$1 = css(_templateObject7$1(), LinkColorsInverted$1);
+var VisuallyHidden$1 = css(_templateObject8$1());
 var viewportSmall = 420;
 var viewportMedium = 768;
 var viewportLarge = 1120;
@@ -2210,14 +2197,14 @@ function _templateObject$1() {
 
   return data;
 }
-var commonSubHeadingStyle = css$1(_templateObject$1());
-var h1Style = css$1(_templateObject2$2(), medium);
-var h2Style = css$1(_templateObject3$2(), medium);
-var h3Style = css$1(_templateObject4$2(), medium);
-var h4Style = css$1(_templateObject5$2(), medium);
-var h5Style = css$1(_templateObject6$2(), medium);
-var h6Style = css$1(_templateObject7$2(), medium);
-var h7Style = css$1(_templateObject8$2());
+var commonSubHeadingStyle = css(_templateObject$1());
+var h1Style = css(_templateObject2$2(), medium);
+var h2Style = css(_templateObject3$2(), medium);
+var h3Style = css(_templateObject4$2(), medium);
+var h4Style = css(_templateObject5$2(), medium);
+var h5Style = css(_templateObject6$2(), medium);
+var h6Style = css(_templateObject7$2(), medium);
+var h7Style = css(_templateObject8$2());
 
 var SubHeading = function SubHeading(_ref) {
   var children = _ref.children,
@@ -2313,12 +2300,12 @@ function _templateObject$2() {
 
   return data;
 }
-var arrowStyle = css$1(_templateObject$2(), colors.theme1.mid);
-var iconStyle = css$1(_templateObject2$3(), colors.theme1.mid);
-var iconCardStyle = css$1(_templateObject3$3(), colors.common.white, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark);
-var iconText = css$1(_templateObject4$3(), colors.theme1.mid);
-var noIcon = css$1(_templateObject5$3());
-var topAreaIcon = css$1(_templateObject6$3());
+var arrowStyle = css(_templateObject$2(), colors.theme1.mid);
+var iconStyle = css(_templateObject2$3(), colors.theme1.mid);
+var iconCardStyle = css(_templateObject3$3(), colors.common.white, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark);
+var iconText = css(_templateObject4$3(), colors.theme1.mid);
+var noIcon = css(_templateObject5$3());
+var topAreaIcon = css(_templateObject6$3());
 
 /** @jsx jsx */
 var IconCard = React.forwardRef(function (_ref, ref) {
@@ -2358,7 +2345,7 @@ function _templateObject$3() {
 
   return data;
 }
-var tagStyle = css$1(_templateObject$3(), colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark);
+var tagStyle = css(_templateObject$3(), colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark);
 
 /** @jsx jsx */
 
@@ -2506,19 +2493,19 @@ function _templateObject$4() {
 
   return data;
 }
-var tagBlockItem = css$1(_templateObject$4(), colors.theme3.xLight);
-var invertedTag = css$1(_templateObject2$4());
-var tagLink = css$1(_templateObject3$4(), colors.theme1.mid, colors.theme1.midDark, colors.theme1.xDark, colors.theme1.xDark);
-var tagHeading = css$1(_templateObject4$4());
-var tagIconHeading = css$1(_templateObject5$4());
-var tagsArea = css$1(_templateObject6$4());
-var tagsList = css$1(_templateObject7$3());
-var tagsListItem = css$1(_templateObject8$3());
-var tagItem = css$1(_templateObject9());
-var tagItemText = css$1(_templateObject10());
-var iconStyle$1 = css$1(_templateObject11());
-var arrowStyle$1 = css$1(_templateObject12());
-var secondaryArrowStyleCSS = css$1(_templateObject13());
+var tagBlockItem = css(_templateObject$4(), colors.theme3.xLight);
+var invertedTag = css(_templateObject2$4());
+var tagLink = css(_templateObject3$4(), colors.theme1.mid, colors.theme1.midDark, colors.theme1.xDark, colors.theme1.xDark);
+var tagHeading = css(_templateObject4$4());
+var tagIconHeading = css(_templateObject5$4());
+var tagsArea = css(_templateObject6$4());
+var tagsList = css(_templateObject7$3());
+var tagsListItem = css(_templateObject8$3());
+var tagItem = css(_templateObject9());
+var tagItemText = css(_templateObject10());
+var iconStyle$1 = css(_templateObject11());
+var arrowStyle$1 = css(_templateObject12());
+var secondaryArrowStyleCSS = css(_templateObject13());
 
 /** @jsx jsx */
 
@@ -2614,9 +2601,9 @@ function _templateObject$5() {
 
   return data;
 }
-var wrapper = css$1(_templateObject$5(), colors.theme1.light, medium, medium);
-var exclamationMarkImage = css$1(_templateObject2$5(), medium, medium);
-var heading = css$1(_templateObject3$5());
+var wrapper = css(_templateObject$5(), colors.theme1.light, medium, medium);
+var exclamationMarkImage = css(_templateObject2$5(), medium, medium);
+var heading = css(_templateObject3$5());
 
 /** @jsx jsx */
 var PrerequisitesBox = function PrerequisitesBox(_ref) {
@@ -2725,15 +2712,15 @@ function _templateObject$6() {
 
   return data;
 }
-var focusWrapper = css$1(_templateObject$6(), colors.theme2.mid);
-var linkWrapper = css$1(_templateObject2$6(), colors.theme2.midDark, colors.theme2.dark, medium);
-var focusHeadline = css$1(_templateObject3$6());
-var focusText = css$1(_templateObject4$5());
-var textArea = css$1(_templateObject5$5(), medium);
-var pictureWrapper = css$1(_templateObject6$5());
-var iconBackground = css$1(_templateObject7$4(), colors.theme2.light);
-var externalIcon = css$1(_templateObject8$4());
-var puffIcon = css$1(_templateObject9$1());
+var focusWrapper = css(_templateObject$6(), colors.theme2.mid);
+var linkWrapper = css(_templateObject2$6(), colors.theme2.midDark, colors.theme2.dark, medium);
+var focusHeadline = css(_templateObject3$6());
+var focusText = css(_templateObject4$5());
+var textArea = css(_templateObject5$5(), medium);
+var pictureWrapper = css(_templateObject6$5());
+var iconBackground = css(_templateObject7$4(), colors.theme2.light);
+var externalIcon = css(_templateObject8$4());
+var puffIcon = css(_templateObject9$1());
 
 /** @jsx jsx */
 var FocusPuff = function FocusPuff(_ref) {
@@ -2879,15 +2866,15 @@ function _templateObject$7() {
 
   return data;
 }
-var focusWrapper$1 = css$1(_templateObject$7(), medium);
-var linkWrapper$1 = css$1(_templateObject2$7(), colors.theme1.mid, colors.theme2.midDark, colors.theme2.dark, medium);
-var focusHeadline$1 = css$1(_templateObject3$7());
-var focusText$1 = css$1(_templateObject4$6(), colors.theme3.dark);
-var textArea$1 = css$1(_templateObject5$6(), medium, large);
-var pictureWrapper$1 = css$1(_templateObject6$6(), medium, large);
-var iconBackground$1 = css$1(_templateObject7$5(), colors.theme2.light, medium);
-var externalIcon$1 = css$1(_templateObject8$5(), colors.theme1.mid);
-var puffIcon$1 = css$1(_templateObject9$2(), colors.theme2.mid);
+var focusWrapper$1 = css(_templateObject$7(), medium);
+var linkWrapper$1 = css(_templateObject2$7(), colors.theme1.mid, colors.theme2.midDark, colors.theme2.dark, medium);
+var focusHeadline$1 = css(_templateObject3$7());
+var focusText$1 = css(_templateObject4$6(), colors.theme3.dark);
+var textArea$1 = css(_templateObject5$6(), medium, large);
+var pictureWrapper$1 = css(_templateObject6$6(), medium, large);
+var iconBackground$1 = css(_templateObject7$5(), colors.theme2.light, medium);
+var externalIcon$1 = css(_templateObject8$5(), colors.theme1.mid);
+var puffIcon$1 = css(_templateObject9$2(), colors.theme2.mid);
 
 /** @jsx jsx */
 var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
@@ -2961,8 +2948,8 @@ function _templateObject$8() {
 
   return data;
 }
-var wrapper$1 = css$1(_templateObject$8(), colors.theme3.xLight, spacing.m, spacing.s, spacing.m, spacing.s, medium, spacing.m, spacing.l, spacing.m, spacing.l);
-var secondaryColorStyle = css$1(_templateObject2$8(), colors.theme2.light);
+var wrapper$1 = css(_templateObject$8(), colors.theme3.xLight, spacing.m, spacing.s, spacing.m, spacing.s, medium, spacing.m, spacing.l, spacing.m, spacing.l);
+var secondaryColorStyle = css(_templateObject2$8(), colors.theme2.light);
 
 /** @jsx jsx */
 var FactBox = function FactBox(_ref) {
@@ -3072,15 +3059,15 @@ function _templateObject$9() {
 
   return data;
 }
-var wrapper$2 = css$1(_templateObject$9(), colors.theme3.midLight);
-var linkTextMainLinkStyle = css$1(_templateObject2$9());
-var mainLinkStyle = css$1(_templateObject3$8(), colors.theme1.xDark, colors.common.white, colors.theme1.mid, colors.theme1.mid, colors.states.focus);
-var rotateArrow = css$1(_templateObject4$7());
-var childrenWrapper = css$1(_templateObject5$7());
-var showAllLink = css$1(_templateObject6$7(), colors.theme3.midLight);
-var innerTextWrapperStyle = css$1(_templateObject7$6(), colors.theme1.mid);
-var linkTextCardContentStyle = css$1(_templateObject8$6(), colors.theme3.dark);
-var customFontSize = css$1(_templateObject9$3());
+var wrapper$2 = css(_templateObject$9(), colors.theme3.midLight);
+var linkTextMainLinkStyle = css(_templateObject2$9());
+var mainLinkStyle = css(_templateObject3$8(), colors.theme1.xDark, colors.common.white, colors.theme1.mid, colors.theme1.mid, colors.states.focus);
+var rotateArrow = css(_templateObject4$7());
+var childrenWrapper = css(_templateObject5$7());
+var showAllLink = css(_templateObject6$7(), colors.theme3.midLight);
+var innerTextWrapperStyle = css(_templateObject7$6(), colors.theme1.mid);
+var linkTextCardContentStyle = css(_templateObject8$6(), colors.theme3.dark);
+var customFontSize = css(_templateObject9$3());
 
 /** @jsx jsx */
 var LinkCard = React.forwardRef(function (_ref, ref) {
@@ -3211,9 +3198,9 @@ function _templateObject$a() {
 
   return data;
 }
-var fieldWrapper = css$1(_templateObject$a(), colors.theme3.xLight, colors.theme1.xDark, colors.theme1.mid, colors.states.focus);
-var fieldInput = css$1(_templateObject2$a(), colors.theme1.mid, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark);
-var fieldLabel = css$1(_templateObject3$9());
+var fieldWrapper = css(_templateObject$a(), colors.theme3.xLight, colors.theme1.xDark, colors.theme1.mid, colors.states.focus);
+var fieldInput = css(_templateObject2$a(), colors.theme1.mid, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark);
+var fieldLabel = css(_templateObject3$9());
 
 /** @jsx jsx */
 var InputRadio = function InputRadio(_ref) {
@@ -3255,443 +3242,6 @@ var InputRadio = function InputRadio(_ref) {
     }
   }), labelText));
 };
-
-/* eslint-disable */
-// Inspired by https://github.com/garycourt/murmurhash-js
-// Ported from https://github.com/aappleby/smhasher/blob/61a0530f28277f2e850bfc39600ce61d02b518de/src/MurmurHash2.cpp#L37-L86
-function murmur2(str) {
-  // 'm' and 'r' are mixing constants generated offline.
-  // They're not really 'magic', they just happen to work well.
-  // const m = 0x5bd1e995;
-  // const r = 24;
-  // Initialize the hash
-  var h = 0; // Mix 4 bytes at a time into the hash
-
-  var k,
-      i = 0,
-      len = str.length;
-
-  for (; len >= 4; ++i, len -= 4) {
-    k = str.charCodeAt(i) & 0xff | (str.charCodeAt(++i) & 0xff) << 8 | (str.charCodeAt(++i) & 0xff) << 16 | (str.charCodeAt(++i) & 0xff) << 24;
-    k =
-    /* Math.imul(k, m): */
-    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16);
-    k ^=
-    /* k >>> r: */
-    k >>> 24;
-    h =
-    /* Math.imul(k, m): */
-    (k & 0xffff) * 0x5bd1e995 + ((k >>> 16) * 0xe995 << 16) ^
-    /* Math.imul(h, m): */
-    (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
-  } // Handle the last few bytes of the input array
-
-
-  switch (len) {
-    case 3:
-      h ^= (str.charCodeAt(i + 2) & 0xff) << 16;
-
-    case 2:
-      h ^= (str.charCodeAt(i + 1) & 0xff) << 8;
-
-    case 1:
-      h ^= str.charCodeAt(i) & 0xff;
-      h =
-      /* Math.imul(h, m): */
-      (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
-  } // Do a few final mixes of the hash to ensure the last few
-  // bytes are well-incorporated.
-
-
-  h ^= h >>> 13;
-  h =
-  /* Math.imul(h, m): */
-  (h & 0xffff) * 0x5bd1e995 + ((h >>> 16) * 0xe995 << 16);
-  return ((h ^ h >>> 15) >>> 0).toString(36);
-}
-
-var unitlessKeys = {
-  animationIterationCount: 1,
-  borderImageOutset: 1,
-  borderImageSlice: 1,
-  borderImageWidth: 1,
-  boxFlex: 1,
-  boxFlexGroup: 1,
-  boxOrdinalGroup: 1,
-  columnCount: 1,
-  columns: 1,
-  flex: 1,
-  flexGrow: 1,
-  flexPositive: 1,
-  flexShrink: 1,
-  flexNegative: 1,
-  flexOrder: 1,
-  gridRow: 1,
-  gridRowEnd: 1,
-  gridRowSpan: 1,
-  gridRowStart: 1,
-  gridColumn: 1,
-  gridColumnEnd: 1,
-  gridColumnSpan: 1,
-  gridColumnStart: 1,
-  msGridRow: 1,
-  msGridRowSpan: 1,
-  msGridColumn: 1,
-  msGridColumnSpan: 1,
-  fontWeight: 1,
-  lineHeight: 1,
-  opacity: 1,
-  order: 1,
-  orphans: 1,
-  tabSize: 1,
-  widows: 1,
-  zIndex: 1,
-  zoom: 1,
-  WebkitLineClamp: 1,
-  // SVG-related properties
-  fillOpacity: 1,
-  floodOpacity: 1,
-  stopOpacity: 1,
-  strokeDasharray: 1,
-  strokeDashoffset: 1,
-  strokeMiterlimit: 1,
-  strokeOpacity: 1,
-  strokeWidth: 1
-};
-
-function memoize(fn) {
-  var cache = {};
-  return function (arg) {
-    if (cache[arg] === undefined) cache[arg] = fn(arg);
-    return cache[arg];
-  };
-}
-
-var ILLEGAL_ESCAPE_SEQUENCE_ERROR = "You have illegal escape sequence in your template literal, most likely inside content's property value.\nBecause you write your CSS inside a JavaScript string you actually have to do double escaping, so for example \"content: '\\00d7';\" should become \"content: '\\\\00d7';\".\nYou can read more about this here:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#ES2018_revision_of_illegal_escape_sequences";
-var UNDEFINED_AS_OBJECT_KEY_ERROR = "You have passed in falsy value as style object's key (can happen when in example you pass unexported component as computed key).";
-var hyphenateRegex = /[A-Z]|^ms/g;
-var animationRegex = /_EMO_([^_]+?)_([^]*?)_EMO_/g;
-
-var isCustomProperty = function isCustomProperty(property) {
-  return property.charCodeAt(1) === 45;
-};
-
-var isProcessableValue = function isProcessableValue(value) {
-  return value != null && typeof value !== 'boolean';
-};
-
-var processStyleName = memoize(function (styleName) {
-  return isCustomProperty(styleName) ? styleName : styleName.replace(hyphenateRegex, '-$&').toLowerCase();
-});
-
-var processStyleValue = function processStyleValue(key, value) {
-  switch (key) {
-    case 'animation':
-    case 'animationName':
-      {
-        if (typeof value === 'string') {
-          return value.replace(animationRegex, function (match, p1, p2) {
-            cursor = {
-              name: p1,
-              styles: p2,
-              next: cursor
-            };
-            return p1;
-          });
-        }
-      }
-  }
-
-  if (unitlessKeys[key] !== 1 && !isCustomProperty(key) && typeof value === 'number' && value !== 0) {
-    return value + 'px';
-  }
-
-  return value;
-};
-
-if (process.env.NODE_ENV !== 'production') {
-  var contentValuePattern = /(attr|calc|counters?|url)\(/;
-  var contentValues = ['normal', 'none', 'counter', 'open-quote', 'close-quote', 'no-open-quote', 'no-close-quote', 'initial', 'inherit', 'unset'];
-  var oldProcessStyleValue = processStyleValue;
-  var msPattern = /^-ms-/;
-  var hyphenPattern = /-(.)/g;
-  var hyphenatedCache = {};
-
-  processStyleValue = function processStyleValue(key, value) {
-    if (key === 'content') {
-      if (typeof value !== 'string' || contentValues.indexOf(value) === -1 && !contentValuePattern.test(value) && (value.charAt(0) !== value.charAt(value.length - 1) || value.charAt(0) !== '"' && value.charAt(0) !== "'")) {
-        console.error("You seem to be using a value for 'content' without quotes, try replacing it with `content: '\"" + value + "\"'`");
-      }
-    }
-
-    var processed = oldProcessStyleValue(key, value);
-
-    if (processed !== '' && !isCustomProperty(key) && key.indexOf('-') !== -1 && hyphenatedCache[key] === undefined) {
-      hyphenatedCache[key] = true;
-      console.error("Using kebab-case for css properties in objects is not supported. Did you mean " + key.replace(msPattern, 'ms-').replace(hyphenPattern, function (str, _char) {
-        return _char.toUpperCase();
-      }) + "?");
-    }
-
-    return processed;
-  };
-}
-
-var shouldWarnAboutInterpolatingClassNameFromCss = true;
-
-function handleInterpolation(mergedProps, registered, interpolation, couldBeSelectorInterpolation) {
-  if (interpolation == null) {
-    return '';
-  }
-
-  if (interpolation.__emotion_styles !== undefined) {
-    if (process.env.NODE_ENV !== 'production' && interpolation.toString() === 'NO_COMPONENT_SELECTOR') {
-      throw new Error('Component selectors can only be used in conjunction with babel-plugin-emotion.');
-    }
-
-    return interpolation;
-  }
-
-  switch (_typeof(interpolation)) {
-    case 'boolean':
-      {
-        return '';
-      }
-
-    case 'object':
-      {
-        if (interpolation.anim === 1) {
-          cursor = {
-            name: interpolation.name,
-            styles: interpolation.styles,
-            next: cursor
-          };
-          return interpolation.name;
-        }
-
-        if (interpolation.styles !== undefined) {
-          var next = interpolation.next;
-
-          if (next !== undefined) {
-            // not the most efficient thing ever but this is a pretty rare case
-            // and there will be very few iterations of this generally
-            while (next !== undefined) {
-              cursor = {
-                name: next.name,
-                styles: next.styles,
-                next: cursor
-              };
-              next = next.next;
-            }
-          }
-
-          var styles = interpolation.styles + ";";
-
-          if (process.env.NODE_ENV !== 'production' && interpolation.map !== undefined) {
-            styles += interpolation.map;
-          }
-
-          return styles;
-        }
-
-        return createStringFromObject(mergedProps, registered, interpolation);
-      }
-
-    case 'function':
-      {
-        if (mergedProps !== undefined) {
-          var previousCursor = cursor;
-          var result = interpolation(mergedProps);
-          cursor = previousCursor;
-          return handleInterpolation(mergedProps, registered, result, couldBeSelectorInterpolation);
-        } else if (process.env.NODE_ENV !== 'production') {
-          console.error('Functions that are interpolated in css calls will be stringified.\n' + 'If you want to have a css call based on props, create a function that returns a css call like this\n' + 'let dynamicStyle = (props) => css`color: ${props.color}`\n' + 'It can be called directly with props or interpolated in a styled call like this\n' + "let SomeComponent = styled('div')`${dynamicStyle}`");
-        }
-
-        break;
-      }
-
-    case 'string':
-      if (process.env.NODE_ENV !== 'production') {
-        var matched = [];
-        var replaced = interpolation.replace(animationRegex, function (match, p1, p2) {
-          var fakeVarName = "animation" + matched.length;
-          matched.push("const " + fakeVarName + " = keyframes`" + p2.replace(/^@keyframes animation-\w+/, '') + "`");
-          return "${" + fakeVarName + "}";
-        });
-
-        if (matched.length) {
-          console.error('`keyframes` output got interpolated into plain string, please wrap it with `css`.\n\n' + 'Instead of doing this:\n\n' + [].concat(matched, ["`" + replaced + "`"]).join('\n') + '\n\nYou should wrap it with `css` like this:\n\n' + ("css`" + replaced + "`"));
-        }
-      }
-
-      break;
-  } // finalize string values (regular strings and functions interpolated into css calls)
-
-
-  if (registered == null) {
-    return interpolation;
-  }
-
-  var cached = registered[interpolation];
-
-  if (process.env.NODE_ENV !== 'production' && couldBeSelectorInterpolation && shouldWarnAboutInterpolatingClassNameFromCss && cached !== undefined) {
-    console.error('Interpolating a className from css`` is not recommended and will cause problems with composition.\n' + 'Interpolating a className from css`` will be completely unsupported in a future major version of Emotion');
-    shouldWarnAboutInterpolatingClassNameFromCss = false;
-  }
-
-  return cached !== undefined && !couldBeSelectorInterpolation ? cached : interpolation;
-}
-
-function createStringFromObject(mergedProps, registered, obj) {
-  var string = '';
-
-  if (Array.isArray(obj)) {
-    for (var i = 0; i < obj.length; i++) {
-      string += handleInterpolation(mergedProps, registered, obj[i], false);
-    }
-  } else {
-    for (var _key in obj) {
-      var value = obj[_key];
-
-      if (_typeof(value) !== 'object') {
-        if (registered != null && registered[value] !== undefined) {
-          string += _key + "{" + registered[value] + "}";
-        } else if (isProcessableValue(value)) {
-          string += processStyleName(_key) + ":" + processStyleValue(_key, value) + ";";
-        }
-      } else {
-        if (_key === 'NO_COMPONENT_SELECTOR' && process.env.NODE_ENV !== 'production') {
-          throw new Error('Component selectors can only be used in conjunction with babel-plugin-emotion.');
-        }
-
-        if (Array.isArray(value) && typeof value[0] === 'string' && (registered == null || registered[value[0]] === undefined)) {
-          for (var _i = 0; _i < value.length; _i++) {
-            if (isProcessableValue(value[_i])) {
-              string += processStyleName(_key) + ":" + processStyleValue(_key, value[_i]) + ";";
-            }
-          }
-        } else {
-          var interpolated = handleInterpolation(mergedProps, registered, value, false);
-
-          switch (_key) {
-            case 'animation':
-            case 'animationName':
-              {
-                string += processStyleName(_key) + ":" + interpolated + ";";
-                break;
-              }
-
-            default:
-              {
-                if (process.env.NODE_ENV !== 'production' && _key === 'undefined') {
-                  console.error(UNDEFINED_AS_OBJECT_KEY_ERROR);
-                }
-
-                string += _key + "{" + interpolated + "}";
-              }
-          }
-        }
-      }
-    }
-  }
-
-  return string;
-}
-
-var labelPattern = /label:\s*([^\s;\n{]+)\s*;/g;
-var sourceMapPattern;
-
-if (process.env.NODE_ENV !== 'production') {
-  sourceMapPattern = /\/\*#\ssourceMappingURL=data:application\/json;\S+\s+\*\//;
-} // this is the cursor for keyframes
-// keyframes are stored on the SerializedStyles object as a linked list
-
-
-var cursor;
-
-var serializeStyles = function serializeStyles(args, registered, mergedProps) {
-  if (args.length === 1 && _typeof(args[0]) === 'object' && args[0] !== null && args[0].styles !== undefined) {
-    return args[0];
-  }
-
-  var stringMode = true;
-  var styles = '';
-  cursor = undefined;
-  var strings = args[0];
-
-  if (strings == null || strings.raw === undefined) {
-    stringMode = false;
-    styles += handleInterpolation(mergedProps, registered, strings, false);
-  } else {
-    if (process.env.NODE_ENV !== 'production' && strings[0] === undefined) {
-      console.error(ILLEGAL_ESCAPE_SEQUENCE_ERROR);
-    }
-
-    styles += strings[0];
-  } // we start at 1 since we've already handled the first arg
-
-
-  for (var i = 1; i < args.length; i++) {
-    styles += handleInterpolation(mergedProps, registered, args[i], styles.charCodeAt(styles.length - 1) === 46);
-
-    if (stringMode) {
-      if (process.env.NODE_ENV !== 'production' && strings[i] === undefined) {
-        console.error(ILLEGAL_ESCAPE_SEQUENCE_ERROR);
-      }
-
-      styles += strings[i];
-    }
-  }
-
-  var sourceMap;
-
-  if (process.env.NODE_ENV !== 'production') {
-    styles = styles.replace(sourceMapPattern, function (match) {
-      sourceMap = match;
-      return '';
-    });
-  } // using a global regex with .exec is stateful so lastIndex has to be reset each time
-
-
-  labelPattern.lastIndex = 0;
-  var identifierName = '';
-  var match; // https://esbench.com/bench/5b809c2cf2949800a0f61fb5
-
-  while ((match = labelPattern.exec(styles)) !== null) {
-    identifierName += '-' + // $FlowFixMe we know it's not null
-    match[1];
-  }
-
-  var name = murmur2(styles) + identifierName;
-
-  if (process.env.NODE_ENV !== 'production') {
-    // $FlowFixMe SerializedStyles type doesn't have toString property (and we don't want to add it)
-    return {
-      name: name,
-      styles: styles,
-      map: sourceMap,
-      next: cursor,
-      toString: function toString() {
-        return "You have tried to stringify object returned from `css` function. It isn't supposed to be used directly (e.g. as value of the `className` prop), but rather handed to emotion so it can handle it (e.g. as value of `css` prop).";
-      }
-    };
-  }
-
-  return {
-    name: name,
-    styles: styles,
-    next: cursor
-  };
-};
-
-function css() {
-  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-    args[_key] = arguments[_key];
-  }
-
-  return serializeStyles(args);
-}
 
 function _templateObject6$8() {
   var data = _taggedTemplateLiteral(["\n  color: #4D4D4D;\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin-bottom: .8rem;\n  display: block;\n"]);
@@ -3753,13 +3303,13 @@ function _templateObject$b() {
   return data;
 }
 var InputStyle = function InputStyle(hasInnerContent) {
-  return css(_templateObject$b(), hasInnerContent ? '4.5rem' : '1.6rem', colors.theme3.midLight, colors.theme1.mid);
+  return css$1(_templateObject$b(), hasInnerContent ? '4.5rem' : '1.6rem', colors.theme3.midLight, colors.theme1.mid);
 };
-var invalidStyle = css(_templateObject2$b());
-var InputWrapperStyle = css(_templateObject3$a());
-var ClearInput = css(_templateObject4$8(), colors.theme1.mid);
-var LoadingStyle = css(_templateObject5$8());
-var Label = css(_templateObject6$8());
+var invalidStyle = css$1(_templateObject2$b());
+var InputWrapperStyle = css$1(_templateObject3$a());
+var ClearInput = css$1(_templateObject4$8(), colors.theme1.mid);
+var LoadingStyle = css$1(_templateObject5$8());
+var Label = css$1(_templateObject6$8());
 
 function _templateObject$c() {
   var data = _taggedTemplateLiteral(["\n    display: inline-block;\n    width: ", ";\n    height: ", ";\n  \n  &:after {\n    content: \" \";\n    display: block;\n    width: ", ";\n    height: ", ";\n    border-radius: 50%;\n    border: ", " solid ", ";\n    border-color: ", " transparent ", " transparent;\n    animation: lds-dual-ring 1.2s linear infinite;\n  }\n  @keyframes lds-dual-ring {\n    0% {\n      transform: rotate(0deg);\n    }\n    100% {\n      transform: rotate(360deg);\n    }\n  }\n\n"]);
@@ -3780,7 +3330,7 @@ var loaderStyle = function loaderStyle(_ref) {
       height = _ref$height === void 0 ? "80px" : _ref$height,
       _ref$border = _ref.border,
       border = _ref$border === void 0 ? "6px" : _ref$border;
-  return css$1(_templateObject$c(), width, height, width, height, border, color, color, color);
+  return css(_templateObject$c(), width, height, width, height, border, color, color, color);
 };
 
 var Loading = (function (_ref2) {
@@ -3966,14 +3516,14 @@ function _templateObject$d() {
 
   return data;
 }
-var disabled = css$1(_templateObject$d(), colors.theme3.mid, colors.theme3.midLight, colors.theme3.mid);
-var buttonStyle = css$1(_templateObject2$c(), colors.common.white, colors.theme1.mid, colors.common.white, medium, colors.theme1.midDark, colors.theme1.xDark, disabled);
-var secondaryStyle = css$1(_templateObject3$b(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled);
-var invertedBackgroundStyle = css$1(_templateObject4$9(), colors.common.white, colors.theme1.dark);
-var invertedSecondaryBackgroundStyle = css$1(_templateObject5$9(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled);
-var buttonIconLeft = css$1(_templateObject6$9(), medium);
-var buttonIconRight = css$1(_templateObject7$7(), medium);
-var iconStyle$2 = css$1(_templateObject8$7(), colors.common.white, medium);
+var disabled = css(_templateObject$d(), colors.theme3.mid, colors.theme3.midLight, colors.theme3.mid);
+var buttonStyle = css(_templateObject2$c(), colors.common.white, colors.theme1.mid, colors.common.white, medium, colors.theme1.midDark, colors.theme1.xDark, disabled);
+var secondaryStyle = css(_templateObject3$b(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled);
+var invertedBackgroundStyle = css(_templateObject4$9(), colors.common.white, colors.theme1.dark);
+var invertedSecondaryBackgroundStyle = css(_templateObject5$9(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled);
+var buttonIconLeft = css(_templateObject6$9(), medium);
+var buttonIconRight = css(_templateObject7$7(), medium);
+var iconStyle$2 = css(_templateObject8$7(), colors.common.white, medium);
 
 var Button = function Button(_ref) {
   var text = _ref.text,
@@ -4113,14 +3663,14 @@ function _templateObject$e() {
 
   return data;
 }
-var disabled$1 = css$1(_templateObject$e(), colors.theme3.xLight, colors.theme3.midLight, colors.theme3.midLight);
-var searchWrapperStyle = css$1(_templateObject2$d(), colors.common.white);
-var searchFieldInputWrapperStyles = css$1(_templateObject3$c());
-var searchFieldInputStyle = css$1(_templateObject4$a(), colors.common.white, colors.theme3.midLight, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme3.midDark, disabled$1);
-var searchFieldButtonStyle = css$1(_templateObject5$a());
-var invertedBackgroundStyle$1 = css$1(_templateObject6$a());
-var clearInputStyle = css$1(_templateObject7$8(), colors.theme1.mid, medium);
-var labelStyle = css$1(_templateObject8$8());
+var disabled$1 = css(_templateObject$e(), colors.theme3.xLight, colors.theme3.midLight, colors.theme3.midLight);
+var searchWrapperStyle = css(_templateObject2$d(), colors.common.white);
+var searchFieldInputWrapperStyles = css(_templateObject3$c());
+var searchFieldInputStyle = css(_templateObject4$a(), colors.common.white, colors.theme3.midLight, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme3.midDark, disabled$1);
+var searchFieldButtonStyle = css(_templateObject5$a());
+var invertedBackgroundStyle$1 = css(_templateObject6$a());
+var clearInputStyle = css(_templateObject7$8(), colors.theme1.mid, medium);
+var labelStyle = css(_templateObject8$8());
 
 var FormSearchField = React.forwardRef(function (_ref, _ref2) {
   var className = _ref.className,
@@ -4247,10 +3797,10 @@ function _templateObject$f() {
 
   return data;
 }
-var TextAreaStyle = css(_templateObject$f(), colors.theme1.mid);
-var TextAreaWrapperStyle = css(_templateObject2$e());
-var Label$1 = css(_templateObject3$d());
-var invalidStyle$1 = css(_templateObject4$b());
+var TextAreaStyle = css$1(_templateObject$f(), colors.theme1.mid);
+var TextAreaWrapperStyle = css$1(_templateObject2$e());
+var Label$1 = css$1(_templateObject3$d());
+var invalidStyle$1 = css$1(_templateObject4$b());
 
 var TextArea = function TextArea(_ref) {
   var style = _ref.style,
@@ -4347,11 +3897,11 @@ function _templateObject$g() {
 
   return data;
 }
-var wrapperStyle = css$1(_templateObject$g());
-var labelStyle$1 = css$1(_templateObject2$f());
-var checkbox = css$1(_templateObject3$e(), colors.theme1.mid, colors.theme1.dark, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.dark, colors.theme1.mid, colors.states.focus, colors.theme1.midLight, colors.theme1.midLight, encodeURIComponent('#fff'), checkPath);
-var invertedLabelStyle = css$1(_templateObject4$c(), colors.common.white);
-var invertedfieldStyle = css$1(_templateObject5$b(), colors.common.white, colors.theme1.xDark, colors.common.white);
+var wrapperStyle = css(_templateObject$g());
+var labelStyle$1 = css(_templateObject2$f());
+var checkbox = css(_templateObject3$e(), colors.theme1.mid, colors.theme1.dark, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.dark, colors.theme1.mid, colors.states.focus, colors.theme1.midLight, colors.theme1.midLight, encodeURIComponent('#fff'), checkPath);
+var invertedLabelStyle = css(_templateObject4$c(), colors.common.white);
+var invertedfieldStyle = css(_templateObject5$b(), colors.common.white, colors.theme1.xDark, colors.common.white);
 
 /** @jsx jsx */
 var FormCheckbox = function FormCheckbox(_ref) {
@@ -4439,11 +3989,11 @@ function _templateObject$h() {
 
   return data;
 }
-var wrapperStyle$1 = css$1(_templateObject$h());
-var labelStyle$2 = css$1(_templateObject2$g(), colors.theme1.light);
-var fieldStyle = css$1(_templateObject3$f(), colors.theme1.mid, colors.common.white, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.light, colors.theme1.light, colors.theme1.xDark);
-var invertedLabelStyle$1 = css$1(_templateObject4$d(), colors.common.white);
-var invertedfieldStyle$1 = css$1(_templateObject5$c(), colors.common.white, colors.theme1.xDark, colors.common.white);
+var wrapperStyle$1 = css(_templateObject$h());
+var labelStyle$2 = css(_templateObject2$g(), colors.theme1.light);
+var fieldStyle = css(_templateObject3$f(), colors.theme1.mid, colors.common.white, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.light, colors.theme1.light, colors.theme1.xDark);
+var invertedLabelStyle$1 = css(_templateObject4$d(), colors.common.white);
+var invertedfieldStyle$1 = css(_templateObject5$c(), colors.common.white, colors.theme1.xDark, colors.common.white);
 
 /** @jsx jsx */
 var FormRadiobutton = function FormRadiobutton(_ref) {
@@ -4498,7 +4048,7 @@ function _templateObject$i() {
   return data;
 }
 var wrapper$3 = function wrapper(success) {
-  return css(_templateObject$i(), success ? colors.common.success : colors.common.warning, success ? colors.common.success : colors.common.warning);
+  return css$1(_templateObject$i(), success ? colors.common.success : colors.common.warning, success ? colors.common.success : colors.common.warning);
 };
 
 /** @jsx jsx */
@@ -4545,9 +4095,9 @@ function _templateObject$j() {
 
   return data;
 }
-var selectStyle = css$1(_templateObject$j(), colors.theme3.midLight, encodeURIComponent(colors.theme1.mid), arrowPath, colors.theme3.dark);
-var selectWrapperStyle = css$1(_templateObject2$h());
-var invalidStyle$2 = css$1(_templateObject3$g());
+var selectStyle = css(_templateObject$j(), colors.theme3.midLight, encodeURIComponent(colors.theme1.mid), arrowPath, colors.theme3.dark);
+var selectWrapperStyle = css(_templateObject2$h());
+var invalidStyle$2 = css(_templateObject3$g());
 
 var Dropdown = function Dropdown(_ref) {
   var label = _ref.label,
@@ -4662,14 +4212,14 @@ function _templateObject$k() {
 
   return data;
 }
-var disabled$2 = css$1(_templateObject$k(), colors.theme3.mid, colors.theme3.midLight, colors.theme3.mid);
-var expandButtonStyle = css$1(_templateObject2$i(), colors.common.white, colors.theme1.mid, colors.common.white, medium, colors.theme1.midDark, colors.theme1.xDark, disabled$2);
-var smallStyle = css$1(_templateObject3$h());
-var secondaryStyle$1 = css$1(_templateObject4$e(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$2);
-var invertedBackgroundStyle$2 = css$1(_templateObject5$d(), colors.common.white, colors.theme1.dark);
-var invertedSecondaryBackgroundStyle$1 = css$1(_templateObject6$b(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$2);
-var iconStyle$3 = css$1(_templateObject7$9());
-var expandedIconStyle = css$1(_templateObject8$9());
+var disabled$2 = css(_templateObject$k(), colors.theme3.mid, colors.theme3.midLight, colors.theme3.mid);
+var expandButtonStyle = css(_templateObject2$i(), colors.common.white, colors.theme1.mid, colors.common.white, medium, colors.theme1.midDark, colors.theme1.xDark, disabled$2);
+var smallStyle = css(_templateObject3$h());
+var secondaryStyle$1 = css(_templateObject4$e(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$2);
+var invertedBackgroundStyle$2 = css(_templateObject5$d(), colors.common.white, colors.theme1.dark);
+var invertedSecondaryBackgroundStyle$1 = css(_templateObject6$b(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$2);
+var iconStyle$3 = css(_templateObject7$9());
+var expandedIconStyle = css(_templateObject8$9());
 
 /** @jsx jsx */
 var ExpandButton = function ExpandButton(_ref) {
@@ -4784,14 +4334,14 @@ function _templateObject$l() {
 
   return data;
 }
-var wrapper$4 = css$1(_templateObject$l(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.midLight);
-var news = css$1(_templateObject2$j(), colors.theme3.dark);
-var disabled$3 = css$1(_templateObject3$i());
-var headlineDisabled = css$1(_templateObject4$f(), colors.theme3.midDark);
-var headline = css$1(_templateObject5$e(), spacing.m, spacing.xs);
-var preambleStyle = css$1(_templateObject6$c(), colors.theme3.dark);
-var bottomText = css$1(_templateObject7$a(), colors.theme3.mid);
-var invertedLink = css$1(_templateObject8$a(), colors.common.white, colors.common.white, colors.theme1.xDark);
+var wrapper$4 = css(_templateObject$l(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.midLight);
+var news = css(_templateObject2$j(), colors.theme3.dark);
+var disabled$3 = css(_templateObject3$i());
+var headlineDisabled = css(_templateObject4$f(), colors.theme3.midDark);
+var headline = css(_templateObject5$e(), spacing.m, spacing.xs);
+var preambleStyle = css(_templateObject6$c(), colors.theme3.dark);
+var bottomText = css(_templateObject7$a(), colors.theme3.mid);
+var invertedLink = css(_templateObject8$a(), colors.common.white, colors.common.white, colors.theme1.xDark);
 
 /** @jsx jsx */
 var ListItem = function ListItem(_ref) {
@@ -4904,14 +4454,14 @@ function _templateObject$m() {
 
   return data;
 }
-var wrapper$5 = css$1(_templateObject$m(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.light);
-var news$1 = css$1(_templateObject2$k(), colors.theme3.dark);
-var disabled$4 = css$1(_templateObject3$j());
-var headlineDisabled$1 = css$1(_templateObject4$g(), colors.theme3.midDark);
-var headline$1 = css$1(_templateObject5$f(), spacing.m, spacing.xs);
-var preambleStyle$1 = css$1(_templateObject6$d(), colors.theme3.dark);
-var bottomText$1 = css$1(_templateObject7$b(), colors.theme3.mid);
-var invertedLink$1 = css$1(_templateObject8$b(), colors.common.white, colors.common.white, colors.theme1.xDark);
+var wrapper$5 = css(_templateObject$m(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.light);
+var news$1 = css(_templateObject2$k(), colors.theme3.dark);
+var disabled$4 = css(_templateObject3$j());
+var headlineDisabled$1 = css(_templateObject4$g(), colors.theme3.midDark);
+var headline$1 = css(_templateObject5$f(), spacing.m, spacing.xs);
+var preambleStyle$1 = css(_templateObject6$d(), colors.theme3.dark);
+var bottomText$1 = css(_templateObject7$b(), colors.theme3.mid);
+var invertedLink$1 = css(_templateObject8$b(), colors.common.white, colors.common.white, colors.theme1.xDark);
 
 /** @jsx jsx */
 var ListItemDisabled = function ListItemDisabled(_ref) {
@@ -5006,12 +4556,12 @@ function _templateObject$n() {
 
   return data;
 }
-var alphabetWrapper = css$1(_templateObject$n(), spacing.l);
-var link = css$1(_templateObject2$l(), spacing.l, spacing.xl, spacing.xs, spacing.s, medium, spacing.m, spacing.l);
-var invalidLetter = css$1(_templateObject3$k(), colors.theme3.midDark, spacing.m, spacing.l, spacing.s);
-var activeLetter = css$1(_templateObject4$h(), colors.theme1.dark, colors.theme1.dark, colors.common.white, colors.theme1.dark);
-var linkShowAllWrapper = css$1(_templateObject5$g(), spacing.s, medium, spacing.l);
-var linkShowAll = css$1(_templateObject6$e(), spacing.l, medium, spacing.s);
+var alphabetWrapper = css(_templateObject$n(), spacing.l);
+var link = css(_templateObject2$l(), spacing.l, spacing.xl, spacing.xs, spacing.s, medium, spacing.m, spacing.l);
+var invalidLetter = css(_templateObject3$k(), colors.theme3.midDark, spacing.m, spacing.l, spacing.s);
+var activeLetter = css(_templateObject4$h(), colors.theme1.dark, colors.theme1.dark, colors.common.white, colors.theme1.dark);
+var linkShowAllWrapper = css(_templateObject5$g(), spacing.s, medium, spacing.l);
+var linkShowAll = css(_templateObject6$e(), spacing.l, medium, spacing.s);
 
 /** @jsx jsx */
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å', 'Ä', 'Ö'];
@@ -5119,13 +4669,13 @@ function _templateObject$o() {
 
   return data;
 }
-var sourceStyle = css$1(_templateObject$o(), spacing.s, spacing.s, spacing.m, spacing.s, medium, spacing.m, spacing.l, spacing.m, spacing.l, spacing.l, spacing.s, colors.theme1.light, medium, spacing.s, spacing.xs);
-var firstRow = css$1(_templateObject2$m(), spacing.s, spacing.m, colors.theme3.midLight, medium);
-var firstRowUsabilla = css$1(_templateObject3$l(), medium);
-var secondRow = css$1(_templateObject4$i(), spacing.m, medium);
-var buttonStyle$1 = css$1(_templateObject5$h(), spacing.m, spacing.s, spacing.m, medium, spacing.m, spacing.m, spacing.m);
-var rightAlign = css$1(_templateObject6$f(), medium);
-var sourceLink = css$1(_templateObject7$c());
+var sourceStyle = css(_templateObject$o(), spacing.s, spacing.s, spacing.m, spacing.s, medium, spacing.m, spacing.l, spacing.m, spacing.l, spacing.l, spacing.s, colors.theme1.light, medium, spacing.s, spacing.xs);
+var firstRow = css(_templateObject2$m(), spacing.s, spacing.m, colors.theme3.midLight, medium);
+var firstRowUsabilla = css(_templateObject3$l(), medium);
+var secondRow = css(_templateObject4$i(), spacing.m, medium);
+var buttonStyle$1 = css(_templateObject5$h(), spacing.m, spacing.s, spacing.m, medium, spacing.m, spacing.m, spacing.m);
+var rightAlign = css(_templateObject6$f(), medium);
+var sourceLink = css(_templateObject7$c());
 
 var isExternal = (function (baseUrl, url) {
   var matchInternal = new RegExp("^(\/)|(" + baseUrl + ")", "i");
@@ -5210,7 +4760,7 @@ var backgroundPosition = function backgroundPosition(rows) {
 };
 
 var wrapper$6 = function wrapper(rows, height) {
-  return css$1(_templateObject$p(), height, linearGradient(rows), colors.common.white, backgroundSize(rows), backgroundPosition(rows));
+  return css(_templateObject$p(), height, linearGradient(rows), colors.common.white, backgroundSize(rows), backgroundPosition(rows));
 };
 
 /** @jsx jsx */
@@ -5293,13 +4843,13 @@ function _templateObject$q() {
 
   return data;
 }
-var paginationWrapperStyle = css$1(_templateObject$q(), large);
-var pageStyle = css$1(_templateObject2$n(), colors.theme1.mid, medium);
-var prevPageStyle = css$1(_templateObject3$m(), medium, colors.theme1.mid);
-var nextPageStyle = css$1(_templateObject4$j(), medium, colors.theme1.mid);
-var prevPageStyleHidden = css$1(_templateObject5$i());
-var distanceIndicatorStyle = css$1(_templateObject6$g(), colors.theme1.mid, medium);
-var currentPageStyle = css$1(_templateObject7$d(), colors.theme1.dark, colors.theme1.mid);
+var paginationWrapperStyle = css(_templateObject$q(), large);
+var pageStyle = css(_templateObject2$n(), colors.theme1.mid, medium);
+var prevPageStyle = css(_templateObject3$m(), medium, colors.theme1.mid);
+var nextPageStyle = css(_templateObject4$j(), medium, colors.theme1.mid);
+var prevPageStyleHidden = css(_templateObject5$i());
+var distanceIndicatorStyle = css(_templateObject6$g(), colors.theme1.mid, medium);
+var currentPageStyle = css(_templateObject7$d(), colors.theme1.dark, colors.theme1.mid);
 
 var Pagination = function Pagination(_ref) {
   var pageSize = _ref.pageSize,
@@ -5504,16 +5054,16 @@ function _templateObject$r() {
 
   return data;
 }
-var grayContentExpanderWrapper = css$1(_templateObject$r(), colors.theme3.xLight, colors.states.focus, colors.theme1.mid);
-var grayFocusedOnExpansionWrapper = css$1(_templateObject2$o(), colors.theme3.light, spacing.xs, colors.theme3.xLight, colors.theme1.mid, spacing.xs, colors.theme1.light, spacing.s, spacing.xs, medium, spacing.s, spacing.m, colors.common.white, spacing.s, spacing.xs, spacing.m, spacing.xs, medium, spacing.s, spacing.m, spacing.m, spacing.m, colors.theme3.light, spacing.xs, spacing.xs);
-var ComponentWrapperStyle = css$1(_templateObject3$n(), small, colors.theme1.mid);
+var grayContentExpanderWrapper = css(_templateObject$r(), colors.theme3.xLight, colors.states.focus, colors.theme1.mid);
+var grayFocusedOnExpansionWrapper = css(_templateObject2$o(), colors.theme3.light, spacing.xs, colors.theme3.xLight, colors.theme1.mid, spacing.xs, colors.theme1.light, spacing.s, spacing.xs, medium, spacing.s, spacing.m, colors.common.white, spacing.s, spacing.xs, spacing.m, spacing.xs, medium, spacing.s, spacing.m, spacing.m, spacing.m, colors.theme3.light, spacing.xs, spacing.xs);
+var ComponentWrapperStyle = css(_templateObject3$n(), small, colors.theme1.mid);
 var IconStyle = function IconStyle(fontSize) {
-  return css$1(_templateObject4$k(), fontSize, fontSize, medium);
+  return css(_templateObject4$k(), fontSize, fontSize, medium);
 };
-var IconExpandedStyle = css$1(_templateObject5$j());
-var IconFullWidth = css$1(_templateObject6$h());
-var collapseButtonStyle = css$1(_templateObject7$e(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
-var baseLinkStyle = css$1(_templateObject8$c(), colors.theme1.mid, colors.theme1.mid);
+var IconExpandedStyle = css(_templateObject5$j());
+var IconFullWidth = css(_templateObject6$h());
+var collapseButtonStyle = css(_templateObject7$e(), spacing.xs, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.mid);
+var baseLinkStyle = css(_templateObject8$c(), colors.theme1.mid, colors.theme1.mid);
 
 var measureElement = function measureElement(element) {
   var DOMNode = ReactDOM.findDOMNode(element);
