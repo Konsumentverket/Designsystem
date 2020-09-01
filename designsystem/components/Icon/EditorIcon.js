@@ -41,6 +41,7 @@ import Pen from '../../icons/EditorIcons/Pen'
 import Map from '../../icons/EditorIcons/Map'
 import ChatWithUs from '../../icons/EditorIcons/ChatWithUs'
 import CallUs from '../../icons/EditorIcons/CallUs'
+import Mic from '../../icons/EditorIcons/Mic'
 
 
 const editorIconDefinitions = {
@@ -83,7 +84,8 @@ const editorIconDefinitions = {
     Pen,
     Map,
     ChatWithUs,
-    CallUs
+    CallUs,
+    Mic
 }
 
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {

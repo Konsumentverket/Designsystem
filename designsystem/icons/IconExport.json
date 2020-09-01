@@ -199,6 +199,11 @@
             "name": "Bullhorn",
             "title": "Megafon",
             "url": "EditorIcons/svg/Bullhorn.svg"
+        },
+        {
+            "name": "Mic",
+            "title": "Microfon",
+            "url": "EditorIcons/svg/Mic.svg"
         }
 
    ]
