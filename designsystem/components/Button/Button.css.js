@@ -3,23 +3,22 @@ import { colors } from '../Colors/Colors';
 import { medium } from '../GlobalStyles/globalStyles';
 
 const disabled = css` 
-        color: ${colors.theme3.mid};
-        background-color: ${colors.theme3.midLight};
-        text-decoration:none;
-        box-shadow:none;
-        cursor:inherit;
-        svg {
-            fill:${colors.theme3.mid};
-        }
+    color: ${colors.theme3.mid};
+    background-color: ${colors.theme3.midLight};
+    text-decoration:none;
+    box-shadow:none;
+    cursor:inherit;
+    svg {
+        fill:${colors.theme3.mid};
+    }
 `;
 
 export const buttonStyle = css`
     text-decoration: none;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
     font-size:1.6rem;
-    line-height:2.4rem;
     font-weight:500;
     padding: .8rem;
     color: ${colors.common.white};
@@ -35,22 +34,22 @@ export const buttonStyle = css`
 
     ${medium}{
         font-size:2.1rem;
+        line-height:2.4rem;
         width:fit-content;
         padding:1.6rem 2.4rem;
-        justify-content: space-between;
     }
 
-      &:hover, &.selectedButtonStyle {
+    &:hover, &.selectedButtonStyle {
         background-color:${colors.theme1.midDark};
         text-decoration:underline;
-      }
-      &:active{
+    }
+    &:active{
         background-color:${colors.theme1.xDark};
         text-decoration:underline;
-      }
-      &:disabled{
+    }
+    &:disabled{
         ${disabled}
-      }
+    }
 `;
 
 export const secondaryStyle = css`
@@ -112,38 +111,24 @@ export const buttonIconLeft = css`
     position:relative;
     svg {
         padding-right:.8rem;
-        vertical-align: text-top;
      }
-     ${medium}{
-        svg {
-            float:left;
-        }
-      } 
 `
 
 export const buttonIconRight = css`
     position:relative;
     svg {
         padding-left:.8rem;
-        vertical-align: text-top;
-    } 
-    ${medium}{
-        svg {
-            float: right;
-        }
-    } 
+    }
 `
 
 export const iconStyle = css`
-    
     fill:${colors.common.white};
     width: 1.6rem;
     height: 1.6rem;
-    top: 1.8rem;
-    vertical-align: baseline;
-    ${medium}{
-        width: 2.4rem;
+    vertical-align: bottom;
+    ${medium} {
         height: 2.4rem;
+        vertical-align: bottom;
     }
 `
 
