@@ -2263,7 +2263,7 @@ var SubHeading = function SubHeading(_ref) {
   var alignment = tag == "legend" ? "center" : null; // Ugly fix for firefox
 
   return core.jsx(SelectedHeading, _extends({
-    css: [commonSubHeadingStyle, style, SelectedStyling],
+    css: [commonSubHeadingStyle, SelectedStyling, style],
     align: alignment
   }, otherAttr), children, text);
 };
