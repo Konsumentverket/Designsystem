@@ -13,7 +13,7 @@ export const SubHeading = ({ children, text, style, level = 2, tag, styleLevel, 
 
     return (
         <SelectedHeading 
-            css={[commonSubHeadingStyle, style, SelectedStyling]} 
+            css={[commonSubHeadingStyle, SelectedStyling, style]}
             align={alignment} 
             {...otherAttr}> 
             {children}

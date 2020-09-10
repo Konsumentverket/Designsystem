@@ -2241,7 +2241,7 @@ var SubHeading = function SubHeading(_ref) {
   var alignment = tag == "legend" ? "center" : null; // Ugly fix for firefox
 
   return jsx(SelectedHeading, _extends({
-    css: [commonSubHeadingStyle, style, SelectedStyling],
+    css: [commonSubHeadingStyle, SelectedStyling, style],
     align: alignment
   }, otherAttr), children, text);
 };
@@ -3456,7 +3456,7 @@ var InputText = React.forwardRef(function (_ref, _ref2) {
 });
 
 function _templateObject8$7() {
-  var data = _taggedTemplateLiteral(["\n    \n    fill:", ";\n    width: 1.6rem;\n    height: 1.6rem;\n    top: 1.8rem;\n    vertical-align: baseline;\n    ", "{\n        width: 2.4rem;\n        height: 2.4rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    fill:", ";\n    width: 1.6rem;\n    height: 1.6rem;\n    vertical-align: bottom;\n    ", " {\n        height: 2.4rem;\n        width: 2.4rem;\n        vertical-align: bottom;\n    }\n"]);
 
   _templateObject8$7 = function _templateObject8() {
     return data;
@@ -3466,7 +3466,7 @@ function _templateObject8$7() {
 }
 
 function _templateObject7$7() {
-  var data = _taggedTemplateLiteral(["\n    position:relative;\n    svg {\n        padding-left:.8rem;\n        vertical-align: text-top;\n    } \n    ", "{\n        svg {\n            float: right;\n        }\n    } \n"]);
+  var data = _taggedTemplateLiteral(["\n    position:relative;\n    svg {\n        padding-left:.8rem;\n    }\n"]);
 
   _templateObject7$7 = function _templateObject7() {
     return data;
@@ -3476,7 +3476,7 @@ function _templateObject7$7() {
 }
 
 function _templateObject6$9() {
-  var data = _taggedTemplateLiteral(["\n    position:relative;\n    svg {\n        padding-right:.8rem;\n        vertical-align: text-top;\n     }\n     ", "{\n        svg {\n            float:left;\n        }\n      } \n"]);
+  var data = _taggedTemplateLiteral(["\n    position:relative;\n    svg {\n        padding-right:.8rem;\n     }\n"]);
 
   _templateObject6$9 = function _templateObject6() {
     return data;
@@ -3516,7 +3516,7 @@ function _templateObject3$b() {
 }
 
 function _templateObject2$c() {
-  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    display:flex;\n    justify-content: center;\n    align-items: center;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    box-sizing: border-box;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n        flex-shrink: 0;\n    }\n\n    ", "{\n        font-size:2.1rem;\n        width:fit-content;\n        padding:1.6rem 2.4rem;\n        justify-content: space-between;\n    }\n\n      &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:active{\n        background-color:", ";\n        text-decoration:underline;\n      }\n      &:disabled{\n        ", "\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    text-align: center;\n    display: inline-block;\n    vertical-align: middle;\n    font-size:1.6rem;\n    font-weight:500;\n    padding: .8rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    box-sizing: border-box;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n        flex-shrink: 0;\n    }\n\n    ", "{\n        font-size:2.1rem;\n        line-height:2.4rem;\n        width:fit-content;\n        padding:1.6rem 2.4rem;\n    }\n\n    &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:active{\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject2$c = function _templateObject2() {
     return data;
@@ -3526,7 +3526,7 @@ function _templateObject2$c() {
 }
 
 function _templateObject$d() {
-  var data = _taggedTemplateLiteral([" \n        color: ", ";\n        background-color: ", ";\n        text-decoration:none;\n        box-shadow:none;\n        cursor:inherit;\n        svg {\n            fill:", ";\n        }\n"]);
+  var data = _taggedTemplateLiteral([" \n    color: ", ";\n    background-color: ", ";\n    text-decoration:none;\n    box-shadow:none;\n    cursor:inherit;\n    svg {\n        fill:", ";\n    }\n"]);
 
   _templateObject$d = function _templateObject() {
     return data;
@@ -3539,8 +3539,8 @@ var buttonStyle = css(_templateObject2$c(), colors.common.white, colors.theme1.m
 var secondaryStyle = css(_templateObject3$b(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled);
 var invertedBackgroundStyle = css(_templateObject4$9(), colors.common.white, colors.theme1.dark);
 var invertedSecondaryBackgroundStyle = css(_templateObject5$9(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled);
-var buttonIconLeft = css(_templateObject6$9(), medium);
-var buttonIconRight = css(_templateObject7$7(), medium);
+var buttonIconLeft = css(_templateObject6$9());
+var buttonIconRight = css(_templateObject7$7());
 var iconStyle$2 = css(_templateObject8$7(), colors.common.white, medium);
 
 var Button = function Button(_ref) {
