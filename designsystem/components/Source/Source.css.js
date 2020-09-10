@@ -54,7 +54,7 @@ export const firstRowUsabilla = css`
 `;
 
 export const secondRow = css`
-    padding-top: ${spacing.m};
+    padding-top: ${spacing.s};
     flex-direction: column;
     display: flex;
 
