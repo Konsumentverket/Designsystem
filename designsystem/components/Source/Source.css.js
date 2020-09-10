@@ -54,7 +54,6 @@ export const firstRowUsabilla = css`
 `;
 
 export const secondRow = css`
-    padding-top: ${spacing.s};
     flex-direction: column;
     display: flex;
 
@@ -91,7 +90,9 @@ export const buttonStyle = css`
 `;
 
 export const rightAlign = css`
+    margin-top: ${spacing.xs};
     ${medium} {
+        margin-top: 0;
         display: inline-block;
         flex-grow: 1;
         text-align: right;
