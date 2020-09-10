@@ -31,6 +31,7 @@ export const buttonStyle = css`
 
     svg {
         fill: ${colors.common.white};
+        flex-shrink: 0;
     }
 
     ${medium}{
