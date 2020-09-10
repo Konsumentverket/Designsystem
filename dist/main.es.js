@@ -4658,7 +4658,7 @@ function _templateObject7$c() {
 }
 
 function _templateObject6$f() {
-  var data = _taggedTemplateLiteral(["\n    ", " {\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin-top: ", ";\n    ", " {\n        margin-top: 0;\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
 
   _templateObject6$f = function _templateObject6() {
     return data;
@@ -4678,7 +4678,7 @@ function _templateObject5$h() {
 }
 
 function _templateObject4$i() {
-  var data = _taggedTemplateLiteral(["\n    padding-top: ", ";\n    flex-direction: column;\n    display: flex;\n\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    /* padding-top: ", "; */\n    flex-direction: column;\n    display: flex;\n\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject4$i = function _templateObject4() {
     return data;
@@ -4719,9 +4719,9 @@ function _templateObject$o() {
 var sourceStyle = css(_templateObject$o(), spacing.s, spacing.s, spacing.m, spacing.s, medium, spacing.m, spacing.l, spacing.m, spacing.l, spacing.l, spacing.s, colors.theme1.light, medium, spacing.s, spacing.xs);
 var firstRow = css(_templateObject2$m(), spacing.s, spacing.m, colors.theme3.midLight, medium);
 var firstRowUsabilla = css(_templateObject3$l(), medium);
-var secondRow = css(_templateObject4$i(), spacing.s, medium);
+var secondRow = css(_templateObject4$i(), spacing.xs, medium);
 var buttonStyle$1 = css(_templateObject5$h(), spacing.m, spacing.s, spacing.m, medium, spacing.m, spacing.m, spacing.m);
-var rightAlign = css(_templateObject6$f(), medium);
+var rightAlign = css(_templateObject6$f(), spacing.xs, medium);
 var sourceLink = css(_templateObject7$c());
 
 var isExternal = (function (baseUrl, url) {
