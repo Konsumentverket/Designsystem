@@ -4678,7 +4678,7 @@ function _templateObject5$h() {
 }
 
 function _templateObject4$i() {
-  var data = _taggedTemplateLiteral(["\n    /* padding-top: ", "; */\n    flex-direction: column;\n    display: flex;\n\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    flex-direction: column;\n    display: flex;\n\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
   _templateObject4$i = function _templateObject4() {
     return data;
@@ -4708,7 +4708,7 @@ function _templateObject2$m() {
 }
 
 function _templateObject$o() {
-  var data = _taggedTemplateLiteral(["\n    padding: ", " ", " ", " ", ";\n\n    ", " {\n        padding: ", " ", " ", " ", ";\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: ", ";\n        margin-right: ", ";\n    }\n    background-color: ", ";\n\n    ", " {\n        p > a {\n            margin-bottom: 0;\n        }\n    }\n    margin-bottom: ", ";\n    border-radius: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.06);\n    padding: ", " ", " ", " ", ";\n\n    ", " {\n        padding: ", " ", " ", " ", ";\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: ", ";\n        margin-right: ", ";\n    }\n    background-color: ", ";\n\n    ", " {\n        p > a {\n            margin-bottom: 0;\n        }\n    }\n    margin-bottom: ", ";\n    border-radius: ", ";\n"]);
 
   _templateObject$o = function _templateObject() {
     return data;
@@ -4719,7 +4719,7 @@ function _templateObject$o() {
 var sourceStyle = css(_templateObject$o(), spacing.s, spacing.s, spacing.m, spacing.s, medium, spacing.m, spacing.l, spacing.m, spacing.l, spacing.l, spacing.s, colors.theme1.light, medium, spacing.s, spacing.xs);
 var firstRow = css(_templateObject2$m(), spacing.s, spacing.m, colors.theme3.midLight, medium);
 var firstRowUsabilla = css(_templateObject3$l(), medium);
-var secondRow = css(_templateObject4$i(), spacing.xs, medium);
+var secondRow = css(_templateObject4$i(), medium);
 var buttonStyle$1 = css(_templateObject5$h(), spacing.m, spacing.s, spacing.m, medium, spacing.m, spacing.m, spacing.m);
 var rightAlign = css(_templateObject6$f(), spacing.xs, medium);
 var sourceLink = css(_templateObject7$c());
