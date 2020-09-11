@@ -4,7 +4,7 @@ import { medium } from '../GlobalStyles/globalStyles';
 import { spacing } from "../Spacing/Spacing";
 
 export const sourceStyle = css`
-    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.15);
     padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};
 
     ${medium} {
