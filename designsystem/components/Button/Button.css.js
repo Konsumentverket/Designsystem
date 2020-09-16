@@ -17,10 +17,10 @@ export const buttonStyle = css`
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    vertical-align: middle;
     font-size:1.6rem;
+    line-height:2.4rem;
     font-weight:500;
-    padding: .8rem;
+    padding: .8rem 2.4rem;
     color: ${colors.common.white};
     border-radius:.8rem;
     width:100%;
@@ -109,28 +109,26 @@ export const invertedSecondaryBackgroundStyle = css`
 `;
 
 export const buttonIconLeft = css`
-    position:relative;
     svg {
         padding-right:.8rem;
      }
 `
 
 export const buttonIconRight = css`
-    position:relative;
     svg {
         padding-left:.8rem;
     }
 `
 
 export const iconStyle = css`
+    position: relative;
     fill:${colors.common.white};
     width: 1.6rem;
     height: 1.6rem;
-    vertical-align: bottom;
+    vertical-align: baseline;
+    top: 2px;
     ${medium} {
-        height: 2.4rem;
-        width: 2.4rem;
-        vertical-align: bottom;
+        top: 0;
     }
 `
 
