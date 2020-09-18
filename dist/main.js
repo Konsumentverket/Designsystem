@@ -4409,11 +4409,13 @@ var ListItem = function ListItem(_ref) {
       headlineLevel = _ref.headlineLevel,
       headlineStyleLevel = _ref.headlineStyleLevel,
       style = _ref.style,
-      invertedLinkStyle = _ref.invertedLinkStyle;
+      invertedLinkStyle = _ref.invertedLinkStyle,
+      onClick = _ref.onClick;
   return core.jsx("a", {
     css: [wrapper$4, invertedLinkStyle && invertedLink, style],
     className: "noStyle",
-    href: href
+    href: href,
+    onClick: onClick
   }, type && core.jsx("p", {
     css: news
   }, type.toUpperCase(), reviewedDate && core.jsx(React__default.Fragment, null, ": ", core.jsx(DateFormat, {
