@@ -16,10 +16,12 @@ export const ListItem = ({
   headlineStyleLevel,
   style,
   invertedLinkStyle,
+  onClick,
 }) => <a
   css={[css.wrapper, invertedLinkStyle && css.invertedLink, style]}
   className='noStyle'
   href={href}
+  onClick={onClick}
 >
     {type && <p css={css.news}>{type.toUpperCase()}
       {reviewedDate && <>: <DateFormat date={reviewedDate} showDate={true} /></>}</p>}
