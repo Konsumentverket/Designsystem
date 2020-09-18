@@ -1,15 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import {useRef} from 'react'
-import {fieldWrapper, fieldInput, fieldLabel} from './InputRadio.css'
+import {fieldWrapper, fieldInput, fieldLabel, disabledStyle} from './InputRadio.css'
 
 export const InputRadio = ({
     name, id, labelText,
     fieldWrapperStyle, fieldInputStyle, fieldLabelStyle,
-    onChange, value, checked
+    onChange, value, checked, disabled
     }) => { 
         const inputRef = useRef(null);
-        return <div css={[fieldWrapper, fieldWrapperStyle]} 
+        return <div css={[fieldWrapper, disabled && disabledStyle, fieldWrapperStyle]} 
                     className={checked ? "inputHasValue" : ""} 
                 >
                 <label className="radiolabel" css={[fieldLabel, fieldLabelStyle]} htmlFor={id}>
@@ -21,6 +21,7 @@ export const InputRadio = ({
                         }} 
                         value={value} 
                         checked={checked}
+                        disabled={disabled}
                         onKeyUp={(e) => {
                             //32 == space
                             if(e.which === 32 || e.key == 'Enter'){

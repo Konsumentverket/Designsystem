@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
 import {InputRadio} from './InputRadio'
-import { text } from '@storybook/addon-knobs';
+import { text, boolean } from '@storybook/addon-knobs';
 import css from '@emotion/css';
 import { colors } from '../Colors/Colors';
 

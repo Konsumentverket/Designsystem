@@ -90,3 +90,24 @@ export const fieldLabel = css`
     display: flex;
     user-select: none;   
 `
+
+export const disabledStyle = css`
+    color: ${colors.theme3.mid};
+    background-color: ${colors.theme3.midLight};
+    cursor: inherit;
+    box-shadow: none;
+    input {
+        background-color: ${colors.theme3.light};
+        border-color: ${colors.theme3.mid};
+    }
+    &:hover {
+        border: 2px solid transparent;
+        text-decoration: none;
+    }
+    
+    &:hover {
+        .radiolabel {
+            text-decoration: none;
+        }
+    }
+`
