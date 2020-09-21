@@ -1,19 +1,21 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import {useRef} from 'react'
-import {fieldWrapper, fieldInput, fieldLabel} from './InputRadio.css'
+import {fieldWrapper, fieldInput, fieldLabel, disabledStyle} from './InputRadio.css'
 
 export const InputRadio = ({
     name, id, labelText,
     fieldWrapperStyle, fieldInputStyle, fieldLabelStyle,
-    onChange, value, checked
+    onChange, value, checked, disabled, className, tabIndex
     }) => { 
         const inputRef = useRef(null);
-        return <div css={[fieldWrapper, fieldWrapperStyle]} 
-                    className={checked ? "inputHasValue" : ""} 
+        return <div css={[fieldWrapper, disabled && disabledStyle, fieldWrapperStyle]} 
+                    className={`${checked ? "inputHasValue" : ""} ${className}`} 
                 >
                 <label className="radiolabel" css={[fieldLabel, fieldLabelStyle]} htmlFor={id}>
-                    <input ref={inputRef} css={[fieldInput,fieldInputStyle]} id={id} name={name} type="radio" 
+                    <input ref={inputRef} css={[fieldInput,fieldInputStyle]} id={id} name={name}
+                        type="radio"
+                        tabIndex={tabIndex}
                         onChange={(e) => {
                             if (onChange && !document.body.classList.contains('tabnav')) {
                                 onChange(e)
@@ -21,6 +23,7 @@ export const InputRadio = ({
                         }} 
                         value={value} 
                         checked={checked}
+                        disabled={disabled}
                         onKeyUp={(e) => {
                             //32 == space
                             if(e.which === 32 || e.key == 'Enter'){
