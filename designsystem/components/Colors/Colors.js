@@ -41,13 +41,27 @@ const defaultTheme = {
     }
 }
 
+defaultTheme.buttons = {
+    primary: {
+        backgroundColor: defaultTheme.theme1.mid,
+        hover: defaultTheme.theme1.midDark,
+        active: defaultTheme.theme1.xDark
+    },
+    secondary: {
+        textColor: defaultTheme.theme1.mid,
+        borderColor: defaultTheme.theme1.mid,
+        hover: defaultTheme.theme1.midLight,
+        active: defaultTheme.theme1.xDark
+    }
+}
+
 const eccTheme = {
     theme1: {
-        "xDark": "#1C2742",
+        "xDark": "#162259",
         "dark": "#314575",
         "midDark": "#314575",
-        "mid": "#4663a9",
-        "midLight": "#E4E8F2",
+        "mid": "#004a93",
+        "midLight": "#E7F6FB",
         "light": "#D7E6ED"
     },
     theme2: {
@@ -60,6 +74,23 @@ const eccTheme = {
         "mid": "#6B6B6B",
         "dark": "#4D4D4D",
         "xDark": "#161616"
+    },
+    buttons: {
+        primary: {
+            backgroundColor: '#008054',
+            hover: '#004D32',
+            active: '#001A11'
+        },
+        secondary: {
+            textColor: '#008054',
+            borderColor: '#008054',
+            hover: '#E5F2ED',
+            active: '#001A11',
+        }
+
+    },
+    states: {
+        focus: '#F59C00'
     }
 }
 

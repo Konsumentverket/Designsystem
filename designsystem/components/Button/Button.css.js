@@ -26,7 +26,7 @@ export const buttonStyle = css`
     width:100%;
     box-sizing: border-box;
     cursor:pointer;
-    background-color:${colors.theme1.mid};
+    background-color:${colors.buttons.primary.backgroundColor};
 
     svg {
         fill: ${colors.common.white};
@@ -41,11 +41,11 @@ export const buttonStyle = css`
     }
 
     &:hover, &.selectedButtonStyle {
-        background-color:${colors.theme1.midDark};
+        background-color:${colors.buttons.primary.hover};
         text-decoration:underline;
     }
     &:active{
-        background-color:${colors.theme1.xDark};
+        background-color:${colors.buttons.primary.active};
         text-decoration:underline;
     }
     &:disabled{
@@ -55,20 +55,20 @@ export const buttonStyle = css`
 
 export const secondaryStyle = css`
     background-color:transparent;
-    color:${colors.theme1.mid};
-    box-shadow:inset 0px 0px 0px 1px ${colors.theme1.mid};
+    color:${colors.buttons.secondary.textColor};
+    box-shadow:inset 0px 0px 0px 1px ${colors.buttons.secondary.borderColor};
 
     svg {
         fill:${colors.theme1.mid}; 
     }
     &:hover, &.selectedButtonStyle {
-        background-color:${colors.theme1.midLight};
+        background-color:${colors.buttons.secondary.hover};
         text-decoration:underline;
         border-color:${colors.theme1.xDark};
     }
     &:active {
         color:${colors.common.white};
-        background-color:${colors.theme1.xDark};
+        background-color:${colors.buttons.secondary.active};
         box-shadow:none;
         svg {
             fill:${colors.common.white}; 
