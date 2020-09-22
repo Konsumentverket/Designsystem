@@ -64,13 +64,13 @@ function _objectSpread2(target) {
     var source = arguments[i] != null ? arguments[i] : {};
 
     if (i % 2) {
-      ownKeys(source, true).forEach(function (key) {
+      ownKeys(Object(source), true).forEach(function (key) {
         _defineProperty(target, key, source[key]);
       });
     } else if (Object.getOwnPropertyDescriptors) {
       Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
     } else {
-      ownKeys(source).forEach(function (key) {
+      ownKeys(Object(source)).forEach(function (key) {
         Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
       });
     }
@@ -128,19 +128,15 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-    return arr2;
-  }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
 
 function _arrayWithHoles(arr) {
@@ -148,10 +144,11 @@ function _arrayWithHoles(arr) {
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -177,12 +174,29 @@ function _iterableToArrayLimit(arr, i) {
   return _arr;
 }
 
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
+}
+
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 var spacing = {
@@ -235,13 +249,26 @@ var defaultTheme = {
     "cyan": "#92DCFA"
   }
 };
+defaultTheme.buttons = {
+  primary: {
+    backgroundColor: defaultTheme.theme1.mid,
+    hover: defaultTheme.theme1.midDark,
+    active: defaultTheme.theme1.xDark
+  },
+  secondary: {
+    textColor: defaultTheme.theme1.mid,
+    borderColor: defaultTheme.theme1.mid,
+    hover: defaultTheme.theme1.midLight,
+    active: defaultTheme.theme1.xDark
+  }
+};
 var eccTheme = {
   theme1: {
-    "xDark": "#1C2742",
+    "xDark": "#162259",
     "dark": "#314575",
     "midDark": "#314575",
-    "mid": "#4663a9",
-    "midLight": "#E4E8F2",
+    "mid": "#004a93",
+    "midLight": "#E7F6FB",
     "light": "#D7E6ED"
   },
   theme2: {
@@ -254,6 +281,22 @@ var eccTheme = {
     "mid": "#6B6B6B",
     "dark": "#4D4D4D",
     "xDark": "#161616"
+  },
+  buttons: {
+    primary: {
+      backgroundColor: '#008054',
+      hover: '#004D32',
+      active: '#001A11'
+    },
+    secondary: {
+      textColor: '#008054',
+      borderColor: '#008054',
+      hover: '#E5F2ED',
+      active: '#001A11'
+    }
+  },
+  states: {
+    focus: '#F59C00'
   }
 };
 var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme;
@@ -465,7 +508,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
     });
     return function () {};
   }, []);
-  return React__default.createElement(core.Global, {
+  return /*#__PURE__*/React__default.createElement(core.Global, {
     styles: globalStyles(fontSize, fontFamily)
   });
 };
@@ -3573,8 +3616,8 @@ function _templateObject$d() {
   return data;
 }
 var disabled = core.css(_templateObject$d(), colors.theme3.mid, colors.theme3.midLight, colors.theme3.mid);
-var buttonStyle = core.css(_templateObject2$c(), colors.common.white, colors.theme1.mid, colors.common.white, medium, colors.theme1.midDark, colors.theme1.xDark, disabled);
-var secondaryStyle = core.css(_templateObject3$b(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled);
+var buttonStyle = core.css(_templateObject2$c(), colors.common.white, colors.buttons.primary.backgroundColor, colors.common.white, medium, colors.buttons.primary.hover, colors.buttons.primary.active, disabled);
+var secondaryStyle = core.css(_templateObject3$b(), colors.buttons.secondary.textColor, colors.buttons.secondary.borderColor, colors.theme1.mid, colors.buttons.secondary.hover, colors.theme1.xDark, colors.common.white, colors.buttons.secondary.active, colors.common.white, disabled);
 var invertedBackgroundStyle = core.css(_templateObject4$a(), colors.common.white, colors.theme1.dark);
 var invertedSecondaryBackgroundStyle = core.css(_templateObject5$9(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled);
 var buttonIconLeft = core.css(_templateObject6$9());
