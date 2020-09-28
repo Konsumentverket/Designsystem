@@ -265,6 +265,7 @@ var eccTheme = {
     "light": "#D7E6ED"
   },
   theme2: {
+    "xLight": "#F1F1F1",
     "midLight": "#eaeae9",
     "light": "#e7f0f4"
   },
@@ -3580,7 +3581,7 @@ function _templateObject4$a() {
 }
 
 function _templateObject3$b() {
-  var data = _taggedTemplateLiteral(["\n    background-color:transparent;\n    color:", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n\n    svg {\n        fill:", "; \n    }\n    &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n        border-color:", ";\n    }\n    &:active {\n        color:", ";\n        background-color:", ";\n        box-shadow:none;\n        svg {\n            fill:", "; \n        }\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color:transparent;\n    color:", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n\n    svg {\n        fill: ", ";\n    }\n    &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n        border-color:", ";\n    }\n    &:active {\n        color:", ";\n        background-color:", ";\n        box-shadow:none;\n        svg {\n            fill:", "; \n        }\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject3$b = function _templateObject3() {
     return data;
@@ -3610,7 +3611,7 @@ function _templateObject$d() {
 }
 var disabled = css(_templateObject$d(), colors.theme3.mid, colors.theme3.midLight, colors.theme3.mid);
 var buttonStyle = css(_templateObject2$c(), colors.common.white, colors.buttons.primary.backgroundColor, colors.common.white, medium, colors.buttons.primary.hover, colors.buttons.primary.active, disabled);
-var secondaryStyle = css(_templateObject3$b(), colors.buttons.secondary.textColor, colors.buttons.secondary.borderColor, colors.theme1.mid, colors.buttons.secondary.hover, colors.theme1.xDark, colors.common.white, colors.buttons.secondary.active, colors.common.white, disabled);
+var secondaryStyle = css(_templateObject3$b(), colors.buttons.secondary.textColor, colors.buttons.secondary.borderColor, colors.buttons.secondary.textColor, colors.buttons.secondary.hover, colors.theme1.xDark, colors.common.white, colors.buttons.secondary.active, colors.common.white, disabled);
 var invertedBackgroundStyle = css(_templateObject4$a(), colors.common.white, colors.theme1.dark);
 var invertedSecondaryBackgroundStyle = css(_templateObject5$9(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled);
 var buttonIconLeft = css(_templateObject6$9());
