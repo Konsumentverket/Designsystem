@@ -59,7 +59,7 @@ export const secondaryStyle = css`
     box-shadow:inset 0px 0px 0px 1px ${colors.buttons.secondary.borderColor};
 
     svg {
-        fill:${colors.theme1.mid}; 
+        fill: ${colors.buttons.secondary.textColor};
     }
     &:hover, &.selectedButtonStyle {
         background-color:${colors.buttons.secondary.hover};
