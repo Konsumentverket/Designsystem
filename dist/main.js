@@ -64,13 +64,13 @@ function _objectSpread2(target) {
     var source = arguments[i] != null ? arguments[i] : {};
 
     if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
+      ownKeys(source, true).forEach(function (key) {
         _defineProperty(target, key, source[key]);
       });
     } else if (Object.getOwnPropertyDescriptors) {
       Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
     } else {
-      ownKeys(Object(source)).forEach(function (key) {
+      ownKeys(source).forEach(function (key) {
         Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
       });
     }
@@ -128,15 +128,19 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+    return arr2;
+  }
 }
 
 function _arrayWithHoles(arr) {
@@ -144,11 +148,10 @@ function _arrayWithHoles(arr) {
 }
 
 function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
 }
 
 function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -174,29 +177,12 @@ function _iterableToArrayLimit(arr, i) {
   return _arr;
 }
 
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(n);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-
-  return arr2;
-}
-
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance");
 }
 
 var spacing = {
@@ -508,7 +494,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
     });
     return function () {};
   }, []);
-  return /*#__PURE__*/React__default.createElement(core.Global, {
+  return React__default.createElement(core.Global, {
     styles: globalStyles(fontSize, fontFamily)
   });
 };
@@ -629,11 +615,12 @@ var Search = (function (_ref) {
   return core.jsx("svg", _extends({
     className: className,
     css: style,
-    width: "24px",
-    height: "24px",
-    viewBox: "0 0 24 24"
+    width: "16px",
+    height: "16px",
+    viewBox: "0 0 16 16"
   }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M20.7144058,18.1558442 L16.6248488,14.0669856 C16.440265,13.8824334 16.1900514,13.7799043 15.9275322,13.7799043 L15.2589286,13.7799043 C16.3910427,12.3321941 17.0637481,10.5112782 17.0637481,8.53041695 C17.0637481,3.81818182 13.2449141,0 8.53187406,0 C3.81883401,0 0,3.81818182 0,8.53041695 C0,13.2426521 3.81883401,17.0608339 8.53187406,17.0608339 C10.5130737,17.0608339 12.3343006,16.3882433 13.7822581,15.2563226 L13.7822581,15.924812 C13.7822581,16.1872864 13.8848047,16.4374573 14.0693885,16.6220096 L18.1589454,20.7108681 C18.5445205,21.0963773 19.1680036,21.0963773 19.5494768,20.7108681 L20.7103039,19.5502392 C21.095879,19.16473 21.095879,18.5413534 20.7144058,18.1558442 Z M8.53187406,13.7799043 C5.63185725,13.7799043 3.28149002,11.4340396 3.28149002,8.53041695 C3.28149002,5.63089542 5.62775539,3.2809296 8.53187406,3.2809296 C11.4318909,3.2809296 13.7822581,5.62679426 13.7822581,8.53041695 C13.7822581,11.4299385 11.4359927,13.7799043 8.53187406,13.7799043 Z"
+    d: "M30.5001686,30.4989389 C28.2907779,30.4989389 26.5000648,28.7115592 26.5000648,26.4995019 C26.5000648,24.2901112 28.2874445,22.4993981 30.5001686,22.4993981 C32.7102259,22.4993981 34.5002723,24.2874445 34.5002723,26.4995019 C34.5002723,28.7082258 32.7128926,30.4989389 30.5001686,30.4989389 M39.7824092,33.833692 L36.6669951,30.7176112 C36.5263248,30.5769409 36.3349865,30.4989389 36.135648,30.4989389 L35.6256348,30.4989389 C36.4883238,29.3962436 37.0003371,28.0088743 37.0003371,26.4995019 C37.0003371,22.9094088 34.0909283,20 30.5001686,20 C26.9094088,20 24,22.9094088 24,26.4995019 C24,30.0902616 26.9094088,32.9990037 30.5001686,32.9990037 C32.0102077,32.9990037 33.397577,32.4863238 34.5002723,31.6236347 L34.5002723,32.133648 C34.5002723,32.3336531 34.578941,32.5243248 34.7196113,32.6643284 L37.8350254,35.7804092 C38.129033,36.0737501 38.6043787,36.0737501 38.8943862,35.7804092 L39.7790758,34.8957196 C40.0730834,34.601712 40.0730834,34.127033 39.7824092,33.833692",
+    transform: "translate(-24 -20)"
   }));
 });
 
@@ -792,11 +779,11 @@ var External = (function (_ref) {
   return core.jsx("svg", _extends({
     className: className,
     css: style,
-    width: "17px",
-    height: "15px",
-    viewBox: "0 0 17 15"
+    width: "16px",
+    height: "16px",
+    viewBox: "0 0 16 16"
   }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: "M12.4715521,8.17957031 L12.4715521,13.59375 C12.4715521,14.3704102 11.8733073,15 11.1353143,15 L1.33623772,15 C0.598244763,15 0,14.3704102 0,13.59375 L0,3.28125 C0,2.50458984 0.598244763,1.875 1.33623772,1.875 L8.24013261,1.875 C8.41732158,1.875 8.58725358,1.94907496 8.71254832,2.08092773 L9.1579609,2.54967773 C9.57887578,2.99264648 9.28078342,3.75 8.68554519,3.75 L1.78165029,3.75 L1.78165029,13.125 L10.6899018,13.125 L10.6899018,8.64832031 C10.6899018,8.4618457 10.7603048,8.28298828 10.8855771,8.15112305 L11.3309897,7.68237305 C11.7518767,7.23943359 12.4715521,7.55314453 12.4715521,8.17957031 Z M16.0348527,1.09374023 C16.0348527,0.489697266 15.5695357,0 14.9955659,0 L10.5785486,0 C10.1480574,0 9.79907662,0.367265625 9.79907662,0.8203125 L9.79907662,1.34428711 C9.79907662,1.80618164 10.1612806,2.17702148 10.6000398,2.16427734 L12.4708561,2.1084375 L5.54232433,9.34833984 C5.27983713,9.62264648 5.27905766,10.0691895 5.5406262,10.3444629 L6.20537662,11.044043 C6.46694516,11.3193164 6.89128415,11.3185254 7.15190618,11.0422852 L14.0313591,3.75073242 L13.9782993,5.71957031 C13.9662175,6.18128906 14.3185945,6.5625 14.7574929,6.5625 L15.2553807,6.5625 C15.6858719,6.5625 16.0348527,6.19523438 16.0348527,5.7421875 L16.0348527,1.09374023 Z"
+    d: "M15.25,0 L11.25,0 C10.5821875,0 10.2484375,0.8096875 10.71875,1.28125 L11.8353125,2.3978125 L4.21875,10.0115625 C3.92534375,10.3039688 3.92453125,10.7788125 4.21690625,11.07225 C4.2175,11.0728438 4.218125,11.0734688 4.21875,11.0740625 L4.9271875,11.78125 C5.2195625,12.0746563 5.6944375,12.0754688 5.98784375,11.7830938 C5.98846875,11.7824688 5.9890625,11.781875 5.9896875,11.78125 L13.6025,4.16625 L14.71875,5.28125 C15.1875,5.75 16,5.421875 16,4.75 L16,0.75 C16,0.33578125 15.6642187,0 15.25,0 M13.5,10 L12.5,10 C12.2238438,10 12,10.2238438 12,10.5 L12,14 L2,14 L2,4 L6.5,4 C6.776125,4 7,3.776125 7,3.5 L7,2.5 C7,2.223875 6.776125,2 6.5,2 L1.5,2 C0.6715625,2 0,2.6715625 0,3.5 L0,14.5 C0,15.3284375 0.6715625,16 1.5,16 L12.5,16 C13.3284375,16 14,15.3284375 14,14.5 L14,10.5 C14,10.2238438 13.7761562,10 13.5,10"
   }));
 });
 
