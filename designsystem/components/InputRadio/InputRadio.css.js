@@ -35,7 +35,8 @@ export const fieldWrapper = css`
 `
 
 export const fieldInput = css`
-
+    -moz-appearance: none;
+    -webkit-appearance: none;
     appearance: none;
     width: 2.4rem;
     height: 2.4rem;
