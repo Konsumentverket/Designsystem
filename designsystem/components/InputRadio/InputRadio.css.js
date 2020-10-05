@@ -78,6 +78,10 @@ export const fieldInput = css`
             left:-2px;
         }
 
+        &:disabled {
+            opacity: 1;
+        }
+
     }
 
 `
