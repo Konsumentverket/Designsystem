@@ -22,8 +22,8 @@ export const InputRadio = ({
                             }
                         }} 
                         value={value} 
-                        checked={checked}
-                        disabled={disabled}
+                        checked={false}
+                        disabled={true}
                         onKeyUp={(e) => {
                             //32 == space
                             if(e.which === 32 || e.key == 'Enter'){

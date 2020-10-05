@@ -83,6 +83,9 @@ export const fieldInput = css`
         }
 
     }
+    &:disabled {
+        opacity: 1;
+    }
 
 `
 
