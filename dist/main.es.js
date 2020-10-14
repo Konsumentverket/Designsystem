@@ -3312,8 +3312,8 @@ var InputRadio = function InputRadio(_ref) {
       }
     },
     value: value,
-    checked: checked,
-    disabled: disabled,
+    checked: false,
+    disabled: true,
     onKeyUp: function onKeyUp(e) {
       //32 == space
       if (e.which === 32 || e.key == 'Enter') {
@@ -4743,7 +4743,7 @@ function _templateObject2$m() {
 }
 
 function _templateObject$o() {
-  var data = _taggedTemplateLiteral(["\n    box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.15);\n    padding: ", " ", " ", " ", ";\n\n    ", " {\n        padding: ", " ", " ", " ", ";\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: ", ";\n        margin-right: ", ";\n    }\n    background-color: ", ";\n\n    ", " {\n        p > a {\n            margin-bottom: 0;\n        }\n    }\n    margin-bottom: ", ";\n    border-radius: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n    box-shadow: 0 1px 3px 0px rgba(0,0,0,0.06);\n    padding: ", " ", " ", " ", ";\n\n    ", " {\n        padding: ", " ", " ", " ", ";\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: ", ";\n        margin-right: ", ";\n    }\n    background-color: ", ";\n\n    ", " {\n        p > a {\n            margin-bottom: 0;\n        }\n    }\n    margin-bottom: ", ";\n    border-radius: ", ";\n"]);
 
   _templateObject$o = function _templateObject() {
     return data;
