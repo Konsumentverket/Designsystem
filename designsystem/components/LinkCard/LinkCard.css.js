@@ -14,7 +14,18 @@ export const wrapper = css`
 
 `
 
+export const linkTextWrapper = css`
+    overflow: visible;
+`
+
 export const linkTextMainLinkStyle = css`
+    .tabnav &:focus {
+        outline: 4px solid ${colors.states.focus};
+        
+        > *{
+            outline: none;
+        }
+    }
     padding: 2.4rem 1.6rem;
 `
 
@@ -26,23 +37,30 @@ export const mainLinkStyle = css`
     &:hover{
         border-radius: .8rem .8rem 0 0 !important;
         box-shadow: none !important;
-        text-decoration: underline!important;
+        h2 {
+            text-decoration: underline!important;
+        }
     }
-    &:active {
-        background-color: ${colors.theme1.xDark}!important;
-        color: ${colors.common.white}!important;
-    }
-
     &:visited {
         color: ${colors.theme1.mid}!important;
         svg{
             fill: ${colors.theme1.mid}!important;
         }
     }
+    &:active {
+        background-color: ${colors.theme1.xDark}!important;
+        color: ${colors.common.white}!important;
+        h2, span {
+            color: ${colors.common.white}!important;
+        }
+        svg{
+            fill: ${colors.common.white}!important;
+        }
+    }
 
     .tabnav &:focus {
         outline: none;
-        
+
         > *{
             outline: 4px solid ${colors.states.focus};
             outline-offset: 6px;
