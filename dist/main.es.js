@@ -3125,7 +3125,7 @@ function _templateObject2$9() {
 }
 
 function _templateObject$9() {
-  var data = _taggedTemplateLiteral(["\n    background-color: #fff;\n    border-radius: 0.8rem;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    border: 1px solid ", ";\n    overflow: hidden;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: #fff;\n    border-radius: 0.8rem;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    /* border: 1px solid ", "; */\n    overflow: hidden;\n\n"]);
 
   _templateObject$9 = function _templateObject() {
     return data;

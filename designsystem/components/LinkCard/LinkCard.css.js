@@ -9,7 +9,6 @@ export const wrapper = css`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    border: 1px solid ${colors.theme3.midLight};
     overflow: hidden;
 
 `
