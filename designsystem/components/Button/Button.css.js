@@ -36,7 +36,7 @@ export const buttonStyle = css`
     ${medium}{
         font-size:2.1rem;
         line-height:2.4rem;
-        width:fit-content;
+        width:auto;
         padding:1.6rem 2.4rem;
     }
 
