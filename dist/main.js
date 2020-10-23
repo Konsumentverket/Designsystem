@@ -3132,7 +3132,7 @@ function _templateObject2$9() {
 }
 
 function _templateObject$9() {
-  var data = _taggedTemplateLiteral(["\n    background-color: #fff;\n    border-radius: 0.8rem;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    /* border: 1px solid ", "; */\n    overflow: hidden;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: #fff;\n    border-radius: 0.8rem;\n    height: 100%;\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    overflow: hidden;\n\n"]);
 
   _templateObject$9 = function _templateObject() {
     return data;
@@ -3140,7 +3140,7 @@ function _templateObject$9() {
 
   return data;
 }
-var wrapper$2 = core.css(_templateObject$9(), colors.theme3.midLight);
+var wrapper$2 = core.css(_templateObject$9());
 var linkTextWrapper = core.css(_templateObject2$9());
 var linkTextMainLinkStyle = core.css(_templateObject3$8(), colors.states.focus);
 var mainLinkStyle = core.css(_templateObject4$7(), colors.theme1.mid, colors.theme1.mid, colors.theme1.xDark, colors.common.white, colors.common.white, colors.common.white, colors.states.focus);
@@ -3596,7 +3596,7 @@ function _templateObject3$b() {
 }
 
 function _templateObject2$c() {
-  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    text-align: center;\n    display: inline-block;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem 2.4rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    box-sizing: border-box;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n        flex-shrink: 0;\n    }\n\n    ", "{\n        font-size:2.1rem;\n        line-height:2.4rem;\n        width:fit-content;\n        padding:1.6rem 2.4rem;\n    }\n\n    &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:active{\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    text-decoration: none;\n    text-align: center;\n    display: inline-block;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    font-weight:500;\n    padding: .8rem 2.4rem;\n    color: ", ";\n    border-radius:.8rem;\n    width:100%;\n    box-sizing: border-box;\n    cursor:pointer;\n    background-color:", ";\n\n    svg {\n        fill: ", ";\n        flex-shrink: 0;\n    }\n\n    ", "{\n        font-size:2.1rem;\n        line-height:2.4rem;\n        width:auto;\n        padding:1.6rem 2.4rem;\n    }\n\n    &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:active{\n        background-color:", ";\n        text-decoration:underline;\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject2$c = function _templateObject2() {
     return data;
