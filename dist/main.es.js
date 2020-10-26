@@ -2400,8 +2400,11 @@ var IconCard = React.forwardRef(function (_ref, ref) {
     icon: icon,
     style: iconStyle
   }, "Ikon"), jsx("span", {
-    css: [iconText, haveIcon]
-  }, text), jsx(Icon, {
+    css: [iconText, haveIcon],
+    dangerouslySetInnerHTML: {
+      __html: text
+    }
+  }), jsx(Icon, {
     "aria-hidden": "true",
     icon: "Arrow",
     style: arrowStyle
