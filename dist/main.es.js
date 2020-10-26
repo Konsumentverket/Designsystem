@@ -3190,8 +3190,11 @@ var LinkCard = React.forwardRef(function (_ref, ref) {
     styleLevel: 3,
     style: innerTextWrapperStyle
   }, jsx("span", {
-    css: customFontSize
-  }, text), jsx(Icon, {
+    css: customFontSize,
+    dangerouslySetInnerHTML: {
+      __html: text
+    }
+  }), jsx(Icon, {
     "aria-hidden": "true",
     style: secondaryArrowStyle ? rotateArrow : null,
     icon: secondaryArrowStyle ? 'LinkArrow' : 'Arrow'
