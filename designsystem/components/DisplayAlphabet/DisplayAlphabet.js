@@ -18,14 +18,15 @@ export const DisplayAlphabet = ({
   onClickLetter,
   onClickShowAll,
   activeLetter,
-  visibleLetters
-}) => <div>
+  visibleLetters,
+  displayShowAllLink = true
+}) => <>
     <div css={css.alphabetWrapper}>
       {alphabet.map(letter => isVisibleLetter(visibleLetters, letter) ?
         <a
           key={letter}
           css={[
-            css.link,
+            css.letter,
             letter === activeLetter ? css.activeLetter : null
           ]}
           href={visibleLetters.some(v => v === letter) ? `?letter=${letter}` : `/`}
@@ -33,12 +34,12 @@ export const DisplayAlphabet = ({
           onClick={onClickLetter}
         >{letter}</a>
         :
-        <div css={css.invalidLetter}>{letter}</div>)}
+        <span key={letter} css={[css.letter,css.invalidLetter]}>{letter}</span>)}
     </div>
-    <div css={css.linkShowAllWrapper}>
+    {displayShowAllLink && <div css={css.linkShowAllWrapper}>
       <a css={css.linkShowAll}
         href={`?letter=alla`}
         onClick={onClickShowAll}
       >Visa Alla A-Ö</a>
-    </div>
-  </div>
+    </div>}
+  </>

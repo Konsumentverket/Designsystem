@@ -4642,7 +4642,7 @@ function _templateObject4$i() {
 }
 
 function _templateObject3$k() {
-  var data = _taggedTemplateLiteral(["\n  color: ", " !important;\n  font-size: ", ";\n  line-height: ", ";\n  margin-right: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: ", " !important;\n"]);
 
   _templateObject3$k = function _templateObject3() {
     return data;
@@ -4652,7 +4652,7 @@ function _templateObject3$k() {
 }
 
 function _templateObject2$l() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n  font-size: ", ";\n  line-height: ", ";\n  /* margin-bottom: ", "; */\n  margin-right: ", ";\n  ", " {\n    font-size: ", ";\n    line-height: ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  font-size: ", ";\n  line-height: ", ";\n  margin-right: ", ";\n  ", " {\n    font-size: ", ";\n    line-height: ", ";\n  }\n"]);
 
   _templateObject2$l = function _templateObject2() {
     return data;
@@ -4671,8 +4671,8 @@ function _templateObject$n() {
   return data;
 }
 var alphabetWrapper = core.css(_templateObject$n(), spacing.l);
-var link = core.css(_templateObject2$l(), spacing.l, spacing.xl, spacing.xs, spacing.s, medium, spacing.m, spacing.l);
-var invalidLetter = core.css(_templateObject3$k(), colors.theme3.midDark, spacing.m, spacing.l, spacing.s);
+var letter = core.css(_templateObject2$l(), spacing.l, spacing.xl, spacing.s, medium, spacing.m, spacing.l);
+var invalidLetter = core.css(_templateObject3$k(), colors.theme3.midDark);
 var activeLetter = core.css(_templateObject4$i(), colors.theme1.dark, colors.theme1.dark, colors.common.white, colors.theme1.dark);
 var linkShowAllWrapper = core.css(_templateObject5$g(), spacing.s, medium, spacing.l);
 var linkShowAll = core.css(_templateObject6$e(), spacing.l, medium, spacing.s);
@@ -4690,22 +4690,25 @@ var DisplayAlphabet = function DisplayAlphabet(_ref) {
   var onClickLetter = _ref.onClickLetter,
       onClickShowAll = _ref.onClickShowAll,
       activeLetter$1 = _ref.activeLetter,
-      visibleLetters = _ref.visibleLetters;
-  return core.jsx("div", null, core.jsx("div", {
+      visibleLetters = _ref.visibleLetters,
+      _ref$displayShowAllLi = _ref.displayShowAllLink,
+      displayShowAllLink = _ref$displayShowAllLi === void 0 ? true : _ref$displayShowAllLi;
+  return core.jsx(React__default.Fragment, null, core.jsx("div", {
     css: alphabetWrapper
-  }, alphabet.map(function (letter) {
-    return isVisibleLetter(visibleLetters, letter) ? core.jsx("a", {
-      key: letter,
-      css: [link, letter === activeLetter$1 ? activeLetter : null],
+  }, alphabet.map(function (letter$1) {
+    return isVisibleLetter(visibleLetters, letter$1) ? core.jsx("a", {
+      key: letter$1,
+      css: [letter, letter$1 === activeLetter$1 ? activeLetter : null],
       href: visibleLetters.some(function (v) {
-        return v === letter;
-      }) ? "?letter=".concat(letter) : "/",
-      "data-letter": letter,
+        return v === letter$1;
+      }) ? "?letter=".concat(letter$1) : "/",
+      "data-letter": letter$1,
       onClick: onClickLetter
-    }, letter) : core.jsx("div", {
-      css: invalidLetter
-    }, letter);
-  })), core.jsx("div", {
+    }, letter$1) : core.jsx("span", {
+      key: letter$1,
+      css: [letter, invalidLetter]
+    }, letter$1);
+  })), displayShowAllLink && core.jsx("div", {
     css: linkShowAllWrapper
   }, core.jsx("a", {
     css: linkShowAll,
