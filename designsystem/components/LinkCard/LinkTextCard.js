@@ -6,7 +6,7 @@ import { Icon } from '../Icon/Icon';
 import {SubHeading} from '../Headings/SubHeading'
 
 const LinkTextCard = React.forwardRef(({text,href,children,id,
-    headingLevel = 2, onClick, style, dir,lang}, ref) => {
+    headingLevel = 2, onClick, style, dir,lang, ...other}, ref) => {
 
     const renderLinkText = () => {
 
@@ -23,7 +23,7 @@ const LinkTextCard = React.forwardRef(({text,href,children,id,
 
     }
 
-    return <div id={id} dir={dir} css={[wrapper,linkTextWrapper,style]} lang={lang}>
+    return <div id={id} dir={dir} css={[wrapper,linkTextWrapper,style]} lang={lang} {...other}>
             <a ref={ref} href={href} css={[mainLinkStyle,linkTextMainLinkStyle]} onClick={onClick}>
             {renderLinkText()}
             {children && <span css={linkTextCardContentStyle}>{children}</span>}
