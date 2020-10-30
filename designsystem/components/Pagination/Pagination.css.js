@@ -8,6 +8,7 @@ export const paginationWrapperStyle = css`
     justify-content: center;
     align-items: center;
     position: relative;
+    padding-bottom: 5.6rem;
 
     ${large}{
         justify-content: space-between;
