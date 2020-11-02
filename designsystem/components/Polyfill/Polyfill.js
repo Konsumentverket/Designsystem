@@ -1,5 +1,5 @@
 
-export const Polyfill = () => `
+export const Polyfill = (nounce) => `
         var pf = [];
         if(!Object.assign)pf.push("Object.assign");
         if(!window.Promise)pf.push("Promise");
@@ -22,6 +22,7 @@ export const Polyfill = () => `
             console.log("polyfill(s) found",pf)
             var js = document.createElement('script');
             js.src = "https://polyfill.io/v3/polyfill.min.js?features="+pf.join(",");
+            js.nounce = "${nounce}";
             document.head.appendChild(js);
         }
     `
