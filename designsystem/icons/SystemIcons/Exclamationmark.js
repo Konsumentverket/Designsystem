@@ -12,8 +12,6 @@ export default ({ className, style, title, ...otherAttr }) => {
 			viewBox="0 0 43 43"
 			{...otherAttr}
 			version="1.1"
-			xmlns="http://www.w3.org/2000/svg"
-			xlink="http://www.w3.org/1999/xlink"
 		>
 			<title>{title}</title>
 			<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
