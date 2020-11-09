@@ -10,11 +10,10 @@ export const alphabetWrapper = css`
   margin-top: ${spacing.l};
 `
 
-export const link = css`
+export const letter = css`
   display: block;
   font-size: ${spacing.l};
   line-height: ${spacing.xl};
-  /* margin-bottom: ${spacing.xs}; */
   margin-right: ${spacing.s};
   ${medium} {
     font-size: ${spacing.m};
@@ -23,9 +22,6 @@ export const link = css`
 `
 export const invalidLetter = css`
   color: ${colors.theme3.midDark} !important;
-  font-size: ${spacing.m};
-  line-height: ${spacing.l};
-  margin-right: ${spacing.s};
 `
 
 export const activeLetter = css`

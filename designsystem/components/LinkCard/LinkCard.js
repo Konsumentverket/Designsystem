@@ -18,7 +18,7 @@ const LinkCard = React.forwardRef(({text,href,children,id,secondaryArrowStyle = 
     return <div id={id} css={[wrapper,style]}>
             <a ref={ref} href={href} css={mainLinkStyle} onClick={onClick}>
                 <SubHeading level={headingLevel} styleLevel={3} style={innerTextWrapperStyle}>    
-                    <span css={customFontSize}>{text}</span>
+                    <span css={customFontSize} dangerouslySetInnerHTML={{__html: text}}></span>
                     <Icon aria-hidden='true' style={secondaryArrowStyle ? rotateArrow : null} icon={secondaryArrowStyle ? 'LinkArrow':'Arrow'} />
                 </SubHeading>
             </a>

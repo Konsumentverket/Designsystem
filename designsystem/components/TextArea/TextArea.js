@@ -6,9 +6,8 @@ import { VisuallyHidden } from '../GlobalStyles/globalStyles';
 
 
 export const TextArea = ({style, wrapperStyle, placeholder, text, id, onChange, onClear,validationError,
-  name, disabled,hiddenLabel = false, ...other}) => {
+  name, disabled,hiddenLabel = false, label, ...other}) => {
   
-  const { label } = other
 
   let inputRef = useRef(null);
   let [addedText,setText] = useState(null)

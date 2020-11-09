@@ -205,6 +205,12 @@
             "title": "Microfon",
             "url": "EditorIcons/svg/Mic.svg"
         }
+        ,
+        {
+            "name": "DatingServices",
+            "title": "Datingtjänster",
+            "url": "EditorIcons/svg/DatingServices.svg"
+        }
 
    ]
 }

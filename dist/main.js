@@ -64,13 +64,13 @@ function _objectSpread2(target) {
     var source = arguments[i] != null ? arguments[i] : {};
 
     if (i % 2) {
-      ownKeys(source, true).forEach(function (key) {
+      ownKeys(Object(source), true).forEach(function (key) {
         _defineProperty(target, key, source[key]);
       });
     } else if (Object.getOwnPropertyDescriptors) {
       Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
     } else {
-      ownKeys(source).forEach(function (key) {
+      ownKeys(Object(source)).forEach(function (key) {
         Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
       });
     }
@@ -128,19 +128,15 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-    return arr2;
-  }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
 
 function _arrayWithHoles(arr) {
@@ -148,10 +144,11 @@ function _arrayWithHoles(arr) {
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -177,12 +174,29 @@ function _iterableToArrayLimit(arr, i) {
   return _arr;
 }
 
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
+}
+
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 var spacing = {
@@ -495,7 +509,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
     });
     return function () {};
   }, []);
-  return React__default.createElement(core.Global, {
+  return /*#__PURE__*/React__default.createElement(core.Global, {
     styles: globalStyles(fontSize, fontFamily)
   });
 };
@@ -801,9 +815,7 @@ var Exclamationmark = (function (_ref) {
     height: "43px",
     viewBox: "0 0 43 43"
   }, otherAttr, {
-    version: "1.1",
-    xmlns: "http://www.w3.org/2000/svg",
-    xlink: "http://www.w3.org/1999/xlink"
+    version: "1.1"
   }), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
     strokeWidth: "1",
@@ -1430,7 +1442,7 @@ var Craftsman = (function (_ref) {
     transform: "translate(256.000000, 716.000000)"
   }, core.jsx("path", {
     d: "M31.2186321,12.5 C31.8220402,12.5 32.1996569,13.1346843 31.8885448,13.6327467 C30.2544119,16.249496 27.2778581,18 23.8767775,18 C18.7366488,18 14.5660607,14.0016216 14.533879,9.05756029 C14.5015674,4.0918115 18.7217258,0 23.8769073,0 C27.2742896,0 30.2481183,1.74681207 31.8834191,4.35893644 C32.1973211,4.86037381 31.8263873,5.5 31.2185023,5.5 L24.3958383,5.5 L21.8005346,9 L24.3958383,12.5 L31.2186321,12.5 Z M20.0816001,18.312683 L7.08873134,30.82843 C5.46705584,32.3904921 2.83794834,32.3905546 1.21620796,30.82843 C-0.405402654,29.2663054 -0.405402654,26.733681 1.21620796,25.1715564 L14.2086874,12.6562469 C15.2571901,15.2310588 17.4075938,17.3021833 20.0816001,18.312683 Z M6.74777332,26.9999938 C6.74777332,26.1715561 6.05060987,25.4999938 5.19059112,25.4999938 C4.33057236,25.4999938 3.63340891,26.1715561 3.63340891,26.9999938 C3.63340891,27.8284307 4.33057236,28.4999938 5.19059112,28.4999938 C6.05060987,28.4999938 6.74777332,27.8284307 6.74777332,26.9999938 Z",
-    id: "craftsman-".concat(title)
+    id: title != null ? "craftsman-".concat(title) : null
   })))));
 });
 
@@ -2029,6 +2041,28 @@ var Mic = (function (_ref) {
   }));
 });
 
+var DatingServices = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    className: className,
+    css: style,
+    width: "32px",
+    height: "32px",
+    viewBox: "0 0 32 32"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("g", {
+    "fill-rule": "evenodd"
+  }, core.jsx("path", {
+    "fill-rule": "nonzero",
+    d: "M23.85,0 L9.15,0 C7.4109375,0 6,1.34375 6,3 L6,29 C6,30.65625 7.4109375,32 9.15,32 L23.85,32 C25.5890625,32 27,30.65625 27,29 L27,3 C27,1.34375 25.5890625,0 23.85,0 Z M16,30.0606061 C14.89375,30.0606061 14,29.1939394 14,28.1212121 C14,27.0484848 14.89375,26.1818182 16,26.1818182 C17.10625,26.1818182 18,27.0484848 18,28.1212121 C18,29.1939394 17.10625,30.0606061 16,30.0606061 Z M24,23.5151515 C24,23.9151515 23.6383929,24.2424242 23.1964286,24.2424242 L9.80357143,24.2424242 C9.36160714,24.2424242 9,23.9151515 9,23.5151515 L9,4.60606061 C9,4.20606061 9.36160714,3.87878788 9.80357143,3.87878788 L23.1964286,3.87878788 C23.6383929,3.87878788 24,4.20606061 24,4.60606061 L24,23.5151515 Z"
+  }), core.jsx("path", {
+    d: "M21.335227,9.75214067 C20.0508777,8.60550987 18.1407597,8.8117561 16.961877,10.0860631 L16.5001675,10.5844915 L16.038458,10.0860631 C14.861919,8.8117561 12.9494573,8.60550987 11.665108,9.75214067 C10.1932624,11.068188 10.1159202,13.4301984 11.4330814,14.8567348 L15.9681469,19.7624485 C16.2611098,20.0791838 16.7368815,20.0791838 17.0298444,19.7624485 L21.5649099,14.8567348 C22.8844382,13.4301984 22.8070725,11.068188 21.335227,9.75214067"
+  })));
+});
+
 var editorIconDefinitions = {
   AppsAndGames: AppsAndGames,
   Auction: Auction,
@@ -2070,7 +2104,8 @@ var editorIconDefinitions = {
   Map: Map,
   ChatWithUs: ChatWithUs,
   CallUs: CallUs,
-  Mic: Mic
+  Mic: Mic,
+  DatingServices: DatingServices
 };
 
 var EditorIcon = function EditorIcon(_ref) {
@@ -2399,8 +2434,11 @@ var IconCard = React__default.forwardRef(function (_ref, ref) {
     icon: icon,
     style: iconStyle
   }, "Ikon"), core.jsx("span", {
-    css: [iconText, haveIcon]
-  }, text), core.jsx(Icon, {
+    css: [iconText, haveIcon],
+    dangerouslySetInnerHTML: {
+      __html: text
+    }
+  }), core.jsx(Icon, {
     "aria-hidden": "true",
     icon: "Arrow",
     style: arrowStyle
@@ -3186,8 +3224,11 @@ var LinkCard = React__default.forwardRef(function (_ref, ref) {
     styleLevel: 3,
     style: innerTextWrapperStyle
   }, core.jsx("span", {
-    css: customFontSize
-  }, text), core.jsx(Icon, {
+    css: customFontSize,
+    dangerouslySetInnerHTML: {
+      __html: text
+    }
+  }), core.jsx(Icon, {
     "aria-hidden": "true",
     style: secondaryArrowStyle ? rotateArrow : null,
     icon: secondaryArrowStyle ? 'LinkArrow' : 'Arrow'
@@ -3202,7 +3243,6 @@ var LinkCard = React__default.forwardRef(function (_ref, ref) {
 });
 LinkCard.displayName = "LinkCard";
 
-/** @jsx jsx */
 var LinkTextCard = React__default.forwardRef(function (_ref, ref) {
   var text = _ref.text,
       href = _ref.href,
@@ -3213,7 +3253,8 @@ var LinkTextCard = React__default.forwardRef(function (_ref, ref) {
       onClick = _ref.onClick,
       style = _ref.style,
       dir = _ref.dir,
-      lang = _ref.lang;
+      lang = _ref.lang,
+      other = _objectWithoutProperties(_ref, ["text", "href", "children", "id", "headingLevel", "onClick", "style", "dir", "lang"]);
 
   var renderLinkText = function renderLinkText() {
     if (children) {
@@ -3235,12 +3276,12 @@ var LinkTextCard = React__default.forwardRef(function (_ref, ref) {
     }
   };
 
-  return core.jsx("div", {
+  return core.jsx("div", _extends({
     id: id,
     dir: dir,
     css: [wrapper$2, linkTextWrapper, style],
     lang: lang
-  }, core.jsx("a", {
+  }, other), core.jsx("a", {
     ref: ref,
     href: href,
     css: [mainLinkStyle, linkTextMainLinkStyle],
@@ -3913,9 +3954,9 @@ var TextArea = function TextArea(_ref) {
       disabled = _ref.disabled,
       _ref$hiddenLabel = _ref.hiddenLabel,
       hiddenLabel = _ref$hiddenLabel === void 0 ? false : _ref$hiddenLabel,
-      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "text", "id", "onChange", "onClear", "validationError", "name", "disabled", "hiddenLabel"]);
+      label = _ref.label,
+      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "text", "id", "onChange", "onClear", "validationError", "name", "disabled", "hiddenLabel", "label"]);
 
-  var label = other.label;
   var inputRef = React.useRef(null);
 
   var _useState = React.useState(null),
@@ -4628,7 +4669,7 @@ function _templateObject4$i() {
 }
 
 function _templateObject3$k() {
-  var data = _taggedTemplateLiteral(["\n  color: ", " !important;\n  font-size: ", ";\n  line-height: ", ";\n  margin-right: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: ", " !important;\n"]);
 
   _templateObject3$k = function _templateObject3() {
     return data;
@@ -4638,7 +4679,7 @@ function _templateObject3$k() {
 }
 
 function _templateObject2$l() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n  font-size: ", ";\n  line-height: ", ";\n  /* margin-bottom: ", "; */\n  margin-right: ", ";\n  ", " {\n    font-size: ", ";\n    line-height: ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  font-size: ", ";\n  line-height: ", ";\n  margin-right: ", ";\n  ", " {\n    font-size: ", ";\n    line-height: ", ";\n  }\n"]);
 
   _templateObject2$l = function _templateObject2() {
     return data;
@@ -4657,8 +4698,8 @@ function _templateObject$n() {
   return data;
 }
 var alphabetWrapper = core.css(_templateObject$n(), spacing.l);
-var link = core.css(_templateObject2$l(), spacing.l, spacing.xl, spacing.xs, spacing.s, medium, spacing.m, spacing.l);
-var invalidLetter = core.css(_templateObject3$k(), colors.theme3.midDark, spacing.m, spacing.l, spacing.s);
+var letter = core.css(_templateObject2$l(), spacing.l, spacing.xl, spacing.s, medium, spacing.m, spacing.l);
+var invalidLetter = core.css(_templateObject3$k(), colors.theme3.midDark);
 var activeLetter = core.css(_templateObject4$i(), colors.theme1.dark, colors.theme1.dark, colors.common.white, colors.theme1.dark);
 var linkShowAllWrapper = core.css(_templateObject5$g(), spacing.s, medium, spacing.l);
 var linkShowAll = core.css(_templateObject6$e(), spacing.l, medium, spacing.s);
@@ -4676,22 +4717,25 @@ var DisplayAlphabet = function DisplayAlphabet(_ref) {
   var onClickLetter = _ref.onClickLetter,
       onClickShowAll = _ref.onClickShowAll,
       activeLetter$1 = _ref.activeLetter,
-      visibleLetters = _ref.visibleLetters;
-  return core.jsx("div", null, core.jsx("div", {
+      visibleLetters = _ref.visibleLetters,
+      _ref$displayShowAllLi = _ref.displayShowAllLink,
+      displayShowAllLink = _ref$displayShowAllLi === void 0 ? true : _ref$displayShowAllLi;
+  return core.jsx(React__default.Fragment, null, core.jsx("div", {
     css: alphabetWrapper
-  }, alphabet.map(function (letter) {
-    return isVisibleLetter(visibleLetters, letter) ? core.jsx("a", {
-      key: letter,
-      css: [link, letter === activeLetter$1 ? activeLetter : null],
+  }, alphabet.map(function (letter$1) {
+    return isVisibleLetter(visibleLetters, letter$1) ? core.jsx("a", {
+      key: letter$1,
+      css: [letter, letter$1 === activeLetter$1 ? activeLetter : null],
       href: visibleLetters.some(function (v) {
-        return v === letter;
-      }) ? "?letter=".concat(letter) : "/",
-      "data-letter": letter,
+        return v === letter$1;
+      }) ? "?letter=".concat(letter$1) : "/",
+      "data-letter": letter$1,
       onClick: onClickLetter
-    }, letter) : core.jsx("div", {
-      css: invalidLetter
-    }, letter);
-  })), core.jsx("div", {
+    }, letter$1) : core.jsx("span", {
+      key: letter$1,
+      css: [letter, invalidLetter]
+    }, letter$1);
+  })), displayShowAllLink && core.jsx("div", {
     css: linkShowAllWrapper
   }, core.jsx("a", {
     css: linkShowAll,
@@ -4823,8 +4867,8 @@ var Source = function Source(_ref) {
   }, core.jsx("p", null, "".concat(reviewedDateText || english ? 'Proofread: ' : 'Granskad: ').concat(reviewed.getDate(), " ").concat(english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))), bottomContent && core.jsx("div", null, bottomContent));
 };
 
-var Polyfill = function Polyfill() {
-  return "\n        var pf = [];\n        if(!Object.assign)pf.push(\"Object.assign\");\n        if(!window.Promise)pf.push(\"Promise\");\n        if(!window.fetch)pf.push(\"fetch\");\n        if(!window.IntersectionObserver)pf.push(\"IntersectionObserver\");\n        if(!window.IntersectionObserverEntry)pf.push(\"IntersectionObserverEntry\");\n        if(!window.URL || typeof window.URL !== \"function\")pf.push(\"URL\");\n        if(!Array.prototype.find)pf.push(\"Array.prototype.find\");\n        if(!Array.prototype.includes)pf.push(\"Array.prototype.includes\");\n        if(!Array.prototype.findIndex)pf.push(\"Array.prototype.findIndex\")\n        if(!Array.prototype.entries)pf.push(\"Array.prototype.entries\")\n        if(!window.HTMLPictureElement)pf.push(\"HTMLPictureElement\")\n        if(!String.prototype.endsWith)pf.push(\"String.prototype.endsWith\");\n        if(!String.prototype.startsWith)pf.push(\"String.prototype.startsWith\");\n        if(!Object.values)pf.push(\"Object.values\");\n        if(!Object.entries)pf.push(\"Object.entries\");\n        if(!Element.prototype.matches)pf.push(\"Element.prototype.matches\")\n        if(pf.length > 0) {\n            console.log(\"polyfill(s) found\",pf)\n            var js = document.createElement('script');\n            js.src = \"https://polyfill.io/v3/polyfill.min.js?features=\"+pf.join(\",\");\n            document.head.appendChild(js);\n        }\n    ";
+var Polyfill = function Polyfill(nounce) {
+  return "\n        var pf = [];\n        if(!Object.assign)pf.push(\"Object.assign\");\n        if(!window.Promise)pf.push(\"Promise\");\n        if(!window.fetch)pf.push(\"fetch\");\n        if(!window.IntersectionObserver)pf.push(\"IntersectionObserver\");\n        if(!window.IntersectionObserverEntry)pf.push(\"IntersectionObserverEntry\");\n        if(!window.URL || typeof window.URL !== \"function\")pf.push(\"URL\");\n        if(!Array.prototype.find)pf.push(\"Array.prototype.find\");\n        if(!Array.prototype.includes)pf.push(\"Array.prototype.includes\");\n        if(!Array.prototype.findIndex)pf.push(\"Array.prototype.findIndex\")\n        if(!Array.prototype.entries)pf.push(\"Array.prototype.entries\")\n        if(!window.HTMLPictureElement)pf.push(\"HTMLPictureElement\")\n        if(!String.prototype.endsWith)pf.push(\"String.prototype.endsWith\");\n        if(!String.prototype.startsWith)pf.push(\"String.prototype.startsWith\");\n        if(!Object.values)pf.push(\"Object.values\");\n        if(!Object.entries)pf.push(\"Object.entries\");\n        if(!Element.prototype.matches)pf.push(\"Element.prototype.matches\")\n        if(!Element.prototype.remove)pf.push(\"Element.prototype.remove\")\n        if(pf.length > 0) {\n            console.log(\"polyfill(s) found\",pf)\n            var js = document.createElement('script');\n            js.src = \"https://polyfill.io/v3/polyfill.min.js?features=\"+pf.join(\",\");\n            js.nounce = \"".concat(nounce, "\";\n            document.head.appendChild(js);\n        }\n    ");
 };
 
 function _templateObject$p() {
@@ -4935,7 +4979,7 @@ function _templateObject2$n() {
 }
 
 function _templateObject$q() {
-  var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n\n    ", "{\n        justify-content: space-between;\n        padding-bottom: 4.8rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    padding-bottom: 5.6rem;\n\n    ", "{\n        justify-content: space-between;\n        padding-bottom: 4.8rem;\n    }\n"]);
 
   _templateObject$q = function _templateObject() {
     return data;
