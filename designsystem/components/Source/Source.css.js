@@ -105,5 +105,6 @@ export const sourceLink = css`
     svg {
         position: relative;
         top: 1px;        
+        left: 8px;
     }
 `
