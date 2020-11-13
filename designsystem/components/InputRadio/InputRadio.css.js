@@ -1,5 +1,6 @@
 import { css } from '@emotion/core'
 import { colors } from '../Colors/Colors';
+import { spacing } from '../Spacing/Spacing';
 
 
 export const fieldWrapper = css`
@@ -96,7 +97,8 @@ export const fieldLabel = css`
     line-height: 28px;
     padding: 18px 0; 
     display: flex;
-    user-select: none;   
+    user-select: none;
+    margin-right: ${spacing.m};
 `
 
 export const disabledStyle = css`

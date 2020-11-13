@@ -786,9 +786,7 @@ var Exclamationmark = (function (_ref) {
     height: "43px",
     viewBox: "0 0 43 43"
   }, otherAttr, {
-    version: "1.1",
-    xmlns: "http://www.w3.org/2000/svg",
-    xlink: "http://www.w3.org/1999/xlink"
+    version: "1.1"
   }), core.jsx("title", null, title), core.jsx("g", {
     stroke: "none",
     strokeWidth: "1",
@@ -2331,7 +2329,7 @@ function _templateObject6$3() {
 }
 
 function _templateObject5$3() {
-  var data = _taggedTemplateLiteral(["\n    padding: .8rem 4rem .8rem 1.4rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: .8rem 1.6rem .8rem 1.4rem;\n"]);
 
   _templateObject5$3 = function _templateObject5() {
     return data;
@@ -2341,7 +2339,7 @@ function _templateObject5$3() {
 }
 
 function _templateObject4$3() {
-  var data = _taggedTemplateLiteral(["\n    width:100%;\n    color: ", ";\n    line-height: 2.4rem;\n    font-size: 2.1rem;\n    font-weight: 500;\n    word-wrap:break-word;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width:100%;\n    color: ", ";\n    line-height: 2.4rem;\n    font-size: 2.1rem;\n    font-weight: 500;\n    word-wrap:break-word;\n\n    [dir='rtl'] &{\n        padding-right: ", ";\n    }\n"]);
 
   _templateObject4$3 = function _templateObject4() {
     return data;
@@ -2371,7 +2369,7 @@ function _templateObject2$3() {
 }
 
 function _templateObject$2() {
-  var data = _taggedTemplateLiteral(["\n    flex-shrink: 0;\n    transform: rotate(270deg);\n    padding-right: .4rem;\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n    flex-shrink: 0;\n    transform: rotate(270deg);\n    padding-right: .4rem;\n    height: 3.2rem;\n    width: 3.2rem;\n    fill: ", ";\n\n    [dir='rtl'] &{\n        left: .5rem;\n        right: auto;\n        transform: rotate(90deg);\n    }\n"]);
 
   _templateObject$2 = function _templateObject() {
     return data;
@@ -2382,7 +2380,7 @@ function _templateObject$2() {
 var arrowStyle = core.css(_templateObject$2(), colors.theme1.mid);
 var iconStyle = core.css(_templateObject2$3(), colors.theme1.mid);
 var iconCardStyle = core.css(_templateObject3$3(), colors.common.white, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark);
-var iconText = core.css(_templateObject4$3(), colors.theme1.mid);
+var iconText = core.css(_templateObject4$3(), colors.theme1.mid, spacing.s);
 var noIcon = core.css(_templateObject5$3());
 var topAreaIcon = core.css(_templateObject6$3());
 
@@ -3276,7 +3274,7 @@ function _templateObject4$8() {
 }
 
 function _templateObject3$9() {
-  var data = _taggedTemplateLiteral(["\n    color: #464646;\n    width: 100%;\n    font-size: 21px;\n    line-height: 28px;\n    padding: 18px 0; \n    display: flex;\n    user-select: none;   \n"]);
+  var data = _taggedTemplateLiteral(["\n    color: #464646;\n    width: 100%;\n    font-size: 21px;\n    line-height: 28px;\n    padding: 18px 0; \n    display: flex;\n    user-select: none;\n    margin-right: ", ";\n"]);
 
   _templateObject3$9 = function _templateObject3() {
     return data;
@@ -3306,7 +3304,7 @@ function _templateObject$a() {
 }
 var fieldWrapper = core.css(_templateObject$a(), colors.theme3.xLight, colors.theme1.xDark, colors.theme1.mid, colors.states.focus);
 var fieldInput = core.css(_templateObject2$a(), colors.theme1.mid, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark);
-var fieldLabel = core.css(_templateObject3$9());
+var fieldLabel = core.css(_templateObject3$9(), spacing.m);
 var disabledStyle = core.css(_templateObject4$8(), colors.theme3.mid, colors.theme3.midLight, colors.theme3.light, colors.theme3.mid);
 
 /** @jsx jsx */
@@ -3927,9 +3925,9 @@ var TextArea = function TextArea(_ref) {
       disabled = _ref.disabled,
       _ref$hiddenLabel = _ref.hiddenLabel,
       hiddenLabel = _ref$hiddenLabel === void 0 ? false : _ref$hiddenLabel,
-      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "text", "id", "onChange", "onClear", "validationError", "name", "disabled", "hiddenLabel"]);
+      label = _ref.label,
+      other = _objectWithoutProperties(_ref, ["style", "wrapperStyle", "placeholder", "text", "id", "onChange", "onClear", "validationError", "name", "disabled", "hiddenLabel", "label"]);
 
-  var label = other.label;
   var inputRef = React.useRef(null);
 
   var _useState = React.useState(null),
@@ -4718,7 +4716,7 @@ var DisplayAlphabet = function DisplayAlphabet(_ref) {
 };
 
 function _templateObject7$c() {
-  var data = _taggedTemplateLiteral(["\n    svg {\n        position: relative;\n        top: 1px;        \n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    svg {\n        position: relative;\n        top: 1px;        \n        left: 8px;\n    }\n"]);
 
   _templateObject7$c = function _templateObject7() {
     return data;
