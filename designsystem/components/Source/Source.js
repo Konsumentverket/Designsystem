@@ -30,7 +30,7 @@ export const Source = ({
 
     return <div css={[sourceStyle, style]}>
         {usabilla && 
-            <div css={usabilla ? firstRowUsabilla : firstRow}>{usabilla}</div>        
+            <div className="usabilla" css={usabilla ? firstRowUsabilla : firstRow}>{usabilla}</div>        
         }
         <div css={secondRow}>
             {sourcesCollection && sourcesCollection.items.length > 0 && 
