@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react';
 import NotesLoader from '../NotesLoader';
 import { FocusPuff } from './FocusPuff';
 import { colors } from '../Colors/Colors';
+import AppsAndGames from '../Icons/EditorIcons/AppsAndGames/AppsAndGames';
 
 
 let name = 'FocusPuff';
@@ -28,6 +29,9 @@ storiesOf('Digitala Produkter|Komponenter/Kort', module).add(name, () => {
         </div>
         <div css={linkCardStyle}>
           <FocusPuff headline="Custom image component" text="Denna puff innehåller en custom komponent för bild" imageComponent={<img src="https://www.fillmurray.com/304/100" alt="custom img component" />}/>
+        </div>
+        <div css={linkCardStyle}>
+          <FocusPuff icon={AppsAndGames} headline="Custom icon component" text="Denna puff innehåller en ikonistället för bild" />
         </div>
       </div>
   </div>}, { notes: NotesLoader(name) }

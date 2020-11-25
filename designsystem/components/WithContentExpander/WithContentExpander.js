@@ -11,7 +11,7 @@ import {
   collapseButtonStyle,
   baseLinkStyle
 } from './WithContentExpander.css'
-import { Icon } from '../Icon/Icon'
+import Arrow from '../Icons/SystemIcons/Arrow/Arrow'
 
 
 const measureElement = element => {
@@ -61,10 +61,9 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
             <a href={linkHref} ref={linkRef} onClick={(e) => e.preventDefault()} aria-haspopup="true" aria-expanded={expanded ? "true" : "false"} aria-label={linkElement.props.children || ""} className="noStyle" css={[baseLinkStyle, linkStyle]}>
                 <div className="link-element-container" ref={linkContainerRef}>
                   {linkElement}
-                  <Icon
+                  <Arrow
                     aria-hidden="true"
                     className="expand-icon"
-                    icon="Arrow"
                     style={[IconStyle(linkElementFontSize), expanded ? IconExpandedStyle : null, isFullWidth ? IconFullWidth : null]} 
                 />
                 </div>
@@ -90,7 +89,7 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
                             DOMNode.focus({preventScroll:true})
                         }
                     }}
-                    css={collapseButtonStyle}>Fäll ihop<Icon icon="Arrow" /></div>}
+                    css={collapseButtonStyle}>Fäll ihop <Arrow /></div>}
         </div>
 
     </div>

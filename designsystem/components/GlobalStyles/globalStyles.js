@@ -2,12 +2,11 @@ import { css, Global } from '@emotion/core'
 import { spacing } from '../Spacing/Spacing'
 import { colors } from '../Colors/Colors';
 import React, { useEffect } from 'react';
-import { checkPath } from '../../icons/SystemIcons/Check';
-import { filePdfPath } from '../../icons/SystemIcons/FilePdf';
-import { fileWordPath } from '../../icons/SystemIcons/FileWord';
-import { filePowerpointPath } from '../../icons/SystemIcons/FilePowerpoint';
-import { fileExcelPath } from '../../icons/SystemIcons/FileExcel';
-import { filePath } from '../../icons/SystemIcons/File';
+import { filePdfPath } from '../Icons/SystemIcons/FilePdf/FilePdf';
+import { fileWordPath } from '../Icons/SystemIcons/FileWord/FileWord';
+import { filePowerpointPath } from '../Icons/SystemIcons/FilePowerpoint/FilePowerpoint';
+import { fileExcelPath } from '../Icons/SystemIcons/FileExcel/FileExcel';
+import { filePath } from '../Icons/SystemIcons/File/File';
 
 export const GlobalStyles = ({
   fontSize = "62.5%",

@@ -10,7 +10,7 @@ import {
     sourceLink 
 } from './Source.css';
 import isExternal from './isExternalUrl';
-import { Icon } from '../Icon/Icon';
+import External from '../Icons/SystemIcons/External/External';
 
 export const Source = ({ 
     usabilla, 
@@ -42,7 +42,7 @@ export const Source = ({
                             css={sourceLink}
                             className={isExternal(baseUrl, item.linkUrl) ? "external" : null}>
                             {item.linkText}
-                            {isExternal(baseUrl, item.linkUrl) && <Icon title="Extern länk" className="external" icon="External" />}
+                            {isExternal(baseUrl, item.linkUrl) && <External title="Extern länk" className="external" />}
                         </a>
                     )   
                 })}

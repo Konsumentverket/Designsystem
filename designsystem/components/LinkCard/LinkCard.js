@@ -2,8 +2,9 @@
 import { jsx } from '@emotion/core'
 import React from 'react';
 import { wrapper, mainLinkStyle, childrenWrapper, showAllLink, innerTextWrapperStyle, rotateArrow,customFontSize } from './LinkCard.css';
-import { Icon } from '../Icon/Icon';    
-import {SubHeading} from '../Headings/SubHeading'
+import {SubHeading} from '../SubHeading/SubHeading'
+import LinkArrow from '../Icons/SystemIcons/LinkArrow/LinkArrow';
+import Arrow from '../Icons/SystemIcons/Arrow/Arrow';
 
 const LinkCard = React.forwardRef(({text,href,children,id,secondaryArrowStyle = false,
     headingLevel = 2, onClick, beforeToggleCount = 3, style, childrenWrapperStyle}, ref) => {
@@ -19,7 +20,10 @@ const LinkCard = React.forwardRef(({text,href,children,id,secondaryArrowStyle = 
             <a ref={ref} href={href} css={mainLinkStyle} onClick={onClick}>
                 <SubHeading level={headingLevel} styleLevel={3} style={innerTextWrapperStyle}>    
                     <span css={customFontSize} dangerouslySetInnerHTML={{__html: text}}></span>
-                    <Icon aria-hidden='true' style={secondaryArrowStyle ? rotateArrow : null} icon={secondaryArrowStyle ? 'LinkArrow':'Arrow'} />
+                    {secondaryArrowStyle ? 
+                        <LinkArrow style={rotateArrow} aria-hidden='true' /> :
+                        <Arrow aria-hidden='true' />
+                    }
                 </SubHeading>
             </a>
             {itemsToShow.length > 0 && <div css={[childrenWrapper,childrenWrapperStyle]}>

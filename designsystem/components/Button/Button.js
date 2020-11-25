@@ -2,7 +2,6 @@
 import { jsx } from '@emotion/core'
 import React from 'react';
 import { buttonStyle, secondaryStyle, invertedBackgroundStyle, invertedSecondaryBackgroundStyle, iconStyle, buttonIconLeft, buttonIconRight } from './Button.css';
-import { Icon } from '../Icon/Icon';
 
 
 export const Button = ({ text, secondaryButtonStyle=false, invertedBackgroundColor=false, className, id, type = "submit",
@@ -35,18 +34,15 @@ export const Button = ({ text, secondaryButtonStyle=false, invertedBackgroundCol
         "href":href || null,
         ...ariaAttrs}
 
-    const leftIcon = iconLeft ? (React.isValidElement(iconLeft) ? iconLeft : <Icon style={iconStyle} icon={iconLeft} />) : null;
-    const rightIcon = iconRight ? (React.isValidElement(iconRight) ? iconRight : <Icon style={iconStyle} icon={iconRight} />) : null;
-
     return href ? <a {...props} > 
-        {leftIcon}
+        {iconLeft}
         {text}
-        {rightIcon}
+        {iconRight}
     </a>
     :
     <button {...props} >
-        {leftIcon}
+        {iconLeft}
         {text}
-        {rightIcon}
+        {iconRight}
     </button>;
 }

@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import { InputStyle,InputWrapperStyle, ClearInput, Label, invalidStyle, LoadingStyle } from "./InputText.css"
-import {Icon} from '../Icon/Icon';
 import React, { useRef,useState } from 'react';
 import { VisuallyHidden } from '../GlobalStyles/globalStyles';
 import Loading from '../Loading/Loading';
+import Clear from '../Icons/SystemIcons/Clear/Clear';
 
 
 export const InputText = React.forwardRef(({style,wrapperStyle, placeholder, id, onChange, onClear,validationError,
@@ -26,7 +26,7 @@ export const InputText = React.forwardRef(({style,wrapperStyle, placeholder, id,
             if(onClear){
                 onClear(e);
             }
-        }}><Icon icon="Clear" /></a>
+        }}><Clear /></a>
     }
     if(loading){
         innerContent = <Loading style={LoadingStyle} />;

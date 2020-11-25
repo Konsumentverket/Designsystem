@@ -12,17 +12,17 @@ import {
 	linkWrapper
 } from './FocusPuff.css';
 import React from 'react';
-import { EditorIcon } from '../Icon/EditorIcon';
-import { Icon } from '../Icon/Icon';
+import External from '../Icons/SystemIcons/External/External';
 
 export const FocusPuff = ({ headline, text, url, isExternalLink, image, imageAlt, icon, imageComponent, onClick }) => {
 	let imageArea = imageComponent;
 	if (imageArea == null) {
 		if (image != null) imageArea = <img src={image} alt={imageAlt} />;
 		else {
+			
 			imageArea = (
 				<div className={'iconBackground'} css={iconBackground}>
-					<EditorIcon icon={icon} style={puffIcon} />
+					{icon && React.cloneElement(icon,{style:puffIcon})}
 				</div>
 			);
 		}
@@ -35,7 +35,7 @@ export const FocusPuff = ({ headline, text, url, isExternalLink, image, imageAlt
 				<div css={textArea}>
 					<h3 css={focusHeadline}>
 						{headline}
-						{isExternalLink && <Icon title="Extern länk" icon="External" style={externalIcon} />}
+						{isExternalLink && <External title="Extern länk" style={externalIcon} />}
 					</h3>
 					<p css={focusText}>{text}</p>
 				</div>

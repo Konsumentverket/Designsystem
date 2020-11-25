@@ -1,7 +1,7 @@
 
 import { css } from '@emotion/core'
 import { colors } from '../Colors/Colors';
-import { arrowPath } from '../../icons/SystemIcons/Arrow';
+import { arrowPath } from '../Icons/SystemIcons/Arrow/Arrow';
 
 export const selectStyle = css`
     appearance: none;
@@ -22,6 +22,15 @@ export const selectStyle = css`
     }
 
 `;
+
+
+export const labelStyle = css`
+  color: #4D4D4D;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  margin-bottom: .8rem;
+  display: block;
+`
 
 export const selectWrapperStyle = css`
     width: 100%;

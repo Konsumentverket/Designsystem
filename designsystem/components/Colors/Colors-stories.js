@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import {colors} from './Colors'
 import NotesLoader from '../NotesLoader';
 import Page from '../../misc/Page/Page';
-import {SubHeading} from '../Headings/SubHeading'
+import { SubHeading } from '../SubHeading/SubHeading';
 
 let name = 'Beskrivning av färger';
 
