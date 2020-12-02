@@ -45,20 +45,35 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-function _objectSpread(target) {
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
 
-    if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
     }
-
-    ownKeys.forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    });
   }
 
   return target;
@@ -113,19 +128,15 @@ function _taggedTemplateLiteral(strings, raw) {
 }
 
 function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
 
 function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-
-    return arr2;
-  }
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
 
 function _arrayWithHoles(arr) {
@@ -133,10 +144,11 @@ function _arrayWithHoles(arr) {
 }
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -162,12 +174,29 @@ function _iterableToArrayLimit(arr, i) {
   return _arr;
 }
 
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
+}
+
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 var spacing = {
@@ -272,25 +301,6 @@ var eccTheme = {
   }
 };
 var colors = process.env.THEME === 'ecc' ? Object.assign({}, defaultTheme, eccTheme) : defaultTheme;
-
-var checkPath = "M6.09703073,13.0077039 L0.262878687,7.22504644 C-0.0876262289,6.87763523 -0.0876262289,6.3143474 0.262878687,5.96690144 L1.53219243,4.70875643 C1.88269734,4.36131046 2.45103631,4.36131046 2.80154123,4.70875643 L6.73170513,8.60419634 L15.1496783,0.260558412 C15.5001832,-0.0868528038 16.0685222,-0.0868528038 16.4190271,0.260558412 L17.6883408,1.51870342 C18.0388457,1.86611463 18.0388457,2.42940246 17.6883408,2.77684843 L7.36637953,13.0077386 C7.01583955,13.3551498 6.44753564,13.3551498 6.09703073,13.0077039 L6.09703073,13.0077039 Z";
-var Check = (function (_ref) {
-  var className = _ref.className,
-      style = _ref.style,
-      title = _ref.title,
-      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
-
-  return core.jsx("svg", _extends({
-    "aria-hidden": "true",
-    className: className,
-    css: style,
-    width: "18px",
-    height: "14px",
-    viewBox: "0 0 18 14"
-  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
-    d: checkPath
-  }));
-});
 
 var filePdfPath = "M11.36875,16.00625 C11.05625,15.00625 11.0625,13.075 11.24375,13.075 C11.76875,13.075 11.71875,15.38125 11.36875,16.00625 Z M11.2625,18.95625 C10.78125,20.21875 10.18125,21.6625 9.4875,22.875 C10.63125,22.4375 11.925,21.8 13.41875,21.50625 C12.625,20.90625 11.8625,20.04375 11.2625,18.95625 Z M5.38125,26.75625 C5.38125,26.80625 6.20625,26.41875 7.5625,24.24375 C7.14375,24.6375 5.74375,25.775 5.38125,26.75625 Z M15.5,10 L24,10 L24,30.5 C24,31.33125 23.33125,32 22.5,32 L1.5,32 C0.66875,32 0,31.33125 0,30.5 L0,1.5 C0,0.66875 0.66875,0 1.5,0 L14,0 L14,8.5 C14,9.325 14.675,10 15.5,10 Z M15,20.7375 C13.75,19.975 12.91875,18.925 12.33125,17.375 C12.6125,16.21875 13.05625,14.4625 12.71875,13.3625 C12.425,11.525 10.06875,11.70625 9.73125,12.9375 C9.41875,14.08125 9.70625,15.69375 10.2375,17.75 C9.5125,19.475 8.44375,21.7875 7.6875,23.1125 C7.68125,23.1125 7.68125,23.11875 7.675,23.11875 C5.98125,23.9875 3.075,25.9 4.26875,27.36875 C4.61875,27.8 5.26875,27.99375 5.6125,27.99375 C6.73125,27.99375 7.84375,26.86875 9.43125,24.13125 C11.04375,23.6 12.8125,22.9375 14.36875,22.68125 C15.725,23.41875 17.3125,23.9 18.36875,23.9 C20.19375,23.9 20.31875,21.9 19.6,21.1875 C18.73125,20.3375 16.20625,20.58125 15,20.7375 L15,20.7375 Z M23.5625,6.5625 L17.4375,0.4375 C17.15625,0.15625 16.775,0 16.375,0 L16,0 L16,8 L24,8 L24,7.61875 C24,7.225 23.84375,6.84375 23.5625,6.5625 Z M18.93125,22.51875 C19.1875,22.35 18.775,21.775 16.25625,21.95625 C18.575,22.94375 18.93125,22.51875 18.93125,22.51875 Z";
 var FilePdf = (function (_ref) {
@@ -480,7 +490,7 @@ var GlobalStyles = function GlobalStyles(_ref) {
     });
     return function () {};
   }, []);
-  return React__default.createElement(core.Global, {
+  return /*#__PURE__*/React__default.createElement(core.Global, {
     styles: globalStyles(fontSize, fontFamily)
   });
 };
@@ -813,6 +823,25 @@ var Exclamationmark = (function (_ref) {
     d: "M0.0223022727,0.949035 L0.528075,11.149035 C0.551734091,11.626335 0.910506818,11.999985 1.34502955,11.999985 L4.65498409,11.999985 C5.08943864,11.999985 5.44827955,11.626335 5.47193864,11.149035 L5.97771136,0.949035 C6.00327955,0.433485 5.63012045,-1.5e-05 5.16075682,-1.5e-05 L0.839188636,-1.5e-05 C0.369825,-1.5e-05 -0.00326590909,0.433485 0.0223022727,0.949035",
     fill: "#B50255"
   })))))));
+});
+
+var checkPath = "M6.09703073,13.0077039 L0.262878687,7.22504644 C-0.0876262289,6.87763523 -0.0876262289,6.3143474 0.262878687,5.96690144 L1.53219243,4.70875643 C1.88269734,4.36131046 2.45103631,4.36131046 2.80154123,4.70875643 L6.73170513,8.60419634 L15.1496783,0.260558412 C15.5001832,-0.0868528038 16.0685222,-0.0868528038 16.4190271,0.260558412 L17.6883408,1.51870342 C18.0388457,1.86611463 18.0388457,2.42940246 17.6883408,2.77684843 L7.36637953,13.0077386 C7.01583955,13.3551498 6.44753564,13.3551498 6.09703073,13.0077039 L6.09703073,13.0077039 Z";
+var Check = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", _extends({
+    "aria-hidden": "true",
+    className: className,
+    css: style,
+    width: "18px",
+    height: "14px",
+    viewBox: "0 0 18 14"
+  }, otherAttr), core.jsx("title", null, title), core.jsx("path", {
+    d: checkPath
+  }));
 });
 
 var Oval = (function (_ref) {
@@ -2400,18 +2429,16 @@ var IconCard = React__default.forwardRef(function (_ref, ref) {
     onClick: onClick,
     css: [iconCardStyle, style],
     className: "noStyle"
-  }, icon && core.jsx(EditorIcon, {
+  }, icon && React__default.cloneElement(icon, {
     "aria-hidden": "true",
-    icon: icon,
     style: iconStyle
-  }, "Ikon"), core.jsx("span", {
+  }), core.jsx("span", {
     css: [iconText, haveIcon],
     dangerouslySetInnerHTML: {
       __html: text
     }
-  }), core.jsx(Icon, {
+  }), core.jsx(Arrow, {
     "aria-hidden": "true",
-    icon: "Arrow",
     style: arrowStyle
   }));
 });
@@ -2622,6 +2649,7 @@ var TagBlock = React__default.forwardRef(function (_ref, ref) {
       secondaryArrowStyle = _ref$secondaryArrowSt === void 0 ? false : _ref$secondaryArrowSt;
   var headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7'];
   var SelectedHeading = headings[headingLevel - 1] || 'h2';
+  var EditorIcon = icon;
   return core.jsx("div", {
     css: [tagBlockItem, invertedColors ? invertedTag : null, style]
   }, core.jsx("a", {
@@ -2632,18 +2660,15 @@ var TagBlock = React__default.forwardRef(function (_ref, ref) {
     onClick: onClick
   }, icon && core.jsx(EditorIcon, {
     "aria-hidden": "true",
-    icon: icon,
     css: iconStyle$1
-  }, "Ikon"), core.jsx(SelectedHeading, {
+  }), core.jsx(SelectedHeading, {
     className: "tagHeading",
     css: [tagHeading, icon != null ? tagIconHeading : null]
-  }, heading), secondaryArrowStyle ? core.jsx(Icon, {
+  }, heading), secondaryArrowStyle ? core.jsx(LinkArrow, {
     "aria-hidden": "true",
-    icon: "LinkArrow",
     style: secondaryArrowStyleCSS
-  }) : core.jsx(Icon, {
+  }) : core.jsx(Arrow, {
     "aria-hidden": "true",
-    icon: "Arrow",
     style: arrowStyle$1
   })), core.jsx("div", {
     css: tagsArea
@@ -2693,8 +2718,7 @@ var PrerequisitesBox = function PrerequisitesBox(_ref) {
   if (children == null) return null;
   return core.jsx("div", {
     css: [wrapper, wrapperStyle]
-  }, core.jsx(Icon, {
-    icon: "Exclamationmark",
+  }, core.jsx(Exclamationmark, {
     style: exclamationMarkImage
   }), text && core.jsx(SubHeading, {
     style: heading,
@@ -2704,7 +2728,7 @@ var PrerequisitesBox = function PrerequisitesBox(_ref) {
 };
 
 function _templateObject9$1() {
-  var data = _taggedTemplateLiteral(["\n  position:absolute;\n  fill: #b50255;\n  width:6.4rem;\n  height:6.4rem;\n  left:calc(50% - 3.2rem);\n  top:calc(50% - 3.2rem);\n"]);
+  var data = _taggedTemplateLiteral(["\n  position:absolute;\n  fill: #fff;\n  width:6.4rem;\n  height:6.4rem;\n  left:calc(50% - 3.2rem);\n  top:calc(50% - 3.2rem);\n"]);
 
   _templateObject9$1 = function _templateObject9() {
     return data;
@@ -2714,7 +2738,7 @@ function _templateObject9$1() {
 }
 
 function _templateObject8$4() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 0.4rem;\n  fill: #fff;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  margin-left: 0.4rem;\n  fill: ", ";\n"]);
 
   _templateObject8$4 = function _templateObject8() {
     return data;
@@ -2744,7 +2768,7 @@ function _templateObject6$5() {
 }
 
 function _templateObject5$5() {
-  var data = _taggedTemplateLiteral(["\n  margin:1.6rem 2.4rem 2.4rem 2.4rem;\n  ", " {\n    \n      max-width:32.8rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin:1.6rem 2.4rem 2.4rem 2.4rem;\n  ", " {\n      max-width:32.8rem;\n  }\n"]);
 
   _templateObject5$5 = function _templateObject5() {
     return data;
@@ -2754,7 +2778,7 @@ function _templateObject5$5() {
 }
 
 function _templateObject4$5() {
-  var data = _taggedTemplateLiteral(["\n  color: #fff;\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin:0;\n  padding:0;\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 1.6rem;\n  line-height: 2.4rem;\n  margin:0;\n  padding:0;\n"]);
 
   _templateObject4$5 = function _templateObject4() {
     return data;
@@ -2764,7 +2788,7 @@ function _templateObject4$5() {
 }
 
 function _templateObject3$6() {
-  var data = _taggedTemplateLiteral(["\n  color: #fff;\n  font-size: 2.4rem;\n  line-height: 3.2rem;\n  margin: 0 0 .8rem 0;\n  font-weight:700;\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 2.4rem;\n  line-height: 3.2rem;\n  margin: 0 0 .8rem 0;\n  font-weight:700;\n"]);
 
   _templateObject3$6 = function _templateObject3() {
     return data;
@@ -2774,7 +2798,7 @@ function _templateObject3$6() {
 }
 
 function _templateObject2$6() {
-  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  padding-top:.8rem;\n  display:flex;\n\n  &:hover .focusWrapper {\n      background-color: ", ";      \n  }\n  &:active .focusWrapper {\n      background-color: ", ";      \n  }\n  &:hover h3, &:active h3 {\n    text-decoration:underline;\n  }\n  \n  ", " {\n    height:100%\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  padding-top:.8rem;\n  display:flex;\n\n  &:hover .focusWrapper {\n      background-color: #E6C3D1;\n  }\n  &:hover {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active h3 {\n      color: ", ";      \n  }\n  &:active h3 > svg {\n    fill: ", ";\n  }\n\n  &:hover h3, &:active h3 {\n    text-decoration:underline;\n  }\n  \n  ", " {\n    height:100%\n  }\n\n"]);
 
   _templateObject2$6 = function _templateObject2() {
     return data;
@@ -2784,7 +2808,7 @@ function _templateObject2$6() {
 }
 
 function _templateObject$6() {
-  var data = _taggedTemplateLiteral(["\n  min-height: 25.6rem;\n  display:flex;\n  height: calc(100% - .8rem);\n  width:100%;\n  flex-direction:column;\n  background-color: ", ";\n  border-bottom-right-radius:.8rem;\n  border-bottom-left-radius:.8rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  min-height: 25.6rem;\n  display:flex;\n  height: calc(100%);\n  width:100%;\n  flex-direction:column;\n  background-color: ", ";\n  border-bottom-right-radius:.8rem;\n  border-bottom-left-radius:.8rem;\n\n"]);
 
   _templateObject$6 = function _templateObject() {
     return data;
@@ -2792,14 +2816,14 @@ function _templateObject$6() {
 
   return data;
 }
-var focusWrapper = core.css(_templateObject$6(), colors.theme2.mid);
-var linkWrapper = core.css(_templateObject2$6(), colors.theme2.midDark, colors.theme2.dark, medium);
-var focusHeadline = core.css(_templateObject3$6());
-var focusText = core.css(_templateObject4$5());
+var focusWrapper = core.css(_templateObject$6(), colors.theme2.light);
+var linkWrapper = core.css(_templateObject2$6(), colors.theme2.mid, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, medium);
+var focusHeadline = core.css(_templateObject3$6(), colors.theme2.mid);
+var focusText = core.css(_templateObject4$5(), colors.theme3.dark);
 var textArea = core.css(_templateObject5$5(), medium);
 var pictureWrapper = core.css(_templateObject6$5());
-var iconBackground = core.css(_templateObject7$4(), colors.theme2.light);
-var externalIcon = core.css(_templateObject8$4());
+var iconBackground = core.css(_templateObject7$4(), colors.theme2.mid);
+var externalIcon = core.css(_templateObject8$4(), colors.theme2.mid);
 var puffIcon = core.css(_templateObject9$1());
 
 /** @jsx jsx */
@@ -2823,8 +2847,7 @@ var FocusPuff = function FocusPuff(_ref) {
       imageArea = core.jsx("div", {
         className: 'iconBackground',
         css: iconBackground
-      }, core.jsx(EditorIcon, {
-        icon: icon,
+      }, icon && React__default.cloneElement(icon, {
         style: puffIcon
       }));
     }
@@ -2840,9 +2863,8 @@ var FocusPuff = function FocusPuff(_ref) {
       css: textArea
     }, core.jsx("h3", {
       css: focusHeadline
-    }, headline, isExternalLink && core.jsx(Icon, {
+    }, headline, isExternalLink && core.jsx(External, {
       title: "Extern l\xE4nk",
-      icon: "External",
       style: externalIcon
     })), core.jsx("p", {
       css: focusText
@@ -2976,8 +2998,7 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
     });else {
       imageArea = core.jsx("div", {
         css: iconBackground$1
-      }, core.jsx(EditorIcon, {
-        icon: icon,
+      }, icon && React__default.cloneElement(icon, {
         style: puffIcon$1
       }));
     }
@@ -2992,9 +3013,8 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
       css: textArea$1
     }, core.jsx("h3", {
       css: focusHeadline$1
-    }, headline, isExternalLink && core.jsx(Icon, {
+    }, headline, isExternalLink && core.jsx(External, {
       title: "Extern l\xE4nk",
-      icon: "External",
       style: externalIcon$1
     })), core.jsx("p", {
       css: focusText$1
@@ -3042,7 +3062,7 @@ var FactBox = function FactBox(_ref) {
       style = _ref.style;
   if (!content && !children) return null;
   return core.jsx("div", {
-    css: [wrapper$1, LinkWrapperInvertedColorStyle, secondaryColor && secondaryColorStyle, style]
+    css: [wrapper$1, LinkWrapperInvertedColorStyle$1, secondaryColor && secondaryColorStyle, style]
   }, headline && core.jsx(SubHeading, {
     level: headlineLevel,
     text: headline,
@@ -3199,10 +3219,11 @@ var LinkCard = React__default.forwardRef(function (_ref, ref) {
     dangerouslySetInnerHTML: {
       __html: text
     }
-  }), core.jsx(Icon, {
-    "aria-hidden": "true",
-    style: secondaryArrowStyle ? rotateArrow : null,
-    icon: secondaryArrowStyle ? 'LinkArrow' : 'Arrow'
+  }), secondaryArrowStyle ? core.jsx(LinkArrow, {
+    style: rotateArrow,
+    "aria-hidden": "true"
+  }) : core.jsx(Arrow, {
+    "aria-hidden": "true"
   }))), itemsToShow.length > 0 && core.jsx("div", {
     css: [childrenWrapper, childrenWrapperStyle]
   }, itemsToShow), childrenArray.length > beforeToggleCount && core.jsx("span", {
@@ -3233,16 +3254,14 @@ var LinkTextCard = React__default.forwardRef(function (_ref, ref) {
         level: headingLevel,
         styleLevel: 3,
         style: innerTextWrapperStyle
-      }, core.jsx("span", null, text), core.jsx(Icon, {
-        "aria-hidden": "true",
-        icon: "Arrow"
+      }, core.jsx("span", null, text), core.jsx(Arrow, {
+        "aria-hidden": "true"
       }));
     } else {
       return core.jsx("div", {
         css: innerTextWrapperStyle
-      }, core.jsx("span", null, text), core.jsx(Icon, {
-        "aria-hidden": "true",
-        icon: "Arrow"
+      }, core.jsx("span", null, text), core.jsx(Arrow, {
+        "aria-hidden": "true"
       }));
     }
   };
@@ -3512,9 +3531,7 @@ var InputText = React__default.forwardRef(function (_ref, _ref2) {
           onClear(e);
         }
       }
-    }, core.jsx(Icon, {
-      icon: "Clear"
-    }));
+    }, core.jsx(Clear, null));
   }
 
   if (loading) {
@@ -3672,7 +3689,7 @@ var Button = function Button(_ref) {
   });
   style && styles.push(style);
 
-  var props = _objectSpread({
+  var props = _objectSpread2({
     "id": id,
     "css": styles,
     "className": cssClass.join(" "),
@@ -3683,15 +3700,7 @@ var Button = function Button(_ref) {
     "href": href || null
   }, ariaAttrs);
 
-  var leftIcon = iconLeft ? React__default.isValidElement(iconLeft) ? iconLeft : core.jsx(Icon, {
-    style: iconStyle$2,
-    icon: iconLeft
-  }) : null;
-  var rightIcon = iconRight ? React__default.isValidElement(iconRight) ? iconRight : core.jsx(Icon, {
-    style: iconStyle$2,
-    icon: iconRight
-  }) : null;
-  return href ? core.jsx("a", props, leftIcon, text, rightIcon) : core.jsx("button", props, leftIcon, text, rightIcon);
+  return href ? core.jsx("a", props, iconLeft, text, iconRight) : core.jsx("button", props, iconLeft, text, iconRight);
 };
 
 function _templateObject8$8() {
@@ -3856,9 +3865,7 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
         onClear(e);
       }
     }
-  }, core.jsx(Icon, {
-    icon: "Clear"
-  }))), core.jsx(Button, {
+  }, core.jsx(Clear, null))), core.jsx(Button, {
     style: searchFieldButtonStyle,
     disabled: disabled,
     onClick: onClick,
@@ -4142,12 +4149,6 @@ var FormRadiobutton = function FormRadiobutton(_ref) {
   }, labelText)));
 };
 
-/** @jsx jsx */
-var FormWrapper = function FormWrapper(_ref) {
-  var children = _ref.children;
-  return core.jsx("fieldset", null, children);
-};
-
 function _templateObject$i() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  color: ", ";\n  font-size: 1.4rem;\n  svg {\n    align-content: center;\n    flex-shrink: 0;\n    margin-right: 0.4rem;\n    fill: ", ";\n  }\n  p {\n    line-height: 2.4rem;\n    padding-bottom: 0;\n  }\n"]);
 
@@ -4171,13 +4172,21 @@ var ValidationResponse = function ValidationResponse(_ref) {
       children = _ref.children;
   return core.jsx("div", {
     css: wrapper$3(success)
-  }, core.jsx(Icon, {
-    icon: success ? "Check" : "Clear"
-  }), text, children);
+  }, success ? core.jsx(Check, null) : core.jsx(Clear, null), text, children);
 };
 
-function _templateObject3$g() {
+function _templateObject4$f() {
   var data = _taggedTemplateLiteral(["\n    select {\n        border-color: #F00;\n    }\n"]);
+
+  _templateObject4$f = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$g() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n"]);
 
   _templateObject3$g = function _templateObject3() {
     return data;
@@ -4187,7 +4196,7 @@ function _templateObject3$g() {
 }
 
 function _templateObject2$h() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: #4D4D4D;\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin-bottom: .8rem;\n  display: block;\n"]);
 
   _templateObject2$h = function _templateObject2() {
     return data;
@@ -4206,8 +4215,9 @@ function _templateObject$j() {
   return data;
 }
 var selectStyle = core.css(_templateObject$j(), colors.theme3.midLight, encodeURIComponent(colors.theme1.mid), arrowPath, colors.theme3.dark);
-var selectWrapperStyle = core.css(_templateObject2$h());
-var invalidStyle$2 = core.css(_templateObject3$g());
+var labelStyle$3 = core.css(_templateObject2$h());
+var selectWrapperStyle = core.css(_templateObject3$g());
+var invalidStyle$2 = core.css(_templateObject4$f());
 
 var Dropdown = function Dropdown(_ref) {
   var label = _ref.label,
@@ -4226,7 +4236,7 @@ var Dropdown = function Dropdown(_ref) {
   return core.jsx("div", {
     css: [selectWrapperStyle, invalid]
   }, label && core.jsx("label", {
-    css: Label$1,
+    css: labelStyle$3,
     htmlFor: id
   }, label), validationError, core.jsx("select", _extends({
     id: id,
@@ -4283,10 +4293,10 @@ function _templateObject5$d() {
   return data;
 }
 
-function _templateObject4$f() {
+function _templateObject4$g() {
   var data = _taggedTemplateLiteral(["\n    background-color:transparent;\n    color:", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n\n    svg {\n        fill:", "; \n    }\n    &:hover {\n        background-color:", ";\n        text-decoration:underline;\n        border-color:", ";\n    }\n    &:active {\n        color:", ";\n        background-color:", ";\n        box-shadow:none;\n        svg {\n            fill:", "; \n        }\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
-  _templateObject4$f = function _templateObject4() {
+  _templateObject4$g = function _templateObject4() {
     return data;
   };
 
@@ -4325,7 +4335,7 @@ function _templateObject$k() {
 var disabled$2 = core.css(_templateObject$k(), colors.theme3.mid, colors.theme3.midLight, colors.theme3.mid);
 var expandButtonStyle = core.css(_templateObject2$i(), colors.common.white, colors.theme1.mid, colors.common.white, medium, colors.theme1.midDark, colors.theme1.xDark, disabled$2);
 var smallStyle = core.css(_templateObject3$h());
-var secondaryStyle$1 = core.css(_templateObject4$f(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$2);
+var secondaryStyle$1 = core.css(_templateObject4$g(), colors.theme1.mid, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.common.white, colors.theme1.xDark, colors.common.white, disabled$2);
 var invertedBackgroundStyle$2 = core.css(_templateObject5$d(), colors.common.white, colors.theme1.dark);
 var invertedSecondaryBackgroundStyle$1 = core.css(_templateObject6$b(), colors.common.white, colors.common.white, colors.common.white, colors.common.white, colors.theme1.midDark, colors.theme1.dark, disabled$2);
 var iconStyle$3 = core.css(_templateObject7$9());
@@ -4347,9 +4357,7 @@ var ExpandButton = function ExpandButton(_ref) {
       onClick = _ref.onClick;
   var styles = [expandButtonStyle];
   secondaryButtonStyle && styles.push(secondaryStyle$1);
-  small && styles.push(smallStyle); // invertedBackgroundColor && styles.push(invertedBackgroundStyle);
-  // (invertedBackgroundColor && secondaryButtonStyle) && styles.push(invertedSecondaryBackgroundStyle);
-
+  small && styles.push(smallStyle);
   style && styles.push(style);
   return core.jsx("button", {
     id: id,
@@ -4358,9 +4366,8 @@ var ExpandButton = function ExpandButton(_ref) {
     disabled: disabled,
     "aria-expanded": expanded ? "true" : "false",
     onClick: onClick
-  }, core.jsx("span", null, text), core.jsx(Icon, {
+  }, core.jsx("span", null, text), core.jsx(Arrow, {
     "aria-hidden": "true",
-    icon: "Arrow",
     style: [iconStyle$3, expanded && expandedIconStyle]
   }));
 };
@@ -4405,10 +4412,10 @@ function _templateObject5$e() {
   return data;
 }
 
-function _templateObject4$g() {
+function _templateObject4$h() {
   var data = _taggedTemplateLiteral(["\n  color: ", " !important;\n  text-decoration: none !important;\n"]);
 
-  _templateObject4$g = function _templateObject4() {
+  _templateObject4$h = function _templateObject4() {
     return data;
   };
 
@@ -4447,7 +4454,7 @@ function _templateObject$l() {
 var wrapper$4 = core.css(_templateObject$l(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.midLight);
 var news = core.css(_templateObject2$j(), colors.theme3.dark);
 var disabled$3 = core.css(_templateObject3$i());
-var headlineDisabled = core.css(_templateObject4$g(), colors.theme3.midDark);
+var headlineDisabled = core.css(_templateObject4$h(), colors.theme3.midDark);
 var headline = core.css(_templateObject5$e(), spacing.m, spacing.xs);
 var preambleStyle = core.css(_templateObject6$c(), colors.theme3.dark);
 var bottomText = core.css(_templateObject7$a(), colors.theme3.mid);
@@ -4527,10 +4534,10 @@ function _templateObject5$f() {
   return data;
 }
 
-function _templateObject4$h() {
+function _templateObject4$i() {
   var data = _taggedTemplateLiteral(["\n  color: ", " !important;\n  text-decoration: none !important;\n"]);
 
-  _templateObject4$h = function _templateObject4() {
+  _templateObject4$i = function _templateObject4() {
     return data;
   };
 
@@ -4569,7 +4576,7 @@ function _templateObject$m() {
 var wrapper$5 = core.css(_templateObject$m(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.light);
 var news$1 = core.css(_templateObject2$k(), colors.theme3.dark);
 var disabled$4 = core.css(_templateObject3$j());
-var headlineDisabled$1 = core.css(_templateObject4$h(), colors.theme3.midDark);
+var headlineDisabled$1 = core.css(_templateObject4$i(), colors.theme3.midDark);
 var headline$1 = core.css(_templateObject5$f(), spacing.m, spacing.xs);
 var preambleStyle$1 = core.css(_templateObject6$d(), colors.theme3.dark);
 var bottomText$1 = core.css(_templateObject7$b(), colors.theme3.mid);
@@ -4629,10 +4636,10 @@ function _templateObject5$g() {
   return data;
 }
 
-function _templateObject4$i() {
+function _templateObject4$j() {
   var data = _taggedTemplateLiteral(["\n  border: solid ", ";\n  border-width: 0px 8px 3px;\n  border-radius: 8px;\n  margin-top: -1px;\n  background-color:", ";\n  color: ", " !important;\n  :hover {\n    background-color:", " !important;\n  }\n"]);
 
-  _templateObject4$i = function _templateObject4() {
+  _templateObject4$j = function _templateObject4() {
     return data;
   };
 
@@ -4671,7 +4678,7 @@ function _templateObject$n() {
 var alphabetWrapper = core.css(_templateObject$n(), spacing.l);
 var letter = core.css(_templateObject2$l(), spacing.l, spacing.xl, spacing.s, medium, spacing.m, spacing.l);
 var invalidLetter = core.css(_templateObject3$k(), colors.theme3.midDark);
-var activeLetter = core.css(_templateObject4$i(), colors.theme1.dark, colors.theme1.dark, colors.common.white, colors.theme1.dark);
+var activeLetter = core.css(_templateObject4$j(), colors.theme1.dark, colors.theme1.dark, colors.common.white, colors.theme1.dark);
 var linkShowAllWrapper = core.css(_templateObject5$g(), spacing.s, medium, spacing.l);
 var linkShowAll = core.css(_templateObject6$e(), spacing.l, medium, spacing.s);
 
@@ -4745,10 +4752,10 @@ function _templateObject5$h() {
   return data;
 }
 
-function _templateObject4$j() {
+function _templateObject4$k() {
   var data = _taggedTemplateLiteral(["\n    flex-direction: column;\n    display: flex;\n\n    ", " {\n        flex-direction: row;\n    }\n"]);
 
-  _templateObject4$j = function _templateObject4() {
+  _templateObject4$k = function _templateObject4() {
     return data;
   };
 
@@ -4787,7 +4794,7 @@ function _templateObject$o() {
 var sourceStyle = core.css(_templateObject$o(), spacing.s, spacing.s, spacing.m, spacing.s, medium, spacing.m, spacing.l, spacing.m, spacing.l, spacing.l, spacing.s, colors.theme1.light, medium, spacing.s, spacing.xs);
 var firstRow = core.css(_templateObject2$m(), spacing.s, spacing.m, colors.theme3.midLight, medium);
 var firstRowUsabilla = core.css(_templateObject3$l(), medium);
-var secondRow = core.css(_templateObject4$j(), medium);
+var secondRow = core.css(_templateObject4$k(), medium);
 var buttonStyle$1 = core.css(_templateObject5$h(), spacing.m, spacing.s, spacing.m, medium, spacing.m, spacing.m, spacing.m);
 var rightAlign = core.css(_templateObject6$f(), spacing.xs, medium);
 var sourceLink = core.css(_templateObject7$c());
@@ -4829,10 +4836,9 @@ var Source = function Source(_ref) {
       key: "link-" + idx,
       css: sourceLink,
       className: isExternal(baseUrl, item.linkUrl) ? "external" : null
-    }, item.linkText, isExternal(baseUrl, item.linkUrl) && core.jsx(Icon, {
+    }, item.linkText, isExternal(baseUrl, item.linkUrl) && core.jsx(External, {
       title: "Extern l\xE4nk",
-      className: "external",
-      icon: "External"
+      className: "external"
     }));
   })), markdownText, reviewed && core.jsx("div", {
     css: rightAlign
@@ -4920,10 +4926,10 @@ function _templateObject5$i() {
   return data;
 }
 
-function _templateObject4$k() {
+function _templateObject4$l() {
   var data = _taggedTemplateLiteral(["\n    margin-left: auto;\n    font-size: 1.8rem;\n    position: absolute;\n    right: 0px;\n    bottom: -0rem;\n\n    ", "{\n        position: static;\n    }\n    &:visited{\n        color: ", "!important;\n    }\n\n"]);
 
-  _templateObject4$k = function _templateObject4() {
+  _templateObject4$l = function _templateObject4() {
     return data;
   };
 
@@ -4962,7 +4968,7 @@ function _templateObject$q() {
 var paginationWrapperStyle = core.css(_templateObject$q(), large);
 var pageStyle = core.css(_templateObject2$n(), colors.theme1.mid, medium);
 var prevPageStyle = core.css(_templateObject3$m(), medium, colors.theme1.mid);
-var nextPageStyle = core.css(_templateObject4$k(), medium, colors.theme1.mid);
+var nextPageStyle = core.css(_templateObject4$l(), medium, colors.theme1.mid);
 var prevPageStyleHidden = core.css(_templateObject5$i());
 var distanceIndicatorStyle = core.css(_templateObject6$g(), colors.theme1.mid, medium);
 var currentPageStyle = core.css(_templateObject7$d(), colors.theme1.dark, colors.theme1.mid);
@@ -5131,10 +5137,10 @@ function _templateObject5$j() {
   return data;
 }
 
-function _templateObject4$l() {
+function _templateObject4$m() {
   var data = _taggedTemplateLiteral(["\n    transition: transform .2s ease-out;\n    width: ", ";\n    height: ", ";\n    margin-left: .5rem;\n    display:flex;\n    ", " {\n        margin-left: 1rem;\n    }\n"]);
 
-  _templateObject4$l = function _templateObject4() {
+  _templateObject4$m = function _templateObject4() {
     return data;
   };
 
@@ -5174,7 +5180,7 @@ var grayContentExpanderWrapper = core.css(_templateObject$r(), colors.theme3.xLi
 var grayFocusedOnExpansionWrapper = core.css(_templateObject2$o(), colors.theme3.light, spacing.xs, colors.theme3.xLight, colors.theme1.mid, spacing.xs, colors.theme1.light, spacing.s, spacing.xs, medium, spacing.s, spacing.m, colors.common.white, spacing.s, spacing.xs, spacing.m, spacing.xs, medium, spacing.s, spacing.m, spacing.m, spacing.m, colors.theme3.light, spacing.xs, spacing.xs);
 var ComponentWrapperStyle = core.css(_templateObject3$n(), small, colors.theme1.mid);
 var IconStyle = function IconStyle(fontSize) {
-  return core.css(_templateObject4$l(), fontSize, fontSize, medium);
+  return core.css(_templateObject4$m(), fontSize, fontSize, medium);
 };
 var IconExpandedStyle = core.css(_templateObject5$j());
 var IconFullWidth = core.css(_templateObject6$h());
@@ -5270,10 +5276,9 @@ var WithContentExpander = function WithContentExpander(_ref) {
   }, core.jsx("div", {
     className: "link-element-container",
     ref: linkContainerRef
-  }, linkElement, core.jsx(Icon, {
+  }, linkElement, core.jsx(Arrow, {
     "aria-hidden": "true",
     className: "expand-icon",
-    icon: "Arrow",
     style: [IconStyle(linkElementFontSize), expanded ? IconExpandedStyle : null, isFullWidth ? IconFullWidth : null]
   })))), core.jsx("div", {
     className: "expand-section ".concat(expanded && "expanded")
@@ -5304,9 +5309,7 @@ var WithContentExpander = function WithContentExpander(_ref) {
       }
     },
     css: collapseButtonStyle
-  }, "F\xE4ll ihop", core.jsx(Icon, {
-    icon: "Arrow"
-  }))));
+  }, "F\xE4ll ihop ", core.jsx(Arrow, null))));
 };
 
 exports.Button = Button;
@@ -5323,7 +5326,6 @@ exports.FocusPuff = FocusPuff;
 exports.FormCheckbox = FormCheckbox;
 exports.FormRadiobutton = FormRadiobutton;
 exports.FormSearchField = FormSearchField;
-exports.FormWrapper = FormWrapper;
 exports.Formats = Formats;
 exports.GlobalStyles = GlobalStyles;
 exports.Heading = Heading;
@@ -5348,10 +5350,8 @@ exports.TagBlock = TagBlock;
 exports.TextArea = TextArea;
 exports.ValidationResponse = ValidationResponse;
 exports.WithContentExpander = WithContentExpander;
-exports.checkPath = checkPath;
 exports.colors = colors;
 exports.grayContentExpanderWrapper = grayContentExpanderWrapper;
 exports.grayFocusedOnExpansionWrapper = grayFocusedOnExpansionWrapper;
 exports.spacing = spacing;
-exports.warnPath = warnPath;
 //# sourceMappingURL=main.js.map
