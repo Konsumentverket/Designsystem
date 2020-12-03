@@ -35,7 +35,7 @@ module.exports = devAliases
 const parseFile = async data => {
   const res = Object
     .keys(data)
-    .map(item => item.startsWith('konsumentverket') ? `   '${item}': path.resolve('../../../', '${data[item].mainFile}'),` : null)
+    .map(item => item.startsWith('konsumentverket') ? `   '@bit/${item.split('@')[0].replace('.kov-compo/', '.kov-compo.')}': path.resolve('../../../', 'Konsumentverket.github.io/dist/${data[item].mainFile}'),` : null)
     .join('\n')
   return start + res + end
 }
