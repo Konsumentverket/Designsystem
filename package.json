@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start": "nodemon --watch designsystem --exec \"rollup -c\"",
+    "bitwatch": "bit watch",
     "build": "rollup -c"
   },
   "devDependencies": {
