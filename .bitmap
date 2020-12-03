@@ -600,7 +600,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/focus-puff@0.0.2": {
+    "konsumentverket.kov-compo/focus-puff@0.0.3": {
         "files": [
             {
                 "relativePath": "designsystem/components/FocusPuff/FocusPuff.css.js",
