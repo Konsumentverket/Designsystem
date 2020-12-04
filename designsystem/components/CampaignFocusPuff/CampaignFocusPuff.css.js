@@ -14,7 +14,7 @@ export const focusWrapper = css`
   border-bottom-left-radius:.8rem;
   ${medium}{
     flex-direction:row;
-    margin-top:-.8rem;
+    /* margin-top:-.8rem; */
     margin-left:.8rem;
     border-top-right-radius:.8rem;
   }
@@ -25,20 +25,35 @@ export const linkWrapper = css`
   padding-top:.8rem;
   display:flex;
 
-  h2 {
-    color: ${colors.theme1.mid};
+  &:hover .focusWrapper {
+      background-color: #E6C3D1;
+  }
+  &:hover {
+    box-shadow: 0px 0px 0px 2px #fff; 
+    border-radius: 8px;
+  }
+  &:active {
+    box-shadow: 0px 0px 0px 2px ${colors.theme1.xDark};
+    border-radius: 8px;
+  }
+  &:active h3 {
+      color: ${colors.theme1.xDark};      
+  }
+  &:active h3 > svg {
+    fill: ${colors.theme1.xDark};
   }
 
-  &:hover .focusWrapper {
-      background-color: ${colors.theme2.midDark};      
-  }
-  &:active .focusWrapper {
-      background-color: ${colors.theme2.dark};      
-  }
-  &:hover h2, &:active h2 {
+  &:hover h3, &:active h3 {
     text-decoration:underline;
   }
-
+  .image {
+    max-width: 100%;
+    max-height: 100%;
+    transition: .1s all;
+  }
+  &:hover .image {
+    filter: brightness(75%);
+  }
   ${medium} {
     height:100%
   }
@@ -46,7 +61,7 @@ export const linkWrapper = css`
 `
 
 export const focusHeadline = css`
-  color:#000;
+  color: ${colors.theme2.mid};
   font-size: 2.4rem;
   line-height: 3.2rem;
   margin: 0 0 .8rem 0;
@@ -55,7 +70,7 @@ export const focusHeadline = css`
 
 export const focusText = css`
   font-size: 1.8rem;
-  line-height: 3.2rem;
+  line-height: 2.4rem;
   margin:0;
   padding:0;
   color:${colors.theme3.dark};
@@ -114,7 +129,7 @@ export const iconBackground = css`
   border-top-right-radius:.8rem;
   border-top-left-radius:.8rem;
   border-bottom-right-radius:0;
-  background-color: ${colors.theme2.light};
+  background-color: ${colors.theme2.mid};
   position:relative;
   padding-top:36.84%;
 
@@ -131,13 +146,13 @@ export const iconBackground = css`
 export const externalIcon = css`
   position: relative;
   margin-left: 0.8rem;
-  fill: ${colors.theme1.mid};
+  fill: ${colors.theme2.mid};
   width:2rem;
 `
 
 export const puffIcon = css`
   position:absolute;
-  fill: ${colors.theme2.mid};
+  fill: #fff;
   width:6.4rem;
   height:6.4rem;
   left:calc(50% - 3.2rem);

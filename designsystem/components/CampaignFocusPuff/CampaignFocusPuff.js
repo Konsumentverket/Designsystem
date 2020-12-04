@@ -40,7 +40,7 @@ export const CampaignFocusPuff = ({
 	const campaignPuffMarkup = () => {
 		return (
 			<div css={focusWrapper}>
-				<div css={pictureWrapper}>{imageArea}</div>
+				<div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
 				<div css={textArea}>
 					<h3 css={focusHeadline}>
 						{headline}
