@@ -30,7 +30,6 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
     const linkRef = useRef()
     const topOfComponent = useRef()
 
-
     const doExpansion = e => {
         setExpanded(!expanded)
         if(e){
@@ -58,7 +57,7 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
 
     return <div className={`withContentExpander ${isFullWidth ? "full-width" : null} ${expanded ? "expanded" : null}`} id={wrapperId} css={[ComponentWrapperStyle,wrapperStyle]} ref={topOfComponent}>
         <div className="link-element" onClick={e => doExpansion(e)}>
-            <a href={linkHref} ref={linkRef} onClick={(e) => e.preventDefault()} aria-haspopup="true" aria-expanded={expanded ? "true" : "false"} aria-label={linkElement.props.children || ""} className="noStyle" css={[baseLinkStyle, linkStyle]}>
+            <a href={linkHref} ref={linkRef} onClick={(e) => e.preventDefault()} aria-haspopup="true" aria-expanded={expanded ? "true" : "false"} aria-label={linkElement.props.children || ""} className="noStyle accordion" css={[baseLinkStyle, linkStyle]}>
                 <div className="link-element-container" ref={linkContainerRef}>
                   {linkElement}
                   <Arrow
