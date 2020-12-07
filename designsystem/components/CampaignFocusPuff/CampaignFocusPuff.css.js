@@ -95,9 +95,6 @@ export const textArea = css`
 `
 
 export const pictureWrapper = css`
-  /* margin-top:-.8rem;
-  margin-bottom:-.8rem; */
-  /* padding-bottom: .8rem; */
   width:100%;
   min-height:11.2rem;
 
