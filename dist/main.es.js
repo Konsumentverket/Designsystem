@@ -2791,7 +2791,7 @@ function _templateObject3$6() {
 }
 
 function _templateObject2$6() {
-  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  padding-top:.8rem;\n  display:flex;\n\n  &:hover .focusWrapper {\n      background-color: #E6C3D1;\n  }\n  &:hover {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active h3 {\n      color: ", ";      \n  }\n  &:active h3 > svg {\n    fill: ", ";\n  }\n\n  &:hover h3, &:active h3 {\n    text-decoration:underline;\n  }\n  \n  ", " {\n    height:100%\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  padding-top:.8rem;\n  display:flex;\n\n  &:hover .focusWrapper {\n      background-color: #E6C3D1;\n  }\n  &:hover {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active h3 {\n      color: ", ";      \n  }\n  &:active h3 > svg {\n    fill: ", ";\n  }\n\n  &:hover h3, &:active h3 {\n    text-decoration:underline;\n  }\n  .image {\n    max-width: 100%;\n    max-height: 100%;\n    transition: .1s all;\n  }\n  &:hover .image {\n    filter: brightness(75%);\n  }\n  \n  ", " {\n    height:100%\n  }\n\n"]);
 
   _templateObject2$6 = function _templateObject2() {
     return data;
@@ -2801,7 +2801,7 @@ function _templateObject2$6() {
 }
 
 function _templateObject$6() {
-  var data = _taggedTemplateLiteral(["\n  min-height: 25.6rem;\n  display:flex;\n  height: calc(100%);\n  width:100%;\n  flex-direction:column;\n  background-color: ", ";\n  border-bottom-right-radius:.8rem;\n  border-bottom-left-radius:.8rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  min-height: 25.6rem;\n  display:flex;\n  /* height: calc(100% - .8rem); */\n  height: 100%;\n  width:100%;\n  flex-direction:column;\n  background-color: ", ";\n  border-bottom-right-radius:.8rem;\n  border-bottom-left-radius:.8rem;\n\n"]);
 
   _templateObject$6 = function _templateObject() {
     return data;
@@ -2851,7 +2851,8 @@ var FocusPuff = function FocusPuff(_ref) {
       css: focusWrapper,
       className: 'focusWrapper'
     }, jsx("div", {
-      css: pictureWrapper
+      css: pictureWrapper,
+      className: imageComponent ? 'image' : null
     }, imageArea), jsx("div", {
       css: textArea
     }, jsx("h3", {
@@ -2873,7 +2874,7 @@ var FocusPuff = function FocusPuff(_ref) {
 };
 
 function _templateObject9$2() {
-  var data = _taggedTemplateLiteral(["\n  position:absolute;\n  fill: ", ";\n  width:6.4rem;\n  height:6.4rem;\n  left:calc(50% - 3.2rem);\n  top:calc(50% - 3.2rem);\n"]);
+  var data = _taggedTemplateLiteral(["\n  position:absolute;\n  fill: #fff;\n  width:6.4rem;\n  height:6.4rem;\n  left:calc(50% - 3.2rem);\n  top:calc(50% - 3.2rem);\n"]);
 
   _templateObject9$2 = function _templateObject9() {
     return data;
@@ -2903,7 +2904,7 @@ function _templateObject7$5() {
 }
 
 function _templateObject6$6() {
-  var data = _taggedTemplateLiteral(["\n  margin-top:-.8rem;\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:auto;\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n  ", "{\n    max-width:49.11%;\n    margin-top:0;\n    margin-left:-.8rem;\n    img {\n      border-top-right-radius: 0;\n      border-bottom-left-radius:.8rem;\n    }\n  }\n\n  ", "{\n    max-width:30.4rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    height:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:100%;\n    /* height:auto; */\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n  ", "{\n    max-width:49.11%;\n    margin-top:0;\n    margin-left:-.8rem;\n    img {\n      border-top-right-radius: 0;\n      border-bottom-left-radius:.8rem;\n    }\n  }\n\n  ", "{\n    max-width:30.4rem;\n  }\n"]);
 
   _templateObject6$6 = function _templateObject6() {
     return data;
@@ -2923,7 +2924,7 @@ function _templateObject5$6() {
 }
 
 function _templateObject4$6() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin:0;\n  padding:0;\n  color:", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 1.8rem;\n  line-height: 2.4rem;\n  margin:0;\n  padding:0;\n  color:", ";\n"]);
 
   _templateObject4$6 = function _templateObject4() {
     return data;
@@ -2933,7 +2934,7 @@ function _templateObject4$6() {
 }
 
 function _templateObject3$7() {
-  var data = _taggedTemplateLiteral(["\n  color:#000;\n  font-size: 2.4rem;\n  line-height: 3.2rem;\n  margin: 0 0 .8rem 0;\n  font-weight:700;\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-size: 2.4rem;\n  line-height: 3.2rem;\n  margin: 0 0 .8rem 0;\n  font-weight:700;\n"]);
 
   _templateObject3$7 = function _templateObject3() {
     return data;
@@ -2943,7 +2944,7 @@ function _templateObject3$7() {
 }
 
 function _templateObject2$7() {
-  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  padding-top:.8rem;\n  display:flex;\n\n  h2 {\n    color: ", ";\n  }\n\n  &:hover .focusWrapper {\n      background-color: ", ";      \n  }\n  &:active .focusWrapper {\n      background-color: ", ";      \n  }\n  &:hover h2, &:active h2 {\n    text-decoration:underline;\n  }\n\n  ", " {\n    height:100%\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  /* margin-top:.8rem; */\n  display:flex;\n  flex-shrink: 0;\n\n  &:hover .focusWrapper {\n    background-color: #E6C3D1;\n  }\n  &:hover {\n    box-shadow: 0px 0px 0px 2px ", "; \n    border-radius: 8px;\n  }\n  &:active {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active h3 {\n    color: ", ";      \n  }\n  &:active h3 > svg {\n    fill: ", ";\n  }\n\n  &:hover h3, &:active h3 {\n    text-decoration:underline;\n  }\n  .image {\n    max-width: 100%;\n    max-height: 100%;\n    transition: .1s all;\n  }\n  &:hover .image {\n    filter: brightness(75%);\n  }\n  ", " {\n    height: calc(100% + .8rem);\n  }\n\n"]);
 
   _templateObject2$7 = function _templateObject2() {
     return data;
@@ -2953,7 +2954,7 @@ function _templateObject2$7() {
 }
 
 function _templateObject$7() {
-  var data = _taggedTemplateLiteral(["\n  min-height: 25.6rem;\n  display:flex;\n  height:100%;\n  width:100%;\n  flex-direction:column;\n  background-color: #fff;\n  border-bottom-right-radius:.8rem;\n  border-bottom-left-radius:.8rem;\n  ", "{\n    flex-direction:row;\n    margin-top:-.8rem;\n    margin-left:.8rem;\n    border-top-right-radius:.8rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  min-height: 25.6rem;\n  display:flex;\n  height:100%;\n  width:100%;\n  flex-direction:column;\n  /* background-color: #fff; */\n  background-color: ", ";\n  border-bottom-right-radius:.8rem;\n  border-bottom-left-radius:.8rem;\n  ", "{\n    flex-direction:row;\n    /* margin-top:-.8rem; */\n    margin-left:.8rem;\n    border-top-right-radius:.8rem;\n  }\n"]);
 
   _templateObject$7 = function _templateObject() {
     return data;
@@ -2961,15 +2962,15 @@ function _templateObject$7() {
 
   return data;
 }
-var focusWrapper$1 = css(_templateObject$7(), medium);
-var linkWrapper$1 = css(_templateObject2$7(), colors.theme1.mid, colors.theme2.midDark, colors.theme2.dark, medium);
-var focusHeadline$1 = css(_templateObject3$7());
+var focusWrapper$1 = css(_templateObject$7(), colors.theme2.light, medium);
+var linkWrapper$1 = css(_templateObject2$7(), colors.theme2.mid, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, medium);
+var focusHeadline$1 = css(_templateObject3$7(), colors.theme2.mid);
 var focusText$1 = css(_templateObject4$6(), colors.theme3.dark);
 var textArea$1 = css(_templateObject5$6(), medium, large);
 var pictureWrapper$1 = css(_templateObject6$6(), medium, large);
-var iconBackground$1 = css(_templateObject7$5(), colors.theme2.light, medium);
-var externalIcon$1 = css(_templateObject8$5(), colors.theme1.mid);
-var puffIcon$1 = css(_templateObject9$2(), colors.theme2.mid);
+var iconBackground$1 = css(_templateObject7$5(), colors.theme2.mid, medium);
+var externalIcon$1 = css(_templateObject8$5(), colors.theme2.mid);
+var puffIcon$1 = css(_templateObject9$2());
 
 /** @jsx jsx */
 var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
@@ -3001,7 +3002,8 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
     return jsx("div", {
       css: focusWrapper$1
     }, jsx("div", {
-      css: pictureWrapper$1
+      css: pictureWrapper$1,
+      className: imageComponent ? 'image' : null
     }, imageArea), jsx("div", {
       css: textArea$1
     }, jsx("h3", {
@@ -5264,7 +5266,7 @@ var WithContentExpander = function WithContentExpander(_ref) {
     "aria-haspopup": "true",
     "aria-expanded": expanded ? "true" : "false",
     "aria-label": linkElement.props.children || "",
-    className: "noStyle",
+    className: "noStyle accordion",
     css: [baseLinkStyle, linkStyle]
   }, jsx("div", {
     className: "link-element-container",

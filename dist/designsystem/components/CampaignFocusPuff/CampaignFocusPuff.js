@@ -45,7 +45,8 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
     return (0, _core.jsx)("div", {
       css: _CampaignFocusPuff.focusWrapper
     }, (0, _core.jsx)("div", {
-      css: _CampaignFocusPuff.pictureWrapper
+      css: _CampaignFocusPuff.pictureWrapper,
+      className: imageComponent ? 'image' : null
     }, imageArea), (0, _core.jsx)("div", {
       css: _CampaignFocusPuff.textArea
     }, (0, _core.jsx)("h3", {

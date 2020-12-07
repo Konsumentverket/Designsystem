@@ -47,7 +47,8 @@ var FocusPuff = function FocusPuff(_ref) {
       css: _FocusPuff.focusWrapper,
       className: 'focusWrapper'
     }, (0, _core.jsx)("div", {
-      css: _FocusPuff.pictureWrapper
+      css: _FocusPuff.pictureWrapper,
+      className: imageComponent ? 'image' : null
     }, imageArea), (0, _core.jsx)("div", {
       css: _FocusPuff.textArea
     }, (0, _core.jsx)("h3", {
