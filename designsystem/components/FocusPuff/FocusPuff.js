@@ -31,7 +31,7 @@ export const FocusPuff = ({ headline, text, url, isExternalLink, image, imageAlt
 	const puffMarkup = () => {
 		return (
 			<div css={focusWrapper} className={'focusWrapper'}>
-				<div css={pictureWrapper}>{imageArea}</div>
+				<div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
 				<div css={textArea}>
 					<h3 css={focusHeadline}>
 						{headline}

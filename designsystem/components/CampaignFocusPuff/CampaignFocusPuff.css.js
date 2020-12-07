@@ -9,7 +9,8 @@ export const focusWrapper = css`
   height:100%;
   width:100%;
   flex-direction:column;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: ${colors.theme2.light};
   border-bottom-right-radius:.8rem;
   border-bottom-left-radius:.8rem;
   ${medium}{
@@ -22,14 +23,15 @@ export const focusWrapper = css`
 
 export const linkWrapper = css`
   text-decoration:none;
-  padding-top:.8rem;
+  /* margin-top:.8rem; */
   display:flex;
+  flex-shrink: 0;
 
   &:hover .focusWrapper {
-      background-color: #E6C3D1;
+    background-color: #E6C3D1;
   }
   &:hover {
-    box-shadow: 0px 0px 0px 2px #fff; 
+    box-shadow: 0px 0px 0px 2px ${colors.theme2.mid}; 
     border-radius: 8px;
   }
   &:active {
@@ -37,7 +39,7 @@ export const linkWrapper = css`
     border-radius: 8px;
   }
   &:active h3 {
-      color: ${colors.theme1.xDark};      
+    color: ${colors.theme1.xDark};      
   }
   &:active h3 > svg {
     fill: ${colors.theme1.xDark};
@@ -55,7 +57,7 @@ export const linkWrapper = css`
     filter: brightness(75%);
   }
   ${medium} {
-    height:100%
+    height: calc(100% + .8rem);
   }
 
 `
@@ -93,19 +95,23 @@ export const textArea = css`
 `
 
 export const pictureWrapper = css`
-  margin-top:-.8rem;
+  /* margin-top:-.8rem;
+  margin-bottom:-.8rem; */
+  /* padding-bottom: .8rem; */
   width:100%;
   min-height:11.2rem;
 
   picture {
     display:block;
     width:100%;
+    height:100%;
     min-height:5rem;
   }
   img {
     display:block;
     width:100%;
-    height:auto;
+    height:100%;
+    /* height:auto; */
     border-top-right-radius: .8rem;
     border-top-left-radius:.8rem;
   }

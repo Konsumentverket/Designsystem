@@ -6,7 +6,8 @@ import { medium, large } from '../GlobalStyles/globalStyles'
 export const focusWrapper = css`
   min-height: 25.6rem;
   display:flex;
-  height: calc(100%);
+  /* height: calc(100% - .8rem); */
+  height: 100%;
   width:100%;
   flex-direction:column;
   background-color: ${colors.theme2.light};
@@ -40,6 +41,14 @@ export const linkWrapper = css`
 
   &:hover h3, &:active h3 {
     text-decoration:underline;
+  }
+  .image {
+    max-width: 100%;
+    max-height: 100%;
+    transition: .1s all;
+  }
+  &:hover .image {
+    filter: brightness(75%);
   }
   
   ${medium} {
