@@ -6,7 +6,7 @@ import {fieldWrapper, fieldInput, fieldLabel, disabledStyle} from './InputRadio.
 export const InputRadio = ({
     name, id, labelText,
     fieldWrapperStyle, fieldInputStyle, fieldLabelStyle,
-    onChange, value, checked, disabled, className, tabIndex
+    onChange, value, checked, disabled, className, tabIndex, dataQuestion, dataAnswer
     }) => { 
         const inputRef = useRef(null);
         return <div css={[fieldWrapper, disabled && disabledStyle, fieldWrapperStyle]} 
@@ -30,6 +30,8 @@ export const InputRadio = ({
                                 onChange(e)
                             }
                         }}
+                        data-question={dataQuestion}
+                        data-answer={dataAnswer}
                     >
                     </input>
                     {labelText}
