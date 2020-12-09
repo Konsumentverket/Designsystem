@@ -42,7 +42,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  /* margin-top:-.8rem;\n  margin-bottom:-.8rem; */\n  /* padding-bottom: .8rem; */\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    height:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:100%;\n    /* height:auto; */\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n  ", "{\n    max-width:49.11%;\n    margin-top:0;\n    margin-left:-.8rem;\n    img {\n      border-top-right-radius: 0;\n      border-bottom-left-radius:.8rem;\n    }\n  }\n\n  ", "{\n    max-width:30.4rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    height:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:100%;\n    /* height:auto; */\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n  ", "{\n    max-width:49.11%;\n    margin-top:0;\n    margin-left:-.8rem;\n    img {\n      border-top-right-radius: 0;\n      border-bottom-left-radius:.8rem;\n    }\n  }\n\n  ", "{\n    max-width:30.4rem;\n  }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;

@@ -12,7 +12,7 @@ var _globalStyles = require("../GlobalStyles/globalStyles");
 var _Colors = require("../Colors/Colors");
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  color: #000;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n  color: #000;\n\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -22,7 +22,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: -2rem;\n  left: 50%;\n  width:4rem;\n  height:4rem;\n  transform: translate(-50%, 0);\n  ", " {\n    left: 1.2rem;\n    top:-.8rem; \n  }\n\n  [dir=\"rtl\"] &{\n    ", " {\n      left: auto;\n      right: -3.2rem; \n    }\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n  position: absolute;\n\n\n  top: -2rem;\n\n\n  left: 50%;\n\n\n  width:4rem;\n\n\n  height:4rem;\n\n\n  transform: translate(-50%, 0);\n\n\n  ", " {\n\n\n    left: 1.2rem;\n\n\n    top:-.8rem; \n\n\n  }\n\n\n\n\n\n  [dir=\"rtl\"] &{\n\n\n    ", " {\n\n\n      left: auto;\n\n\n      right: -3.2rem; \n\n\n    }\n\n\n  }\n\n\n\n\n\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -32,7 +32,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n  background-color: ", ";\n  border-radius: 0.7rem;\n  padding: 4rem 1.6rem 2.4rem 1.6rem;\n  margin-top: 2rem;\n  ", " {\n    padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    margin-top: .8rem;\n    margin-left: .8rem;\n  }\n  [dir=\"rtl\"] &{\n    ", " {\n      margin-left: .0rem;\n      margin-right: .8rem;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n  position: relative;\n\n\n  background-color: ", ";\n\n\n  border-radius: 0.7rem;\n\n\n  padding: 4rem 1.6rem 2.4rem 1.6rem;\n\n\n  margin-top: 2rem;\n\n\n  ", " {\n\n\n    padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n\n\n    margin-top: .8rem;\n\n\n    margin-left: .8rem;\n\n\n  }\n\n\n  [dir=\"rtl\"] &{\n\n\n    ", " {\n\n\n      margin-left: .0rem;\n\n\n      margin-right: .8rem;\n\n\n    }\n\n\n  }\n\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;

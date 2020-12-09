@@ -1,4 +1,4 @@
-﻿/** @jsx jsx */
+/** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react';
 import { buttonStyle, secondaryStyle, invertedBackgroundStyle, invertedSecondaryBackgroundStyle, iconStyle, buttonIconLeft, buttonIconRight } from './Button.css';

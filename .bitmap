@@ -105,17 +105,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/button@0.0.2": {
+    "konsumentverket.kov-compo/button@0.0.3": {
         "files": [
             {
+                "name": "Button.css.js",
                 "relativePath": "designsystem/components/Button/Button.css.js",
-                "test": false,
-                "name": "Button.css.js"
+                "test": false
             },
             {
+                "name": "Button.js",
                 "relativePath": "designsystem/components/Button/Button.js",
-                "test": false,
-                "name": "Button.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/Button/Button.js",
@@ -148,17 +148,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/campaign-focus-puff@0.0.3": {
+    "konsumentverket.kov-compo/campaign-focus-puff@0.0.5": {
         "files": [
             {
+                "name": "CampaignFocusPuff.css.js",
                 "relativePath": "designsystem/components/CampaignFocusPuff/CampaignFocusPuff.css.js",
-                "test": false,
-                "name": "CampaignFocusPuff.css.js"
+                "test": false
             },
             {
+                "name": "CampaignFocusPuff.js",
                 "relativePath": "designsystem/components/CampaignFocusPuff/CampaignFocusPuff.js",
-                "test": false,
-                "name": "CampaignFocusPuff.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/CampaignFocusPuff/CampaignFocusPuff.js",
@@ -363,17 +363,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/display-alphabet@0.0.1": {
+    "konsumentverket.kov-compo/display-alphabet@0.0.2": {
         "files": [
             {
+                "name": "DisplayAlphabet.css.js",
                 "relativePath": "designsystem/components/DisplayAlphabet/DisplayAlphabet.css.js",
-                "test": false,
-                "name": "DisplayAlphabet.css.js"
+                "test": false
             },
             {
+                "name": "DisplayAlphabet.js",
                 "relativePath": "designsystem/components/DisplayAlphabet/DisplayAlphabet.js",
-                "test": false,
-                "name": "DisplayAlphabet.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/DisplayAlphabet/DisplayAlphabet.js",
@@ -475,17 +475,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/expand-button@0.0.1": {
+    "konsumentverket.kov-compo/expand-button@0.0.2": {
         "files": [
             {
+                "name": "ExpandButton.css.js",
                 "relativePath": "designsystem/components/ExpandButton/ExpandButton.css.js",
-                "test": false,
-                "name": "ExpandButton.css.js"
+                "test": false
             },
             {
+                "name": "ExpandButton.js",
                 "relativePath": "designsystem/components/ExpandButton/ExpandButton.js",
-                "test": false,
-                "name": "ExpandButton.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/ExpandButton/ExpandButton.js",
@@ -505,17 +505,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/fact-box@0.0.1": {
+    "konsumentverket.kov-compo/fact-box@0.0.3": {
         "files": [
             {
+                "name": "FactBox.css.js",
                 "relativePath": "designsystem/components/FactBox/FactBox.css.js",
-                "test": false,
-                "name": "FactBox.css.js"
+                "test": false
             },
             {
+                "name": "FactBox.js",
                 "relativePath": "designsystem/components/FactBox/FactBox.js",
-                "test": false,
-                "name": "FactBox.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/FactBox/FactBox.js",
@@ -600,17 +600,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/focus-puff@0.0.4": {
+    "konsumentverket.kov-compo/focus-puff@0.0.5": {
         "files": [
             {
+                "name": "FocusPuff.css.js",
                 "relativePath": "designsystem/components/FocusPuff/FocusPuff.css.js",
-                "test": false,
-                "name": "FocusPuff.css.js"
+                "test": false
             },
             {
+                "name": "FocusPuff.js",
                 "relativePath": "designsystem/components/FocusPuff/FocusPuff.js",
-                "test": false,
-                "name": "FocusPuff.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/FocusPuff/FocusPuff.js",
@@ -651,17 +651,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/form-search-field@0.0.1": {
+    "konsumentverket.kov-compo/form-search-field@0.0.5": {
         "files": [
             {
+                "name": "FormSearchField.css.js",
                 "relativePath": "designsystem/components/FormSearchField/FormSearchField.css.js",
-                "test": false,
-                "name": "FormSearchField.css.js"
+                "test": false
             },
             {
+                "name": "FormSearchField.js",
                 "relativePath": "designsystem/components/FormSearchField/FormSearchField.js",
-                "test": false,
-                "name": "FormSearchField.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/FormSearchField/FormSearchField.js",
@@ -681,12 +681,12 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/global-styles@0.0.1": {
+    "konsumentverket.kov-compo/global-styles@0.0.2": {
         "files": [
             {
+                "name": "globalStyles.js",
                 "relativePath": "designsystem/components/GlobalStyles/globalStyles.js",
-                "test": false,
-                "name": "globalStyles.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/GlobalStyles/globalStyles.js",
@@ -733,12 +733,12 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/heading@0.0.1": {
+    "konsumentverket.kov-compo/heading@0.0.3": {
         "files": [
             {
+                "name": "Heading.js",
                 "relativePath": "designsystem/components/Headings/Heading.js",
-                "test": false,
-                "name": "Heading.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/Headings/Heading.js",
@@ -779,17 +779,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/input-text@0.0.1": {
+    "konsumentverket.kov-compo/input-text@0.0.5": {
         "files": [
             {
+                "name": "InputText.css.js",
                 "relativePath": "designsystem/components/InputText/InputText.css.js",
-                "test": false,
-                "name": "InputText.css.js"
+                "test": false
             },
             {
+                "name": "InputText.js",
                 "relativePath": "designsystem/components/InputText/InputText.js",
-                "test": false,
-                "name": "InputText.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/InputText/InputText.js",
@@ -848,29 +848,29 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/link-card@0.0.1": {
+    "konsumentverket.kov-compo/link-card@0.0.3": {
         "files": [
             {
+                "name": "LinkCard.css.js",
                 "relativePath": "designsystem/components/LinkCard/LinkCard.css.js",
-                "test": false,
-                "name": "LinkCard.css.js"
+                "test": false
             },
             {
+                "name": "LinkCard.js",
                 "relativePath": "designsystem/components/LinkCard/LinkCard.js",
-                "test": false,
-                "name": "LinkCard.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/LinkCard/LinkCard.js",
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/link-text-card@0.0.1": {
+    "konsumentverket.kov-compo/link-text-card@0.0.5": {
         "files": [
             {
+                "name": "LinkTextCard.js",
                 "relativePath": "designsystem/components/LinkTextCard/LinkTextCard.js",
-                "test": false,
-                "name": "LinkTextCard.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/LinkTextCard/LinkTextCard.js",
@@ -1053,17 +1053,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/pagination@0.0.1": {
+    "konsumentverket.kov-compo/pagination@0.0.5": {
         "files": [
             {
+                "name": "Pagination.css.js",
                 "relativePath": "designsystem/components/Pagination/Pagination.css.js",
-                "test": false,
-                "name": "Pagination.css.js"
+                "test": false
             },
             {
+                "name": "Pagination.js",
                 "relativePath": "designsystem/components/Pagination/Pagination.js",
-                "test": false,
-                "name": "Pagination.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/Pagination/Pagination.js",
@@ -1134,17 +1134,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/prerequisites-box@0.0.1": {
+    "konsumentverket.kov-compo/prerequisites-box@0.0.5": {
         "files": [
             {
+                "name": "PrerequisitesBox.css.js",
                 "relativePath": "designsystem/components/PrerequisitesBox/PrerequisitesBox.css.js",
-                "test": false,
-                "name": "PrerequisitesBox.css.js"
+                "test": false
             },
             {
+                "name": "PrerequisitesBox.js",
                 "relativePath": "designsystem/components/PrerequisitesBox/PrerequisitesBox.js",
-                "test": false,
-                "name": "PrerequisitesBox.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/PrerequisitesBox/PrerequisitesBox.js",
@@ -1216,22 +1216,22 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/source@0.0.1": {
+    "konsumentverket.kov-compo/source@0.0.5": {
         "files": [
             {
+                "name": "Source.css.js",
                 "relativePath": "designsystem/components/Source/Source.css.js",
-                "test": false,
-                "name": "Source.css.js"
+                "test": false
             },
             {
+                "name": "Source.js",
                 "relativePath": "designsystem/components/Source/Source.js",
-                "test": false,
-                "name": "Source.js"
+                "test": false
             },
             {
+                "name": "isExternalUrl.js",
                 "relativePath": "designsystem/components/Source/isExternalUrl.js",
-                "test": false,
-                "name": "isExternalUrl.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/Source/Source.js",
@@ -1250,17 +1250,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/sub-heading@0.0.1": {
+    "konsumentverket.kov-compo/sub-heading@0.0.5": {
         "files": [
             {
+                "name": "SubHeading.css.js",
                 "relativePath": "designsystem/components/SubHeading/SubHeading.css.js",
-                "test": false,
-                "name": "SubHeading.css.js"
+                "test": false
             },
             {
+                "name": "SubHeading.js",
                 "relativePath": "designsystem/components/SubHeading/SubHeading.js",
-                "test": false,
-                "name": "SubHeading.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/SubHeading/SubHeading.js",
@@ -1314,17 +1314,17 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/text-area@0.0.1": {
+    "konsumentverket.kov-compo/text-area@0.0.5": {
         "files": [
             {
+                "name": "TextArea.css.js",
                 "relativePath": "designsystem/components/TextArea/TextArea.css.js",
-                "test": false,
-                "name": "TextArea.css.js"
+                "test": false
             },
             {
+                "name": "TextArea.js",
                 "relativePath": "designsystem/components/TextArea/TextArea.js",
-                "test": false,
-                "name": "TextArea.js"
+                "test": false
             }
         ],
         "mainFile": "designsystem/components/TextArea/TextArea.js",
@@ -1400,7 +1400,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/with-content-expander@0.0.2": {
+    "konsumentverket.kov-compo/with-content-expander@0.0.5": {
         "files": [
             {
                 "relativePath": "designsystem/components/WithContentExpander/WithContentExpander.css.js",

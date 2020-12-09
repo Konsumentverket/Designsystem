@@ -10,7 +10,7 @@ var _core = require("@emotion/core");
 var _globalStyles = require("../GlobalStyles/globalStyles");
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:2.4rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n      font-size:1.6rem;\n\n\n      line-height:2.4rem;\n\n\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -20,7 +20,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:2.4rem;\n      ", "{\n            font-size:1.8rem;      \n      }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n      font-size:1.6rem;\n\n\n      line-height:2.4rem;\n\n\n      ", "{\n\n\n            font-size:1.8rem;      \n\n\n      }\n\n\n\n\n\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -30,7 +30,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n      font-size:1.8rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:2rem;      \n      }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n      font-size:1.8rem;\n\n\n      line-height:3.2rem;\n\n\n      ", "{\n\n\n            font-size:2rem;      \n\n\n      }\n\n\n\n\n\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -40,7 +40,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:1.8rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:2.4rem;\n            \n      }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n      font-size:1.8rem;\n\n\n      line-height:3.2rem;\n\n\n      ", "{\n\n\n            font-size:2.4rem;\n\n\n            \n\n\n      }\n\n\n\n\n\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -50,7 +50,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:2.0rem;\n      line-height:3.2rem;\n\n\n      ", "{\n            font-size:2.8rem;\n            line-height:3.2rem;\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n      font-size:2.0rem;\n\n\n      line-height:3.2rem;\n\n\n\n\n\n\n\n\n      ", "{\n\n\n            font-size:2.8rem;\n\n\n            line-height:3.2rem;\n\n\n      }\n\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -60,7 +60,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:2.4rem;\n      line-height:3.2rem;\n\n      ", "{\n            font-size:3.4rem;\n            line-height:4.8rem;\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n      font-size:2.4rem;\n\n\n      line-height:3.2rem;\n\n\n\n\n\n      ", "{\n\n\n            font-size:3.4rem;\n\n\n            line-height:4.8rem;\n\n\n      }\n\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -70,7 +70,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:2.8rem;\n      line-height:3.2rem;\n\n      ", "{\n            font-size:4.8rem;\n            line-height:5.6rem;\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n      font-size:2.8rem;\n\n\n      line-height:3.2rem;\n\n\n\n\n\n      ", "{\n\n\n            font-size:4.8rem;\n\n\n            line-height:5.6rem;\n\n\n      }\n\n\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -80,7 +80,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n      color: #161616;\n      font-weight:700;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n      color: #161616;\n\n\n      font-weight:700;\n\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
