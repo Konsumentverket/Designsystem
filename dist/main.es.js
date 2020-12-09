@@ -456,7 +456,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      -webkit-text-size-adjust: 100%; \n      -moz-text-size-adjust: 100%;\n      margin: 0;\n      \n      p {\n        padding-bottom: ", ";\n        font-size: 1.8rem;\n        line-height: 3.2rem;\n      }\n\n      ul {\n        list-style: bullet inside none;\n        padding-left: ", ";\n        li {\n          margin-bottom: ", ";\n        }\n        p {\n          display: inline;\n        }\n      }\n\n      h1, h2 {\n        margin-bottom: 1.6rem;\n      }\n      h3, h4, h5, h6 {\n        margin-bottom: .8rem;\n      }\n  a {\n    &.external {\n      svg.external {\n        margin-left: 3px;\n      }\n    }\n\n    &:not(.noStyle){\n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        svg {\n          fill: ", ";\n        }\n\n        &[href$=\".pdf\"],\n        &[href$=\".doc\"],\n        &[href$=\".docx\"],\n        &[href$=\".ppt\"],\n        &[href$=\".pptx\"],\n        &[href$=\".txt\"],\n        &[href$=\".xlt\"],\n        &[href$=\".xltx\"]{\n          margin-left: 3.2rem;\n          position: relative;\n          display: inline-flex;\n          align-items: center;\n          &:hover {\n            box-shadow: 0 0 0 2px ", ";\n          }\n          &:before{\n            content: '';\n            display:inline-block;\n            background-repeat: no-repeat;\n            background-size: 22px 30px;\n            background-position: 0px 0px;\n            width: 22px;\n            height: 30px;\n            position: absolute;\n            left: -3.2rem;\n            top: 50%;\n            transform: translateY(-50%);\n          }\n        }\n        \n        &[href$=\".pdf\"] { ", " }\n         \n        &[href$=\".ppt\"],\n        &[href$=\".pptx\"] { ", " }\n        \n        &[href$=\".doc\"],\n        &[href$=\".docx\"] { ", " }\n\n        &[href$=\".xlt\"],\n        &[href$=\".xltx\"] { ", " }\n\n        &[href$=\".txt\"] { ", " }\n\n        &:hover {\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        \n      }\n      &.invertedStyle:not(.noStyle){\n        &:visited{\n          background-color:inherit;\n        }\n        &:hover {\n          background-color:#fff;\n          box-shadow: 0 0 0 4px #fff;\n        }\n        &:active {\n          box-shadow: 0 0 0 4px #fff;\n          background-color:#fff;\n      }\n    }\n  }\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n\n    i {\n      font-style: italic;\n    }\n    strong {\n      font-weight: 700;\n    }\n    u {\n      text-decoration: underline;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  html, body, \n  button, div, span, applet,\n  object, iframe, h1, h2, h3, h4,h5, h6,\n  p, blockquote, pre,a,abbr, acronym,address,\n  big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,\n  small,strike,strong,sub,sup,tt,b,u,i,center,dl,\n  dt,dd,ol,ul,li,fieldset,form,label,legend,table,\n  caption,tbody,tfoot,thead,tr,th,td,article,aside,\n  canvas,details,embed,figure,figcaption,footer,\n  header,hgroup,menu,nav,output,ruby,section,summary,\n  time,mark,audio,video {\n      margin: 0;\n      padding: 0;\n      border: 0;\n      font-size: 100%;\n      font: inherit;\n      vertical-align: baseline;\n    }\n    html{\n      font-size: ", ";\n      font-family: ", "; \n      line-height: 16px;\n      color: #4D4D4D;\n      overflow-x:hidden;   \n    }\n\n    body {\n\n      font-size: 1.6rem;\n      margin:0;\n      -webkit-font-smoothing: antialiased;\n      -moz-osx-font-smoothing: grayscale;   \n      margin: 0;\n\n      &:not(.tabnav){\n        *:focus {\n          outline: none;\n        }\n      }\n      &.tabnav {\n        *:focus {\n          outline: 4px solid ", ";\n        }\n      }\n\n    }\n\n      \n    p {\n      padding-bottom: ", ";\n      font-size: 1.8rem;\n      line-height: 3.2rem;\n    }\n\n    ul {\n      list-style: bullet inside none;\n      padding-left: ", ";\n      li {\n        margin-bottom: ", ";\n      }\n      p {\n        display: inline;\n      }\n    }\n\n    h1, h2 {\n      margin-bottom: 1.6rem;\n    }\n    h3, h4, h5, h6 {\n      margin-bottom: .8rem;\n    }\n\n    i {\n      font-style: italic;\n    }\n    strong {\n      font-weight: 700;\n    }\n    u {\n      text-decoration: underline;\n    }\n\n    a {\n      &.external {\n        svg.external {\n          margin-left: 3px;\n        }\n      }\n\n      &:not(.noStyle){\n        text-decoration:underline;\n        font-weight:700;\n        color:", ";\n        svg {\n          fill: ", ";\n        }\n\n        &[href$=\".pdf\"],\n        &[href$=\".doc\"],\n        &[href$=\".docx\"],\n        &[href$=\".ppt\"],\n        &[href$=\".pptx\"],\n        &[href$=\".txt\"],\n        &[href$=\".xlt\"],\n        &[href$=\".xltx\"]{\n          margin-left: 3.2rem;\n          position: relative;\n          display: inline-flex;\n          align-items: center;\n          &:hover {\n            box-shadow: 0 0 0 2px ", ";\n          }\n          &:before{\n            content: '';\n            display:inline-block;\n            background-repeat: no-repeat;\n            background-size: 22px 30px;\n            background-position: 0px 0px;\n            width: 22px;\n            height: 30px;\n            position: absolute;\n            left: -3.2rem;\n            top: 50%;\n            transform: translateY(-50%);\n          }\n        }\n        \n        &[href$=\".pdf\"] { ", " }\n          \n        &[href$=\".ppt\"],\n        &[href$=\".pptx\"] { ", " }\n        \n        &[href$=\".doc\"],\n        &[href$=\".docx\"] { ", " }\n\n        &[href$=\".xlt\"],\n        &[href$=\".xltx\"] { ", " }\n\n        &[href$=\".txt\"] { ", " }\n\n        &:hover {\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n        &:visited{\n          color:", ";\n          svg {\n            fill: ", ";\n          }\n        }\n        \n        &:active{\n          box-shadow: 0 0 0 4px ", ";\n          border-radius: .8rem;\n          background-color:", ";\n          color:", ";\n          text-decoration:none;\n          svg {\n            fill: ", ";\n          }\n        }\n      \n        &.invertedStyle:not(.noStyle){\n          &:visited{\n            background-color:inherit;\n          }\n          &:hover {\n            background-color:#fff;\n            box-shadow: 0 0 0 4px #fff;\n          }\n          &:active {\n            box-shadow: 0 0 0 4px #fff;\n            background-color:#fff;\n          }\n        }\n      }\n\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -495,7 +495,7 @@ var fileIcon = function fileIcon(fileSvgPath) {
 var globalStyles = function globalStyles() {
   var fontSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "62.5%";
   var fontFamily = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif";
-  return css(_templateObject(), fontSize, fontFamily, spacing.s, spacing.xl, spacing.s, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, fileIcon(filePdfPath), fileIcon(filePowerpointPath), fileIcon(fileWordPath), fileIcon(fileExcelPath), fileIcon(filePath), colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.states.focus);
+  return css(_templateObject(), fontSize, fontFamily, colors.states.focus, spacing.s, spacing.xl, spacing.s, colors.theme1.mid, colors.theme1.mid, colors.theme1.midLight, fileIcon(filePdfPath), fileIcon(filePowerpointPath), fileIcon(fileWordPath), fileIcon(fileExcelPath), fileIcon(filePath), colors.theme1.midLight, colors.theme1.midLight, colors.theme1.mid, colors.states.visited, colors.states.visited, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark);
 };
 
 var LinkColors = css(_templateObject2(), colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.states.visited);
@@ -2218,7 +2218,7 @@ var medium = mediaQueryMinWidth(viewportMedium);
 var large = mediaQueryMinWidth(viewportLarge);
 
 function _templateObject8$2() {
-  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:2.4rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n      font-size:1.6rem;\n\n\n      line-height:2.4rem;\n\n\n"]);
 
   _templateObject8$2 = function _templateObject8() {
     return data;
@@ -2228,7 +2228,7 @@ function _templateObject8$2() {
 }
 
 function _templateObject7$2() {
-  var data = _taggedTemplateLiteral(["\n      font-size:1.6rem;\n      line-height:2.4rem;\n      ", "{\n            font-size:1.8rem;      \n      }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n      font-size:1.6rem;\n\n\n      line-height:2.4rem;\n\n\n      ", "{\n\n\n            font-size:1.8rem;      \n\n\n      }\n\n\n\n\n\n"]);
 
   _templateObject7$2 = function _templateObject7() {
     return data;
@@ -2238,7 +2238,7 @@ function _templateObject7$2() {
 }
 
 function _templateObject6$2() {
-  var data = _taggedTemplateLiteral(["\n      font-size:1.8rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:2rem;      \n      }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n      font-size:1.8rem;\n\n\n      line-height:3.2rem;\n\n\n      ", "{\n\n\n            font-size:2rem;      \n\n\n      }\n\n\n\n\n\n"]);
 
   _templateObject6$2 = function _templateObject6() {
     return data;
@@ -2248,7 +2248,7 @@ function _templateObject6$2() {
 }
 
 function _templateObject5$2() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:1.8rem;\n      line-height:3.2rem;\n      ", "{\n            font-size:2.4rem;\n            \n      }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n      font-size:1.8rem;\n\n\n      line-height:3.2rem;\n\n\n      ", "{\n\n\n            font-size:2.4rem;\n\n\n            \n\n\n      }\n\n\n\n\n\n"]);
 
   _templateObject5$2 = function _templateObject5() {
     return data;
@@ -2258,7 +2258,7 @@ function _templateObject5$2() {
 }
 
 function _templateObject4$2() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:2.0rem;\n      line-height:3.2rem;\n\n\n      ", "{\n            font-size:2.8rem;\n            line-height:3.2rem;\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n      font-size:2.0rem;\n\n\n      line-height:3.2rem;\n\n\n\n\n\n\n\n\n      ", "{\n\n\n            font-size:2.8rem;\n\n\n            line-height:3.2rem;\n\n\n      }\n\n\n"]);
 
   _templateObject4$2 = function _templateObject4() {
     return data;
@@ -2268,7 +2268,7 @@ function _templateObject4$2() {
 }
 
 function _templateObject3$2() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:2.4rem;\n      line-height:3.2rem;\n\n      ", "{\n            font-size:3.4rem;\n            line-height:4.8rem;\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n      font-size:2.4rem;\n\n\n      line-height:3.2rem;\n\n\n\n\n\n      ", "{\n\n\n            font-size:3.4rem;\n\n\n            line-height:4.8rem;\n\n\n      }\n\n\n"]);
 
   _templateObject3$2 = function _templateObject3() {
     return data;
@@ -2278,7 +2278,7 @@ function _templateObject3$2() {
 }
 
 function _templateObject2$2() {
-  var data = _taggedTemplateLiteral(["\n\n      font-size:2.8rem;\n      line-height:3.2rem;\n\n      ", "{\n            font-size:4.8rem;\n            line-height:5.6rem;\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n      font-size:2.8rem;\n\n\n      line-height:3.2rem;\n\n\n\n\n\n      ", "{\n\n\n            font-size:4.8rem;\n\n\n            line-height:5.6rem;\n\n\n      }\n\n\n"]);
 
   _templateObject2$2 = function _templateObject2() {
     return data;
@@ -2288,7 +2288,7 @@ function _templateObject2$2() {
 }
 
 function _templateObject$1() {
-  var data = _taggedTemplateLiteral(["\n      color: #161616;\n      font-weight:700;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n      color: #161616;\n\n\n      font-weight:700;\n\n\n"]);
 
   _templateObject$1 = function _templateObject() {
     return data;
@@ -2671,7 +2671,7 @@ var TagBlock = React.forwardRef(function (_ref, ref) {
 });
 
 function _templateObject3$5() {
-  var data = _taggedTemplateLiteral(["\n  color: #000;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n  color: #000;\n\n\n"]);
 
   _templateObject3$5 = function _templateObject3() {
     return data;
@@ -2681,7 +2681,7 @@ function _templateObject3$5() {
 }
 
 function _templateObject2$5() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: -2rem;\n  left: 50%;\n  width:4rem;\n  height:4rem;\n  transform: translate(-50%, 0);\n  ", " {\n    left: 1.2rem;\n    top:-.8rem; \n  }\n\n  [dir=\"rtl\"] &{\n    ", " {\n      left: auto;\n      right: -3.2rem; \n    }\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n  position: absolute;\n\n\n  top: -2rem;\n\n\n  left: 50%;\n\n\n  width:4rem;\n\n\n  height:4rem;\n\n\n  transform: translate(-50%, 0);\n\n\n  ", " {\n\n\n    left: 1.2rem;\n\n\n    top:-.8rem; \n\n\n  }\n\n\n\n\n\n  [dir=\"rtl\"] &{\n\n\n    ", " {\n\n\n      left: auto;\n\n\n      right: -3.2rem; \n\n\n    }\n\n\n  }\n\n\n\n\n\n"]);
 
   _templateObject2$5 = function _templateObject2() {
     return data;
@@ -2691,7 +2691,7 @@ function _templateObject2$5() {
 }
 
 function _templateObject$5() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n  background-color: ", ";\n  border-radius: 0.7rem;\n  padding: 4rem 1.6rem 2.4rem 1.6rem;\n  margin-top: 2rem;\n  ", " {\n    padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n    margin-top: .8rem;\n    margin-left: .8rem;\n  }\n  [dir=\"rtl\"] &{\n    ", " {\n      margin-left: .0rem;\n      margin-right: .8rem;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n  position: relative;\n\n\n  background-color: ", ";\n\n\n  border-radius: 0.7rem;\n\n\n  padding: 4rem 1.6rem 2.4rem 1.6rem;\n\n\n  margin-top: 2rem;\n\n\n  ", " {\n\n\n    padding: 2.4rem 3.2rem 2.4rem 3.2rem;\n\n\n    margin-top: .8rem;\n\n\n    margin-left: .8rem;\n\n\n  }\n\n\n  [dir=\"rtl\"] &{\n\n\n    ", " {\n\n\n      margin-left: .0rem;\n\n\n      margin-right: .8rem;\n\n\n    }\n\n\n  }\n\n\n"]);
 
   _templateObject$5 = function _templateObject() {
     return data;
@@ -2944,7 +2944,7 @@ function _templateObject3$7() {
 }
 
 function _templateObject2$7() {
-  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  /* margin-top:.8rem; */\n  display:flex;\n  flex-shrink: 0;\n\n  &:hover .focusWrapper {\n    background-color: #E6C3D1;\n  }\n  &:hover {\n    box-shadow: 0px 0px 0px 2px ", "; \n    border-radius: 8px;\n  }\n  &:active {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active h3 {\n    color: ", ";      \n  }\n  &:active h3 > svg {\n    fill: ", ";\n  }\n\n  &:hover h3, &:active h3 {\n    text-decoration:underline;\n  }\n  .image {\n    max-width: 100%;\n    max-height: 100%;\n    transition: .1s all;\n  }\n  &:hover .image {\n    filter: brightness(75%);\n  }\n  ", " {\n    height: calc(100% + .8rem);\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  display:flex;\n  flex-shrink: 0;\n\n  &:hover .textarea {\n    background-color: ", ";\n    border-radius: 8px;\n  }\n  &:hover {\n    box-shadow: 0px 0px 0px 2px ", "; \n    border-radius: 8px;\n  }\n  &:active {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active h3 {\n    color: ", ";      \n  }\n  &:active h3 > svg {\n    fill: ", ";\n  }\n\n  &:hover h3, &:active h3 {\n    text-decoration:underline;\n  }\n  /* .image {\n    max-width: 100%;\n    max-height: 100%;\n    transition: .1s all;\n  }\n  &:hover .image {\n    filter: brightness(75%);\n  } */\n  ", " {\n    height: calc(100% + .8rem);\n  }\n\n"]);
 
   _templateObject2$7 = function _templateObject2() {
     return data;
@@ -2954,7 +2954,7 @@ function _templateObject2$7() {
 }
 
 function _templateObject$7() {
-  var data = _taggedTemplateLiteral(["\n  min-height: 25.6rem;\n  display:flex;\n  height:100%;\n  width:100%;\n  flex-direction:column;\n  /* background-color: #fff; */\n  background-color: ", ";\n  border-bottom-right-radius:.8rem;\n  border-bottom-left-radius:.8rem;\n  ", "{\n    flex-direction:row;\n    /* margin-top:-.8rem; */\n    margin-left:.8rem;\n    border-top-right-radius:.8rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  min-height: 25.6rem;\n  display:flex;\n  height:100%;\n  width:100%;\n  flex-direction:column;\n  background-color: #fff;\n  border-bottom-right-radius:.8rem;\n  border-bottom-left-radius:.8rem;\n  ", "{\n    flex-direction:row;\n    /* margin-top:-.8rem; */\n    margin-left:.8rem;\n    border-top-right-radius:.8rem;\n  }\n"]);
 
   _templateObject$7 = function _templateObject() {
     return data;
@@ -2962,14 +2962,14 @@ function _templateObject$7() {
 
   return data;
 }
-var focusWrapper$1 = css(_templateObject$7(), colors.theme2.light, medium);
-var linkWrapper$1 = css(_templateObject2$7(), colors.theme2.mid, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, medium);
-var focusHeadline$1 = css(_templateObject3$7(), colors.theme2.mid);
+var focusWrapper$1 = css(_templateObject$7(), medium);
+var linkWrapper$1 = css(_templateObject2$7(), colors.theme1.light, colors.theme1.mid, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark, medium);
+var focusHeadline$1 = css(_templateObject3$7(), colors.theme1.mid);
 var focusText$1 = css(_templateObject4$6(), colors.theme3.dark);
 var textArea$1 = css(_templateObject5$6(), medium, large);
 var pictureWrapper$1 = css(_templateObject6$6(), medium, large);
 var iconBackground$1 = css(_templateObject7$5(), colors.theme2.mid, medium);
-var externalIcon$1 = css(_templateObject8$5(), colors.theme2.mid);
+var externalIcon$1 = css(_templateObject8$5(), colors.theme1.mid);
 var puffIcon$1 = css(_templateObject9$2());
 
 /** @jsx jsx */
@@ -3005,7 +3005,8 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
       css: pictureWrapper$1,
       className: imageComponent ? 'image' : null
     }, imageArea), jsx("div", {
-      css: textArea$1
+      css: textArea$1,
+      className: "textarea"
     }, jsx("h3", {
       css: focusHeadline$1
     }, headline, isExternalLink && jsx(External, {
@@ -3334,7 +3335,9 @@ var InputRadio = function InputRadio(_ref) {
       checked = _ref.checked,
       disabled = _ref.disabled,
       className = _ref.className,
-      tabIndex = _ref.tabIndex;
+      tabIndex = _ref.tabIndex,
+      dataQuestion = _ref.dataQuestion,
+      dataAnswer = _ref.dataAnswer;
   var inputRef = useRef(null);
   return jsx("div", {
     css: [fieldWrapper, disabled && disabledStyle, fieldWrapperStyle],
@@ -3363,12 +3366,14 @@ var InputRadio = function InputRadio(_ref) {
       if (e.which === 32 || e.key == 'Enter') {
         _onChange(e);
       }
-    }
+    },
+    "data-question": dataQuestion,
+    "data-answer": dataAnswer
   }), labelText));
 };
 
 function _templateObject6$8() {
-  var data = _taggedTemplateLiteral(["\n  color: #4D4D4D;\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin-bottom: .8rem;\n  display: block;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n  color: #4D4D4D;\n\n\n  font-size: 1.8rem;\n\n\n  line-height: 3.2rem;\n\n\n  margin-bottom: .8rem;\n\n\n  display: block;\n\n\n"]);
 
   _templateObject6$8 = function _templateObject6() {
     return data;
@@ -3378,7 +3383,7 @@ function _templateObject6$8() {
 }
 
 function _templateObject5$8() {
-  var data = _taggedTemplateLiteral(["\n\n    position: absolute;\n    right: 2.4rem;\n    bottom: 2.2rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n    position: absolute;\n\n\n    right: 2.4rem;\n\n\n    bottom: 2.2rem;\n\n\n\n\n\n"]);
 
   _templateObject5$8 = function _templateObject5() {
     return data;
@@ -3388,7 +3393,7 @@ function _templateObject5$8() {
 }
 
 function _templateObject4$9() {
-  var data = _taggedTemplateLiteral([" \n    appearance: none;\n    position: absolute;\n    right: 1.6rem;\n    border: 0px;\n    background-color: transparent;\n    bottom: 1.4rem;\n    width: 2.8rem;\n    height: 2.8rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    \n"]);
+  var data = _taggedTemplateLiteral([" \n\n\n    appearance: none;\n\n\n    position: absolute;\n\n\n    right: 1.6rem;\n\n\n    border: 0px;\n\n\n    background-color: transparent;\n\n\n    bottom: 1.4rem;\n\n\n    width: 2.8rem;\n\n\n    height: 2.8rem;\n\n\n    padding: 0;\n\n\n    svg{\n\n\n        fill: ", ";\n\n\n        width: 2.8rem;\n\n\n        height: 2.8rem;\n\n\n    }\n\n\n    &:focus{\n\n\n        outline: none;\n\n\n    }\n\n\n    \n\n\n"]);
 
   _templateObject4$9 = function _templateObject4() {
     return data;
@@ -3398,7 +3403,7 @@ function _templateObject4$9() {
 }
 
 function _templateObject3$a() {
-  var data = _taggedTemplateLiteral(["\n    position: relative;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    position: relative;\n\n\n\n\n\n"]);
 
   _templateObject3$a = function _templateObject3() {
     return data;
@@ -3408,7 +3413,7 @@ function _templateObject3$a() {
 }
 
 function _templateObject2$b() {
-  var data = _taggedTemplateLiteral(["\n    input {\n        border-color: #F00;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    input {\n\n\n        border-color: #F00;\n\n\n    }\n\n\n"]);
 
   _templateObject2$b = function _templateObject2() {
     return data;
@@ -3418,7 +3423,7 @@ function _templateObject2$b() {
 }
 
 function _templateObject$b() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem ", " 1.2rem 1.6rem;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    font-size: 1.8rem;\n    line-height: 3rem;\n    height: 5.4rem;\n    box-sizing: border-box;\n    -webkit-appearance: none;\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder {\n        font-style: italic;\n    }\n    &::-ms-clear{\n        display:none;\n        width: 0;\n        height: 0; \n    }\n    &::-webkit-search-cancel-button{\n        appearance: none;   \n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    width: 100%;\n\n\n    padding: 1.2rem ", " 1.2rem 1.6rem;\n\n\n    border: 2px solid ", ";\n\n\n    border-radius: 0.8rem;\n\n\n    font-size: 1.8rem;\n\n\n    line-height: 3rem;\n\n\n    height: 5.4rem;\n\n\n    box-sizing: border-box;\n\n\n    -webkit-appearance: none;\n\n\n\n\n\n    &:focus{\n\n\n        outline: none;\n\n\n        border-color: ", "\n\n\n    }\n\n\n\n\n\n    &::placeholder {\n\n\n        font-style: italic;\n\n\n    }\n\n\n    &::-ms-clear{\n\n\n        display:none;\n\n\n        width: 0;\n\n\n        height: 0; \n\n\n    }\n\n\n    &::-webkit-search-cancel-button{\n\n\n        appearance: none;   \n\n\n    }\n\n\n"]);
 
   _templateObject$b = function _templateObject() {
     return data;
@@ -3699,7 +3704,7 @@ var Button = function Button(_ref) {
 };
 
 function _templateObject8$8() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.8rem;\n    line-height: 3.2rem;\n    margin-bottom: 0.8rem;\n    display: block;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    font-size: 1.8rem;\n\n\n    line-height: 3.2rem;\n\n\n    margin-bottom: 0.8rem;\n\n\n    display: block;\n\n\n"]);
 
   _templateObject8$8 = function _templateObject8() {
     return data;
@@ -3709,7 +3714,7 @@ function _templateObject8$8() {
 }
 
 function _templateObject7$8() {
-  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 0px;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 2.8rem;\n    height: 2.8rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n    ", " {\n        top: 1.4rem;\n        right: 1.6rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n    appearance: none;\n\n\n    position: absolute;\n\n\n    right: 0px;\n\n\n    border: 0px;\n\n\n    background-color: transparent;\n\n\n    top: 0.5rem;\n\n\n    width: 2.8rem;\n\n\n    height: 2.8rem;\n\n\n    padding: 0;\n\n\n    svg{\n\n\n        fill: ", ";\n\n\n        width: 2.8rem;\n\n\n        height: 2.8rem;\n\n\n    }\n\n\n    &:focus{\n\n\n        outline: none;\n\n\n    }\n\n\n\n\n\n    ", " {\n\n\n        top: 1.4rem;\n\n\n        right: 1.6rem;\n\n\n    }\n\n\n\n\n\n"]);
 
   _templateObject7$8 = function _templateObject7() {
     return data;
@@ -3719,7 +3724,7 @@ function _templateObject7$8() {
 }
 
 function _templateObject6$a() {
-  var data = _taggedTemplateLiteral(["\n    box-shadow:none;\n    &:hover, &:active {\n        box-shadow:none;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    box-shadow:none;\n\n\n    &:hover, &:active {\n\n\n        box-shadow:none;\n\n\n    }\n\n\n"]);
 
   _templateObject6$a = function _templateObject6() {
     return data;
@@ -3729,7 +3734,7 @@ function _templateObject6$a() {
 }
 
 function _templateObject5$a() {
-  var data = _taggedTemplateLiteral(["\n    white-space: nowrap;\n    width:auto;\n    align-items: center;\n    border-radius: 0 .8rem .8rem 0;\n    margin-right:-.8rem;\n    padding: .8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    white-space: nowrap;\n\n\n    width:auto;\n\n\n    align-items: center;\n\n\n    border-radius: 0 .8rem .8rem 0;\n\n\n    margin-right:-.8rem;\n\n\n    padding: .8rem;\n\n\n"]);
 
   _templateObject5$a = function _templateObject5() {
     return data;
@@ -3739,7 +3744,7 @@ function _templateObject5$a() {
 }
 
 function _templateObject4$b() {
-  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 2px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem 4.5rem .8rem .8rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n    box-sizing: border-box;\n    width: 100%; \n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    -webkit-appearance: none;\n\n\n    background-color: ", ";\n\n\n    box-shadow:inset 0px 0px 0px 2px ", ";\n\n\n    border-radius: .8rem 0 0 .8rem;\n\n\n    border:none;\n\n\n    font-size:1.6rem;\n\n\n    line-height:2.4rem;\n\n\n    display:flex;\n\n\n    flex-grow:1;\n\n\n    padding: .8rem 4.5rem .8rem .8rem;\n\n\n    color: ", ";\n\n\n    font-style: normal;\n\n\n    font-weight: 500;\n\n\n    box-sizing: border-box;\n\n\n    width: 100%; \n\n\n\n\n\n    &::-webkit-search-cancel-button{\n\n\n        appearance: none;\n\n\n    }\n\n\n\n\n\n    ", "{\n\n\n        font-size:1.8rem;\n\n\n        line-height:3.2rem;\n\n\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n\n\n    }\n\n\n\n\n\n    &:hover {\n\n\n        box-shadow:inset 0px 0px 0px 2px ", ";\n\n\n    }\n\n\n    &:active {\n\n\n        box-shadow:inset 0px 0px 0px 2px ", ";\n\n\n    }\n\n\n    &::placeholder {\n\n\n        font-style:italic;\n\n\n        color: ", ";\n\n\n    }\n\n\n    &:disabled{\n\n\n        ", "\n\n\n    }\n\n\n"]);
 
   _templateObject4$b = function _templateObject4() {
     return data;
@@ -3749,7 +3754,7 @@ function _templateObject4$b() {
 }
 
 function _templateObject3$c() {
-  var data = _taggedTemplateLiteral(["\n    display:flex;\n    flex-grow:1;\n    position: relative;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    display:flex;\n\n\n    flex-grow:1;\n\n\n    position: relative;\n\n\n"]);
 
   _templateObject3$c = function _templateObject3() {
     return data;
@@ -3759,7 +3764,7 @@ function _templateObject3$c() {
 }
 
 function _templateObject2$d() {
-  var data = _taggedTemplateLiteral(["\n    position:relative;\n    display:flex;\n    flex-direction: row;\n    align-items: stretch;\n    background-color: ", ";\n    margin-right:.8rem;\n    border-radius:.8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    position:relative;\n\n\n    display:flex;\n\n\n    flex-direction: row;\n\n\n    align-items: stretch;\n\n\n    background-color: ", ";\n\n\n    margin-right:.8rem;\n\n\n    border-radius:.8rem;\n\n\n"]);
 
   _templateObject2$d = function _templateObject2() {
     return data;
@@ -3769,7 +3774,7 @@ function _templateObject2$d() {
 }
 
 function _templateObject$e() {
-  var data = _taggedTemplateLiteral([" \n        background-color: ", ";\n        text-decoration:none;\n        box-shadow:inset 0px 0px 0px 1px ", ";\n        cursor:inherit;\n        &::placeholder {\n            color: ", ";\n        }\n"]);
+  var data = _taggedTemplateLiteral([" \n\n\n        background-color: ", ";\n\n\n        text-decoration:none;\n\n\n        box-shadow:inset 0px 0px 0px 1px ", ";\n\n\n        cursor:inherit;\n\n\n        &::placeholder {\n\n\n            color: ", ";\n\n\n        }\n\n\n"]);
 
   _templateObject$e = function _templateObject() {
     return data;
@@ -3871,7 +3876,7 @@ var FormSearchField = React.forwardRef(function (_ref, _ref2) {
 });
 
 function _templateObject4$c() {
-  var data = _taggedTemplateLiteral(["\n    textarea {\n        border-color: #F00;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    textarea {\n\n\n        border-color: #F00;\n\n\n    }\n\n\n"]);
 
   _templateObject4$c = function _templateObject4() {
     return data;
@@ -3881,7 +3886,7 @@ function _templateObject4$c() {
 }
 
 function _templateObject3$d() {
-  var data = _taggedTemplateLiteral(["\n  color: #4D4D4D;\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin-bottom: .8rem;\n  display: block;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n  color: #4D4D4D;\n\n\n  font-size: 1.8rem;\n\n\n  line-height: 3.2rem;\n\n\n  margin-bottom: .8rem;\n\n\n  display: block;\n\n\n"]);
 
   _templateObject3$d = function _templateObject3() {
     return data;
@@ -3891,7 +3896,7 @@ function _templateObject3$d() {
 }
 
 function _templateObject2$e() {
-  var data = _taggedTemplateLiteral(["\n    position: relative;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    position: relative;\n\n\n\n\n\n"]);
 
   _templateObject2$e = function _templateObject2() {
     return data;
@@ -3901,7 +3906,7 @@ function _templateObject2$e() {
 }
 
 function _templateObject$f() {
-  var data = _taggedTemplateLiteral(["\n    padding: 1.2rem 1.6rem;\n    box-sizing: border-box;\n    border: 2px solid #979797;\n    font-family: Arial;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n    margin-bottom: 2.4rem;\n    max-width: 100%;\n    min-width: 100%;\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    padding: 1.2rem 1.6rem;\n\n\n    box-sizing: border-box;\n\n\n    border: 2px solid #979797;\n\n\n    font-family: Arial;\n\n\n    border-radius: 0.8rem;\n\n\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n\n\n    font-size: 1.8rem;\n\n\n    line-height: 3rem;\n\n\n    -webkit-appearance: textfield; /* safari fix */\n\n\n    margin-bottom: 2.4rem;\n\n\n    max-width: 100%;\n\n\n    min-width: 100%;\n\n\n\n\n\n    &:focus{\n\n\n        outline: none;\n\n\n        border-color: ", "\n\n\n    }\n\n\n\n\n\n    &::-webkit-search-cancel-button{\n\n\n        appearance: none;\n\n\n    }\n\n\n"]);
 
   _templateObject$f = function _templateObject() {
     return data;
@@ -4718,7 +4723,7 @@ var DisplayAlphabet = function DisplayAlphabet(_ref) {
 };
 
 function _templateObject7$c() {
-  var data = _taggedTemplateLiteral(["\n    svg {\n        position: relative;\n        top: 1px;        \n        left: 8px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n\n\n    svg {\n\n\n\n\n\n\n\n        position: relative;\n\n\n\n\n\n\n\n        top: 1px;        \n\n\n\n\n\n\n\n        left: 8px;\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n"]);
 
   _templateObject7$c = function _templateObject7() {
     return data;
@@ -4728,7 +4733,7 @@ function _templateObject7$c() {
 }
 
 function _templateObject6$f() {
-  var data = _taggedTemplateLiteral(["\n    margin-top: ", ";\n    ", " {\n        margin-top: 0;\n        display: inline-block;\n        flex-grow: 1;\n        text-align: right;\n        font-size: 1.8rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n\n\n    margin-top: ", ";\n\n\n\n\n\n\n\n    ", " {\n\n\n\n\n\n\n\n        margin-top: 0;\n\n\n\n\n\n\n\n        display: inline-block;\n\n\n\n\n\n\n\n        flex-grow: 1;\n\n\n\n\n\n\n\n        text-align: right;\n\n\n\n\n\n\n\n        font-size: 1.8rem;\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n"]);
 
   _templateObject6$f = function _templateObject6() {
     return data;
@@ -4738,7 +4743,7 @@ function _templateObject6$f() {
 }
 
 function _templateObject5$h() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    width: 7.2rem;\n    height: 4rem;\n    margin-left: ", ";\n    margin-bottom: ", ";\n    padding: 0 ", ";\n\n    &:first-of-type {\n        margin-left: 0;\n    }\n\n    ", " {\n        font-size: 1.6rem;\n        width: 7.2rem;\n        padding: 0 ", ";\n\n        &:first-of-type {\n            margin-left: ", ";\n        }\n\n        margin-left: ", ";\n        margin-bottom: 0;\n        margin-top: -.4rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n\n\n    font-size: 1.6rem;\n\n\n\n\n\n\n\n    width: 7.2rem;\n\n\n\n\n\n\n\n    height: 4rem;\n\n\n\n\n\n\n\n    margin-left: ", ";\n\n\n\n\n\n\n\n    margin-bottom: ", ";\n\n\n\n\n\n\n\n    padding: 0 ", ";\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    &:first-of-type {\n\n\n\n\n\n\n\n        margin-left: 0;\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    ", " {\n\n\n\n\n\n\n\n        font-size: 1.6rem;\n\n\n\n\n\n\n\n        width: 7.2rem;\n\n\n\n\n\n\n\n        padding: 0 ", ";\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        &:first-of-type {\n\n\n\n\n\n\n\n            margin-left: ", ";\n\n\n\n\n\n\n\n        }\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        margin-left: ", ";\n\n\n\n\n\n\n\n        margin-bottom: 0;\n\n\n\n\n\n\n\n        margin-top: -.4rem;\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n"]);
 
   _templateObject5$h = function _templateObject5() {
     return data;
@@ -4748,7 +4753,7 @@ function _templateObject5$h() {
 }
 
 function _templateObject4$k() {
-  var data = _taggedTemplateLiteral(["\n    flex-direction: column;\n    display: flex;\n\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n\n\n    flex-direction: column;\n\n\n\n\n\n\n\n    display: flex;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    ", " {\n\n\n\n\n\n\n\n        flex-direction: row;\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n"]);
 
   _templateObject4$k = function _templateObject4() {
     return data;
@@ -4758,7 +4763,7 @@ function _templateObject4$k() {
 }
 
 function _templateObject3$l() {
-  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    display: flex;\n    flex-direction: column;\n\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n\n\n    p {\n\n\n\n\n\n\n\n        padding-bottom: 0;\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n    display: flex;\n\n\n\n\n\n\n\n    flex-direction: column;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    ", " {\n\n\n\n\n\n\n\n        flex-direction: row;\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n"]);
 
   _templateObject3$l = function _templateObject3() {
     return data;
@@ -4768,7 +4773,7 @@ function _templateObject3$l() {
 }
 
 function _templateObject2$m() {
-  var data = _taggedTemplateLiteral(["\n    p {\n        padding-bottom: 0;\n    }\n    padding-bottom: ", ";\n    padding-top: ", ";\n    border-bottom: .1rem solid ", ";\n    display: flex;\n    flex-direction: column;\n\n    ", " {\n        flex-direction: row;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n\n\n    p {\n\n\n\n\n\n\n\n        padding-bottom: 0;\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n    padding-bottom: ", ";\n\n\n\n\n\n\n\n    padding-top: ", ";\n\n\n\n\n\n\n\n    border-bottom: .1rem solid ", ";\n\n\n\n\n\n\n\n    display: flex;\n\n\n\n\n\n\n\n    flex-direction: column;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    ", " {\n\n\n\n\n\n\n\n        flex-direction: row;\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n"]);
 
   _templateObject2$m = function _templateObject2() {
     return data;
@@ -4778,7 +4783,7 @@ function _templateObject2$m() {
 }
 
 function _templateObject$o() {
-  var data = _taggedTemplateLiteral(["\n    box-shadow: 0 1px 3px 0px rgba(0,0,0,0.06);\n    padding: ", " ", " ", " ", ";\n\n    ", " {\n        padding: ", " ", " ", " ", ";\n    }\n\n    a {\n        font-size: 1.8rem;\n        line-height: ", ";\n        margin-right: ", ";\n    }\n    background-color: ", ";\n\n    ", " {\n        p > a {\n            margin-bottom: 0;\n        }\n    }\n    margin-bottom: ", ";\n    border-radius: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n\n\n    box-shadow: 0 1px 3px 0px rgba(0,0,0,0.06);\n\n\n\n\n\n\n\n    padding: ", " ", " ", " ", ";\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    ", " {\n\n\n\n\n\n\n\n        padding: ", " ", " ", " ", ";\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    a {\n\n\n\n\n\n\n\n        font-size: 1.8rem;\n\n\n\n\n\n\n\n        line-height: ", ";\n\n\n\n\n\n\n\n        margin-right: ", ";\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n    background-color: ", ";\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    ", " {\n\n\n\n\n\n\n\n        p > a {\n\n\n\n\n\n\n\n            margin-bottom: 0;\n\n\n\n\n\n\n\n        }\n\n\n\n\n\n\n\n    }\n\n\n\n\n\n\n\n    margin-bottom: ", ";\n\n\n\n\n\n\n\n    border-radius: ", ";\n\n\n\n\n\n\n\n"]);
 
   _templateObject$o = function _templateObject() {
     return data;
@@ -4892,7 +4897,7 @@ var Skeleton = function Skeleton(_ref) {
 };
 
 function _templateObject7$d() {
-  var data = _taggedTemplateLiteral(["\n\n    background-color:", ";\n    color: #fff!important;\n\n    &:hover{\n        color: ", "!important;\n    }\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n    background-color:", ";\n\n\n    color: #fff!important;\n\n\n\n\n\n    &:hover{\n\n\n        color: ", "!important;\n\n\n    }\n\n\n\n\n\n\n\n\n"]);
 
   _templateObject7$d = function _templateObject7() {
     return data;
@@ -4902,7 +4907,7 @@ function _templateObject7$d() {
 }
 
 function _templateObject6$g() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.6rem;\n    color: ", ";\n    font-weight: 500;\n    ", "{\n        font-size: 2.1rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    font-size: 1.6rem;\n\n\n    color: ", ";\n\n\n    font-weight: 500;\n\n\n    ", "{\n\n\n        font-size: 2.1rem;\n\n\n    }\n\n\n\n\n\n"]);
 
   _templateObject6$g = function _templateObject6() {
     return data;
@@ -4912,7 +4917,7 @@ function _templateObject6$g() {
 }
 
 function _templateObject5$i() {
-  var data = _taggedTemplateLiteral(["\n    visibility: hidden;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    visibility: hidden;\n\n\n"]);
 
   _templateObject5$i = function _templateObject5() {
     return data;
@@ -4922,7 +4927,7 @@ function _templateObject5$i() {
 }
 
 function _templateObject4$l() {
-  var data = _taggedTemplateLiteral(["\n    margin-left: auto;\n    font-size: 1.8rem;\n    position: absolute;\n    right: 0px;\n    bottom: -0rem;\n\n    ", "{\n        position: static;\n    }\n    &:visited{\n        color: ", "!important;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    margin-left: auto;\n\n\n    font-size: 1.8rem;\n\n\n    position: absolute;\n\n\n    right: 0px;\n\n\n    bottom: -0rem;\n\n\n\n\n\n    ", "{\n\n\n        position: static;\n\n\n    }\n\n\n    &:visited{\n\n\n        color: ", "!important;\n\n\n    }\n\n\n\n\n\n"]);
 
   _templateObject4$l = function _templateObject4() {
     return data;
@@ -4932,7 +4937,7 @@ function _templateObject4$l() {
 }
 
 function _templateObject3$m() {
-  var data = _taggedTemplateLiteral(["\n    margin-right: auto;\n    font-size: 1.8rem;\n    position: absolute;\n    left: 0px;\n    bottom: -0rem;\n\n    ", "{\n        position: static;\n    }\n    &:visited{\n        color: ", "!important;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    margin-right: auto;\n\n\n    font-size: 1.8rem;\n\n\n    position: absolute;\n\n\n    left: 0px;\n\n\n    bottom: -0rem;\n\n\n\n\n\n    ", "{\n\n\n        position: static;\n\n\n    }\n\n\n    &:visited{\n\n\n        color: ", "!important;\n\n\n    }\n\n\n"]);
 
   _templateObject3$m = function _templateObject3() {
     return data;
@@ -4942,7 +4947,7 @@ function _templateObject3$m() {
 }
 
 function _templateObject2$n() {
-  var data = _taggedTemplateLiteral(["\n    height: 4.0rem;\n    width: 4.2rem;\n\n    line-height: 4.0rem;\n    border: 1px solid ", ";\n    border-radius: 8px;\n    display: inline-block;\n    font-size: 2.1rem;\n    text-align:center;\n    text-decoration: none !important;\n    margin: 0 0.8rem;\n\n    &.last{\n        margin-right: 0;\n    }\n\n    &.first{\n        margin-left: 0;\n    }\n\n    ", "{\n        margin: 0 1.2rem;\n        height: 5.6rem;\n        line-height: 5.6rem;\n        width: 6.0rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    height: 4.0rem;\n\n\n    width: 4.2rem;\n\n\n\n\n\n    line-height: 4.0rem;\n\n\n    border: 1px solid ", ";\n\n\n    border-radius: 8px;\n\n\n    display: inline-block;\n\n\n    font-size: 2.1rem;\n\n\n    text-align:center;\n\n\n    text-decoration: none !important;\n\n\n    margin: 0 0.8rem;\n\n\n\n\n\n    &.last{\n\n\n        margin-right: 0;\n\n\n    }\n\n\n\n\n\n    &.first{\n\n\n        margin-left: 0;\n\n\n    }\n\n\n\n\n\n    ", "{\n\n\n        margin: 0 1.2rem;\n\n\n        height: 5.6rem;\n\n\n        line-height: 5.6rem;\n\n\n        width: 6.0rem;\n\n\n    }\n\n\n\n\n\n"]);
 
   _templateObject2$n = function _templateObject2() {
     return data;
@@ -4952,7 +4957,7 @@ function _templateObject2$n() {
 }
 
 function _templateObject$q() {
-  var data = _taggedTemplateLiteral(["\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    padding-bottom: 5.6rem;\n\n    ", "{\n        justify-content: space-between;\n        padding-bottom: 4.8rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n    display: flex;\n\n\n    justify-content: center;\n\n\n    align-items: center;\n\n\n    position: relative;\n\n\n    padding-bottom: 5.6rem;\n\n\n\n\n\n    ", "{\n\n\n        justify-content: space-between;\n\n\n        padding-bottom: 4.8rem;\n\n\n    }\n\n\n"]);
 
   _templateObject$q = function _templateObject() {
     return data;
