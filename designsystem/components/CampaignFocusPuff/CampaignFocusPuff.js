@@ -41,7 +41,7 @@ export const CampaignFocusPuff = ({
 		return (
 			<div css={focusWrapper}>
 				<div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
-				<div css={textArea}>
+				<div css={textArea} className='textarea'>
 					<h3 css={focusHeadline}>
 						{headline}
 						{isExternalLink && <External title="Extern länk" style={externalIcon} />}

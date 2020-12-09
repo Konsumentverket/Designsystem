@@ -9,8 +9,7 @@ export const focusWrapper = css`
   height:100%;
   width:100%;
   flex-direction:column;
-  /* background-color: #fff; */
-  background-color: ${colors.theme2.light};
+  background-color: #fff;
   border-bottom-right-radius:.8rem;
   border-bottom-left-radius:.8rem;
   ${medium}{
@@ -23,15 +22,15 @@ export const focusWrapper = css`
 
 export const linkWrapper = css`
   text-decoration:none;
-  /* margin-top:.8rem; */
   display:flex;
   flex-shrink: 0;
 
-  &:hover .focusWrapper {
-    background-color: #E6C3D1;
+  &:hover .textarea {
+    background-color: ${colors.theme1.light};
+    border-radius: 8px;
   }
   &:hover {
-    box-shadow: 0px 0px 0px 2px ${colors.theme2.mid}; 
+    box-shadow: 0px 0px 0px 2px ${colors.theme1.mid}; 
     border-radius: 8px;
   }
   &:active {
@@ -48,14 +47,14 @@ export const linkWrapper = css`
   &:hover h3, &:active h3 {
     text-decoration:underline;
   }
-  .image {
+  /* .image {
     max-width: 100%;
     max-height: 100%;
     transition: .1s all;
   }
   &:hover .image {
     filter: brightness(75%);
-  }
+  } */
   ${medium} {
     height: calc(100% + .8rem);
   }
@@ -63,7 +62,7 @@ export const linkWrapper = css`
 `
 
 export const focusHeadline = css`
-  color: ${colors.theme2.mid};
+  color: ${colors.theme1.mid};
   font-size: 2.4rem;
   line-height: 3.2rem;
   margin: 0 0 .8rem 0;
@@ -149,7 +148,7 @@ export const iconBackground = css`
 export const externalIcon = css`
   position: relative;
   margin-left: 0.8rem;
-  fill: ${colors.theme2.mid};
+  fill: ${colors.theme1.mid};
   width:2rem;
 `
 
