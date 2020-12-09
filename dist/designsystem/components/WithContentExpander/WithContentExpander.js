@@ -121,7 +121,7 @@ var WithContentExpander = function WithContentExpander(_ref) {
     "aria-haspopup": "true",
     "aria-expanded": expanded ? "true" : "false",
     "aria-label": linkElement.props.children || "",
-    className: "noStyle",
+    className: "noStyle accordion",
     css: [_WithContentExpander.baseLinkStyle, linkStyle]
   }, (0, _core.jsx)("div", {
     className: "link-element-container",

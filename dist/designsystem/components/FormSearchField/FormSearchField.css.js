@@ -12,7 +12,7 @@ var _Colors = require("../Colors/Colors");
 var _globalStyles = require("../GlobalStyles/globalStyles");
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.8rem;\n    line-height: 3.2rem;\n    margin-bottom: 0.8rem;\n    display: block;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    font-size: 1.8rem;\n\n\n    line-height: 3.2rem;\n\n\n    margin-bottom: 0.8rem;\n\n\n    display: block;\n\n\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -22,7 +22,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 0px;\n    border: 0px;\n    background-color: transparent;\n    top: 0.5rem;\n    width: 2.8rem;\n    height: 2.8rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n    ", " {\n        top: 1.4rem;\n        right: 1.6rem;\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n    appearance: none;\n\n\n    position: absolute;\n\n\n    right: 0px;\n\n\n    border: 0px;\n\n\n    background-color: transparent;\n\n\n    top: 0.5rem;\n\n\n    width: 2.8rem;\n\n\n    height: 2.8rem;\n\n\n    padding: 0;\n\n\n    svg{\n\n\n        fill: ", ";\n\n\n        width: 2.8rem;\n\n\n        height: 2.8rem;\n\n\n    }\n\n\n    &:focus{\n\n\n        outline: none;\n\n\n    }\n\n\n\n\n\n    ", " {\n\n\n        top: 1.4rem;\n\n\n        right: 1.6rem;\n\n\n    }\n\n\n\n\n\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -32,7 +32,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    box-shadow:none;\n    &:hover, &:active {\n        box-shadow:none;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    box-shadow:none;\n\n\n    &:hover, &:active {\n\n\n        box-shadow:none;\n\n\n    }\n\n\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -42,7 +42,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    white-space: nowrap;\n    width:auto;\n    align-items: center;\n    border-radius: 0 .8rem .8rem 0;\n    margin-right:-.8rem;\n    padding: .8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    white-space: nowrap;\n\n\n    width:auto;\n\n\n    align-items: center;\n\n\n    border-radius: 0 .8rem .8rem 0;\n\n\n    margin-right:-.8rem;\n\n\n    padding: .8rem;\n\n\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -52,7 +52,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    box-shadow:inset 0px 0px 0px 2px ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2.4rem;\n    display:flex;\n    flex-grow:1;\n    padding: .8rem 4.5rem .8rem .8rem;\n    color: ", ";\n    font-style: normal;\n    font-weight: 500;\n    box-sizing: border-box;\n    width: 100%; \n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &:active {\n        box-shadow:inset 0px 0px 0px 2px ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    -webkit-appearance: none;\n\n\n    background-color: ", ";\n\n\n    box-shadow:inset 0px 0px 0px 2px ", ";\n\n\n    border-radius: .8rem 0 0 .8rem;\n\n\n    border:none;\n\n\n    font-size:1.6rem;\n\n\n    line-height:2.4rem;\n\n\n    display:flex;\n\n\n    flex-grow:1;\n\n\n    padding: .8rem 4.5rem .8rem .8rem;\n\n\n    color: ", ";\n\n\n    font-style: normal;\n\n\n    font-weight: 500;\n\n\n    box-sizing: border-box;\n\n\n    width: 100%; \n\n\n\n\n\n    &::-webkit-search-cancel-button{\n\n\n        appearance: none;\n\n\n    }\n\n\n\n\n\n    ", "{\n\n\n        font-size:1.8rem;\n\n\n        line-height:3.2rem;\n\n\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n\n\n    }\n\n\n\n\n\n    &:hover {\n\n\n        box-shadow:inset 0px 0px 0px 2px ", ";\n\n\n    }\n\n\n    &:active {\n\n\n        box-shadow:inset 0px 0px 0px 2px ", ";\n\n\n    }\n\n\n    &::placeholder {\n\n\n        font-style:italic;\n\n\n        color: ", ";\n\n\n    }\n\n\n    &:disabled{\n\n\n        ", "\n\n\n    }\n\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -62,7 +62,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    display:flex;\n    flex-grow:1;\n    position: relative;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    display:flex;\n\n\n    flex-grow:1;\n\n\n    position: relative;\n\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -72,7 +72,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    position:relative;\n    display:flex;\n    flex-direction: row;\n    align-items: stretch;\n    background-color: ", ";\n    margin-right:.8rem;\n    border-radius:.8rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    position:relative;\n\n\n    display:flex;\n\n\n    flex-direction: row;\n\n\n    align-items: stretch;\n\n\n    background-color: ", ";\n\n\n    margin-right:.8rem;\n\n\n    border-radius:.8rem;\n\n\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -82,7 +82,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([" \n        background-color: ", ";\n        text-decoration:none;\n        box-shadow:inset 0px 0px 0px 1px ", ";\n        cursor:inherit;\n        &::placeholder {\n            color: ", ";\n        }\n"]);
+  var data = _taggedTemplateLiteral([" \n\n\n        background-color: ", ";\n\n\n        text-decoration:none;\n\n\n        box-shadow:inset 0px 0px 0px 1px ", ";\n\n\n        cursor:inherit;\n\n\n        &::placeholder {\n\n\n            color: ", ";\n\n\n        }\n\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;

@@ -12,7 +12,7 @@ var _Colors = require("../Colors/Colors");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  color: #4D4D4D;\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin-bottom: .8rem;\n  display: block;\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n  color: #4D4D4D;\n\n\n  font-size: 1.8rem;\n\n\n  line-height: 3.2rem;\n\n\n  margin-bottom: .8rem;\n\n\n  display: block;\n\n\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -22,7 +22,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n\n    position: absolute;\n    right: 2.4rem;\n    bottom: 2.2rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n    position: absolute;\n\n\n    right: 2.4rem;\n\n\n    bottom: 2.2rem;\n\n\n\n\n\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -32,7 +32,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral([" \n    appearance: none;\n    position: absolute;\n    right: 1.6rem;\n    border: 0px;\n    background-color: transparent;\n    bottom: 1.4rem;\n    width: 2.8rem;\n    height: 2.8rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    \n"]);
+  var data = _taggedTemplateLiteral([" \n\n\n    appearance: none;\n\n\n    position: absolute;\n\n\n    right: 1.6rem;\n\n\n    border: 0px;\n\n\n    background-color: transparent;\n\n\n    bottom: 1.4rem;\n\n\n    width: 2.8rem;\n\n\n    height: 2.8rem;\n\n\n    padding: 0;\n\n\n    svg{\n\n\n        fill: ", ";\n\n\n        width: 2.8rem;\n\n\n        height: 2.8rem;\n\n\n    }\n\n\n    &:focus{\n\n\n        outline: none;\n\n\n    }\n\n\n    \n\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -42,7 +42,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    position: relative;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    position: relative;\n\n\n\n\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -52,7 +52,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    input {\n        border-color: #F00;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    input {\n\n\n        border-color: #F00;\n\n\n    }\n\n\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -62,7 +62,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem ", " 1.2rem 1.6rem;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    font-size: 1.8rem;\n    line-height: 3rem;\n    height: 5.4rem;\n    box-sizing: border-box;\n    -webkit-appearance: none;\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder {\n        font-style: italic;\n    }\n    &::-ms-clear{\n        display:none;\n        width: 0;\n        height: 0; \n    }\n    &::-webkit-search-cancel-button{\n        appearance: none;   \n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\n\n    width: 100%;\n\n\n    padding: 1.2rem ", " 1.2rem 1.6rem;\n\n\n    border: 2px solid ", ";\n\n\n    border-radius: 0.8rem;\n\n\n    font-size: 1.8rem;\n\n\n    line-height: 3rem;\n\n\n    height: 5.4rem;\n\n\n    box-sizing: border-box;\n\n\n    -webkit-appearance: none;\n\n\n\n\n\n    &:focus{\n\n\n        outline: none;\n\n\n        border-color: ", "\n\n\n    }\n\n\n\n\n\n    &::placeholder {\n\n\n        font-style: italic;\n\n\n    }\n\n\n    &::-ms-clear{\n\n\n        display:none;\n\n\n        width: 0;\n\n\n        height: 0; \n\n\n    }\n\n\n    &::-webkit-search-cancel-button{\n\n\n        appearance: none;   \n\n\n    }\n\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
