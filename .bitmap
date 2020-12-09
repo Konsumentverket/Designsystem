@@ -148,7 +148,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/campaign-focus-puff@0.0.2": {
+    "konsumentverket.kov-compo/campaign-focus-puff@0.0.3": {
         "files": [
             {
                 "relativePath": "designsystem/components/CampaignFocusPuff/CampaignFocusPuff.css.js",
@@ -600,7 +600,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/focus-puff@0.0.3": {
+    "konsumentverket.kov-compo/focus-puff@0.0.4": {
         "files": [
             {
                 "relativePath": "designsystem/components/FocusPuff/FocusPuff.css.js",
