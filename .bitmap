@@ -894,7 +894,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/list-item@0.0.1": {
+    "konsumentverket.kov-compo/list-item@0.0.2": {
         "files": [
             {
                 "relativePath": "designsystem/components/ListItem/ListItem.css.js",

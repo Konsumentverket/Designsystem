@@ -7,6 +7,11 @@ export const wrapper = css`
   display: block;
   text-decoration: none;
   font-weight: 500;
+  margin-left: -${spacing.xs};
+  margin-right: -${spacing.xs};
+  padding-left: ${spacing.xs};
+  padding-right: ${spacing.xs};
+
   p {
     color: ${colors.theme3.dark};
   }
