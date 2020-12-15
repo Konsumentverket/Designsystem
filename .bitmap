@@ -651,7 +651,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/form-search-field@0.0.5": {
+    "konsumentverket.kov-compo/form-search-field@0.0.6": {
         "files": [
             {
                 "name": "FormSearchField.css.js",
@@ -779,7 +779,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/input-text@0.0.5": {
+    "konsumentverket.kov-compo/input-text@0.0.6": {
         "files": [
             {
                 "name": "InputText.css.js",
@@ -1314,7 +1314,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/text-area@0.0.5": {
+    "konsumentverket.kov-compo/text-area@0.0.6": {
         "files": [
             {
                 "name": "TextArea.css.js",
