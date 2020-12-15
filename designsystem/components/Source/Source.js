@@ -22,6 +22,7 @@ export const Source = ({
     style,
     english,
     bottomContent,
+    sourceText
 }) => {
 
     const reviewed = reviewedDate ? new Date(reviewedDate) : null;
@@ -35,7 +36,7 @@ export const Source = ({
         <div css={secondRow}>
             {sourcesCollection && sourcesCollection.items.length > 0 &&
                 <p>
-                    {english ? 'Source: ' : 'Källa: '}
+                    {sourceText ? `${sourceText} ` : 'Källa: '}
                     {sourcesCollection.items.map((item, idx) => {
                         return (
                             <a href={item.linkUrl} key={"link-" + idx}
