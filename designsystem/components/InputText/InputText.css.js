@@ -17,7 +17,7 @@ export const InputStyle = (hasInnerContent) => css`
         border-color: ${colors.theme1.mid}
     }
 
-    &::placeholder {
+    &::placeholder, &::-webkit-input-placeholder {
         font-style: italic;
         color: ${colors.theme3.mid};
     }

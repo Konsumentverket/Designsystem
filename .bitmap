@@ -733,7 +733,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/heading@0.0.3": {
+    "konsumentverket.kov-compo/heading@0.0.4": {
         "files": [
             {
                 "name": "Heading.js",
@@ -779,7 +779,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/input-text@0.0.6": {
+    "konsumentverket.kov-compo/input-text@0.0.7": {
         "files": [
             {
                 "name": "InputText.css.js",
@@ -1314,7 +1314,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/text-area@0.0.6": {
+    "konsumentverket.kov-compo/text-area@0.0.7": {
         "files": [
             {
                 "name": "TextArea.css.js",

@@ -23,7 +23,7 @@ export const TextAreaStyle = css`
     &::-webkit-search-cancel-button{
         appearance: none;
     }
-    &::-webkit-input-placeholder {
+    &::placeholder, &::-webkit-input-placeholder {
         font-style:italic;
         color: ${colors.theme3.mid};
     }
