@@ -2,6 +2,7 @@
 import { jsx, css } from '@emotion/core'
 import { colors } from '../Colors/Colors';
 import { medium } from '../GlobalStyles/globalStyles';
+import { spacing } from '../Spacing/Spacing';
 
 const disabled = css` 
         background-color: ${colors.theme3.xLight};
@@ -35,11 +36,12 @@ export const searchFieldInputStyle = css`
     border-radius: .8rem 0 0 .8rem;
     border:none;
     font-size:1.6rem;
-    line-height:2.4rem;
+    line-height:2rem;
     display:flex;
     flex-grow:1;
-    padding: .8rem 4.5rem .8rem .8rem;
+    padding: ${spacing.xs} 4.5rem ${spacing.xs} ${spacing.s};
     color: ${colors.theme1.xDark};
+    border: 2px solid #fff;
     font-style: normal;
     font-weight: 500;
     box-sizing: border-box;
@@ -56,10 +58,10 @@ export const searchFieldInputStyle = css`
     }
 
     &:hover {
-        box-shadow:inset 0px 0px 0px 2px ${colors.theme1.mid};
+        border: 2px solid ${colors.theme1.mid};
     }
     &:active {
-        box-shadow:inset 0px 0px 0px 2px ${colors.theme1.xDark};
+        border: 2px solid ${colors.theme1.xDark};
     }
     &::placeholder {
         font-style:italic;
@@ -76,7 +78,8 @@ export const searchFieldButtonStyle = css`
     align-items: center;
     border-radius: 0 .8rem .8rem 0;
     margin-right:-.8rem;
-    padding: .8rem;
+    padding: .8rem 1.6rem;
+    vertical-align: text-top;
 `;
 
 export const invertedBackgroundStyle = css`
@@ -93,10 +96,11 @@ export const clearInputStyle = css`
     right: 0px;
     border: 0px;
     background-color: transparent;
-    top: 0.5rem;
+    top: 0.55rem;
     width: 2.8rem;
     height: 2.8rem;
     padding: 0;
+    right: 1.6rem;
     svg{
         fill: ${colors.theme1.mid};
         width: 2.8rem;
@@ -107,7 +111,7 @@ export const clearInputStyle = css`
     }
 
     ${medium} {
-        top: 1.4rem;
+        top: 1.6rem;
         right: 1.6rem;
     }
 
