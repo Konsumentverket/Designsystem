@@ -1164,6 +1164,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "konsumentverket.kov-compo/question@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/SystemIcons/Question/Question.js",
+                "test": false,
+                "name": "Question.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/SystemIcons/Question/Question.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "konsumentverket.kov-compo/receipt@0.0.1": {
         "files": [
             {

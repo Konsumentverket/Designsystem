@@ -28,6 +28,7 @@ import FilePowerpoint from '../Icons/SystemIcons/FilePowerpoint/FilePowerpoint.j
 import FileWord from '../Icons/SystemIcons/FileWord/FileWord.js';
 import File from '../Icons/SystemIcons/File/File.js';
 import Warn from '../Icons/SystemIcons/Warn/Warn.js';
+import Question from '../Icons/SystemIcons/Question/Question.js';
 
 const iconDefinitions = {
 	Adapt,
@@ -56,7 +57,8 @@ const iconDefinitions = {
 	FilePowerpoint,
 	FileWord,
 	File,
-	Warn
+	Warn,
+	Question
 };
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
