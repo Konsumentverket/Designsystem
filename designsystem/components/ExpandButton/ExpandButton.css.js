@@ -17,7 +17,7 @@ export const expandButtonStyle = css`
     font-size:1.6rem;
     line-height:2.4rem;
     font-weight:500;
-    padding:.8rem 0;
+    padding:.8rem;
     display:flex;
     justify-content: center;
     align-items: center;
