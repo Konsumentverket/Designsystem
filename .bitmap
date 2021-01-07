@@ -105,7 +105,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/button@0.0.3": {
+    "konsumentverket.kov-compo/button@0.0.4": {
         "files": [
             {
                 "name": "Button.css.js",
@@ -475,7 +475,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/expand-button@0.0.2": {
+    "konsumentverket.kov-compo/expand-button@0.0.3": {
         "files": [
             {
                 "name": "ExpandButton.css.js",
@@ -651,7 +651,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/form-search-field@0.0.8": {
+    "konsumentverket.kov-compo/form-search-field@0.0.9": {
         "files": [
             {
                 "name": "FormSearchField.css.js",
@@ -745,7 +745,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/icon-card@0.0.3": {
+    "konsumentverket.kov-compo/icon-card@0.0.4": {
         "files": [
             {
                 "relativePath": "designsystem/components/IconCard/IconCard.css.js",

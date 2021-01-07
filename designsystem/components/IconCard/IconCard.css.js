@@ -50,6 +50,7 @@ export const iconCardStyle = css`
     {   
         background-color: ${colors.theme1.xDark};
         border-color:${colors.theme1.xDark};
+        box-shadow: none;
         span{
             color:#fff;
         }
