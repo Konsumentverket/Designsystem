@@ -1053,6 +1053,24 @@ var Warn = (function (_ref) {
   }));
 });
 
+var Question = (function (_ref) {
+  var className = _ref.className,
+      style = _ref.style,
+      title = _ref.title,
+      otherAttr = _objectWithoutProperties(_ref, ["className", "style", "title"]);
+
+  return core.jsx("svg", {
+    className: className,
+    css: style,
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "16",
+    height: "16",
+    viewBox: "0 0 16 16"
+  }, core.jsx("title", null, title), core.jsx("path", {
+    d: "M15.0588235,8 C15.0588235,12.4192581 11.6874991,16 7.52941176,16 C3.37132448,16 0,12.4192581 0,8 C0,3.58332258 3.37132448,0 7.52941176,0 C11.6874991,0 15.0588235,3.58332258 15.0588235,8 Z M7.7314611,2.64516129 C6.07690323,2.64516129 5.02163188,3.38570968 4.19297154,4.70187097 C4.0856167,4.8723871 4.12153321,5.10235484 4.27540038,5.22632258 L5.32888046,6.07503226 C5.48690702,6.20235484 5.71206072,6.17206452 5.83483871,6.00658065 C6.37719924,5.27567742 6.74908539,4.85183871 7.57458824,4.85183871 C8.19482353,4.85183871 8.9620038,5.27596774 8.9620038,5.915 C8.9620038,6.39809677 8.58665655,6.64619355 7.97425427,7.011 C7.26005313,7.4363871 6.31499051,7.96583871 6.31499051,9.29032258 L6.31499051,9.41935484 C6.31499051,9.63312903 6.47811765,9.80645161 6.67931689,9.80645161 L8.37950664,9.80645161 C8.58070588,9.80645161 8.74383302,9.63312903 8.74383302,9.41935484 L8.74383302,9.37635484 C8.74383302,8.45822581 11.2694042,8.42 11.2694042,5.93548387 C11.2694042,4.06445161 9.44276281,2.64516129 7.7314611,2.64516129 L7.7314611,2.64516129 Z M7.52941176,10.6451613 C6.75931689,10.6451613 6.13282732,11.3108065 6.13282732,12.1290323 C6.13282732,12.9472258 6.75931689,13.6129032 7.52941176,13.6129032 C8.29950664,13.6129032 8.9259962,12.9472258 8.9259962,12.1290323 C8.9259962,11.3108065 8.29950664,10.6451613 7.52941176,10.6451613 Z"
+  }));
+});
+
 var iconDefinitions = {
   Adapt: Adapt,
   Close: Close,
@@ -1080,7 +1098,8 @@ var iconDefinitions = {
   FilePowerpoint: FilePowerpoint,
   FileWord: FileWord,
   File: File,
-  Warn: Warn
+  Warn: Warn,
+  Question: Question
 };
 
 var Icon = function Icon(_ref) {
@@ -2341,6 +2360,8 @@ var Heading = function Heading(_ref) {
       otherAttr = _objectWithoutProperties(_ref, ["text", "style", "children"]);
 
   return core.jsx(SubHeading, _extends({
+    "data-nosnippet": "true",
+    "data-addsearch": "exclude",
     style: style,
     level: 1,
     text: text
@@ -2378,7 +2399,7 @@ function _templateObject4$3() {
 }
 
 function _templateObject3$3() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";    \n    min-height: 7.2rem;\n    text-decoration: none;\n    width: 100%;\n    box-sizing: border-box;\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    height:100%;\n    align-items: center;\n    border-radius: .8rem;\n    border: 1px solid ", ";\n    &:hover {\n        background-color: ", ";\n        border-color: ", ";\n        span {\n            text-decoration:underline;\n        }\n    }\n    &:active \n    {   \n        background-color: ", ";\n        border-color:", ";\n        span{\n            color:#fff;\n        }\n        svg {\n            fill:#fff;\n        }\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";    \n    min-height: 7.2rem;\n    text-decoration: none;\n    width: 100%;\n    box-sizing: border-box;\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    height:100%;\n    align-items: center;\n    border-radius: .8rem;\n    border: 1px solid ", ";\n    &:hover {\n        background-color: ", ";\n        border-color: ", ";\n        box-shadow: inset 0 0 0 1px ", ";\n        span {\n            text-decoration:underline;\n        }\n    }\n    &:active \n    {   \n        background-color: ", ";\n        border-color:", ";\n        span{\n            color:#fff;\n        }\n        svg {\n            fill:#fff;\n        }\n    }\n"]);
 
   _templateObject3$3 = function _templateObject3() {
     return data;
@@ -2408,7 +2429,7 @@ function _templateObject$2() {
 }
 var arrowStyle = core.css(_templateObject$2(), colors.theme1.mid);
 var iconStyle = core.css(_templateObject2$3(), colors.theme1.mid);
-var iconCardStyle = core.css(_templateObject3$3(), colors.common.white, colors.theme1.mid, colors.theme1.midLight, colors.theme1.xDark, colors.theme1.xDark, colors.theme1.xDark);
+var iconCardStyle = core.css(_templateObject3$3(), colors.common.white, colors.theme1.mid, colors.theme1.midLight, colors.theme1.mid, colors.theme1.mid, colors.theme1.xDark, colors.theme1.xDark);
 var iconText = core.css(_templateObject4$3(), colors.theme1.mid, spacing.s);
 var noIcon = core.css(_templateObject5$3());
 var topAreaIcon = core.css(_templateObject6$3());
@@ -3104,7 +3125,7 @@ function _templateObject8$6() {
 }
 
 function _templateObject7$6() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.4rem;\n    cursor: pointer;\n    display: block;\n    border-top: 1px solid ", ";\n    padding: .8rem 0 1.6rem 0;\n    margin: 0 1.6rem;\n    line-height: 2.4rem;\n    margin-top: auto;\n    a{\n        font-weight: 500 !important;\n    }\n    \n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.4rem;\n    cursor: pointer;\n    display: block;\n    padding: 0;\n    line-height: 2.4rem;\n    margin-top: auto;\n    a{\n        padding: 1.6rem;\n        font-weight: 500 !important;\n        display: block;\n        border-radius: 0 !important;\n    }\n\n"]);
 
   _templateObject7$6 = function _templateObject7() {
     return data;
@@ -3178,7 +3199,7 @@ var linkTextMainLinkStyle = core.css(_templateObject3$8(), colors.states.focus);
 var mainLinkStyle = core.css(_templateObject4$7(), colors.theme1.mid, colors.theme1.mid, colors.theme1.xDark, colors.common.white, colors.common.white, colors.common.white, colors.states.focus);
 var rotateArrow = core.css(_templateObject5$7());
 var childrenWrapper = core.css(_templateObject6$7());
-var showAllLink = core.css(_templateObject7$6(), colors.theme3.midLight);
+var showAllLink = core.css(_templateObject7$6());
 var innerTextWrapperStyle = core.css(_templateObject8$6(), colors.theme1.mid);
 var linkTextCardContentStyle = core.css(_templateObject9$3(), colors.theme3.dark);
 var customFontSize = core.css(_templateObject10$1());
@@ -3380,7 +3401,7 @@ var InputRadio = function InputRadio(_ref) {
 };
 
 function _templateObject6$8() {
-  var data = _taggedTemplateLiteral(["\n\n\n  color: #4D4D4D;\n\n\n  font-size: 1.8rem;\n\n\n  line-height: 3.2rem;\n\n\n  margin-bottom: .8rem;\n\n\n  display: block;\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: #4D4D4D;\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin-bottom: .8rem;\n  display: block;\n"]);
 
   _templateObject6$8 = function _templateObject6() {
     return data;
@@ -3390,7 +3411,7 @@ function _templateObject6$8() {
 }
 
 function _templateObject5$8() {
-  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n    position: absolute;\n\n\n    right: 2.4rem;\n\n\n    bottom: 2.2rem;\n\n\n\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    position: absolute;\n    right: 2.4rem;\n    bottom: 2.2rem;\n\n"]);
 
   _templateObject5$8 = function _templateObject5() {
     return data;
@@ -3400,7 +3421,7 @@ function _templateObject5$8() {
 }
 
 function _templateObject4$9() {
-  var data = _taggedTemplateLiteral([" \n\n\n    appearance: none;\n\n\n    position: absolute;\n\n\n    right: 1.6rem;\n\n\n    border: 0px;\n\n\n    background-color: transparent;\n\n\n    bottom: 1.4rem;\n\n\n    width: 2.8rem;\n\n\n    height: 2.8rem;\n\n\n    padding: 0;\n\n\n    svg{\n\n\n        fill: ", ";\n\n\n        width: 2.8rem;\n\n\n        height: 2.8rem;\n\n\n    }\n\n\n    &:focus{\n\n\n        outline: none;\n\n\n    }\n\n\n    \n\n\n"]);
+  var data = _taggedTemplateLiteral([" \n    appearance: none;\n    position: absolute;\n    right: 1.6rem;\n    border: 0px;\n    background-color: transparent;\n    bottom: 1.4rem;\n    width: 2.8rem;\n    height: 2.8rem;\n    padding: 0;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n    \n"]);
 
   _templateObject4$9 = function _templateObject4() {
     return data;
@@ -3410,7 +3431,7 @@ function _templateObject4$9() {
 }
 
 function _templateObject3$a() {
-  var data = _taggedTemplateLiteral(["\n\n\n    position: relative;\n\n\n\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: relative;\n\n"]);
 
   _templateObject3$a = function _templateObject3() {
     return data;
@@ -3420,7 +3441,7 @@ function _templateObject3$a() {
 }
 
 function _templateObject2$b() {
-  var data = _taggedTemplateLiteral(["\n\n\n    input {\n\n\n        border-color: #F00;\n\n\n    }\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    input {\n        border-color: #F00;\n    }\n"]);
 
   _templateObject2$b = function _templateObject2() {
     return data;
@@ -3430,7 +3451,7 @@ function _templateObject2$b() {
 }
 
 function _templateObject$b() {
-  var data = _taggedTemplateLiteral(["\n\n\n    width: 100%;\n\n\n    padding: 1.2rem ", " 1.2rem 1.6rem;\n\n\n    border: 2px solid ", ";\n\n\n    border-radius: 0.8rem;\n\n\n    font-size: 1.8rem;\n\n\n    line-height: 3rem;\n\n\n    height: 5.4rem;\n\n\n    box-sizing: border-box;\n\n\n    -webkit-appearance: none;\n\n\n\n\n\n    &:focus{\n\n\n        outline: none;\n\n\n        border-color: ", "\n\n\n    }\n\n\n\n\n\n    &::placeholder {\n\n\n        font-style: italic;\n\n\n    }\n\n\n    &::-ms-clear{\n\n\n        display:none;\n\n\n        width: 0;\n\n\n        height: 0; \n\n\n    }\n\n\n    &::-webkit-search-cancel-button{\n\n\n        appearance: none;   \n\n\n    }\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    padding: 1.2rem ", " 1.2rem 1.6rem;\n    border: 2px solid ", ";\n    border-radius: 0.8rem;\n    font-size: 1.8rem;\n    line-height: 3rem;\n    height: 5.4rem;\n    box-sizing: border-box;\n    -webkit-appearance: none;\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::placeholder, &::-webkit-input-placeholder {\n        font-style: italic;\n        color: ", ";\n    }\n    &::-ms-clear{\n        display:none;\n        width: 0;\n        height: 0; \n    }\n    &::-webkit-search-cancel-button{\n        appearance: none;   \n    }\n"]);
 
   _templateObject$b = function _templateObject() {
     return data;
@@ -3439,7 +3460,7 @@ function _templateObject$b() {
   return data;
 }
 var InputStyle = function InputStyle(hasInnerContent) {
-  return css(_templateObject$b(), hasInnerContent ? '4.5rem' : '1.6rem', colors.theme3.midLight, colors.theme1.mid);
+  return css(_templateObject$b(), hasInnerContent ? '4.5rem' : '1.6rem', colors.theme3.midLight, colors.theme1.mid, colors.theme3.mid);
 };
 var invalidStyle = css(_templateObject2$b());
 var InputWrapperStyle = css(_templateObject3$a());
@@ -3711,7 +3732,7 @@ var Button = function Button(_ref) {
 };
 
 function _templateObject8$8() {
-  var data = _taggedTemplateLiteral(["\n\n\n    font-size: 1.8rem;\n\n\n    line-height: 3.2rem;\n\n\n    margin-bottom: 0.8rem;\n\n\n    display: block;\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.8rem;\n    line-height: 3.2rem;\n    margin-bottom: 0.8rem;\n    display: block;\n"]);
 
   _templateObject8$8 = function _templateObject8() {
     return data;
@@ -3721,7 +3742,7 @@ function _templateObject8$8() {
 }
 
 function _templateObject7$8() {
-  var data = _taggedTemplateLiteral(["\n\n\n\n\n\n    appearance: none;\n\n\n    position: absolute;\n\n\n    right: 0px;\n\n\n    border: 0px;\n\n\n    background-color: transparent;\n\n\n    top: 0.5rem;\n\n\n    width: 2.8rem;\n\n\n    height: 2.8rem;\n\n\n    padding: 0;\n\n\n    svg{\n\n\n        fill: ", ";\n\n\n        width: 2.8rem;\n\n\n        height: 2.8rem;\n\n\n    }\n\n\n    &:focus{\n\n\n        outline: none;\n\n\n    }\n\n\n\n\n\n    ", " {\n\n\n        top: 1.4rem;\n\n\n        right: 1.6rem;\n\n\n    }\n\n\n\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n\n    appearance: none;\n    position: absolute;\n    right: 0px;\n    border: 0px;\n    background-color: transparent;\n    top: 0.55rem;\n    width: 2.8rem;\n    height: 2.8rem;\n    padding: 0;\n    right: 1.6rem;\n    svg{\n        fill: ", ";\n        width: 2.8rem;\n        height: 2.8rem;\n    }\n    &:focus{\n        outline: none;\n    }\n\n    ", " {\n        top: 1.6rem;\n        right: 1.6rem;\n    }\n\n"]);
 
   _templateObject7$8 = function _templateObject7() {
     return data;
@@ -3731,7 +3752,7 @@ function _templateObject7$8() {
 }
 
 function _templateObject6$a() {
-  var data = _taggedTemplateLiteral(["\n\n\n    box-shadow:none;\n\n\n    &:hover, &:active {\n\n\n        box-shadow:none;\n\n\n    }\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    box-shadow:none;\n    &:hover, &:active {\n        box-shadow:none;\n    }\n"]);
 
   _templateObject6$a = function _templateObject6() {
     return data;
@@ -3741,7 +3762,7 @@ function _templateObject6$a() {
 }
 
 function _templateObject5$a() {
-  var data = _taggedTemplateLiteral(["\n\n\n    white-space: nowrap;\n\n\n    width:auto;\n\n\n    align-items: center;\n\n\n    border-radius: 0 .8rem .8rem 0;\n\n\n    margin-right:-.8rem;\n\n\n    padding: .8rem;\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    white-space: nowrap;\n    width:auto;\n    align-items: center;\n    border-radius: 0 .8rem .8rem 0;\n    margin-right:-.8rem;\n    padding: .8rem 1.6rem;\n    vertical-align: text-top;\n"]);
 
   _templateObject5$a = function _templateObject5() {
     return data;
@@ -3751,7 +3772,7 @@ function _templateObject5$a() {
 }
 
 function _templateObject4$b() {
-  var data = _taggedTemplateLiteral(["\n\n\n    -webkit-appearance: none;\n\n\n    background-color: ", ";\n\n\n    box-shadow:inset 0px 0px 0px 2px ", ";\n\n\n    border-radius: .8rem 0 0 .8rem;\n\n\n    border:none;\n\n\n    font-size:1.6rem;\n\n\n    line-height:2.4rem;\n\n\n    display:flex;\n\n\n    flex-grow:1;\n\n\n    padding: .8rem 4.5rem .8rem .8rem;\n\n\n    color: ", ";\n\n\n    font-style: normal;\n\n\n    font-weight: 500;\n\n\n    box-sizing: border-box;\n\n\n    width: 100%; \n\n\n\n\n\n    &::-webkit-search-cancel-button{\n\n\n        appearance: none;\n\n\n    }\n\n\n\n\n\n    ", "{\n\n\n        font-size:1.8rem;\n\n\n        line-height:3.2rem;\n\n\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n\n\n    }\n\n\n\n\n\n    &:hover {\n\n\n        box-shadow:inset 0px 0px 0px 2px ", ";\n\n\n    }\n\n\n    &:active {\n\n\n        box-shadow:inset 0px 0px 0px 2px ", ";\n\n\n    }\n\n\n    &::placeholder {\n\n\n        font-style:italic;\n\n\n        color: ", ";\n\n\n    }\n\n\n    &:disabled{\n\n\n        ", "\n\n\n    }\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    -webkit-appearance: none;\n    background-color: ", ";\n    border-radius: .8rem 0 0 .8rem;\n    border:none;\n    font-size:1.6rem;\n    line-height:2rem;\n    display:flex;\n    flex-grow:1;\n    padding: ", " 4.5rem ", " ", ";\n    color: ", ";\n    border: 2px solid #fff;\n    font-style: normal;\n    font-weight: 500;\n    box-sizing: border-box;\n    width: 100%; \n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n\n    ", "{\n        font-size:1.8rem;\n        line-height:3.2rem;\n        padding: 1.2rem 6.4rem 1.2rem 1.6rem;\n    }\n\n    &:hover {\n        border: 2px solid ", ";\n    }\n    &:active {\n        border: 2px solid ", ";\n    }\n    &::placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject4$b = function _templateObject4() {
     return data;
@@ -3761,7 +3782,7 @@ function _templateObject4$b() {
 }
 
 function _templateObject3$c() {
-  var data = _taggedTemplateLiteral(["\n\n\n    display:flex;\n\n\n    flex-grow:1;\n\n\n    position: relative;\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    display:flex;\n    flex-grow:1;\n    position: relative;\n"]);
 
   _templateObject3$c = function _templateObject3() {
     return data;
@@ -3771,7 +3792,7 @@ function _templateObject3$c() {
 }
 
 function _templateObject2$d() {
-  var data = _taggedTemplateLiteral(["\n\n\n    position:relative;\n\n\n    display:flex;\n\n\n    flex-direction: row;\n\n\n    align-items: stretch;\n\n\n    background-color: ", ";\n\n\n    margin-right:.8rem;\n\n\n    border-radius:.8rem;\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    position:relative;\n    display:flex;\n    flex-direction: row;\n    align-items: stretch;\n    background-color: ", ";\n    margin-right:.8rem;\n    border-radius:.8rem;\n"]);
 
   _templateObject2$d = function _templateObject2() {
     return data;
@@ -3781,7 +3802,7 @@ function _templateObject2$d() {
 }
 
 function _templateObject$e() {
-  var data = _taggedTemplateLiteral([" \n\n\n        background-color: ", ";\n\n\n        text-decoration:none;\n\n\n        box-shadow:inset 0px 0px 0px 1px ", ";\n\n\n        cursor:inherit;\n\n\n        &::placeholder {\n\n\n            color: ", ";\n\n\n        }\n\n\n"]);
+  var data = _taggedTemplateLiteral([" \n        background-color: ", ";\n        text-decoration:none;\n        box-shadow:inset 0px 0px 0px 1px ", ";\n        cursor:inherit;\n        &::placeholder {\n            color: ", ";\n        }\n"]);
 
   _templateObject$e = function _templateObject() {
     return data;
@@ -3792,7 +3813,7 @@ function _templateObject$e() {
 var disabled$1 = core.css(_templateObject$e(), colors.theme3.xLight, colors.theme3.midLight, colors.theme3.midLight);
 var searchWrapperStyle = core.css(_templateObject2$d(), colors.common.white);
 var searchFieldInputWrapperStyles = core.css(_templateObject3$c());
-var searchFieldInputStyle = core.css(_templateObject4$b(), colors.common.white, colors.theme3.midLight, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme3.midDark, disabled$1);
+var searchFieldInputStyle = core.css(_templateObject4$b(), colors.common.white, spacing.xs, spacing.xs, spacing.s, colors.theme1.xDark, medium, colors.theme1.mid, colors.theme1.xDark, colors.theme3.midDark, disabled$1);
 var searchFieldButtonStyle = core.css(_templateObject5$a());
 var invertedBackgroundStyle$1 = core.css(_templateObject6$a());
 var clearInputStyle = core.css(_templateObject7$8(), colors.theme1.mid, medium);
@@ -3883,7 +3904,7 @@ var FormSearchField = React__default.forwardRef(function (_ref, _ref2) {
 });
 
 function _templateObject4$c() {
-  var data = _taggedTemplateLiteral(["\n\n\n    textarea {\n\n\n        border-color: #F00;\n\n\n    }\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    textarea {\n        border-color: #F00;\n    }\n"]);
 
   _templateObject4$c = function _templateObject4() {
     return data;
@@ -3893,7 +3914,7 @@ function _templateObject4$c() {
 }
 
 function _templateObject3$d() {
-  var data = _taggedTemplateLiteral(["\n\n\n  color: #4D4D4D;\n\n\n  font-size: 1.8rem;\n\n\n  line-height: 3.2rem;\n\n\n  margin-bottom: .8rem;\n\n\n  display: block;\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  color: #4D4D4D;\n  font-size: 1.8rem;\n  line-height: 3.2rem;\n  margin-bottom: .8rem;\n  display: block;\n"]);
 
   _templateObject3$d = function _templateObject3() {
     return data;
@@ -3903,7 +3924,7 @@ function _templateObject3$d() {
 }
 
 function _templateObject2$e() {
-  var data = _taggedTemplateLiteral(["\n\n\n    position: relative;\n\n\n\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: relative;\n\n"]);
 
   _templateObject2$e = function _templateObject2() {
     return data;
@@ -3913,7 +3934,7 @@ function _templateObject2$e() {
 }
 
 function _templateObject$f() {
-  var data = _taggedTemplateLiteral(["\n\n\n    padding: 1.2rem 1.6rem;\n\n\n    box-sizing: border-box;\n\n\n    border: 2px solid #979797;\n\n\n    font-family: Arial;\n\n\n    border-radius: 0.8rem;\n\n\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n\n\n    font-size: 1.8rem;\n\n\n    line-height: 3rem;\n\n\n    -webkit-appearance: textfield; /* safari fix */\n\n\n    margin-bottom: 2.4rem;\n\n\n    max-width: 100%;\n\n\n    min-width: 100%;\n\n\n\n\n\n    &:focus{\n\n\n        outline: none;\n\n\n        border-color: ", "\n\n\n    }\n\n\n\n\n\n    &::-webkit-search-cancel-button{\n\n\n        appearance: none;\n\n\n    }\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 1.2rem 1.6rem;\n    box-sizing: border-box;\n    border: 2px solid #979797;\n    font-family: Arial;\n    border-radius: 0.8rem;\n    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */\n    font-size: 1.8rem;\n    line-height: 3rem;\n    -webkit-appearance: textfield; /* safari fix */\n    margin-bottom: 2.4rem;\n    max-width: 100%;\n    min-width: 100%;\n\n    &:focus{\n        outline: none;\n        border-color: ", "\n    }\n\n    &::-webkit-search-cancel-button{\n        appearance: none;\n    }\n    &::placeholder, &::-webkit-input-placeholder {\n        font-style:italic;\n        color: ", ";\n    }\n"]);
 
   _templateObject$f = function _templateObject() {
     return data;
@@ -3921,7 +3942,7 @@ function _templateObject$f() {
 
   return data;
 }
-var TextAreaStyle = css(_templateObject$f(), colors.theme1.mid);
+var TextAreaStyle = css(_templateObject$f(), colors.theme1.mid, colors.theme3.mid);
 var TextAreaWrapperStyle = css(_templateObject2$e());
 var Label$1 = css(_templateObject3$d());
 var invalidStyle$1 = css(_templateObject4$c());
@@ -4450,7 +4471,7 @@ function _templateObject2$j() {
 }
 
 function _templateObject$l() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  font-weight: 500;\n  p {\n    color: ", ";\n  }\n  p.listItemHeadline {\n      color: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n    p {\n      text-decoration: none;\n    }\n  }\n  &:active {\n    background-color: ", ";\n    .listItemHeadline {\n      color: ", ";\n    }\n    p {\n      text-decoration: none;\n    }\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n  border-bottom: 1px solid ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  font-weight: 500;\n  margin-left: -", ";\n  margin-right: -", ";\n  padding-left: ", ";\n  padding-right: ", ";\n\n  p {\n    color: ", ";\n  }\n  p.listItemHeadline {\n      color: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n    p {\n      text-decoration: none;\n    }\n  }\n  &:active {\n    background-color: ", ";\n    .listItemHeadline {\n      color: ", ";\n    }\n    p {\n      text-decoration: none;\n    }\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n"]);
 
   _templateObject$l = function _templateObject() {
     return data;
@@ -4458,7 +4479,7 @@ function _templateObject$l() {
 
   return data;
 }
-var wrapper$4 = core.css(_templateObject$l(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.midLight);
+var wrapper$4 = core.css(_templateObject$l(), spacing.xs, spacing.xs, spacing.xs, spacing.xs, colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark);
 var news = core.css(_templateObject2$j(), colors.theme3.dark);
 var disabled$3 = core.css(_templateObject3$i());
 var headlineDisabled = core.css(_templateObject4$h(), colors.theme3.midDark);
@@ -4572,7 +4593,7 @@ function _templateObject2$k() {
 }
 
 function _templateObject$m() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  font-weight: 500;\n  p {\n    color: ", ";\n  }\n  p.listItemHeadline {\n      color: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n    p {\n      text-decoration: none;\n    }\n  }\n  &:active {\n    background-color: ", ";\n    .listItemHeadline {\n      color: ", ";\n    }\n    p {\n      text-decoration: none;\n    }\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n  border-bottom: 1px solid ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  font-weight: 500;\n  p {\n    color: ", ";\n  }\n  p.listItemHeadline {\n      color: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n    p {\n      text-decoration: none;\n    }\n  }\n  &:active {\n    background-color: ", ";\n    .listItemHeadline {\n      color: ", ";\n    }\n    p {\n      text-decoration: none;\n    }\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n"]);
 
   _templateObject$m = function _templateObject() {
     return data;
@@ -4580,7 +4601,7 @@ function _templateObject$m() {
 
   return data;
 }
-var wrapper$5 = core.css(_templateObject$m(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark, colors.theme3.light);
+var wrapper$5 = core.css(_templateObject$m(), colors.theme3.dark, colors.theme1.mid, colors.theme1.midLight, colors.theme1.midLight, colors.theme1.xDark);
 var news$1 = core.css(_templateObject2$k(), colors.theme3.dark);
 var disabled$4 = core.css(_templateObject3$j());
 var headlineDisabled$1 = core.css(_templateObject4$i(), colors.theme3.midDark);
@@ -4826,7 +4847,8 @@ var Source = function Source(_ref) {
       reviewedDateText = _ref.reviewedDateText,
       style = _ref.style,
       english = _ref.english,
-      bottomContent = _ref.bottomContent;
+      bottomContent = _ref.bottomContent,
+      sourceText = _ref.sourceText;
   var reviewed = reviewedDate ? new Date(reviewedDate) : null;
   var monthsSv = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
   var monthsEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -4837,7 +4859,7 @@ var Source = function Source(_ref) {
     css: usabilla ? firstRowUsabilla : firstRow
   }, usabilla), core.jsx("div", {
     css: secondRow
-  }, sourcesCollection && sourcesCollection.items.length > 0 && core.jsx("p", null, english ? 'Source: ' : 'Källa: ', sourcesCollection.items.map(function (item, idx) {
+  }, sourcesCollection && sourcesCollection.items.length > 0 && core.jsx("p", null, sourceText ? "".concat(sourceText, " ") : 'Källa: ', sourcesCollection.items.map(function (item, idx) {
     return core.jsx("a", {
       href: item.linkUrl,
       key: "link-" + idx,
@@ -5357,6 +5379,7 @@ exports.TagBlock = TagBlock;
 exports.TextArea = TextArea;
 exports.ValidationResponse = ValidationResponse;
 exports.WithContentExpander = WithContentExpander;
+exports.checkPath = checkPath;
 exports.colors = colors;
 exports.grayContentExpanderWrapper = grayContentExpanderWrapper;
 exports.grayFocusedOnExpansionWrapper = grayFocusedOnExpansionWrapper;
