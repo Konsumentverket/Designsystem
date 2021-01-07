@@ -10,6 +10,7 @@ export { DateFormat, Formats } from './DateFormat/DateFormat.js'
 export { Icon } from './Icon/Icon.js'
 export { EditorIcon } from './Icon/EditorIcon'
 // export { checkPath } from '../icons/SystemIcons/Check'
+export { checkPath } from './Icons/SystemIcons/Check/Check'
 // export { warnPath } from '../icons/SystemIcons/Warn'
 
 //headings
