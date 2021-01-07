@@ -4,7 +4,7 @@ import React, { useLayoutEffect, useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import NotesLoader from '../NotesLoader'
 import { Heading } from './Heading'
-import { SubHeading } from './SubHeading'
+import { SubHeading } from '../SubHeading/SubHeading'
 import { text, select } from '@storybook/addon-knobs';
 import { colors } from '../Colors/Colors'
 

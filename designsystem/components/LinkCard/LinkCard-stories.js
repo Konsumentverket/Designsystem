@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { text, color } from '@storybook/addon-knobs';
 import NotesLoader from '../NotesLoader';
 import { LinkCard } from './LinkCard';
-import { LinkTextCard } from './LinkTextCard';
+import { LinkTextCard } from '../LinkTextCard/LinkTextCard';
 import { colors } from '../Colors/Colors';
 import { css } from '@emotion/core';
 

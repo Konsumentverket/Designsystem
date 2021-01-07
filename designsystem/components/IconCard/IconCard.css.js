@@ -40,7 +40,8 @@ export const iconCardStyle = css`
     border: 1px solid ${colors.theme1.mid};
     &:hover {
         background-color: ${colors.theme1.midLight};
-        border-color: ${colors.theme1.xDark};
+        border-color: ${colors.theme1.mid};
+        box-shadow: inset 0 0 0 1px ${colors.theme1.mid};
         span {
             text-decoration:underline;
         }

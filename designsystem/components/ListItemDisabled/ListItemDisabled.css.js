@@ -31,7 +31,6 @@ export const wrapper = css`
   }
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
-  border-bottom: 1px solid ${colors.theme3.light};
 `
 export const news = css`
   font-size: 1.4rem;

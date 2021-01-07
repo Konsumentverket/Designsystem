@@ -7,6 +7,11 @@ export const wrapper = css`
   display: block;
   text-decoration: none;
   font-weight: 500;
+  margin-left: -${spacing.xs};
+  margin-right: -${spacing.xs};
+  padding-left: ${spacing.xs};
+  padding-right: ${spacing.xs};
+
   p {
     color: ${colors.theme3.dark};
   }
@@ -31,7 +36,6 @@ export const wrapper = css`
   }
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
-  border-bottom: 1px solid ${colors.theme3.midLight};
 `
 export const news = css`
   font-size: 1.4rem;

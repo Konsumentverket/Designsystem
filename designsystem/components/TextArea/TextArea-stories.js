@@ -6,7 +6,6 @@ import NotesLoader from '../NotesLoader';
 import { text } from '@storybook/addon-knobs';
 import { TextArea } from './TextArea';
 import { css } from '@emotion/core';
-import { SubHeading } from '../Headings/SubHeading';
 
 let name = 'TextArea';
 

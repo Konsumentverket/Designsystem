@@ -16,6 +16,7 @@
   },
   "scripts": {
     "start": "nodemon --watch designsystem --exec \"rollup -c\"",
+    "bitwatch": "bit watch",
     "build": "rollup -c"
   },
   "devDependencies": {
@@ -37,5 +38,12 @@
     "date-fns": "^2.14.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/react@1.0.21"
+    },
+    "componentsDefaultDirectory": "designsystem/components/{name}",
+    "packageManager": "npm"
   }
 }

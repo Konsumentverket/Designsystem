@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import {selectStyle,selectWrapperStyle, invalidStyle} from './Dropdown.css';
-import { Label } from '../TextArea/TextArea.css';
+import {selectStyle,selectWrapperStyle, invalidStyle,labelStyle} from './Dropdown.css';
 import { useState } from 'react';
 
 export const Dropdown = ({label,id,onChange,validationError,children, ...other}) => {
@@ -10,7 +9,7 @@ export const Dropdown = ({label,id,onChange,validationError,children, ...other})
 
     return (
     <div css={[selectWrapperStyle, invalid]}>
-        { label && <label css={Label} htmlFor={id}>{label}</label> }
+        { label && <label css={labelStyle} htmlFor={id}>{label}</label> }
         {validationError}
         <select id={id} css={selectStyle} data-hasvalue={!!value} value={value || ""} onChange={(e) => {
             setValue(e.target.value)

@@ -2,12 +2,11 @@ import { css, Global } from '@emotion/core'
 import { spacing } from '../Spacing/Spacing'
 import { colors } from '../Colors/Colors';
 import React, { useEffect } from 'react';
-import { checkPath } from '../../icons/SystemIcons/Check';
-import { filePdfPath } from '../../icons/SystemIcons/FilePdf';
-import { fileWordPath } from '../../icons/SystemIcons/FileWord';
-import { filePowerpointPath } from '../../icons/SystemIcons/FilePowerpoint';
-import { fileExcelPath } from '../../icons/SystemIcons/FileExcel';
-import { filePath } from '../../icons/SystemIcons/File';
+import { filePdfPath } from '../Icons/SystemIcons/FilePdf/FilePdf';
+import { fileWordPath } from '../Icons/SystemIcons/FileWord/FileWord';
+import { filePowerpointPath } from '../Icons/SystemIcons/FilePowerpoint/FilePowerpoint';
+import { fileExcelPath } from '../Icons/SystemIcons/FileExcel/FileExcel';
+import { filePath } from '../Icons/SystemIcons/File/File';
 
 export const GlobalStyles = ({
   fontSize = "62.5%",
@@ -73,41 +72,64 @@ const globalStyles = (
       margin:0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;   
-      -webkit-text-size-adjust: 100%; 
-      -moz-text-size-adjust: 100%;
       margin: 0;
+
+      &:not(.tabnav){
+        *:focus {
+          outline: none;
+        }
+      }
+      &.tabnav {
+        *:focus {
+          outline: 4px solid ${colors.states.focus};
+        }
+      }
+
+    }
+
       
+    p {
+      padding-bottom: ${spacing.s};
+      font-size: 1.8rem;
+      line-height: 3.2rem;
+    }
+
+    ul {
+      list-style: bullet inside none;
+      padding-left: ${spacing.xl};
+      li {
+        margin-bottom: ${spacing.s};
+      }
       p {
-        padding-bottom: ${spacing.s};
-        font-size: 1.8rem;
-        line-height: 3.2rem;
-      }
-
-      ul {
-        list-style: bullet inside none;
-        padding-left: ${spacing.xl};
-        li {
-          margin-bottom: ${spacing.s};
-        }
-        p {
-          display: inline;
-        }
-      }
-
-      h1, h2 {
-        margin-bottom: 1.6rem;
-      }
-      h3, h4, h5, h6 {
-        margin-bottom: .8rem;
-      }
-  a {
-    &.external {
-      svg.external {
-        margin-left: 3px;
+        display: inline;
       }
     }
 
-    &:not(.noStyle){
+    h1, h2 {
+      margin-bottom: 1.6rem;
+    }
+    h3, h4, h5, h6 {
+      margin-bottom: .8rem;
+    }
+
+    i {
+      font-style: italic;
+    }
+    strong {
+      font-weight: 700;
+    }
+    u {
+      text-decoration: underline;
+    }
+
+    a {
+      &.external {
+        svg.external {
+          margin-left: 3px;
+        }
+      }
+
+      &:not(.noStyle){
         text-decoration:underline;
         font-weight:700;
         color:${colors.theme1.mid};
@@ -146,7 +168,7 @@ const globalStyles = (
         }
         
         &[href$=".pdf"] { ${fileIcon(filePdfPath)} }
-         
+          
         &[href$=".ppt"],
         &[href$=".pptx"] { ${fileIcon(filePowerpointPath)} }
         
@@ -184,45 +206,23 @@ const globalStyles = (
             fill: ${colors.theme1.xDark};
           }
         }
-        
-      }
-      &.invertedStyle:not(.noStyle){
-        &:visited{
-          background-color:inherit;
-        }
-        &:hover {
-          background-color:#fff;
-          box-shadow: 0 0 0 4px #fff;
-        }
-        &:active {
-          box-shadow: 0 0 0 4px #fff;
-          background-color:#fff;
-      }
-    }
-  }
-
-      &:not(.tabnav){
-        *:focus {
-          outline: none;
+      
+        &.invertedStyle:not(.noStyle){
+          &:visited{
+            background-color:inherit;
+          }
+          &:hover {
+            background-color:#fff;
+            box-shadow: 0 0 0 4px #fff;
+          }
+          &:active {
+            box-shadow: 0 0 0 4px #fff;
+            background-color:#fff;
+          }
         }
       }
 
-      &.tabnav {
-        *:focus {
-          outline: 4px solid ${colors.states.focus};
-        }
-      }
-
-    i {
-      font-style: italic;
     }
-    strong {
-      font-weight: 700;
-    }
-    u {
-      text-decoration: underline;
-    }
-  }
 `;
 
 const LinkColors = css`

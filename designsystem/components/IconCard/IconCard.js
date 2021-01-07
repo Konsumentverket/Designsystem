@@ -2,16 +2,15 @@
 import React from 'react'
 import { jsx } from '@emotion/core'
 import { iconCardStyle, arrowStyle, iconStyle, iconText, noIcon } from './IconCard.css';
-import { Icon } from '../Icon/Icon.js';
-import { EditorIcon } from '../Icon/EditorIcon.js';
+import Arrow from '../Icons/SystemIcons/Arrow/Arrow';
 
 
 const IconCard = React.forwardRef(({ icon, text, url, style, onClick, id }, ref) => {
     const haveIcon = !icon ? noIcon : null
     return <a ref={ref} id={id} href={url} onClick={onClick} css={[iconCardStyle, style]} className="noStyle" >
-        {icon && <EditorIcon aria-hidden="true" icon={icon} style={iconStyle}>Ikon</EditorIcon>}
+        {icon && React.cloneElement(icon,{"aria-hidden":"true", style:iconStyle})}
         <span css={[iconText, haveIcon]} dangerouslySetInnerHTML={{__html: text}}></span>
-        <Icon aria-hidden="true" icon="Arrow" style={arrowStyle} />
+        <Arrow aria-hidden="true" style={arrowStyle} />
     </a>
 })
 

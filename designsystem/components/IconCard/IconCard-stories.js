@@ -6,8 +6,10 @@ import { storiesOf } from '@storybook/react';
 import { text, select } from '@storybook/addon-knobs';
 import NotesLoader from '../NotesLoader';
 import { IconCard } from './IconCard';
-import { editorIconDefinitions } from '../Icon/EditorIcon';
 import { colors } from '../Colors/Colors';
+import Cars from '../Icons/EditorIcons/Cars/Cars';
+import ConsumerRights from '../Icons/EditorIcons/ConsumerRights/ConsumerRights';
+import GymAndWorkoutService from '../Icons/EditorIcons/GymAndWorkoutService/GymAndWorkoutService';
 
 let name = 'Ikonkort';
 storiesOf('Digitala Produkter|Komponenter/Kort', module)
@@ -22,19 +24,19 @@ storiesOf('Digitala Produkter|Komponenter/Kort', module)
                 <div css={linkCardStyle}>
                     <IconCard 
                         url={text("Url", "https://www.hallakonsument.se")}
-                        icon={select("Ikon", ["", ...Object.keys(editorIconDefinitions)], "Cars")}
+                        icon={<Cars />}
                         text={text("Text", "Ikonkort")} />
                 </div>
                 <div css={linkCardStyle}>
                     <IconCard 
                         url={text("Url", "https://www.hallakonsument.se")}
-                        icon={"ConsumerRights"}
+                        icon={<ConsumerRights />}
                         text={"Ansök om hjälp"} />
                 </div>
                 <div css={linkCardStyle}>
                     <IconCard 
                         url={text("Url", "https://www.hallakonsument.se")}
-                        icon={"GymAndWorkoutService"}
+                        icon={<GymAndWorkoutService />}
                         text={"Hjälp med gymkort"} />
                 </div>
             </div>

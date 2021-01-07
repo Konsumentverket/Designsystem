@@ -6,10 +6,11 @@ import { medium, large } from '../GlobalStyles/globalStyles'
 export const focusWrapper = css`
   min-height: 25.6rem;
   display:flex;
-  height: calc(100% - .8rem);
+  /* height: calc(100% - .8rem); */
+  height: 100%;
   width:100%;
   flex-direction:column;
-  background-color: ${colors.theme2.mid};
+  background-color: ${colors.theme2.light};
   border-bottom-right-radius:.8rem;
   border-bottom-left-radius:.8rem;
 
@@ -21,13 +22,33 @@ export const linkWrapper = css`
   display:flex;
 
   &:hover .focusWrapper {
-      background-color: ${colors.theme2.midDark};      
+      background-color: #E6C3D1;
   }
-  &:active .focusWrapper {
-      background-color: ${colors.theme2.dark};      
+  &:hover {
+    box-shadow: 0px 0px 0px 2px ${colors.theme2.mid};
+    border-radius: 8px;
   }
+  &:active {
+    box-shadow: 0px 0px 0px 2px ${colors.theme1.xDark};
+    border-radius: 8px;
+  }
+  &:active h3 {
+      color: ${colors.theme1.xDark};      
+  }
+  &:active h3 > svg {
+    fill: ${colors.theme1.xDark};
+  }
+
   &:hover h3, &:active h3 {
     text-decoration:underline;
+  }
+  .image {
+    max-width: 100%;
+    max-height: 100%;
+    transition: .1s all;
+  }
+  &:hover .image {
+    filter: brightness(75%);
   }
   
   ${medium} {
@@ -37,7 +58,7 @@ export const linkWrapper = css`
 `
 
 export const focusHeadline = css`
-  color: #fff;
+  color: ${colors.theme2.mid};
   font-size: 2.4rem;
   line-height: 3.2rem;
   margin: 0 0 .8rem 0;
@@ -45,9 +66,9 @@ export const focusHeadline = css`
 `
 
 export const focusText = css`
-  color: #fff;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
+  color: ${colors.theme3.dark};
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   margin:0;
   padding:0;
 `
@@ -55,7 +76,6 @@ export const focusText = css`
 export const textArea = css`
   margin:1.6rem 2.4rem 2.4rem 2.4rem;
   ${medium} {
-    
       max-width:32.8rem;
   }
 `
@@ -83,7 +103,7 @@ export const pictureWrapper = css`
 export const iconBackground = css`
   border-top-right-radius: .8rem;
   border-top-left-radius:.8rem;
-  background-color: ${colors.theme2.light};
+  background-color: ${colors.theme2.mid};
   padding-top:36.84%;
   position:relative;
   
@@ -93,12 +113,12 @@ export const iconBackground = css`
 export const externalIcon = css`
   position: relative;
   margin-left: 0.4rem;
-  fill: #fff;
+  fill: ${colors.theme2.mid};
 `
 
 export const puffIcon = css`
   position:absolute;
-  fill: #b50255;
+  fill: #fff;
   width:6.4rem;
   height:6.4rem;
   left:calc(50% - 3.2rem);

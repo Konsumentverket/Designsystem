@@ -6,7 +6,7 @@ import NotesLoader from '../NotesLoader';
 import { text } from '@storybook/addon-knobs';
 import { css } from '@emotion/core';
 import { WithContentExpander } from './WithContentExpander';
-import { SubHeading } from '../Headings/SubHeading';
+import { SubHeading } from '../SubHeading/SubHeading';
 import { grayContentExpanderWrapper, grayFocusedOnExpansionWrapper } from './WithContentExpander.css';
 import { Button } from '../Button/Button';
 

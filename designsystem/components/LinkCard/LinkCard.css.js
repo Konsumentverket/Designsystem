@@ -110,15 +110,16 @@ export const showAllLink = css`
     font-size: 1.4rem;
     cursor: pointer;
     display: block;
-    border-top: 1px solid ${colors.theme3.midLight};
-    padding: .8rem 0 1.6rem 0;
-    margin: 0 1.6rem;
+    padding: 0;
     line-height: 2.4rem;
     margin-top: auto;
     a{
+        padding: 1.6rem;
         font-weight: 500 !important;
+        display: block;
+        border-radius: 0 !important;
     }
-    
+
 `
 
 export const innerTextWrapperStyle = css`
