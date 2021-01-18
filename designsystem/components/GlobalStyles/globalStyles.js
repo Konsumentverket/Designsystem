@@ -182,7 +182,7 @@ const globalStyles = (
 
         &:hover {
           box-shadow: 0 0 0 4px ${colors.theme1.midLight};
-          border-radius: .8rem;
+          border-radius: .4rem;
           background-color:${colors.theme1.midLight};
           text-decoration:none;
           svg {
@@ -198,7 +198,7 @@ const globalStyles = (
         
         &:active{
           box-shadow: 0 0 0 4px ${colors.theme1.midLight};
-          border-radius: .8rem;
+          border-radius: .4rem;
           background-color:${colors.theme1.midLight};
           color:${colors.theme1.xDark};
           text-decoration:none;

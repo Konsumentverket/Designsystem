@@ -105,7 +105,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/button@0.0.4": {
+    "konsumentverket.kov-compo/button@0.0.6": {
         "files": [
             {
                 "name": "Button.css.js",
@@ -148,7 +148,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/campaign-focus-puff@0.0.5": {
+    "konsumentverket.kov-compo/campaign-focus-puff@0.0.7": {
         "files": [
             {
                 "name": "CampaignFocusPuff.css.js",
@@ -363,7 +363,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/display-alphabet@0.0.2": {
+    "konsumentverket.kov-compo/display-alphabet@0.0.4": {
         "files": [
             {
                 "name": "DisplayAlphabet.css.js",
@@ -475,7 +475,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/expand-button@0.0.3": {
+    "konsumentverket.kov-compo/expand-button@0.0.5": {
         "files": [
             {
                 "name": "ExpandButton.css.js",
@@ -505,7 +505,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/fact-box@0.0.3": {
+    "konsumentverket.kov-compo/fact-box@0.0.5": {
         "files": [
             {
                 "name": "FactBox.css.js",
@@ -600,7 +600,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/focus-puff@0.0.5": {
+    "konsumentverket.kov-compo/focus-puff@0.0.7": {
         "files": [
             {
                 "name": "FocusPuff.css.js",
@@ -651,7 +651,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/form-search-field@0.0.9": {
+    "konsumentverket.kov-compo/form-search-field@0.0.11": {
         "files": [
             {
                 "name": "FormSearchField.css.js",
@@ -681,7 +681,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/global-styles@0.0.2": {
+    "konsumentverket.kov-compo/global-styles@0.0.4": {
         "files": [
             {
                 "name": "globalStyles.js",
@@ -733,7 +733,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/heading@0.0.4": {
+    "konsumentverket.kov-compo/heading@0.0.6": {
         "files": [
             {
                 "name": "Heading.js",
@@ -779,7 +779,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/input-text@0.0.7": {
+    "konsumentverket.kov-compo/input-text@0.0.9": {
         "files": [
             {
                 "name": "InputText.css.js",
@@ -848,7 +848,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/link-card@0.0.4": {
+    "konsumentverket.kov-compo/link-card@0.0.6": {
         "files": [
             {
                 "name": "LinkCard.css.js",
@@ -865,7 +865,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/link-text-card@0.0.6": {
+    "konsumentverket.kov-compo/link-text-card@0.0.8": {
         "files": [
             {
                 "name": "LinkTextCard.js",
@@ -1053,7 +1053,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/pagination@0.0.5": {
+    "konsumentverket.kov-compo/pagination@0.0.7": {
         "files": [
             {
                 "name": "Pagination.css.js",
@@ -1134,7 +1134,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/prerequisites-box@0.0.5": {
+    "konsumentverket.kov-compo/prerequisites-box@0.0.7": {
         "files": [
             {
                 "name": "PrerequisitesBox.css.js",
@@ -1228,7 +1228,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/source@0.0.6": {
+    "konsumentverket.kov-compo/source@0.0.8": {
         "files": [
             {
                 "name": "Source.css.js",
@@ -1262,7 +1262,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/sub-heading@0.0.5": {
+    "konsumentverket.kov-compo/sub-heading@0.0.7": {
         "files": [
             {
                 "name": "SubHeading.css.js",
@@ -1326,7 +1326,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/text-area@0.0.7": {
+    "konsumentverket.kov-compo/text-area@0.0.9": {
         "files": [
             {
                 "name": "TextArea.css.js",
@@ -1412,7 +1412,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/with-content-expander@0.0.5": {
+    "konsumentverket.kov-compo/with-content-expander@0.0.7": {
         "files": [
             {
                 "relativePath": "designsystem/components/WithContentExpander/WithContentExpander.css.js",
