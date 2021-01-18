@@ -46,6 +46,7 @@ export const searchFieldInputStyle = css`
     font-weight: 500;
     box-sizing: border-box;
     width: 100%; 
+    height: 100%;
 
     &::-webkit-search-cancel-button{
         appearance: none;

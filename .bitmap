@@ -651,7 +651,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/form-search-field@0.0.11": {
+    "konsumentverket.kov-compo/form-search-field@0.0.12": {
         "files": [
             {
                 "name": "FormSearchField.css.js",
