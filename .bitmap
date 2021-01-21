@@ -92,7 +92,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/burger@0.0.1": {
+    "konsumentverket.kov-compo/burger@0.0.2": {
         "files": [
             {
                 "relativePath": "designsystem/components/Icons/SystemIcons/Burger/Burger.js",
