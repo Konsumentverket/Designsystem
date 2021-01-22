@@ -91,7 +91,7 @@ export const fieldInput = css`
 `
 
 export const fieldLabel = css`
-    color: #464646;
+    color: ${colors.theme1.xDark};
     width: 100%;
     font-size: 21px;
     line-height: 28px;
