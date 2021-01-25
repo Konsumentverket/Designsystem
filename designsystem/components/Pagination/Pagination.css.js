@@ -44,6 +44,10 @@ export const pageStyle = css`
         width: 6.0rem;
     }
 
+    &:hover {
+        box-shadow: none !important;
+    }
+
 `
 
 export const prevPageStyle = css`
