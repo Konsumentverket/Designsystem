@@ -1,6 +1,7 @@
 import { css } from "@emotion/core";
 import { colors } from "../Colors/Colors";
 import { large, medium } from "../GlobalStyles/globalStyles";
+import { spacing } from "../Spacing/Spacing";
 
 export const paginationWrapperStyle = css`
 
@@ -46,6 +47,7 @@ export const pageStyle = css`
 
     &:hover {
         box-shadow: none !important;
+        border-radius: ${spacing.xs};
     }
 
 `
