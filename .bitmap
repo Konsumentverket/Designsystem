@@ -1053,7 +1053,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/pagination@0.0.10": {
+    "konsumentverket.kov-compo/pagination@0.0.11": {
         "files": [
             {
                 "name": "Pagination.css.js",

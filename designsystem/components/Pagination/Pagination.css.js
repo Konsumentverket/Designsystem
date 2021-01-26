@@ -47,7 +47,7 @@ export const pageStyle = css`
 
     &:hover {
         box-shadow: none !important;
-        border-radius: ${spacing.xs};
+        border-radius: ${spacing.xs} !important;
     }
 
 `
