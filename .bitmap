@@ -105,7 +105,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/button@0.0.6": {
+    "konsumentverket.kov-compo/button@0.0.7": {
         "files": [
             {
                 "name": "Button.css.js",
@@ -651,7 +651,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/form-search-field@0.0.12": {
+    "konsumentverket.kov-compo/form-search-field@0.0.13": {
         "files": [
             {
                 "name": "FormSearchField.css.js",

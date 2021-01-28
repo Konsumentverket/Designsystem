@@ -65,7 +65,7 @@ export const secondaryStyle = css`
         background-color:${colors.buttons.secondary.hover};
         text-decoration:underline;
         border-color:${colors.theme1.xDark};
-        box-shadow: inset 0 0 0 2px ${colors.theme1.mid};
+        box-shadow: inset 0 0 0 2px ${colors.buttons.secondary.borderColor};
     }
     &:active {
         color:${colors.common.white};
