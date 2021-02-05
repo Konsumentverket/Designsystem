@@ -363,7 +363,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/display-alphabet@0.0.4": {
+    "konsumentverket.kov-compo/display-alphabet@0.0.5": {
         "files": [
             {
                 "name": "DisplayAlphabet.css.js",

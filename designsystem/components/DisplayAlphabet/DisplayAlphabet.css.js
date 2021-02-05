@@ -32,7 +32,11 @@ export const activeLetter = css`
   background-color:${colors.theme1.dark};
   color: ${colors.common.white} !important;
   :hover {
-    background-color:${colors.theme1.dark} !important;
+    background-color:${colors.theme1.midLight} !important;
+    border-color: ${colors.theme1.midLight};
+    color: ${colors.theme1.mid} !important;
+    border-radius: .8rem !important;
+    box-shadow: none !important;
   }
 `
 
