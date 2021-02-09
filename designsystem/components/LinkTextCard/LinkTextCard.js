@@ -1,71 +1,106 @@
-/** @jsx jsx */
+/** @jsx jsx */
 
-import { jsx, css } from '@emotion/core'
 
-import React from 'react';
+import { jsx, css } from '@emotion/core'
 
-import { wrapper, linkTextWrapper, mainLinkStyle, innerTextWrapperStyle, linkTextCardContentStyle, linkTextMainLinkStyle } from '../LinkCard/LinkCard.css';
 
-import {SubHeading} from '../SubHeading/SubHeading'
+import React from 'react';
 
-import Arrow from '../Icons/SystemIcons/Arrow/Arrow';
 
-
+import { wrapper, linkTextWrapper, mainLinkStyle, innerTextWrapperStyle, linkTextCardContentStyle, linkTextMainLinkStyle } from '../LinkCard/LinkCard.css';
 
-const LinkTextCard = React.forwardRef(({text,href,children,id,
 
-    headingLevel = 2, onClick, style, dir,lang, ...other}, ref) => {
+import {SubHeading} from '../SubHeading/SubHeading'
 
-
 
-    const renderLinkText = () => {
+import Arrow from '../Icons/SystemIcons/Arrow/Arrow';
 
-
 
-        if(children){
 
-            return <SubHeading level={headingLevel} styleLevel={3} style={innerTextWrapperStyle}>
 
-                <span>{text}</span><Arrow aria-hidden='true' />
 
-            </SubHeading>;
+const LinkTextCard = React.forwardRef(({text,href,children,id,
 
-        }
 
-        else{
+    headingLevel = 2, onClick, style, dir,lang, ...other}, ref) => {
 
-            return <div css={innerTextWrapperStyle}>
 
-                <span>{text}</span><Arrow aria-hidden='true' />
 
-            </div>
 
-        }
 
-
+    const renderLinkText = () => {
 
-    }
 
-
 
-    return <div id={id} dir={dir} css={[wrapper,linkTextWrapper,style]} lang={lang} {...other}>
 
-            <a ref={ref} href={href} css={[mainLinkStyle,linkTextMainLinkStyle]} onClick={onClick}>
 
-            {renderLinkText()}
+        if(children){
 
-            {children && <span css={linkTextCardContentStyle}>{children}</span>}
 
-            </a>
+            return <SubHeading level={headingLevel} styleLevel={3} style={innerTextWrapperStyle}>
 
-    </div>
 
-
+                <span>{text}</span><Arrow aria-hidden='true' />
 
-
 
-})
+            </SubHeading>;
 
-LinkTextCard.displayName = "LinkTextCard"
+
+        }
+
+
+        else{
+
+
+            return <div css={innerTextWrapperStyle}>
+
+
+                <span>{text}</span><Arrow aria-hidden='true' />
+
+
+            </div>
+
+
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+    return <div id={id} dir={dir} css={[wrapper,linkTextWrapper,style]} lang={lang} {...other}>
+
+
+            <a ref={ref} href={href} css={[mainLinkStyle,linkTextMainLinkStyle]} onClick={onClick}>
+
+
+            {renderLinkText()}
+
+
+            {children && <span css={linkTextCardContentStyle}>{children}</span>}
+
+
+            </a>
+
+
+    </div>
+
+
+
+
+
+
+
+
+})
+
+
+LinkTextCard.displayName = "LinkTextCard"
+
 
 export {LinkTextCard};

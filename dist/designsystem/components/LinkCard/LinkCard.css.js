@@ -9,10 +9,12 @@ var _core = require("@emotion/core");
 
 var _Colors = require("../Colors/Colors");
 
+var _globalStyles = require("../GlobalStyles/globalStyles");
+
 var _Spacing = require("../Spacing/Spacing");
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral([" \n    font-size: 2.1rem;\n    line-height: 2.4rem;\n    font-weight: 500;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 2.1rem;\n    line-height: 2.4rem;\n    font-weight: 500;\n\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -42,7 +44,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.4rem;\n    cursor: pointer;\n    display: block;\n    border-top: 1px solid ", ";\n    padding: .8rem 0 1.6rem 0;\n    margin: 0 1.6rem;\n    line-height: 2.4rem;\n    margin-top: auto;\n    a{\n        font-weight: 500 !important;\n    }\n    \n"]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.4rem;\n    cursor: pointer;\n    display: block;\n    padding: 0;\n    line-height: 2.4rem;\n    margin-top: auto;\n    a{\n        padding: 1.6rem;\n        font-weight: 500 !important;\n        display: block;\n        border-radius: 0 !important;\n    }\n\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -72,7 +74,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    padding: 1.6rem;\n    box-sizing:border-box;\n    text-decoration: none !important;\n    \n    &:hover{\n        border-radius: .8rem .8rem 0 0 !important;\n        box-shadow: none !important;\n        h2 {\n            text-decoration: underline!important;\n        }\n    }\n    &:visited {\n        color: ", "!important;\n        svg{\n            fill: ", "!important;\n        }\n    }\n    &:active {\n        background-color: ", "!important;\n        color: ", "!important;\n        h2, span {\n            color: ", "!important;\n        }\n        svg{\n            fill: ", "!important;\n        }\n    }\n\n    .tabnav &:focus {\n        outline: none;\n\n        > *{\n            outline: 4px solid ", ";\n            outline-offset: 6px;\n        }\n    }\n\n\n\n    width: 100%;\n    span{\n        max-width: 84%;\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n        transform: rotate(-90deg);\n    }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding: 1.6rem;\n    box-sizing:border-box;\n    text-decoration: none !important;\n\n    &:hover{\n        border-radius: .8rem .8rem 0 0 !important;\n        box-shadow: none !important;\n        h2 {\n            text-decoration: underline!important;\n        }\n    }\n    &:visited {\n        color: ", "!important;\n        svg{\n            fill: ", "!important;\n        }\n    }\n    &:active {\n        background-color: ", "!important;\n        color: ", "!important;\n        h2, span {\n            color: ", "!important;\n        }\n        svg{\n            fill: ", "!important;\n        }\n    }\n\n    .tabnav &:focus {\n        outline: none;\n\n        > *{\n            outline: 4px solid ", ";\n            outline-offset: 6px;\n        }\n    }\n\n\n\n    width: 100%;\n    span{\n        max-width: 84%;\n        ", "{\n            max-width: 95%;\n        }\n    }\n    [dir='rtl'] &{\n        svg{\n            right: 1.4rem;;\n            transform: rotate(90deg);\n        }\n    }\n    svg{\n        flex-shrink: 0;\n        height: 3.2rem;\n        width: 3.2rem;\n        position: relative;\n        right: -1.4rem;\n        transform: rotate(-90deg);\n    }\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -82,7 +84,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    .tabnav &:focus {\n        outline: 4px solid ", ";\n        \n        > *{\n            outline: none;\n        }\n    }\n    padding: 2.4rem 1.6rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n    .tabnav &:focus {\n        outline: 4px solid ", ";\n\n        > *{\n            outline: none;\n        }\n    }\n    padding: 2.4rem 1.6rem;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -92,7 +94,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    overflow: visible;\n"]);
+  var data = _taggedTemplateLiteral(["\n    /* overflow: visible; */\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -119,13 +121,13 @@ var linkTextWrapper = (0, _core.css)(_templateObject2());
 exports.linkTextWrapper = linkTextWrapper;
 var linkTextMainLinkStyle = (0, _core.css)(_templateObject3(), _Colors.colors.states.focus);
 exports.linkTextMainLinkStyle = linkTextMainLinkStyle;
-var mainLinkStyle = (0, _core.css)(_templateObject4(), _Colors.colors.theme1.mid, _Colors.colors.theme1.mid, _Colors.colors.theme1.xDark, _Colors.colors.common.white, _Colors.colors.common.white, _Colors.colors.common.white, _Colors.colors.states.focus);
+var mainLinkStyle = (0, _core.css)(_templateObject4(), _Colors.colors.theme1.mid, _Colors.colors.theme1.mid, _Colors.colors.theme1.xDark, _Colors.colors.common.white, _Colors.colors.common.white, _Colors.colors.common.white, _Colors.colors.states.focus, _globalStyles.medium);
 exports.mainLinkStyle = mainLinkStyle;
 var rotateArrow = (0, _core.css)(_templateObject5());
 exports.rotateArrow = rotateArrow;
 var childrenWrapper = (0, _core.css)(_templateObject6());
 exports.childrenWrapper = childrenWrapper;
-var showAllLink = (0, _core.css)(_templateObject7(), _Colors.colors.theme3.midLight);
+var showAllLink = (0, _core.css)(_templateObject7());
 exports.showAllLink = showAllLink;
 var innerTextWrapperStyle = (0, _core.css)(_templateObject8(), _Colors.colors.theme1.mid);
 exports.innerTextWrapperStyle = innerTextWrapperStyle;

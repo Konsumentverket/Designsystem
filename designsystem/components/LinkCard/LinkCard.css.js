@@ -1,5 +1,6 @@
 import { css } from "@emotion/core";
 import { colors } from "../Colors/Colors";
+import { medium } from "../GlobalStyles/globalStyles";
 import { spacing } from "../Spacing/Spacing";
 
 export const wrapper = css`
@@ -14,13 +15,13 @@ export const wrapper = css`
 `
 
 export const linkTextWrapper = css`
-    overflow: visible;
+    /* overflow: visible; */
 `
 
 export const linkTextMainLinkStyle = css`
     .tabnav &:focus {
         outline: 4px solid ${colors.states.focus};
-        
+
         > *{
             outline: none;
         }
@@ -32,7 +33,7 @@ export const mainLinkStyle = css`
     padding: 1.6rem;
     box-sizing:border-box;
     text-decoration: none !important;
-    
+
     &:hover{
         border-radius: .8rem .8rem 0 0 !important;
         box-shadow: none !important;
@@ -71,6 +72,9 @@ export const mainLinkStyle = css`
     width: 100%;
     span{
         max-width: 84%;
+        ${medium}{
+            max-width: 95%;
+        }
     }
     [dir='rtl'] &{
         svg{
@@ -153,7 +157,7 @@ export const linkTextCardContentStyle = css`
 
 `
 
-export const customFontSize = css` 
+export const customFontSize = css`
     font-size: 2.1rem;
     line-height: 2.4rem;
     font-weight: 500;

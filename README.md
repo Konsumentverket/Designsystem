@@ -1,12 +1,12 @@
 ﻿# Konsumentverkets Designsystem
 
-Arkitektur/ Översikt:  
+Arkitektur/ Översikt:
 [https://github.com/Konsumentverket/FlippadArkitektur/](https://github.com/Konsumentverket/FlippadArkitektur/)
 
-Designsystem för Hallå konsument:  
+Designsystem för Hallå konsument:
 [https://konsumentverket.github.io/designsystem/sites/hallakonsument/build/](https://konsumentverket.github.io/designsystem/sites/hallakonsument/build/)
 
-Designsystem för Microsajt:  
+Designsystem för Microsajt:
 [https://konsumentverket.github.io/designsystem/sites/microsite/build](https://konsumentverket.github.io/designsystem/sites/microsite/build)
 
 
@@ -42,7 +42,7 @@ Navigera till \designsystem\ mappen och kör följande script:
 ### För att återställa
 ```
     cd ~/projects/flippad_web
-    npm uninstall --no-save kov-components && npm install 
+    npm uninstall --no-save kov-components && npm install
     cd ~/projects/Konsumentverket.github.io
     npm uninstall
 ```
@@ -63,3 +63,8 @@ I projektets root katalog för föjande kommando:
     npm start
 ```
 
+## Bit.dev
+
+```
+    bit export konsumentverket.kov-compo
+```
