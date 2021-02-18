@@ -100,7 +100,7 @@ const mfsTheme = {
         "xDark": "#162259",
         "dark": "#314575",
         "midDark": "#314575",
-        "mid": "#004a93",
+        "mid": "#0061c2",
         "midLight": "#FDEBCC",
         "light": "#FDEBCC",
     },
@@ -108,11 +108,20 @@ const mfsTheme = {
         "xDark": "#8C002D",
         "dark": "#8C002D",
         "midDark": "#A10042",
-        "mid": "#F59C00",
+        "mid": "#ddf1fd",
         "midLight": "#F59C00",
         "light": "#FDEBCC",
         "xLight": "#F6E1EB"
-    }
+    },
+    theme3: {
+        "xDark": "#161616",
+        "dark": "#4D4D4D",
+        "midDark": "#6B6B6B",
+        "mid": "#6B6B6B",
+        "midLight": "#D0D0D0",
+        "light": "#e7e8ee",
+        "xLight": "#F4F8FB"
+    },
 }
 
 const colors = process.env.THEME === 'ecc'
