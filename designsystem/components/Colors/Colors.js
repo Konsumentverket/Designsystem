@@ -95,9 +95,30 @@ const eccTheme = {
     }
 }
 
+const mfsTheme = {
+    theme1: {
+        "xDark": "#162259",
+        "dark": "#314575",
+        "midDark": "#314575",
+        "mid": "#004a93",
+        "midLight": "#FDEBCC",
+        "light": "#FDEBCC",
+    },
+    theme2: {
+        "xDark": "#8C002D",
+        "dark": "#8C002D",
+        "midDark": "#A10042",
+        "mid": "#F59C00",
+        "midLight": "#F59C00",
+        "light": "#FDEBCC",
+        "xLight": "#F6E1EB"
+    }
+}
+
 const colors = process.env.THEME === 'ecc'
     ? Object.assign({}, defaultTheme, eccTheme)
-    : defaultTheme
+    : (process.env.THEME === 'mfs' ? Object.assign({}, defaultTheme, mfsTheme)
+    : defaultTheme)
 
 
 export { colors }
