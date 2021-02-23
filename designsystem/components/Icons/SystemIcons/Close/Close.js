@@ -6,7 +6,7 @@ export const closePath = "M15.5696544,12.005 L23.6488809,3.92612623 C24.1160647,
 
 export default ({ className, style, title, ...otherAttr }) => {
 	return (
-		<svg className={className} css={style} width="24px" height="24px" viewBox="0 0 24 24" {...otherAttr}>
+		<svg className={className} css={style} width="24px" height="24px" viewBox="-2 -2 28 28" {...otherAttr}>
 			<title>{title}</title>
 			<path d={closePath}></path>
 		</svg>

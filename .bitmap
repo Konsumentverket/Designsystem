@@ -217,7 +217,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/close@0.0.2": {
+    "konsumentverket.kov-compo/close@0.0.3": {
         "files": [
             {
                 "relativePath": "designsystem/components/Icons/SystemIcons/Close/Close.js",

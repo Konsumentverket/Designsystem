@@ -19,6 +19,11 @@ export const linkTextWrapper = css`
 `
 
 export const linkTextMainLinkStyle = css`
+    &:hover {
+        box-shadow: inset 0 0 0 1px ${colors.theme1.mid}!important;
+        border-radius: .8rem !important;
+    }
+
     .tabnav &:focus {
         outline: 4px solid ${colors.states.focus};
 
@@ -36,13 +41,15 @@ export const mainLinkStyle = css`
 
     &:hover{
         border-radius: .8rem .8rem 0 0 !important;
-        box-shadow: none !important;
+        /* box-shadow: none !important; */
+
         h2 {
             text-decoration: underline!important;
         }
     }
     &:visited {
         color: ${colors.theme1.mid}!important;
+
         svg{
             fill: ${colors.theme1.mid}!important;
         }
