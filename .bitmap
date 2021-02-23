@@ -848,7 +848,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/link-card@0.0.12": {
+    "konsumentverket.kov-compo/link-card@0.0.13": {
         "files": [
             {
                 "name": "LinkCard.css.js",
@@ -865,7 +865,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/link-text-card@0.0.15": {
+    "konsumentverket.kov-compo/link-text-card@0.0.16": {
         "files": [
             {
                 "name": "LinkTextCard.js",

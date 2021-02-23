@@ -80,9 +80,6 @@ export const mainLinkStyle = css`
     width: 100%;
     span{
         max-width: 84%;
-        ${medium}{
-            max-width: 95%;
-        }
     }
     [dir='rtl'] &{
         svg{
