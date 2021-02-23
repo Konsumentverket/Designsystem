@@ -32,6 +32,7 @@ export const linkTextMainLinkStyle = css`
         }
     }
     padding: 2.4rem 1.6rem;
+
 `
 
 export const mainLinkStyle = css`
