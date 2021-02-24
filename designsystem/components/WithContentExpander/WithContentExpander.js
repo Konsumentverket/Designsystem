@@ -20,10 +20,10 @@ const measureElement = element => {
 }
 
 
-export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, isFullWidth = true, 
+export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, isFullWidth = true,
     hasCollapseButton = false, show = true, scrollIntoView = false, wrapperStyle, open = false,
-    wrapperId, linkHref = "" }) => {
-    
+    wrapperId, linkHref = "", disabled = false }) => {
+
     const [expanded, setExpanded] = useState(open)
     const [linkElementFontSize, setLinkElementFontSize] = useState("16px")
     const linkContainerRef = useRef()
@@ -31,6 +31,7 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
     const topOfComponent = useRef()
 
     const doExpansion = e => {
+        debugger
         setExpanded(!expanded)
         if(e){
             e.stopPropagation()
@@ -39,7 +40,9 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
         return false
     }
 
-    useEffect(() => {setExpanded(open)},[open])
+    useEffect(() => { setExpanded(open)}, [open] )
+
+    useEffect(() => { setExpanded(disabled)}, [disabled] )
 
     useEffect(() => {
         setLinkElementFontSize(measureElement(linkContainerRef.current))
@@ -59,12 +62,12 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
         <div className="link-element" onClick={e => doExpansion(e)}>
             <a href={linkHref} ref={linkRef} onClick={(e) => e.preventDefault()} aria-haspopup="true" aria-expanded={expanded ? "true" : "false"} aria-label={linkElement.props.children || ""} className="noStyle accordion" css={[baseLinkStyle, linkStyle]}>
                 <div className="link-element-container" ref={linkContainerRef}>
-                  {linkElement}
-                  <Arrow
+                  {!disabled && linkElement}
+                  {!disabled && <Arrow
                     aria-hidden="true"
                     className="expand-icon"
-                    style={[IconStyle(linkElementFontSize), expanded ? IconExpandedStyle : null, isFullWidth ? IconFullWidth : null]} 
-                />
+                    style={[IconStyle(linkElementFontSize), expanded ? IconExpandedStyle : null, isFullWidth ? IconFullWidth : null]}/>
+                }
                 </div>
             </a>
         </div>
@@ -78,7 +81,7 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
                         DOMNode.scrollIntoView({ behavior: "smooth", block: "center" })
                         doExpansion(e);
                         DOMNode.focus({preventScroll:true})
-                        
+
                     }}
                     onKeyDown={(e) => {
                         if (e.key === "Enter") {

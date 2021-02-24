@@ -1412,7 +1412,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/with-content-expander@0.0.10": {
+    "konsumentverket.kov-compo/with-content-expander@0.0.11": {
         "files": [
             {
                 "relativePath": "designsystem/components/WithContentExpander/WithContentExpander.css.js",

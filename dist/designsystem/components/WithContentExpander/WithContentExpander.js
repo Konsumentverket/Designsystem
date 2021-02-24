@@ -58,7 +58,9 @@ var WithContentExpander = function WithContentExpander(_ref) {
       open = _ref$open === void 0 ? false : _ref$open,
       wrapperId = _ref.wrapperId,
       _ref$linkHref = _ref.linkHref,
-      linkHref = _ref$linkHref === void 0 ? "" : _ref$linkHref;
+      linkHref = _ref$linkHref === void 0 ? "" : _ref$linkHref,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled;
 
   var _useState = (0, _react.useState)(open),
       _useState2 = _slicedToArray(_useState, 2),
@@ -75,6 +77,7 @@ var WithContentExpander = function WithContentExpander(_ref) {
   var topOfComponent = (0, _react.useRef)();
 
   var doExpansion = function doExpansion(e) {
+    debugger;
     setExpanded(!expanded);
 
     if (e) {
@@ -88,6 +91,9 @@ var WithContentExpander = function WithContentExpander(_ref) {
   (0, _react.useEffect)(function () {
     setExpanded(open);
   }, [open]);
+  (0, _react.useEffect)(function () {
+    setExpanded(disabled);
+  }, [disabled]);
   (0, _react.useEffect)(function () {
     setLinkElementFontSize(measureElement(linkContainerRef.current));
   }, []);
@@ -126,7 +132,7 @@ var WithContentExpander = function WithContentExpander(_ref) {
   }, (0, _core.jsx)("div", {
     className: "link-element-container",
     ref: linkContainerRef
-  }, linkElement, (0, _core.jsx)(_Arrow["default"], {
+  }, !disabled && linkElement, !disabled && (0, _core.jsx)(_Arrow["default"], {
     "aria-hidden": "true",
     className: "expand-icon",
     style: [(0, _WithContentExpander.IconStyle)(linkElementFontSize), expanded ? _WithContentExpander.IconExpandedStyle : null, isFullWidth ? _WithContentExpander.IconFullWidth : null]
