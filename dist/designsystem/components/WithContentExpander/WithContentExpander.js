@@ -77,7 +77,10 @@ var WithContentExpander = function WithContentExpander(_ref) {
   var topOfComponent = (0, _react.useRef)();
 
   var doExpansion = function doExpansion(e) {
-    debugger;
+    if (disabled) {
+      return false;
+    }
+
     setExpanded(!expanded);
 
     if (e) {
@@ -132,13 +135,13 @@ var WithContentExpander = function WithContentExpander(_ref) {
   }, (0, _core.jsx)("div", {
     className: "link-element-container",
     ref: linkContainerRef
-  }, !disabled && linkElement, !disabled && (0, _core.jsx)(_Arrow["default"], {
+  }, linkElement, !disabled && (0, _core.jsx)(_Arrow["default"], {
     "aria-hidden": "true",
     className: "expand-icon",
     style: [(0, _WithContentExpander.IconStyle)(linkElementFontSize), expanded ? _WithContentExpander.IconExpandedStyle : null, isFullWidth ? _WithContentExpander.IconFullWidth : null]
   })))), (0, _core.jsx)("div", {
     className: "expand-section ".concat(expanded && "expanded")
-  }, wrappedComponent, hasCollapseButton && (0, _core.jsx)("div", {
+  }, wrappedComponent, hasCollapseButton && !disabled && (0, _core.jsx)("div", {
     tabIndex: "0",
     onClick: function onClick(e) {
       var DOMNode = _reactDom["default"].findDOMNode(linkRef.current);

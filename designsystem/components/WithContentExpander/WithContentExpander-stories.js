@@ -77,15 +77,15 @@ storiesOf('Digitala Produkter|Komponenter', module)
         <br /><br /><br /><br /><br />
         <SubHeading styleLevel={4}>Expanderingselement som är inaktiverat</SubHeading>
         <WithContentExpander
-            linkElement={<span>Klicka mig</span>}
             disabled={true}
+            linkElement={<span>Klicka mig</span>}
+            hasCollapseButton={false}
             wrappedComponent={
               <div>
                 <br />
                 <Button text={"Tryck mig"} />
               </div>
             }
-            hasCollapseButton={false}
         />
 
       </div>

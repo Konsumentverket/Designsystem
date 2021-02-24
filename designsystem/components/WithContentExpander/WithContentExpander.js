@@ -31,8 +31,12 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
     const topOfComponent = useRef()
 
     const doExpansion = e => {
-        debugger
+        if(disabled) {
+            return false
+        }
+
         setExpanded(!expanded)
+
         if(e){
             e.stopPropagation()
             e.preventDefault()
@@ -62,7 +66,7 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
         <div className="link-element" onClick={e => doExpansion(e)}>
             <a href={linkHref} ref={linkRef} onClick={(e) => e.preventDefault()} aria-haspopup="true" aria-expanded={expanded ? "true" : "false"} aria-label={linkElement.props.children || ""} className="noStyle accordion" css={[baseLinkStyle, linkStyle]}>
                 <div className="link-element-container" ref={linkContainerRef}>
-                  {!disabled && linkElement}
+                  {linkElement}
                   {!disabled && <Arrow
                     aria-hidden="true"
                     className="expand-icon"
@@ -71,9 +75,9 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
                 </div>
             </a>
         </div>
-        <div className={`expand-section ${expanded && "expanded"}`}>
+        <div className={`expand-section ${expanded && "expanded"} ${disabled && "expanded"}`}>
             {wrappedComponent}
-            {hasCollapseButton
+            {hasCollapseButton && !disabled
                 && <div
                     tabIndex="0"
                     onClick={(e) => {
