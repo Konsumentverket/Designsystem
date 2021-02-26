@@ -1,17 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React from 'react';
-import {
-	focusWrapper,
-	pictureWrapper,
-	textArea,
-	focusHeadline,
-	externalIcon,
-	focusText,
-	iconBackground,
-	puffIcon,
-	linkWrapper
-} from './FocusPuff.css';
+import * as css from './FocusPuff.css';
 import External from '../Icons/SystemIcons/External/External';
 
 const FocusPuff = React.forwardRef(({headline, text, url, isExternalLink, image, imageAlt, icon, imageComponent, onClick, style }, ref) => {
@@ -23,32 +13,25 @@ const FocusPuff = React.forwardRef(({headline, text, url, isExternalLink, image,
       imageArea = <img src={image} alt={imageAlt} />
     } else {
       if(icon) {
-        imageArea = React.isValidElement(icon) ? React.cloneElement(icon,{style:puffIcon}) : null
+        imageArea = React.isValidElement(icon) ? React.cloneElement(icon,{style:css.puffIcon}) : null
       }
 		}
 	}
 
-  const puffMarkup = () => {
-    return (
-      <div css={[focusWrapper, style]} className={'focusWrapper'}>
-        <div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
-        <div css={textArea}>
-          <h3 css={focusHeadline}>
+  return (
+    <a css={[css.linkWrapper, style]} onClick={onClick} href={url} className="noStyle">
+      <div css={[css.focusWrapper]} className={'focusWrapper'}>
+        <div css={css.pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
+        <div css={css.textArea} className="textArea">
+          <h3 css={css.focusHeadline} className="headline">
             {headline}
-            {isExternalLink && <External title="Extern länk" style={externalIcon} />}
+            {isExternalLink && <External title="Extern länk" style={css.externalIcon} />}
           </h3>
-          <p css={focusText}>{text}</p>
+          <p css={css.focusText} className="text">{text}</p>
         </div>
       </div>
-    )
-  }
-
-  return (
-    <a css={linkWrapper} onClick={onClick} href={url} className="noStyle">
-      {puffMarkup()}
     </a>
   )
-
 });
 
 FocusPuff.displayName = "FocusPuff"
