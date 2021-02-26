@@ -11,14 +11,11 @@ export const focusWrapper = css`
   width:100%;
   flex-direction:column;
   background-color: ${colors.theme2.light};
-  border-bottom-right-radius:.8rem;
-  border-bottom-left-radius:.8rem;
-
+  border-radius: .8rem;
 `
 
 export const linkWrapper = css`
   text-decoration:none;
-  padding-top:.8rem;
   display:flex;
 
   &:hover .focusWrapper {
@@ -33,7 +30,7 @@ export const linkWrapper = css`
     border-radius: 8px;
   }
   &:active h3 {
-      color: ${colors.theme1.xDark};      
+      color: ${colors.theme1.xDark};
   }
   &:active h3 > svg {
     fill: ${colors.theme1.xDark};
@@ -50,7 +47,7 @@ export const linkWrapper = css`
   &:hover .image {
     filter: brightness(75%);
   }
-  
+
   ${medium} {
     height:100%
   }
@@ -81,7 +78,6 @@ export const textArea = css`
 `
 
 export const pictureWrapper = css`
-  margin-top:-.8rem;
   width:100%;
   min-height:11.2rem;
 
@@ -106,7 +102,7 @@ export const iconBackground = css`
   background-color: ${colors.theme2.mid};
   padding-top:36.84%;
   position:relative;
-  
+
 `
 
 
@@ -121,6 +117,6 @@ export const puffIcon = css`
   fill: #fff;
   width:6.4rem;
   height:6.4rem;
-  left:calc(50% - 3.2rem);
-  top:calc(50% - 3.2rem);
+  left: calc(50% - 5.2rem);
+  top: calc(50% + 2.2rem);
 `;

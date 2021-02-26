@@ -12,7 +12,7 @@ var _Colors = require("../Colors/Colors");
 var _globalStyles = require("../GlobalStyles/globalStyles");
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n  position:absolute;\n  fill: #fff;\n  width:6.4rem;\n  height:6.4rem;\n  left:calc(50% - 3.2rem);\n  top:calc(50% - 3.2rem);\n"]);
+  var data = _taggedTemplateLiteral(["\n  position:absolute;\n  fill: #fff;\n  width:6.4rem;\n  height:6.4rem;\n  left: calc(50% - 5.2rem);\n  top: calc(50% + 2.2rem);\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -32,7 +32,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  border-top-right-radius: .8rem;\n  border-top-left-radius:.8rem;\n  background-color: ", ";\n  padding-top:36.84%;\n  position:relative;\n  \n"]);
+  var data = _taggedTemplateLiteral(["\n  border-top-right-radius: .8rem;\n  border-top-left-radius:.8rem;\n  background-color: ", ";\n  padding-top:36.84%;\n  position:relative;\n\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -42,7 +42,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  margin-top:-.8rem;\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:auto;\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  width:100%;\n  min-height:11.2rem;\n\n  picture {\n    display:block;\n    width:100%;\n    min-height:5rem;\n  }\n  img {\n    display:block;\n    width:100%;\n    height:auto;\n    border-top-right-radius: .8rem;\n    border-top-left-radius:.8rem;\n  }\n\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -82,7 +82,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  padding-top:.8rem;\n  display:flex;\n\n  &:hover .focusWrapper {\n      background-color: #E6C3D1;\n  }\n  &:hover {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active h3 {\n      color: ", ";      \n  }\n  &:active h3 > svg {\n    fill: ", ";\n  }\n\n  &:hover h3, &:active h3 {\n    text-decoration:underline;\n  }\n  .image {\n    max-width: 100%;\n    max-height: 100%;\n    transition: .1s all;\n  }\n  &:hover .image {\n    filter: brightness(75%);\n  }\n  \n  ", " {\n    height:100%\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-decoration:none;\n  display:flex;\n\n  &:hover .focusWrapper {\n      background-color: #E6C3D1;\n  }\n  &:hover {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active {\n    box-shadow: 0px 0px 0px 2px ", ";\n    border-radius: 8px;\n  }\n  &:active h3 {\n      color: ", ";\n  }\n  &:active h3 > svg {\n    fill: ", ";\n  }\n\n  &:hover h3, &:active h3 {\n    text-decoration:underline;\n  }\n  .image {\n    max-width: 100%;\n    max-height: 100%;\n    transition: .1s all;\n  }\n  &:hover .image {\n    filter: brightness(75%);\n  }\n\n  ", " {\n    height:100%\n  }\n\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -92,7 +92,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  min-height: 25.6rem;\n  display:flex;\n  /* height: calc(100% - .8rem); */\n  height: 100%;\n  width:100%;\n  flex-direction:column;\n  background-color: ", ";\n  border-bottom-right-radius:.8rem;\n  border-bottom-left-radius:.8rem;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  min-height: 25.6rem;\n  display:flex;\n  /* height: calc(100% - .8rem); */\n  height: 100%;\n  width:100%;\n  flex-direction:column;\n  background-color: ", ";\n  border-radius: .8rem;\n"]);
 
   _templateObject = function _templateObject() {
     return data;

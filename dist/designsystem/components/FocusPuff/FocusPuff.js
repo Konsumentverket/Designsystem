@@ -7,16 +7,16 @@ exports.FocusPuff = void 0;
 
 var _core = require("@emotion/core");
 
-var _FocusPuff = require("./FocusPuff.css");
-
 var _react = _interopRequireDefault(require("react"));
+
+var _FocusPuff = require("./FocusPuff.css");
 
 var _External = _interopRequireDefault(require("../Icons/SystemIcons/External/External"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 /** @jsx jsx */
-var FocusPuff = function FocusPuff(_ref) {
+var FocusPuff = _react["default"].forwardRef(function (_ref, ref) {
   var headline = _ref.headline,
       text = _ref.text,
       url = _ref.url,
@@ -25,26 +25,28 @@ var FocusPuff = function FocusPuff(_ref) {
       imageAlt = _ref.imageAlt,
       icon = _ref.icon,
       imageComponent = _ref.imageComponent,
-      onClick = _ref.onClick;
+      onClick = _ref.onClick,
+      style = _ref.style;
   var imageArea = imageComponent;
 
-  if (imageArea == null) {
-    if (image != null) imageArea = (0, _core.jsx)("img", {
-      src: image,
-      alt: imageAlt
-    });else {
-      imageArea = (0, _core.jsx)("div", {
-        className: 'iconBackground',
-        css: _FocusPuff.iconBackground
-      }, icon && _react["default"].cloneElement(icon, {
-        style: _FocusPuff.puffIcon
-      }));
+  if (!imageArea) {
+    if (image) {
+      imageArea = (0, _core.jsx)("img", {
+        src: image,
+        alt: imageAlt
+      });
+    } else {
+      if (icon) {
+        imageArea = _react["default"].isValidElement(icon) ? _react["default"].cloneElement(icon, {
+          style: _FocusPuff.puffIcon
+        }) : null;
+      }
     }
   }
 
   var puffMarkup = function puffMarkup() {
     return (0, _core.jsx)("div", {
-      css: _FocusPuff.focusWrapper,
+      css: [_FocusPuff.focusWrapper, style],
       className: 'focusWrapper'
     }, (0, _core.jsx)("div", {
       css: _FocusPuff.pictureWrapper,
@@ -61,14 +63,15 @@ var FocusPuff = function FocusPuff(_ref) {
     }, text)));
   };
 
-  return url !== null ? (0, _core.jsx)("a", {
+  return (0, _core.jsx)("a", {
     css: _FocusPuff.linkWrapper,
     onClick: onClick,
     href: url,
     className: "noStyle"
-  }, puffMarkup(FocusPuff)) : puffMarkup(FocusPuff);
-};
+  }, puffMarkup());
+});
 
 exports.FocusPuff = FocusPuff;
+FocusPuff.displayName = "FocusPuff";
 
 //# sourceMappingURL=FocusPuff.js.map
