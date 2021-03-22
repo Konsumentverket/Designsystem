@@ -46,8 +46,6 @@ export const WithContentExpander = ({ wrappedComponent, linkElement, linkStyle, 
 
     useEffect(() => { setExpanded(open)}, [open] )
 
-    useEffect(() => { setExpanded(disabled)}, [disabled] )
-
     useEffect(() => {
         setLinkElementFontSize(measureElement(linkContainerRef.current))
     }, [])

@@ -95,9 +95,6 @@ var WithContentExpander = function WithContentExpander(_ref) {
     setExpanded(open);
   }, [open]);
   (0, _react.useEffect)(function () {
-    setExpanded(disabled);
-  }, [disabled]);
-  (0, _react.useEffect)(function () {
     setLinkElementFontSize(measureElement(linkContainerRef.current));
   }, []);
   (0, _react.useLayoutEffect)(function () {
@@ -140,7 +137,7 @@ var WithContentExpander = function WithContentExpander(_ref) {
     className: "expand-icon",
     style: [(0, _WithContentExpander.IconStyle)(linkElementFontSize), expanded ? _WithContentExpander.IconExpandedStyle : null, isFullWidth ? _WithContentExpander.IconFullWidth : null]
   })))), (0, _core.jsx)("div", {
-    className: "expand-section ".concat(expanded && "expanded")
+    className: "expand-section ".concat(expanded && "expanded", " ").concat(disabled && "expanded")
   }, wrappedComponent, hasCollapseButton && !disabled && (0, _core.jsx)("div", {
     tabIndex: "0",
     onClick: function onClick(e) {
