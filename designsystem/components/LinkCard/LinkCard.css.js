@@ -10,8 +10,6 @@ export const wrapper = css`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-
 `
 
 export const linkTextWrapper = css`
