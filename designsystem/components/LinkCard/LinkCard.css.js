@@ -4,21 +4,31 @@ import { medium } from "../GlobalStyles/globalStyles";
 import { spacing } from "../Spacing/Spacing";
 
 export const wrapper = css`
-    background-color: #fff;
-    border-radius: 0.8rem;
-    height: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /*
+  height: 100%;
+  */
 `
 
-export const linkTextWrapper = css`
-    /* overflow: visible; */
+export const linkCardFrame = css`
+  box-shadow: inset 0 0 0 1px ${colors.theme1.mid};
+
+  a:hover {
+    box-shadow: inset -1px 0 0 0 #0061c2,inset 0 1px 0 0 #0061c2,inset 1px 0 0 0 #0061c2;
+  }
+
 `
 
 export const linkTextMainLinkStyle = css`
+    padding: 2.4rem 1.6rem;
+
     &:hover {
-        box-shadow: inset 0 0 0 1px ${colors.theme1.mid}!important;
+        box-shadow: inset 0 0 0 2px ${colors.theme1.mid}!important;
         border-radius: .8rem !important;
     }
 
@@ -29,7 +39,7 @@ export const linkTextMainLinkStyle = css`
             outline: none;
         }
     }
-    padding: 2.4rem 1.6rem;
+
 
 `
 
@@ -40,7 +50,6 @@ export const mainLinkStyle = css`
 
     &:hover{
         border-radius: .8rem .8rem 0 0 !important;
-        /* box-shadow: none !important; */
 
         h2 {
             text-decoration: underline!important;
@@ -100,7 +109,6 @@ export const rotateArrow = css`
 `
 
 export const childrenWrapper = css`
-
     display: inline-flex;
     flex-direction:column;
     padding: 0 0 1.6rem 0;
@@ -165,4 +173,7 @@ export const customFontSize = css`
     line-height: 2.4rem;
     font-weight: 500;
 
+`
+export const linkTextWrapper = css`
+    /* overflow: visible; */
 `
