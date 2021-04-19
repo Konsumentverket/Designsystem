@@ -1326,7 +1326,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/text-area@0.0.12": {
+    "konsumentverket.kov-compo/text-area@0.0.13": {
         "files": [
             {
                 "name": "TextArea.css.js",
