@@ -10,9 +10,7 @@ export const wrapper = css`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  /*
   height: 100%;
-  */
 `
 
 export const linkCardFrame = css`

@@ -114,7 +114,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background-color: #fff;\n  border-radius: 0.8rem;\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  /*\n  height: 100%;\n  */\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: #fff;\n  border-radius: 0.8rem;\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  height: 100%;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
