@@ -14,6 +14,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "konsumentverket.kov-compo/air-time@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/SystemIcons/AirTime/AirTime.js",
+                "test": false,
+                "name": "AirTime.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/SystemIcons/AirTime/AirTime.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "konsumentverket.kov-compo/apps-and-games@0.0.1": {
         "files": [
             {
@@ -40,6 +52,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "konsumentverket.kov-compo/at-branch@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/SystemIcons/AtBranch/AtBranch.js",
+                "test": false,
+                "name": "AtBranch.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/SystemIcons/AtBranch/AtBranch.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "konsumentverket.kov-compo/auction@0.0.1": {
         "files": [
             {
@@ -50,6 +74,18 @@
         ],
         "mainFile": "designsystem/components/Icons/EditorIcons/Auction/Auction.js",
         "trackDir": "designsystem/components/Icons/EditorIcons/Auction",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "konsumentverket.kov-compo/bank-account@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/SystemIcons/BankAccount/BankAccount.js",
+                "test": false,
+                "name": "BankAccount.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/SystemIcons/BankAccount/BankAccount.js",
         "origin": "AUTHORED",
         "exported": true
     },
@@ -119,6 +155,18 @@
             }
         ],
         "mainFile": "designsystem/components/Button/Button.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "konsumentverket.kov-compo/call-center@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/SystemIcons/CallCenter/CallCenter.js",
+                "test": false,
+                "name": "CallCenter.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/SystemIcons/CallCenter/CallCenter.js",
         "origin": "AUTHORED",
         "exported": true
     },
@@ -745,6 +793,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "konsumentverket.kov-compo/home-delivery@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/SystemIcons/HomeDelivery/HomeDelivery.js",
+                "test": false,
+                "name": "HomeDelivery.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/SystemIcons/HomeDelivery/HomeDelivery.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "konsumentverket.kov-compo/icon-card@0.0.7": {
         "files": [
             {
@@ -779,7 +839,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/input-text@0.0.12": {
+    "konsumentverket.kov-compo/input-text@0.0.13": {
         "files": [
             {
                 "name": "InputText.css.js",
@@ -1027,6 +1087,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "konsumentverket.kov-compo/online@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/SystemIcons/Online/Online.js",
+                "test": false,
+                "name": "Online.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/SystemIcons/Online/Online.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "konsumentverket.kov-compo/otherlang@0.0.1": {
         "files": [
             {
@@ -1040,7 +1112,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/oval@0.0.1": {
+    "konsumentverket.kov-compo/oval@0.0.2": {
         "files": [
             {
                 "relativePath": "designsystem/components/Icons/SystemIcons/Oval/Oval.js",
@@ -1215,6 +1287,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "konsumentverket.kov-compo/send@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/SystemIcons/Send/Send.js",
+                "test": false,
+                "name": "Send.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/SystemIcons/Send/Send.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "konsumentverket.kov-compo/signlanguage@0.0.1": {
         "files": [
             {
@@ -1326,7 +1410,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/text-area@0.0.13": {
+    "konsumentverket.kov-compo/text-area@0.0.14": {
         "files": [
             {
                 "name": "TextArea.css.js",
