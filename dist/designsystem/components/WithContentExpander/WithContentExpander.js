@@ -97,7 +97,7 @@ var WithContentExpander = function WithContentExpander(_ref) {
   (0, _react.useEffect)(function () {
     setLinkElementFontSize(measureElement(linkContainerRef.current));
   }, []);
-  (0, _react.useLayoutEffect)(function () {
+  (0, _react.useEffect)(function () {
     if (scrollIntoView && topOfComponent.current && expanded) {
       var DOMNode = _reactDom["default"].findDOMNode(topOfComponent.current);
 
