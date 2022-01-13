@@ -42,7 +42,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";    \n    min-height: 7.2rem;\n    text-decoration: none;\n    width: 100%;\n    box-sizing: border-box;\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    height:100%;\n    align-items: center;\n    border-radius: .8rem;\n    border: 1px solid ", ";\n    &:hover {\n        background-color: ", ";\n        border-color: ", ";\n        span {\n            text-decoration:underline;\n        }\n    }\n    &:active \n    {   \n        background-color: ", ";\n        border-color:", ";\n        span{\n            color:#fff;\n        }\n        svg {\n            fill:#fff;\n        }\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";    \n    min-height: 7.2rem;\n    text-decoration: none;\n    width: 100%;\n    box-sizing: border-box;\n    position: relative;\n    display: flex;\n    flex-direction: row;\n    height:100%;\n    align-items: center;\n    border-radius: .8rem;\n    border: 1px solid ", ";\n    &:hover {\n        background-color: ", ";\n        border-color: ", ";\n        box-shadow: inset 0 0 0 1px ", ";\n        span {\n            text-decoration:underline;\n        }\n    }\n    &:active \n    {   \n        background-color: ", ";\n        border-color:", ";\n        box-shadow: none;\n        span{\n            color:#fff;\n        }\n        svg {\n            fill:#fff;\n        }\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -77,7 +77,7 @@ var arrowStyle = (0, _core.css)(_templateObject(), _Colors.colors.theme1.mid);
 exports.arrowStyle = arrowStyle;
 var iconStyle = (0, _core.css)(_templateObject2(), _Colors.colors.theme1.mid);
 exports.iconStyle = iconStyle;
-var iconCardStyle = (0, _core.css)(_templateObject3(), _Colors.colors.common.white, _Colors.colors.theme1.mid, _Colors.colors.theme1.midLight, _Colors.colors.theme1.xDark, _Colors.colors.theme1.xDark, _Colors.colors.theme1.xDark);
+var iconCardStyle = (0, _core.css)(_templateObject3(), _Colors.colors.common.white, _Colors.colors.theme1.mid, _Colors.colors.theme1.midLight, _Colors.colors.theme1.mid, _Colors.colors.theme1.mid, _Colors.colors.theme1.xDark, _Colors.colors.theme1.xDark);
 exports.iconCardStyle = iconCardStyle;
 var iconText = (0, _core.css)(_templateObject4(), _Colors.colors.theme1.mid, _Spacing.spacing.s);
 exports.iconText = iconText;

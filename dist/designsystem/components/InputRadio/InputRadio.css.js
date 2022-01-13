@@ -22,7 +22,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    color: #464646;\n    width: 100%;\n    font-size: 21px;\n    line-height: 28px;\n    padding: 18px 0; \n    display: flex;\n    user-select: none;\n    margin-right: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    width: 100%;\n    font-size: 21px;\n    line-height: 28px;\n    padding: 18px 0; \n    display: flex;\n    user-select: none;\n    margin-right: ", ";\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -57,7 +57,7 @@ var fieldWrapper = (0, _core.css)(_templateObject(), _Colors.colors.theme3.xLigh
 exports.fieldWrapper = fieldWrapper;
 var fieldInput = (0, _core.css)(_templateObject2(), _Colors.colors.theme1.mid, _Colors.colors.theme1.xDark, _Colors.colors.theme1.xDark, _Colors.colors.theme1.xDark);
 exports.fieldInput = fieldInput;
-var fieldLabel = (0, _core.css)(_templateObject3(), _Spacing.spacing.m);
+var fieldLabel = (0, _core.css)(_templateObject3(), _Colors.colors.theme1.xDark, _Spacing.spacing.m);
 exports.fieldLabel = fieldLabel;
 var disabledStyle = (0, _core.css)(_templateObject4(), _Colors.colors.theme3.mid, _Colors.colors.theme3.midLight, _Colors.colors.theme3.light, _Colors.colors.theme3.mid);
 exports.disabledStyle = disabledStyle;

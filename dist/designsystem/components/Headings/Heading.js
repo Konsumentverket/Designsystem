@@ -26,6 +26,8 @@ var Heading = function Heading(_ref) {
       otherAttr = _objectWithoutProperties(_ref, ["text", "style", "children"]);
 
   return (0, _core.jsx)(_SubHeading.SubHeading, _extends({
+    "data-nosnippet": "true",
+    "data-addsearch": "exclude",
     style: style,
     level: 1,
     text: text

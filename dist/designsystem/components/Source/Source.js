@@ -27,7 +27,8 @@ var Source = function Source(_ref) {
       reviewedDateText = _ref.reviewedDateText,
       style = _ref.style,
       english = _ref.english,
-      bottomContent = _ref.bottomContent;
+      bottomContent = _ref.bottomContent,
+      sourceText = _ref.sourceText;
   var reviewed = reviewedDate ? new Date(reviewedDate) : null;
   var monthsSv = ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"];
   var monthsEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -38,7 +39,7 @@ var Source = function Source(_ref) {
     css: usabilla ? _Source.firstRowUsabilla : _Source.firstRow
   }, usabilla), (0, _core.jsx)("div", {
     css: _Source.secondRow
-  }, sourcesCollection && sourcesCollection.items.length > 0 && (0, _core.jsx)("p", null, english ? 'Source: ' : 'Källa: ', sourcesCollection.items.map(function (item, idx) {
+  }, sourcesCollection && sourcesCollection.items.length > 0 && (0, _core.jsx)("p", null, sourceText ? "".concat(sourceText, " ") : 'Källa: ', sourcesCollection.items.map(function (item, idx) {
     return (0, _core.jsx)("a", {
       href: item.linkUrl,
       key: "link-" + idx,

@@ -24,7 +24,9 @@ var InputRadio = function InputRadio(_ref) {
       checked = _ref.checked,
       disabled = _ref.disabled,
       className = _ref.className,
-      tabIndex = _ref.tabIndex;
+      tabIndex = _ref.tabIndex,
+      dataQuestion = _ref.dataQuestion,
+      dataAnswer = _ref.dataAnswer;
   var inputRef = (0, _react.useRef)(null);
   return (0, _core.jsx)("div", {
     css: [_InputRadio.fieldWrapper, disabled && _InputRadio.disabledStyle, fieldWrapperStyle],
@@ -53,7 +55,9 @@ var InputRadio = function InputRadio(_ref) {
       if (e.which === 32 || e.key == 'Enter') {
         _onChange(e);
       }
-    }
+    },
+    "data-question": dataQuestion,
+    "data-answer": dataAnswer
   }), labelText));
 };
 

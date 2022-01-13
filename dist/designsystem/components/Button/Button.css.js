@@ -62,7 +62,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    background-color:transparent;\n    color:", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n\n    svg {\n        fill: ", ";\n    }\n    &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n        border-color:", ";\n    }\n    &:active {\n        color:", ";\n        background-color:", ";\n        box-shadow:none;\n        svg {\n            fill:", "; \n        }\n    }\n    &:disabled{\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    background-color:transparent;\n    color:", ";\n    box-shadow:inset 0px 0px 0px 1px ", ";\n\n    svg {\n        fill: ", ";\n    }\n    &:hover, &.selectedButtonStyle {\n        background-color:", ";\n        text-decoration:underline;\n        border-color:", ";\n        box-shadow: inset 0 0 0 2px ", ";\n    }\n    &:active {\n        color:", ";\n        background-color:", ";\n        box-shadow:none;\n        svg {\n            fill:", "; \n        }\n    }\n    &:disabled{\n        ", "\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -96,7 +96,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var disabled = (0, _core.css)(_templateObject(), _Colors.colors.theme3.mid, _Colors.colors.theme3.midLight, _Colors.colors.theme3.mid);
 var buttonStyle = (0, _core.css)(_templateObject2(), _Colors.colors.common.white, _Colors.colors.buttons.primary.backgroundColor, _Colors.colors.common.white, _globalStyles.medium, _Colors.colors.buttons.primary.hover, _Colors.colors.buttons.primary.active, disabled);
 exports.buttonStyle = buttonStyle;
-var secondaryStyle = (0, _core.css)(_templateObject3(), _Colors.colors.buttons.secondary.textColor, _Colors.colors.buttons.secondary.borderColor, _Colors.colors.buttons.secondary.textColor, _Colors.colors.buttons.secondary.hover, _Colors.colors.theme1.xDark, _Colors.colors.common.white, _Colors.colors.buttons.secondary.active, _Colors.colors.common.white, disabled);
+var secondaryStyle = (0, _core.css)(_templateObject3(), _Colors.colors.buttons.secondary.textColor, _Colors.colors.buttons.secondary.borderColor, _Colors.colors.buttons.secondary.textColor, _Colors.colors.buttons.secondary.hover, _Colors.colors.theme1.xDark, _Colors.colors.buttons.secondary.borderColor, _Colors.colors.common.white, _Colors.colors.buttons.secondary.active, _Colors.colors.common.white, disabled);
 exports.secondaryStyle = secondaryStyle;
 var invertedBackgroundStyle = (0, _core.css)(_templateObject4(), _Colors.colors.common.white, _Colors.colors.theme1.dark);
 exports.invertedBackgroundStyle = invertedBackgroundStyle;

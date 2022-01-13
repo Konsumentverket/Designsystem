@@ -48,7 +48,8 @@ var CampaignFocusPuff = function CampaignFocusPuff(_ref) {
       css: _CampaignFocusPuff.pictureWrapper,
       className: imageComponent ? 'image' : null
     }, imageArea), (0, _core.jsx)("div", {
-      css: _CampaignFocusPuff.textArea
+      css: _CampaignFocusPuff.textArea,
+      className: "textarea"
     }, (0, _core.jsx)("h3", {
       css: _CampaignFocusPuff.focusHeadline
     }, headline, isExternalLink && (0, _core.jsx)(_External["default"], {

@@ -34,7 +34,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  border: solid ", ";\n  border-width: 0px 8px 3px;\n  border-radius: 8px;\n  margin-top: -1px;\n  background-color:", ";\n  color: ", " !important;\n  :hover {\n    background-color:", " !important;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  border: solid ", ";\n  border-width: 0px 8px 3px;\n  border-radius: 8px;\n  margin-top: -1px;\n  background-color:", ";\n  color: ", " !important;\n  :hover {\n    background-color:", " !important;\n    border-color: ", ";\n    color: ", " !important;\n    border-radius: .8rem !important;\n    box-shadow: none !important;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -81,7 +81,7 @@ var letter = (0, _core.css)(_templateObject2(), _Spacing.spacing.l, _Spacing.spa
 exports.letter = letter;
 var invalidLetter = (0, _core.css)(_templateObject3(), _Colors.colors.theme3.midDark);
 exports.invalidLetter = invalidLetter;
-var activeLetter = (0, _core.css)(_templateObject4(), _Colors.colors.theme1.dark, _Colors.colors.theme1.dark, _Colors.colors.common.white, _Colors.colors.theme1.dark);
+var activeLetter = (0, _core.css)(_templateObject4(), _Colors.colors.theme1.dark, _Colors.colors.theme1.dark, _Colors.colors.common.white, _Colors.colors.theme1.midLight, _Colors.colors.theme1.midLight, _Colors.colors.theme1.mid);
 exports.activeLetter = activeLetter;
 var linkShowAllWrapper = (0, _core.css)(_templateObject5(), _Spacing.spacing.s, _globalStyles.medium, _Spacing.spacing.l);
 exports.linkShowAllWrapper = linkShowAllWrapper;

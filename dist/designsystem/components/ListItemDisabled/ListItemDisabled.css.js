@@ -82,7 +82,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  font-weight: 500;\n  p {\n    color: ", ";\n  }\n  p.listItemHeadline {\n      color: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n    p {\n      text-decoration: none;\n    }\n  }\n  &:active {\n    background-color: ", ";\n    .listItemHeadline {\n      color: ", ";\n    }\n    p {\n      text-decoration: none;\n    }\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n  border-bottom: 1px solid ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  display: block;\n  text-decoration: none;\n  font-weight: 500;\n  p {\n    color: ", ";\n  }\n  p.listItemHeadline {\n      color: ", ";\n  }\n\n  &:hover {\n    background-color: ", ";\n    p {\n      text-decoration: none;\n    }\n  }\n  &:active {\n    background-color: ", ";\n    .listItemHeadline {\n      color: ", ";\n    }\n    p {\n      text-decoration: none;\n    }\n  }\n  padding-top: 2.4rem;\n  padding-bottom: 2.4rem;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -93,7 +93,7 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var wrapper = (0, _core.css)(_templateObject(), _Colors.colors.theme3.dark, _Colors.colors.theme1.mid, _Colors.colors.theme1.midLight, _Colors.colors.theme1.midLight, _Colors.colors.theme1.xDark, _Colors.colors.theme3.light);
+var wrapper = (0, _core.css)(_templateObject(), _Colors.colors.theme3.dark, _Colors.colors.theme1.mid, _Colors.colors.theme1.midLight, _Colors.colors.theme1.midLight, _Colors.colors.theme1.xDark);
 exports.wrapper = wrapper;
 var news = (0, _core.css)(_templateObject2(), _Colors.colors.theme3.dark);
 exports.news = news;
