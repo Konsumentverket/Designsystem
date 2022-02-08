@@ -19,8 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 /** @jsx jsx */
 var Source = function Source(_ref) {
-  var usabilla = _ref.usabilla,
-      baseUrl = _ref.baseUrl,
+  var baseUrl = _ref.baseUrl,
       sourcesCollection = _ref.sourcesCollection,
       markdownText = _ref.markdownText,
       reviewedDate = _ref.reviewedDate,
@@ -34,12 +33,12 @@ var Source = function Source(_ref) {
   var monthsEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   return (0, _core.jsx)("div", {
     css: [_Source.sourceStyle, style]
-  }, usabilla && (0, _core.jsx)("div", {
-    className: "usabilla",
-    css: usabilla ? _Source.firstRowUsabilla : _Source.firstRow
-  }, usabilla), (0, _core.jsx)("div", {
+  }, (0, _core.jsx)("div", {
+    id: "mtmFeedBackForm",
+    className: "feedbackForm"
+  }), (0, _core.jsx)("div", {
     css: _Source.secondRow
-  }, sourcesCollection && sourcesCollection.items.length > 0 && (0, _core.jsx)("p", null, sourceText ? "".concat(sourceText, " ") : 'Källa: ', sourcesCollection.items.map(function (item, idx) {
+  }, sourcesCollection && sourcesCollection.items.length > 0 && (0, _core.jsx)("p", null, sourceText ? "".concat(sourceText, " ") : "Källa: ", sourcesCollection.items.map(function (item, idx) {
     return (0, _core.jsx)("a", {
       href: item.linkUrl,
       key: "link-" + idx,
@@ -51,7 +50,7 @@ var Source = function Source(_ref) {
     }));
   })), markdownText, reviewed && (0, _core.jsx)("div", {
     css: _Source.rightAlign
-  }, (0, _core.jsx)("p", null, "".concat(reviewedDateText || english ? 'Proofread: ' : 'Granskad: ').concat(reviewed.getDate(), " ").concat(english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))), bottomContent && (0, _core.jsx)("div", null, bottomContent));
+  }, (0, _core.jsx)("p", null, "".concat(reviewedDateText || english == true ? "Proofread: " : "Granskad: ").concat(reviewed.getDate(), " ").concat(english ? monthsEn[reviewed.getMonth()] : monthsSv[reviewed.getMonth()], " ").concat(reviewed.getFullYear())))), bottomContent && (0, _core.jsx)("div", null, bottomContent));
 };
 
 exports.Source = Source;

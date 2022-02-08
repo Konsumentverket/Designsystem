@@ -1325,7 +1325,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "konsumentverket.kov-compo/source@0.0.13": {
+    "konsumentverket.kov-compo/source@0.0.15": {
         "files": [
             {
                 "name": "Source.css.js",
