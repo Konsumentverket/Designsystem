@@ -51,6 +51,11 @@
       "url": "EditorIconsSvg/GymAndWorkoutService.svg"
     },
     {
+      "name": "UserInjured",
+      "title": "Skadad användare",
+      "url": "EditorIconsSvg/UserInjured.svg"
+    },
+    {
       "name": "Craftsman",
       "title": "Hantverkare",
       "url": "EditorIconsSvg/Craftsman.svg"

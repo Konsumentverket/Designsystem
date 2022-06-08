@@ -43,6 +43,7 @@ import ChatWithUs from "../Icons/EditorIcons/ChatWithUs/ChatWithUs.js";
 import CallUs from "../Icons/EditorIcons/CallUs/CallUs.js";
 import Mic from "../Icons/EditorIcons/Mic/Mic.js";
 import DatingServices from "../Icons/EditorIcons/DatingServices/DatingServices.js";
+import UserInjured from "../Icons/EditorIcons/UserInjured /UserInjured .js";
 
 const editorIconDefinitions = {
   AppsAndGames,
@@ -86,7 +87,8 @@ const editorIconDefinitions = {
   ChatWithUs,
   CallUs,
   Mic,
-  DatingServices
+  DatingServices,
+  UserInjured
 };
 
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
