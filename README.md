@@ -71,7 +71,9 @@ I projektets root katalog för föjande kommando:
 ## Bit.dev
 
 ```
-    bit export konsumentverket.kov-compo
+    bit watch - Starta watcher efter att du startat server, den snappar upp ändringar som görs i designsystemet
+    bit tag - När du är klar kör detta kommando för att skapa upp nya verisoner av samtliga paket
+    bit export konsumentverket.kov-compo - deploya ändringar till bit.dev
 ```
 
 ## Lägg till ny ikon i Designsystemet

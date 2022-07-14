@@ -1453,6 +1453,18 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "konsumentverket.kov-compo/userinjured@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/EditorIcons/UserInjured /UserInjured.js",
+                "test": false,
+                "name": "UserInjured.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/EditorIcons/UserInjured /UserInjured.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "konsumentverket.kov-compo/validation-response@0.0.5": {
         "files": [
             {
