@@ -1465,6 +1465,54 @@
         "origin": "AUTHORED",
         "exported": true
     },
+    "konsumentverket.kov-compo/ellipsis@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/EditorIcons/Ellipsis/Ellipsis.js",
+                "test": false,
+                "name": "Ellipsis.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/EditorIcons/Ellipsis/Ellipsis.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "konsumentverket.kov-compo/babyCarriage@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/EditorIcons/BabyCarriage/BabyCarriage.js",
+                "test": false,
+                "name": "Ellipsis.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/EditorIcons/BabyCarriage/BabyCarriage.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "konsumentverket.kov-compo/handHeart@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/EditorIcons/HandHeart/HandHeart.js",
+                "test": false,
+                "name": "Ellipsis.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/EditorIcons/HandHeart/HandHeart.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
+    "konsumentverket.kov-compo/snowboarding@0.0.1": {
+        "files": [
+            {
+                "relativePath": "designsystem/components/Icons/EditorIcons/Snowboarding/Snowboarding.js",
+                "test": false,
+                "name": "Ellipsis.js"
+            }
+        ],
+        "mainFile": "designsystem/components/Icons/EditorIcons/Snowboarding/Snowboarding.js",
+        "origin": "AUTHORED",
+        "exported": true
+    },
     "konsumentverket.kov-compo/validation-response@0.0.5": {
         "files": [
             {
