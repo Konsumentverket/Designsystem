@@ -263,12 +263,12 @@
     {
       "name": "HandHeart",
       "title": "Hand håller hjärta",
-      "url": "EditorIconsSvg/ellipsis-v.svg"
+      "url": "EditorIconsSvg/hands-heart.svg"
     },
     {
       "name": "Snowboarding",
       "title": "Person åker snowboard",
-      "url": "EditorIconsSvg/ellipsis-v.svg"
+      "url": "EditorIconsSvg/snowboarding.svg"
     }
   ]
 }
