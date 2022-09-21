@@ -43,7 +43,11 @@ import ChatWithUs from "../Icons/EditorIcons/ChatWithUs/ChatWithUs.js";
 import CallUs from "../Icons/EditorIcons/CallUs/CallUs.js";
 import Mic from "../Icons/EditorIcons/Mic/Mic.js";
 import DatingServices from "../Icons/EditorIcons/DatingServices/DatingServices.js";
-import UserInjured from "../Icons/EditorIcons/UserInjured /UserInjured .js";
+import UserInjured from "../Icons/EditorIcons/UserInjured/UserInjured.js";
+import BabyCarriage from "../Icons/EditorIcons/BabyCarriage/BabyCarriage.js";
+import Ellipsis from "../Icons/EditorIcons/Ellipsis/Ellipsis.js";
+import HandHeart from "../Icons/EditorIcons/HandHeart/HandHeart.js";
+import Snowboarding from "../Icons/EditorIcons/Snowboarding/Snowboarding.js";
 
 const editorIconDefinitions = {
   AppsAndGames,
@@ -88,7 +92,11 @@ const editorIconDefinitions = {
   CallUs,
   Mic,
   DatingServices,
-  UserInjured
+  UserInjured,
+  BabyCarriage,
+  Ellipsis,
+  HandHeart,
+  Snowboarding
 };
 
 const EditorIcon = ({ icon, className, style, title, ...otherAttr }) => {
