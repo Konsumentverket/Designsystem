@@ -249,6 +249,26 @@
       "name": "HomeDelivery",
       "title": "HomeDelivery",
       "url": "SystemIconsSvg/HomeDelivery.svg"
+    },
+    {
+      "name": "BabyCarriage",
+      "title": "Barnvagn",
+      "url": "EditorIconsSvg/baby-carriage.svg"
+    },
+    {
+      "name": "Ellipsis",
+      "title": "3 st ellipser",
+      "url": "EditorIconsSvg/ellipsis-v.svg"
+    },
+    {
+      "name": "HandHeart",
+      "title": "Hand håller hjärta",
+      "url": "EditorIconsSvg/ellipsis-v.svg"
+    },
+    {
+      "name": "Snowboarding",
+      "title": "Person åker snowboard",
+      "url": "EditorIconsSvg/ellipsis-v.svg"
     }
   ]
 }
