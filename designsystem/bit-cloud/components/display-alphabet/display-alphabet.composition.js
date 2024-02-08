@@ -1,4 +1,3 @@
-
 import { DisplayAlphabet } from './display-alphabet.js';
 import React from 'react';
 
