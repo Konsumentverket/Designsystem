@@ -8,7 +8,7 @@ export const BasicFormCheckbox = () => {
       name="lorem-check"
       value="Lorem ipsum"
       labelText="Lorem ipsum"
-      onChange={() => undefined}
+      onChange={() => {}}
     />
   );
 }

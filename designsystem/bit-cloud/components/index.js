@@ -1,10 +1,9 @@
-import { CampaignFocusPuff } from './campaign-focus-puff.js';
-import { DisplayAlphabet } from './display-alphabet.js';
+import { CampaignFocusPuff } from './campaign-focus-puff';
 import { Button } from './button';
-
+import { DisplayAlphabet } from './display-alphabet';
 
 export {
-    Button,
     CampaignFocusPuff,
+    Button,
     DisplayAlphabet,
 }
