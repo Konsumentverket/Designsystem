@@ -14,8 +14,8 @@ const FocusPuff = React.forwardRef(({
   icon,
   imageComponent,
   onClick,
-  style },
-  ref) => {
+  style
+}, ref) => {
 
   let imageArea = imageComponent;
 
