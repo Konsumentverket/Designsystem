@@ -16,9 +16,9 @@ import {
   tagItemText,
   secondaryArrowStyleCSS
 } from './tag-block.css.js';
-import { Tag } from '../Tag/Tag'
-import LinkArrow from '../utils/Icons/SystemIcons/LinkArrow/LinkArrow';
-import Arrow from '../utils/Icons/SystemIcons/Arrow/Arrow';
+
+import { Tag } from '@designsystem-scope/tag';
+import { Arrow, LinkArrow } from '@designsystem-scope/utils';
 
 const TagBlock = React.forwardRef(({
   invertedColors = false,

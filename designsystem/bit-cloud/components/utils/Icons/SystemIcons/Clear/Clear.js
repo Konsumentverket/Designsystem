@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 
-export default ({ className, style, title, ...otherAttr }) => {
+export const Clear = ({ className, style, title, ...otherAttr }) => {
 	return (
 		<svg
 			aria-hidden="true"

@@ -1,7 +1,5 @@
 import { css } from '@emotion/core'
-import { colors } from '../utils/colors';
-import { spacing } from '../utils/spacing'
-import { medium, large } from '../utils/globalstyles';
+import { colors, spacing, medium, large } from '@designsystem-scope/utils';
 
 export const alphabetWrapper = css`
   display: flex;

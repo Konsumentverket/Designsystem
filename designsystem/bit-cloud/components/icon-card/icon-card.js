@@ -2,7 +2,7 @@
 import React from 'react'
 import { jsx } from '@emotion/core'
 import { iconCardStyle, arrowStyle, iconStyle, iconText, noIcon } from './icon-card.css.js';
-import Arrow from '../utils/Icons/SystemIcons/Arrow/Arrow';
+import { Arrow } from '@designsystem-scope/utils'
 
 const IconCard = React.forwardRef(({
     icon,
@@ -10,7 +10,8 @@ const IconCard = React.forwardRef(({
     url,
     style,
     onClick,
-    id }, ref) => {
+    id
+}, ref) => {
     const haveIcon = !icon ? noIcon : null
     return <a ref={ref} id={id} href={url} onClick={onClick} css={[iconCardStyle, style]} className="noStyle" >
         {icon && React.cloneElement(icon, { "aria-hidden": "true", style: iconStyle })}

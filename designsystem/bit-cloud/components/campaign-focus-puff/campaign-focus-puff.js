@@ -12,7 +12,8 @@ import {
   linkWrapper
 } from './campaign-focus-puff.css.js';
 import React from 'react';
-import External from '../Utils/Icons/SystemIcons/External/External';
+
+import External from '@designsystem-scope/utils';
 
 export const CampaignFocusPuff = ({
   headline,

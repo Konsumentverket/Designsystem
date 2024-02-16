@@ -1,6 +1,5 @@
 import { css } from '@emotion/core'
-import { colors } from '../utils/colors';
-import { medium, large } from '../utils/globalstyles';
+import { colors, medium, large } from '@designsystem-scope/utils';
 
 
 export const focusWrapper = css`

@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core'
 import React from 'react';
 
-export default ({ className, style, title, ...otherAttr }) => {
+export const Auction = ({ className, style, title, ...otherAttr }) => {
         return <svg className={className} css={style} width="32px" height="32px" viewBox="0 0 32 32" {...otherAttr}>
                 <title>{title}</title>
                 <g stroke="none" strokeWidth="1">

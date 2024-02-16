@@ -5,7 +5,9 @@ export const BasicIcon = () => {
   const inlineStyle = { fill: '#000',marginTop:'10px', display: 'block'};
   return (
     Object.keys(iconDefinitions).map((key) => (
-      <Icon key={key} icon={key} style={inlineStyle} />
+      <div key={key} data-id={key}>
+        <Icon icon={key} style={inlineStyle} />
+      </div>
     ))
   );
 }

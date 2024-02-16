@@ -20,11 +20,19 @@ export const InputRadio = ({
   dataAnswer
 }) => {
   const inputRef = useRef(null);
-  return <div css={[fieldWrapper, disabled && disabledStyle, fieldWrapperStyle]}
+  return <div
+    css={[fieldWrapper, disabled && disabledStyle, fieldWrapperStyle]}
     className={`${checked ? "inputHasValue" : ""} ${className}`}
   >
-    <label className="radiolabel" css={[fieldLabel, fieldLabelStyle]} htmlFor={id}>
-      <input ref={inputRef} css={[fieldInput, fieldInputStyle]} id={id} name={name}
+    <label
+      className="radiolabel"
+      css={[fieldLabel, fieldLabelStyle]}
+      htmlFor={id}>
+      <input
+        ref={inputRef}
+        css={[fieldInput, fieldInputStyle]}
+        id={id}
+        name={name}
         type="radio"
         tabIndex={tabIndex}
         onChange={(e) => {

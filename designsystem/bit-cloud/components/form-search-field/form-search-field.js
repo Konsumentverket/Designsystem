@@ -10,9 +10,8 @@ import {
   labelStyle,
   searchFieldInputWrapperStyles
 } from './form-search-field.css.js';
-import { Button } from '../button'
-import { VisuallyHidden } from '../utils/globalstyles';
-import Clear from '../utils/Icons/SystemIcons/Clear/Clear';
+import { Button } from '@designsystem-scope/button';
+import { VisuallyHidden, Clear } from '@designsystem-scope/utils';
 
 export const FormSearchField = React.forwardRef(({ className,
   icon,

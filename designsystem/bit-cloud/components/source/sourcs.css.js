@@ -1,7 +1,5 @@
 import { css } from "@emotion/core";
-import { colors } from '../utils/colors';
-import { medium } from '../utils/globalStyles';
-import { spacing } from "../utils/spacing";
+import { colors, medium, spacing } from '@designsystem-scope/utils';
 
 export const sourceStyle = css`
     padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};

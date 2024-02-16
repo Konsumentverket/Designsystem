@@ -1,5 +1,5 @@
 import css from "@emotion/css";
-import { colors } from '../utils/colors';
+import { colors } from '@designsystem-scope/utils';
 
 export const TextAreaStyle = css`
     padding: 1.2rem 1.6rem;

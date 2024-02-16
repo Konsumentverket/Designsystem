@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
-import { colors } from '../utils/colors';
-import { arrowPath } from '../utils/Icons/SystemIcons/Arrow/Arrow';
+import { colors } from '@designsystem-scope/utils';
+import { arrowPath } from '@designsystem-scope/utils/Icons/SystemIcons/Arrow/Arrow';
 
 export const selectStyle = css`
     appearance: none;
@@ -19,9 +19,7 @@ export const selectStyle = css`
     &[data-hasvalue="false"]{
         color: ${colors.theme3.dark};    
     }
-
 `;
-
 
 export const labelStyle = css`
   color: #4D4D4D;

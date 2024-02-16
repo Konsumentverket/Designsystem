@@ -2,7 +2,8 @@
 import { jsx } from '@emotion/core'
 import { TextAreaStyle, TextAreaWrapperStyle, Label, invalidStyle } from "./text-area.css.js"
 import { useRef, useState } from 'react';
-import { VisuallyHidden } from '../utils/globalStyles';
+
+import { VisuallyHidden } from '@designsystem-scope/utils';
 
 export const TextArea = ({
   style,

@@ -1,6 +1,5 @@
 import { css } from '@emotion/core';
-import { colors } from '../utils/colors';
-import { spacing } from '../utils/spacing';
+import { colors, spacing } from '@designsystem-scope/utils';
 
 export const wrapper = css`
   width: 100%;

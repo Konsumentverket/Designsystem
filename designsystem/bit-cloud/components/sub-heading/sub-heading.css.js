@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { medium } from '../utils/globalstyles';
+import { medium } from '@designsystem-scope/utils';
 
 export const commonSubHeadingStyle = css`
       color: #161616;

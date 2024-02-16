@@ -1,8 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { colors } from '../utils/colors';
-import { medium } from '../utils/globalstyles';
-import { spacing } from '../utils/spacing';
+import { colors, spacing, medium } from '@designsystem-scope/utils';
 
 const disabled = css` 
     background-color: ${colors.theme3.xLight};

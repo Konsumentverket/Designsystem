@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { expandButtonStyle, secondaryStyle, smallStyle, iconStyle, expandedIconStyle } from './expand-button.css.js';
-import Arrow from '../utils/Icons/SystemIcons/Arrow/Arrow.js';
+import Arrow from '@designsystem-scope/utils';
 
 export const ExpandButton = ({
   text,

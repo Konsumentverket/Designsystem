@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 
-export default ({ className, style, title, ...otherAttr }) => {
+export const Send = ({ className, style, title, ...otherAttr }) => {
   return (
     <svg
       className={className}

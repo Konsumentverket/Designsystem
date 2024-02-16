@@ -9,7 +9,7 @@ import {
   invertedSecondaryBackgroundStyle,
   buttonIconLeft,
   buttonIconRight
-} from './Button.css';
+} from './Button.css.js';
 
 export const Button = ({
   text,

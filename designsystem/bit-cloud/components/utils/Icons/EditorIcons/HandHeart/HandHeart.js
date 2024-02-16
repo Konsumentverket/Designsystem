@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import React from "react";
 
-export default ({ className, style, title, ...otherAttr }) => {
+export const HandHeart = ({ className, style, title, ...otherAttr }) => {
   return (
     <svg
       className={className}

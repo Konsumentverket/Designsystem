@@ -9,12 +9,260 @@
  */
 
 {
-    "components": {
-        "name": "components",
+    "button": {
+        "name": "button",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/button"
+    },
+    "campaign-focus-puff": {
+        "name": "campaign-focus-puff",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/campaign-focus-puff"
+    },
+    "display-alphabet": {
+        "name": "display-alphabet",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/display-alphabet"
+    },
+    "drop-down": {
+        "name": "drop-down",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/drop-down"
+    },
+    "editor-icon": {
+        "name": "editor-icon",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/editor-icon"
+    },
+    "expand-button": {
+        "name": "expand-button",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/expand-button"
+    },
+    "fact-box": {
+        "name": "fact-box",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/fact-box"
+    },
+    "focus-puff": {
+        "name": "focus-puff",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/focus-puff"
+    },
+    "form-checkbox": {
+        "name": "form-checkbox",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/form-checkbox"
+    },
+    "form-radiobutton": {
+        "name": "form-radiobutton",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/form-radiobutton"
+    },
+    "form-search-field": {
+        "name": "form-search-field",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/form-search-field"
+    },
+    "heading": {
+        "name": "heading",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/heading"
+    },
+    "icon": {
+        "name": "icon",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/icon"
+    },
+    "icon-card": {
+        "name": "icon-card",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/icon-card"
+    },
+    "input-radio": {
+        "name": "input-radio",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/input-radio"
+    },
+    "input-text": {
+        "name": "input-text",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/input-text"
+    },
+    "link-card": {
+        "name": "link-card",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/link-card"
+    },
+    "link-text-card": {
+        "name": "link-text-card",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/link-text-card"
+    },
+    "list-item": {
+        "name": "list-item",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/list-item"
+    },
+    "list-item-disabled": {
+        "name": "list-item-disabled",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/list-item-disabled"
+    },
+    "loading": {
+        "name": "loading",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/loading"
+    },
+    "pagination": {
+        "name": "pagination",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/pagination"
+    },
+    "prerequisites-box": {
+        "name": "prerequisites-box",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/prerequisites-box"
+    },
+    "skeleton": {
+        "name": "skeleton",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/skeleton"
+    },
+    "source": {
+        "name": "source",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/source"
+    },
+    "sub-heading": {
+        "name": "sub-heading",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/sub-heading"
+    },
+    "tag": {
+        "name": "tag",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/tag"
+    },
+    "tag-block": {
+        "name": "tag-block",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/tag-block"
+    },
+    "text-area": {
+        "name": "text-area",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/text-area"
+    },
+    "utils": {
+        "name": "utils",
         "scope": "",
         "version": "",
         "defaultScope": "designsystem-scope",
         "mainFile": "index.js",
-        "rootDir": "designsystem/bit-cloud/components"
+        "rootDir": "designsystem/bit-cloud/components/utils"
+    },
+    "validation-response": {
+        "name": "validation-response",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/validation-response"
+    },
+    "with-content-expander": {
+        "name": "with-content-expander",
+        "scope": "",
+        "version": "",
+        "defaultScope": "designsystem-scope",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/with-content-expander"
     }
 }

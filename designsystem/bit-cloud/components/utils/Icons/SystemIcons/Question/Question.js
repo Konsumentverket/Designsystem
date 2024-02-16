@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-export default ({ className, style, title, ...otherAttr }) => {
+export const Question = ({ className, style, title, ...otherAttr }) => {
 	return (
 		<svg className={className} css={style} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
             <title>{title}</title>

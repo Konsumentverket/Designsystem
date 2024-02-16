@@ -5,7 +5,7 @@ export const BasicTagBlock = () => {
   return (
     <TagBlock
       heading="Lorem ipsum"
-      icon="SalesLaw"
+      //icon="SalesLaw"
       invertedColors={false}
       secondaryArrowStyle={false}
       tags={[

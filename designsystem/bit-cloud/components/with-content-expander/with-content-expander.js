@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
-import Arrow from "../utils/Icons/SystemIcons/Arrow/Arrow";
+import { Arrow } from '@designsystem-scope/utils/Icons/SystemIcons/Arrow/Arrow.js'
 
 import {
   ComponentWrapperStyle,

@@ -8,6 +8,7 @@ export const BasicFormRadiobutton = () => {
       id="Lorem-radio"
       labelText="Lorem ipsum"
       value="Lorem ipsum"
+      onChange={(e) => console.log(e.target.value)}
     />
   );
 }

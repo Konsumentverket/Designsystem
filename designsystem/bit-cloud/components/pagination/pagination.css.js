@@ -1,7 +1,5 @@
 import { css } from "@emotion/core";
-import { colors } from "../utils/colors";
-import { large, medium } from "../utils/globalStyles";
-import { spacing } from "../utils/spacing";
+import { colors, spacing, medium, large } from '@designsystem-scope/utils';
 
 export const paginationWrapperStyle = css`
 

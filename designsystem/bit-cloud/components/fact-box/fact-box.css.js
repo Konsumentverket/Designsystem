@@ -1,7 +1,5 @@
 import { css } from "@emotion/core";
-import { colors } from '../utils/colors';
-import { medium } from '../utils/globalstyles';
-import { spacing } from '../utils/spacing';
+import { colors, spacing, medium } from '@designsystem-scope/utils';
 
 export const wrapper = css`
     background-color: ${colors.theme3.xLight};

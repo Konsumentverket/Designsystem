@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 
-export default ({ className, style, title, ...otherAttr }) => {
+export const Adapt = ({ className, style, title, ...otherAttr }) => {
 	return (
 		<svg className={className} css={style} width="24px" height="24px" viewBox="0 0 24 24" {...otherAttr}>
 			<title>{title}</title>

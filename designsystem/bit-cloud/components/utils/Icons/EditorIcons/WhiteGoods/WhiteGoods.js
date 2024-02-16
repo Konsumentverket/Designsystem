@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core'
 import React from 'react';
 
-export default ({ className, style, title, ...otherAttr }) => {
+export const WhiteGoods = ({ className, style, title, ...otherAttr }) => {
     return <svg className={className} css={style} width="25px" height="32px" viewBox="0 0 25 32" {...otherAttr}>
         <title>{title}</title>
         <g stroke="none" strokeWidth="1">
@@ -17,7 +17,3 @@ export default ({ className, style, title, ...otherAttr }) => {
         </g>
     </svg>;
 }
-
-
-
-

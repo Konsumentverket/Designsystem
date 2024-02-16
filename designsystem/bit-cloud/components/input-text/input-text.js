@@ -10,9 +10,8 @@ import {
   LoadingStyle
 } from "./input-text.css.js"
 import React, { useRef, useState } from 'react';
-import { VisuallyHidden } from '../utils/globalstyles.js';
-import Loading from '../loading/loading';
-import Clear from '../utils/Icons/SystemIcons/Clear/Clear.js';
+import Loading from '@designsystem-scope/loading';
+import { Clear, VisuallyHidden } from '@designsystem-scope/utils';
 
 export const InputText = React.forwardRef(({
   style,

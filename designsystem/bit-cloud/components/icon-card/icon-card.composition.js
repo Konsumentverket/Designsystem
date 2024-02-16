@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconCard } from './icon-card.js';
 
-import ConsumerRights from '../utils/Icons/EditorIcons/ConsumerRights/ConsumerRights';
+import ConsumerRights from '@designsystem-scope/utils/Icons/EditorIcons/ConsumerRights/ConsumerRights';
 
 export const BasicIconCard = () => {
   return (

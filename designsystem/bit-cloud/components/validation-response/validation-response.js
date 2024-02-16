@@ -2,8 +2,7 @@
 import { jsx } from '@emotion/core'
 import React from 'react'
 import * as css from './validation-response.css.js'
-import Check from '../utils/Icons/SystemIcons/Check/Check'
-import Clear from '../utils/Icons/SystemIcons/Clear/Clear'
+import {Check, Clear} from '@designsystem-scope/utils'
 
 const ValidationResponse = ({ success = false, text = '', children }) =>
     <div css={css.wrapper(success)}>

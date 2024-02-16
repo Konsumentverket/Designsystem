@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
-import { colors } from '../utils/colors';
-import { checkPath } from '../utils/Icons/SystemIcons/Check/Check';
+
+import { colors, checkPath } from '@designsystem-scope/utils';
 
 export const wrapperStyle = css` 
     position: relative;

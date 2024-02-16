@@ -7,7 +7,7 @@
   "teambit.workspace/workspace": {
     "name": "designsystem",
     "icon": "https://static.bit.dev/brands/bit-logo-min.png",
-    "defaultDirectory": "designsystem/bit-cloud/components",
+    "defaultDirectory": "designsystem/bit-cloud",
     "defaultScope": "designsystem-scope",
     "resolveAspectsFromNodeModules": true,
     "resolveEnvsFromRoots": true

@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core'
 import React from "react"
 import * as css from "./list-item.css.js"
-import { DateFormat } from '../utils/dateformat'
+import { DateFormat } from '@designsystem-scope/utils'
 
 export const ListItem = ({
   children,

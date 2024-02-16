@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import { wrapper, exclamationMarkImage, heading } from './prerequisites-box.css.js'
-import { SubHeading } from '../sub-heading/sub-heading';
-import Exclamationmark from '../utils/Icons/SystemIcons/Exclamationmark/Exclamationmark';
+import { SubHeading } from '@designsystem-scope/sub-heading';
+import Exclamationmark from '@designsystem-scope/utils';
 
 export const PrerequisitesBox = ({
   text,

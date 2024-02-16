@@ -1,6 +1,5 @@
 import { css } from '@emotion/core';
-import { medium } from '../utils/globalstyles';
-import { colors } from '../utils/colors';
+import { colors, medium } from '@designsystem-scope/utils';
 
 export const wrapper = css`
   position: relative;

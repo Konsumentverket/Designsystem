@@ -1,6 +1,5 @@
 import { css } from '@emotion/core'
-import { colors } from '../utils/colors';
-import { medium } from '../utils/globalstyles';
+import { colors, medium } from '@designsystem-scope/utils';
 
 const disabled = css` 
     color: ${colors.theme3.mid};
