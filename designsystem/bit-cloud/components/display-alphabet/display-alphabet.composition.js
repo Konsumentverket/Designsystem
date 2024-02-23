@@ -5,7 +5,7 @@ export const BasicDisplayAlphabet = () => {
   return (
     <DisplayAlphabet
       activeLetter="L"
-      visibleLetters={["L", "U", "D", "W", "I", "G"]}
+      visibleLetters={["L", "O", "R", "E", "M"]}
     />
   );
 }

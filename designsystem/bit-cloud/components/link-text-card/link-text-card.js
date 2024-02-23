@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { jsx, css } from '@emotion/core'
+import { jsx } from '@emotion/core'
 import React from 'react';
 import {
   wrapper,
@@ -9,9 +9,9 @@ import {
   innerTextWrapperStyle,
   linkTextCardContentStyle,
   linkTextMainLinkStyle
-} from '@designsystem-scope/link-card/link-card.css.js';
-import { SubHeading } from '@designsystem-scope/sub-heading/'
-import { Arrow } from '@designsystem-scope/utils/Icons/SystemIcons/Arrow/Arrow';
+} from '@designsystem-scope/link-card';
+import { SubHeading } from '@designsystem-scope/sub-heading';
+import { Arrow } from '@designsystem-scope/utils';
 
 const LinkTextCard = React.forwardRef(({
   text,

@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
 import { colors } from '@designsystem-scope/utils';
-import { arrowPath } from '@designsystem-scope/utils/Icons/SystemIcons/Arrow/Arrow';
+import { arrowPath } from '@designsystem-scope/utils';
 
 export const selectStyle = css`
     appearance: none;

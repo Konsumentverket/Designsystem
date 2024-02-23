@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { Arrow } from '@designsystem-scope/utils/Icons/SystemIcons/Arrow/Arrow.js'
+import { Arrow } from '@designsystem-scope/utils';
 
 import {
   ComponentWrapperStyle,
@@ -27,7 +27,7 @@ export const WithContentExpander = ({
   linkHref = "",
   disabled = false
 }) => {
-  
+
   const [expanded, setExpanded] = useState(open);
   const [linkElementFontSize, setLinkElementFontSize] = useState("16px");
   const linkContainerRef = useRef();
@@ -63,7 +63,7 @@ export const WithContentExpander = ({
     }
   }, [expanded]);
 
-  if (!show) 
+  if (!show)
     return null;
 
   return (
