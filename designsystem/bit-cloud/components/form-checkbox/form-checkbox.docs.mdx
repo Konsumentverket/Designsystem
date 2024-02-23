@@ -15,5 +15,11 @@ Use the form checkbox component:
 ### Display the text
 
 ```js live
-<FormCheckbox>Hello world!</FormCheckbox>
+<FormCheckbox
+    id="lorem-check-docs"
+    name="lorem-check-docs"
+    value="Lorem ipsum"
+    labelText="Lorem ipsum"
+    onChange={(e) => console.log(e.target.value)}
+/>
 ```

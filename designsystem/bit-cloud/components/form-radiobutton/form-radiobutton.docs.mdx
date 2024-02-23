@@ -15,5 +15,11 @@ Use the form radiobutton component:
 ### Display the text
 
 ```js live
-<FormRadiobutton>Hello world!</FormRadiobutton>
+<FormRadiobutton
+    name="lorem-radio-docs"
+    id="lorem-radio-docs"
+    labelText="Lorem ipsum"
+    value="Lorem ipsum"
+    onChange={(e) => console.log(e.target.value)}
+/>
 ```

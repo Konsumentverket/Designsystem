@@ -8,7 +8,7 @@ export const BasicIconCard = () => {
     <IconCard
       url="#"
       text="Lorem ipsum"
-      icon={<ConsumerRights />}
+      //icon={<ConsumerRights />}
     />
   );
 }

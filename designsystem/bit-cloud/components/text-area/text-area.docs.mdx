@@ -15,5 +15,10 @@ Use the text area component:
 ### Display the text
 
 ```js live
-<TextArea>Hello world!</TextArea>
+<TextArea
+    label="Lorem ipsum"
+    placeholder="Lorem ipsum dolor sit amet"
+    id="textarea"
+    onChange={(e) => console.log(e.target.value)}
+/>
 ```

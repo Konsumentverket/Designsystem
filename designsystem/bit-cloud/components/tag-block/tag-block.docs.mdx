@@ -15,5 +15,16 @@ Use the tag block component:
 ### Display the text
 
 ```js live
-<TagBlock>Hello world!</TagBlock>
+<TagBlock
+    heading="Lorem ipsum"
+    //icon="SalesLaw"
+    invertedColors={false}
+    secondaryArrowStyle={false}
+    tags={[
+    { titleInNavigation: "Lorem" },
+    { titleInNavigation: "Ipsum" },
+    { titleInNavigation: "Dolor" },
+    { titleInNavigation: "Sit" }
+    ]}
+/>
 ```

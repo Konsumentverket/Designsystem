@@ -10,8 +10,8 @@ import {
   linkTextCardContentStyle,
   linkTextMainLinkStyle
 } from '@designsystem-scope/link-card/link-card.css.js';
-import { SubHeading } from '@designsystem-scope/sub-heading'
-import Arrow from '@designsystem-scope/utils';
+import { SubHeading } from '@designsystem-scope/sub-heading/'
+import { Arrow } from '@designsystem-scope/utils/Icons/SystemIcons/Arrow/Arrow';
 
 const LinkTextCard = React.forwardRef(({
   text,
@@ -29,7 +29,11 @@ const LinkTextCard = React.forwardRef(({
   const renderLinkText = () => {
     if (children) {
       return (
-        <SubHeading level={headingLevel} styleLevel={3} style={innerTextWrapperStyle}>
+        <SubHeading
+          level={headingLevel}
+          styleLevel={3}
+          style={innerTextWrapperStyle}
+        >
           <span>{text}</span><Arrow aria-hidden='true' />
         </SubHeading>
       );

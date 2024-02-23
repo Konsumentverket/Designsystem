@@ -7,7 +7,7 @@ export const BasicFocusPuff = () => {
       headline="Lorem ipsum"
       text="Lorem ipsum dolor sit amet"
       isExternalLink={true}
-      url="https://www.frojd.se"
+      url="#"
       // image="https://picsum.photos/600/400"
     />
   );
