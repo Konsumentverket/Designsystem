@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+import 'date-fns';
 import { Icon, iconDefinitions } from './icon.js';
 
 export const BasicIcon = () => {

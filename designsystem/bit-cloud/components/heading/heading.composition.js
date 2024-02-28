@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+import 'date-fns';
 import { Heading } from './heading.js';
 
 export const BasicHeadings = () => {

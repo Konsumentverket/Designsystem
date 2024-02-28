@@ -1,5 +1,5 @@
 import css from "@emotion/css";
-import { colors } from '@designsystem-scope/utils';
+import { colors } from '@frojd/designsystem-scope.utils';
 
 export const InputStyle = (hasInnerContent) => css`
     width: 100%;

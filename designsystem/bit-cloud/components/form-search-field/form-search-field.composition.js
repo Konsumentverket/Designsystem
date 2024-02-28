@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+import 'date-fns';
 import { FormSearchField } from './form-search-field.js';
 
 export const BasicFormSearchField = () => {

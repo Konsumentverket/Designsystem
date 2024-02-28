@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+import 'date-fns';
 import { Button } from './button';
 
 export const BasicButton = () => {

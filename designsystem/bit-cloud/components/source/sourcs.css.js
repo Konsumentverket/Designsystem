@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { colors, medium, spacing } from '@designsystem-scope/utils';
+import { colors, medium, spacing } from '@frojd/designsystem-scope.utils';
 
 export const sourceStyle = css`
     padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};

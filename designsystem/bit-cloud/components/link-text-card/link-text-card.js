@@ -9,9 +9,9 @@ import {
   innerTextWrapperStyle,
   linkTextCardContentStyle,
   linkTextMainLinkStyle
-} from '@designsystem-scope/link-card';
-import { SubHeading } from '@designsystem-scope/sub-heading';
-import { Arrow } from '@designsystem-scope/utils';
+} from '@frojd/designsystem-scope.link-card';
+import { SubHeading } from '@frojd/designsystem-scope.sub-heading';
+import { Arrow } from '@frojd/designsystem-scope.utils';
 
 const LinkTextCard = React.forwardRef(({
   text,

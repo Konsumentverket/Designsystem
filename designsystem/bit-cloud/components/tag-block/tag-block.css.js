@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { colors } from '@designsystem-scope/utils';
+import { colors } from '@frojd/designsystem-scope.utils';
 
 export const tagBlockItem = css`
     background-color:${colors.theme3.xLight};    

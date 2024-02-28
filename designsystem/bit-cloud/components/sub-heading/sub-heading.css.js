@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { medium } from '@designsystem-scope/utils';
+import { medium } from '@frojd/designsystem-scope.utils';
 
 export const commonSubHeadingStyle = css`
       color: #161616;

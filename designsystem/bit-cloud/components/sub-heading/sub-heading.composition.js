@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+import 'date-fns';
 import { SubHeading } from './sub-heading.js';
 
 export const BasicSubHeading = () => {

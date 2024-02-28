@@ -13,7 +13,7 @@ import {
 } from './campaign-focus-puff.css.js';
 import React from 'react';
 
-import External from '@designsystem-scope/utils';
+import External from '@frojd/designsystem-scope.utils';
 
 export const CampaignFocusPuff = ({
   headline,

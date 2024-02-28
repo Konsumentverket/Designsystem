@@ -1,4 +1,5 @@
-import React from "react";
+import 'react';
+import 'date-fns';
 import { Source } from './source.js';
 
 export const BasicSource = () => {

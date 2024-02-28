@@ -17,8 +17,8 @@ import {
   secondaryArrowStyleCSS
 } from './tag-block.css.js';
 
-import { Tag } from '@designsystem-scope/tag';
-import { Arrow, LinkArrow } from '@designsystem-scope/utils';
+import { Tag } from '@frojd/designsystem-scope.tag';
+import { Arrow, LinkArrow } from '@frojd/designsystem-scope.utils';
 
 const TagBlock = React.forwardRef(({
   invertedColors = false,

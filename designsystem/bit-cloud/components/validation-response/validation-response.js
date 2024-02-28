@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core'
 import React from 'react'
 import * as css from './validation-response.css.js'
-import { Check, Clear } from "@designsystem-scope/utils";
+import { Check, Clear } from "@frojd/designsystem-scope.utils";
 
 const ValidationResponse = ({
     success = false,

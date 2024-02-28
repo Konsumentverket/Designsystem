@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { format, parseISO } from 'date-fns'
-import sv from 'date-fns/locale/sv'
+import { format, parseISO } from 'date-fns';
+// import { sv } from 'date-fns/locale';
 
 export const Formats = {
   dateFormat: "d MMMM yyyy",
@@ -25,7 +25,7 @@ export const DateFormat = ({
       displayFormat = dateFormat;
     else
       displayFormat = (showDate && showTime) ? Formats.dateAndTimeFormat : showDate ? Formats.dateFormat : showTime ? Formats.timeFormat : Formats.simpleDateAndTimeFormat
-    return format(parseISO(date), displayFormat, { locale: sv })
+    return format(parseISO(date), displayFormat, { /* locale: sv */ })
   } else {
     console.log("parse date failed")
     return null

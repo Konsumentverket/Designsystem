@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { colors, spacing } from '@designsystem-scope/utils';
+import { colors, spacing } from '@frojd/designsystem-scope.utils';
 
 export const wrapper = css`
   width: 100%;

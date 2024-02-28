@@ -1,4 +1,5 @@
-import React from 'react'
+import 'react';
+import 'date-fns';
 import { LinkCard } from './link-card.js';
 
 export const BasicLinkCard = () => {

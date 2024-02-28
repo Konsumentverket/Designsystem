@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+import 'date-fns';
 import { EditorIcon, editorIconDefinitions } from './editor-icon.js';
 
 export const BasicEditorIcon = () => {

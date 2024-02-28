@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+import 'date-fns';
 import { TextArea } from './text-area.js';
 
 export const BasicTextArea = () => {

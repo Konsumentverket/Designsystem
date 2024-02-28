@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+import 'date-fns';
 import { CampaignFocusPuff } from './campaign-focus-puff';
 
 export const BasicCampaignFocusPuff = () => {

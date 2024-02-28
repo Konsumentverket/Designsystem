@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+import 'date-fns';
 import { ListItem } from './list-item.js';
 
 export const BasicListItem = () => {

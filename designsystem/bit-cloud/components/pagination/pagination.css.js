@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { colors, spacing, medium, large } from '@designsystem-scope/utils';
+import { colors, spacing, medium, large } from '@frojd/designsystem-scope.utils';
 
 export const paginationWrapperStyle = css`
 

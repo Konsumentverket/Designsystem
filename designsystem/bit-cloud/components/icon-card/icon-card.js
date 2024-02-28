@@ -2,7 +2,7 @@
 import React from 'react'
 import { jsx } from '@emotion/core'
 import { iconCardStyle, arrowStyle, iconStyle, iconText, noIcon } from './icon-card.css.js';
-import { Arrow } from '@designsystem-scope/utils';
+import { Arrow } from '@frojd/designsystem-scope.utils';
 
 const IconCard = React.forwardRef(({
     icon,

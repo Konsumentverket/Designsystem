@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+import 'date-fns';
 import { TagBlock } from './tag-block.js';
 
 export const BasicTagBlock = () => {

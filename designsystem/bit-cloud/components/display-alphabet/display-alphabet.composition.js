@@ -1,5 +1,6 @@
+import 'react';
+import 'date-fns';
 import { DisplayAlphabet } from './display-alphabet.js';
-import React from 'react';
 
 export const BasicDisplayAlphabet = () => {
   return (

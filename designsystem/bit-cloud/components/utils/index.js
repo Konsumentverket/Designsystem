@@ -1,3 +1,4 @@
+import 'date-fns';
 import { colors } from './colors';
 import { globalStyles } from './globalstyles';
 import { spacing } from './spacing';

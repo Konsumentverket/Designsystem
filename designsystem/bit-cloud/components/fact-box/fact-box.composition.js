@@ -1,4 +1,5 @@
-import React from 'react';
+import 'react';
+import 'date-fns';
 import { FactBox } from './fact-box.js';
 
 export const BasicFactBox = () => {

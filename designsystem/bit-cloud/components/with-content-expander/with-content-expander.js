@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { Arrow } from '@designsystem-scope/utils';
+import { Arrow } from '@frojd/designsystem-scope.utils';
 
 import {
   ComponentWrapperStyle,
