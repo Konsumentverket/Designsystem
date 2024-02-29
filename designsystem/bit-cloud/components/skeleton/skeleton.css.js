@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { colors, spacing } from '@frojd/designsystem-scope.utils';
+import { colors, spacing } from '@designsystem.utils';
 
 const linearGradient = rows => new Array(rows).fill(0).map(() =>
     `linear-gradient(${colors.theme3.xLight} 100%, transparent 0),`)

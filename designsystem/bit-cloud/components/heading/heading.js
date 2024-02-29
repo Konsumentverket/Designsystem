@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react';
-import { SubHeading } from '@frojd/designsystem-scope.sub-heading';
+import { SubHeading } from '@designsystem.sub-heading';
 
 export const Heading = ({
   text,

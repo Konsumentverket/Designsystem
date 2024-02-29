@@ -1,5 +1,5 @@
 import css from "@emotion/css";
-import { colors } from '@frojd/designsystem-scope.utils';
+import { colors } from '@designsystem.utils';
 
 export const TextAreaStyle = css`
     padding: 1.2rem 1.6rem;

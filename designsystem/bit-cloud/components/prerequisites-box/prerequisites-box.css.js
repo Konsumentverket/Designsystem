@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { colors, medium } from '@frojd/designsystem-scope.utils';
+import { colors, medium } from '@designsystem.utils';
 
 export const wrapper = css`
   position: relative;

@@ -49,7 +49,7 @@ import {
   Ellipsis,
   HandHeart,
   Snowboarding,
-} from "@frojd/designsystem-scope.utils";
+} from "@designsystem.utils";
 
 const editorIconDefinitions = {
   AppsAndGames,

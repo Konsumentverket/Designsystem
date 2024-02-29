@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 import * as css from './focus-puff.css.js';
-import { External } from '@frojd/designsystem-scope.utils';
+import { External } from '@designsystem.utils';
 
 const FocusPuff = React.forwardRef(({
   headline,

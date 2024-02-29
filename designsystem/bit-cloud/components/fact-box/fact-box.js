@@ -2,8 +2,8 @@
 import React from 'react'
 import { jsx } from '@emotion/core'
 import { wrapper, secondaryColorStyle } from './fact-box.css.js'
-import { SubHeading } from '@frojd/designsystem-scope.sub-heading'
-import { LinkWrapperInvertedColorStyle } from '@frojd/designsystem-scope.utils';
+import { SubHeading } from '@designsystem.sub-heading'
+import { LinkWrapperInvertedColorStyle } from '@designsystem.utils';
 
 export const FactBox = ({
   children,

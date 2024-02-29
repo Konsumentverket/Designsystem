@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import React from "react";
 import { sourceStyle, secondRow, rightAlign, sourceLink } from "./sourcs.css.js";
 import isExternal from "./isExternalUrl";
-import { External } from '@frojd/designsystem-scope.utils';
+import { External } from '@designsystem.utils';
 
 export const Source = ({
   baseUrl,

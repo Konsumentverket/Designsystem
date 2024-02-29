@@ -37,7 +37,7 @@ import {
   HomeDelivery,
   Online,
   Send,
-} from "@frojd/designsystem-scope.utils"
+} from "@designsystem.utils"
 
 const iconDefinitions = {
   Adapt,

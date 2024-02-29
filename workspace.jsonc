@@ -7,7 +7,7 @@
     "name": "designsystem",
     "icon": "https://static.bit.dev/brands/bit-logo-min.png",
     "defaultDirectory": "designsystem/bit-cloud/components",
-    "defaultScope": "designsystem-scope",
+    "defaultScope": "designsystem",
     "resolveAspectsFromNodeModules": true,
     "resolveEnvsFromRoots": true
   },

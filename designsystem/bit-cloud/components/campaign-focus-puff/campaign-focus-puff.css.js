@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { colors, medium, large } from '@frojd/designsystem-scope.utils';
+import { colors, medium, large } from '@designsystem.utils';
 
 
 export const focusWrapper = css`

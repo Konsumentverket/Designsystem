@@ -1,7 +1,7 @@
 import 'react';
 import 'date-fns';
 import { IconCard } from './icon-card.js';
-import { Icon } from '@frojd/designsystem-scope.icon'
+import { Icon } from '@designsystem.icon'
 
 export const BasicIconCard = () => {
   return (

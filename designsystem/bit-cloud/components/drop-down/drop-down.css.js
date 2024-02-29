@@ -1,6 +1,6 @@
 import { css } from '@emotion/core'
-import { colors } from '@frojd/designsystem-scope.utils';
-import { arrowPath } from '@frojd/designsystem-scope.utils';
+import { colors } from '@designsystem.utils';
+import { arrowPath } from '@designsystem.utils';
 
 export const selectStyle = css`
     appearance: none;
