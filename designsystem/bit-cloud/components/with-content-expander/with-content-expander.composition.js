@@ -1,4 +1,5 @@
 import React from 'react';
+import 'date-fns';
 import { WithContentExpander } from './with-content-expander.js';
 
 export const BasicWithContentExpander = () => {

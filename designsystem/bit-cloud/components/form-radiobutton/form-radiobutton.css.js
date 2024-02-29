@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { colors } from '@designsystem.utils';
+import { colors } from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapperStyle = css` 
     position:relative;

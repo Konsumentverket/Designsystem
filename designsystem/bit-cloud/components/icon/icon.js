@@ -37,7 +37,7 @@ import {
   HomeDelivery,
   Online,
   Send,
-} from "@designsystem.utils"
+} from "@konsumentverket-sverige/designsystem.utils"
 
 const iconDefinitions = {
   Adapt,

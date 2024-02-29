@@ -7,7 +7,7 @@
     "name": "designsystem",
     "icon": "https://static.bit.dev/brands/bit-logo-min.png",
     "defaultDirectory": "designsystem/bit-cloud/components",
-    "defaultScope": "designsystem",
+    "defaultScope": "konsumentverket-sverige.designsystem",
     "resolveAspectsFromNodeModules": true,
     "resolveEnvsFromRoots": true
   },
@@ -18,11 +18,14 @@
   },
   "teambit.dependencies/dependency-resolver": {
     "packageManager": "teambit.dependencies/pnpm",
-    "rootComponents": true,
     "policy": {
-      "dependencies": {},
+      "dependencies": {
+        "@emotion/css": "^11.11.2"
+      },
       "peerDependencies": {}
-    }
+    },
+    "linkCoreAspects": true,
+    "rootComponents": true
   },
   "teambit.workspace/workspace-config-files": {
     "enableWorkspaceConfigWrite": true

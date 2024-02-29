@@ -10,8 +10,8 @@ import {
     rotateArrow,
     customFontSize
 } from './link-card.css.js';
-import { SubHeading } from '@designsystem.sub-heading';
-import { LinkArrow, Arrow } from '@designsystem.utils';
+import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
+import { LinkArrow, Arrow } from '@konsumentverket-sverige/designsystem.utils';
 
 const LinkCard = React.forwardRef(({
     text,

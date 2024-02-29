@@ -13,7 +13,7 @@ import {
 } from './campaign-focus-puff.css.js';
 import React from 'react';
 
-import External from '@designsystem.utils';
+import External from '@konsumentverket-sverige/designsystem.utils';
 
 export const CampaignFocusPuff = ({
   headline,

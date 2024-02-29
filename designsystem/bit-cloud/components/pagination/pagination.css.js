@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { colors, spacing, medium, large } from '@designsystem.utils';
+import { colors, spacing, medium, large } from '@konsumentverket-sverige/designsystem.utils';
 
 export const paginationWrapperStyle = css`
 

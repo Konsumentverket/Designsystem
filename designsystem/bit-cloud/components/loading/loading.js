@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { colors } from '@designsystem.utils';
+import { colors } from '@konsumentverket-sverige/designsystem.utils';
 
 const loaderStyle = ({ color = colors.theme2.midLight, width = '80px', height = "80px", border = "6px" }) => css`
     display: inline-block;

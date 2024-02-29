@@ -1,5 +1,5 @@
-import css from '@emotion/css'
-import { colors } from '@designsystem.utils';
+import { css } from "@emotion/css";
+import { colors } from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapper = success => css`
   display: flex;

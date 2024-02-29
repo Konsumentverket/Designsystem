@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { medium } from '@designsystem.utils';
+import { medium } from '@konsumentverket-sverige/designsystem.utils';
 
 export const commonSubHeadingStyle = css`
       color: #161616;

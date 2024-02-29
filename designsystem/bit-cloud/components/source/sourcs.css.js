@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { colors, medium, spacing } from '@designsystem.utils';
+import { colors, medium, spacing } from '@konsumentverket-sverige/designsystem.utils';
 
 export const sourceStyle = css`
     padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};

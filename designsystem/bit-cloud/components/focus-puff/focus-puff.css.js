@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { colors, medium } from '@designsystem.utils';
+import { colors, medium } from '@konsumentverket-sverige/designsystem.utils';
 
 export const focusWrapper = css`
   min-height: 25.6rem;

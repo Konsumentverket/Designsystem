@@ -1,7 +1,7 @@
-import 'react';
+import React from 'react';;
 import 'date-fns';
 import { IconCard } from './icon-card.js';
-import { Icon } from '@designsystem.icon'
+import { Icon } from '@konsumentverket-sverige/designsystem.icon'
 
 export const BasicIconCard = () => {
   return (

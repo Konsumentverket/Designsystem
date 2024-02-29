@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import React from "react";
 import { sourceStyle, secondRow, rightAlign, sourceLink } from "./sourcs.css.js";
 import isExternal from "./isExternalUrl";
-import { External } from '@designsystem.utils';
+import { External } from '@konsumentverket-sverige/designsystem.utils';
 
 export const Source = ({
   baseUrl,

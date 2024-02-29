@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { colors, spacing } from '@designsystem.utils';
+import { colors, spacing } from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapper = css`
   width: 100%;

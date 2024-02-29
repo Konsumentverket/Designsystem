@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { Arrow } from '@designsystem.utils';
+import { Arrow } from '@konsumentverket-sverige/designsystem.utils';
 
 import {
   ComponentWrapperStyle,

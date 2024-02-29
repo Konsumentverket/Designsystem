@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core'
 import React from "react"
 import * as css from "./list-item-disabled.css.js"
-import { DateFormat } from '@designsystem.utils'
+import { DateFormat } from '@konsumentverket-sverige/designsystem.utils'
 
 export const ListItemDisabled = ({
   children,

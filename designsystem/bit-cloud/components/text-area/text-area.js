@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core'
 import { TextAreaStyle, TextAreaWrapperStyle, Label, invalidStyle } from "./text-area.css.js"
 import { useRef, useState } from 'react';
 
-import { VisuallyHidden } from '@designsystem.utils';
+import { VisuallyHidden } from '@konsumentverket-sverige/designsystem.utils';
 
 export const TextArea = ({
   style,

@@ -9,9 +9,9 @@ import {
   innerTextWrapperStyle,
   linkTextCardContentStyle,
   linkTextMainLinkStyle
-} from '@designsystem.link-card';
-import { SubHeading } from '@designsystem.sub-heading';
-import { Arrow } from '@designsystem.utils';
+} from '@konsumentverket-sverige/designsystem.link-card';
+import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
+import { Arrow } from '@konsumentverket-sverige/designsystem.utils';
 
 const LinkTextCard = React.forwardRef(({
   text,

@@ -49,7 +49,7 @@ import {
   Ellipsis,
   HandHeart,
   Snowboarding,
-} from "@designsystem.utils";
+} from "@konsumentverket-sverige/designsystem.utils";
 
 const editorIconDefinitions = {
   AppsAndGames,

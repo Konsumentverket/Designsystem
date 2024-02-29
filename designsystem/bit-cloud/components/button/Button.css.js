@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { colors, medium } from '@designsystem.utils';
+import { colors, medium } from '@konsumentverket-sverige/designsystem.utils';
 
 const disabled = css` 
     color: ${colors.theme3.mid};

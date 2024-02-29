@@ -1,4 +1,4 @@
-import 'react';
+import React from 'react';;
 import 'date-fns';
 import { PrerequisitesBox } from './prerequisites-box.js';
 

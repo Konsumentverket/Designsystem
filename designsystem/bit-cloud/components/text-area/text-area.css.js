@@ -1,5 +1,5 @@
-import css from "@emotion/css";
-import { colors } from '@designsystem.utils';
+import { css } from "@emotion/css";
+import { colors } from '@konsumentverket-sverige/designsystem.utils';
 
 export const TextAreaStyle = css`
     padding: 1.2rem 1.6rem;

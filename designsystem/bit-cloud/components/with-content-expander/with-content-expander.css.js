@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { colors, spacing, medium, small } from '@designsystem.utils';
+import { colors, spacing, medium, small } from '@konsumentverket-sverige/designsystem.utils';
 
 export const grayContentExpanderWrapper = css`
     background-color: ${colors.theme3.xLight};
