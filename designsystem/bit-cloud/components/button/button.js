@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
@@ -71,4 +72,26 @@ export const Button = ({
     </button>;
 }
 
+Button.propTypes = {
+  text: PropTypes.string,
+  secondaryButtonStyle: PropTypes.bool,
+  invertedBackgroundColor: PropTypes.bool,
+  className: PropTypes.string,
+  id: PropTypes.string,
+  type: PropTypes.string,
+  selected: PropTypes.bool,
+  disabled: PropTypes.bool,
+  iconLeft: PropTypes.element,
+  iconRight: PropTypes.element,
+  style: PropTypes.object,
+  reference: PropTypes.bool,
+  onClick: PropTypes.func,
+  href: PropTypes.string,
+  other: PropTypes.object,
+}
 
+Button.defaultProps = {
+  secondaryButtonStyle: false,
+  invertedBackgroundColor: false,
+  type: "submit",
+};

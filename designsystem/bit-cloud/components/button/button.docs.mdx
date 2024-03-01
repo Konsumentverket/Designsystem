@@ -1,17 +1,36 @@
 ---
+
 description: A Button component.
+
 ---
+
+## Introduction
+
+The Button component is a reusable UI element designed for React applications, providing users with interactive clickable elements. It can serve as both a standard button and a link. The appearance of the button can be easily customized using Emotion styling. Additionally, it supports onClick event handling to trigger actions.
 
 import { Button } from './button';
 
-## Basic usage
-
-Use the button component:
+### Instructions
+#### Installation
 
 ```js
-<Button />
+npm i @konsumentverket-sverige/designsystem.button@0.0.1
 ```
 
-```js live
-<Button text="Lorem ipsum" />
+#### Importing
+
+```js
+import Button from '@konsumentverket-sverige/designsystem.button@0.0.1';
+```
+
+### Usage:
+
+#### As a button
+```js
+<Button text="Lorem ipsum" onClick={(e) => doSomething(e)} />
+```
+
+#### As a link
+```js
+<Button text="Lorem ipsum" href={myLink.url} />
 ```

@@ -1,3 +1,3 @@
-it('should render the correct text', () => {
+it('Render', () => {
   expect(true).toBeTruthy();
 });

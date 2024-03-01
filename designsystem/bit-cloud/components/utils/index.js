@@ -1,6 +1,6 @@
 import 'date-fns';
 import { colors } from './colors';
-import { globalStyles } from './globalstyles';
+import { GlobalStyles as globalStyles } from './globalstyles';
 import { spacing } from './spacing';
 import { DateFormat } from './dateformat.js';
 

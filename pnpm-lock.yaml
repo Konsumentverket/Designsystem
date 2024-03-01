@@ -35,6 +35,9 @@ importers:
       nodemon:
         specifier: ^1.19.4
         version: 1.19.4
+      prop-types:
+        specifier: ^15.8.1
+        version: 15.8.1
       react:
         specifier: 17.0.2
         version: 17.0.2
@@ -157,6 +160,9 @@ importers:
       date-fns:
         specifier: ^2.11.0
         version: 2.30.0
+      prop-types:
+        specifier: ^15.8.1
+        version: 15.8.1
       react:
         specifier: 17.0.2
         version: 17.0.2
@@ -823,6 +829,9 @@ importers:
       '@emotion/css':
         specifier: ^11.11.2
         version: 11.11.2
+      date-fns:
+        specifier: ^2.11.0
+        version: 2.30.0
       react:
         specifier: 17.0.2
         version: 17.0.2
@@ -842,6 +851,9 @@ importers:
       '@emotion/core':
         specifier: ^10.0.21
         version: 10.3.1(react@17.0.2)
+      date-fns:
+        specifier: ^2.11.0
+        version: 2.30.0
       react:
         specifier: 17.0.2
         version: 17.0.2
@@ -11932,6 +11944,7 @@ packages:
       '@emotion/core': 10.3.1(react@17.0.2)
       '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/core@10.3.1)(date-fns@2.30.0)(react@17.0.2)
       date-fns: 2.30.0
+      prop-types: 15.8.1
       react: 17.0.2
     dev: false
 
@@ -12589,9 +12602,12 @@ packages:
     name: '@konsumentverket-sverige/designsystem.validation-response'
     peerDependencies:
       '@emotion/core': '*'
+      date-fns: '*'
       react: '*'
     peerDependenciesMeta:
       '@emotion/core':
+        optional: true
+      date-fns:
         optional: true
       react:
         optional: true
@@ -12599,9 +12615,8 @@ packages:
       '@emotion/core': 10.3.1(react@17.0.2)
       '@emotion/css': 11.11.2
       '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/core@10.3.1)(date-fns@2.30.0)(react@17.0.2)
+      date-fns: 2.30.0
       react: 17.0.2
-    transitivePeerDependencies:
-      - date-fns
     dev: false
 
   file:designsystem/bit-cloud/components/with-content-expander(@emotion/core@10.3.1)(date-fns@2.30.0)(react-dom@17.0.2)(react@17.0.2):
@@ -12610,10 +12625,13 @@ packages:
     name: '@konsumentverket-sverige/designsystem.with-content-expander'
     peerDependencies:
       '@emotion/core': '*'
+      date-fns: '*'
       react: '*'
       react-dom: '*'
     peerDependenciesMeta:
       '@emotion/core':
+        optional: true
+      date-fns:
         optional: true
       react:
         optional: true
@@ -12622,8 +12640,7 @@ packages:
     dependencies:
       '@emotion/core': 10.3.1(react@17.0.2)
       '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/core@10.3.1)(date-fns@2.30.0)(react@17.0.2)
+      date-fns: 2.30.0
       react: 17.0.2
       react-dom: 17.0.2(react@17.0.2)
-    transitivePeerDependencies:
-      - date-fns
     dev: false

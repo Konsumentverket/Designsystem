@@ -20,7 +20,8 @@
     "packageManager": "teambit.dependencies/pnpm",
     "policy": {
       "dependencies": {
-        "@emotion/css": "^11.11.2"
+        "@emotion/css": "^11.11.2",
+        "prop-types": "^15.8.1"
       },
       "peerDependencies": {}
     },
