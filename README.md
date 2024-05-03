@@ -68,6 +68,19 @@ I projektets root katalog för föjande kommando:
     npm start
 ```
 
+## Bit.cloud
+
+```
+  ### install bit globally
+  > nvm use 20
+  > npx @teambit/bvm install
+  ### init bit
+  > bit init
+  ### build OR start bit
+  > bit build
+  > bit start
+```
+
 ## Bit.dev
 
 ```
