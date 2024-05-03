@@ -75,7 +75,7 @@ I projektets root katalog för föjande kommando:
   > nvm use 20
   > npx @teambit/bvm install
   ### init bit
-  > bit init
+  > bit install
   ### build OR start bit
   > bit build
   > bit start
