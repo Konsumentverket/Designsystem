@@ -1,3 +1,51 @@
+export const newColors = {
+  kovBlue: '#162259',
+  kovWhite: '#FFF',
+  kovBlack: '#161616',
+
+  primaries: {
+    kovBlue: '#162259',
+    fullBlue:  '#0061C2',
+    mediumBlue:  '#92D2F4',
+    lightBlue:  '#DFF1FB',
+    fullOrange:  '#9C6A46',
+    mediumOrange:  '#F59C00',
+    lightOrange:  '#FCEBD5',
+  },
+
+  secondaries: {
+    fullGreen:  '#008844',
+    mediumGreen:  '#76B82A',
+    lightGreen:  '#D6EAC6',
+    fullPink:  '#B50156',
+    mediumPink:  '#DC5F9A',
+    lightPink:  '#F4CFE0',
+    fullGrey:  '#83736F',
+    mediumGrey:  '#B4AAA9',
+    lightGrey:  '#D9D5D4',
+  },
+
+  shades: {
+    kovBlue: '#162259',
+    kovBlue75: '#113273',
+    kovBlue50: '#194389',
+    fullBlue: '#0061C2',
+    fullBlue50: '#4F97D6',
+    mediumBlue: '#92D2F4',
+    mediumBlue50: '#B9E1F6',
+    lightBlue: '#DFF1FB',
+    lightBlue50: '#EFF8FD',
+    kovBlack: '#161616',
+    kovBlack50: '#4e4745',
+    fullGrey: '#83736F',
+    fullGrey50: '#998D8B',
+    mediumGrey: '#B4AAA9',
+    mediumGrey50: '#C5BFBD',
+    lightGrey: '#D9D5D4',
+    lightGrey50: '#EBE9E9',
+  }
+}
+
 const defaultTheme = {
   theme1: {
     xDark: "#162259",
