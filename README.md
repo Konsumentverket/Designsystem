@@ -80,6 +80,11 @@ I projektets root katalog för föjande kommando:
   ### build OR start bit
   > bit build
   > bit start
+
+  ### To export to bit.cloud
+  > bit tag --message "Export msg"
+  > bit export
+
 ```
 
 ## Bit.dev
