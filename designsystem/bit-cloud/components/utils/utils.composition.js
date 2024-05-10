@@ -1,5 +1,11 @@
+/** @jsx jsx */
 import React from 'react';
+import {css, jsx} from '@emotion/core'
 import {newColors} from './colors.js';
+import {GlobalStyles} from "./globalstyles";
+import {gridStyles, containerStyles} from "./grid";
+import {breakpoints} from "./breakpoints";
+
 
 export const Primaries = () => (
   Object.entries(newColors.primaries).map(
@@ -37,3 +43,58 @@ const colorItem = (name, hexColor) => (
     <p><strong>{name}</strong> - {hexColor}</p>
   </div>
 )
+
+const halfContainerStyle = css`
+    height: 20rem;
+    border: 1px solid blue;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const ContainerStylesExample = () => {
+  return (
+    <>
+      <GlobalStyles />
+      <div css={[containerStyles]}>
+        <div css={[halfContainerStyle]}>
+          50%
+        </div>
+      </div>
+    </>
+  )
+}
+
+const halfGridStyle = css`
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 20rem;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: ${breakpoints.m}) {
+        grid-column-start: 1;
+        grid-column-end: 6;
+      }
+
+      @media (min-width: ${breakpoints.l}) {
+        grid-column-start: 1;
+        grid-column-end: 10;
+      }
+`;
+
+export const GridStylesExample = () => {
+  return (
+    <>
+      <GlobalStyles />
+      <div css={[gridStyles]}>
+        <div css={[halfGridStyle]}>
+          50%
+        </div>
+      </div>
+    </>
+  )
+}

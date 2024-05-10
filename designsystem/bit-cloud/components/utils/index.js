@@ -2,6 +2,7 @@ import 'date-fns';
 import { colors, newColors } from './colors';
 import { GlobalStyles as globalStyles, CompositionFonts } from './globalstyles';
 import { spacing } from './spacing';
+import { breakpoints } from "./breakpoints";
 import { DateFormat } from './dateformat.js';
 
 // System icons
@@ -100,6 +101,7 @@ export {
     CompositionFonts,
     spacing,
     DateFormat,
+    breakpoints,
 
     // System icons
 
