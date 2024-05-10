@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx } from '@emotion/core'
-import { wrapper, title } from './fact-box.css.js'
+// import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
+import { wrapperStyling, titleStyling } from './fact-box.css.js'
 
 export const FactBox = ({
   children,
@@ -14,9 +15,9 @@ export const FactBox = ({
   }
 
   return (
-    <div css={wrapper}>
+    <div css={wrapperStyling}>
       {headline && (
-        <h3 css={title}>{headline}</h3>
+        <h3 css={titleStyling}>{headline}</h3> // Use the SubHeading component instead?
       )}
       {children}
       {content}

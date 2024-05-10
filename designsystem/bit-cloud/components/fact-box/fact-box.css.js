@@ -1,14 +1,27 @@
 import { css } from "@emotion/core";
 import { newColors, colors, spacing, medium } from '@konsumentverket-sverige/designsystem.utils';
 
-export const wrapper = css`
+export const wrapperStyling = css`
     width: 100%;
     background-color: ${newColors.primaries.lightOrange};
     border-radius: 8px;
-    padding: ${spacing.m} ${spacing.s} ${spacing.m} ${spacing.s};
+    padding: ${spacing.m} ${spacing.s};
 
     ${medium} {
-        padding: ${spacing.l} ${spacing.s} ${spacing.l} ${spacing.s};
+        padding: ${spacing.l} ${spacing.l};
+    }
+
+    
+    li, p {
+        margin-bottom: 24px;
+        font-size: 2.0rem;
+        line-height: 1.4;
+        padding-bottom: 0;
+    }
+
+    li:last-of-type,
+    p:last-of-type {
+        margin-bottom: 0;
     }
 
     ul {
@@ -18,9 +31,6 @@ export const wrapper = css`
 
         li {
             position: relative;
-            margin-bottom: 24px;
-            font-size: 2.0rem;
-            line-height: 1.4;
 
             &:before {
                 content: '';
@@ -39,7 +49,7 @@ export const wrapper = css`
     }
 `;
 
-export const title = css`
+export const titleStyling = css`
     color: ${newColors.primaries.kovBlack};
     font-size: 2.4rem;
     font-weight: 700;
