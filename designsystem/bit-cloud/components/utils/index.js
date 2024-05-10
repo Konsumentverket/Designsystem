@@ -7,6 +7,7 @@ import { DateFormat } from './dateformat.js';
 
 // System icons
 import { Adapt } from "./Icons/SystemIcons/Adapt/Adapt.js"
+import { ChevronRight } from "./Icons/SystemIcons/ChevronRight/ChevronRight.js";
 import { Close } from "./Icons/SystemIcons/Close/Close.js";
 import { Easytoread } from "./Icons/SystemIcons/Easytoread/Easytoread.js";
 import { Search } from "./Icons/SystemIcons/Search/Search.js";
@@ -106,6 +107,7 @@ export {
     // System icons
 
     Adapt,
+    ChevronRight,
     Close,
     Easytoread,
     Search,

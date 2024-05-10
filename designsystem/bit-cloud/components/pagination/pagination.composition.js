@@ -1,14 +1,20 @@
 import React from 'react';;
 import 'date-fns';
 import { Pagination } from './pagination.js';
+import {
+  globalStyles as GlobalStyles, CompositionFonts
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const BasicPagination = () => {
   return (
-    <Pagination
-      total={100}
-      currentPage={2}
-      pageSize={10}
-      baseUrl="#?page=2"
-    />
+    <CompositionFonts>
+      <GlobalStyles />
+      <Pagination
+        total={100}
+        currentPage={6}
+        pageSize={10}
+        baseUrl="#?page=2"
+      />
+    </CompositionFonts>
   );
 }

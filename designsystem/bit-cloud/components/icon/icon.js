@@ -3,6 +3,7 @@ import { jsx } from "@emotion/core";
 
 import {
   Adapt,
+  ChevronRight,
   Close,
   Easytoread,
   Search,
@@ -41,6 +42,7 @@ import {
 
 const iconDefinitions = {
   Adapt,
+  ChevronRight,
   Close,
   Easytoread,
   External,

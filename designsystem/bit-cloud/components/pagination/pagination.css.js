@@ -1,47 +1,32 @@
 import { css } from "@emotion/core";
-import { colors, spacing, medium, large } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, colors, spacing, medium, large } from '@konsumentverket-sverige/designsystem.utils';
 
 export const paginationWrapperStyle = css`
-
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding-bottom: 5.6rem;
+    gap: 16px;
 
     ${large}{
-        justify-content: space-between;
-        padding-bottom: 4.8rem;
+
     }
 `
 
 export const pageStyle = css`
-    height: 4.0rem;
-    width: 4.2rem;
-
-    line-height: 4.0rem;
-    border: 1px solid ${colors.theme1.mid};
+    height: 36px;
+    width: 36px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: ${newColors.shades.fullBlue50};
+    border: 1px solid ${newColors.shades.fullBlue50};
     border-radius: 8px;
-    display: inline-block;
-    font-size: 2.1rem;
-    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    text-align: center;
     text-decoration: none !important;
-    margin: 0 0.8rem;
-
-    &.last{
-        margin-right: 0;
-    }
-
-    &.first{
-        margin-left: 0;
-    }
-
-    ${medium}{
-        margin: 0 1.2rem;
-        height: 5.6rem;
-        line-height: 5.6rem;
-        width: 6.0rem;
-    }
 
     &:hover {
         box-shadow: none !important;
@@ -51,34 +36,11 @@ export const pageStyle = css`
 `
 
 export const prevPageStyle = css`
-    margin-right: auto;
-    font-size: 1.8rem;
-    position: absolute;
-    left: 0px;
-    bottom: -0rem;
 
-    ${medium}{
-        position: static;
-    }
-    &:visited{
-        color: ${colors.theme1.mid}!important;
-    }
 `
 
 export const nextPageStyle = css`
-    margin-left: auto;
-    font-size: 1.8rem;
-    position: absolute;
-    right: 0px;
-    bottom: -0rem;
-
-    ${medium}{
-        position: static;
-    }
-    &:visited{
-        color: ${colors.theme1.mid}!important;
-    }
-
+    transform: rotate(180deg);
 `
 
 export const prevPageStyleHidden = css`
@@ -86,17 +48,18 @@ export const prevPageStyleHidden = css`
 `
 
 export const distanceIndicatorStyle = css`
-    font-size: 1.6rem;
-    color: ${colors.theme1.mid};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-size: 1.8rem;
+    line-height: 1.5;
     font-weight: 500;
-    ${medium}{
-        font-size: 2.1rem;
-    }
-
+    color: ${newColors.shades.fullBlue50};
 `
 
 export const currentPageStyle = css`
-
     background-color:${colors.theme1.dark};
     border: 1px solid ${colors.theme1.dark};
     color: #fff!important;
@@ -105,6 +68,4 @@ export const currentPageStyle = css`
         color: ${colors.theme1.mid}!important;
         border: 1px solid ${colors.theme1.mid};
     }
-
-
 `

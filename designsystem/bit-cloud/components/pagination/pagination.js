@@ -13,6 +13,10 @@ import {
   prevPageStyleHidden,
 } from './pagination.css.js';
 
+import {
+  Icon,
+} from "@konsumentverket-sverige/designsystem.icon"
+
 export const Pagination = ({
   pageSize,
   total,
@@ -85,7 +89,7 @@ export const Pagination = ({
   }
 
   return <nav aria-label="pagination" css={[paginationWrapperStyle, style]}>
-    {isFirstPage ? <span css={[prevPageStyle, prevPageStyleHidden]}>Föregående sida</span> : <a href={createHref(currentPage - 1)} onClick={(e) => onClick(e, currentPage - 1)} css={prevPageStyle}>Föregående sida</a>}
+    {isFirstPage ? <span css={[prevPageStyle, prevPageStyleHidden]}><Icon icon="ChevronRight" /></span> : <a href={createHref(currentPage - 1)} onClick={(e) => onClick(e, currentPage - 1)} css={prevPageStyle} aria-label="Föregående sida"><Icon icon="ChevronRight" /></a>}
     {firstLink()}
     {filteredLink.map((pageNumber) => {
       const isCurrent = pageNumber == currentPage;
@@ -93,7 +97,7 @@ export const Pagination = ({
     }
     )}
     {lastLink()}
-    {isLastPage ? <span css={[nextPageStyle, prevPageStyleHidden]}>Nästa sida</span> : <a href={createHref(currentPage + 1)} onClick={(e) => onClick(e, currentPage + 1)} css={nextPageStyle}>Nästa sida</a>}
+    {isLastPage ? <span css={[nextPageStyle, prevPageStyleHidden]}><Icon icon="ChevronRight" /></span> : <a href={createHref(currentPage + 1)} onClick={(e) => onClick(e, currentPage + 1)} css={nextPageStyle} aria-label="Nästa sida"><Icon icon="ChevronRight" /></a>}
     {SeoCallbackResult}
   </nav>
 }
