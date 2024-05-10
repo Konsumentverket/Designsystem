@@ -191,9 +191,6 @@ export const CookieComplianceCustomStylingButton = () => {
       font-size: 2.1rem;
       text-align: center;
     }
-    ${large} {
-      max-width: 677px;
-    }
   `;
 
   const element = <>

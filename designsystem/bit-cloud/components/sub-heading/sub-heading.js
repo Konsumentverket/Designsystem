@@ -25,8 +25,8 @@ export const SubHeading = ({
 SubHeading.propTypes = {
   children: PropTypes.node,
   text: PropTypes.string,
-  level: PropTypes.oneOf([1,2,3,4,5,6]),
-  styleLevel: PropTypes.oneOf([1,2,3,4,5,6, null]),
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  styleLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6, null]),
 }
 
 SubHeading.defaultProps = {

@@ -1,23 +1,25 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx } from '@emotion/core'
-import { wrapper, secondaryColorStyle } from './fact-box.css.js'
-import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading'
-import { LinkWrapperInvertedColorStyle } from '@konsumentverket-sverige/designsystem.utils';
+import { wrapper, title } from './fact-box.css.js'
 
 export const FactBox = ({
   children,
   headline,
-  headlineLevel = 2,
   content,
-  secondaryColor,
-  style
 }) => {
-  if (!content && !children) return null;
 
-  return <div css={[wrapper, LinkWrapperInvertedColorStyle, secondaryColor && secondaryColorStyle, style]}>
-    {headline && <SubHeading level={headlineLevel} text={headline} styleLevel={3} />}
-    {children}
-    {content}
-  </div>
+  if (!content && !children) {
+    return null;
+  }
+
+  return (
+    <div css={wrapper}>
+      {headline && (
+        <h3 css={title}>{headline}</h3>
+      )}
+      {children}
+      {content}
+    </div>
+  )
 }

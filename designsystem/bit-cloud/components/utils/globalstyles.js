@@ -1,12 +1,36 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';  
 import { css, Global } from '@emotion/core'
 import { spacing } from './spacing'
 import { colors } from './colors';
-import React, { useEffect } from 'react';
+import React, { Children, useEffect } from 'react';
 import { filePdfPath } from './Icons/SystemIcons/FilePdf/FilePdf';
 import { fileWordPath } from './Icons/SystemIcons/FileWord/FileWord';
 import { filePowerpointPath } from './Icons/SystemIcons/FilePowerpoint/FilePowerpoint';
 import { fileExcelPath } from './Icons/SystemIcons/FileExcel/FileExcel';
 import { filePath } from './Icons/SystemIcons/File/File';
+
+export const CompositionFonts = ({children}) => {
+  return (
+    <>
+    <Global
+      styles={[
+        css`
+          @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+       `,
+        {
+          body: { fontFamily: 'Roboto' },
+        },
+      ]}
+    />
+    <div css={css`
+        font-family: 'Roboto';
+      `}>
+      {children}
+    </div>
+    </>
+  )
+}
 
 export const GlobalStyles = ({
   fontSize = "62.5%",
