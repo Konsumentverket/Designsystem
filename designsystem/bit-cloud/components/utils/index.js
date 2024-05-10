@@ -16,6 +16,7 @@ import { Volume } from "./Icons/SystemIcons/Volume/Volume.js";
 import { Otherlang } from "./Icons/SystemIcons/Otherlang/Otherlang.js";
 import { Ecc } from "./Icons/SystemIcons/Ecc/Ecc.js";
 import { Arrow, arrowPath } from './Icons/SystemIcons/Arrow/Arrow.js';
+import { ArrowFat } from './Icons/SystemIcons/ArrowFat/ArrowFat.js';
 import { Burger } from "./Icons/SystemIcons/Burger/Burger.js";
 import { External } from "./Icons/SystemIcons/External/External.js";
 import { Exclamationmark } from "./Icons/SystemIcons/Exclamationmark/Exclamationmark.js";
@@ -117,6 +118,7 @@ export {
     Ecc,
     Arrow,
     arrowPath,
+    ArrowFat,
     Burger,
     External,
     Exclamationmark,
