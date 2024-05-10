@@ -5,17 +5,17 @@ import React from 'react';
 
 import {
   buttonStyle,
+  smallStyle,
   secondaryStyle,
-  invertedBackgroundStyle,
-  invertedSecondaryBackgroundStyle,
   buttonIconLeft,
-  buttonIconRight
+  buttonIconRight,
+  buttonIconOnly
 } from './Button.css.js';
 
 export const Button = ({
   text,
   secondaryButtonStyle = false,
-  invertedBackgroundColor = false,
+  smallButtonStyle = false,
   className,
   id,
   type = "submit",
@@ -34,13 +34,14 @@ export const Button = ({
   const cssClass = [className];
 
   secondaryButtonStyle && styles.push(secondaryStyle);
-  invertedBackgroundColor && styles.push(invertedBackgroundStyle);
+  smallButtonStyle && styles.push(smallStyle);
   selected && cssClass.push("selectedButtonStyle");
   href && cssClass.push("noStyle");
-  (invertedBackgroundColor && secondaryButtonStyle) && styles.push(invertedSecondaryBackgroundStyle);
+  text === '' && (iconLeft || iconRight) && styles.push(buttonIconOnly)
   iconLeft && styles.push(buttonIconLeft)
   iconRight && styles.push(buttonIconRight)
 
+  console.log(text, text === '', styles);
   const ariaAttrs = {};
   Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x])
 
@@ -75,7 +76,7 @@ export const Button = ({
 Button.propTypes = {
   text: PropTypes.string,
   secondaryButtonStyle: PropTypes.bool,
-  invertedBackgroundColor: PropTypes.bool,
+  smallButtonStyle: PropTypes.bool,
   className: PropTypes.string,
   id: PropTypes.string,
   type: PropTypes.string,
@@ -92,6 +93,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   secondaryButtonStyle: false,
-  invertedBackgroundColor: false,
+  smallButtonStyle: false,
   type: "submit",
 };

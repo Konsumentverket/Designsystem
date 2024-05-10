@@ -1,14 +1,14 @@
 import { css } from '@emotion/core'
-import { colors, medium } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors } from '@konsumentverket-sverige/designsystem.utils';
 
-const disabled = css` 
-    color: ${colors.theme3.mid};
-    background-color: ${colors.theme3.midLight};
+const disabled = css`
+    color: ${newColors.secondaries.fullGrey};
+    background-color: ${newColors.secondaries.lightGrey};
     text-decoration:none;
     box-shadow:none;
     cursor:inherit;
     svg {
-        fill:${colors.theme3.mid};
+        fill:${newColors.secondaries.fullGrey};
     }
 `;
 
@@ -16,35 +16,28 @@ export const buttonStyle = css`
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    font-size:1.6rem;
-    line-height:2.4rem;
-    font-weight:500;
-    padding: .8rem 2.4rem;
-    color: ${colors.common.white};
-    border-radius:.8rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+    padding: 1.6rem 2.4rem;
+    color: ${newColors.kovWhite};
+    border-radius: 1.6rem;
     width:100%;
     box-sizing: border-box;
     cursor:pointer;
-    background-color:${colors.buttons.primary.backgroundColor};
+    background-color:${newColors.primaries.fullBlue};
 
     svg {
-        fill: ${colors.common.white};
+        fill: ${newColors.kovWhite};
         flex-shrink: 0;
     }
 
-    ${medium}{
-        font-size:2.1rem;
-        line-height:2.4rem;
-        width:auto;
-        padding:1.6rem 2.4rem;
-    }
-
     &:hover, &.selectedButtonStyle {
-        background-color:${colors.buttons.primary.hover};
+        background-color:${newColors.shades.kovBlue50};
         text-decoration:underline;
     }
     &:active{
-        background-color:${colors.buttons.primary.active};
+        background-color:${newColors.shades.kovBlue75};
         text-decoration:underline;
     }
     &:disabled{
@@ -54,24 +47,24 @@ export const buttonStyle = css`
 
 export const secondaryStyle = css`
     background-color:transparent;
-    color:${colors.buttons.secondary.textColor};
-    box-shadow:inset 0px 0px 0px 1px ${colors.buttons.secondary.borderColor};
+    color:${newColors.primaries.fullBlue};
+    box-shadow:inset 0px 0px 0px 1px ${newColors.primaries.fullBlue};
 
     svg {
-        fill: ${colors.buttons.secondary.textColor};
+        fill: ${newColors.primaries.fullBlue};
     }
     &:hover, &.selectedButtonStyle {
-        background-color:${colors.buttons.secondary.hover};
+        background-color:${newColors.shades.lightBlue50};
         text-decoration:underline;
-        border-color:${colors.theme1.xDark};
-        box-shadow: inset 0 0 0 2px ${colors.buttons.secondary.borderColor};
+        border-color:${newColors.primaries.fullBlue};
+        box-shadow: inset 0 0 0 2px ${newColors.primaries.fullBlue};
     }
     &:active {
-        color:${colors.common.white};
-        background-color:${colors.buttons.secondary.active};
+        color:${newColors.kovWhite};
+        background-color:${newColors.shades.lightBlue};
         box-shadow:none;
         svg {
-            fill:${colors.common.white}; 
+            fill:${newColors.kovWhite};
         }
     }
     &:disabled{
@@ -79,55 +72,49 @@ export const secondaryStyle = css`
     }
 `;
 
-export const invertedBackgroundStyle = css`
-    &:hover, &:active, &.selectedButtonStyle {
-        box-shadow:inset 0px 0px 0px 1px ${colors.common.white};
-    }
-    &:active {
-        background-color: ${colors.theme1.dark};
-    }
+
+
+export const smallStyle = css`
+    padding: 0.8rem 2.4rem;
 `;
 
-export const invertedSecondaryBackgroundStyle = css`
-    box-shadow:inset 0px 0px 0px 1px ${colors.common.white};
-    color: ${colors.common.white};
-    svg {
-            fill:${colors.common.white}; 
-        }
-    &:hover, &:active, &.selectedButtonStyle {
-        box-shadow:inset 0px 0px 0px 1px ${colors.common.white};
-    }
-    &:hover, &.selectedButtonStyle {
-        background-color:${colors.theme1.midDark};
-    }
-    &:active {
-        background-color: ${colors.theme1.dark};
-    }
-    &:disabled {
-        ${disabled}
-    }
-`;
+
 
 export const buttonIconLeft = css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     svg {
-        padding-right:.8rem;
+        width: 24px;
+        height: auto;
+        margin-right: 1.6rem;
      }
 `
 
 export const buttonIconRight = css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     svg {
-        padding-left:.8rem;
+        width: 24px;
+        height: auto;
+        margin-left: 1.6rem;
     }
 `
 
 export const iconStyle = css`
     position: relative;
-    fill:${colors.common.white};
+    fill:${newColors.kovWhite};
     width: 1.6rem;
     height: 1.6rem;
     vertical-align: baseline;
     top: 2px;
-    ${medium} {
-        top: 0;
+`
+
+export const buttonIconOnly = css`
+    svg {
+        margin: 0 !important;
     }
 `

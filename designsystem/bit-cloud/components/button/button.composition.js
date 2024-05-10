@@ -3,21 +3,20 @@ import { css } from '@emotion/core';
 import {
   small,
   medium,
-  large,
   globalStyles as GlobalStyles,
 } from '@konsumentverket-sverige/designsystem.utils';
+
+import {
+  Icon
+} from '@konsumentverket-sverige/designsystem.icon';
 
 import React from 'react';
 import 'date-fns';
 import { Button } from './button';
 
-import {
-  LinkArrow,
-  File,
-} from "@konsumentverket-sverige/designsystem.utils"
-
 const whiteBackground = { padding: "32px", backgroundColor: "#ffffff" };
 const blackBackground = { padding: "32px", backgroundColor: "#000000" };
+
 
 // Basic Example
 export const BasicButton = () => {
@@ -45,6 +44,75 @@ export const BasicSelectedButton = () => {
     selected={true}
     onClick={() => { alert("You clicked the button!") }}
     text="Lorem ipsum"
+  />;
+
+  return (
+    <>
+      <GlobalStyles />
+      <div style={whiteBackground}>
+        {element}
+      </div>
+      <div style={blackBackground}>
+        {element}
+      </div>
+    </>
+  );
+}
+
+// Basic Example with icon left
+export const BasicIconButton = () => {
+  const element = <Button
+    onClick={() => { alert("You clicked the button!") }}
+    iconLeft={
+      <Icon icon="LinkArrow" />
+    }
+    text="Lorem ipsum"
+  />;
+
+  return (
+    <>
+      <GlobalStyles />
+      <div style={whiteBackground}>
+        {element}
+      </div>
+      <div style={blackBackground}>
+        {element}
+      </div>
+    </>
+  );
+}
+
+// Basic Example with icon right
+export const BasicIconRightButton = () => {
+  const element = <Button
+    onClick={() => { alert("You clicked the button!") }}
+    iconRight={
+      <Icon icon="Camera" />
+    }
+    text="Lorem ipsum"
+  />;
+
+  return (
+    <>
+      <GlobalStyles />
+      <div style={whiteBackground}>
+        {element}
+      </div>
+      <div style={blackBackground}>
+        {element}
+      </div>
+    </>
+  );
+}
+
+// Basic Example with icon no text
+export const BasicIconButtonNoText = () => {
+  const element = <Button
+    onClick={() => { alert("You clicked the button!") }}
+    iconLeft={
+      <Icon icon="LinkArrow" />
+    }
+    text=""
   />;
 
   return (
@@ -120,26 +188,6 @@ export const BasicSecondaryBasicButton = () => {
   );
 }
 
-// Basic Inverted Example
-export const BasicInvertedButton = () => {
-  const element = <Button
-    text="Lorem ipsum"
-    invertedBackgroundColor={true}
-  />;
-
-  return (
-    <>
-      <GlobalStyles />
-      <div style={whiteBackground}>
-        {element}
-      </div>
-      <div style={blackBackground}>
-        {element}
-      </div>
-    </>
-  );
-}
-
 // Cookie Compliance Custom Styling Example
 export const CookieComplianceCustomStylingButton = () => {
   const cookieComplianceButtonCss = css`
@@ -147,7 +195,6 @@ export const CookieComplianceCustomStylingButton = () => {
     background-color: #ffffff;
     color: #161616;
     font-weight: 700;
-    font-size: 21px;
     height: 5.6rem;
     box-shadow: none;
     img {
@@ -182,13 +229,9 @@ export const CookieComplianceCustomStylingButton = () => {
       background-color: #d0d0d0;
     }
     ${small} {
-      max-width: 100%;
-      font-size: 1.8rem !important;
       text-align: center;
     }
     ${medium} {
-      max-width: 288px;
-      font-size: 2.1rem;
       text-align: center;
     }
   `;
@@ -229,99 +272,3 @@ export const CookieComplianceCustomStylingButton = () => {
     </>
   );
 }
-
-// Animated Green Custom With Icons Styling Link
-export const AnimatedGreenCustomWithIconsStylingLinkButton = () => {
-  const animatedGreenCustomWithIconsStyling = css`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    background-color: #008054;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 2.1rem;
-    height: 5.6rem;
-    box-shadow: none;
-    align-items: center;
-    text-decoration-color: transparent;
-    border: 2px solid #008054;
-    transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
-
-    svg {
-      height: 100%;
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
-      vertical-align: middle;
-      transition: fill 0.25s ease, transform 0.25s ease;
-    }
-
-    &:active svg:last-child,
-    &:hover svg:last-child {
-      transform: translateX(4px);
-    }
-
-    &:focus {
-      outline-offset: 4px;
-      box-shadow: 0 0 0 3px #ffffff;
-    }
-
-    &:hover {
-      background-color: #ffffff;
-      color: #008054;
-      outline: none;
-      text-decoration-color: transparent;
-    }
-
-    &:active svg,
-    &:hover svg {
-      fill: #008054;
-    }
-
-    &:active {
-      background-color: #ffffff;
-      color: #008054;
-      outline: none;
-      text-decoration-color: transparent;
-    }
-
-    ${small} {
-      max-width: 100%;
-      font-size: 1.8rem !important;
-      text-align: center;
-    }
-    ${medium} {
-      max-width: 288px;
-      font-size: 2.1rem;
-      text-align: center;
-    }
-    ${large} {
-      max-width: 677px;
-    }
-  `;
-
-  const element = <Button
-    text="Gå till filarkivet"
-    style={animatedGreenCustomWithIconsStyling}
-    href="#"
-    iconLeft={
-      <File />
-    }
-    iconRight={
-      <LinkArrow />
-    }
-  />;
-
-  return (
-    <>
-      <GlobalStyles />
-      <div style={whiteBackground}>
-        {element}
-      </div>
-      <div style={blackBackground}>
-        {element}
-      </div>
-    </>
-  );
-};

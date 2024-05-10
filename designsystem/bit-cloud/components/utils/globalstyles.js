@@ -108,7 +108,7 @@ const globalStyles = (
       }
       &.tabnav {
         *:focus {
-          outline: 4px solid ${colors.states.focus};
+          outline: 4px solid ${newColors.secondaries.fullGreen};
         }
       }
 
