@@ -1,45 +1,27 @@
-import { css } from '@emotion/core';
-import { colors, medium } from '@konsumentverket-sverige/designsystem.utils';
+import { css } from "@emotion/core";
+import { newColors, colors, spacing, medium } from '@konsumentverket-sverige/designsystem.utils';
 
-export const wrapper = css`
-  position: relative;
-  background-color: ${colors.theme1.light};
-  border-radius: 0.7rem;
-  padding: 4rem 1.6rem 2.4rem 1.6rem;
-  margin-top: 2rem;
-  ${medium} {
-    padding: 2.4rem 3.2rem 2.4rem 3.2rem;
-    margin-top: .8rem;
-    margin-left: .8rem;
-  }
-  [dir="rtl"] &{
-    ${medium} {
-      margin-left: .0rem;
-      margin-right: .8rem;
+export const wrapperStyling = css`
+  width: 100%;
+  background-color: ${newColors.shades.lightGrey25};
+  border-radius: 8px;
+  padding: ${spacing.s} ${spacing.m};
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+
+    &:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
 `
 
-export const exclamationMarkImage = css`
-  position: absolute;
-  top: -2rem;
-  left: 50%;
-  width:4rem;
-  height:4rem;
-  transform: translate(-50%, 0);
-  ${medium} {
-    left: 1.2rem;
-    top:-.8rem; 
-  }
-
-  [dir="rtl"] &{
-    ${medium} {
-      left: auto;
-      right: -3.2rem; 
-    }
-  }
-`
-
-export const heading = css`
+export const titleStyling = css`
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: 700;
   color: #000;
+  margin: 0 0 8px 0;
 `

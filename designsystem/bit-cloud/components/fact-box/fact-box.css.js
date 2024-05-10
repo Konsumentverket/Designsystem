@@ -17,11 +17,10 @@ export const wrapperStyling = css`
         font-size: 2.0rem;
         line-height: 1.4;
         padding-bottom: 0;
-    }
 
-    li:last-of-type,
-    p:last-of-type {
-        margin-bottom: 0;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     ul {

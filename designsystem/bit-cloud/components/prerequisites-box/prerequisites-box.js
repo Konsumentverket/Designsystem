@@ -1,21 +1,21 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import { wrapper, exclamationMarkImage, heading } from './prerequisites-box.css.js'
-import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
-import { Exclamationmark } from "@konsumentverket-sverige/designsystem.utils";
+import { wrapperStyling, titleStyling } from './prerequisites-box.css.js'
+// import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
 
 export const PrerequisitesBox = ({
   text,
-  children,
-  wrapperStyle
+  children
 }) => {
-  if (children == null)
+  if (children == null) {
     return null;
+  }
 
   return (
-    <div css={[wrapper, wrapperStyle]}>
-      <Exclamationmark style={exclamationMarkImage} />
-      {text && <SubHeading style={heading} text={text} styleLevel={3} />}
+    <div css={[wrapperStyling]}>
+      {text && (
+        <h3 css={titleStyling}>{text}</h3>
+      )}
       {children}
     </div>
   )

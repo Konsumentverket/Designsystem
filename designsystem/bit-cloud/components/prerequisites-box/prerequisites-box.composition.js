@@ -1,19 +1,22 @@
 import React from 'react';;
 import 'date-fns';
 import { PrerequisitesBox } from './prerequisites-box.js';
+import {
+  globalStyles as GlobalStyles, CompositionFonts
+} from '@konsumentverket-sverige/designsystem.utils';
 
 export const BasicPrerequisitesBox = () => {
   return (
-    <PrerequisitesBox text="Lorem ipsum dolor sit amet:">
-      <div>
-        <p>Lorem ipsum dolor sit amet adipiscing elit?</p>
-        <a href="#">Ut enim ad minim veniam</a>
-      </div>
-      <br />
-      <div>
-        <p>Excepteur sint occaecat cupidatat non proident?</p>
-        <a href="#">Duis aute irure dolor in reprehenderit</a>
-      </div>
-    </PrerequisitesBox>
+    <CompositionFonts>
+      <GlobalStyles />
+      <PrerequisitesBox
+        text="Är detta rätt sida för dig?"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed <a href="#">do eiusmod tempor incididunt</a> ut labore et dolore magna aliqua.
+        </p>
+      </PrerequisitesBox>
+    </CompositionFonts>
   );
 }

@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { css, Global } from '@emotion/core'
 import { spacing } from './spacing'
-import { colors } from './colors';
+import { colors, newColors } from './colors';
 import React, { Children, useEffect } from 'react';
 import { filePdfPath } from './Icons/SystemIcons/FilePdf/FilePdf';
 import { fileWordPath } from './Icons/SystemIcons/FileWord/FileWord';
@@ -150,11 +150,13 @@ const globalStyles = (
       }
 
       &:not(.noStyle){
-        text-decoration:underline;
-        font-weight:700;
-        color:${colors.theme1.mid};
+        text-decoration: underline;
+        font-weight: 500;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+        color:${newColors.shades.fullBlue};
         svg {
-          fill: ${colors.theme1.mid};
+          fill: ${newColors.shades.fullBlue};
         }
 
         &[href$=".pdf"],
@@ -170,7 +172,7 @@ const globalStyles = (
           display: inline-flex;
           align-items: center;
           &:hover {
-            box-shadow: 0 0 0 2px ${colors.theme1.midLight};
+            box-shadow: 0 0 0 2px ${newColors.shades.fullBlue};
           }
           &:before{
             content: '';
@@ -210,9 +212,9 @@ const globalStyles = (
           }
         }
         &:visited{
-          color:${colors.states.visited};
+          color:${newColors.shades.fullBlue};
           svg {
-            fill: ${colors.states.visited};
+            fill: ${newColors.shades.fullBlue};
           }
         }
 
