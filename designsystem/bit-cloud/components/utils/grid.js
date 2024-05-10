@@ -2,7 +2,7 @@
 import React from 'react';
 import {css, jsx} from '@emotion/core'
 import {breakpoints} from './breakpoints';
-import {spacing} from './breakpoints';
+import {spacing} from './spacing';
 
 const maxWidthGrid = '960px'
 
