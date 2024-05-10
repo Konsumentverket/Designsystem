@@ -44,9 +44,13 @@ const colorItem = (name, hexColor) => (
   </div>
 )
 
+const redBorderStyle = css`
+    border: 1px solid red;
+`;
+
 const halfContainerStyle = css`
     height: 20rem;
-    border: 1px solid blue;
+    border: 1px solid black;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -56,8 +60,8 @@ const halfContainerStyle = css`
 export const ContainerStylesExample = () => {
   return (
     <>
-      <GlobalStyles />
-      <div css={[containerStyles]}>
+      <GlobalStyles/>
+      <div css={[containerStyles, redBorderStyle]}>
         <div css={[halfContainerStyle]}>
           50%
         </div>
@@ -70,7 +74,7 @@ const halfGridStyle = css`
     grid-column-start: 1;
     grid-column-end: 4;
     height: 20rem;
-    border: 1px solid blue;
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +94,7 @@ export const GridStylesExample = () => {
   return (
     <>
       <GlobalStyles />
-      <div css={[gridStyles]}>
+      <div css={[gridStyles, redBorderStyle]}>
         <div css={[halfGridStyle]}>
           50%
         </div>
