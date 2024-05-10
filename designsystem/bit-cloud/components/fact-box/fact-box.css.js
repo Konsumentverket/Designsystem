@@ -19,7 +19,7 @@ export const wrapper = css`
         li {
             position: relative;
             margin-bottom: 24px;
-            font-size: 20px;
+            font-size: 2.0rem;
             line-height: 1.4;
 
             &:before {
@@ -27,9 +27,13 @@ export const wrapper = css`
                 width: 9px;
                 height: 9px;
                 display: inline-block;
-                margin: 0 16px 2px 0;
+                margin: 0 16px 2px 8px;
                 border-radius: 50%;
                 background-color: ${newColors.secondaries.fullGrey};
+
+                ${medium} {
+                    margin: 0 16px 2px 16px;
+                }
             }
         }
     }
@@ -37,7 +41,7 @@ export const wrapper = css`
 
 export const title = css`
     color: ${newColors.primaries.kovBlack};
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     line-height: 1.4;
     margin: 0 0 24px 0;

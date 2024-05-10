@@ -87,11 +87,14 @@ const globalStyles = (
       font-family: ${fontFamily}; 
       line-height: 16px;
       color: #4D4D4D;
-      overflow-x:hidden;   
+      overflow-x:hidden;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
-
       font-size: 1.6rem;
       margin:0;
       -webkit-font-smoothing: antialiased;
