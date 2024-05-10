@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import React from 'react';
 import {css, jsx} from '@emotion/core'
-import {breakpoints, spacing} from '@konsumentverket-sverige/designsystem.utils';
+import {breakpoints} from './breakpoints';
+import {spacing} from './breakpoints';
 
 const maxWidthGrid = '960px'
 
