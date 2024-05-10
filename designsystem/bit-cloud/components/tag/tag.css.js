@@ -1,29 +1,25 @@
 import { css } from '@emotion/core';
-import { colors } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, colors, spacing } from '@konsumentverket-sverige/designsystem.utils';
 
 export const tagStyle = css`
-    box-shadow:inset 0px 0px 0px 1px ${colors.theme1.mid};
-    border-radius:1.6rem;
-    color: ${colors.theme1.mid};
-    padding: .4rem 1.6rem;
+    box-shadow:inset 0px 0px 0px 1px ${newColors.shades.fullBlue};
+    border-radius: ${spacing.l};
+    color: ${newColors.shades.fullBlue};
+    padding: ${spacing.xs} ${spacing.s};
     display: table;
-    min-height: 3rem;
-    text-decoration: none;
-    font-size:1.6rem;
-    font-weight: 500;
-    line-height:2.4rem;
-    display:inline-block;
-    vertical-align:middle;
-    box-sizing:border-box;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
 
     &:hover {
-        background-color: ${colors.theme1.midLight};
-        box-shadow:inset 0px 0px 0px 1px ${colors.theme1.xDark};
-        text-decoration:underline;
+        background-color: ${newColors.shades.lightBlue};
+        box-shadow:inset 0px 0px 0px 1px ${newColors.shades.fullBlue};
     }
+
     &:active {
-        color:#fff;
-        background-color: ${colors.theme1.xDark};
-        box-shadow:none;
+        background-color: ${newColors.shades.mediumBlue50};
     }
 `;

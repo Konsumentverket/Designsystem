@@ -7,14 +7,13 @@ const Tag = ({
   id,
   url,
   text,
-  style,
   onClick
 }) => {
   return (
     <a
       key={id}
       href={url}
-      css={[tagStyle, style]}
+      css={[tagStyle]}
       onClick={onClick}
       className="noStyle"
     >
