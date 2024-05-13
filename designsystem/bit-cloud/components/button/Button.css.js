@@ -46,25 +46,25 @@ export const buttonStyle = css`
 `;
 
 export const secondaryStyle = css`
-    background-color:transparent;
-    color:${newColors.primaries.fullBlue};
-    box-shadow:inset 0px 0px 0px 1px ${newColors.primaries.fullBlue};
+    background-color: transparent;
+    color: ${newColors.primaries.fullBlue};
+    box-shadow: inset 0px 0px 0px 1px ${newColors.primaries.fullBlue};
 
     svg {
         fill: ${newColors.primaries.fullBlue};
     }
     &:hover, &.selectedButtonStyle {
-        background-color:${newColors.shades.lightBlue50};
-        text-decoration:underline;
-        border-color:${newColors.primaries.fullBlue};
+        background-color: ${newColors.shades.lightBlue50};
+        text-decoration: underline;
+        border-color: ${newColors.primaries.fullBlue};
         box-shadow: inset 0 0 0 2px ${newColors.primaries.fullBlue};
     }
     &:active {
-        color:${newColors.kovWhite};
-        background-color:${newColors.shades.lightBlue};
-        box-shadow:none;
+        color: ${newColors.kovWhite};
+        background-color: ${newColors.shades.lightBlue};
+        box-shadow: none;
         svg {
-            fill:${newColors.kovWhite};
+            fill: ${newColors.kovWhite};
         }
     }
     &:disabled{
@@ -79,6 +79,34 @@ export const smallStyle = css`
 `;
 
 
+export const linkStyles = css`
+   border: none !important;
+   padding: 0;
+   background: none;
+   text-decoration: underline;
+   color: ${newColors.primaries.fullBlue};
+
+   svg {
+    fill: ${newColors.kovBlack};
+   }
+
+   &:hover {
+    background: none;
+   }
+`;
+
+export const linkStylesSmall = css`
+  ${linkStyles}
+  font-size: 1.6rem !important;
+  svg {
+        width: 1.8rem !important;
+        height: auto;
+        margin-left: .8rem !important;
+        margin-right: .8rem !important;
+     }
+`;
+
+
 
 export const buttonIconLeft = css`
     display: flex;
@@ -86,7 +114,7 @@ export const buttonIconLeft = css`
     align-items: center;
 
     svg {
-        width: 24px;
+        width: 2.4rem;
         height: auto;
         margin-right: 1.6rem;
      }
@@ -102,15 +130,6 @@ export const buttonIconRight = css`
         height: auto;
         margin-left: 1.6rem;
     }
-`
-
-export const iconStyle = css`
-    position: relative;
-    fill:${newColors.kovWhite};
-    width: 1.6rem;
-    height: 1.6rem;
-    vertical-align: baseline;
-    top: 2px;
 `
 
 export const buttonIconOnly = css`
