@@ -6,6 +6,8 @@ import React from 'react';
 import {
   buttonStyle,
   smallStyle,
+  linkStyles,
+  linkStylesSmall,
   secondaryStyle,
   buttonIconLeft,
   buttonIconRight,
@@ -16,6 +18,8 @@ export const Button = ({
   text,
   secondaryButtonStyle = false,
   smallButtonStyle = false,
+  linkStyle = false,
+  linkStyleSmall = false,
   className,
   id,
   type = "submit",
@@ -34,14 +38,15 @@ export const Button = ({
   const cssClass = [className];
 
   secondaryButtonStyle && styles.push(secondaryStyle);
-  smallButtonStyle && styles.push(smallStyle);
+  linkStyle && styles.push(linkStyles);
+  linkStyleSmall && styles.push(linkStylesSmall);
   selected && cssClass.push("selectedButtonStyle");
   href && cssClass.push("noStyle");
   text === '' && (iconLeft || iconRight) && styles.push(buttonIconOnly)
   iconLeft && styles.push(buttonIconLeft)
   iconRight && styles.push(buttonIconRight)
+  smallButtonStyle && styles.push(smallStyle);
 
-  console.log(text, text === '', styles);
   const ariaAttrs = {};
   Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x])
 
@@ -77,6 +82,8 @@ Button.propTypes = {
   text: PropTypes.string,
   secondaryButtonStyle: PropTypes.bool,
   smallButtonStyle: PropTypes.bool,
+  linkStyle: PropTypes.bool,
+  linkStyleSmall: PropTypes.bool,
   className: PropTypes.string,
   id: PropTypes.string,
   type: PropTypes.string,
@@ -94,5 +101,7 @@ Button.propTypes = {
 Button.defaultProps = {
   secondaryButtonStyle: false,
   smallButtonStyle: false,
+  linkStyle: false,
+  linkStyleSmall: false,
   type: "submit",
 };

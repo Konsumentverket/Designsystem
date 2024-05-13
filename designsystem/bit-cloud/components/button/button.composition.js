@@ -4,6 +4,7 @@ import {
   small,
   medium,
   globalStyles as GlobalStyles,
+  CompositionFonts
 } from '@konsumentverket-sverige/designsystem.utils';
 
 import {
@@ -27,13 +28,15 @@ export const BasicButton = () => {
 
   return (
     <>
-      <GlobalStyles />
-      <div style={whiteBackground}>
-        {element}
-      </div>
-      <div style={blackBackground}>
-        {element}
-      </div>
+      <CompositionFonts>
+        <GlobalStyles />
+        <div style={whiteBackground}>
+          {element}
+        </div>
+        <div style={blackBackground}>
+          {element}
+        </div>
+        </CompositionFonts>
     </>
   );
 }
@@ -113,6 +116,74 @@ export const BasicIconButtonNoText = () => {
       <Icon icon="LinkArrow" />
     }
     text=""
+  />;
+
+  return (
+    <>
+      <GlobalStyles />
+      <div style={whiteBackground}>
+        {element}
+      </div>
+      <div style={blackBackground}>
+        {element}
+      </div>
+    </>
+  );
+}
+
+// Basic small button Example
+export const BasicSmallButton = () => {
+  const element = <Button
+    onClick={() => { alert("You clicked the button!") }}
+    text="Lorem ipsum"
+    smallButtonStyle={true}
+  />;
+
+  return (
+    <>
+      <GlobalStyles />
+      <div style={whiteBackground}>
+        {element}
+      </div>
+      <div style={blackBackground}>
+        {element}
+      </div>
+    </>
+  );
+}
+
+// Link style button with icon example
+export const LinkStyleButton = () => {
+  const element = <Button
+    onClick={() => { alert("You clicked the button!") }}
+    text="Lorem ipsum"
+    iconRight={
+      <Icon icon="Camera" />
+    }
+    linkStyle={true}
+  />;
+
+  return (
+    <>
+      <GlobalStyles />
+      <div style={whiteBackground}>
+        {element}
+      </div>
+      <div style={blackBackground}>
+        {element}
+      </div>
+    </>
+  );
+}
+// Link style small button with icon example
+export const LinkStyleSmallButton = () => {
+  const element = <Button
+    onClick={() => { alert("You clicked the button!") }}
+    text="Lorem ipsum"
+    iconLeft={
+      <Icon icon="Camera" />
+    }
+    linkStyleSmall={true}
   />;
 
   return (

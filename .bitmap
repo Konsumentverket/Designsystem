@@ -9,6 +9,14 @@
  */
 
 {
+    "breadcrumbs": {
+        "name": "breadcrumbs",
+        "scope": "",
+        "version": "",
+        "defaultScope": "konsumentverket-sverige.designsystem",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/breadcrumbs"
+    },
     "button": {
         "name": "button",
         "scope": "konsumentverket-sverige.designsystem",
