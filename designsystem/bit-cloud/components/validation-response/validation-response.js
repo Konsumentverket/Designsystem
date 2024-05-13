@@ -1,18 +1,23 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react'
-import * as css from './validation-response.css.js'
-import { Check, Clear } from "@konsumentverket-sverige/designsystem.utils";
+import { wrapperStyle } from './validation-response.css.js'
+import { Check, Clear } from "@konsumentverket-sverige/designsystem.utils"; // TODO: Update icons
 
 const ValidationResponse = ({
     success = false,
     text = '',
     children
-}) =>
-    <div css={css.wrapper(success)}>
-        {success ? <Check /> : <Clear />}
-        {text}
-        {children}
-    </div>
+}) => {
+    return (
+        <div css={wrapperStyle(success)}>
+            {success ? <Check /> : <Clear />}
+            <p>{text}</p>
+            {children && (
+                { children }
+            )}
+        </div>
+    )
+}
 
 export { ValidationResponse }

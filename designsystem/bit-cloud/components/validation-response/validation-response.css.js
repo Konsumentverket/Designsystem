@@ -1,19 +1,29 @@
-import { css } from "@emotion/css";
-import { colors } from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import { newColors, medium } from '@konsumentverket-sverige/designsystem.utils';
 
-export const wrapper = success => css`
+export const wrapperStyle = success => css`
   display: flex;
   align-items: center;
-  color: ${success ? colors.common.success : colors.common.warning};
-  font-size: 1.4rem;
+  gap: 8px;
+  color: ${success ? newColors.validation.success : newColors.validation.warning};
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.45;
+    margin: 0;
+    padding: 0;
+  }
+
   svg {
     align-content: center;
     flex-shrink: 0;
-    margin-right: 0.4rem;
-    fill: ${success ? colors.common.success : colors.common.warning};
+    fill: ${success ? newColors.validation.success : newColors.validation.warning};
   }
-  p {
-    line-height: 2.4rem;
-    padding-bottom: 0;
+
+  ${medium}{
+    p {
+      font-size: 2.0rem;
+      line-height: 1.45;
+    }
   }
 `

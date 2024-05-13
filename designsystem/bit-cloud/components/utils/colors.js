@@ -43,7 +43,12 @@ export const newColors = {
     mediumGrey50: '#C5BFBD',
     lightGrey: '#D9D5D4',
     lightGrey50: '#EBE9E9',
-    lightGrey25: '#F5F4F4'
+    lightGrey25: '#F5F4F4',
+  },
+
+  validation: {
+    success: "#008844",
+    warning: "#E7342B",
   }
 }
 
