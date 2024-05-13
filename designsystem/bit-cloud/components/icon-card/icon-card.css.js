@@ -1,12 +1,12 @@
 import { css } from '@emotion/core';
-import { colors, spacing } from '@konsumentverket-sverige/designsystem.utils';
+import { colors, newColors, spacing, medium } from '@konsumentverket-sverige/designsystem.utils';
 
-export const arrowStyle = css`
+export const chevronStyle = css`
     flex-shrink: 0;
-    transform: rotate(270deg);
+    transform: rotate(180deg);
     padding-right: .4rem;
-    height: 3.2rem;
-    width: 3.2rem;
+    height: 24px;
+    width: 24px;
     fill: ${colors.theme1.mid};
 
     [dir='rtl'] &{
@@ -18,62 +18,74 @@ export const arrowStyle = css`
 
 export const iconStyle = css`
     flex-shrink: 0;
-    padding: 0 1.6rem 0 1.2rem;
-    height: 3.2rem;
-    width: 3.2rem;
+    height: 24px;
+    width: 24px;
     fill: ${colors.theme1.mid};
 `;
 
 export const iconCardStyle = css`
-    background-color: ${colors.common.white};    
-    min-height: 7.2rem;
-    text-decoration: none;
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
     display: flex;
     flex-direction: row;
-    height:100%;
     align-items: center;
-    border-radius: .8rem;
-    border: 1px solid ${colors.theme1.mid};
+    color: ${newColors.shades.fullBlue};
+    background-color: ${newColors.kovWhite};    
+    text-decoration: none;
+    gap: ${spacing.s};
+    padding: ${spacing.m} ${spacing.m};
+    width: 100%;
+    position: relative;
+    border-radius: 16px;
+    border: 1px solid ${newColors.shades.fullBlue};
+    box-shadow: 0px 2px 12px 8px rgba(22, 34, 89, 0.10);
+
     &:hover {
-        background-color: ${colors.theme1.midLight};
-        border-color: ${colors.theme1.mid};
-        box-shadow: inset 0 0 0 1px ${colors.theme1.mid};
+        background-color: ${newColors.primaries.lightBlue};
+        border: 1px solid ${newColors.shades.fullBlue};
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-thickness: 1px;
+
         span {
             text-decoration:underline;
         }
     }
+
     &:active 
     {   
-        background-color: ${colors.theme1.xDark};
-        border-color:${colors.theme1.xDark};
+        background-color: ${newColors.shades.fullBlue};
         box-shadow: none;
-        span{
+
+        span {
             color:#fff;
         }
+
+        svg path,
         svg {
-            fill:#fff;
+            fill: #fff;
         }
+    }
+
+    ${medium} {
+        padding: 20px ${spacing.m};
     }
 `;
 
-export const iconText = css`
+export const altIconCardStyle = css`
+    background-color: ${newColors.primaries.lightBlue};
+    border: 1px solid ${newColors.primaries.mediumBlue};
+`;
+
+export const iconTextStyle = css`
     width:100%;
-    color: ${colors.theme1.mid};
-    line-height: 2.4rem;
-    font-size: 2.1rem;
+    color: ${newColors.shades.fullBlue};
+    line-height: 1.5;
+    font-size: 1.6rem;
     font-weight: 500;
     word-wrap:break-word;
 
-    [dir='rtl'] &{
-        padding-right: ${spacing.s};
+    
+    ${medium} {
+        font-size: 1.8rem;
     }
 `;
-export const noIcon = css`
-    padding: .8rem 1.6rem .8rem 1.4rem;
-`
-export const topAreaIcon = css`
-    padding-left: 5.6rem;
-`;
+
