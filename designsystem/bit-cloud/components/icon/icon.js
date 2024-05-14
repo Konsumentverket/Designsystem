@@ -39,6 +39,7 @@ import {
   HomeDelivery,
   Online,
   Send,
+  MegamenuCompany
 } from "@konsumentverket-sverige/designsystem.utils"
 
 const iconDefinitions = {
@@ -78,7 +79,8 @@ const iconDefinitions = {
   CallCenter,
   HomeDelivery,
   Online,
-  Send
+  Send,
+  MegamenuCompany
 };
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {

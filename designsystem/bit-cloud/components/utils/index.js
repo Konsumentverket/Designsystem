@@ -43,6 +43,7 @@ import { CallCenter } from "./Icons/SystemIcons/CallCenter/CallCenter.js";
 import { HomeDelivery } from "./Icons/SystemIcons/HomeDelivery/HomeDelivery.js";
 import { Online } from "./Icons/SystemIcons/Online/Online.js";
 import { Send } from "./Icons/SystemIcons/Send/Send.js";
+import { MegamenuCompany } from "./Icons/SystemIcons/MegamenuCompany/MegamenuCompany.js";
 
 // Editor icons
 import { AppsAndGames } from "./Icons/EditorIcons/AppsAndGames/AppsAndGames.js";
@@ -145,6 +146,7 @@ export {
     HomeDelivery,
     Online,
     Send,
+    MegamenuCompany,
 
     // System icons
 
