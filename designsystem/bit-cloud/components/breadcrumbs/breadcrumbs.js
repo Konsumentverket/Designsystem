@@ -17,8 +17,6 @@ import {
 export const Breadcrumbs = ({
  items
 }) => {
-  console.log(items);
-
   return (
       <nav aria-label="breadcrumb" css={breadcrumbStyle}>
           <p>
