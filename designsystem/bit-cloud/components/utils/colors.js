@@ -48,7 +48,7 @@ export const newColors = {
 
   validation: {
     success: "#008844",
-    warning: "#E7342B",
+    warning: "#B50156",
   }
 }
 
