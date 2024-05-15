@@ -2,6 +2,8 @@
 import { jsx } from "@emotion/core";
 
 import {
+
+  // System Icons
   Adapt,
   ChevronRight,
   Close,
@@ -39,10 +41,60 @@ import {
   HomeDelivery,
   Online,
   Send,
-  MegamenuCompany
+  MegamenuCompany,
+
+  // Editor Icons
+
+  AppsAndGames,
+  Auction,
+  BeautyEngagement,
+  Bullhorn,
+  Leaf,
+  Hardhat,
+  BrokerServices,
+  Cars,
+  Clothes,
+  Complaint,
+  ComputerTvGameConsole,
+  ConcertAndEvent,
+  ConsumerRights,
+  ContractWorkHouses,
+  Craftsman,
+  DistanceContractLaw,
+  EducationAndCourses,
+  ElectricityHeatingContract,
+  FurnituresAndDecoration,
+  GymAndWorkoutService,
+  Hairdresser,
+  Insurance,
+  InternetFiberBroadband,
+  LoanSaveInvest,
+  LotteryAndGames,
+  MobilePhone,
+  MoveAndCleaningService,
+  NotDefinedPicture,
+  Pets,
+  PurchaseFromPrivate,
+  Receipt,
+  SalesLaw,
+  Telemarketing,
+  Travel,
+  WhiteGoods,
+  Withdrawal,
+  Pen,
+  Map,
+  ChatWithUs,
+  CallUs,
+  Mic,
+  DatingServices,
+  UserInjured,
+  BabyCarriage,
+  Ellipsis,
+  HandHeart,
+  Snowboarding,
 } from "@konsumentverket-sverige/designsystem.utils"
 
-const iconDefinitions = {
+const systemIconDefinitions = {
   Adapt,
   ChevronRight,
   Close,
@@ -83,8 +135,59 @@ const iconDefinitions = {
   MegamenuCompany
 };
 
+const editorIconDefinitions = {
+  AppsAndGames,
+  Auction,
+  BeautyEngagement,
+  Bullhorn,
+  Leaf,
+  Hardhat,
+  BrokerServices,
+  Cars,
+  Clothes,
+  Complaint,
+  ComputerTvGameConsole,
+  ConcertAndEvent,
+  ConsumerRights,
+  ContractWorkHouses,
+  Craftsman,
+  DistanceContractLaw,
+  EducationAndCourses,
+  ElectricityHeatingContract,
+  FurnituresAndDecoration,
+  GymAndWorkoutService,
+  Hairdresser,
+  Insurance,
+  InternetFiberBroadband,
+  LoanSaveInvest,
+  LotteryAndGames,
+  MobilePhone,
+  MoveAndCleaningService,
+  NotDefinedPicture,
+  Pets,
+  PurchaseFromPrivate,
+  Receipt,
+  SalesLaw,
+  Telemarketing,
+  Travel,
+  WhiteGoods,
+  Withdrawal,
+  Pen,
+  Map,
+  ChatWithUs,
+  CallUs,
+  Mic,
+  DatingServices,
+  UserInjured,
+  BabyCarriage,
+  Ellipsis,
+  HandHeart,
+  Snowboarding,
+}
+
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
-  const Element = iconDefinitions[icon];
+  const concatenatedIcons = {...systemIconDefinitions, ...editorIconDefinitions};
+  const Element = concatenatedIcons[icon];
 
   if (Element === undefined) {
     return null;
@@ -103,4 +206,4 @@ const Icon = ({ icon, className, style, title, ...otherAttr }) => {
   );
 };
 
-export { Icon, iconDefinitions };
+export { Icon, systemIconDefinitions, editorIconDefinitions };
