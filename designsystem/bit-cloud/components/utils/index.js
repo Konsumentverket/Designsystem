@@ -12,7 +12,7 @@ import { ChevronRight } from "./Icons/SystemIcons/ChevronRight/ChevronRight.js";
 import { Close } from "./Icons/SystemIcons/Close/Close.js";
 import { Easytoread } from "./Icons/SystemIcons/Easytoread/Easytoread.js";
 import { Search } from "./Icons/SystemIcons/Search/Search.js";
-import { SignLanguage } from "./Icons/SystemIcons/Signlanguage/Signlanguage.js";
+import { SignLanguage } from "./Icons/SystemIcons/SignLanguage/SignLanguage.js";
 import { Volume } from "./Icons/SystemIcons/Volume/Volume.js";
 import { Otherlang } from "./Icons/SystemIcons/Otherlang/Otherlang.js";
 import { Ear} from "./Icons/SystemIcons/Ear/Ear.js";
