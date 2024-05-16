@@ -2,14 +2,13 @@
 import { jsx } from "@emotion/core";
 
 import {
-
-  // System Icons
   Adapt,
   ChevronRight,
   Close,
+  Ear,
   Easytoread,
   Search,
-  Signlanguage,
+  SignLanguage,
   Volume,
   Otherlang,
   Ecc,
@@ -41,6 +40,8 @@ import {
   HomeDelivery,
   Online,
   Send,
+  Settings,
+  Logo,
   MegamenuCompany,
 
   // Editor Icons
@@ -98,10 +99,11 @@ const systemIconDefinitions = {
   Adapt,
   ChevronRight,
   Close,
+  Ear,
   Easytoread,
   External,
   Search,
-  Signlanguage,
+  SignLanguage,
   Volume,
   Otherlang,
   Arrow,
@@ -132,7 +134,9 @@ const systemIconDefinitions = {
   HomeDelivery,
   Online,
   Send,
-  MegamenuCompany
+  MegamenuCompany,
+  Settings,
+  Logo,
 };
 
 const editorIconDefinitions = {
