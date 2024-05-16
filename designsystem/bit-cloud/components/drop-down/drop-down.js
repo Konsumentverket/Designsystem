@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from 'react';
+import React, { useState } from 'react';
 import { jsx } from '@emotion/core';
 import {
     itemsWrapperStyle,
@@ -17,7 +17,6 @@ import {
 import { FormCheckbox } from '@konsumentverket-sverige/designsystem.form-checkbox';
 import { FormRadiobutton } from '@konsumentverket-sverige/designsystem.form-radiobutton';
 import { ChevronRight } from '@konsumentverket-sverige/designsystem.utils';
-import { useState } from 'react';
 
 const CheckboxOption = ({ text, value, onChange, stateValue }) => (
     <div css={itemOptionWrapperStyle}>
@@ -69,13 +68,14 @@ export const Dropdown = ({
     const [isExpanded, setIsExpanded] = useState(true);
 
     const handleOptionChange = (newValue) => {
-        setValue(prevValue => {
-            if (prevValue.includes(newValue)) {
-                return prevValue.filter(item => item !== newValue);
-            } else {
-                return [...prevValue, newValue];
-            }
-        });
+        if (type === "radio") {
+            setValue([newValue]);
+        } else {
+            setValue(prevValue => prevValue.includes(newValue) 
+                ? prevValue.filter(item => item !== newValue) 
+                : [...prevValue, newValue]
+            );
+        }
     };
 
     return (
