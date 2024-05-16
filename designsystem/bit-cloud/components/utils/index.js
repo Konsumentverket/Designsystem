@@ -4,6 +4,7 @@ import { GlobalStyles as globalStyles, CompositionFonts } from './globalstyles';
 import { spacing } from './spacing';
 import { breakpoints } from "./breakpoints";
 import { DateFormat } from './dateformat.js';
+import { containerStyles} from "./grid";
 
 // System icons
 import { Adapt } from "./Icons/SystemIcons/Adapt/Adapt.js"
@@ -11,9 +12,10 @@ import { ChevronRight } from "./Icons/SystemIcons/ChevronRight/ChevronRight.js";
 import { Close } from "./Icons/SystemIcons/Close/Close.js";
 import { Easytoread } from "./Icons/SystemIcons/Easytoread/Easytoread.js";
 import { Search } from "./Icons/SystemIcons/Search/Search.js";
-import { Signlanguage } from "./Icons/SystemIcons/Signlanguage/Signlanguage.js";
+import { SignLanguage } from "./Icons/SystemIcons/Signlanguage/Signlanguage.js";
 import { Volume } from "./Icons/SystemIcons/Volume/Volume.js";
 import { Otherlang } from "./Icons/SystemIcons/Otherlang/Otherlang.js";
+import { Ear} from "./Icons/SystemIcons/Ear/Ear.js";
 import { Ecc } from "./Icons/SystemIcons/Ecc/Ecc.js";
 import { Arrow, arrowPath } from './Icons/SystemIcons/Arrow/Arrow.js';
 import { ArrowFat } from './Icons/SystemIcons/ArrowFat/ArrowFat.js';
@@ -43,6 +45,8 @@ import { CallCenter } from "./Icons/SystemIcons/CallCenter/CallCenter.js";
 import { HomeDelivery } from "./Icons/SystemIcons/HomeDelivery/HomeDelivery.js";
 import { Online } from "./Icons/SystemIcons/Online/Online.js";
 import { Send } from "./Icons/SystemIcons/Send/Send.js";
+import { Settings} from "./Icons/SystemIcons/Settings/Settings.js";
+import { Logo } from "./Icons/SystemIcons/Logo/Logo.js"
 import { MegamenuCompany } from "./Icons/SystemIcons/MegamenuCompany/MegamenuCompany.js";
 
 // Editor icons
@@ -105,6 +109,7 @@ export {
     spacing,
     DateFormat,
     breakpoints,
+    containerStyles,
 
     // System icons
 
@@ -113,9 +118,10 @@ export {
     Close,
     Easytoread,
     Search,
-    Signlanguage,
+    SignLanguage,
     Volume,
     Otherlang,
+    Ear,
     Ecc,
     Arrow,
     arrowPath,
@@ -147,6 +153,8 @@ export {
     Online,
     Send,
     MegamenuCompany,
+    Settings,
+    Logo,
 
     // System icons
 
