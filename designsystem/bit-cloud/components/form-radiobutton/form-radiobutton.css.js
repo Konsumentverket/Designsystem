@@ -1,75 +1,75 @@
 import { css } from '@emotion/core'
-import { colors } from '@konsumentverket-sverige/designsystem.utils';
+import { colors, spacing, newColors } from '@konsumentverket-sverige/designsystem.utils';
 
-export const wrapperStyle = css` 
-    position:relative;
-    display:inline-block;
 
+export const wrapperStyle = css`
+    position: relative;
+    display: flex;
+    width: 100%;
 `;
 
 export const labelStyle = css` 
-    font-size:2.1rem;
-    line-height:3.2rem;
-    padding:.8rem .8rem .8rem 5.6rem;
-    border-radius:.8rem;
-    display:inline-block;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1.2rem ${spacing.xs};
+    color: ${newColors.shades.fullBlue};
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+
     &:hover {
-        background-color:${colors.theme1.light};
-        text-decoration:underline;
-    }
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+      text-decoration: underline;
+  }
 `;
 
 export const fieldStyle = css`
+  input {
     position: absolute;
-    top:.8rem;
-    left:.8rem;
-    appearance: none;
-    height:3.2rem;
-    width:3.2rem;
-    border:solid 1px ${colors.theme1.mid};
-    border-radius:.2rem;
-    background-color:${colors.common.white};
-    margin:0;
-    border-radius:50%;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
 
-    &:checked {
-        border-color:${colors.theme1.xDark};
-    }
-    &:checked::before{
-        content: '';
-        display: block;
-        background-color:${colors.theme1.xDark};
-        position: absolute;
-        height:2.2rem;
-        width:2.2rem;
-        left: calc(50% - 1.1rem);
-        top: calc(50% - 1.1rem);
-        border-radius:50%;
-   }
-   &:hover + label{
-    background-color:${colors.theme1.light};
-    text-decoration:underline;
-   }
-   &:checked + label {
-    background-color:${colors.theme1.light};
-    color:${colors.theme1.xDark};
-    text-decoration:underline;
-   }
-`;
+  .radio + .radio-label:before {
+    content: '';
+    flex-shrink: 0;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid ${newColors.shades.fullBlue};
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 1.6rem;
+    border-radius: 50%;
+  }
 
-export const invertedLabelStyle = css`
-    &:hover {
-        background-color:${colors.common.white};
+  .radio {
+    &:checked + label:before {
+      background: ${newColors.shades.fullBlue};
+      border: 1px solid ${newColors.shades.fullBlue};
     }
-`;
+  }
 
-export const invertedfieldStyle = css`
-    &:hover + label {
-        background-color:${colors.common.white};
-        color: ${colors.theme1.xDark};
-    }
-    &:checked + label {
-        background-color:${colors.common.white};
-    }
-    
-`;
+  .radio:focus + .radio-label {
+    outline: ${colors.states.focus} solid 2px;
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+
+  .radio:checked + .radio-label:after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    left: 14px;
+    top: auto;
+    background: #fff;
+  }
+`

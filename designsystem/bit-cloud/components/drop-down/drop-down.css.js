@@ -1,39 +1,117 @@
 import { css } from '@emotion/core'
-import { colors } from '@konsumentverket-sverige/designsystem.utils';
-import { arrowPath } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, spacing, medium } from '@konsumentverket-sverige/designsystem.utils';
 
-export const selectStyle = css`
-    appearance: none;
+export const wrapperStyle = css`
+    display: block;
+    border: 1px solid ${newColors.shades.fullBlue};
+    background-color: ${newColors.kovWhite};
+    border-radius: ${spacing.s} ${spacing.s} ${spacing.s} ${spacing.s};
+    box-shadow: 0px 2px 12px 8px rgba(22, 34, 89, 0.10);
+`
+
+export const wrapperExpandedStyle = css`
+    box-shadow: none;
+    border: 1px solid transparent;
+`
+
+export const innerWrapperStyle = css`
+    position: relative;
+`
+
+export const itemsWrapperStyle = css`
+    display: none;
+
+`;
+
+export const itemsWrapperExpandedStyle = css`
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     width: 100%;
-    padding: 1.2rem 1.6rem;
-    box-sizing:border-box;
-    border: 2px solid ${colors.theme3.midLight};
-    border-radius: 0.8rem;
-    -khtml-border-radius: 0.8rem; /* this is for the fruit phones */
-    font-size: 1.8rem;
-    line-height: 3rem;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><path fill='${encodeURIComponent(colors.theme1.mid)}' d='${arrowPath}' /></svg>");
-    background-repeat: no-repeat, repeat;
-    background-position: right .7em top 50%, 0 0;
-    background-size: 1.6em auto, 100%;
-    &[data-hasvalue="false"]{
-        color: ${colors.theme3.dark};    
+    padding: 56px ${spacing.s} ${spacing.s} ${spacing.s};
+    box-shadow: 0px 2px 12px 8px rgba(22, 34, 89, 0.10);
+    outline: 1px solid ${newColors.shades.fullBlue};
+    background-color: ${newColors.kovWhite};
+    border-radius: ${spacing.s} ${spacing.s} ${spacing.s} ${spacing.s};
+`;
+
+export const buttonStyle = css`
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.3333333;
+    font-size: 1.6rem;
+    gap: ${spacing.s};
+    color: ${newColors.shades.fullBlue};
+    padding: ${spacing.s} ${spacing.m};
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+
+    ${medium} {   
+        font-size: 1.8rem;
     }
 `;
 
-export const labelStyle = css`
-  color: #4D4D4D;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
-  margin-bottom: .8rem;
-  display: block;
-`
-
-export const selectWrapperStyle = css`
-    width: 100%;
-`
 export const invalidStyle = css`
-    select {
-        border-color: #F00;
+
+`;
+
+export const chevronStyle = css`
+    transform: rotate(-90deg);
+`;
+
+export const chevronExpandedStyle = css`
+    transform: rotate(90deg);
+`;
+
+export const itemsListStyle = css`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid ${newColors.shades.mediumBlue};
+
+    li {
+        border-bottom: 1px solid ${newColors.shades.lightBlue};
+        display: block;
+        margin: 0;
+
+        &:hover {
+            background-color: ${newColors.shades.lightBlue};
+        }
+
+        &:active {
+            background-color: ${newColors.shades.mediumBlue50};
+        }
+
+        &:first-of-type {
+            margin-top: ${spacing.s};
+        }
     }
-`
+`;
+
+export const itemLinkStyle = css`
+    display: block;
+    padding: 1.2rem ${spacing.xs};
+    color: ${newColors.shades.fullBlue};
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+        text-decoration: underline;
+    }
+`;
+
+export const itemOptionWrapperStyle = css`
+    display: flex;
+    padding: 0 ${spacing.xs};
+`;

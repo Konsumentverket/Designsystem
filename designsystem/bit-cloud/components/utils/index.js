@@ -20,7 +20,7 @@ import { ArrowFat } from './Icons/SystemIcons/ArrowFat/ArrowFat.js';
 import { Burger } from "./Icons/SystemIcons/Burger/Burger.js";
 import { External } from "./Icons/SystemIcons/External/External.js";
 import { Exclamationmark } from "./Icons/SystemIcons/Exclamationmark/Exclamationmark.js";
-import { Check } from "./Icons/SystemIcons/Check/Check.js";
+import { Check, checkPath } from "./Icons/SystemIcons/Check/Check.js";
 import { Oval } from "./Icons/SystemIcons/Oval/Oval.js";
 import { LinkArrow } from "./Icons/SystemIcons/LinkArrow/LinkArrow.js";
 import { Filter } from "./Icons/SystemIcons/Filter/Filter.js";
@@ -124,6 +124,7 @@ export {
     External,
     Exclamationmark,
     Check,
+    checkPath,
     Oval,
     LinkArrow,
     Filter,

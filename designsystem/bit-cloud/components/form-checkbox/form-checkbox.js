@@ -4,10 +4,8 @@ import React from 'react'
 
 import {
   wrapperStyle,
+  checkboxStyle,
   labelStyle,
-  checkbox,
-  invertedLabelStyle,
-  invertedfieldStyle,
 } from './form-checkbox.css.js'
 
 export const FormCheckbox = ({
@@ -15,30 +13,26 @@ export const FormCheckbox = ({
   id,
   labelText,
   value,
-  invertedBackgroundColor = false,
-  checked = false,
   onChange,
-  style
-}) => {
-  let fieldStyles = [checkbox]
-  let labelStyles = [labelStyle]
-  if (invertedBackgroundColor) {
-    labelStyles.push(invertedLabelStyle)
-    fieldStyles.push(invertedfieldStyle)
-  }
-  style && labelStyles.push(style)
-
-  return <div css={[wrapperStyle, checkbox]} data-checked={checked}>
+  checked = false,
+}) => (
+  <div css={[wrapperStyle, checkboxStyle]} data-checked={checked}>
     <input
       id={id}
       name={name}
       type='checkbox'
       className='checkbox'
+      css={checkboxStyle}
       value={value}
       onChange={onChange}
       checked={checked}
     />
-    <label htmlFor={id} css={[labelStyles]} className='checkbox-label'>{labelText}</label>
+    <label
+      htmlFor={id}
+      css={labelStyle}
+      className='checkbox-label'
+    >
+      {labelText}
+    </label>
   </div>
-}
-
+)

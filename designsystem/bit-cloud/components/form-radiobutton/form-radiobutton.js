@@ -1,38 +1,33 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react'
-import { wrapperStyle, labelStyle, fieldStyle, invertedLabelStyle, invertedfieldStyle } from './form-radiobutton.css.js';
+import { wrapperStyle, labelStyle, fieldStyle } from './form-radiobutton.css.js';
 
 export const FormRadiobutton = ({
   name,
   id,
   labelText,
   value,
-  invertedBackgroundColor = false,
   checked = false,
   onChange,
-  style }) => {
-
-  var fieldStyles = [fieldStyle];
-  var labelStyles = [labelStyle];
-  if (invertedBackgroundColor) {
-    labelStyles.push(invertedLabelStyle);
-    fieldStyles.push(invertedfieldStyle)
-  }
-  style && labelStyles.push(style)
-
-  return <>
-    <div css={wrapperStyle}>
-      <input
-        id={id}
-        name={name}
-        type="radio" css={[fieldStyles]}
-        value={value}
-        onChange={onChange}
-        checked={checked}
-      />
-      <label htmlFor={id} css={[labelStyles]}>{labelText}</label>
-    </div>
-  </>
-}
+}) => (
+  <div css={[wrapperStyle, fieldStyle]}>
+    <input
+      id={id}
+      name={name}
+      type="radio"
+      className="radio"
+      css={fieldStyle}
+      value={value}
+      onChange={onChange}
+      checked={checked}
+    />
+    <label
+      className='radio-label'
+      htmlFor={id}
+      css={labelStyle}>
+      {labelText}
+    </label>
+  </div>
+)
 
