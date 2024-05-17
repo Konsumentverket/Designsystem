@@ -13,7 +13,7 @@ export const labelStyle = css`
     align-items: center;
     width: 100%;
     padding: 1.2rem ${spacing.xs};
-    color: ${newColors.shades.fullBlue};
+    color: ${newColors.shades.kovBlack};
     font-size: 1.6rem;
     line-height: 1.5;
     font-weight: 400;
@@ -25,6 +25,10 @@ export const labelStyle = css`
       text-underline-offset: 2px;
       text-decoration: underline;
   }
+`;
+
+export const labelPrimaryStyle = css`
+  color: ${newColors.shades.fullBlue};
 `;
 
 export const fieldStyle = css`

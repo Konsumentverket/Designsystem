@@ -6,6 +6,7 @@ import {
   wrapperStyle,
   checkboxStyle,
   labelStyle,
+  labelPrimaryStyle,
 } from './form-checkbox.css.js'
 
 export const FormCheckbox = ({
@@ -16,8 +17,13 @@ export const FormCheckbox = ({
   onChange,
   disabled = false,
   checked = false,
+  usePrimaryColor = false,
 }) => (
-  <div css={[wrapperStyle, checkboxStyle]} data-checked={checked}>
+  <div
+    data-comp="form-checkbox"
+    css={[wrapperStyle, checkboxStyle]}
+    data-checked={checked}
+  >
     <input
       id={id}
       name={name}
@@ -32,7 +38,7 @@ export const FormCheckbox = ({
     />
     <label
       htmlFor={id}
-      css={labelStyle}
+      css={[labelStyle, usePrimaryColor && labelPrimaryStyle]}
       className='checkbox-label'
     >
       {labelText}

@@ -55,3 +55,37 @@ export const BasicDisabledFormCheckbox = () => {
     </CompositionFonts>
   );
 }
+
+export const BasicPrimaryFormCheckbox = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <FormCheckbox
+        id="Lorem-check-primary"
+        name="lorem-check-primary"
+        value="Lorem ipsum"
+        labelText="Lorem ipsum"
+        usePrimaryColor={true}
+        checked={false}
+        onChange={(e) => console.log(e.target.value)}
+      />
+    </CompositionFonts>
+  );
+}
+
+export const BasicPrimaryCheckedFormCheckbox = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <FormCheckbox
+        id="Lorem-check-checked-primary"
+        name="lorem-check-checked-primary"
+        value="Lorem ipsum-checked"
+        labelText="Lorem ipsum"
+        usePrimaryColor={true}
+        checked={true}
+        onChange={(e) => console.log(e.target.value)}
+      />
+    </CompositionFonts>
+  );
+}

@@ -26,6 +26,7 @@ const CheckboxOption = ({ text, value, onChange, stateValue }) => (
             name={value}
             value={value}
             onChange={onChange}
+            usePrimaryColor={true}
             checked={stateValue.includes(value)}
         />
     </div>
@@ -39,6 +40,7 @@ const RadioOption = ({ text, value, id, onChange, stateValue }) => (
             name={id}
             value={value}
             onChange={onChange}
+            usePrimaryColor={true}
             checked={stateValue.includes(value)}
         />
     </div>
