@@ -72,4 +72,19 @@ export const fieldStyle = css`
     top: auto;
     background: #fff;
   }
+
+  .radio[disabled],
+  .radio[disabled] + .radio-label {
+    pointer-events: none;
+  }
+
+  .radio[disabled] + .radio-label {
+    color: ${newColors.shades.fullGrey};
+  }
+
+  .radio[disabled] + .radio-label:before {
+    border: 1px solid ${newColors.shades.mediumGrey};
+    background-color: ${newColors.shades.lightGrey25};
+    box-shadow: none;
+  }
 `

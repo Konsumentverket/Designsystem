@@ -45,10 +45,11 @@ export const checkboxStyle = css`
     width: 24px;
     height: 24px;
     margin-right: 1.6rem;
+    box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.10) inset;
   }
 
   .checkbox {
-    &:checked + label:before {
+    &:checked + .checkbox-label:before {
       background: ${newColors.shades.fullBlue};
       border: 1px solid ${newColors.shades.fullBlue};
     }
@@ -67,4 +68,20 @@ export const checkboxStyle = css`
     background-position: 6px 8px;
     position: relative;
   }
+
+  .checkbox[disabled],
+  .checkbox[disabled] + .checkbox-label {
+    pointer-events: none;
+  }
+
+  .checkbox[disabled] + .checkbox-label {
+    color: ${newColors.shades.fullGrey};
+  }
+
+  .checkbox[disabled] + .checkbox-label:before {
+    border: 1px solid ${newColors.shades.mediumGrey};
+    background-color: ${newColors.shades.lightGrey25};
+    box-shadow: none;
+  }
+  
 `

@@ -8,8 +8,9 @@ export const FormRadiobutton = ({
   id,
   labelText,
   value,
-  checked = false,
   onChange,
+  disabled = false,
+  checked = false,
 }) => (
   <div css={[wrapperStyle, fieldStyle]}>
     <input
@@ -19,6 +20,8 @@ export const FormRadiobutton = ({
       className="radio"
       css={fieldStyle}
       value={value}
+      disabled={disabled}
+      aria-disabled={disabled}
       onChange={onChange}
       checked={checked}
     />

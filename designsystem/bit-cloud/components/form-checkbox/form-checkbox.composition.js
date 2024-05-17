@@ -38,3 +38,20 @@ export const BasicCheckedFormCheckbox = () => {
     </CompositionFonts>
   );
 }
+
+export const BasicDisabledFormCheckbox = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <FormCheckbox
+        id="Lorem-check-disabled"
+        name="lorem-check-disabled"
+        value="Lorem ipsum-disabled"
+        labelText="Lorem ipsum"
+        disabled={true}
+        checked={false}
+        onChange={(e) => console.log(e.target.value)}
+      />
+    </CompositionFonts>
+  );
+}

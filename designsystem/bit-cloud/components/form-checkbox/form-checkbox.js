@@ -14,6 +14,7 @@ export const FormCheckbox = ({
   labelText,
   value,
   onChange,
+  disabled = false,
   checked = false,
 }) => (
   <div css={[wrapperStyle, checkboxStyle]} data-checked={checked}>
@@ -26,6 +27,8 @@ export const FormCheckbox = ({
       value={value}
       onChange={onChange}
       checked={checked}
+      disabled={disabled}
+      aria-disabled={disabled}
     />
     <label
       htmlFor={id}
