@@ -67,7 +67,7 @@ export const Dropdown = ({
         return null;
 
     const [value, setValue] = useState([]);
-    const [isExpanded, setIsExpanded] = useState(true);
+    const [isExpanded, setIsExpanded] = useState(false);
 
     const handleOptionChange = (newValue) => {
         if (type === "radio") {
@@ -82,7 +82,7 @@ export const Dropdown = ({
 
     return (
         <div
-            data-comp="dropdown"
+            data-comp="drop-down"
             css={[wrapperStyle, isExpanded && wrapperExpandedStyle]}
         >
             <div css={innerWrapperStyle}>
