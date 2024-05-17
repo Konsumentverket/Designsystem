@@ -18,7 +18,7 @@ export const Breadcrumbs = ({
  items
 }) => {
   return (
-      <nav aria-label="breadcrumb" css={breadcrumbStyle}>
+      <nav aria-label="breadcrumb" css={breadcrumbStyle} data-comp="breadcrumbs">
           <p>
             {items.map((crumb, idx) => {
               return (

@@ -69,12 +69,14 @@ export const Button = ({
       {iconLeft}
       {text}
       {iconRight}
+      data-comp="button"
     </a>
     :
     <button {...props} >
       {iconLeft}
       {text}
       {iconRight}
+      data-comp="button"
     </button>;
 }
 
