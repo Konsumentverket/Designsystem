@@ -7,8 +7,6 @@ export const ctaWrapper = css`
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  align-items: center;
-  gap: 24px;
   border-radius: 16px;
   background: ${newColors.kovWhite};
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
@@ -17,11 +15,9 @@ export const ctaWrapper = css`
   ${medium} {
     max-width: 960px;
     flex-direction: row-reverse;
+    align-items: stretch;
+    gap: 24px;
   }
-`
-
-export const linkWrapper = css`
-
 `
 
 export const focusHeadline = css`
@@ -77,18 +73,15 @@ export const pictureWrapper = css`
 
   ${medium} {
     width: 50%;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
   }
-`
-
-export const iconBackground = css`
-
 `
 
 
 export const externalIcon = css`
 
 `
-
-export const puffIcon = css`
-
-`;

@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import {css, jsx} from '@emotion/core';
-import { ctaWrapper, focusHeadline, focusText, textArea, pictureWrapper, iconBackground, externalIcon, puffIcon } from './cta-block.css.js';
+import {jsx} from '@emotion/core';
+import { ctaWrapper, focusHeadline, focusText, textArea, pictureWrapper } from './cta-block.css.js';
 import React from 'react';
 
 export const CtaBlock = ({
@@ -18,8 +18,8 @@ export const CtaBlock = ({
     if (image != null) imageArea = <img src={image} alt={imageAlt} />;
     else {
       imageArea = (
-        <div css={iconBackground}>
-          {icon && React.cloneElement(icon, { style: puffIcon })}
+        <div>
+          {icon && React.cloneElement(icon)}
         </div>
       );
     }
