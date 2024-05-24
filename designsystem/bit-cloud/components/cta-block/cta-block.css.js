@@ -12,7 +12,8 @@ export const ctaWrapper = css`
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
   overflow: hidden;
 
-  ${medium} {
+  @media (min-width: 650px) {
+    min-width: 500px;
     max-width: 960px;
     flex-direction: row-reverse;
     align-items: stretch;
@@ -27,7 +28,7 @@ export const focusHeadline = css`
   color: ${newColors.kovBlue};
   margin-bottom: 1.6rem;
 
-  ${medium} {
+  @media (min-width: 650px) {
     font-size: 2.8rem;
     line-height: 1.5;
     margin-bottom: 3.2rem;
@@ -39,7 +40,7 @@ export const focusText = css`
   line-height: 1.5;
   margin-bottom: 16px;
 
-  ${medium} {
+  @media (min-width: 650px) {
     margin-bottom: 3.2rem;
   }
 
@@ -48,7 +49,7 @@ export const focusText = css`
 export const textArea = css`
   padding: 24px;
 
-  ${medium} {
+  @media (min-width: 650px) {
     width: 50%;
     padding: 32px;
   }
@@ -70,14 +71,24 @@ export const textArea = css`
 
 export const pictureWrapper = css`
   overflow: hidden;
+  height: 280px;
+  position: relative;
+  width: 100%;
 
-  ${medium} {
-    width: 50%;
-
-    img {
+  img {
       object-fit: cover;
       height: 100%;
-    }
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+   }
+
+  @media (min-width: 650px) {
+    width: 50%;
+    min-height: 100%;
+    height: auto;
   }
 `
 
