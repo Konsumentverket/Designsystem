@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { newColors, spacing } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, spacing, medium } from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapper = css`
   background-color: #fff;
@@ -9,21 +9,29 @@ export const wrapper = css`
   align-items: flex-start;
   flex-direction: column;
   gap: 20px;
-  padding: 16px 24px 24px 24px;
+  padding: 16px;
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
   position: relative;
+  width: 100%;
+
+
+  ${medium}{
+     padding: 16px 24px 24px 24px;
+  }
 
   & > * {
     z-index: 1;
+  }
+
+  p {
+    font-size: 1.6rem;
+    padding-bottom: 0;
   }
 `
 
 
 export const linkTextMainLinkStyle = css`
     padding: 2.4rem 1.6rem;
-
-    &:hover {
-    }
 
     .tabnav &:focus {
 
@@ -34,13 +42,10 @@ export const linkTextMainLinkStyle = css`
 `
 
 export const mainLinkStyle = css`
-    padding: 1.6rem 0;
     box-sizing:border-box;
     text-decoration: none !important;
     border-bottom: 1px solid ${newColors.shades.mediumBlue};
     z-index: 1;
-
-
 
     & > * {
       display: flex;
@@ -59,11 +64,17 @@ export const mainLinkStyle = css`
       }
 
       svg {
-        width: 24px;
-        height: 24px;
+        width: 18px;
+        height: 18px;
         right: unset !important;
         margin-right: ${spacing.s};
         fill: ${newColors.shades.fullBlue};
+        z-index: 1;
+
+        ${medium}{
+          width: 24px;
+          height: 24px;
+        }
 
         .noLinkChildren & {
           margin-left: ${spacing.xs};
@@ -73,6 +84,7 @@ export const mainLinkStyle = css`
           width: 18px;
           height: 18px;
           margin-left: 16px;
+          margin-right: 0;
         }
       }
     }
@@ -82,18 +94,21 @@ export const mainLinkStyle = css`
       border-radius: 0 !important;
       box-shadow: none !important;
 
-      &:before {
-        position: absolute;
-        content: '';
-        background-color: ${newColors.primaries.lightBlue};
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        cursor: pointer;
-        border-radius: 16px;
-        border: 1px solid ${newColors.primaries.fullBlue};
+      .noLinkChildren & {
+          &:before {
+            position: absolute;
+            content: '';
+            background-color: ${newColors.primaries.lightBlue};
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+            border-radius: 16px;
+            border: 1px solid ${newColors.primaries.fullBlue};
+         }
       }
+
 
       h2 {
         text-decoration: underline!important;
@@ -129,13 +144,6 @@ export const mainLinkStyle = css`
             right: 1.4rem;
         }
     }
-    svg{
-        flex-shrink: 0;
-        height: 3.2rem;
-        width: 3.2rem;
-        position: relative;
-        right: -1.4rem;
-    }
 
 `
 export const rotateArrow = css`
@@ -144,20 +152,29 @@ export const rotateArrow = css`
 
 export const childrenWrapper = css`
     display: inline-flex;
-    flex-direction:column;
+    flex-direction: column;
+    flex-wrap: wrap;
     padding: 0 0 1.6rem 0;
+    max-height: 160px;
+    overflow: hidden;
 
     a {
+        display: inline-flex;
+        align-self: stretch;
         font-weight: normal !important;
         justify-content: flex-start;
         align-items: center;
         text-decoration: none;
         font-size: 1.6rem !important;
         color: ${newColors.shades.fullBlue};
-        padding: 8px 0px;
+        padding: 8px 8px 8px 0;
+        max-width: 100%;
+        width: 27.2rem;
+        margin-right: 24px;
 
         &:hover {
-            border-radius: 0 !important;
+            border-radius: 2px !important;
+            background-color: ${newColors.shades.lightBlue};
         }
 
 
@@ -178,23 +195,16 @@ export const showAllLink = css`
     align-self: flex-end;
 `
 
-export const linkTextCardContentStyle = css`
-    width: 100%;
-    font-size: 1.8rem;
-    line-height: 3.2rem;
-    padding-right: 20%;
-    font-weight: 400;
-    margin-top: 1.6rem;
-    display:block;
-    [dir='rtl'] & {
-        padding-left: 20%;
-        padding-right: 0%;
-    }
-`
+
 
 export const customFontSize = css`
-    font-size: 2.1rem;
-    line-height: 2.4rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
     font-weight: 500;
     z-index: 1;
+    color: ${newColors.shades.fullBlue};
+
+    ${medium}{
+      font-size: 1.8rem;
+    }
 `

@@ -9,7 +9,6 @@ import {
     customFontSize
 } from './link-card.css.js';
 import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
-import { LinkArrow, Arrow } from '@konsumentverket-sverige/designsystem.utils';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 
 const LinkCard = React.forwardRef(({
