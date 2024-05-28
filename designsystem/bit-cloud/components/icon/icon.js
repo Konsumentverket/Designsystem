@@ -4,6 +4,7 @@ import { jsx } from "@emotion/core";
 import {
   Adapt,
   ChevronRight,
+  ChevronLeft,
   Close,
   Ear,
   Easytoread,
@@ -98,6 +99,7 @@ import {
 const systemIconDefinitions = {
   Adapt,
   ChevronRight,
+  ChevronLeft,
   Close,
   Ear,
   Easytoread,

@@ -9,6 +9,7 @@ import { containerStyles} from "./grid";
 // System icons
 import { Adapt } from "./Icons/SystemIcons/Adapt/Adapt.js"
 import { ChevronRight } from "./Icons/SystemIcons/ChevronRight/ChevronRight.js";
+import { ChevronLeft } from "./Icons/SystemIcons/ChevronLeft/ChevronLeft.js";
 import { Close } from "./Icons/SystemIcons/Close/Close.js";
 import { Easytoread } from "./Icons/SystemIcons/Easytoread/Easytoread.js";
 import { Search } from "./Icons/SystemIcons/Search/Search.js";
@@ -115,6 +116,7 @@ export {
 
     Adapt,
     ChevronRight,
+    ChevronLeft,
     Close,
     Easytoread,
     Search,
