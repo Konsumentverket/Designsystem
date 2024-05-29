@@ -52,6 +52,10 @@ export const textArea = css`
   @media (min-width: 650px) {
     width: 50%;
     padding: 32px;
+
+    .noimage & {
+      width: 100%;
+    }
   }
 
   button {
@@ -74,6 +78,21 @@ export const pictureWrapper = css`
   height: 280px;
   position: relative;
   width: 100%;
+
+  .noimage & {
+    display: none;
+  }
+
+  .hasicon & {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+  }
 
   img {
       object-fit: cover;

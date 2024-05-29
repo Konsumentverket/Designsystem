@@ -13,21 +13,26 @@ export const CtaBlock = ({
   icon,
   imageComponent,
 }) => {
+  let imageclass = "";
   let imageArea = imageComponent;
   if (imageArea == null) {
     if (image != null) imageArea = <img src={image} alt={imageAlt} />;
-    else {
+    else if(icon != null) {
       imageArea = (
         <div>
-          {icon && React.cloneElement(icon)}
+          {icon}
         </div>
       );
+
+      imageclass = "hasicon";
     }
   }
 
+  if (imageArea == null) imageclass = "noimage";
+
 
     return (
-      <div css={ctaWrapper} data-comp="cta-block">
+      <div css={ctaWrapper} className={imageclass} data-comp="cta-block">
         <div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
         <div css={textArea} className='textarea'>
           <h3 css={focusHeadline}>

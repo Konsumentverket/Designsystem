@@ -66,3 +66,52 @@ export const CTABasic = () => {
     </CompositionFonts>
   );
 }
+
+
+export const CTAWithButtonNoImage = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <CtaBlock
+        headline="Rapportera när produkter eller företag bryter mot lagen"
+        text="Konsumentverket granskar varor, tjänster och företag. Om du som konsument upptäcker att ett företag har gjort fel eller ser en risk med en vara eller tjänst kan du anmäla det till oss."
+        btn={
+          <Button
+            onClick={() => {
+              alert("You clicked the button!")
+            }}
+            iconLeft={
+              <Icon icon="LinkArrow"/>
+            }
+            text="Skicka in anmälan"
+          />
+        }
+      />
+    </CompositionFonts>
+  );
+}
+
+
+export const CTAWithIcon = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <CtaBlock
+        headline="Rapportera när produkter eller företag bryter mot lagen"
+        text="Konsumentverket granskar varor, tjänster och företag. Om du som konsument upptäcker att ett företag har gjort fel eller ser en risk med en vara eller tjänst kan du anmäla det till oss."
+        icon={<Icon icon="LinkArrow"/>}
+        btn={
+          <Button
+            onClick={() => {
+              alert("You clicked the button!")
+            }}
+            iconLeft={
+              <Icon icon="LinkArrow"/>
+            }
+            text="Skicka in anmälan"
+          />
+        }
+      />
+    </CompositionFonts>
+  );
+}
