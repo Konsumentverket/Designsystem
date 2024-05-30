@@ -32,9 +32,8 @@
     },
     "cta-block": {
         "name": "cta-block",
-        "scope": "",
-        "version": "0.0.1",
-        "defaultScope": "konsumentverket-sverige.designsystem",
+        "scope": "konsumentverket-sverige.designsystem",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/cta-block"
     },
@@ -146,14 +145,14 @@
     "link-card": {
         "name": "link-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.12",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/link-card"
     },
     "link-text-card": {
         "name": "link-text-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.12",
+        "version": "0.0.13",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/link-text-card"
     },
