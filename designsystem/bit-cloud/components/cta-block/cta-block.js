@@ -1,13 +1,12 @@
 /** @jsx jsx */
-import {jsx} from '@emotion/core';
-import { ctaWrapper, focusHeadline, focusText, textArea, pictureWrapper } from './cta-block.css.js';
 import React from 'react';
+import { jsx } from '@emotion/core';
+import { ctaWrapper, focusHeadline, focusText, textArea, pictureWrapper } from './cta-block.css.js';
 
 export const CtaBlock = ({
   headline,
   text,
   btn,
-  isExternalLink,
   image,
   imageAlt,
   icon,
@@ -37,10 +36,8 @@ export const CtaBlock = ({
         <div css={textArea} className='textarea'>
           <h3 css={focusHeadline}>
             {headline}
-            {isExternalLink && <External title="Extern länk" style={externalIcon} />}
           </h3>
           <p css={focusText}>{text}</p>
-
           {btn}
         </div>
       </div>
