@@ -1,10 +1,8 @@
 import { css } from '@emotion/core'
-import {spacing, newColors, medium, large, colors} from '@konsumentverket-sverige/designsystem.utils';
+import {spacing, newColors, medium, large, containerStyles} from '@konsumentverket-sverige/designsystem.utils';
 
 export const breadcrumbStyle = css`
-  margin: ${spacing.s} auto;
-  padding: 0;
-  max-width: 96rem;
+  ${containerStyles};
 
   svg {
     width: 1.2rem;
@@ -29,7 +27,7 @@ export const breadcrumbStyle = css`
 const breadcrumbItemStyle = css`
   font-size: 1.4rem;
   line-height: ${spacing.m};
-  font-weight: 500;
+  font-weight: 400 !important;
   color: ${newColors.primaries.fullBlue};
   text-decoration: none;
 `;
@@ -37,13 +35,13 @@ const breadcrumbItemStyle = css`
 export const breadcrumbTextStyle = css`
   ${breadcrumbItemStyle}
   text-decoration:none;
+  color: ${newColors.kovBlack};
 `;
 
 export const breadcrumbLinkStyle = css`
   ${breadcrumbItemStyle}
   color: ${newColors.primaries.fullBlue};
   text-decoration: underline;
-  font-weight: 500 !important;
 
   &:hover {
     background-color: ${newColors.primaries.lightBlue};
@@ -58,39 +56,8 @@ export const breadcrumbLinkStyle = css`
 export const arrowStyle = css`
   transform: rotate(270deg);
   width: 1.2rem;
-  margin: 0 calc(${spacing.xs} / 2);
+  margin: 0 ${spacing.xs};
   vertical-align: middle;
-  fill: ${colors.theme3.midDark};
+  fill: ${newColors.kovBlack};
 `;
 
-export const breadcrumbsInnerStyle = css`
-  display: flex;
-  justify-content: flex-start;
-
-  a {
-    color: ${colors.theme1.mid};
-    text-decoration: none;
-    &:visited {
-      color: ${colors.theme1.mid};
-    }
-  }
-
-  ol {
-    display: inline-block;
-    list-style: none;
-
-    li {
-      display: inline-block;
-    }
-  }
-
-  ${medium} {
-    justify-content: space-between;
-    padding: 0;
-  }
-
-  ${large} {
-    margin: 0 auto;
-    max-width: 1120px;
-  }
-`;
