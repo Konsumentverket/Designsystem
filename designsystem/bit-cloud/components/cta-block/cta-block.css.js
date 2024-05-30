@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { newColors } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, medium, large } from '@konsumentverket-sverige/designsystem.utils';
 
 
 export const ctaWrapper = css`

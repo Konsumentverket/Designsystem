@@ -65,16 +65,18 @@ export const Button = ({
   }
 
   return href
-    ? <a {...props} data-comp="button" >
+    ? <a {...props} >
       {iconLeft}
       {text}
       {iconRight}
+      data-comp="button"
     </a>
     :
-    <button {...props} data-comp="button">
+    <button {...props} >
       {iconLeft}
       {text}
       {iconRight}
+      data-comp="button"
     </button>;
 }
 
