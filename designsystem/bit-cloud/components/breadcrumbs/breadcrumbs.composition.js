@@ -2,7 +2,6 @@ import { css } from '@emotion/core';
 
 import {
   globalStyles as GlobalStyles,
-  CompositionFonts
 } from '@konsumentverket-sverige/designsystem.utils';
 
 import React from 'react';
@@ -45,15 +44,13 @@ export const BreadcrumbsExample = () => {
 
   return (
     <>
-      <CompositionFonts>
-        <GlobalStyles />
-        <div style={whiteBackground}>
-          {element}
-        </div>
-        <div style={blackBackground}>
-          {element}
-        </div>
-      </CompositionFonts>
+      <GlobalStyles />
+      <div style={whiteBackground}>
+        {element}
+      </div>
+      <div style={blackBackground}>
+        {element}
+      </div>
     </>
   );
 }

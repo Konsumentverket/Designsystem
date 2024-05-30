@@ -12,6 +12,7 @@ import {
 } from '@konsumentverket-sverige/designsystem.icon';
 
 import React from 'react';
+import 'date-fns';
 import { Button } from './button';
 
 const whiteBackground = { padding: "32px", backgroundColor: "#ffffff" };
