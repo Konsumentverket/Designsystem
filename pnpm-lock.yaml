@@ -166,6 +166,9 @@ importers:
       '@emotion/core':
         specifier: ^10.3.1
         version: 10.3.1(react@18.3.1)
+      date-fns:
+        specifier: ^3.6.0
+        version: 3.6.0
       prop-types:
         specifier: 15.8.1
         version: 15.8.1
@@ -235,6 +238,9 @@ importers:
       '@emotion/core':
         specifier: ^10.3.1
         version: 10.3.1(react@18.3.1)
+      date-fns:
+        specifier: ^3.6.0
+        version: 3.6.0
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -26595,15 +26601,15 @@ packages:
     name: '@konsumentverket-sverige/designsystem.breadcrumbs'
     peerDependencies:
       '@emotion/core': ^10.3.1
+      date-fns: ^3.6.0
       react: 18.3.1
     dependencies:
       '@emotion/core': 10.3.1(react@18.3.1)
       '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@emotion/core@10.3.1)(date-fns@3.6.0)(react@18.3.1)
       '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/core@10.3.1)(date-fns@3.6.0)(react@18.3.1)
+      date-fns: 3.6.0
       prop-types: 15.8.1
       react: 18.3.1
-    transitivePeerDependencies:
-      - date-fns
     dev: false
 
   file:designsystem/bit-cloud/components/button(@emotion/core@10.3.1)(date-fns@3.6.0)(react@18.3.1):
@@ -26644,15 +26650,15 @@ packages:
     name: '@konsumentverket-sverige/designsystem.cta-block'
     peerDependencies:
       '@emotion/core': ^10.3.1
+      date-fns: ^3.6.0
       react: 18.3.1
     dependencies:
       '@emotion/core': 10.3.1(react@18.3.1)
       '@konsumentverket-sverige/designsystem.button': file:designsystem/bit-cloud/components/button(@emotion/core@10.3.1)(date-fns@3.6.0)(react@18.3.1)
       '@konsumentverket-sverige/designsystem.icon': file:designsystem/bit-cloud/components/icon(@emotion/core@10.3.1)(date-fns@3.6.0)(react@18.3.1)
       '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/core@10.3.1)(date-fns@3.6.0)(react@18.3.1)
+      date-fns: 3.6.0
       react: 18.3.1
-    transitivePeerDependencies:
-      - date-fns
     dev: false
 
   file:designsystem/bit-cloud/components/display-alphabet(@emotion/core@10.3.1)(date-fns@3.6.0)(react@18.3.1):

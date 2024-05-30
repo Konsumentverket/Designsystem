@@ -1,11 +1,12 @@
 import { css } from '@emotion/core';
+import React from 'react';
+import 'date-fns';
 
 import {
   globalStyles as GlobalStyles,
   CompositionFonts
 } from '@konsumentverket-sverige/designsystem.utils';
 
-import React from 'react';
 import { MegamenuButton } from './megamenu-button';
 import {
   Icon
