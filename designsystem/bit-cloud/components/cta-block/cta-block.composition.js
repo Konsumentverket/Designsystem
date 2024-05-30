@@ -46,7 +46,7 @@ export const CTAWithLink = () => {
               <Icon icon="LinkArrow"/>
             }
             text="Länktext"
-            linkStyle="true"
+            linkStyle={true}
           />
         }
       />
