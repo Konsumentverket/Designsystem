@@ -61,6 +61,7 @@ export const mainLinkStyle = css`
       div {
         display: flex;
         align-items: center;
+        width: 100%;
       }
 
       svg {
@@ -156,6 +157,7 @@ export const childrenWrapper = css`
     flex-wrap: wrap;
     padding: 0 0 1.6rem 0;
     max-height: 160px;
+    width: 100%;
     overflow: hidden;
 
     a {
@@ -169,7 +171,7 @@ export const childrenWrapper = css`
         color: ${newColors.shades.fullBlue};
         padding: 8px 8px 8px 0;
         max-width: 100%;
-        width: 27.2rem;
+        width: 100%;
         margin-right: 24px;
 
         &:hover {
