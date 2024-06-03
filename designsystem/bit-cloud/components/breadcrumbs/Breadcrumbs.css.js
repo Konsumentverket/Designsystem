@@ -8,6 +8,7 @@ export const breadcrumbStyle = css`
     width: 1.2rem;
     margin: 0px calc(0.4rem);
     vertical-align: middle;
+
   }
 
   p {
