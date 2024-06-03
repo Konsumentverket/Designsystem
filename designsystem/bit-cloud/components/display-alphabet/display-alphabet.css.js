@@ -1,60 +1,85 @@
 import { css } from '@emotion/core'
-import { colors, spacing, medium, large } from '@konsumentverket-sverige/designsystem.utils';
+import {spacing, medium, newColors} from '@konsumentverket-sverige/designsystem.utils';
+
+const displayAlphabetFont = css`
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: calc(27px + 4px + 4px);
+`;
 
 export const alphabetWrapper = css`
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: ${spacing.l};
+  padding: 16px;
+  border-radius: 16px;
+  background: ${newColors.shades.lightBlue50};
+
+  ${medium} {
+    padding: 24px;
+    border-radius: 24px;
+  }
 `
 
 export const letter = css`
+  width: 20px;
+  height: 35px;
+  text-align: center;
   display: block;
-  font-size: ${spacing.l};
-  line-height: ${spacing.xl};
   margin-right: ${spacing.s};
-  ${medium} {
-    font-size: ${spacing.m};
-    line-height: ${spacing.l};
-  }
+  ${displayAlphabetFont};
 `
+
+export const validLetter = css`
+  color: ${newColors.shades.fullBlue};
+  border-bottom: 1px solid ${newColors.shades.fullBlue};
+
+  &:focus,
+  &:hover {
+    color: ${newColors.shades.kovBlue50};
+    background: ${newColors.shades.mediumBlue50};
+    border-bottom: 2px solid ${newColors.shades.kovBlue50};
+  }
+`;
+
 export const invalidLetter = css`
-  color: ${colors.theme3.midDark} !important;
+  color: ${newColors.shades.fullGrey};
 `
 
 export const activeLetter = css`
-  border: solid ${colors.theme1.dark};
-  border-width: 0px 8px 3px;
-  border-radius: 8px;
-  margin-top: -1px;
-  background-color:${colors.theme1.dark};
-  color: ${colors.common.white} !important;
-  :hover {
-    background-color:${colors.theme1.midLight} !important;
-    border-color: ${colors.theme1.midLight};
-    color: ${colors.theme1.mid} !important;
-    border-radius: .8rem !important;
-    box-shadow: none !important;
-  }
+  color: ${newColors.shades.kovBlue};
+  border-bottom: 2px solid ${newColors.shades.kovBlue};
 `
 
 export const linkShowAllWrapper = css`
+  position: absolute;
+  top: 100%;
+  right: 0;
   display: flex;
   justify-content: flex-start;
-  padding-right: 0;
-  margin-top: ${spacing.s};
+  margin-top: 32px;
+  height: 35px;
+
   ${medium} {
-    padding-right: ${spacing.l};
-    justify-content: flex-end;
+    margin-top: 39px;
   }
 `
 
 export const linkShowAll = css`
   display: flex;
-  font-size: 1.8rem;
-  line-height: ${spacing.l};
-  ${medium} {
-    margin-left: ${spacing.s};
+  ${displayAlphabetFont};
+  text-decoration: none;
+  color: ${newColors.shades.fullBlue};
+  border-bottom: 1px solid ${newColors.shades.fullBlue};
+  padding: 0 4px;
+
+  &:focus,
+  &:hover {
+    color: ${newColors.shades.kovBlue50};
+    background: ${newColors.shades.mediumBlue50};
+    border-bottom: 2px solid ${newColors.shades.kovBlue50};
   }
 
 `

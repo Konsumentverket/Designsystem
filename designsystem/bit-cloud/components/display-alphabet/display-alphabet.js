@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import {jsx} from '@emotion/core'
 import React from 'react'
-import * as css from './display-alphabet.css.js'
+import * as styles from './display-alphabet.css.js'
 
 const alphabet = [
   'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
@@ -18,27 +18,33 @@ export const DisplayAlphabet = ({
   onClickShowAll,
   activeLetter,
   visibleLetters,
-  displayShowAllLink = true
+  displayShowAllLink = false
 }) => <>
-    <div css={css.alphabetWrapper}>
-      {alphabet.map(letter => isVisibleLetter(visibleLetters, letter) ?
-        <a
-          key={letter}
-          css={[
-            css.letter,
-            letter === activeLetter ? css.activeLetter : null
-          ]}
-          href={visibleLetters.some(v => v === letter) ? `?letter=${letter}` : `/`}
-          data-letter={letter}
-          onClick={onClickLetter}
-        >{letter}</a>
-        :
-        <span key={letter} css={[css.letter, css.invalidLetter]}>{letter}</span>)}
-    </div>
-    {displayShowAllLink && <div css={css.linkShowAllWrapper}>
-      <a css={css.linkShowAll}
-        href={`?letter=alla`}
-        onClick={onClickShowAll}
-      >Visa Alla A-Ö</a>
-    </div>}
-  </>
+  <div css={styles.alphabetWrapper} data-comp="display-alphabet">
+    {alphabet.map(letter => isVisibleLetter(visibleLetters, letter) ?
+      <a
+        key={letter}
+        css={[
+          styles.letter,
+          styles.validLetter,
+          letter === activeLetter ? styles.activeLetter : null
+        ]}
+        href={visibleLetters.some(v => v === letter) ? `?letter=${letter}` : `/`}
+        data-letter={letter}
+        onClick={onClickLetter}
+        className={'noStyle'}
+      >{letter}</a>
+      :
+      <span key={letter} css={[styles.letter, styles.invalidLetter]}>{letter}</span>)}
+    {displayShowAllLink && (
+      <div css={styles.linkShowAllWrapper}>
+        <a css={styles.linkShowAll}
+           href={`?letter=alla`}
+           onClick={onClickShowAll}
+           className={'noStyle'}
+        >Visa alla A-Ö</a>
+      </div>
+    )
+    }
+  </div>
+</>
