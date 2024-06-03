@@ -3,17 +3,9 @@ import { colors, newColors, spacing, medium } from '@konsumentverket-sverige/des
 
 export const chevronStyle = css`
     flex-shrink: 0;
-    transform: rotate(180deg);
-    padding-right: .4rem;
     height: 24px;
     width: 24px;
-    fill: ${colors.theme1.mid};
-
-    [dir='rtl'] &{
-        left: .5rem;
-        right: auto;
-        transform: rotate(90deg);
-    }
+    fill: ${newColors.shades.fullBlue};
 `
 
 export const iconStyle = css`
@@ -28,7 +20,7 @@ export const iconCardStyle = css`
     flex-direction: row;
     align-items: center;
     color: ${newColors.shades.fullBlue};
-    background-color: ${newColors.kovWhite};    
+    background-color: ${newColors.kovWhite};
     text-decoration: none;
     gap: ${spacing.s};
     padding: ${spacing.m} ${spacing.m};
@@ -50,8 +42,8 @@ export const iconCardStyle = css`
         }
     }
 
-    &:active 
-    {   
+    &:active
+    {
         background-color: ${newColors.shades.fullBlue};
         box-shadow: none;
 
@@ -83,7 +75,7 @@ export const iconTextStyle = css`
     font-weight: 500;
     word-wrap:break-word;
 
-    
+
     ${medium} {
         font-size: 1.8rem;
     }
