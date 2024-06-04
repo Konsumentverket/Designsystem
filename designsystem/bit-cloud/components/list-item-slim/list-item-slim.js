@@ -8,7 +8,6 @@ import {Icon} from '@konsumentverket-sverige/designsystem.icon';
 export const ListItemSlim = ({
  headline,
  href,
- onClick,
 }) => {
 
   if (!headline) {
