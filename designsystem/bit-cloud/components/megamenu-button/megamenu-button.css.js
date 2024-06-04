@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { spacing, newColors, medium } from '@konsumentverket-sverige/designsystem.utils';
+import { spacing, newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
 export const iconStyle = css`
     svg {
@@ -8,7 +8,7 @@ export const iconStyle = css`
         position: relative;
         flex-shrink: 0;
 
-        ${medium} {
+        @media (min-width: ${breakpoints.m}) {
           width: 5.6rem;
           height: 5.6rem;
         }
@@ -18,7 +18,7 @@ export const iconStyle = css`
 
 export const buttonStyle = css`
     display: flex;
-    width: 44.4rem;
+    width: 100%;
     padding: ${spacing.s};
     flex-direction: row;
     align-items: center;
@@ -33,7 +33,8 @@ export const buttonStyle = css`
     background-color: ${newColors.primaries.kovBlue};
     border-bottom: 2px solid ${newColors.shades.kovBlue50};
 
-    ${medium} {
+    @media (min-width: ${breakpoints.m}) {
+      width: 44.4rem;
       font-size: 1.8rem;
       padding: ${spacing.xs};
     }
