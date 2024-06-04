@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import * as styles from "./list-item-slim.css.js"
 import {Icon} from '@konsumentverket-sverige/designsystem.icon';
 
-const ListItemSlim = ({
+export const ListItemSlim = ({
  headline,
  href,
  onClick,
@@ -29,8 +29,6 @@ const ListItemSlim = ({
     </a>
   )
 }
-
-export default ListItemSlim
 
 ListItemSlim.propTypes = {
   href: PropTypes.string,

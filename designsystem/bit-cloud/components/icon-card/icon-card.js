@@ -31,7 +31,7 @@ const IconCard = React.forwardRef(({
         <span css={iconTextStyle}>{text}</span>
         <ChevronRight
             aria-hidden="true"
-            css={chevronStyle}
+            style={chevronStyle}
         />
     </a>
 })

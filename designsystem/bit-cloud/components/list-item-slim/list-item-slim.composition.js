@@ -1,6 +1,6 @@
 import React from 'react';
 import 'date-fns';
-import ListItemSlim from './list-item-slim.js';
+import { ListItemSlim } from './list-item-slim.js';
 import {
   globalStyles as GlobalStyles,
   CompositionFonts
