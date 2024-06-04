@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { spacing, newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
+import { spacing, small, newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
 export const iconStyle = css`
     svg {
@@ -31,16 +31,25 @@ export const buttonStyle = css`
     box-sizing: border-box;
     cursor: pointer;
     background-color: ${newColors.primaries.kovBlue};
-    border-bottom: 2px solid ${newColors.shades.kovBlue50};
+    border-bottom: 1px solid ${newColors.shades.kovBlue50};
 
     @media (min-width: ${breakpoints.m}) {
+      border-bottom: 2px solid ${newColors.shades.kovBlue50};
       width: 44.4rem;
       font-size: 1.8rem;
       padding: ${spacing.xs};
     }
 
     &:last-of-type {
-      border-bottom: none;
+      @media (min-width: ${breakpoints.m}) {
+        border-bottom: none;
+      }
+    }
+
+    &:first-of-type {
+      ${small} {
+        border-top: 1px solid ${newColors.shades.kovBlue50};
+      }
     }
 
     ${ iconStyle }
