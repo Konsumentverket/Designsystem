@@ -170,6 +170,14 @@
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/list-item-disabled"
     },
+    "list-item-slim": {
+        "name": "list-item-slim",
+        "scope": "",
+        "version": "",
+        "defaultScope": "konsumentverket-sverige.designsystem",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/list-item-slim"
+    },
     "loading": {
         "name": "loading",
         "scope": "konsumentverket-sverige.designsystem",
