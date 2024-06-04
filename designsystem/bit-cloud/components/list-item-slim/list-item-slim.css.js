@@ -10,8 +10,9 @@ export const listItemSlim = css`
   line-height: 27px;
   display: flex;
   align-items: center;
-  padding: 16px;
+  padding: 16px 8px;
   color: ${newColors.shades.fullBlue};
+  border-top: 1px solid ${newColors.shades.mediumBlue50};
 
   ${medium} {
     padding: 24px 16px;
@@ -26,11 +27,6 @@ export const listItemSlim = css`
 
 export const headline = css`
   margin-right: 8px;
-
-  &:focus,
-  &:hover {
-
-  }
 `;
 
 export const chevronStyle = css`
