@@ -16,7 +16,6 @@ import {
   buttonStyle
 } from "./megamenu-button.css";
 
-
 export const MegamenuButton = ({
                          text,
                          id,
