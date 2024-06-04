@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import {spacing, medium, newColors} from '@konsumentverket-sverige/designsystem.utils';
+import {newColors, breakpoints} from '@konsumentverket-sverige/designsystem.utils';
 
 const displayAlphabetFont = css`
   font-size: 1.8rem;
@@ -13,11 +13,12 @@ export const alphabetWrapper = css`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 16px;
   padding: 16px;
   border-radius: 16px;
   background: ${newColors.shades.lightBlue50};
 
-  ${medium} {
+  @media (min-width: ${breakpoints.m}) {
     padding: 24px;
     border-radius: 24px;
   }
@@ -28,7 +29,6 @@ export const letter = css`
   height: 35px;
   text-align: center;
   display: block;
-  margin-right: ${spacing.s};
   ${displayAlphabetFont};
 `
 
@@ -62,7 +62,7 @@ export const linkShowAllWrapper = css`
   margin-top: 32px;
   height: 35px;
 
-  ${medium} {
+  @media (min-width: ${breakpoints.m}) {
     margin-top: 39px;
   }
 `
