@@ -16,12 +16,7 @@ export const breadcrumbStyle = css`
     margin-top: ${spacing.m};
 
     @media (min-width: ${breakpoints.m}) {
-      padding: 0 ${spacing.m} 0;
       margin-top: ${spacing.l};
-    }
-
-    @media (min-width: ${breakpoints.l}) {
-      padding: 0;
     }
   }
 `;
