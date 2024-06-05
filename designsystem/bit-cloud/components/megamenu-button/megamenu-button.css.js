@@ -11,6 +11,7 @@ export const iconStyle = css`
         @media (min-width: ${breakpoints.m}) {
           width: 5.6rem;
           height: 5.6rem;
+          padding: 1.2rem;
         }
     }
 `
