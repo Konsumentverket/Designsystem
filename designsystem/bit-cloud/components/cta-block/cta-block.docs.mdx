@@ -16,5 +16,16 @@ Use the cta block component:
     headline="Lorem ipsum"
     text="Lorem ipsum dolor sit amet"
     image="https://picsum.photos/600/400"
+    btn={
+       <Button
+          onClick={() => {
+            alert("You clicked the button!")
+          }}
+          iconLeft={
+            <Icon icon="LinkArrow"/>
+          }
+          text="Skicka in anmälan"
+       />
+    }
 />
 ```
