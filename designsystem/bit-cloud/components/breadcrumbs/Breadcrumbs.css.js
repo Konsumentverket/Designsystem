@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import {spacing, newColors, medium, large, containerStyles} from '@konsumentverket-sverige/designsystem.utils';
+import {spacing, newColors, breakpoints, containerStyles} from '@konsumentverket-sverige/designsystem.utils';
 
 export const breadcrumbStyle = css`
   ${containerStyles};
@@ -12,14 +12,15 @@ export const breadcrumbStyle = css`
   }
 
   p {
-    padding: 0 ${spacing.s};
+    padding: 0;
+    margin-top: ${spacing.m};
 
-    ${medium} {
+    @media (min-width: ${breakpoints.m}) {
       padding: 0 ${spacing.m} 0;
       margin-top: ${spacing.l};
     }
 
-    ${large} {
+    @media (min-width: ${breakpoints.l}) {
       padding: 0;
     }
   }

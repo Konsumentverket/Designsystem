@@ -8,8 +8,8 @@ const maxWidthGrid = '960px'
 
 export const containerStyles = css`
   width: 100%;
-  padding-left: ${spacing.xs};
-  padding-right: ${spacing.xs};
+  padding-left: ${spacing.s};
+  padding-right: ${spacing.s};
 
   @media (min-width: ${breakpoints.m}) {
     padding-left: ${spacing.l};
