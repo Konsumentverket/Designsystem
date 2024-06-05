@@ -19,6 +19,12 @@ export const ctaWrapper = css`
     align-items: stretch;
     gap: 24px;
   }
+
+  .button--linkstyle {
+    svg {
+      fill: ${newColors.shades.fullBlue};
+    }
+  }
 `
 
 export const focusHeadline = css`
@@ -64,12 +70,9 @@ export const textArea = css`
   }
 
   a {
+    width: fit-content;
     text-decoration: none;
     justify-content: flex-start;
-
-    svg {
-      fill: ${newColors.shades.fullBlue};
-    }
   }
 `
 

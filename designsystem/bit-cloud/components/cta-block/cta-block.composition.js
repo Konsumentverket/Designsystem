@@ -18,9 +18,7 @@ export const CTAWithButton = () => {
         image="https://picsum.photos/600/400"
         btn={
           <Button
-            onClick={() => {
-              alert("You clicked the button!")
-            }}
+            href={"#"}
             iconLeft={
               <Icon icon="LinkArrow"/>
             }

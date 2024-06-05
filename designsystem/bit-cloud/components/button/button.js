@@ -41,6 +41,7 @@ export const Button = ({
   linkStyle && styles.push(linkStyles);
   linkStyleSmall && styles.push(linkStylesSmall);
   selected && cssClass.push("selectedButtonStyle");
+  linkStyle && cssClass.push("button--linkstyle");
   href && cssClass.push("noStyle");
   text === '' && (iconLeft || iconRight) && styles.push(buttonIconOnly)
   iconLeft && styles.push(buttonIconLeft)
@@ -65,7 +66,7 @@ export const Button = ({
   }
 
   return href
-    ? <a {...props} data-comp="button" >
+    ? <a {...props} data-comp="button">
       {iconLeft}
       {text}
       {iconRight}

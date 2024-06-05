@@ -88,7 +88,7 @@ export const BasicIconButton = () => {
 // Basic Example with icon right
 export const BasicIconRightButton = () => {
   const element = <Button
-    onClick={() => { alert("You clicked the button!") }}
+    href={"#"}
     iconRight={
       <Icon icon="Camera" />
     }

@@ -25,7 +25,7 @@ export const buttonStyle = css`
     width:100%;
     box-sizing: border-box;
     cursor:pointer;
-    background-color:${newColors.primaries.fullBlue};
+    background-color: ${newColors.primaries.fullBlue};
 
     svg {
         fill: ${newColors.kovWhite};
@@ -33,11 +33,11 @@ export const buttonStyle = css`
     }
 
     &:hover, &.selectedButtonStyle {
-        background-color:${newColors.shades.kovBlue50};
+        background-color: ${newColors.shades.kovBlue50};
         text-decoration:underline;
     }
     &:active{
-        background-color:${newColors.shades.kovBlue75};
+        background-color: ${newColors.shades.kovBlue75};
         text-decoration:underline;
     }
     &:disabled{
