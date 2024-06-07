@@ -53,7 +53,12 @@ export const FocusCardSectionGreyExample = () => {
             title: "Maecenas est quam aliquam vel tincidunt vel iaculis a metus",
             text: "Praesent elementum a massa ac elementum. Donec ipsum orci a porta odio tempor vel",
             url: "/2",
-          }
+          },
+          {
+            title: "Lorem ipsum dolor sit amet",
+            text: "Pellentesque elit enim, congue eget tellus non. Sollicitudin tristique urna aliquam bibendum dapibus mi",
+            url: "/#1",
+          },
         ]}
       />
     </CompositionFonts>

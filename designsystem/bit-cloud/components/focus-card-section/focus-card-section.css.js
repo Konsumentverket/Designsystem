@@ -71,8 +71,10 @@ export const focusCardSectionTextStyle = css`
 `;
 
 export const focusCardSectionItemsListStyle = css`
+    width: 100%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: ${spacing.m};
     list-style: none;
     padding: 0;
@@ -87,6 +89,6 @@ export const focusCardSectionItemStyle = css`
     width: 100%;
 
     @media (min-width: ${breakpoints.m}) {
-        width: 50%;
+        width: calc(50% - (${spacing.m} / 2));
     }
 `;
