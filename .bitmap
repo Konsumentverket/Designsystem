@@ -72,6 +72,22 @@
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/fact-box"
     },
+    "focus-card": {
+        "name": "focus-card",
+        "scope": "",
+        "version": "",
+        "defaultScope": "konsumentverket-sverige.designsystem",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/focus-card"
+    },
+    "focus-card-section": {
+        "name": "focus-card-section",
+        "scope": "",
+        "version": "",
+        "defaultScope": "konsumentverket-sverige.designsystem",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/focus-card-section"
+    },
     "focus-puff": {
         "name": "focus-puff",
         "scope": "konsumentverket-sverige.designsystem",
