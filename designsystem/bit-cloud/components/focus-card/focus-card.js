@@ -27,7 +27,7 @@ export const FocusCard = ({
     <a className={"noStyle"} css={[focusCardStyle, dark && focusCardDarkStyle]} href={url} data-comp="focus-card">
       <div css={focusCardTextSectionStyle}>
         {title && (<h3 css={focusCardTitleStyle} className="focusCardTitle">{title}</h3>)}
-        {text && (<h3 css={focusCardTextStyle}>{text}</h3>)}
+        {text && (<p css={focusCardTextStyle}>{text}</p>)}
       </div>
       <div css={[focusCardIconSectionStyle, !dark && focusCardIconDarkSectionStyle]} className="focusCardIconSection">
         <Icon

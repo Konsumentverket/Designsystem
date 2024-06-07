@@ -74,6 +74,7 @@ export const focusCardTextStyle = css`
   font-size: 1.6rem;
   line-height: 1.5;
   color: ${newColors.kovBlack};
+  padding: 0;
 `;
 
 export const focusCardIconSectionStyle = css`
