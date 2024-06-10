@@ -74,17 +74,15 @@
     },
     "focus-card": {
         "name": "focus-card",
-        "scope": "",
-        "version": "",
-        "defaultScope": "konsumentverket-sverige.designsystem",
+        "scope": "konsumentverket-sverige.designsystem",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/focus-card"
     },
     "focus-card-section": {
         "name": "focus-card-section",
-        "scope": "",
-        "version": "",
-        "defaultScope": "konsumentverket-sverige.designsystem",
+        "scope": "konsumentverket-sverige.designsystem",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/focus-card-section"
     },
@@ -143,6 +141,13 @@
         "version": "0.0.18",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/icon-card"
+    },
+    "image-card": {
+        "name": "image-card",
+        "scope": "konsumentverket-sverige.designsystem",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/image-card"
     },
     "input-radio": {
         "name": "input-radio",
