@@ -5,6 +5,7 @@ import { spacing } from './spacing';
 import { breakpoints } from "./breakpoints";
 import { DateFormat } from './dateformat.js';
 import { containerStyles} from "./grid";
+import * as typography from "./typography.js";
 
 // System icons
 import { Adapt } from "./Icons/SystemIcons/Adapt/Adapt.js"
@@ -111,6 +112,7 @@ export {
     DateFormat,
     breakpoints,
     containerStyles,
+    typography,
 
     // System icons
 
