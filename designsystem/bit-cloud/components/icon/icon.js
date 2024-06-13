@@ -94,6 +94,7 @@ import {
   Ellipsis,
   HandHeart,
   Snowboarding,
+  TempIcon
 } from "@konsumentverket-sverige/designsystem.utils"
 
 const systemIconDefinitions = {
@@ -174,6 +175,7 @@ const editorIconDefinitions = {
   PurchaseFromPrivate,
   Receipt,
   SalesLaw,
+  TempIcon,
   Telemarketing,
   Travel,
   WhiteGoods,

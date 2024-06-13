@@ -269,6 +269,11 @@
       "name": "Snowboarding",
       "title": "Person åker snowboard",
       "url": "EditorIconsSvg/snowboarding.svg"
+    },
+    {
+      "name": "TempIcon",
+      "title": "Temporary icon",
+      "url": "EditorIconsSvg/TempIcon.svg"
     }
   ]
 }
