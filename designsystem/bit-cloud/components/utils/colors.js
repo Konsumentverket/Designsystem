@@ -2,6 +2,7 @@ export const newColors = {
   kovBlue: '#162259',
   kovWhite: '#FFF',
   kovBlack: '#161616',
+  readingBlack: '#414141',
 
   primaries: {
     kovBlue: '#162259',
@@ -11,6 +12,9 @@ export const newColors = {
     fullOrange:  '#9C6A46',
     mediumOrange:  '#F59C00',
     lightOrange:  '#FCEBD5',
+    kovWhite: '#FFF',
+    kovBlack: '#161616',
+    readingBlack: '#414141',
   },
 
   secondaries: {
@@ -44,6 +48,8 @@ export const newColors = {
     lightGrey: '#D9D5D4',
     lightGrey50: '#EBE9E9',
     lightGrey25: '#F5F4F4',
+    kovWhite: '#FFF',
+    readingBlack: '#414141',
   },
 
   validation: {
