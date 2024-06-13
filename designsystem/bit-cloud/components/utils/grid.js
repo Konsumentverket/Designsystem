@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import {css, jsx} from '@emotion/core'
+import {css, jsx} from '@emotion/core';
 import {breakpoints} from './breakpoints';
 import {spacing} from './spacing';
 
@@ -27,7 +27,7 @@ export const containerStyles = css`
 
 export const gridStyles = css`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: ${spacing.xs};
   margin-left: auto;
   margin-right: auto;
@@ -35,14 +35,14 @@ export const gridStyles = css`
   padding-right: ${spacing.xs};
 
   @media (min-width: ${breakpoints.m}) {
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     gap: ${spacing.s};
     padding-left: ${spacing.l};
     padding-right: ${spacing.l};
   }
 
   @media (min-width: ${breakpoints.l}) {
-    grid-template-columns: repeat(17, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     gap: ${spacing.l};
     max-width: ${maxWidthGrid};
     padding-left: 0;
