@@ -1,18 +1,17 @@
 import { css } from '@emotion/core';
-import { colors, newColors, spacing, medium } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, spacing, medium } from '@konsumentverket-sverige/designsystem.utils';
 
 export const chevronStyle = css`
     flex-shrink: 0;
-    transform: rotate(180deg);
     padding-right: .4rem;
     height: 24px;
     width: 24px;
-    fill: ${colors.theme1.mid};
+    fill: ${newColors.shades.fullBlue};
 
     [dir='rtl'] &{
         left: .5rem;
         right: auto;
-        transform: rotate(90deg);
+        transform: rotate(180deg);
     }
 `
 
@@ -20,7 +19,7 @@ export const iconStyle = css`
     flex-shrink: 0;
     height: 24px;
     width: 24px;
-    fill: ${colors.theme1.mid};
+    fill: ${newColors.shades.fullBlue};
 `;
 
 export const iconCardStyle = css`
@@ -28,7 +27,7 @@ export const iconCardStyle = css`
     flex-direction: row;
     align-items: center;
     color: ${newColors.shades.fullBlue};
-    background-color: ${newColors.kovWhite};    
+    background-color: ${newColors.kovWhite};
     text-decoration: none;
     gap: ${spacing.s};
     padding: ${spacing.m} ${spacing.m};
@@ -37,6 +36,11 @@ export const iconCardStyle = css`
     border-radius: 16px;
     border: 1px solid ${newColors.shades.fullBlue};
     box-shadow: 0px 2px 12px 8px rgba(22, 34, 89, 0.10);
+    height: 72px;
+
+    span {
+      line-height: 1.4;
+    }
 
     &:hover {
         background-color: ${newColors.primaries.lightBlue};
@@ -50,8 +54,8 @@ export const iconCardStyle = css`
         }
     }
 
-    &:active 
-    {   
+    &:active
+    {
         background-color: ${newColors.shades.fullBlue};
         box-shadow: none;
 
@@ -83,7 +87,7 @@ export const iconTextStyle = css`
     font-weight: 500;
     word-wrap:break-word;
 
-    
+
     ${medium} {
         font-size: 1.8rem;
     }
