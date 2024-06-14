@@ -18,6 +18,7 @@ import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 
 export const FocusCard = ({
   title,
+  headline,
   text,
   url,
   dark = false,
@@ -27,6 +28,7 @@ export const FocusCard = ({
     <a className={"noStyle"} css={[focusCardStyle, dark && focusCardDarkStyle]} href={url} data-comp="focus-card">
       <div css={focusCardTextSectionStyle}>
         {title && (<h3 css={focusCardTitleStyle} className="focusCardTitle">{title}</h3>)}
+        {headline && (<h3 css={focusCardTitleStyle} className="focusCardTitle">{headline}</h3>)}
         {text && (<p css={focusCardTextStyle}>{text}</p>)}
       </div>
       <div css={[focusCardIconSectionStyle, !dark && focusCardIconDarkSectionStyle]} className="focusCardIconSection">
