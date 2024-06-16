@@ -13,7 +13,11 @@ export const BasicDisplayAlphabet = () => {
       <DisplayAlphabet
         activeLetter="L"
         visibleLetters={["L", "O", "R", "E", "M"]}
-        displayShowAllLink={true}
+        onClickLetter={(e) => {
+          e.preventDefault();
+          const dataLetter = e.target.getAttribute('data-letter')
+          console.log('Clicked: ' + dataLetter);
+        }}
       />
     </CompositionFonts>
   );

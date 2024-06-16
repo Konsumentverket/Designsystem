@@ -52,34 +52,3 @@ export const activeLetter = css`
   color: ${newColors.shades.kovBlue};
   border-bottom: 2px solid ${newColors.shades.kovBlue};
 `
-
-export const linkShowAllWrapper = css`
-  position: absolute;
-  top: 100%;
-  right: 0;
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 32px;
-  height: 35px;
-
-  @media (min-width: ${breakpoints.m}) {
-    margin-top: 39px;
-  }
-`
-
-export const linkShowAll = css`
-  display: flex;
-  ${displayAlphabetFont};
-  text-decoration: none;
-  color: ${newColors.shades.fullBlue};
-  border-bottom: 1px solid ${newColors.shades.fullBlue};
-  padding: 0 4px;
-
-  &:focus,
-  &:hover {
-    color: ${newColors.shades.kovBlue50};
-    background: ${newColors.shades.mediumBlue50};
-    border-bottom: 2px solid ${newColors.shades.kovBlue50};
-  }
-
-`

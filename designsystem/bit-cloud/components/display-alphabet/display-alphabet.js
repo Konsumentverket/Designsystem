@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import {jsx} from '@emotion/core'
 import React from 'react'
+import PropTypes from "prop-types";
 import * as styles from './display-alphabet.css.js'
 
 const alphabet = [
@@ -15,36 +16,38 @@ const isVisibleLetter = (visibleLetters, letter) =>
 
 export const DisplayAlphabet = ({
   onClickLetter,
-  onClickShowAll,
   activeLetter,
   visibleLetters,
-  displayShowAllLink = false
-}) => <>
-  <div css={styles.alphabetWrapper} data-comp="display-alphabet">
-    {alphabet.map(letter => isVisibleLetter(visibleLetters, letter) ?
-      <a
-        key={letter}
-        css={[
-          styles.letter,
-          styles.validLetter,
-          letter === activeLetter ? styles.activeLetter : null
-        ]}
-        href={visibleLetters.some(v => v === letter) ? `?letter=${letter}` : `/`}
-        data-letter={letter}
-        onClick={onClickLetter}
-        className={'noStyle'}
-      >{letter}</a>
-      :
-      <span key={letter} css={[styles.letter, styles.invalidLetter]}>{letter}</span>)}
-    {displayShowAllLink && (
-      <div css={styles.linkShowAllWrapper}>
-        <a css={styles.linkShowAll}
-           href={`?letter=alla`}
-           onClick={onClickShowAll}
-           className={'noStyle'}
-        >Visa alla A-Ö</a>
-      </div>
-    )
-    }
-  </div>
-</>
+}) => {
+  return (
+    <div css={styles.alphabetWrapper} data-comp="display-alphabet">
+      {alphabet.map(letter => isVisibleLetter(visibleLetters, letter) ?
+        <a
+          key={letter}
+          css={[
+            styles.letter,
+            styles.validLetter,
+            letter === activeLetter ? styles.activeLetter : null
+          ]}
+          href={visibleLetters.some(v => v === letter) ? `?letter=${letter}` : `/`}
+          data-letter={letter}
+          onClick={onClickLetter}
+          className={'noStyle'}
+        >{letter}</a>
+        :
+        <span key={letter} css={[styles.letter, styles.invalidLetter]}>{letter}</span>)}
+    </div>
+  )
+}
+
+DisplayAlphabet.propTypes = {
+  onClickLetter: PropTypes.func,
+  activeLetter: PropTypes.oneOf(alphabet),
+  visibleLetters: PropTypes.array,
+}
+
+DisplayAlphabet.defaultProps = {
+  onClickLetter: () => {},
+  activeLetter: '',
+  visibleLetters: [],
+}
