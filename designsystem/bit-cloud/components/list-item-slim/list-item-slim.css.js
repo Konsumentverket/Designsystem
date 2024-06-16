@@ -4,6 +4,7 @@ import { newColors, breakpoints, typography } from '@konsumentverket-sverige/des
 export const listItemSlim = css`
   list-style: none;
   border-top: 1px solid ${newColors.shades.mediumBlue50};
+  margin: 0;
 `;
 
 export const disabled = css`
