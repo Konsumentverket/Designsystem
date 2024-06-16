@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { newColors, medium } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
 export const listItemSlim = css`
   width: 100%;
@@ -10,12 +10,14 @@ export const listItemSlim = css`
   line-height: 27px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 16px 8px;
   color: ${newColors.shades.fullBlue};
   border-top: 1px solid ${newColors.shades.mediumBlue50};
 
-  ${medium} {
+  @media (min-width: ${breakpoints.m}) {
     padding: 24px 16px;
+    justify-content: flex-start;
   }
 
   &:focus,
