@@ -194,7 +194,7 @@
     "list-item-slim": {
         "name": "list-item-slim",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.9",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/list-item-slim"
     },

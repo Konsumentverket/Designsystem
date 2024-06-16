@@ -1,19 +1,38 @@
 import { css } from '@emotion/core';
-import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, breakpoints, typography } from '@konsumentverket-sverige/designsystem.utils';
 
 export const listItemSlim = css`
+  list-style: none;
+  border-top: 1px solid ${newColors.shades.mediumBlue50};
+`;
+
+export const disabled = css`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px 8px;
+   color: ${newColors.shades.fullGrey};
+
+  @media (min-width: ${breakpoints.m}) {
+    padding: 24px 16px;
+  }
+`;
+
+export const preamble = css`
+  margin-top: 8px;
+  padding-bottom: 0;
+`;
+
+export const link = css`
+  ${typography.clickMedium};
   width: 100%;
   text-decoration: none;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 27px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 8px;
   color: ${newColors.shades.fullBlue};
-  border-top: 1px solid ${newColors.shades.mediumBlue50};
 
   @media (min-width: ${breakpoints.m}) {
     padding: 24px 16px;
@@ -29,6 +48,17 @@ export const listItemSlim = css`
 
 export const headline = css`
   margin-right: 8px;
+`;
+
+export const headlineDisabled = css`
+  ${typography.clickMedium};
+  color: ${newColors.shades.fullGrey};
+  text-decoration: none;
+  padding-bottom: 0;
+
+  &:hover {
+    text-decoration: none;
+  }
 `;
 
 export const chevronStyle = css`

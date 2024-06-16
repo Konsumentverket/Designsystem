@@ -8,6 +8,8 @@ import {Icon} from '@konsumentverket-sverige/designsystem.icon';
 export const ListItemSlim = ({
  headline,
  href,
+ disabled,
+ preamble,
 }) => {
 
   if (!headline) {
@@ -15,26 +17,51 @@ export const ListItemSlim = ({
   }
 
   return (
-    <a
-      css={styles.listItemSlim}
-      className='noStyle'
-      href={href}
-      data-comp='list-item-slim'
-    >
+    disabled ? (
+      <li css={[styles.listItemSlim, styles.disabled]}>
+        {/*<div css={styles.disabledItem}>*/}
+          <p
+            className={'noStyle'}
+            css={styles.headlineDisabled}
+          >
+            {headline}
+          </p>
+          <p
+            css={styles.preamble}
+            className={'noStyle'}
+          >
+            {preamble}
+          </p>
+        {/*</div>*/}
+      </li>
+    ) : (
+      <li css={styles.listItemSlim}>
+        <a
+          css={styles.link}
+          className='noStyle'
+          href={href}
+          data-comp='list-item-slim'
+        >
       <span css={styles.headline}>
         {headline}
       </span>
-      <Icon icon={'ChevronRight'} css={styles.chevronStyle} />
-    </a>
+          <Icon icon={'ChevronRight'} css={styles.chevronStyle}/>
+        </a>
+      </li>
+    )
   )
 }
 
 ListItemSlim.propTypes = {
   href: PropTypes.string,
   headLine: PropTypes.string,
+  disabled: PropTypes.bool,
+  preamble: PropTypes.string,
 }
 
 ListItemSlim.defaultProps = {
   href: '',
   headLine: '',
+  disabled: false,
+  preamble: '',
 }

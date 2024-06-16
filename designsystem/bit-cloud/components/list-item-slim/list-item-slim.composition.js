@@ -12,7 +12,21 @@ export const BasicListItemSlim = () => {
       <GlobalStyles />
       <ListItemSlim
         href="#"
-        headline="Lorem ipsum"
+        headline="Bollnäs kommun - Konsumentvägledning Bollnäs"
+      />
+    </CompositionFonts>
+  );
+}
+
+export const DisabledListItemSlim = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <ListItemSlim
+        href="#"
+        headline="Bergs kommun"
+        preamble="Kommunen saknar konsumentvägledning"
+        disabled={true}
       />
     </CompositionFonts>
   );
