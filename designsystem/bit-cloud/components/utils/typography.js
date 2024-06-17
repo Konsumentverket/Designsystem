@@ -9,6 +9,8 @@ const baseHeading = css`
   font-weight: 700;
   position: relative;
   margin-top: 24px;
+  word-break: break-word;
+  hyphens: auto;
 
   @media (min-width: ${breakpoints.m}) {
     margin-top: 26px;
@@ -110,7 +112,9 @@ export const preamble = css`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  word-break: break-word;
+  hyphens: auto;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
@@ -125,6 +129,8 @@ export const paragraph = css`
   font-weight: 400;
   line-height: 150%;
   margin-bottom: 16px;
+  word-break: break-word;
+  hyphens: auto;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2rem;
@@ -148,6 +154,8 @@ export const textSmall = css`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  word-break: break-word;
+  hyphens: auto;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.6rem;
@@ -164,6 +172,8 @@ export const textMini = css`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  word-break: break-word;
+  hyphens: auto;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.4rem;
@@ -224,6 +234,8 @@ const baseClick = css`
   font-weight: 500;
   line-height: 150%;
   text-align: left;
+  word-break: break-word;
+  hyphens: auto;
 
   &:active,
   &:hover {
