@@ -4,12 +4,14 @@ import React from 'react'
 import PropTypes from "prop-types";
 import * as styles from './display-alphabet.css.js'
 
+const allLetters = 'alla';
+
 const alphabet = [
   'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
   'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
   'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
   'Y', 'Z', 'Å', 'Ä', 'Ö'
-]
+];
 
 const isVisibleLetter = (visibleLetters, letter) =>
   (visibleLetters && Array.isArray(visibleLetters)) && visibleLetters.some(v => v === letter)
@@ -42,7 +44,7 @@ export const DisplayAlphabet = ({
 
 DisplayAlphabet.propTypes = {
   onClickLetter: PropTypes.func,
-  activeLetter: PropTypes.oneOf(alphabet),
+  activeLetter: PropTypes.oneOf([...alphabet, allLetters]),
   visibleLetters: PropTypes.array,
 }
 
