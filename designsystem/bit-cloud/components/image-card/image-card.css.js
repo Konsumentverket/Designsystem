@@ -125,6 +125,7 @@ export const pictureWrapper = css`
     height: 100%;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
+    object-fit: cover;
 
     .fullWidth & {
       @media (min-width: ${breakpoints.m}) {
