@@ -108,7 +108,7 @@ export const subHeadingLine = css`
 
 export const preamble = css`
   color: ${newColors.readingBlack};
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
