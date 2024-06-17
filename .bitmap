@@ -145,7 +145,7 @@
     "image-card": {
         "name": "image-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.10",
+        "version": "0.0.11",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/image-card"
     },

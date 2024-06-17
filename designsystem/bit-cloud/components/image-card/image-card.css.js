@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { newColors, medium, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
 
 export const focusWrapper = css`
@@ -11,6 +11,7 @@ export const focusWrapper = css`
   background-color: #fff;
   border-radius: 16px;
   position: relative;
+  height: 100%;
 
   &.fullWidth {
     @media (min-width: ${breakpoints.m}) {
@@ -29,6 +30,7 @@ export const linkWrapper = css`
   transition: background-color 0.3s;
   background-color: #fff;
   border-radius: 16px;
+  height: 100%;
 
   & > div {
     background-color: #fff;
