@@ -10,7 +10,11 @@ import {
   h1,
   h2,
   h3,
+  h1Line,
+  h2Line,
+  h3Line,
   subHeading,
+  subHeadingLine,
   h1Alt2,
   h1Alt3,
   h2Alt2,
@@ -19,6 +23,7 @@ import {
   subHeadingAltMedium,
   subHeadingAltSmall,
   subHeadingAltMini,
+  preamble,
   paragraph,
   paragraphStrong,
   textSmall,
@@ -59,6 +64,10 @@ export const typography = () => {
         <h2 css={h2} style={spacing}>H2 style</h2>
         <h3 css={h3} style={spacing}>H3 style</h3>
         <h4 css={subHeading} style={spacing}>SubHeading style (H4, H5, H6)</h4>
+        <h1 css={h1Line} style={spacing}>H1 line style</h1>
+        <h2 css={h2Line} style={spacing}>H2 line style</h2>
+        <h3 css={h3Line} style={spacing}>H3 line style</h3>
+        <h4 css={subHeadingLine} style={spacing}>SubHeading line style (H4, H5, H6)</h4>
         <h1 css={h1Alt2} style={spacing}>H1 - Alt 2</h1>
         <h1 css={h1Alt3} style={spacing}>H1 - Alt 3</h1>
         <h2 css={h2Alt2} style={spacing}>H2 - Alt 2</h2>
@@ -68,6 +77,7 @@ export const typography = () => {
         <h4 css={subHeadingAltSmall} style={spacing}>Subheading Alt Small</h4>
         <h4 css={subHeadingAltMini} style={spacing}>Subheading Alt Mini</h4>
         <div style={sectionTitle}>Text</div>
+        <p css={preamble} className={'noStyle'}>Preamble<br/>{text}</p>
         <p css={paragraph} className={'noStyle'}>Paragraph<br/>{text}</p>
         <p css={paragraphStrong}>ParagraphStrong<br/>Varje år får vi in tusentals anmälningar från konsumenter som
           tycker att företag har fel i sin marknadsföring eller i sina avtalsvillkor.</p>

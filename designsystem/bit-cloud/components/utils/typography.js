@@ -13,7 +13,22 @@ const baseHeading = css`
   @media (min-width: ${breakpoints.m}) {
     margin-top: 26px;
   }
+`;
 
+export const h1 = css`
+  ${baseHeading};
+
+  font-size: 3.2rem;
+  line-height: 120%;
+  margin-bottom: 16px;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 5rem;
+    margin-bottom: 32px;
+  }
+`;
+
+const headingLine = css`
   &::before {
     content: "";
     position: absolute;
@@ -29,17 +44,9 @@ const baseHeading = css`
   }
 `;
 
-export const h1 = css`
-  ${baseHeading};
-
-  font-size: 3.2rem;
-  line-height: 120%;
-  margin-bottom: 16px;
-
-  @media (min-width: ${breakpoints.m}) {
-    font-size: 5rem;
-    margin-bottom: 32px;
-  }
+export const h1Line = css`
+  ${h1};
+  ${headingLine};
 `;
 
 export const h2 = css`
@@ -56,6 +63,11 @@ export const h2 = css`
   }
 `;
 
+export const h2Line = css`
+  ${h2};
+  ${headingLine};
+`;
+
 export const h3 = css`
   ${baseHeading};
 
@@ -70,6 +82,11 @@ export const h3 = css`
   }
 `;
 
+export const h3Line = css`
+  ${h3};
+  ${headingLine};
+`;
+
 export const subHeading = css`
   ${baseHeading};
   color: ${newColors.kovBlack};
@@ -79,6 +96,25 @@ export const subHeading = css`
 
   @media (min-width: ${breakpoints.m}) {
     margin-bottom: 22px;
+  }
+`;
+
+export const subHeadingLine = css`
+  ${subHeading};
+  ${headingLine};
+`;
+
+export const preamble = css`
+  color: ${newColors.readingBlack};
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 16px;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2.4rem;
+    margin-bottom: 32px;
   }
 `;
 
