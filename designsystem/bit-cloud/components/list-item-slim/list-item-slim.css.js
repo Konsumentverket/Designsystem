@@ -22,6 +22,7 @@ export const disabled = css`
 
 export const preamble = css`
   margin-top: 8px;
+  margin-bottom: 0;
   padding-bottom: 0;
 `;
 
