@@ -99,6 +99,7 @@ import { BabyCarriage } from "./Icons/EditorIcons/BabyCarriage/BabyCarriage.js";
 import { Ellipsis } from "./Icons/EditorIcons/Ellipsis/Ellipsis.js";
 import { HandHeart } from "./Icons/EditorIcons/HandHeart/HandHeart.js";
 import { Snowboarding } from "./Icons/EditorIcons/Snowboarding/Snowboarding.js";
+import { MonoArrowSmall } from "./Icons/SystemIcons/MonoArrowSmall/MonoArrowSmall.js";
 import { TempIcon } from "./Icons/EditorIcons/TempIcon/TempIcon.js";
 
 export {
@@ -161,6 +162,7 @@ export {
     MegamenuCompany,
     Settings,
     Logo,
+    MonoArrowSmall,
 
     // System icons
 

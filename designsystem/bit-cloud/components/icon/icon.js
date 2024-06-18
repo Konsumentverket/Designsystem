@@ -44,6 +44,7 @@ import {
   Settings,
   Logo,
   MegamenuCompany,
+  MonoArrowSmall,
 
   // Editor Icons
 
@@ -140,6 +141,7 @@ const systemIconDefinitions = {
   MegamenuCompany,
   Settings,
   Logo,
+  MonoArrowSmall
 };
 
 const editorIconDefinitions = {
@@ -190,7 +192,7 @@ const editorIconDefinitions = {
   BabyCarriage,
   Ellipsis,
   HandHeart,
-  Snowboarding,
+  Snowboarding
 }
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {

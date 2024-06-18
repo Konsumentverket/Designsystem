@@ -14,6 +14,7 @@ export const breadcrumbStyle = css`
   p {
     padding: 0;
     margin-top: ${spacing.m};
+    margin-bottom: 0;
 
     @media (min-width: ${breakpoints.m}) {
       margin-top: ${spacing.l};
