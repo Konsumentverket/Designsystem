@@ -8,13 +8,8 @@ const baseHeading = css`
   font-style: normal;
   font-weight: 700;
   position: relative;
-  margin-top: 24px;
   word-break: break-word;
   hyphens: auto;
-
-  @media (min-width: ${breakpoints.m}) {
-    margin-top: 26px;
-  }
 `;
 
 export const h1 = css`
@@ -22,11 +17,9 @@ export const h1 = css`
 
   font-size: 3.2rem;
   line-height: 120%;
-  margin-bottom: 16px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 5rem;
-    margin-bottom: 32px;
   }
 `;
 
@@ -56,12 +49,10 @@ export const h2 = css`
 
   font-size: 2.6rem;
   line-height: 130%;
-  margin-bottom: 16px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.8rem;
     line-height: 140%;
-    margin-bottom: 26px;
   }
 `;
 
@@ -75,12 +66,10 @@ export const h3 = css`
 
   font-size: 2.2rem;
   line-height: 130%;
-  margin-bottom: 16px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
     line-height: 150%;
-    margin-bottom: 22px;
   }
 `;
 
@@ -94,11 +83,6 @@ export const subHeading = css`
   color: ${newColors.kovBlack};
   font-size: 2rem;
   line-height: 140%;
-  margin-bottom: 16px;
-
-  @media (min-width: ${breakpoints.m}) {
-    margin-bottom: 22px;
-  }
 `;
 
 export const subHeadingLine = css`
@@ -112,14 +96,12 @@ export const preamble = css`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  margin-bottom: 24px;
   word-break: break-word;
   hyphens: auto;
   max-width: 744px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
-    margin-bottom: 48px;
   }
 `;
 
@@ -129,14 +111,12 @@ export const paragraph = css`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  margin-bottom: 16px;
   word-break: break-word;
   hyphens: auto;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2rem;
     line-height: 145%;
-    margin-bottom: 32px;
   }
 `;
 
@@ -203,7 +183,6 @@ export const link = css`
   ${paragraph};
   color: ${newColors.primaries.fullBlue};
   text-decoration: underline;
-  margin-bottom: 0;
   border-radius: 3px;
 
   &:active,
@@ -229,7 +208,6 @@ const baseClick = css`
   color: ${newColors.primaries.fullBlue};
   text-decoration: none;
   background: none;
-  margin-bottom: 0;
   border-radius: 3px;
   font-style: normal;
   font-weight: 500;
