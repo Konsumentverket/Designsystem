@@ -21,6 +21,8 @@ export const disabled = css`
 `;
 
 export const preamble = css`
+  ${typography.textSmall};
+  color: ${newColors.shades.fullGrey50};
   margin-top: 8px;
   margin-bottom: 0;
   padding-bottom: 0;

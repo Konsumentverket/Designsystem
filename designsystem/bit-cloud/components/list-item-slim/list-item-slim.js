@@ -19,7 +19,6 @@ export const ListItemSlim = ({
   return (
     disabled ? (
       <li css={[styles.listItemSlim, styles.disabled]}>
-        {/*<div css={styles.disabledItem}>*/}
           <p
             className={'noStyle'}
             css={styles.headlineDisabled}
@@ -32,7 +31,6 @@ export const ListItemSlim = ({
           >
             {preamble}
           </p>
-        {/*</div>*/}
       </li>
     ) : (
       <li css={styles.listItemSlim}>
