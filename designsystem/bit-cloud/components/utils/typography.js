@@ -115,6 +115,7 @@ export const preamble = css`
   margin-bottom: 24px;
   word-break: break-word;
   hyphens: auto;
+  max-width: 744px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
