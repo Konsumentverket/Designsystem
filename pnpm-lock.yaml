@@ -18,8 +18,8 @@ importers:
         specifier: ^7.24.1
         version: 7.24.1(@babel/core@7.24.5)
       '@bitdev/react.react-env':
-        specifier: 2.0.8
-        version: 2.0.8(@babel/core@7.24.5)(@babel/traverse@7.24.5)(@jest/globals@29.7.0)(@types/webpack@4.41.38)(babel-plugin-macros@3.1.0)(jest@29.3.1(@types/node@12.20.4)(babel-plugin-macros@3.1.0))(lightningcss@1.24.1)(rollup@4.17.2)(terser@5.31.0)(type-fest@3.13.1)(webpack-hot-middleware@2.26.1)
+        specifier: 2.0.11
+        version: 2.0.11(@babel/core@7.24.5)(@babel/traverse@7.24.5)(@jest/globals@29.7.0)(@types/webpack@4.41.38)(babel-plugin-macros@3.1.0)(jest@29.3.1(@types/node@12.20.4)(babel-plugin-macros@3.1.0))(lightningcss@1.24.1)(rollup@4.17.2)(terser@5.31.0)(type-fest@3.13.1)(webpack-hot-middleware@2.26.1)
       '@emotion/core':
         specifier: ^10.3.1
         version: 10.3.1(react@18.3.1)
@@ -263,6 +263,9 @@ importers:
       date-fns:
         specifier: ^3.6.0
         version: 3.6.0
+      prop-types:
+        specifier: 15.8.1
+        version: 15.8.1
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -2342,8 +2345,8 @@ packages:
   '@bitdev/react.generators.react-templates@2.0.3':
     resolution: {integrity: sha512-EonB0QjMmVHEF3IIQNkl02vST6c0Sp58zo8xtThNIFWoYUtYNTxUO2BQmq6/9nIdgnLP3dX2XWvqtPsKTvRm5A==}
 
-  '@bitdev/react.react-env@2.0.8':
-    resolution: {integrity: sha512-rP16znMeaNAIqWYR1juYB31Fa/ZrMvChY3pm+zMKih/KTnm0ccjLl+vUrN9Mn6dKfyRaegGOWXaU1oLsYzPvUQ==}
+  '@bitdev/react.react-env@2.0.11':
+    resolution: {integrity: sha512-+0h2miRUWnViWna9aKbdmdVP3XCLXTli8uXnanVfhQLwwFVbJx64iljUJC5CrPGC06aa3+phsyCLqFge6eaQWQ==}
 
   '@bitdev/react.webpack.refresh-overlay@0.0.1':
     resolution: {integrity: sha512-boeDRz1ITRFz1XfiZci+eD3Mu1SRnYA4pBptEXUHEO3TB78Smlr+ugS2ycjW+XEJqwr/x5BI8P9Zx7xupuguDw==}
@@ -4182,8 +4185,8 @@ packages:
       react: ^16.8.0 || ^17.0.0
       react-dom: ^16.8.0 || ^17.0.0
 
-  '@teambit/defender.eslint-linter@1.0.27':
-    resolution: {integrity: sha512-E1Atn03Yv4hpavwy5USj1vDQFd7N7mzY5fecxSPSYVDjz/+es5gG9Y58KXc7I6lyqjzTjcf3PIO1+nyAHarRuA==}
+  '@teambit/defender.eslint-linter@1.0.28':
+    resolution: {integrity: sha512-YNuQEkmfWOZjK1DWoJf2PVlMG/NJEstQyUxndib2o24p1r9uJjdhbb9YDkNxmmVwWb0TDvtFg/hlLDz7VrV/fA==}
     peerDependencies:
       eslint: '> 7.0.0'
 
@@ -4654,8 +4657,11 @@ packages:
     resolution: {integrity: sha512-Y4+aMSOvDm+4kAsNUN7GnXwGc1GyxOtoSHo8qASJDo4JwFeNn43H0oUiexBrQGbc0u0EJi+XHYdlvx/gPWiAsQ==}
     engines: {node: '>=12.22.0'}
 
-  '@teambit/typescript.typescript-compiler@2.0.32':
-    resolution: {integrity: sha512-oLDQaIPBC8PkPPnrw6WlFJE2g5PzXsepEYnZfi97ec2PKkFBGgfUj9reRI9Ez7MArZHS7vfZjRFqucFHQE5S+Q==}
+  '@teambit/typescript.typescript-compiler@2.0.33':
+    resolution: {integrity: sha512-cxY/P4BeUEw7BkyX7Pu0dKCgepA7wrD7cnF1d5kDyAjMANZBDu6ADvNdGdxoO10OIhhShSFdxHjSDhAaW5PRxQ==}
+
+  '@teambit/typescript.typescript-compiler@2.0.34':
+    resolution: {integrity: sha512-cGpjmSf8a/N87fImlGBYqZM94KoToG9yUFSjTtqq0DidPV+9wWp+i5HW9pNjhYX209pZEO6F9rWO1oFiRnybxw==}
 
   '@teambit/ui-foundation.ui.use-box.tab@0.0.115':
     resolution: {integrity: sha1-xN+W1U1vCBqIh69sG4yI6FDqLhM=}
@@ -15029,7 +15035,7 @@ snapshots:
 
   '@bitdev/react.generators.react-templates@2.0.3': {}
 
-  '@bitdev/react.react-env@2.0.8(@babel/core@7.24.5)(@babel/traverse@7.24.5)(@jest/globals@29.7.0)(@types/webpack@4.41.38)(babel-plugin-macros@3.1.0)(jest@29.3.1(@types/node@12.20.4)(babel-plugin-macros@3.1.0))(lightningcss@1.24.1)(rollup@4.17.2)(terser@5.31.0)(type-fest@3.13.1)(webpack-hot-middleware@2.26.1)':
+  '@bitdev/react.react-env@2.0.11(@babel/core@7.24.5)(@babel/traverse@7.24.5)(@jest/globals@29.7.0)(@types/webpack@4.41.38)(babel-plugin-macros@3.1.0)(jest@29.3.1(@types/node@12.20.4)(babel-plugin-macros@3.1.0))(lightningcss@1.24.1)(rollup@4.17.2)(terser@5.31.0)(type-fest@3.13.1)(webpack-hot-middleware@2.26.1)':
     dependencies:
       '@apollo/client': 3.10.1(@types/react@18.2.23)(graphql@16.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@bitdev/react.eslint.eslint-config-bit-react': 1.0.0(eslint-plugin-import@2.29.1(@typescript-eslint/parser@6.19.1(eslint@8.56.0)(typescript@5.4.5))(eslint@8.56.0))(eslint@8.56.0)(typescript@5.4.5)
@@ -15038,7 +15044,7 @@ snapshots:
       '@mdx-js/mdx': 1.6.22
       '@mdx-js/react': 1.6.22(react@18.3.1)
       '@mdx-js/rollup': 3.0.1(rollup@4.17.2)
-      '@teambit/defender.eslint-linter': 1.0.27(eslint@8.56.0)(react-dom@18.3.1(react@18.3.1))
+      '@teambit/defender.eslint-linter': 1.0.28(eslint@8.56.0)(react-dom@18.3.1(react@18.3.1))
       '@teambit/defender.prettier-formatter': 1.0.16(react-dom@18.3.1(react@18.3.1))
       '@teambit/dependencies.modules.packages-excluder': 1.0.8(react@18.3.1)
       '@teambit/docs.docs-template': 1.0.7(@testing-library/react@14.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react-dom@18.3.0)(@types/react@18.2.23)(graphql@16.8.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
@@ -15047,7 +15053,7 @@ snapshots:
       '@teambit/react.jest.react-jest': 1.0.21(@babel/core@7.24.5)(@babel/traverse@7.24.5)(@types/node@20.12.10)(babel-plugin-macros@3.1.0)
       '@teambit/react.mounter': 1.0.6(@types/react@18.2.23)
       '@teambit/toolbox.performance.v8-cache': 0.0.33
-      '@teambit/typescript.typescript-compiler': 2.0.32
+      '@teambit/typescript.typescript-compiler': 2.0.34
       '@teambit/vite.vitest-tester': 0.1.4(@types/node@20.12.10)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.31.0)
       '@testing-library/jest-dom': 6.4.2(@jest/globals@29.7.0)(@types/jest@29.5.12)(jest@29.3.1(@types/node@12.20.4)(babel-plugin-macros@3.1.0))(vitest@1.6.0(@types/node@20.12.10)(jsdom@24.0.0)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.31.0))
       '@testing-library/react': 14.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -15791,6 +15797,7 @@ snapshots:
       '@emotion/core': 10.3.1(react@18.3.1)
       '@konsumentverket-sverige/designsystem.utils': file:designsystem/bit-cloud/components/utils(@emotion/core@10.3.1(react@18.3.1))(date-fns@3.6.0)(react@18.3.1)
       date-fns: 3.6.0
+      prop-types: 15.8.1
       react: 18.3.1
 
   '@konsumentverket-sverige/designsystem.drop-down@file:designsystem/bit-cloud/components/drop-down(@emotion/core@10.3.1(react@18.3.1))(date-fns@3.6.0)(react@18.3.1)':
@@ -18041,12 +18048,12 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@teambit/defender.eslint-linter@1.0.27(eslint@8.56.0)(react-dom@18.3.1(react@18.3.1))':
+  '@teambit/defender.eslint-linter@1.0.28(eslint@8.56.0)(react-dom@18.3.1(react@18.3.1))':
     dependencies:
       '@teambit/bit-error': 0.0.404
       '@teambit/community.ui.content-tabs': 1.0.2(react-dom@18.3.1(react@18.3.1))(react@18.2.0)
       '@teambit/defender.linter-task': 1.0.7
-      '@teambit/typescript.typescript-compiler': 2.0.32
+      '@teambit/typescript.typescript-compiler': 2.0.33
       comment-json: 4.2.3
       eslint: 8.56.0
       fs-extra: 10.1.0
@@ -18907,7 +18914,21 @@ snapshots:
 
   '@teambit/toolbox.performance.v8-cache@0.0.33': {}
 
-  '@teambit/typescript.typescript-compiler@2.0.32':
+  '@teambit/typescript.typescript-compiler@2.0.33':
+    dependencies:
+      '@teambit/bit-error': 0.0.404
+      '@teambit/compilation.compiler-task': 1.0.8
+      comment-json: 4.2.3
+      fs-extra: 11.2.0
+      get-tsconfig: 4.2.0
+      glob: 10.3.12
+      globby: 11.1.0
+      lodash: 4.17.21
+      normalize-path: 3.0.0
+      react: 18.2.0
+      typescript: 5.4.5
+
+  '@teambit/typescript.typescript-compiler@2.0.34':
     dependencies:
       '@teambit/bit-error': 0.0.404
       '@teambit/compilation.compiler-task': 1.0.8

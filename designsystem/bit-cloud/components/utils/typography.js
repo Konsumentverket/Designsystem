@@ -118,7 +118,7 @@ export const preamble = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
   }
 `;
 
