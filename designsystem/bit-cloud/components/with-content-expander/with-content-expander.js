@@ -1,60 +1,58 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import PropTypes from 'prop-types';
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { Arrow } from '@konsumentverket-sverige/designsystem.utils';
+import { ArrowFat } from '@konsumentverket-sverige/designsystem.utils';
+import { EditorIcon } from '@konsumentverket-sverige/designsystem.editor-icon';
 
 import {
-  ComponentWrapperStyle,
-  IconExpandedStyle,
-  IconFullWidth,
-  IconStyle,
-  collapseButtonStyle,
-  baseLinkStyle
+  containerStyle,
+  iconStyle,
+  headerStyle,
+  innerHeaderStyle,
+  innerHeaderTextStyle,
+  titleStyle,
+  preambleStyle,
+  linkStyle,
+  linkStyleExpanded,
+  chevronStyle,
+  chevronExpandedStyle,
+  expandedAreaStyle,
+  expandedAreaExpandedStyle,
 } from "./with-content-expander.css.js";
 
 export const WithContentExpander = ({
   wrappedComponent,
-  linkElement,
-  linkStyle,
-  isFullWidth = true,
-  hasCollapseButton = false,
+  text,
+  preamble,
+  icon,
+  wrapperId,
   show = true,
   scrollIntoView = false,
-  wrapperStyle,
   open = false,
-  wrapperId,
   linkHref = "",
   disabled = false
 }) => {
-
   const [expanded, setExpanded] = useState(open);
-  const [linkElementFontSize, setLinkElementFontSize] = useState("16px");
   const linkContainerRef = useRef();
   const linkRef = useRef();
   const topOfComponent = useRef();
 
-  const doExpansion = e => {
-    if (disabled) {
+  const handleExpansionOnClick = e => {
+    e.stopPropagation();
+    e.preventDefault();
+
+    if (disabled)
       return false;
-    }
 
     setExpanded(!expanded);
-
-    if (e) {
-      e.stopPropagation();
-      e.preventDefault();
-    }
     return false;
   };
 
   useEffect(() => {
     setExpanded(open);
   }, [open]);
-
-  useEffect(() => {
-    setLinkElementFontSize(measureElement(linkContainerRef.current));
-  }, []);
 
   useEffect(() => {
     if (scrollIntoView && topOfComponent.current && expanded) {
@@ -68,82 +66,75 @@ export const WithContentExpander = ({
 
   return (
     <div
-      className={`withContentExpander ${isFullWidth ? "full-width" : null} ${expanded ? "expanded" : null
-        }`}
+      data-comp="with-content-expander"
+      className={`withContentExpander ${expanded ? "expanded" : null}`}
       id={wrapperId}
-      css={[ComponentWrapperStyle, wrapperStyle]}
+      css={containerStyle}
       ref={topOfComponent}
     >
-      <div className="link-element" onClick={e => doExpansion(e)}>
+      <div
+        className="link-element"
+        onClick={e => handleExpansionOnClick(e)}
+      >
         <a
           href={linkHref}
           ref={linkRef}
           onClick={e => e.preventDefault()}
           aria-haspopup="true"
           aria-expanded={expanded ? "true" : "false"}
-          aria-label={linkElement.props.children || ""}
+          aria-label={text}
           className="noStyle accordion"
-          css={[baseLinkStyle, linkStyle]}
+          aria-controls={`${wrapperId}-content`}
+          css={[linkStyle, expanded ? linkStyleExpanded : null]}
         >
-          <div className="link-element-container" ref={linkContainerRef}>
-            {linkElement}
+          <div css={headerStyle} className="link-element-container" ref={linkContainerRef}>
+            <div css={innerHeaderStyle}>
+              {icon && (
+                <EditorIcon icon={icon} css={iconStyle} />
+              )}
+              <div css={innerHeaderTextStyle}>
+                <h3 css={titleStyle}>{text}</h3>
+                {preamble && (<p css={preambleStyle}>{preamble}</p>)}
+              </div>
+            </div>
             {!disabled && (
-              <Arrow
+              <ArrowFat
                 aria-hidden="true"
                 className="expand-icon"
-                style={[
-                  IconStyle(linkElementFontSize),
-                  expanded ? IconExpandedStyle : null,
-                  isFullWidth ? IconFullWidth : null
-                ]}
+                style={[chevronStyle, expanded ? chevronExpandedStyle : null]}
               />
             )}
           </div>
         </a>
       </div>
       <div
-        className={`expand-section ${expanded && "expanded"} ${disabled &&
-          "expanded"}`}
+        id={`${wrapperId}-content`}
+        css={[expandedAreaStyle, expanded ? expandedAreaExpandedStyle : null]}
+        className={`expand-section ${expanded ? "expanded" : null} ${disabled ? "expanded" : ''}`}
       >
         {wrappedComponent}
-        {hasCollapseButton && !disabled && (
-          <div
-            tabIndex="0"
-            onClick={e => {
-              const DOMNode = ReactDOM.findDOMNode(linkRef.current);
-              DOMNode.scrollIntoView({ behavior: "smooth", block: "center" });
-              doExpansion(e);
-              DOMNode.focus({ preventScroll: true });
-            }}
-            onKeyDown={e => {
-              if (e.key === "Enter") {
-                const DOMNode = ReactDOM.findDOMNode(linkRef.current);
-                DOMNode.scrollIntoView({ behavior: "smooth", block: "center" });
-                doExpansion(e);
-                DOMNode.focus({ preventScroll: true });
-              }
-            }}
-            css={collapseButtonStyle}
-          >
-            Fäll ihop <Arrow />
-          </div>
-        )}
       </div>
     </div>
   );
 };
 
-const measureElement = element => {
-  const DOMNode = ReactDOM.findDOMNode(element);
-  return (
-    DOMNode &&
-    DOMNode.childNodes[0] &&
-    window
-      .getComputedStyle(
-        DOMNode.querySelectorAll("h1, h2, h3, h4, h5, h6")[0] ||
-        DOMNode.childNodes[0],
-        null
-      )
-      .getPropertyValue("line-height")
-  );
-};
+WithContentExpander.propTypes = {
+  text: PropTypes.string,
+  preamble: PropTypes.string,
+  icon: PropTypes.string,
+  wrapperId: PropTypes.string,
+  linkHref: PropTypes.string,
+  show: PropTypes.bool,
+  scrollIntoView: PropTypes.bool,
+  open: PropTypes.bool,
+  disabled: PropTypes.bool,
+  wrappedComponent: PropTypes.any,
+}
+
+WithContentExpander.defaultProps = {
+  show: true,
+  scrollIntoView: false,
+  open: false,
+  linkHref: "",
+  disabled: false
+}

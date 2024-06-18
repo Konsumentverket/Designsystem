@@ -4,17 +4,24 @@ description: A WithContentExpander component.
 
 import { WithContentExpander } from './with-content-expander';
 
+### Component identifier
+```js
+data-comp="with-content-expander"
+```
+
 ## Basic usage
 
-Use the text area component:
+Use the WithContentExpander component:
 
 ```js
-<WithContentExpander />
+<WithContentExpander {...data} />
 ```
 
 ```js live
 <WithContentExpander
-    linkElement={<span>Lorem ipsum</span>}
+    text="Lorem ipsum"
+    icon="Auction"
+    preamble="Lorem ipsum"
     wrappedComponent={<p>Lorem ipsum</p>}
 />
 ```

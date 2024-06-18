@@ -1,252 +1,128 @@
 import { css } from "@emotion/core";
-import { colors, spacing, medium, small } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, spacing, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
-export const grayContentExpanderWrapper = css`
-    background-color: ${colors.theme3.xLight};
-    border-radius: 0.5rem;
+export const containerStyle = css`
+  width: 100%;
+  border-radius: ${spacing.s};
+  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
+`;
 
-    :focus-within {
-      .tabnav &{
-          outline: .2rem solid ${colors.states.focus};
-          outline-offset: .2rem;
-      }
-    }
+export const headerStyle = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: ${spacing.s};
 
-    > .withContentExpander {
-      .full-width {
-          border: 2px solid transparent;
-          &.expanded,:hover{
-              border: .2rem solid ${colors.theme1.mid};
-          }
-      }
-
-      > .link-element { 
-          margin-bottom: 0rem!important;
-          a{
-              padding: 2.4rem;
-              box-sizing: border-box;
-              &:hover {
-                  text-decoration: underline;
-                  background-color: inherit;
-                  cursor: pointer;
-              }
-              &[aria-expanded="true"] {
-                  h2,h3,h4{
-                      text-decoration: underline!important;
-                  }
-              }
-          }
-      }
-      > .expand-section{
-          padding: 0 2.4rem;
-      }
-    }
-
-`
-
-export const grayFocusedOnExpansionWrapper = css`
-
-  > .expanded > .link-element {
-    background-color: ${colors.theme3.light};
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    &:hover {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-  }
-  > div > .link-element {
-    border-radius: ${spacing.xs};
-    background-color: ${colors.theme3.xLight};
-    margin-bottom: 0rem!important;
-    border: 2px solid transparent;
-    &:hover {
-      border: .2rem solid ${colors.theme1.mid};
-      border-radius: ${spacing.xs};
-      background-color: ${colors.theme1.light};
-    }
-    a{
-        margin: 0 1px 1px 1px;
-        padding: ${spacing.s} ${spacing.xs};
-        ${medium} {
-          padding: ${spacing.s} ${spacing.m};
-        }
-        box-sizing: border-box;
-        &:hover {
-            text-decoration: underline;
-            cursor: pointer;
-        }
-        &[aria-expanded="true"] {
-            h2,h3,h4{
-                text-decoration: underline!important;
-            }
-        }
-    }
-  }
-  > div > .expand-section {
-      background-color: ${colors.common.white};
-      border: 2px solid transparent;
-      padding: ${spacing.s} ${spacing.xs} ${spacing.m} ${spacing.xs};
-      ${medium} {
-        padding: ${spacing.s} ${spacing.m} ${spacing.m} ${spacing.m};
-      }
-      position: fixed;
-  }
-  > div > .expand-section.expanded {
-    border: 2px solid ${colors.theme3.light};
-    border-bottom-left-radius: ${spacing.xs};
-    border-bottom-right-radius: ${spacing.xs};
-    border-top: none;
-    position: relative;
-    > div {
-      margin-top: 0;
-    }
-  }
-
-`
-
-export const ComponentWrapperStyle = css`
-
-  &.full-width > .link-element a {
-    display: block;
-  }
-
-  > .link-element a {
-
-    .link-element-container {
-
-        h1, h2, h3, h4 {
-            white-space: pre-line;
-            margin-bottom: 0;
-        }
-
-        display: flex;
-        align-items: center;
-
-    }
-
-    font-weight: 600;
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    position: relative;
-    ${small} {
-      width: 100%;
-    }
-
-    svg {
-      font-size: inherit;
-      vertical-align: middle;
-      fill: ${colors.theme1.mid};
-      flex-shrink: 0;
-    }
-  }
-
-  .expand-section {
-    max-height: 0;
-    overflow: hidden;
-    height: auto;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-
-    &.expanded {
-      max-height: 100%;
-      overflow: visible;
-      -ms-overflow-style: none;
-      overflow: -moz-scrollbars-none;
-      &::-webkit-scrollbar{
-        display:none;
-      }
-    }
-    &:not(.expanded) {
-      visibility: hidden;
-      display: none;
-
-    }
+  @media (min-width: ${breakpoints.m}) {
+    padding: ${spacing.m};
   }
 `;
 
-export const IconStyle = fontSize => css`
-    transition: transform .2s ease-out;
-    width: ${fontSize};
-    height: ${fontSize};
-    margin-left: .5rem;
-    display:flex;
-    ${medium} {
-        margin-left: 1rem;
-    }
-`
-
-export const IconExpandedStyle = css`
-  transform: rotate(180deg);
+export const innerHeaderStyle = css`
+  display: flex;
+  align-items: center;
 `;
-export const IconFullWidth = css`
-    margin-left:auto!important;
-`
 
-export const collapseButtonStyle = css`
-  margin-top: ${spacing.xs};
-  position: relative;
+export const innerHeaderTextStyle = css`
+  display: block;
+  margin-right: ${spacing.s};
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-right: ${spacing.m};
+  }
+`;
+
+export const iconStyle = css`
+  fill: ${newColors.primaries.fullBlue};
+  margin-right: ${spacing.s};
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-right: ${spacing.m};
+  }
+`;
+
+export const titleStyle = css`
+  color: ${newColors.primaries.fullBlue};
   font-size: 1.6rem;
-  line-height: 2.4rem;
-  padding: 0.8rem 4rem 0.8rem 1.6rem;
-  border: solid 1px ${colors.theme1.mid};
-  color: ${colors.theme1.mid};
-  border-radius: 3.2rem;
-  transition: visibility 0.1s, opacity 0.1s ease-in-out;
-  font-weight: 700;
-  margin-bottom: 1.6rem;
-  margin-left:auto;
-  align-self: center;
+  line-height: 1.5;
+  font-weight: 500;
 
-  cursor: pointer;
-
-  .expanded > & {
-    visibility: visible;
-    display:block;
-    opacity: 1;
-  }
-
-  &:hover {
-    text-decoration: underline;
-    background-color: ${colors.theme1.midLight};
-    border-color: ${colors.theme1.xDark};
-  }
-
-  &:active {
-    text-decoration: underline;
-    color: #fff;
-    background-color: ${colors.theme1.xDark};
-    border-color: ${colors.theme1.xDark};
-    svg {
-      fill: #fff;
-    }
-  }
-
-  > svg {
-    transform: rotate(180deg);
-    height: 1.6rem;
-    fill: ${colors.theme1.mid};
-    height: 1.6rem;
-    position: absolute;
-    width: 1.6rem;
-    top: 1.2rem;
-    right: 1.6rem;
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2.4rem;
   }
 `;
 
-export const baseLinkStyle = css`
-  color: ${colors.theme1.mid};
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: ${colors.theme1.mid};
+export const preambleStyle = css`
+  color: ${newColors.kovBlack};
+  line-height: 1.25;
+  font-size: 1.6rem;
+  margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 1.8rem;
   }
+`;
+
+export const linkStyle = css`
+  position: relative;
+  display: block;
+  text-decoration: none;
+  background-color: ${newColors.kovWhite};
+  border-radius: ${spacing.s};
+
   &:hover {
-    text-decoration: underline !important;
+    background-color: ${newColors.shades.lightBlue};
+    box-shadow: inset 0 0 0 1px ${newColors.shades.mediumBlue};
+  }
+`;
+
+export const linkStyleExpanded = css`
+  border-radius: 0;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: ${spacing.s};
+    display: block;
+    height: 1px;
+    width: calc(100% - (${spacing.s} * 2));
+    background-color: ${newColors.shades.mediumBlue};
+
+    @media (min-width: ${breakpoints.m}) {
+      left: ${spacing.m};
+      width: calc(100% - (${spacing.m} * 2));
+    }
+  }
+
+  &:hover {
+    border-radius: ${spacing.s} ${spacing.s} 0 0;
+    box-shadow: inset 0 0 0 1px ${newColors.shades.mediumBlue};
+  }
+
+`;
+
+export const chevronStyle = css`
+  fill: ${newColors.primaries.fullBlue};
+  transform: rotate(90deg);
+`;
+
+export const chevronExpandedStyle = css`
+  transform: rotate(-90deg);
+`;
+
+export const expandedAreaStyle = css`
+  background-color: ${newColors.kovWhite};
+  overflow: hidden;
+  padding: 0;
+  height: 0;
+`;
+
+export const expandedAreaExpandedStyle = css`
+  padding: ${spacing.s};
+  height: auto;
+
+  @media (min-width: ${breakpoints.m}) {
+    padding: ${spacing.m};
   }
 `;
