@@ -3,16 +3,14 @@ import { spacing, small, newColors, breakpoints } from '@konsumentverket-sverige
 
 export const iconStyle = css`
     svg {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 4.8rem;
+        height: 4.8rem;
         position: relative;
         flex-shrink: 0;
 
         @media (min-width: ${breakpoints.m}) {
           width: 5.6rem;
           height: 5.6rem;
-          padding: 1.2rem;
-
         }
     }
 `
@@ -21,7 +19,8 @@ export const iconStyle = css`
 export const buttonStyle = css`
     display: flex;
     width: 100%;
-    padding: ${spacing.s};
+    max-width: 100%;
+    padding: ${spacing.xs};
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
@@ -36,6 +35,7 @@ export const buttonStyle = css`
     border-bottom: 1px solid ${newColors.shades.kovBlue50};
 
     @media (min-width: ${breakpoints.m}) {
+      padding: ${spacing.s};
       border-bottom: 2px solid ${newColors.shades.kovBlue50};
       width: 44.4rem;
       font-size: 1.8rem;
