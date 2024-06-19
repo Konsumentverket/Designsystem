@@ -8,17 +8,22 @@ import { EditorIcon } from '@konsumentverket-sverige/designsystem.editor-icon';
 
 import {
   containerStyle,
+  containerAlternativeStyle,
   iconStyle,
   headerStyle,
   innerHeaderStyle,
   innerHeaderTextStyle,
   titleStyle,
+  titleAlternativeStyle,
   preambleStyle,
   linkStyle,
+  linkAlternativeStyle,
   linkStyleExpanded,
+  linkStyleAlternativeExpanded,
   chevronStyle,
   chevronExpandedStyle,
   expandedAreaStyle,
+  expandedAreaAlternativeStyle,
   expandedAreaExpandedStyle,
 } from "./with-content-expander.css.js";
 
@@ -32,7 +37,8 @@ export const WithContentExpander = ({
   scrollIntoView = false,
   open = false,
   linkHref = "",
-  disabled = false
+  disabled = false,
+  useAlternativeStyling = false,
 }) => {
   const [expanded, setExpanded] = useState(open);
   const linkContainerRef = useRef();
@@ -69,7 +75,10 @@ export const WithContentExpander = ({
       data-comp="with-content-expander"
       className={`withContentExpander ${expanded ? "expanded" : null}`}
       id={wrapperId}
-      css={containerStyle}
+      css={[
+        containerStyle,
+        useAlternativeStyling ? containerAlternativeStyle : null
+      ]}
       ref={topOfComponent}
     >
       <div
@@ -85,7 +94,12 @@ export const WithContentExpander = ({
           aria-label={text}
           className="noStyle accordion"
           aria-controls={`${wrapperId}-content`}
-          css={[linkStyle, expanded ? linkStyleExpanded : null]}
+          css={[
+            linkStyle,
+            expanded ? linkStyleExpanded : null,
+            useAlternativeStyling && expanded ? linkStyleAlternativeExpanded : null,
+            useAlternativeStyling ? linkAlternativeStyle : null,
+          ]}
         >
           <div css={headerStyle} className="link-element-container" ref={linkContainerRef}>
             <div css={innerHeaderStyle}>
@@ -93,7 +107,12 @@ export const WithContentExpander = ({
                 <EditorIcon icon={icon} css={iconStyle} />
               )}
               <div css={innerHeaderTextStyle}>
-                <h3 css={titleStyle}>{text}</h3>
+                <h3 css={[
+                  titleStyle,
+                  useAlternativeStyling ? titleAlternativeStyle : null
+                ]}>
+                  {text}
+                </h3>
                 {preamble && (<p css={preambleStyle}>{preamble}</p>)}
               </div>
             </div>
@@ -109,7 +128,11 @@ export const WithContentExpander = ({
       </div>
       <div
         id={`${wrapperId}-content`}
-        css={[expandedAreaStyle, expanded ? expandedAreaExpandedStyle : null]}
+        css={[
+          expandedAreaStyle, 
+          expanded ? expandedAreaExpandedStyle : null,
+          expanded && useAlternativeStyling ? expandedAreaAlternativeStyle : null,
+        ]}
         className={`expand-section ${expanded ? "expanded" : null} ${disabled ? "expanded" : ''}`}
       >
         {wrappedComponent}
@@ -129,6 +152,7 @@ WithContentExpander.propTypes = {
   open: PropTypes.bool,
   disabled: PropTypes.bool,
   wrappedComponent: PropTypes.any,
+  useAlternativeStyling: PropTypes.any,
 }
 
 WithContentExpander.defaultProps = {
@@ -136,5 +160,6 @@ WithContentExpander.defaultProps = {
   scrollIntoView: false,
   open: false,
   linkHref: "",
-  disabled: false
+  disabled: false,
+  useAlternativeStyling: false,
 }

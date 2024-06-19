@@ -5,6 +5,11 @@ export const containerStyle = css`
   width: 100%;
   border-radius: ${spacing.s};
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
+  overflow: hidden;
+`;
+
+export const containerAlternativeStyle = css`
+    box-shadow: inset 0 0 0 1px ${newColors.secondaries.lightGrey};
 `;
 
 export const headerStyle = css`
@@ -35,6 +40,7 @@ export const innerHeaderTextStyle = css`
 export const iconStyle = css`
   fill: ${newColors.primaries.fullBlue};
   margin-right: ${spacing.s};
+  flex-shrink: 0;
 
   @media (min-width: ${breakpoints.m}) {
     margin-right: ${spacing.m};
@@ -49,6 +55,12 @@ export const titleStyle = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
+  }
+`;
+
+export const titleAlternativeStyle = css`
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 1.8rem;
   }
 `;
 
@@ -76,6 +88,20 @@ export const linkStyle = css`
   }
 `;
 
+export const linkAlternativeStyle = css`
+  border-radius: ${spacing.s};
+  background-color: ${newColors.shades.lightGrey25};
+  border-top: 1px solid ${newColors.secondaries.mediumGrey};
+  border-right: 1px solid ${newColors.secondaries.mediumGrey};
+  border-bottom: 1px solid ${newColors.secondaries.mediumGrey};
+  border-left: 1px solid ${newColors.secondaries.mediumGrey};
+
+  &:hover {
+    background-color: ${newColors.shades.lightGrey50};
+    box-shadow: none;
+  }
+`
+
 export const linkStyleExpanded = css`
   border-radius: 0;
 
@@ -99,7 +125,22 @@ export const linkStyleExpanded = css`
     border-radius: ${spacing.s} ${spacing.s} 0 0;
     box-shadow: inset 0 0 0 1px ${newColors.shades.mediumBlue};
   }
+`;
 
+export const linkStyleAlternativeExpanded = css`  
+  border-radius: ${spacing.s} ${spacing.s} 0 0 !important;
+  border-bottom: 0 !important;
+
+  &:after {
+    background-color: ${newColors.secondaries.mediumGrey};
+  }
+
+  &:hover {
+    &:after {
+      
+    background-color: transparent;
+    }
+  }
 `;
 
 export const chevronStyle = css`
@@ -118,9 +159,16 @@ export const expandedAreaStyle = css`
   height: 0;
 `;
 
+export const expandedAreaAlternativeStyle = css`
+  background-color: ${newColors.shades.lightGrey25};
+`;
+
 export const expandedAreaExpandedStyle = css`
   padding: ${spacing.s};
   height: auto;
+  border: 1px solid ${newColors.secondaries.mediumGrey};
+  border-top: 0;
+  border-radius: 0 0 ${spacing.s} ${spacing.s};
 
   @media (min-width: ${breakpoints.m}) {
     padding: ${spacing.m};
