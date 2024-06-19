@@ -137,8 +137,8 @@ export const linkStyleAlternativeExpanded = css`
 
   &:hover {
     &:after {
-      
-    background-color: transparent;
+      left: 0;
+      width: 100%;
     }
   }
 `;
@@ -161,13 +161,13 @@ export const expandedAreaStyle = css`
 
 export const expandedAreaAlternativeStyle = css`
   background-color: ${newColors.shades.lightGrey25};
+  border: 1px solid ${newColors.secondaries.mediumGrey};
+  border-top: 0;
 `;
 
 export const expandedAreaExpandedStyle = css`
   padding: ${spacing.s};
   height: auto;
-  border: 1px solid ${newColors.secondaries.mediumGrey};
-  border-top: 0;
   border-radius: 0 0 ${spacing.s} ${spacing.s};
 
   @media (min-width: ${breakpoints.m}) {
