@@ -11,16 +11,14 @@ import * as typography from "./typography.js";
 import { Adapt } from "./Icons/SystemIcons/Adapt/Adapt.js"
 import { ChevronRight } from "./Icons/SystemIcons/ChevronRight/ChevronRight.js";
 import { ChevronLeft } from "./Icons/SystemIcons/ChevronLeft/ChevronLeft.js";
-import { Easytoread } from "./Icons/SystemIcons/Easytoread/Easytoread.js";
-import { Search } from "./Icons/SystemIcons/Search/Search.js";
-import { SignLanguage } from "./Icons/SystemIcons/SignLanguage/SignLanguage.js";
+import { MonoEasyToRead } from "./Icons/SystemIcons/MonoEasyToRead/MonoEasyToRead.js";
+import { MonoSigning } from "./Icons/SystemIcons/MonoSigning/MonoSigning.js";
 import { Volume } from "./Icons/SystemIcons/Volume/Volume.js";
-import { Otherlang } from "./Icons/SystemIcons/Otherlang/Otherlang.js";
-import { Ear} from "./Icons/SystemIcons/Ear/Ear.js";
+import { MonoGlobe } from "./Icons/SystemIcons/MonoGlobe/MonoGlobe.js";
+import { MonoListen } from "./Icons/SystemIcons/MonoListen/MonoListen.js";
 import { Ecc } from "./Icons/SystemIcons/Ecc/Ecc.js";
 import { Arrow, arrowPath } from './Icons/SystemIcons/Arrow/Arrow.js';
 import { ArrowFat } from './Icons/SystemIcons/ArrowFat/ArrowFat.js';
-import { Burger } from "./Icons/SystemIcons/Burger/Burger.js";
 import { External } from "./Icons/SystemIcons/External/External.js";
 import { Exclamationmark } from "./Icons/SystemIcons/Exclamationmark/Exclamationmark.js";
 import { Check, checkPath } from "./Icons/SystemIcons/Check/Check.js";
@@ -46,7 +44,7 @@ import { CallCenter } from "./Icons/SystemIcons/CallCenter/CallCenter.js";
 import { HomeDelivery } from "./Icons/SystemIcons/HomeDelivery/HomeDelivery.js";
 import { Online } from "./Icons/SystemIcons/Online/Online.js";
 import { Send } from "./Icons/SystemIcons/Send/Send.js";
-import { Settings} from "./Icons/SystemIcons/Settings/Settings.js";
+import { MonoSettings} from "./Icons/SystemIcons/MonoSettings/MonoSettings.js";
 import { Logo } from "./Icons/SystemIcons/Logo/Logo.js"
 import { MegamenuCompany } from "./Icons/SystemIcons/MegamenuCompany/MegamenuCompany.js";
 
@@ -102,6 +100,8 @@ import { MonoArrowSmall } from "./Icons/SystemIcons/MonoArrowSmall/MonoArrowSmal
 import { TempIcon } from "./Icons/EditorIcons/TempIcon/TempIcon.js";
 import { MonoDelete } from "./Icons/SystemIcons/MonoDelete/MonoDelete.js";
 import { MonoDeleteSmall } from "./Icons/SystemIcons/MonoDeleteSmall/MonoDeleteSmall.js";
+import { MonoSearch } from "./Icons/SystemIcons/MonoSearch/MonoSearch";
+import { MonoMenuThin } from "./Icons/SystemIcons/MonoMenuThin/MonoMenuThin";
 
 export {
 
@@ -122,17 +122,14 @@ export {
     Adapt,
     ChevronRight,
     ChevronLeft,
-    Easytoread,
-    Search,
-    SignLanguage,
+    MonoSigning,
     Volume,
-    Otherlang,
-    Ear,
+    MonoGlobe,
+    MonoListen,
     Ecc,
     Arrow,
     arrowPath,
     ArrowFat,
-    Burger,
     External,
     Exclamationmark,
     Check,
@@ -160,11 +157,15 @@ export {
     Online,
     Send,
     MegamenuCompany,
-    Settings,
+    MonoSettings,
     Logo,
     MonoArrowSmall,
     MonoDelete,
     MonoDeleteSmall,
+    MonoSearch,
+    MonoMenuThin,
+    MonoEasyToRead,
+
 
     // System icons
 
