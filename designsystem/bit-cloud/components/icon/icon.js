@@ -45,6 +45,8 @@ import {
   Logo,
   MegamenuCompany,
   MonoArrowSmall,
+  MonoDelete,
+  MonoDeleteSmall,
 
   // Editor Icons
 
@@ -102,7 +104,6 @@ const systemIconDefinitions = {
   Adapt,
   ChevronRight,
   ChevronLeft,
-  Close,
   Ear,
   Easytoread,
   External,
@@ -141,7 +142,9 @@ const systemIconDefinitions = {
   MegamenuCompany,
   Settings,
   Logo,
-  MonoArrowSmall
+  MonoArrowSmall,
+  MonoDelete,
+  MonoDeleteSmall,
 };
 
 const editorIconDefinitions = {

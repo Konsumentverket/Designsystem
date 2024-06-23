@@ -11,7 +11,6 @@ import * as typography from "./typography.js";
 import { Adapt } from "./Icons/SystemIcons/Adapt/Adapt.js"
 import { ChevronRight } from "./Icons/SystemIcons/ChevronRight/ChevronRight.js";
 import { ChevronLeft } from "./Icons/SystemIcons/ChevronLeft/ChevronLeft.js";
-import { Close } from "./Icons/SystemIcons/Close/Close.js";
 import { Easytoread } from "./Icons/SystemIcons/Easytoread/Easytoread.js";
 import { Search } from "./Icons/SystemIcons/Search/Search.js";
 import { SignLanguage } from "./Icons/SystemIcons/SignLanguage/SignLanguage.js";
@@ -101,6 +100,8 @@ import { HandHeart } from "./Icons/EditorIcons/HandHeart/HandHeart.js";
 import { Snowboarding } from "./Icons/EditorIcons/Snowboarding/Snowboarding.js";
 import { MonoArrowSmall } from "./Icons/SystemIcons/MonoArrowSmall/MonoArrowSmall.js";
 import { TempIcon } from "./Icons/EditorIcons/TempIcon/TempIcon.js";
+import { MonoDelete } from "./Icons/SystemIcons/MonoDelete/MonoDelete.js";
+import { MonoDeleteSmall } from "./Icons/SystemIcons/MonoDeleteSmall/MonoDeleteSmall.js";
 
 export {
 
@@ -121,7 +122,6 @@ export {
     Adapt,
     ChevronRight,
     ChevronLeft,
-    Close,
     Easytoread,
     Search,
     SignLanguage,
@@ -163,6 +163,8 @@ export {
     Settings,
     Logo,
     MonoArrowSmall,
+    MonoDelete,
+    MonoDeleteSmall,
 
     // System icons
 
