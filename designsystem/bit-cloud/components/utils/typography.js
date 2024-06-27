@@ -10,6 +10,7 @@ const baseHeading = css`
   position: relative;
   word-break: break-word;
   hyphens: auto;
+  margin-bottom: 16px;
 `;
 
 export const h1 = css`
@@ -20,10 +21,11 @@ export const h1 = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 5rem;
+    margin-bottom: 24px;
   }
 `;
 
-const headingLine = css`
+export const headingLine = css`
   &::before {
     content: "";
     position: absolute;
@@ -99,9 +101,11 @@ export const preamble = css`
   word-break: break-word;
   hyphens: auto;
   max-width: 744px;
+  margin-bottom: 16px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
+    margin-bottom: 24px;
   }
 `;
 

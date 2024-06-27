@@ -1,5 +1,5 @@
 import {css} from '@emotion/core';
-import {medium} from '@konsumentverket-sverige/designsystem.utils';
+import {typography} from '@konsumentverket-sverige/designsystem.utils';
 
 
 export const commonSubHeadingStyle = css`
@@ -8,46 +8,28 @@ export const commonSubHeadingStyle = css`
 `
 
 export const h1Style = css`
-  font-size: 3.2rem;
-  line-height: 3.84rem;
-
-  ${medium} {
-    font-size: 5rem;
-    line-height: 6rem;
-  }
+  ${typography.h1};
 `
 
 export const h2Style = css`
-  font-size: 2.6rem;
-  line-height: 3.38rem;
-
-  ${medium} {
-    font-size: 2.8rem;
-    line-height: 3.64rem;
-  }
+  ${typography.h2};
 `
 
 export const h3Style = css`
-  font-size: 2.2rem;
-  line-height: 2.86rem;
-
-  ${medium} {
-    font-size: 2.4rem;
-    line-height: 3.12rem;
-  }
-
+  ${typography.h3};
 `
 export const h4Style = css`
-  font-size: 2rem;
-  line-height: 2.8rem;
+  ${typography.subHeading};
 `
 
 export const h5Style = css`
-  font-size: 2rem;
-  line-height: 2.8rem;
+  ${typography.subHeading};
 `
 
 export const h6Style = css`
-  font-size: 2rem;
-  line-height: 2.8rem;
+  ${typography.subHeading};
 `
+
+export const headingLineStyle = css`
+  ${typography.headingLine};
+`;

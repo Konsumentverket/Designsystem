@@ -1,9 +1,15 @@
-import React from 'react';;
+import React from 'react';
+
+;
 import 'date-fns';
-import { SubHeading } from './sub-heading.js';
+import {SubHeading} from './sub-heading.js';
+import {globalStyles as GlobalStyles} from "@konsumentverket-sverige/designsystem.utils";
 
 export const BasicSubHeading = () => {
   return (
-    <SubHeading text="Lorem ipsum" />
+    <CompositionFonts>
+      <GlobalStyles/>
+      <SubHeading text="Lorem ipsum"/>
+    </CompositionFonts>
   );
 }
