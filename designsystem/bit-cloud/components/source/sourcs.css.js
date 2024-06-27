@@ -13,15 +13,12 @@ export const sourceStyle = css`
         line-height: ${spacing.l};
         margin-right: ${spacing.s};
     }
-    background-color: ${colors.theme1.light};
 
     ${medium} {
         p > a {
             margin-bottom: 0;
         }
     }
-    margin-bottom: ${spacing.s};
-    border-radius: ${spacing.xs};
 `;
 
 export const firstRow = css`
@@ -101,7 +98,7 @@ export const rightAlign = css`
 export const sourceLink = css`
     svg {
         position: relative;
-        top: 1px;        
+        top: 1px;
         left: 8px;
     }
 `
