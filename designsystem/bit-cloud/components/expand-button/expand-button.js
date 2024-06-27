@@ -1,36 +1,33 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { expandButtonStyle, secondaryStyle, smallStyle, iconStyle, expandedIconStyle } from './expand-button.css.js';
-import { Arrow } from '@konsumentverket-sverige/designsystem.utils';
+import {
+  expandButtonStyle,
+  iconStyle,
+  disabledIconStyle,
+  expandedIconStyle,
+} from './expand-button.css.js';
 
 export const ExpandButton = ({
   text,
-  secondaryButtonStyle = false,
-  small = false,
-  expanded = false,
   className,
   id,
   disabled,
-  style,
-  onClick
+  onClick,
+  expanded = false,
 }) => {
-
-  var styles = [expandButtonStyle];
-
-  secondaryButtonStyle && styles.push(secondaryStyle);
-  small && styles.push(smallStyle)
-  style && styles.push(style)
-
   return <button
     id={id}
-    css={styles}
+    css={expandButtonStyle}
     className={className}
     disabled={disabled}
     aria-expanded={expanded ? "true" : "false"}
     onClick={onClick}
   >
     <span>{text}</span>
-    <Arrow aria-hidden="true" style={[iconStyle, expanded && expandedIconStyle]} />
+    <Chevron style={[iconStyle, expanded && expandedIconStyle, disabled && disabledIconStyle]} />
   </button>;
 }
 
+const Chevron = ({ style }) => (
+  <svg css={style} aria-hidden="true" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M8 15 0 7V5l2-2h2l5 6 5-6h2l2 2v2l-8 8H8Z" /></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v18H0z" /></clipPath></defs></svg>
+)
