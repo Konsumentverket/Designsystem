@@ -199,6 +199,33 @@ export const link = css`
   }
 `;
 
+export const linkMini = css`
+  ${link};
+  font-size: 1.2rem;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 1.4rem;
+  }
+`;
+
+export const linkSmall = css`
+  ${link};
+  font-size: 1.4rem;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 1.6rem;
+  }
+`;
+
+export const linkLarge = css`
+  ${link};
+  font-size: 2rem;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2.4rem;
+  }
+`;
+
 export const clickHover = css`
   text-decoration: underline;
 `;

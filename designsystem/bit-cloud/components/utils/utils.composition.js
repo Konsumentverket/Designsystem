@@ -30,7 +30,10 @@ import {
   textSmallAlt,
   textMini,
   textMiniAlt,
+  linkMini,
+  linkSmall,
   link,
+  linkLarge,
   linkHover,
   linkFocus,
   clickHover,
@@ -88,17 +91,30 @@ export const typography = () => {
         <p css={textMiniAlt}>TextMiniAlt<br/>{text}</p>
         <div style={sectionTitle}>Anchor links</div>
         <div style={{display: 'grid', gap: '20px', marginBottom: '36px', gridTemplateColumns: '1fr 1fr 1fr'}}>
-          <div>
+          <div style={{display: 'flex', flexDirection: 'column'}}>
             <p>Default</p>
-            <a css={link} className={'noStyle'} href="#">Link</a>
+            <a css={linkMini} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link
+              Mini</a>
+            <a css={linkSmall} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link
+              Small</a>
+            <a css={link} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
+               href="#">Link</a>
+            <a css={linkLarge} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link
+              Large</a>
           </div>
-          <div>
+          <div style={{display: 'flex', flexDirection: 'column'}}>
             <p>Hover/Active</p>
-            <a css={[link, linkHover]} className={'noStyle'} href="#">Link</a>
+            <a css={[linkMini, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
+            <a css={[linkSmall, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
+            <a css={[link, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link</a>
+            <a css={[linkLarge, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
           </div>
-          <div>
+          <div style={{display: 'flex', flexDirection: 'column'}}>
             <p>Focus</p>
-            <a css={[link, linkFocus]} className={'noStyle'} href="#">Link</a>
+            <a css={[linkMini, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
+            <a css={[linkSmall, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
+            <a css={[link, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link</a>
+            <a css={[linkLarge, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
           </div>
         </div>
         <div style={sectionTitle}>Simple buttons</div>
