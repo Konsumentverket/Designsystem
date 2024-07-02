@@ -116,10 +116,12 @@ export const paragraph = css`
   line-height: 150%;
   word-break: break-word;
   hyphens: auto;
+  margin-bottom: 14px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2rem;
     line-height: 145%;
+    margin-bottom: 16px;
   }
 `;
 
@@ -332,6 +334,8 @@ const baseSubHeadingAlt = css`
   color: ${newColors.kovBlack} !important;
   font-style: normal;
   font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 8px;
 `;
 
 export const subHeadingAltBig = css`

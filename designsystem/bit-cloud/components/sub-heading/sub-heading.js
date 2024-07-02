@@ -32,13 +32,6 @@ export const SubHeading = ({
 
   const SelectedHeading = headings[level - 1] || 'h2';
   const selectedStyling = styling[styleLevel ? styleLevel - 1 : level - 1];
-  const testStyleLevel = styleLevel ? true : false;
-  console.log("testStyleLevel: ", testStyleLevel)
-  if(styleLevel){
-    console.log("text: ", text)
-    console.log("styleLevel: ", styleLevel)
-    console.log("richtext: ", richText)
-  }
 
   return (
     <SelectedHeading css={[selectedStyling, headingLine ? headingLineStyle : null]} >
