@@ -18,9 +18,11 @@ export const h1 = css`
 
   font-size: 3.2rem;
   line-height: 120%;
+  margin-top: 24px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 5rem;
+    margin-top: 40px;
   }
 `;
 
@@ -50,10 +52,12 @@ export const h2 = css`
 
   font-size: 2.6rem;
   line-height: 130%;
+  margin-top: 16px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.8rem;
     line-height: 140%;
+    margin-top: 32px;
   }
 `;
 
@@ -67,10 +71,12 @@ export const h3 = css`
 
   font-size: 2.2rem;
   line-height: 130%;
+  margin-top: 16px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
     line-height: 150%;
+    margin-top: 24px;
   }
 `;
 
@@ -84,6 +90,12 @@ export const subHeading = css`
   color: ${newColors.kovBlack};
   font-size: 2rem;
   line-height: 140%;
+  margin-top: 14px;
+  margin-bottom: 8px;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-top: 16px;
+  }
 `;
 
 export const subHeadingLine = css`
@@ -334,32 +346,35 @@ const baseSubHeadingAlt = css`
   color: ${newColors.kovBlack} !important;
   font-style: normal;
   font-weight: 700;
-  margin-top: 16px;
   margin-bottom: 8px;
 `;
 
 export const subHeadingAltBig = css`
   ${baseSubHeadingAlt};
   font-size: 2.8rem;
-  line-height: 120% /* 33.6px */
+  line-height: 120%; /* 33.6px */
+  margin-top: 32px;
 `;
 
 export const subHeadingAltMedium = css`
   ${baseSubHeadingAlt};
   font-size: 2.4rem;
-  line-height: 150% /* 36px */
+  line-height: 150%; /* 36px */
+  margin-top: 24px;
 `;
 
 export const subHeadingAltSmall = css`
   ${baseSubHeadingAlt};
   font-size: 2rem;
-  line-height: 140% /* 28px */
+  line-height: 140%; /* 28px */
+  margin-top: 16px;
 `;
 
 export const subHeadingAltMini = css`
   ${baseSubHeadingAlt};
   font-size: 1.6rem;
-  line-height: 130% /* 20.8px */
+  line-height: 130%; /* 20.8px */
+  margin-top: 8px;
 `;
 
 export const richTextHeadingBig = css`
