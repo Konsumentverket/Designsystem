@@ -3,13 +3,30 @@ import React from 'react';
 ;
 import 'date-fns';
 import {SubHeading} from './sub-heading.js';
-import {globalStyles as GlobalStyles} from "@konsumentverket-sverige/designsystem.utils";
+import {CompositionFonts, globalStyles as GlobalStyles} from "@konsumentverket-sverige/designsystem.utils";
 
 export const BasicSubHeading = () => {
   return (
-    <CompositionFonts>
-      <GlobalStyles/>
-      <SubHeading text="Lorem ipsum"/>
-    </CompositionFonts>
+    <div style={{width: '500px', padding: '0 24px'}}>
+      <CompositionFonts>
+        <GlobalStyles/>
+        <SubHeading level={1} text="h1 Default" richText={false}/>
+        <SubHeading level={1} text="h1 with styleLevel 4" styleLevel={4} richText={false}/>
+        <SubHeading level={2} text="h2 Default" richText={false}/>
+        <SubHeading level={3} text="h3 Default" richText={false}/>
+        <SubHeading level={4} text="h4 Default" richText={false}/>
+        <SubHeading level={5} text="h5 Default" richText={false}/>
+        <SubHeading level={6} text="h6 Default" richText={false}/>
+        <SubHeading level={1} text="h1 with line" headingLine richText={false}/>
+        <SubHeading level={2} text="h2 with line" headingLine richText={false}/>
+        <SubHeading level={3} text="h3 with line" headingLine richText={false}/>
+        <SubHeading level={4} text="h4 with line" headingLine richText={false}/>
+        <SubHeading level={5} text="h5 with line" headingLine richText={false}/>
+        <SubHeading level={6} text="h6 with line" headingLine richText={false}/>
+        <SubHeading level={2} text="h2 Richtext" richText={true}/>
+        <SubHeading level={3} text="h3 Richtext" richText={true}/>
+        <SubHeading level={4} text="h4 Richtext" richText={true}/>
+      </CompositionFonts>
+    </div>
   );
 }

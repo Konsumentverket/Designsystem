@@ -23,6 +23,9 @@ import {
   subHeadingAltMedium,
   subHeadingAltSmall,
   subHeadingAltMini,
+  richtextHeadingBig,
+  richtextHeadingMedium,
+  richtextHeadingSmall,
   preamble,
   paragraph,
   paragraphStrong,
@@ -79,6 +82,10 @@ export const typography = () => {
         <h4 css={subHeadingAltMedium} style={spacing}>Subheading Alt Medium</h4>
         <h4 css={subHeadingAltSmall} style={spacing}>Subheading Alt Small</h4>
         <h4 css={subHeadingAltMini} style={spacing}>Subheading Alt Mini</h4>
+        <div style={sectionTitle}>Richtext headings</div>
+        <h2 css={richtextHeadingBig} style={spacing}>Richtext Heading Big (h2)</h2>
+        <h3 css={richtextHeadingMedium} style={spacing}>Richtext Heading Medium (h3)</h3>
+        <h4 css={richtextHeadingSmall} style={spacing}>Richtext Heading Small (h4-h6)</h4>
         <div style={sectionTitle}>Text</div>
         <p css={preamble} className={'noStyle'}>Preamble<br/>{text}</p>
         <p css={paragraph} className={'noStyle'}>Paragraph<br/>{text}</p>
@@ -104,17 +111,25 @@ export const typography = () => {
           </div>
           <div style={{display: 'flex', flexDirection: 'column'}}>
             <p>Hover/Active</p>
-            <a css={[linkMini, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
-            <a css={[linkSmall, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
-            <a css={[link, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link</a>
-            <a css={[linkLarge, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
+            <a css={[linkMini, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
+               href="#">Link Small</a>
+            <a css={[linkSmall, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}}
+               className={'noStyle'} href="#">Link Small</a>
+            <a css={[link, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
+               href="#">Link</a>
+            <a css={[linkLarge, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}}
+               className={'noStyle'} href="#">Link Small</a>
           </div>
           <div style={{display: 'flex', flexDirection: 'column'}}>
             <p>Focus</p>
-            <a css={[linkMini, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
-            <a css={[linkSmall, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
-            <a css={[link, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link</a>
-            <a css={[linkLarge, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link Small</a>
+            <a css={[linkMini, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
+               href="#">Link Small</a>
+            <a css={[linkSmall, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}}
+               className={'noStyle'} href="#">Link Small</a>
+            <a css={[link, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
+               href="#">Link</a>
+            <a css={[linkLarge, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}}
+               className={'noStyle'} href="#">Link Small</a>
           </div>
         </div>
         <div style={sectionTitle}>Simple buttons</div>

@@ -21,7 +21,6 @@ export const h1 = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 5rem;
-    margin-bottom: 24px;
   }
 `;
 
@@ -357,4 +356,24 @@ export const subHeadingAltMini = css`
   ${baseSubHeadingAlt};
   font-size: 1.6rem;
   line-height: 130% /* 20.8px */
+`;
+
+export const richTextHeadingBig = css`
+  ${subHeadingAltMedium};
+
+  @media (min-width: ${breakpoints.m}) {
+    ${subHeadingAltBig};
+  }
+`;
+
+export const richTextHeadingMedium = css`
+  ${subHeadingAltSmall};
+
+  @media (min-width: ${breakpoints.m}) {
+    ${subHeadingAltMedium};
+  }
+`;
+
+export const richTextHeadingSmall = css`
+  ${subHeadingAltSmall};
 `;

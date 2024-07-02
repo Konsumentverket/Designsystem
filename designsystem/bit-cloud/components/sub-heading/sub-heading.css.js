@@ -1,12 +1,6 @@
 import {css} from '@emotion/core';
 import {typography} from '@konsumentverket-sverige/designsystem.utils';
 
-
-export const commonSubHeadingStyle = css`
-  color: #162259;
-  font-weight: 700;
-`
-
 export const h1Style = css`
   ${typography.h1};
 `
@@ -33,3 +27,17 @@ export const h6Style = css`
 export const headingLineStyle = css`
   ${typography.headingLine};
 `;
+
+export const richTextHeadingBig = css`
+  ${typography.richTextHeadingBig};
+`;
+
+export const richTextHeadingMedium = css`
+  ${typography.richTextHeadingMedium};
+`;
+
+export const richTextHeadingSmall = css`
+  ${typography.richTextHeadingSmall};
+`;
+
+
