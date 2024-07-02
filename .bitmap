@@ -114,13 +114,6 @@
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-search-field"
     },
-    "header": {
-        "name": "header",
-        "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.31",
-        "mainFile": "index.ts",
-        "rootDir": "designsystem/bit-cloud/components/header"
-    },
     "heading": {
         "name": "heading",
         "scope": "konsumentverket-sverige.designsystem",
