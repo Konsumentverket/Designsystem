@@ -329,7 +329,7 @@ export const h2Alt3 = css`
 `;
 
 const baseSubHeadingAlt = css`
-  color: ${newColors.kovBlack};
+  color: ${newColors.kovBlack} !important;
   font-style: normal;
   font-weight: 700;
 `;
