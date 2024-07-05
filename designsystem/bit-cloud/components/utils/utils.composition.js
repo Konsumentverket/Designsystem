@@ -23,9 +23,9 @@ import {
   subHeadingAltMedium,
   subHeadingAltSmall,
   subHeadingAltMini,
-  richtextHeadingBig,
-  richtextHeadingMedium,
-  richtextHeadingSmall,
+  richTextHeadingBig,
+  richTextHeadingMedium,
+  richTextHeadingSmall,
   preamble,
   paragraph,
   paragraphStrong,
@@ -83,9 +83,9 @@ export const typography = () => {
         <h4 css={subHeadingAltSmall} style={spacing}>Subheading Alt Small</h4>
         <h4 css={subHeadingAltMini} style={spacing}>Subheading Alt Mini</h4>
         <div style={sectionTitle}>Richtext headings</div>
-        <h2 css={richtextHeadingBig} style={spacing}>Richtext Heading Big (h2)</h2>
-        <h3 css={richtextHeadingMedium} style={spacing}>Richtext Heading Medium (h3)</h3>
-        <h4 css={richtextHeadingSmall} style={spacing}>Richtext Heading Small (h4-h6)</h4>
+        <h2 css={richTextHeadingBig} style={spacing}>Richtext Heading Big (h2)</h2>
+        <h3 css={richTextHeadingMedium} style={spacing}>Richtext Heading Medium (h3)</h3>
+        <h4 css={richTextHeadingSmall} style={spacing}>Richtext Heading Small (h4-h6)</h4>
         <div style={sectionTitle}>Text</div>
         <p css={preamble} className={'noStyle'}>Preamble<br/>{text}</p>
         <p css={paragraph} className={'noStyle'}>Paragraph<br/>{text}</p>

@@ -3,6 +3,7 @@ import { jsx } from '@emotion/core';
 import { css, Global } from '@emotion/core'
 import { spacing } from './spacing'
 import { colors, newColors } from './colors';
+import { paragraph } from "./typography";
 import React, { Children, useEffect } from 'react';
 import { filePdfPath } from './Icons/SystemIcons/FilePdf/FilePdf';
 import { fileWordPath } from './Icons/SystemIcons/FileWord/FileWord';
@@ -114,15 +115,13 @@ const globalStyles = (
 
     }
 
-
     p {
-      font-size: 1.8rem;
-      line-height: 3.2rem;
+      ${paragraph};
     }
 
     ul {
       list-style: bullet inside none;
-      padding-left: ${spacing.xl};
+
       li {
         margin-bottom: ${spacing.s};
       }
