@@ -117,6 +117,7 @@ const globalStyles = (
 
     p {
       ${paragraph};
+      display: block;
     }
 
     ul {
