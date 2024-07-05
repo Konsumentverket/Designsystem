@@ -125,9 +125,6 @@ const globalStyles = (
       li {
         margin-bottom: ${spacing.s};
       }
-      p {
-        display: inline;
-      }
     }
 
     i {
