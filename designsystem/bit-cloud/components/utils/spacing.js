@@ -1,10 +1,10 @@
 const spacing = {
-    'xs': '.8rem',
-    's': '1.6rem',
-    'm': '2.4rem',
-    'l': '3.2rem',
-    'xl': '4.8rem',
-    'xxl': '8.8rem',
+    'xs': '8px',
+    's': '16px',
+    'm': '24px',
+    'l': '32px',
+    'xl': '48px',
+    'xxl': '88px',
 }
 
 export { spacing }
