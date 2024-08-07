@@ -6,12 +6,13 @@ export const wrapperStyling = css`
     background-color: ${newColors.primaries.lightOrange};
     border-radius: 8px;
     padding: ${spacing.m} ${spacing.s};
+    position: relative;
 
     ${medium} {
         padding: ${spacing.l} ${spacing.l};
     }
 
-    
+
     li, p {
         margin-bottom: 24px;
         font-size: 2.0rem;
@@ -54,4 +55,14 @@ export const titleStyling = css`
     font-weight: 700;
     line-height: 1.4;
     margin: 0 0 24px 0;
+`;
+
+export const iconWrapper = css`
+  position: absolute;
+  top: calc((28.51px / 2) * -1);
+  left: calc((23.33px / 2) * -1);
+`;
+
+export const iconColor = css`
+  fill: ${newColors.primaries.fullBlue};
 `;

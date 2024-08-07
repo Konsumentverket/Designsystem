@@ -47,6 +47,7 @@ import { Send } from "./Icons/SystemIcons/Send/Send.js";
 import { MonoSettings} from "./Icons/SystemIcons/MonoSettings/MonoSettings.js";
 import { Logo } from "./Icons/SystemIcons/Logo/Logo.js"
 import { MegamenuCompany } from "./Icons/SystemIcons/MegamenuCompany/MegamenuCompany.js";
+import { MonoBookmark } from "./Icons/SystemIcons/MonoBookmark/MonoBookmark";
 
 // Editor icons
 import { AppsAndGames } from "./Icons/EditorIcons/AppsAndGames/AppsAndGames.js";
@@ -165,6 +166,7 @@ export {
     MonoSearch,
     MonoMenuThin,
     MonoEasyToRead,
+    MonoBookmark,
 
 
     // System icons

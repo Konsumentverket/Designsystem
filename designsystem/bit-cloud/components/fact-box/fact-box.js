@@ -1,8 +1,11 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx } from '@emotion/core'
-// import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
-import { wrapperStyling, titleStyling } from './fact-box.css.js'
+import { wrapperStyling, titleStyling, iconWrapper, iconColor } from './fact-box.css.js'
+import {
+  Icon
+} from '@konsumentverket-sverige/designsystem.icon';
+
 
 export const FactBox = ({
   children,
@@ -16,6 +19,12 @@ export const FactBox = ({
 
   return (
     <div css={wrapperStyling}>
+      <div css={iconWrapper}>
+        <Icon
+          icon="MonoBookmark"
+          style={iconColor}
+        />
+      </div>
       {headline && (
         <h3 css={titleStyling}>{headline}</h3> // Use the SubHeading component instead?
       )}
