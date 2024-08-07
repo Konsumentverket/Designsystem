@@ -148,16 +148,12 @@ export const paragraphStrong = css`
 
 export const textSmall = css`
   color: ${newColors.kovBlack};
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   word-break: break-word;
   hyphens: auto;
-
-  @media (min-width: ${breakpoints.m}) {
-    font-size: 1.6rem;
-  }
 `;
 
 export const textSmallAlt = css`
@@ -343,7 +339,7 @@ export const h2Alt3 = css`
 `;
 
 const baseSubHeadingAlt = css`
-  color: ${newColors.kovBlack} !important;
+  color: ${newColors.kovBlack};
   font-style: normal;
   font-weight: 700;
   margin-bottom: 8px;

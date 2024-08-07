@@ -1,15 +1,19 @@
-import { css } from "@emotion/core";
-import { newColors, colors, spacing, medium } from '@konsumentverket-sverige/designsystem.utils';
+import {css} from "@emotion/core";
+import {newColors, breakpoints, typography} from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapperStyling = css`
   width: 100%;
   background-color: ${newColors.shades.lightGrey25};
-  border-radius: 8px;
-  padding: ${spacing.s} ${spacing.m};
+  border-radius: 16px;
+  padding: 16px;
+
+  @media (min-width: ${breakpoints.m}) {
+    padding: 24px;
+  }
 
   p {
-    font-size: 1.6rem;
-    line-height: 1.5;
+    ${typography.textSmall};
+    color: ${newColors.shades.kovBlack50};
 
     &:last-of-type {
       margin-bottom: 0;
@@ -19,9 +23,7 @@ export const wrapperStyling = css`
 `
 
 export const titleStyling = css`
-  font-size: 1.6rem;
-  line-height: 1.3;
-  font-weight: 700;
-  color: #000;
-  margin: 0 0 8px 0;
+  ${typography.subHeadingAltMini};
+  color: ${newColors.shades.kovBlack50};
+  margin-top: 0;
 `

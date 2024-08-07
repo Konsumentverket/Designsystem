@@ -2,6 +2,8 @@
 import { jsx } from '@emotion/core'
 import { wrapperStyling, titleStyling } from './prerequisites-box.css.js'
 // import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
+import {Heading} from '@konsumentverket-sverige/designsystem.heading';
+
 
 export const PrerequisitesBox = ({
   text,
