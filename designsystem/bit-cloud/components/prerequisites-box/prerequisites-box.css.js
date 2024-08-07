@@ -20,6 +20,10 @@ export const wrapperStyling = css`
       padding-bottom: 0;
     }
   }
+
+  a {
+    ${typography.linkSmall};
+  }
 `
 
 export const titleStyling = css`
