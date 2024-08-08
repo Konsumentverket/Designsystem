@@ -8,7 +8,8 @@ import {
     altIconCardStyle,
     chevronStyle,
     iconStyle,
-    iconTextStyle
+    iconTextStyle,
+    altLightIconCardStyle,
 } from './icon-card.css.js';
 
 const IconCard = React.forwardRef(({
@@ -17,14 +18,16 @@ const IconCard = React.forwardRef(({
     url,
     onClick,
     id,
+    useLightAlternativeColors = false,
     useAlternativeColors = false,
 }, ref) => {
     return <a
+        data-comp="icon-card"
         ref={ref}
         id={id}
         href={url}
         onClick={onClick}
-        css={[iconCardStyle, useAlternativeColors ? altIconCardStyle : null]}
+        css={[iconCardStyle, (useAlternativeColors ? altIconCardStyle : useLightAlternativeColors ? altLightIconCardStyle : null)]}
         className="noStyle"
     >
         {icon && React.cloneElement(icon, { "aria-hidden": "true", style: iconStyle })}

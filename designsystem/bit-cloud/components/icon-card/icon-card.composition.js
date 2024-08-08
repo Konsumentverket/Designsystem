@@ -44,3 +44,17 @@ export const AlternativeIconCard = () => {
     </CompositionFonts>
   );
 }
+
+export const AlternativeLightIconCard = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <IconCard
+        url="#"
+        text="A very special delivery"
+        icon={<Icon icon="HomeDelivery" />}
+        useLightAlternativeColors={true}
+      />
+    </CompositionFonts>
+  );
+}

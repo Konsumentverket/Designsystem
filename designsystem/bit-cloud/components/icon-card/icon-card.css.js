@@ -79,6 +79,11 @@ export const altIconCardStyle = css`
     border: 1px solid ${newColors.primaries.mediumBlue};
 `;
 
+export const altLightIconCardStyle = css`
+    background-color: ${newColors.shades.lightBlue50};
+    border: 1px solid ${newColors.primaries.mediumBlue};
+`;
+
 export const iconTextStyle = css`
     width:100%;
     color: ${newColors.shades.fullBlue};
