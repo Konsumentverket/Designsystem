@@ -9,21 +9,26 @@ import { EditorIcon } from '@konsumentverket-sverige/designsystem.editor-icon';
 import {
   containerStyle,
   containerAlternativeStyle,
+  containerLightBlueAlternativeStyle,
   iconStyle,
   headerStyle,
   innerHeaderStyle,
   innerHeaderTextStyle,
   titleStyle,
   titleAlternativeStyle,
+  titleLightBlueAlternativeStyle,
   preambleStyle,
   linkStyle,
   linkAlternativeStyle,
+  linkLightBlueAlternativeStyle,
   linkStyleExpanded,
   linkStyleAlternativeExpanded,
+  linkStyleLightBlueAlternativeExpanded,
   chevronStyle,
   chevronExpandedStyle,
   expandedAreaStyle,
   expandedAreaAlternativeStyle,
+  expandedAreaLightBlueAlternativeStyle,
   expandedAreaExpandedStyle,
 } from "./with-content-expander.css.js";
 
@@ -39,6 +44,7 @@ export const WithContentExpander = ({
   linkHref = "",
   disabled = false,
   useAlternativeStyling = false,
+  useLightBlueAlternativeStyling = false,
 }) => {
   const [expanded, setExpanded] = useState(open);
   const linkContainerRef = useRef();
@@ -77,7 +83,8 @@ export const WithContentExpander = ({
       id={wrapperId}
       css={[
         containerStyle,
-        useAlternativeStyling ? containerAlternativeStyle : null
+        useAlternativeStyling ? containerAlternativeStyle : null,
+        useLightBlueAlternativeStyling ? containerLightBlueAlternativeStyle : null,
       ]}
       ref={topOfComponent}
     >
@@ -99,6 +106,8 @@ export const WithContentExpander = ({
             expanded ? linkStyleExpanded : null,
             useAlternativeStyling && expanded ? linkStyleAlternativeExpanded : null,
             useAlternativeStyling ? linkAlternativeStyle : null,
+            useLightBlueAlternativeStyling ? linkLightBlueAlternativeStyle : null,
+            useLightBlueAlternativeStyling && expanded ? linkStyleLightBlueAlternativeExpanded : null,
           ]}
         >
           <div css={headerStyle} className="link-element-container" ref={linkContainerRef}>
@@ -109,7 +118,8 @@ export const WithContentExpander = ({
               <div css={innerHeaderTextStyle}>
                 <h3 css={[
                   titleStyle,
-                  useAlternativeStyling ? titleAlternativeStyle : null
+                  useAlternativeStyling ? titleAlternativeStyle : null,
+                  useLightBlueAlternativeStyling ? titleLightBlueAlternativeStyle : null
                 ]}>
                   {text}
                 </h3>
@@ -132,6 +142,7 @@ export const WithContentExpander = ({
           expandedAreaStyle, 
           expanded ? expandedAreaExpandedStyle : null,
           expanded && useAlternativeStyling ? expandedAreaAlternativeStyle : null,
+          expanded && useLightBlueAlternativeStyling ? expandedAreaLightBlueAlternativeStyle : null,
         ]}
         className={`expand-section ${expanded ? "expanded" : null} ${disabled ? "expanded" : ''}`}
       >

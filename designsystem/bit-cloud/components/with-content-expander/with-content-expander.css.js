@@ -8,6 +8,10 @@ export const containerStyle = css`
   overflow: hidden;
 `;
 
+export const containerLightBlueAlternativeStyle = css`
+  box-shadow: none;
+`;
+
 export const containerAlternativeStyle = css`
     box-shadow: inset 0 0 0 1px ${newColors.secondaries.lightGrey};
 `;
@@ -64,6 +68,12 @@ export const titleAlternativeStyle = css`
   }
 `;
 
+export const titleLightBlueAlternativeStyle = css`
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 1.6rem;
+  }
+`;
+
 export const preambleStyle = css`
   color: ${newColors.kovBlack};
   line-height: 1.25;
@@ -101,6 +111,15 @@ export const linkAlternativeStyle = css`
     box-shadow: none;
   }
 `
+
+export const linkLightBlueAlternativeStyle = css`
+  background-color: ${newColors.primaries.lightBlue};
+
+    &:hover {
+    background-color: ${newColors.shades.lightBlue};
+    box-shadow: none;
+  }
+`;
 
 export const linkStyleExpanded = css`
   border-radius: 0;
@@ -143,6 +162,16 @@ export const linkStyleAlternativeExpanded = css`
   }
 `;
 
+export const linkStyleLightBlueAlternativeExpanded = css`
+  background-color: ${newColors.primaries.lightBlue};
+  border-radius: ${spacing.s} ${spacing.s} 0 0 !important;
+  border-bottom: 0 !important;
+
+  &:after {
+    background-color: ${newColors.primaries.mediumBlue};
+  }
+`;
+
 export const chevronStyle = css`
   fill: ${newColors.primaries.fullBlue};
   transform: rotate(90deg);
@@ -162,6 +191,12 @@ export const expandedAreaStyle = css`
 export const expandedAreaAlternativeStyle = css`
   background-color: ${newColors.shades.lightGrey25};
   border: 1px solid ${newColors.secondaries.mediumGrey};
+  border-top: 0;
+`;
+
+export const expandedAreaLightBlueAlternativeStyle = css`
+  background-color: ${newColors.primaries.lightBlue};
+  border: 0;
   border-top: 0;
 `;
 
