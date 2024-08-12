@@ -261,6 +261,13 @@
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/text-area"
     },
+    "typography": {
+        "name": "typography",
+        "scope": "konsumentverket-sverige.designsystem",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/typography"
+    },
     "utils": {
         "name": "utils",
         "scope": "konsumentverket-sverige.designsystem",
@@ -278,7 +285,7 @@
     "with-content-expander": {
         "name": "with-content-expander",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.46",
+        "version": "0.0.47",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/with-content-expander"
     }

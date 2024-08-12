@@ -3,6 +3,7 @@ import { jsx } from "@emotion/core";
 import PropTypes from 'prop-types';
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
+import { Typography } from '@konsumentverket-sverige/designsystem.typography';
 import { ArrowFat } from '@konsumentverket-sverige/designsystem.utils';
 import { EditorIcon } from '@konsumentverket-sverige/designsystem.editor-icon';
 
@@ -89,7 +90,7 @@ export const WithContentExpander = ({
       ref={topOfComponent}
     >
       <div
-        className="link-element"
+        className="link-element noStyle"
         onClick={e => handleExpansionOnClick(e)}
       >
         <a
@@ -116,7 +117,7 @@ export const WithContentExpander = ({
                 <EditorIcon icon={icon} css={iconStyle} />
               )}
               <div css={innerHeaderTextStyle}>
-                <h3 css={[
+                <h3 className="noStyle" css={[
                   titleStyle,
                   useAlternativeStyling ? titleAlternativeStyle : null,
                   useLightBlueAlternativeStyling ? titleLightBlueAlternativeStyle : null
@@ -146,7 +147,9 @@ export const WithContentExpander = ({
         ]}
         className={`expand-section ${expanded ? "expanded" : null} ${disabled ? "expanded" : ''}`}
       >
-        {wrappedComponent}
+        <Typography>
+          {wrappedComponent}
+        </Typography>
       </div>
     </div>
   );
