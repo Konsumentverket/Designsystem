@@ -7,8 +7,10 @@ export const wrapperStyling = css`
     border-radius: 8px;
     padding: ${spacing.m} ${spacing.s};
     position: relative;
+    margin-top: calc(16px + 13px);
 
     ${medium} {
+        margin-top: calc(24px + 13px);
         padding: ${spacing.l} ${spacing.l};
     }
 
