@@ -126,7 +126,7 @@ export const buttonIconRight = css`
     align-items: center;
 
     svg {
-        width: 8px;
+        width: 2.4rem;
         height: auto;
         margin-left: 1.6rem;
     }

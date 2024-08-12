@@ -27,7 +27,6 @@ export const Button = ({
   disabled,
   iconLeft,
   iconRight,
-  style,
   reference,
   onClick,
   href,
@@ -50,8 +49,6 @@ export const Button = ({
 
   const ariaAttrs = {};
   Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x])
-
-  style && styles.push(style)
 
   const props = {
     "id": id,
@@ -92,7 +89,6 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   iconLeft: PropTypes.element,
   iconRight: PropTypes.element,
-  style: PropTypes.object,
   reference: PropTypes.bool,
   onClick: PropTypes.func,
   href: PropTypes.string,
