@@ -11,7 +11,6 @@ export const Source = ({
   markdownText,
   reviewedDate,
   reviewedDateText,
-  style,
   english,
   bottomContent,
   sourceText
@@ -49,7 +48,7 @@ export const Source = ({
   ];
 
   return (
-    <div css={[sourceStyle, style]}>
+    <div css={[sourceStyle]} data-comp="source">
       <div id="mtmFeedBackForm" className="feedbackForm"></div>
       <div css={secondRow}>
         {sourcesCollection && sourcesCollection.items.length > 0 && (

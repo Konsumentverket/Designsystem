@@ -1,16 +1,19 @@
 import { css } from "@emotion/core";
-import { colors, medium, spacing, typography } from '@konsumentverket-sverige/designsystem.utils';
+import { medium, spacing, typography } from '@konsumentverket-sverige/designsystem.utils';
 
 export const sourceStyle = css`
+  padding: 16px 0;
+
   p {
     ${typography.textSmall};
+    margin: 0;
   }
 `;
 
 export const secondRow = css`
     flex-direction: column;
     display: flex;
-    padding: 16px 0;
+    padding: 16px 4px;
     ${typography.textSmall};
 
     a {
