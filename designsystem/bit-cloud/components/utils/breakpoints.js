@@ -2,7 +2,7 @@ const breakpoints = {
   'xs': '375px',
   's': '532px',
   'm': '768px',
-  'm2': '85px',
+  'm2': '850px',
   'ml': '1024px',
   'ipad': '1124px',
   'ipad2': '1124px',
