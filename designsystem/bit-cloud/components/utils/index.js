@@ -48,6 +48,8 @@ import { MonoSettings} from "./Icons/SystemIcons/MonoSettings/MonoSettings.js";
 import { Logo } from "./Icons/SystemIcons/Logo/Logo.js"
 import { MegamenuCompany } from "./Icons/SystemIcons/MegamenuCompany/MegamenuCompany.js";
 import { MonoBookmark } from "./Icons/SystemIcons/MonoBookmark/MonoBookmark";
+import { MonoArrowRight } from "./Icons/SystemIcons/MonoArrowRight/MonoArrowRight";
+
 
 // Editor icons
 import { AppsAndGames } from "./Icons/EditorIcons/AppsAndGames/AppsAndGames.js";
@@ -167,6 +169,7 @@ export {
     MonoMenuThin,
     MonoEasyToRead,
     MonoBookmark,
+    MonoArrowRight,
 
 
     // System icons
