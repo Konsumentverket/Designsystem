@@ -22,7 +22,6 @@ export const buttonStyle = css`
     padding: 1.6rem 2.4rem;
     color: ${newColors.kovWhite};
     border-radius: 1.6rem;
-    width:100%;
     box-sizing: border-box;
     cursor:pointer;
     background-color: ${newColors.primaries.fullBlue};
