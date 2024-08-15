@@ -49,6 +49,7 @@ import { Logo } from "./Icons/SystemIcons/Logo/Logo.js"
 import { MegamenuCompany } from "./Icons/SystemIcons/MegamenuCompany/MegamenuCompany.js";
 import { MonoBookmark } from "./Icons/SystemIcons/MonoBookmark/MonoBookmark";
 import { MonoArrowRight } from "./Icons/SystemIcons/MonoArrowRight/MonoArrowRight";
+import { MonoArrowRightSmall } from "./Icons/SystemIcons/MonoArrowRightSmall/MonoArrowRightSmall";
 
 
 // Editor icons
@@ -170,6 +171,7 @@ export {
     MonoEasyToRead,
     MonoBookmark,
     MonoArrowRight,
+    MonoArrowRightSmall,
 
 
     // System icons

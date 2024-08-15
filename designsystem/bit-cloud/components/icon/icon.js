@@ -48,6 +48,7 @@ import {
   MonoMenuThin,
   MonoBookmark,
   MonoArrowRight,
+  MonoArrowRightSmall,
 
   // Editor Icons
 
@@ -148,6 +149,7 @@ const systemIconDefinitions = {
   MonoMenuThin,
   MonoBookmark,
   MonoArrowRight,
+  MonoArrowRightSmall,
 };
 
 const editorIconDefinitions = {
