@@ -146,7 +146,7 @@ export const linkStyleExpanded = css`
   }
 `;
 
-export const linkStyleAlternativeExpanded = css`  
+export const linkStyleAlternativeExpanded = css`
   border-radius: ${spacing.s} ${spacing.s} 0 0 !important;
   border-bottom: 0 !important;
 
@@ -201,11 +201,11 @@ export const expandedAreaLightBlueAlternativeStyle = css`
 `;
 
 export const expandedAreaExpandedStyle = css`
-  padding: ${spacing.s};
+  padding: ${spacing.s} ${spacing.s} ${spacing.l} ${spacing.s};
   height: auto;
   border-radius: 0 0 ${spacing.s} ${spacing.s};
 
   @media (min-width: ${breakpoints.m}) {
-    padding: ${spacing.m};
+    padding: ${spacing.m} ${spacing.m} ${spacing.l} ${spacing.m};
   }
 `;
