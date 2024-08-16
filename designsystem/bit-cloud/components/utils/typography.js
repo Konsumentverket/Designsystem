@@ -121,7 +121,7 @@ export const preamble = css`
 `;
 
 export const paragraph = css`
-  color: ${newColors.readingBlack};
+  color: ${newColors.kovBlack};
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
@@ -391,4 +391,42 @@ export const richTextHeadingMedium = css`
 
 export const richTextHeadingSmall = css`
   ${subHeadingAltSmall};
+`;
+
+export const listSpacing = css`
+  margin: 32px 0;
+  padding: 0 8px;
+
+  @media(min-width: ${breakpoints.m}){
+    padding: 0 16px;
+  }
+`;
+
+export const ulStyling = css`
+  ${listSpacing};
+
+  li {
+    display: flex;
+    align-items: baseline;
+    flex-shrink: 0;
+    ${paragraph};
+    margin-bottom: 16px;
+
+    @media(min-width: ${breakpoints.m}){
+      margin-bottom: 24px;
+    }
+
+    &:before {
+      position: relative;
+      top: -1px;
+      content: " ";
+      flex-shrink: 0;
+      background-color: ${newColors.shades.fullGrey};
+      border-radius: 50%;
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      margin-right: 16px;
+    }
+  }
 `;

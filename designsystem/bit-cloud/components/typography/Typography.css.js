@@ -4,6 +4,11 @@ import {
 } from '@konsumentverket-sverige/designsystem.utils';
 
 export const typographyContainerStyle = css`
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
   h2:not(.noStyle) {
     ${typography.h2}
   }
@@ -30,5 +35,9 @@ export const typographyContainerStyle = css`
     &:focus {
       ${typography.linkFocus}
     }
+  }
+
+  ul:not(.noStyle) {
+    ${typography.ulStyling}
   }
 `;

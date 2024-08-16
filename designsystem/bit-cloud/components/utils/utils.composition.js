@@ -33,6 +33,7 @@ import {
   textSmallAlt,
   textMini,
   textMiniAlt,
+  ulStyling,
   linkMini,
   linkSmall,
   link,
@@ -96,6 +97,14 @@ export const typography = () => {
           att företag har fel i sin marknadsföring eller i sina avtalsvillkor.</p>
         <p css={textMini}>TextMini<br/>{text}</p>
         <p css={textMiniAlt}>TextMiniAlt<br/>{text}</p>
+
+        <div style={sectionTitle}>Unordered list</div>
+        <ul css={ulStyling}>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ul>
+
         <div style={sectionTitle}>Anchor links</div>
         <div style={{display: 'grid', gap: '20px', marginBottom: '36px', gridTemplateColumns: '1fr 1fr 1fr'}}>
           <div style={{display: 'flex', flexDirection: 'column'}}>

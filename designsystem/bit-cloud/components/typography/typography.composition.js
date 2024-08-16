@@ -12,7 +12,7 @@ export const BasicTypography = () => {
     <>
       <CompositionFonts>
         <GlobalStyles />
-        <Typography text={
+        <Typography children={
           <>
           <h2>Lorem ipsum dolor sit amet</h2>
             <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
