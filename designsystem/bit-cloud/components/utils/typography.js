@@ -432,7 +432,7 @@ export const ulStyling = css`
 `;
 
 export const olListSpacing = css`
-  margin: 32px calc(8px + 21.45px);
+  margin: 32px calc(8px + 19.31px);
 
 
   @media(min-width: ${breakpoints.m}){
