@@ -393,7 +393,7 @@ export const richTextHeadingSmall = css`
   ${subHeadingAltSmall};
 `;
 
-export const listSpacing = css`
+export const ulListSpacing = css`
   margin: 32px 0;
   padding: 0 8px;
 
@@ -403,7 +403,7 @@ export const listSpacing = css`
 `;
 
 export const ulStyling = css`
-  ${listSpacing};
+  ${ulListSpacing};
 
   li {
     display: flex;
@@ -427,6 +427,29 @@ export const ulStyling = css`
       width: 9px;
       height: 9px;
       margin-right: 16px;
+    }
+  }
+`;
+
+export const olListSpacing = css`
+  margin: 32px calc(8px + 21.45px);
+
+
+  @media(min-width: ${breakpoints.m}){
+    margin: 32px calc(16px + 21.45px);
+  }
+`;
+
+export const olStyling = css`
+  ${olListSpacing};
+
+  li {
+    ${paragraph};
+    padding-left: 16px;
+    margin-bottom: 16px;
+
+    @media(min-width: ${breakpoints.m}){
+      margin-bottom: 24px;
     }
   }
 `;

@@ -40,4 +40,8 @@ export const typographyContainerStyle = css`
   ul:not(.noStyle) {
     ${typography.ulStyling}
   }
+
+  ol:not(.noStyle) {
+    ${typography.olStyling}
+  }
 `;

@@ -34,6 +34,7 @@ import {
   textMini,
   textMiniAlt,
   ulStyling,
+  olStyling,
   linkMini,
   linkSmall,
   link,
@@ -104,6 +105,13 @@ export const typography = () => {
           <li>Item</li>
           <li>Item</li>
         </ul>
+
+        <div style={sectionTitle}>Ordered list</div>
+        <ol css={olStyling}>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ol>
 
         <div style={sectionTitle}>Anchor links</div>
         <div style={{display: 'grid', gap: '20px', marginBottom: '36px', gridTemplateColumns: '1fr 1fr 1fr'}}>
