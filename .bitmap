@@ -215,7 +215,7 @@
     "prerequisites-box": {
         "name": "prerequisites-box",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.51",
+        "version": "0.0.52",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/prerequisites-box"
     },
