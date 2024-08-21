@@ -16,6 +16,16 @@ export const containerAlternativeStyle = css`
     box-shadow: inset 0 0 0 1px ${newColors.secondaries.lightGrey};
 `;
 
+export const noLeftBorderRadiusStyling = css`
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &:hover {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+`;
+
 export const headerStyle = css`
   display: flex;
   align-items: center;
@@ -165,6 +175,15 @@ export const linkStyleAlternativeExpanded = css`
 export const linkStyleLightBlueAlternativeExpanded = css`
   background-color: ${newColors.primaries.lightBlue};
   border-radius: ${spacing.s} ${spacing.s} 0 0 !important;
+  border-bottom: 0 !important;
+
+  &:after {
+    background-color: ${newColors.primaries.mediumBlue};
+  }
+`;
+
+export const linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius = css`
+  background-color: ${newColors.primaries.lightBlue};
   border-bottom: 0 !important;
 
   &:after {

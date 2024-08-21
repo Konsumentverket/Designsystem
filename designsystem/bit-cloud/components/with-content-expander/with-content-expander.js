@@ -11,6 +11,7 @@ import {
   containerStyle,
   containerAlternativeStyle,
   containerLightBlueAlternativeStyle,
+  noLeftBorderRadiusStyling,
   iconStyle,
   headerStyle,
   innerHeaderStyle,
@@ -46,6 +47,7 @@ export const WithContentExpander = ({
   disabled = false,
   useAlternativeStyling = false,
   useLightBlueAlternativeStyling = false,
+  useNoLeftBorderRadiusStyling = false,
 }) => {
   const [expanded, setExpanded] = useState(open);
   const linkContainerRef = useRef();
@@ -86,6 +88,7 @@ export const WithContentExpander = ({
         containerStyle,
         useAlternativeStyling ? containerAlternativeStyle : null,
         useLightBlueAlternativeStyling ? containerLightBlueAlternativeStyle : null,
+        useNoLeftBorderRadiusStyling ? noLeftBorderRadiusStyling : null,
       ]}
       ref={topOfComponent}
     >
@@ -105,10 +108,12 @@ export const WithContentExpander = ({
           css={[
             linkStyle,
             expanded ? linkStyleExpanded : null,
-            useAlternativeStyling && expanded ? linkStyleAlternativeExpanded : null,
+            useAlternativeStyling && expanded && !noLeftBorderRadiusStyling ? linkStyleAlternativeExpanded : null,
             useAlternativeStyling ? linkAlternativeStyle : null,
             useLightBlueAlternativeStyling ? linkLightBlueAlternativeStyle : null,
-            useLightBlueAlternativeStyling && expanded ? linkStyleLightBlueAlternativeExpanded : null,
+            useLightBlueAlternativeStyling && expanded && !noLeftBorderRadiusStyling ? linkStyleLightBlueAlternativeExpanded : null,
+            useLightBlueAlternativeStyling && expanded && noLeftBorderRadiusStyling ? linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius : null,
+            useNoLeftBorderRadiusStyling ? noLeftBorderRadiusStyling : null,
           ]}
         >
           <div css={headerStyle} className="link-element-container" ref={linkContainerRef}>
@@ -140,10 +145,11 @@ export const WithContentExpander = ({
       <div
         id={`${wrapperId}-content`}
         css={[
-          expandedAreaStyle, 
+          expandedAreaStyle,
           expanded ? expandedAreaExpandedStyle : null,
           expanded && useAlternativeStyling ? expandedAreaAlternativeStyle : null,
           expanded && useLightBlueAlternativeStyling ? expandedAreaLightBlueAlternativeStyle : null,
+          useNoLeftBorderRadiusStyling ? noLeftBorderRadiusStyling : null,
         ]}
         className={`expand-section ${expanded ? "expanded" : null} ${disabled ? "expanded" : ''}`}
       >
