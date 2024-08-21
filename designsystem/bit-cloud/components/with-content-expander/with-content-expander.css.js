@@ -37,6 +37,12 @@ export const headerStyle = css`
   }
 `;
 
+export const headerProcessStepStyle = css`
+  @media (min-width: ${breakpoints.m}) {
+    padding: ${spacing.m} ${spacing.l};
+  }
+`;
+
 export const innerHeaderStyle = css`
   display: flex;
   align-items: center;

@@ -121,7 +121,7 @@ export const BasicWithIconWithContentExpander = () => {
   );
 }
 
-export const BasicWithNoLeftBorderRadius = () => {
+export const BasicWithProcessStepStyling = () => {
   return (
     <CompositionFonts>
       <GlobalStyles />
@@ -145,7 +145,7 @@ export const BasicWithNoLeftBorderRadius = () => {
             />
           </>
         }
-        useNoLeftBorderRadiusStyling={true}
+        useProcessStepStyling={true}
       />
     </CompositionFonts>
   );

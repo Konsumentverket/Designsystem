@@ -14,6 +14,7 @@ import {
   noLeftBorderRadiusStyling,
   iconStyle,
   headerStyle,
+  headerProcessStepStyle,
   innerHeaderStyle,
   innerHeaderTextStyle,
   titleStyle,
@@ -47,7 +48,7 @@ export const WithContentExpander = ({
   disabled = false,
   useAlternativeStyling = false,
   useLightBlueAlternativeStyling = false,
-  useNoLeftBorderRadiusStyling = false,
+  useProcessStepStyling = false,
 }) => {
   const [expanded, setExpanded] = useState(open);
   const linkContainerRef = useRef();
@@ -88,7 +89,7 @@ export const WithContentExpander = ({
         containerStyle,
         useAlternativeStyling ? containerAlternativeStyle : null,
         useLightBlueAlternativeStyling ? containerLightBlueAlternativeStyle : null,
-        useNoLeftBorderRadiusStyling ? noLeftBorderRadiusStyling : null,
+        useProcessStepStyling ? noLeftBorderRadiusStyling : null,
       ]}
       ref={topOfComponent}
     >
@@ -113,10 +114,16 @@ export const WithContentExpander = ({
             useLightBlueAlternativeStyling ? linkLightBlueAlternativeStyle : null,
             useLightBlueAlternativeStyling && expanded && !noLeftBorderRadiusStyling ? linkStyleLightBlueAlternativeExpanded : null,
             useLightBlueAlternativeStyling && expanded && noLeftBorderRadiusStyling ? linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius : null,
-            useNoLeftBorderRadiusStyling ? noLeftBorderRadiusStyling : null,
+            useProcessStepStyling ? noLeftBorderRadiusStyling : null,
           ]}
         >
-          <div css={headerStyle} className="link-element-container" ref={linkContainerRef}>
+          <div css={[
+              headerStyle,
+              useProcessStepStyling ? headerProcessStepStyle : null,
+            ]}
+               className="link-element-container"
+               ref={linkContainerRef}
+          >
             <div css={innerHeaderStyle}>
               {icon && (
                 <EditorIcon icon={icon} css={iconStyle} />
@@ -149,7 +156,7 @@ export const WithContentExpander = ({
           expanded ? expandedAreaExpandedStyle : null,
           expanded && useAlternativeStyling ? expandedAreaAlternativeStyle : null,
           expanded && useLightBlueAlternativeStyling ? expandedAreaLightBlueAlternativeStyle : null,
-          useNoLeftBorderRadiusStyling ? noLeftBorderRadiusStyling : null,
+          useProcessStepStyling ? noLeftBorderRadiusStyling : null,
         ]}
         className={`expand-section ${expanded ? "expanded" : null} ${disabled ? "expanded" : ''}`}
       >
