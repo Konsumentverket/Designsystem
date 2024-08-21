@@ -1,36 +1,42 @@
 import { css } from '@emotion/core'
-import { colors, spacing } from '@konsumentverket-sverige/designsystem.utils';
+import { colors, newColors, typography } from '@konsumentverket-sverige/designsystem.utils';
 
 export const fieldWrapper = css`
     width: 100%;
     position: relative;
-    border-radius: 0.8rem;
+    border-radius: 16px;
     border: 2px solid transparent;
     display:flex;
     align-items: center;
-    background-color: ${colors.theme3.xLight};
+    overflow: hidden;
+
     &.inputHasValue{
-        border: 2px solid ${colors.theme1.xDark};
         text-decoration: underline;
         font-weight: bold;
     }
 
     &:hover{
-        border: 2px solid ${colors.theme1.mid};
+        border: 1px solid ${newColors.shades.mediumGrey50};
         .radiolabel {
             text-decoration: underline;
         }
     }
-    
+
     &:focus-within{
         .tabnav &{
             outline-offset: 2px;
             outline: 3px solid ${colors.states.focus};
         }
     }
-    
-
 `
+
+export const colorThemeWhite = css`
+  background: ${newColors.primaries.kovWhite};
+`;
+
+export const colorThemeGrey = css`
+  background: ${newColors.shades.lightGrey25};
+`;
 
 export const fieldInput = css`
     -moz-appearance: none;
@@ -40,28 +46,27 @@ export const fieldInput = css`
     height: 2.4rem;
     vertical-align: middle;
     border-radius: 50%;
-    border: 2px solid ${colors.theme1.mid};
+    border: 1px solid ${newColors.primaries.fullBlue};
     background: #fff;
     margin: 0;
     margin-left: 2.4rem;
     margin-right: 1.6rem;
     flex-shrink: 0;
-    
+
     &:focus{
         outline:none!important;
-    }    
+    }
 
     &:checked{
         outline: none;
-        border: 4px solid ${colors.theme1.xDark};
-        background-color: ${colors.theme1.xDark};
+        border: 8px solid ${newColors.primaries.fullBlue};
+        background-color: ${newColors.primaries.kovWhite};
         position: relative;
-        
-        &+label{ 
+
+        &+label{
             text-decoration: underline;
             font-weight: 500;
-            color: ${colors.theme1.xDark};
-        } 
+        }
 
         &:before{
             content: "";
@@ -69,7 +74,6 @@ export const fieldInput = css`
             height: 1.6rem;
             border-radius: 50%;
             display:block;
-            border: 2px solid #fff;
             background: transparent;
             position: absolute;
             top:-2px;
@@ -88,30 +92,35 @@ export const fieldInput = css`
 `
 
 export const fieldLabel = css`
-    color: ${colors.theme1.xDark};
+    ${typography.textSmall};
+    color: ${newColors.primaries.fullBlue};
+
     width: 100%;
-    font-size: 21px;
-    line-height: 28px;
-    padding: 18px 0; 
+
+    padding: 16px 24px 16px 0;
     display: flex;
     user-select: none;
-    margin-right: ${spacing.m};
 `
 
 export const disabledStyle = css`
-    color: ${colors.theme3.mid};
-    background-color: ${colors.theme3.midLight};
+    background-color: ${newColors.shades.lightGrey50};
     cursor: inherit;
     box-shadow: none;
+
     input {
-        background-color: ${colors.theme3.light};
-        border-color: ${colors.theme3.mid};
+      border: 1px solid ${newColors.shades.mediumGrey};
+      background: ${newColors.shades.lightGrey25};
     }
+
+    label {
+      color: ${newColors.shades.kovBlack50};
+    }
+
     &:hover {
         border: 2px solid transparent;
         text-decoration: none;
     }
-    
+
     &:hover {
         .radiolabel {
             text-decoration: none;

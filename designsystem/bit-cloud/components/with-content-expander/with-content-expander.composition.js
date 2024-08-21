@@ -2,7 +2,6 @@ import React from 'react';
 import {
   globalStyles as GlobalStyles,
   CompositionFonts,
-  typography,
 } from '@konsumentverket-sverige/designsystem.utils';
 import 'date-fns';
 import { WithContentExpander } from './with-content-expander.js';

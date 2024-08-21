@@ -109,7 +109,7 @@ export const WithContentExpander = ({
           css={[
             linkStyle,
             expanded ? linkStyleExpanded : null,
-            useAlternativeStyling && expanded && !noLeftBorderRadiusStyling ? linkStyleAlternativeExpanded : null,
+            useAlternativeStyling && expanded && !useProcessStepStyling ? linkStyleAlternativeExpanded : null,
             useAlternativeStyling ? linkAlternativeStyle : null,
             useLightBlueAlternativeStyling ? linkLightBlueAlternativeStyle : null,
             useLightBlueAlternativeStyling && expanded && !noLeftBorderRadiusStyling ? linkStyleLightBlueAlternativeExpanded : null,

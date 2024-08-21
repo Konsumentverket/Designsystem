@@ -1,15 +1,19 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import { useRef } from 'react'
-import { fieldWrapper, fieldInput, fieldLabel, disabledStyle } from './input-radio.css.js'
+import {
+  fieldWrapper,
+  fieldInput,
+  fieldLabel,
+  disabledStyle,
+  colorThemeWhite,
+  colorThemeGrey,
+} from './input-radio.css.js'
 
 export const InputRadio = ({
   name,
   id,
   labelText,
-  fieldWrapperStyle,
-  fieldInputStyle,
-  fieldLabelStyle,
   onChange,
   value,
   checked,
@@ -17,20 +21,25 @@ export const InputRadio = ({
   className,
   tabIndex,
   dataQuestion,
-  dataAnswer
+  dataAnswer,
+  colorTheme = 'white',
 }) => {
   const inputRef = useRef(null);
   return <div
-    css={[fieldWrapper, disabled && disabledStyle, fieldWrapperStyle]}
+    data-comp="input-radio"
+    css={[fieldWrapper, disabled && disabledStyle]}
     className={`${checked ? "inputHasValue" : ""} ${className}`}
   >
     <label
       className="radiolabel"
-      css={[fieldLabel, fieldLabelStyle]}
+      css={[
+        fieldLabel,
+        colorTheme === 'white' ? colorThemeWhite : colorThemeGrey,
+      ]}
       htmlFor={id}>
       <input
         ref={inputRef}
-        css={[fieldInput, fieldInputStyle]}
+        css={[fieldInput]}
         id={id}
         name={name}
         type="radio"
@@ -56,4 +65,4 @@ export const InputRadio = ({
       {labelText}
     </label>
   </div>
-} 
+}
