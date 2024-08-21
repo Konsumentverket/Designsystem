@@ -14,7 +14,7 @@ export const PrerequisitesBox = ({
   return (
     <div css={[wrapperStyling]}>
       {text && (
-        <h3 css={titleStyling}>{text}</h3>
+        <h2 css={titleStyling}>{text}</h2>
       )}
       {children}
     </div>
