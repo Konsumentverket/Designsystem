@@ -5,7 +5,7 @@ export const fieldWrapper = css`
     width: 100%;
     position: relative;
     border-radius: 16px;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     display:flex;
     align-items: center;
     overflow: hidden;
@@ -117,7 +117,7 @@ export const disabledStyle = css`
     }
 
     &:hover {
-        border: 2px solid transparent;
+        border: 1px solid transparent;
         text-decoration: none;
     }
 
