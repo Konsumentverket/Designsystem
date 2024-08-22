@@ -8,9 +8,7 @@ export const wrapper = css`
   font-weight: 500;
   padding: 24px 16px;
   border-top: 1px solid ${newColors.shades.mediumBlue50};
-  border-bottom: 1px solid ${newColors.shades.mediumBlue50};
   font-family: "Roboto";
-
 
   p.listItemHeadline {
       color: ${newColors.shades.fullBlue};
@@ -28,11 +26,13 @@ export const wrapper = css`
     }
   }
 `
+
 export const disabled = css`
   pointer-events: none;
   cursor: default;
   text-decoration: none !important;
 `
+
 export const headline = css`
   font-size: 1.8rem;
   text-decoration: none;
@@ -49,8 +49,6 @@ export const headline = css`
     fill: ${newColors.shades.fullBlue};
   }
 `
-
-
 
 export const preambleStyle = css`
   font-size: 1.6rem;
