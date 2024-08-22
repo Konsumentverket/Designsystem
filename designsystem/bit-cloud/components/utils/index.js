@@ -50,6 +50,7 @@ import { MegamenuCompany } from "./Icons/SystemIcons/MegamenuCompany/MegamenuCom
 import { MonoBookmark } from "./Icons/SystemIcons/MonoBookmark/MonoBookmark";
 import { MonoArrowRight } from "./Icons/SystemIcons/MonoArrowRight/MonoArrowRight";
 import { MonoArrowRightSmall } from "./Icons/SystemIcons/MonoArrowRightSmall/MonoArrowRightSmall";
+import { MonoCopy } from "./Icons/SystemIcons/MonoCopy/MonoCopy";
 
 
 // Editor icons
@@ -172,6 +173,7 @@ export {
     MonoBookmark,
     MonoArrowRight,
     MonoArrowRightSmall,
+    MonoCopy,
 
 
     // System icons

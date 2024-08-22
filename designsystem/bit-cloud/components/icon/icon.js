@@ -49,6 +49,7 @@ import {
   MonoBookmark,
   MonoArrowRight,
   MonoArrowRightSmall,
+  MonoCopy,
 
   // Editor Icons
 
@@ -150,6 +151,7 @@ const systemIconDefinitions = {
   MonoBookmark,
   MonoArrowRight,
   MonoArrowRightSmall,
+  MonoCopy,
 };
 
 const editorIconDefinitions = {
