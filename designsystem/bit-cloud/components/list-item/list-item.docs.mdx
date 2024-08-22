@@ -4,6 +4,12 @@ description: A ListItem component.
 
 import { ListItem } from './list-item';
 
+
+### Component identifier
+```js
+data-comp="listitem"
+```
+
 ## Basic usage
 
 Use the list item component:
@@ -15,8 +21,9 @@ Use the list item component:
 ```js live
 <ListItem
     type="Lorem"
-    reviewedDate={new Date().toISOString()}
+    updatedAt={new Date().toISOString()}
+    publishedAt={new Date().toISOString()}
     href="#"
     headline="Lorem ipsum"
-    bottomText="Lorem: lorem ipsum" />
+    preamble="Lorem: lorem ipsum" />
 ```

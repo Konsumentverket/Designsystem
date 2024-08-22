@@ -1,88 +1,95 @@
 import { css } from '@emotion/core';
-import { colors, spacing } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, spacing } from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapper = css`
   width: 100%;
   display: block;
   text-decoration: none;
   font-weight: 500;
-  margin-left: -${spacing.xs};
-  margin-right: -${spacing.xs};
-  padding-left: ${spacing.xs};
-  padding-right: ${spacing.xs};
+  padding: 24px 16px;
+  border-top: 1px solid ${newColors.shades.mediumBlue50};
+  border-bottom: 1px solid ${newColors.shades.mediumBlue50};
+  font-family: "Roboto";
 
-  p {
-    color: ${colors.theme3.dark};
-  }
+
   p.listItemHeadline {
-      color: ${colors.theme1.mid};
+      color: ${newColors.shades.fullBlue};
   }
 
   &:hover {
-    background-color: ${colors.theme1.midLight};
     p {
       text-decoration: none;
     }
   }
   &:active {
-    background-color: ${colors.theme1.midLight};
-    .listItemHeadline {
-      color: ${colors.theme1.xDark};
-    }
+
     p {
       text-decoration: none;
     }
   }
-  padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
 `
-export const news = css`
-  font-size: 1.4rem;
-  padding-bottom: 0.8rem;
-  line-height: 2.4rem;
-  color: ${colors.theme3.dark};
-`
-
 export const disabled = css`
   pointer-events: none;
   cursor: default;
   text-decoration: none !important;
 `
-
-export const headlineDisabled = css`
-  color: ${colors.theme3.midDark} !important;
-  text-decoration: none !important;
-`
 export const headline = css`
-  font-size: ${spacing.m};
-  padding-bottom: ${spacing.xs};
-  text-decoration: underline;
-  font-weight: 700;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.4;
   display: block;
-  padding-top: .4rem;
+  margin-bottom: 8px;
+  color: ${newColors.shades.fullBlue};
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-left: 8px;
+    fill: ${newColors.shades.fullBlue};
+  }
 `
+
+
 
 export const preambleStyle = css`
-  padding-bottom: .8rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
-  color: ${colors.theme3.dark};
-`
-export const bottomText = css`
-  color: ${colors.theme3.mid};
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  padding-bottom: 0;
+  line-height: 1.5;
+  margin-bottom: 16px;
 `
 
-export const invertedLink = css`
-  &:hover {
-    background-color: ${colors.common.white};
+export const dateWrapper = css`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0;
+`
+
+export const typeStyle = css`
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: ${newColors.shades.kovBlack50};
+  padding-right: 16px;
+  margin-bottom: 0;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 16px;
+    background-color: ${newColors.shades.kovBlack50};
+    margin-left: 16px;
   }
-  &:active {
-    background-color: ${colors.common.white};
-    h3 {
-      color: ${colors.theme1.xDark};
-    }
-  }
+`
+
+export const dateStyle = css`
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: ${newColors.shades.kovBlack50};
+  margin-bottom: 0;
 `

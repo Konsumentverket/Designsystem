@@ -3,34 +3,32 @@ import { jsx } from '@emotion/core'
 import React from "react"
 import * as css from "./list-item.css.js"
 import { DateFormat } from '@konsumentverket-sverige/designsystem.utils'
+import { Icon } from '@konsumentverket-sverige/designsystem.icon'
 
 export const ListItem = ({
-  children,
   headline,
   preamble,
-  bottomText,
   type,
-  reviewedDate,
+  updatedAt, publishedAt,
   href,
-  headlineLevel,
-  headlineStyleLevel,
-  style,
-  invertedLinkStyle,
   onClick,
 }) => <a
-  css={[css.wrapper, invertedLinkStyle && css.invertedLink, style]}
+  css={[css.wrapper]}
   className='noStyle'
   href={href}
   onClick={onClick}
+  data-comp="listitem"
 >
-    {type && <p css={css.news}>{type.toUpperCase()}
-      {reviewedDate && <>: <DateFormat date={reviewedDate} showDate={true} /></>}</p>}
     <p
       css={css.headline}
       className="listItemHeadline">
-      {headline}
+      {headline} <Icon icon="MonoArrowRightSmall" style={css.iconStyle} />
     </p>
-    {children}
     {preamble && <p css={css.preambleStyle}>{preamble}</p>}
-    {bottomText && <p css={css.bottomText}>{bottomText}</p>}
+
+    <div css={css.dateWrapper}>
+      { type && <p css={css.typeStyle}>{type}</p> }
+      { updatedAt && <p css={css.dateStyle}> Uppdaterad den <DateFormat date={updatedAt} showDate={true} /></p>}
+      { !updatedAt && publishedAt && <p css={css.dateStyle}><DateFormat date={publishedAt} showDate={true} /></p>}
+    </div>
   </a>
