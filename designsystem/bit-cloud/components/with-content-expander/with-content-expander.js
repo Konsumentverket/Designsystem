@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Typography } from '@konsumentverket-sverige/designsystem.typography';
-import { ArrowFat } from '@konsumentverket-sverige/designsystem.utils';
+import { MonoArrowDown } from '@konsumentverket-sverige/designsystem.utils';
 import { EditorIcon } from '@konsumentverket-sverige/designsystem.editor-icon';
 
 import {
@@ -27,6 +27,7 @@ import {
   linkStyleExpanded,
   linkStyleAlternativeExpanded,
   linkStyleLightBlueAlternativeExpanded,
+  linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
   chevronStyle,
   chevronExpandedStyle,
   expandedAreaStyle,
@@ -140,7 +141,7 @@ export const WithContentExpander = ({
               </div>
             </div>
             {!disabled && (
-              <ArrowFat
+              <MonoArrowDown
                 aria-hidden="true"
                 className="expand-icon"
                 style={[chevronStyle, expanded ? chevronExpandedStyle : null]}

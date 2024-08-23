@@ -199,12 +199,12 @@ export const linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius = css`
 
 export const chevronStyle = css`
   fill: ${newColors.primaries.fullBlue};
-  transform: rotate(90deg);
+  transform: rotate(0);
   width: 18px;
 `;
 
 export const chevronExpandedStyle = css`
-  transform: rotate(-90deg);
+  transform: rotate(-180deg);
 `;
 
 export const expandedAreaStyle = css`
