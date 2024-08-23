@@ -38,6 +38,7 @@ import {
   linkMini,
   linkSmall,
   link,
+  linkBodyMedium,
   linkLarge,
   linkHover,
   linkFocus,
@@ -123,30 +124,36 @@ export const typography = () => {
               Small</a>
             <a css={link} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
                href="#">Link</a>
+            <a css={linkBodyMedium} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
+               href="#">Link Body Medium</a>
             <a css={linkLarge} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'} href="#">Link
               Large</a>
           </div>
           <div style={{display: 'flex', flexDirection: 'column'}}>
             <p>Hover/Active</p>
             <a css={[linkMini, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
-               href="#">Link Small</a>
+               href="#">Link Mini</a>
             <a css={[linkSmall, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}}
                className={'noStyle'} href="#">Link Small</a>
             <a css={[link, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
                href="#">Link</a>
+            <a css={[linkBodyMedium, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
+               href="#">Link Body Medium</a>
             <a css={[linkLarge, linkHover]} style={{marginBottom: '12px', alignSelf: 'flex-start'}}
-               className={'noStyle'} href="#">Link Small</a>
+               className={'noStyle'} href="#">Link Large</a>
           </div>
           <div style={{display: 'flex', flexDirection: 'column'}}>
             <p>Focus</p>
             <a css={[linkMini, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
-               href="#">Link Small</a>
+               href="#">Link Mini</a>
             <a css={[linkSmall, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}}
                className={'noStyle'} href="#">Link Small</a>
             <a css={[link, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
                href="#">Link</a>
+            <a css={[linkBodyMedium, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}} className={'noStyle'}
+               href="#">Link Body Medium</a>
             <a css={[linkLarge, linkFocus]} style={{marginBottom: '12px', alignSelf: 'flex-start'}}
-               className={'noStyle'} href="#">Link Small</a>
+               className={'noStyle'} href="#">Link Large</a>
           </div>
         </div>
         <div style={sectionTitle}>Simple buttons</div>

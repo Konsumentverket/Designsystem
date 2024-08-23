@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { newColors } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, typography } from '@konsumentverket-sverige/designsystem.utils';
 
 const disabled = css`
     color: ${newColors.secondaries.fullGrey};
@@ -84,6 +84,7 @@ export const linkStyles = css`
    background: none;
    text-decoration: underline;
    color: ${newColors.primaries.fullBlue};
+  ${typography.linkBodyMedium};
 
    svg {
     fill: ${newColors.kovBlack};
