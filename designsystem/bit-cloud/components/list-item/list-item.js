@@ -22,7 +22,7 @@ export const ListItem = ({
     <p
       css={css.headline}
       className="listItemHeadline">
-      {headline} <Icon icon="MonoArrowRightSmall" style={css.iconStyle} />
+      {headline} <Icon icon="MonoArrowRightSmall" />
     </p>
     {preamble && <p css={css.preambleStyle}>{preamble}</p>}
 
