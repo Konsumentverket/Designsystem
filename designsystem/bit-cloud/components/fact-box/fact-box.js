@@ -11,6 +11,7 @@ export const FactBox = ({
   children,
   headline,
   content,
+  tag = true,
 }) => {
 
   if (!content && !children) {
@@ -18,13 +19,16 @@ export const FactBox = ({
   }
 
   return (
-    <div css={wrapperStyling}>
-      <div css={iconWrapper}>
-        <Icon
-          icon="MonoBookmark"
-          style={iconColor}
-        />
-      </div>
+    <div css={wrapperStyling} data-comp="fact-box">
+      {tag && (
+          <div css={iconWrapper}>
+            <Icon
+              icon="MonoBookmark"
+              style={iconColor}
+            />
+          </div>
+        )
+      }
       {headline && (
         <h3 css={titleStyling}>{headline}</h3> // Use the SubHeading component instead?
       )}
