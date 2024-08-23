@@ -226,6 +226,17 @@ export const linkSmall = css`
   }
 `;
 
+export const linkBodyMedium = css`
+  ${link};
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 32px;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 1.8rem;
+  }
+`;
+
 export const linkLarge = css`
   ${link};
   font-size: 2rem;

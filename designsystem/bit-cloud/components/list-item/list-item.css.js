@@ -15,8 +15,14 @@ export const wrapper = css`
   }
 
   &:hover {
+    background-color: ${newColors.shades.lightBlue};
+
     p {
       text-decoration: none;
+    }
+
+    p.listItemHeadline {
+      text-decoration: underline;
     }
   }
   &:active {
