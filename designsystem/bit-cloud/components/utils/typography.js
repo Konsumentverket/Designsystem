@@ -406,10 +406,10 @@ export const richTextHeadingSmall = css`
 
 export const ulListSpacing = css`
   margin: 32px 0;
-  padding: 0 8px;
+  padding: 0 0 0 8px;
 
   @media(min-width: ${breakpoints.m}){
-    padding: 0 16px;
+    padding: 0 0 0 16px;
   }
 `;
 
