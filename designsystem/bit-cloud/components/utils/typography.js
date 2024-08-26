@@ -416,6 +416,10 @@ export const ulListSpacing = css`
 export const ulStyling = css`
   ${ulListSpacing};
 
+  > :last-child {
+    margin-bottom: 0;
+  }
+
   li {
     display: flex;
     align-items: baseline;
