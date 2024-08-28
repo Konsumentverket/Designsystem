@@ -39,13 +39,8 @@ export const wrapperStyling = css`
                 width: 9px;
                 height: 9px;
                 display: inline-block;
-                margin: 0 16px 2px 8px;
                 border-radius: 50%;
                 background-color: ${newColors.secondaries.fullGrey};
-
-                ${medium} {
-                    margin: 0 16px 2px 16px;
-                }
             }
         }
     }
