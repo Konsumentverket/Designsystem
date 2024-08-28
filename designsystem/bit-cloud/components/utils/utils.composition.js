@@ -160,38 +160,38 @@ export const typography = () => {
         <div style={{display: 'grid', gap: '20px', marginBottom: '24px', gridTemplateColumns: '1fr 1fr 1fr'}}>
           <div>
             <p>Default</p>
-            <button style={{marginBottom: '12px'}} css={clickMini} className={'noStyle'}>Click Mini</button>
-            <button style={{marginBottom: '12px'}} css={clickSmall} className={'noStyle'}>Click Small</button>
-            <button style={{marginBottom: '12px'}} css={clickMedium} className={'noStyle'}>Click Medium</button>
-            <button style={{marginBottom: '12px'}} css={clickMediumAlt} className={'noStyle'}>Click Medium Alt</button>
-            <button style={{marginBottom: '12px'}} css={clickLarge} className={'noStyle'}>Click Large</button>
+            <button style={{marginBottom: '12px', display: 'block'}} css={clickMini} className={'noStyle'}>Click Mini</button>
+            <button style={{marginBottom: '12px', display: 'block'}} css={clickSmall} className={'noStyle'}>Click Small</button>
+            <button style={{marginBottom: '12px', display: 'block'}} css={clickMedium} className={'noStyle'}>Click Medium</button>
+            <button style={{marginBottom: '12px', display: 'block'}} css={clickMediumAlt} className={'noStyle'}>Click Medium Alt</button>
+            <button style={{marginBottom: '12px', display: 'block'}} css={clickLarge} className={'noStyle'}>Click Large</button>
           </div>
           <div>
             <p>Hover/Active</p>
-            <button style={{marginBottom: '12px'}} css={[clickMini, clickHover]} className={'noStyle'}>Click Mini
+            <button style={{marginBottom: '12px', display: 'block'}} css={[clickMini, clickHover]} className={'noStyle'}>Click Mini
             </button>
-            <button style={{marginBottom: '12px'}} css={[clickSmall, clickHover]} className={'noStyle'}>Click Small
+            <button style={{marginBottom: '12px', display: 'block'}} css={[clickSmall, clickHover]} className={'noStyle'}>Click Small
             </button>
-            <button style={{marginBottom: '12px'}} css={[clickMedium, clickHover]} className={'noStyle'}>Click Medium
+            <button style={{marginBottom: '12px', display: 'block'}} css={[clickMedium, clickHover]} className={'noStyle'}>Click Medium
             </button>
-            <button style={{marginBottom: '12px'}} css={[clickMediumAlt, clickHover]} className={'noStyle'}>Click Medium
+            <button style={{marginBottom: '12px', display: 'block'}} css={[clickMediumAlt, clickHover]} className={'noStyle'}>Click Medium
               Alt
             </button>
-            <button style={{marginBottom: '12px'}} css={[clickLarge, clickHover]} className={'noStyle'}>Click Large
+            <button style={{marginBottom: '12px', display: 'block'}} css={[clickLarge, clickHover]} className={'noStyle'}>Click Large
             </button>
           </div>
           <div>
             <p>Focus</p>
-            <button style={{marginBottom: '12px'}} css={[clickMini, clickFocus]} className={'noStyle'}>Click Mini
+            <button style={{marginBottom: '12px', display: 'block'}} css={[clickMini, clickFocus]} className={'noStyle'}>Click Mini
             </button>
-            <button style={{marginBottom: '12px'}} css={[clickSmall, clickFocus]} className={'noStyle'}>Click Small
+            <button style={{marginBottom: '12px', display: 'block'}} css={[clickSmall, clickFocus]} className={'noStyle'}>Click Small
             </button>
-            <button style={{marginBottom: '12px'}} css={[clickMedium, clickFocus]} className={'noStyle'}>Click Medium
+            <button style={{marginBottom: '12px', display: 'block'}} css={[clickMedium, clickFocus]} className={'noStyle'}>Click Medium
             </button>
-            <button style={{marginBottom: '12px'}} css={[clickMediumAlt, clickFocus]} className={'noStyle'}>Click Medium
+            <button style={{marginBottom: '12px', display: 'block'}} css={[clickMediumAlt, clickFocus]} className={'noStyle'}>Click Medium
               Alt
             </button>
-            <button style={{marginBottom: '12px'}} css={[clickLarge, clickFocus]} className={'noStyle'}>Click Large
+            <button style={{marginBottom: '12px', display: 'block'}} css={[clickLarge, clickFocus]} className={'noStyle'}>Click Large
             </button>
           </div>
         </div>

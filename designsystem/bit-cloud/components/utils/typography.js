@@ -220,6 +220,7 @@ export const linkMini = css`
 export const linkSmall = css`
   ${link};
   font-size: 1.4rem;
+  font-weight: 500;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.6rem;
