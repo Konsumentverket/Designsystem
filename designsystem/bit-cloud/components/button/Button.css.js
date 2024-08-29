@@ -25,6 +25,7 @@ export const buttonStyle = css`
     box-sizing: border-box;
     cursor:pointer;
     background-color: ${newColors.primaries.fullBlue};
+    box-shadow: 0px 2px 12px 8px rgba(22, 34, 89, 0.10);
 
     svg {
         fill: ${newColors.kovWhite};
