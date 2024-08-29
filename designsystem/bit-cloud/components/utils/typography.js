@@ -109,8 +109,7 @@ export const preamble = css`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  word-break: break-word;
-  hyphens: auto;
+  word-break: normal;
   max-width: 744px;
   margin-bottom: 16px;
 
@@ -126,8 +125,7 @@ export const paragraph = css`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  word-break: break-word;
-  hyphens: auto;
+  word-break: normal;
   margin-bottom: 14px;
 
   @media (min-width: ${breakpoints.m}) {
@@ -152,8 +150,7 @@ export const textSmall = css`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  word-break: break-word;
-  hyphens: auto;
+  word-break: normal;
 `;
 
 export const textSmallAlt = css`
@@ -166,8 +163,7 @@ export const textMini = css`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  word-break: break-word;
-  hyphens: auto;
+  word-break: normal;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.4rem;
@@ -265,8 +261,7 @@ const baseClick = css`
   font-weight: 500;
   line-height: 150%;
   text-align: left;
-  word-break: break-word;
-  hyphens: auto;
+  word-break: normal;
 
   &:active,
   &:hover {
