@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx } from '@emotion/core'
-import { wrapperStyling, titleStyling, iconWrapper, iconColor } from './fact-box.css.js'
+import { wrapperStyling, tagMargin, titleStyling, iconWrapper, iconColor } from './fact-box.css.js'
 import {
   Icon
 } from '@konsumentverket-sverige/designsystem.icon';
@@ -19,7 +19,7 @@ export const FactBox = ({
   }
 
   return (
-    <div css={wrapperStyling} data-comp="fact-box">
+    <div css={[wrapperStyling, tag ? tagMargin : null]} data-comp="fact-box">
       {tag && (
           <div css={iconWrapper}>
             <Icon

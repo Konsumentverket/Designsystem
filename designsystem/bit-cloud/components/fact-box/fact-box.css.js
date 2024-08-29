@@ -46,6 +46,14 @@ export const wrapperStyling = css`
     }
 `;
 
+export const tagMargin = css`
+  margin-top: calc(16px + 13px);
+
+  ${medium} {
+    margin-top: calc(24px + 13px);
+  }
+`;
+
 export const titleStyling = css`
     color: ${newColors.primaries.kovBlack};
     font-size: 2.4rem;
