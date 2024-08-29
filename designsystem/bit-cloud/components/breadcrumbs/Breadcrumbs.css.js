@@ -4,7 +4,7 @@ import {spacing, newColors, breakpoints, containerStyles} from '@konsumentverket
 export const breadcrumbStyle = css`
   ${containerStyles};
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   svg {
     width: 1.2rem;
