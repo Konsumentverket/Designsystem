@@ -35,7 +35,7 @@ export const iconCardStyle = css`
     position: relative;
     border-radius: 16px;
     border: 1px solid ${newColors.shades.fullBlue};
-    box-shadow: 0px 2px 12px 8px rgba(22, 34, 89, 0.10);
+    box-shadow: 0px 3px 10px 3px rgba(22, 34, 89, 0.07);
     height: 72px;
 
     span {
@@ -56,17 +56,7 @@ export const iconCardStyle = css`
 
     &:active
     {
-        background-color: ${newColors.shades.fullBlue};
-        box-shadow: none;
-
-        span {
-            color:#fff;
-        }
-
-        svg path,
-        svg {
-            fill: #fff;
-        }
+        background-color: ${newColors.shades.mediumBlue50};
     }
 
     ${medium} {

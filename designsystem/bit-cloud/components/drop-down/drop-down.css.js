@@ -6,7 +6,7 @@ export const wrapperStyle = css`
     border: 1px solid ${newColors.shades.fullBlue};
     background-color: ${newColors.kovWhite};
     border-radius: ${spacing.s} ${spacing.s} ${spacing.s} ${spacing.s};
-    box-shadow: 0px 2px 12px 8px rgba(22, 34, 89, 0.10);
+    box-shadow: 0px 3px 10px 3px rgba(22, 34, 89, 0.07);
 `
 
 export const wrapperExpandedStyle = css`
@@ -31,7 +31,7 @@ export const itemsWrapperExpandedStyle = css`
     left: 0;
     width: 100%;
     padding: 56px ${spacing.s} ${spacing.s} ${spacing.s};
-    box-shadow: 0px 2px 12px 8px rgba(22, 34, 89, 0.10);
+    box-shadow: 0px 3px 10px 3px rgba(22, 34, 89, 0.07);
     outline: 1px solid ${newColors.shades.fullBlue};
     background-color: ${newColors.kovWhite};
     border-radius: ${spacing.s} ${spacing.s} ${spacing.s} ${spacing.s};
