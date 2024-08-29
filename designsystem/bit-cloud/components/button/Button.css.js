@@ -99,7 +99,7 @@ export const linkStylesSmall = css`
   ${linkStyles}
   font-size: 1.6rem !important;
   svg {
-        width: 1.8rem !important;
+        max-width: 1.8rem !important;
         height: auto;
         margin-left: .8rem !important;
         margin-right: .8rem !important;
@@ -114,7 +114,7 @@ export const buttonIconLeft = css`
     align-items: center;
 
     svg {
-        width: 1.8rem;
+        max-width: 1.8rem;
         height: auto;
         margin-right: 1.6rem;
      }
@@ -126,7 +126,7 @@ export const buttonIconRight = css`
     align-items: center;
 
     svg {
-        width: 1.8rem;
+        max-width: 1.8rem;
         height: auto;
         margin-left: 1.6rem;
     }
