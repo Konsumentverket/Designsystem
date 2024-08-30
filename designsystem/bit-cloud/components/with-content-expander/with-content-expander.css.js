@@ -214,6 +214,7 @@ export const chevronExpandedStyle = css`
 export const expandedAreaStyle = css`
   background-color: ${newColors.kovWhite};
   overflow: hidden;
+  visibility: hidden;
   padding: 0;
   height: 0;
 `;
@@ -231,6 +232,7 @@ export const expandedAreaLightBlueAlternativeStyle = css`
 `;
 
 export const expandedAreaExpandedStyle = css`
+  visibility: visible;
   padding: ${spacing.s} ${spacing.s} ${spacing.l} ${spacing.s};
   height: auto;
   border-radius: 0 0 ${spacing.s} ${spacing.s};

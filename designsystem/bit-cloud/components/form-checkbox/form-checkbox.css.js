@@ -55,7 +55,7 @@ export const checkboxStyle = css`
     }
   }
 
-  .checkbox:focus + .checkbox-label {
+  .checkbox:focus-within + .checkbox-label {
     outline: ${colors.states.focus} solid 2px;
     outline-offset: 2px;
     box-shadow: none;

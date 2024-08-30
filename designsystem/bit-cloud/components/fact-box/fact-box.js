@@ -30,7 +30,7 @@ export const FactBox = ({
         )
       }
       {headline && (
-        <h3 css={titleStyling}>{headline}</h3> // Use the SubHeading component instead?
+        <h2 css={titleStyling}>{headline}</h2>
       )}
       {children}
       {content}

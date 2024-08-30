@@ -45,6 +45,7 @@ export const fieldStyle = css`
     flex-shrink: 0;
     background: #fff;
     border-radius: 2px;
+    box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.10) inset;
     border: 1px solid ${newColors.shades.fullBlue};
     display: inline-block;
     width: 16px;
@@ -60,7 +61,7 @@ export const fieldStyle = css`
     }
   }
 
-  .radio:focus + .radio-label {
+  .radio:focus-within + .radio-label {
     outline: ${colors.states.focus} solid 2px;
     outline-offset: 2px;
     box-shadow: none;
