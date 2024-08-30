@@ -56,6 +56,10 @@ export const buttonStyle = css`
 
     ${ iconStyle }
 
+    &:focus {
+      outline-offset: -4px;
+    }
+
     &:hover, &.selectedButtonStyle {
         background-color: ${newColors.shades.kovBlue75};
         text-decoration: underline;
