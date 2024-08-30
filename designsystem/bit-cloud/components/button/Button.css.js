@@ -25,6 +25,7 @@ export const buttonStyle = css`
     box-sizing: border-box;
     cursor:pointer;
     background-color: ${newColors.primaries.fullBlue};
+    box-shadow: 0px 2px 12px 8px rgba(22, 34, 89, 0.10);
 
     svg {
         fill: ${newColors.kovWhite};
@@ -84,7 +85,8 @@ export const linkStyles = css`
    background: none;
    text-decoration: underline;
    color: ${newColors.primaries.fullBlue};
-  ${typography.linkBodyMedium};
+   ${typography.linkBodyMedium};
+   box-shadow: none;
 
    svg {
     fill: ${newColors.kovBlack};
@@ -99,7 +101,7 @@ export const linkStylesSmall = css`
   ${linkStyles}
   font-size: 1.6rem !important;
   svg {
-        width: 1.8rem !important;
+        max-width: 1.8rem !important;
         height: auto;
         margin-left: .8rem !important;
         margin-right: .8rem !important;
@@ -114,7 +116,7 @@ export const buttonIconLeft = css`
     align-items: center;
 
     svg {
-        width: 1.8rem;
+        max-width: 1.8rem;
         height: auto;
         margin-right: 1.6rem;
      }
@@ -126,7 +128,7 @@ export const buttonIconRight = css`
     align-items: center;
 
     svg {
-        width: 1.8rem;
+        max-width: 1.8rem;
         height: auto;
         margin-left: 1.6rem;
     }
