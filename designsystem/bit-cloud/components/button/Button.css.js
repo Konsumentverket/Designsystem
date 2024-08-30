@@ -85,7 +85,8 @@ export const linkStyles = css`
    background: none;
    text-decoration: underline;
    color: ${newColors.primaries.fullBlue};
-  ${typography.linkBodyMedium};
+   ${typography.linkBodyMedium};
+   box-shadow: none;
 
    svg {
     fill: ${newColors.kovBlack};
