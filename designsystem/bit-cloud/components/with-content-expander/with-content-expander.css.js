@@ -112,6 +112,10 @@ export const linkStyle = css`
     background-color: ${newColors.shades.lightBlue};
     box-shadow: inset 0 0 0 1px ${newColors.shades.mediumBlue};
   }
+
+  &:focus-within {
+    outline-offset: -4px;
+  }
 `;
 
 export const linkAlternativeStyle = css`
@@ -131,14 +135,14 @@ export const linkAlternativeStyle = css`
 export const linkLightBlueAlternativeStyle = css`
   background-color: ${newColors.primaries.lightBlue};
 
-    &:hover {
+  &:hover {
     background-color: ${newColors.shades.lightBlue};
     box-shadow: none;
   }
 `;
 
 export const linkStyleExpanded = css`
-  border-radius: 0;
+  border-radius: ${spacing.s} ${spacing.s} 0 0;
 
   &:after {
     content: '';

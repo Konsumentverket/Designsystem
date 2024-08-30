@@ -34,7 +34,7 @@ export const FocusCard = ({
       <div css={[focusCardIconSectionStyle, !dark && focusCardIconDarkSectionStyle]} className="focusCardIconSection">
         <Icon
           title={"Pil till höger"}
-          icon="ChevronRight"
+          icon="MonoArrowRight"
           css={focusCardChevronIconStyle}
         />
       </div>
