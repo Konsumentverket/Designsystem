@@ -25,7 +25,7 @@ export const buttonStyle = css`
     box-sizing: border-box;
     cursor:pointer;
     background-color: ${newColors.primaries.fullBlue};
-    box-shadow: 0px 2px 12px 8px rgba(22, 34, 89, 0.10);
+    box-shadow: 0px 3px 10px 3px rgba(22,34,89,0.07);
 
     svg {
         fill: ${newColors.kovWhite};
@@ -49,7 +49,7 @@ export const secondaryStyle = css`
     background-color: transparent;
     color: ${newColors.primaries.fullBlue};
     box-shadow: inset 0px 0px 0px 1px ${newColors.primaries.fullBlue},
-            0px 2px 12px 8px rgba(22, 34, 89, 0.10);
+            0px 3px 10px 3px rgba(22,34,89,0.07);
 
 
     svg {
@@ -60,7 +60,7 @@ export const secondaryStyle = css`
         text-decoration: underline;
         border-color: ${newColors.primaries.fullBlue};
         box-shadow: inset 0 0 0 2px ${newColors.primaries.fullBlue},
-        0px 2px 12px 8px rgba(22, 34, 89, 0.10);
+        0px 3px 10px 3px rgba(22,34,89,0.07);
     }
     &:active {
         color: ${newColors.kovWhite};
