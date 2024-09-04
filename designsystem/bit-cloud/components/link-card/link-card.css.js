@@ -121,14 +121,31 @@ export const mainLinkStyle = css`
     }
 
     &:active {
-        color: ${newColors.kovWhite}!important;
+      background-color: ${newColors.shades.mediumBlue50} !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
 
         h2, span {
-            color: ${newColors.kovWhite}!important;
+          color: ${newColors.primaries.fullBlue} !important;
         }
         svg{
-            fill: ${newColors.kovWhite}!important;
+          fill: ${newColors.shades.fullBlue} !important;
         }
+
+        .noLinkChildren & {
+          &:before {
+            position: absolute;
+            content: '';
+            background-color: ${newColors.shades.mediumBlue50};
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+            border-radius: 16px;
+            border: 1px solid ${newColors.primaries.fullBlue};
+         }
+       }
     }
 
     .tabnav &:focus {
@@ -177,12 +194,17 @@ export const childrenWrapper = css`
         max-width: 100%;
         width: 100%;
         margin-right: 24px;
+        margin-bottom: 0;
 
         &:hover {
             border-radius: 2px !important;
             background-color: ${newColors.shades.lightBlue};
         }
 
+        &:active {
+            border-radius: 2px !important;
+            background-color: ${newColors.shades.mediumBlue50};
+        }
 
         svg {
           margin-right: 8px;
@@ -201,8 +223,6 @@ export const showAllLink = css`
     align-self: flex-end;
 `
 
-
-
 export const customFontSize = css`
     font-size: 1.6rem;
     line-height: 1.5;
@@ -215,8 +235,3 @@ export const customFontSize = css`
     }
 `
 
-export const linkStyle = css`
-  a {
-    margin: 0;
-  }
-`
