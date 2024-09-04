@@ -48,7 +48,9 @@ export const buttonStyle = css`
 export const secondaryStyle = css`
     background-color: transparent;
     color: ${newColors.primaries.fullBlue};
-    box-shadow: inset 0px 0px 0px 1px ${newColors.primaries.fullBlue};
+    box-shadow: inset 0px 0px 0px 1px ${newColors.primaries.fullBlue},
+            0px 2px 12px 8px rgba(22, 34, 89, 0.10);
+
 
     svg {
         fill: ${newColors.primaries.fullBlue};
@@ -57,7 +59,8 @@ export const secondaryStyle = css`
         background-color: ${newColors.shades.lightBlue50};
         text-decoration: underline;
         border-color: ${newColors.primaries.fullBlue};
-        box-shadow: inset 0 0 0 2px ${newColors.primaries.fullBlue};
+        box-shadow: inset 0 0 0 2px ${newColors.primaries.fullBlue},
+        0px 2px 12px 8px rgba(22, 34, 89, 0.10);
     }
     &:active {
         color: ${newColors.kovWhite};
