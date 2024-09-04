@@ -243,14 +243,14 @@
     "tag": {
         "name": "tag",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.59",
+        "version": "0.0.60",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/tag"
     },
     "tag-block": {
         "name": "tag-block",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.59",
+        "version": "0.0.60",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/tag-block"
     },

@@ -6,13 +6,10 @@ export const tagStyle = css`
     border-radius: ${spacing.l};
     color: ${newColors.shades.fullBlue};
     padding: ${spacing.xs} ${spacing.s};
-    display: table;
     font-size: 1.6rem;
     line-height: 1.5;
     display: inline-block;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
+    text-decoration: none;
 
     &:hover {
         background-color: ${newColors.shades.lightBlue};
