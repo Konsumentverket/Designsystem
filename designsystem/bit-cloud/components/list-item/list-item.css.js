@@ -1,21 +1,25 @@
 import { css } from '@emotion/core';
-import { newColors } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapper = css`
   width: 100%;
   display: block;
   text-decoration: none;
   font-weight: 500;
-  padding: 24px 16px;
+  padding: 16px 8px;
   border-top: 1px solid ${newColors.shades.mediumBlue50};
   font-family: "Roboto";
+
+  @media (min-width: ${breakpoints.m}) {
+    padding: 24px 16px;
+  }
 
   p.listItemHeadline {
       color: ${newColors.shades.fullBlue};
   }
 
   &:hover {
-    background-color: ${newColors.shades.lightBlue};
+    background-color: ${newColors.shades.lightBlue50};
 
     p {
       text-decoration: none;
@@ -26,7 +30,7 @@ export const wrapper = css`
     }
   }
   &:active {
-
+    background-color: ${newColors.shades.lightBlue};
     p {
       text-decoration: none;
     }
@@ -40,15 +44,20 @@ export const disabled = css`
 `
 
 export const headline = css`
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-decoration: none;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.5;
   display: block;
   margin-bottom: 8px;
   color: ${newColors.shades.fullBlue};
   display: flex;
   align-items: center;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
 
   svg {
     margin-left: 8px;
