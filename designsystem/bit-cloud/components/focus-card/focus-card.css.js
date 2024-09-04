@@ -15,16 +15,23 @@ export const focusCardStyle = css`
   // transition: background-color 0.15s ease, border 0.15s ease;
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     background-color: ${newColors.shades.lightBlue};
     border: 1px solid ${newColors.shades.fullBlue};
   }
 
-  &:hover .focusCardIconSection,
-  &:focus .focusCardIconSection,
-  &:active .focusCardIconSection {
+  &:active {
     background-color: ${newColors.shades.mediumBlue50};
+    border: 1px solid ${newColors.shades.fullBlue};
+  }
+
+  &:hover .focusCardIconSection,
+  &:focus .focusCardIconSection {
+    background-color: ${newColors.shades.mediumBlue50};
+  }
+
+  &:active .focusCardIconSection {
+    background-color: ${newColors.shades.lightBlue};
   }
 
   &:hover .focusCardIconSection::after,
@@ -56,7 +63,7 @@ export const focusCardTextSectionStyle = css`
 export const focusCardTitleStyle = css`
   color: ${newColors.primaries.fullBlue};
   font-size: 2.0rem;
-  margin: 0 0 ${spacing.m} 0;
+  margin: 0 0 ${spacing.s} 0;
   font-weight: 700;
   line-height: 1.5;
   text-decoration: underline;
@@ -67,6 +74,7 @@ export const focusCardTitleStyle = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
+    margin: 0 0 ${spacing.m} 0;
   }
 `;
 
@@ -75,14 +83,15 @@ export const focusCardTextStyle = css`
   line-height: 1.5;
   color: ${newColors.kovBlack};
   padding: 0;
+  margin-bottom: 0;
 `;
 
 export const focusCardIconSectionStyle = css`
   width: 92px;
   position: absolute;
-  top: 50%; 
+  top: 50%;
   right: -46px;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;

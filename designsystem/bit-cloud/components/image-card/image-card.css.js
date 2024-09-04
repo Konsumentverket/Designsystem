@@ -49,6 +49,16 @@ export const linkWrapper = css`
       background-color: ${newColors.shades.lightBlue};
     }
   }
+
+  &:active {
+    background-color: ${newColors.shades.mediumBlue50};
+    border: 1px solid ${newColors.primaries.fullBlue};
+
+    & > div {
+      background-color: ${newColors.shades.mediumBlue50};
+    }
+  }
+
   &:active h3 > svg {
     fill: ${newColors.primaries.fullBlue};
   }

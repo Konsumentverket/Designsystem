@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { newColors } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
 
 export const ctaWrapper = css`
@@ -25,6 +25,12 @@ export const ctaWrapper = css`
       fill: ${newColors.shades.fullBlue};
     }
   }
+
+  a:not(.button--linkstyle) {
+   @media (max-width: 450px) {
+      width: 100%;
+    }
+  }
 `
 
 export const focusHeadline = css`
@@ -36,7 +42,7 @@ export const focusHeadline = css`
 
   @media (min-width: 650px) {
     font-size: 2.8rem;
-    line-height: 1.5;
+    line-height: 1.4;
     margin-bottom: 3.2rem;
   }
 `
