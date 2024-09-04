@@ -1,15 +1,18 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
-import { h1Style, h2Style, h3Style, h4Style, h5Style, h6Style, headingLineStyle, richTextHeadingBig, richTextHeadingMedium, richTextHeadingSmall} from './sub-heading.css.js'
+import { jsx } from '@emotion/core';
+import {
+  h1Style, h2Style, h3Style, h4Style, h5Style, h6Style,
+  headingLineStyle, richTextHeadingBig, richTextHeadingMedium, richTextHeadingSmall
+} from './sub-heading.css.js';
 import PropTypes from "prop-types";
 
 export const SubHeading = ({
-  children,
-  text,
-  level,
-  styleLevel,
-  headingLine,
-  richText,
+  children = null,
+  text = '',
+  level = 2,
+  styleLevel = null,
+  headingLine = false,
+  richText = true,
 }) => {
   const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
@@ -24,7 +27,7 @@ export const SubHeading = ({
     richTextHeadingSmall,
     richTextHeadingSmall,
     richTextHeadingSmall
-  ]
+  ];
 
   const regularHeadingStyling = [h1Style, h2Style, h3Style, h4Style, h5Style, h6Style];
 
@@ -34,12 +37,12 @@ export const SubHeading = ({
   const selectedStyling = styling[styleLevel ? styleLevel - 1 : level - 1];
 
   return (
-    <SelectedHeading css={[selectedStyling, headingLine ? headingLineStyle : null]} >
+    <SelectedHeading css={[selectedStyling, headingLine ? headingLineStyle : null]}>
       {children}
       {text}
     </SelectedHeading>
-  )
-}
+  );
+};
 
 SubHeading.propTypes = {
   children: PropTypes.node,
@@ -48,13 +51,4 @@ SubHeading.propTypes = {
   styleLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6, null]),
   headingLine: PropTypes.bool,
   richText: PropTypes.bool,
-}
-
-SubHeading.defaultProps = {
-  children: null,
-  text: '',
-  level: 2,
-  styleLevel: null,
-  headingLine: false,
-  richText: true,
 };

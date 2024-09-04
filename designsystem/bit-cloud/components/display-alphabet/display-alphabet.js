@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import {jsx} from '@emotion/core'
-import React from 'react'
+import { jsx } from '@emotion/core';
+import React from 'react';
 import PropTypes from "prop-types";
-import * as styles from './display-alphabet.css.js'
+import * as styles from './display-alphabet.css.js';
 
 const allLetters = 'alla';
 
@@ -14,16 +14,16 @@ const alphabet = [
 ];
 
 const isVisibleLetter = (visibleLetters, letter) =>
-  (visibleLetters && Array.isArray(visibleLetters)) && visibleLetters.some(v => v === letter)
+  (visibleLetters && Array.isArray(visibleLetters)) && visibleLetters.some(v => v === letter);
 
 export const DisplayAlphabet = ({
-  onClickLetter,
-  activeLetter,
-  visibleLetters,
+  onClickLetter = () => {},
+  activeLetter = '',
+  visibleLetters = [],
 }) => {
   return (
     <div css={styles.alphabetWrapper} data-comp="display-alphabet">
-      {alphabet.map(letter => isVisibleLetter(visibleLetters, letter) ?
+      {alphabet.map(letter => isVisibleLetter(visibleLetters, letter) ? (
         <a
           key={letter}
           css={[
@@ -35,21 +35,20 @@ export const DisplayAlphabet = ({
           data-letter={letter}
           onClick={onClickLetter}
           className={'noStyle'}
-        >{letter}</a>
-        :
-        <span key={letter} css={[styles.letter, styles.invalidLetter]}>{letter}</span>)}
+        >
+          {letter}
+        </a>
+      ) : (
+        <span key={letter} css={[styles.letter, styles.invalidLetter]}>
+          {letter}
+        </span>
+      ))}
     </div>
-  )
-}
+  );
+};
 
 DisplayAlphabet.propTypes = {
   onClickLetter: PropTypes.func,
   activeLetter: PropTypes.oneOf([...alphabet, allLetters]),
   visibleLetters: PropTypes.array,
-}
-
-DisplayAlphabet.defaultProps = {
-  onClickLetter: () => {},
-  activeLetter: '',
-  visibleLetters: [],
-}
+};

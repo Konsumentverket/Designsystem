@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -48,19 +48,19 @@ export const Button = ({
   smallButtonStyle && styles.push(smallStyle);
 
   const ariaAttrs = {};
-  Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x])
+  Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x]);
 
   const props = {
-    "id": id,
-    "css": styles,
-    "className": cssClass.join(" "),
-    "disabled": disabled,
-    "onClick": onClick,
-    "ref": reference,
-    "type": href !== null ? null : type,
-    "href": href || null,
-    ...ariaAttrs
-  }
+    id: id,
+    css: styles,
+    className: cssClass.join(" "),
+    disabled: disabled,
+    onClick: onClick,
+    ref: reference,
+    type: href ? null : type,
+    href: href || null,
+    ...ariaAttrs,
+  };
 
   return href
     ? <a {...props} data-comp="button">
@@ -74,7 +74,7 @@ export const Button = ({
       {text}
       {iconRight}
     </button>;
-}
+};
 
 Button.propTypes = {
   text: PropTypes.string,
@@ -93,12 +93,4 @@ Button.propTypes = {
   onClick: PropTypes.func,
   href: PropTypes.string,
   other: PropTypes.object,
-}
-
-Button.defaultProps = {
-  secondaryButtonStyle: false,
-  smallButtonStyle: false,
-  linkStyle: false,
-  linkStyleSmall: false,
-  type: "submit",
 };

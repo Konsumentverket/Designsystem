@@ -56,12 +56,11 @@ export const WithContentExpander = ({
   const linkRef = useRef();
   const topOfComponent = useRef();
 
-  const handleExpansionOnClick = e => {
+  const handleExpansionOnClick = (e) => {
     e.stopPropagation();
     e.preventDefault();
 
-    if (disabled)
-      return false;
+    if (disabled) return false;
 
     setExpanded(!expanded);
     return false;
@@ -78,13 +77,12 @@ export const WithContentExpander = ({
     }
   }, [expanded]);
 
-  if (!show)
-    return null;
+  if (!show) return null;
 
   return (
     <div
       data-comp="with-content-expander"
-      className={`withContentExpander ${expanded ? "expanded" : null}`}
+      className={`withContentExpander ${expanded ? "expanded" : ""}`}
       id={wrapperId}
       css={[
         containerStyle,
@@ -94,14 +92,11 @@ export const WithContentExpander = ({
       ]}
       ref={topOfComponent}
     >
-      <div
-        className="link-element noStyle"
-        onClick={e => handleExpansionOnClick(e)}
-      >
+      <div className="link-element noStyle" onClick={(e) => handleExpansionOnClick(e)}>
         <a
           href={linkHref}
           ref={linkRef}
-          onClick={e => e.preventDefault()}
+          onClick={(e) => e.preventDefault()}
           aria-haspopup="true"
           aria-expanded={expanded ? "true" : "false"}
           aria-label={text}
@@ -110,34 +105,39 @@ export const WithContentExpander = ({
           css={[
             linkStyle,
             expanded ? linkStyleExpanded : null,
-            useAlternativeStyling && expanded && !useProcessStepStyling ? linkStyleAlternativeExpanded : null,
+            useAlternativeStyling && expanded && !useProcessStepStyling
+              ? linkStyleAlternativeExpanded
+              : null,
             useAlternativeStyling ? linkAlternativeStyle : null,
             useLightBlueAlternativeStyling ? linkLightBlueAlternativeStyle : null,
-            useLightBlueAlternativeStyling && expanded && !noLeftBorderRadiusStyling ? linkStyleLightBlueAlternativeExpanded : null,
-            useLightBlueAlternativeStyling && expanded && noLeftBorderRadiusStyling ? linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius : null,
+            useLightBlueAlternativeStyling && expanded && !noLeftBorderRadiusStyling
+              ? linkStyleLightBlueAlternativeExpanded
+              : null,
+            useLightBlueAlternativeStyling && expanded && noLeftBorderRadiusStyling
+              ? linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius
+              : null,
             useProcessStepStyling ? noLeftBorderRadiusStyling : null,
           ]}
         >
-          <div css={[
-              headerStyle,
-              useProcessStepStyling ? headerProcessStepStyle : null,
-            ]}
-               className="link-element-container"
-               ref={linkContainerRef}
+          <div
+            css={[headerStyle, useProcessStepStyling ? headerProcessStepStyle : null]}
+            className="link-element-container"
+            ref={linkContainerRef}
           >
             <div css={innerHeaderStyle}>
-              {icon && (
-                <EditorIcon icon={icon} css={iconStyle} />
-              )}
+              {icon && <EditorIcon icon={icon} css={iconStyle} />}
               <div css={innerHeaderTextStyle}>
-                <h3 className="noStyle" css={[
-                  titleStyle,
-                  useAlternativeStyling ? titleAlternativeStyle : null,
-                  useLightBlueAlternativeStyling ? titleLightBlueAlternativeStyle : null
-                ]}>
+                <h3
+                  className="noStyle"
+                  css={[
+                    titleStyle,
+                    useAlternativeStyling ? titleAlternativeStyle : null,
+                    useLightBlueAlternativeStyling ? titleLightBlueAlternativeStyle : null,
+                  ]}
+                >
                   {text}
                 </h3>
-                {preamble && (<p css={preambleStyle}>{preamble}</p>)}
+                {preamble && <p css={preambleStyle}>{preamble}</p>}
               </div>
             </div>
             {!disabled && (
@@ -156,38 +156,31 @@ export const WithContentExpander = ({
           expandedAreaStyle,
           expanded ? expandedAreaExpandedStyle : null,
           expanded && useAlternativeStyling ? expandedAreaAlternativeStyle : null,
-          expanded && useLightBlueAlternativeStyling ? expandedAreaLightBlueAlternativeStyle : null,
+          expanded && useLightBlueAlternativeStyling
+            ? expandedAreaLightBlueAlternativeStyle
+            : null,
           useProcessStepStyling ? noLeftBorderRadiusStyling : null,
         ]}
-        className={`expand-section ${expanded ? "expanded" : null} ${disabled ? "expanded" : ''}`}
+        className={`expand-section ${expanded ? "expanded" : ""} ${disabled ? "expanded" : ""}`}
       >
-        <Typography>
-          {wrappedComponent}
-        </Typography>
+        <Typography>{wrappedComponent}</Typography>
       </div>
     </div>
   );
 };
 
 WithContentExpander.propTypes = {
+  wrappedComponent: PropTypes.any,
   text: PropTypes.string,
   preamble: PropTypes.string,
   icon: PropTypes.string,
   wrapperId: PropTypes.string,
-  linkHref: PropTypes.string,
   show: PropTypes.bool,
   scrollIntoView: PropTypes.bool,
   open: PropTypes.bool,
+  linkHref: PropTypes.string,
   disabled: PropTypes.bool,
-  wrappedComponent: PropTypes.any,
   useAlternativeStyling: PropTypes.any,
-}
-
-WithContentExpander.defaultProps = {
-  show: true,
-  scrollIntoView: false,
-  open: false,
-  linkHref: "",
-  disabled: false,
-  useAlternativeStyling: false,
-}
+  useLightBlueAlternativeStyling: PropTypes.any,
+  useProcessStepStyling: PropTypes.bool,
+};
