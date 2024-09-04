@@ -116,6 +116,7 @@ export const mainLinkStyle = css`
 
       h2 {
         text-decoration: underline!important;
+        color: ${newColors.primaries.fullBlue} !important;
       }
     }
 
