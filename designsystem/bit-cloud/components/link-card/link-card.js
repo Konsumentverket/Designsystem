@@ -6,7 +6,9 @@ import {
     mainLinkStyle,
     childrenWrapper,
     showAllLink,
-    customFontSize
+    customFontSize,
+    headingStyle,
+    linkStyle
 } from './link-card.css.js';
 import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
@@ -43,7 +45,7 @@ const LinkCard = React.forwardRef(({
 
             </SubHeading>
         </a>
-        {itemsToShow.length > 0 && <div css={[childrenWrapper, childrenWrapperStyle]}>
+        {itemsToShow.length > 0 && <div css={[childrenWrapper, childrenWrapperStyle, linkStyle]}>
             {itemsToShow}
         </div>}
         {childrenArray.length > beforeToggleCount &&

@@ -194,12 +194,12 @@ export const link = css`
   text-decoration: underline;
   border-radius: 3px;
 
-  &:active,
-  &:hover {
+  &:not(.noStyle):active,
+  &:not(.noStyle):hover {
     ${linkHover};
   }
 
-  &:focus {
+  &:not(.noStyle):focus {
     ${linkFocus};
   }
 `;

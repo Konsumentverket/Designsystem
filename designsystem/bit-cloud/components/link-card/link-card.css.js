@@ -8,7 +8,7 @@ export const wrapper = css`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   padding: 16px;
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
   position: relative;
@@ -46,6 +46,10 @@ export const mainLinkStyle = css`
     text-decoration: none !important;
     border-bottom: 1px solid ${newColors.shades.mediumBlue};
     z-index: 1;
+
+    h2 {
+      margin: 0 !important;
+    }
 
     & > * {
       display: flex;
@@ -109,7 +113,6 @@ export const mainLinkStyle = css`
             border: 1px solid ${newColors.primaries.fullBlue};
          }
       }
-
 
       h2 {
         text-decoration: underline!important;
@@ -209,4 +212,10 @@ export const customFontSize = css`
     ${medium}{
       font-size: 1.8rem;
     }
+`
+
+export const linkStyle = css`
+  a {
+    margin: 0;
+  }
 `
