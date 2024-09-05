@@ -4,7 +4,7 @@ import { newColors, colors, spacing, medium } from '@konsumentverket-sverige/des
 export const wrapperStyling = css`
     width: 100%;
     background-color: ${newColors.primaries.lightOrange};
-    border-radius: 8px;
+    border-radius: 16px;
     padding: ${spacing.m} ${spacing.s};
     position: relative;
     margin-top: calc(16px + 13px);
