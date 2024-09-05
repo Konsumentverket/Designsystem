@@ -1,21 +1,24 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import PropTypes from 'prop-types';
-import React from "react";
-import { buttonIconLeft, buttonIconRight, buttonStyle } from "./megamenu-button.css";
+import React from 'react';
+import {
+  buttonIconLeft,
+  buttonIconRight,
+  buttonStyle
+} from "./megamenu-button.css";
 
-export const MegamenuButton = ({
-                                 text,
-                                 id,
-                                 type = "submit",
-                                 iconLeft,
-                                 iconRight,
-                                 onClick,
-                                 reference,
-                                 href,
-                                 className,
-                                 ...other
-                               }) => {
+const MegamenuButton = ({
+  text,
+  id,
+  type = "submit",
+  iconLeft,
+  iconRight,
+  onClick,
+  reference,
+  href,
+  className,
+  ...other
+}) => {
   const styles = [buttonStyle];
   const cssClass = [className];
 
@@ -52,15 +55,4 @@ export const MegamenuButton = ({
   );
 };
 
-MegamenuButton.propTypes = {
-  text: PropTypes.string,
-  className: PropTypes.string,
-  id: PropTypes.string,
-  type: PropTypes.string,
-  iconLeft: PropTypes.element,
-  iconRight: PropTypes.element,
-  reference: PropTypes.bool,
-  onClick: PropTypes.func,
-  href: PropTypes.string,
-  other: PropTypes.object,
-};
+export { MegamenuButton };
