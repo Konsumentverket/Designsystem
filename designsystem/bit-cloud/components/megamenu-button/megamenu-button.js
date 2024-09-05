@@ -2,13 +2,12 @@
 import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types';
 import React from "react";
-import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 import { buttonIconLeft, buttonIconRight, buttonStyle } from "./megamenu-button.css";
 
 export const MegamenuButton = ({
                                  text,
                                  id,
-                                 type = "submit",   // Default value assigned directly in the function signature
+                                 type = "submit",
                                  iconLeft,
                                  iconRight,
                                  onClick,
