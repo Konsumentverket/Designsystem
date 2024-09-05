@@ -12,6 +12,7 @@ export const iconStyle = css`
           width: 5.6rem;
           height: 5.6rem;
         }
+
     }
 `
 
