@@ -12,7 +12,7 @@
     "breadcrumbs": {
         "name": "breadcrumbs",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.57",
+        "version": "0.0.58",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/breadcrumbs"
     },
@@ -201,7 +201,7 @@
     "megamenubtn": {
         "name": "megamenubtn",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.58",
+        "version": "0.0.61",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/megamenu-button"
     },

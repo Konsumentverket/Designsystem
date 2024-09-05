@@ -1,43 +1,30 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core'
+import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types';
-
 import React from "react";
-import {
-
-} from './megamenu-button.css.js';
-
-import {
-  Icon
-} from '@konsumentverket-sverige/designsystem.icon';
-import {
-  buttonIconLeft,
-  buttonIconRight,
-  buttonStyle
-} from "./megamenu-button.css";
+import { buttonIconLeft, buttonIconRight, buttonStyle } from "./megamenu-button.css";
 
 export const MegamenuButton = ({
-                         text,
-                         id,
-                         type = "submit",
-                         iconLeft,
-                         iconRight,
-                         onClick,
-                         reference,
-                         href,
-                         className,
-                         ...other
-                       }) => {
-
+                                 text,
+                                 id,
+                                 type = "submit",
+                                 iconLeft,
+                                 iconRight,
+                                 onClick,
+                                 reference,
+                                 href,
+                                 className,
+                                 ...other
+                               }) => {
   const styles = [buttonStyle];
   const cssClass = [className];
 
   href && cssClass.push("noStyle");
-  iconLeft && styles.push(buttonIconLeft)
-  iconRight && styles.push(buttonIconRight)
+  iconLeft && styles.push(buttonIconLeft);
+  iconRight && styles.push(buttonIconRight);
 
   const ariaAttrs = {};
-  Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x])
+  Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x]);
 
   const props = {
     "id": id,
@@ -47,22 +34,23 @@ export const MegamenuButton = ({
     "css": styles,
     "type": href !== null ? null : type,
     "href": href || null,
-    ...ariaAttrs
-  }
+    ...ariaAttrs,
+  };
 
-  return href
-    ? <a {...props} >
+  return href ? (
+    <a {...props}>
       {iconLeft}
       {text}
       {iconRight}
     </a>
-    :
-    <button {...props} >
+  ) : (
+    <button {...props}>
       {iconLeft}
       {text}
       {iconRight}
-    </button>;
-}
+    </button>
+  );
+};
 
 MegamenuButton.propTypes = {
   text: PropTypes.string,
@@ -75,8 +63,4 @@ MegamenuButton.propTypes = {
   onClick: PropTypes.func,
   href: PropTypes.string,
   other: PropTypes.object,
-}
-
-MegamenuButton.defaultProps = {
-  type: "submit",
 };
