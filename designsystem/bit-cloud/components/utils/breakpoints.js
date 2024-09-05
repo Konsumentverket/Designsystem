@@ -12,4 +12,4 @@ const breakpoints = {
   'xxl': '1920px',
 }
 
-export {breakpoints};
+export { breakpoints };

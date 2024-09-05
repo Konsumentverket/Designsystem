@@ -4,7 +4,6 @@ import {
   h1Style, h2Style, h3Style, h4Style, h5Style, h6Style,
   headingLineStyle, richTextHeadingBig, richTextHeadingMedium, richTextHeadingSmall
 } from './sub-heading.css.js';
-import PropTypes from "prop-types";
 
 export const SubHeading = ({
   children = null,
@@ -42,13 +41,4 @@ export const SubHeading = ({
       {text}
     </SelectedHeading>
   );
-};
-
-SubHeading.propTypes = {
-  children: PropTypes.node,
-  text: PropTypes.string,
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
-  styleLevel: PropTypes.oneOf([1, 2, 3, 4, 5, 6, null]),
-  headingLine: PropTypes.bool,
-  richText: PropTypes.bool,
 };

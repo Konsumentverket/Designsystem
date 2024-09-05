@@ -1,15 +1,14 @@
 /** @jsx jsx */
 import {jsx} from '@emotion/core'
 import React from "react"
-import PropTypes from 'prop-types';
 import * as styles from "./list-item-slim.css.js"
 import {Icon} from '@konsumentverket-sverige/designsystem.icon';
 
 export const ListItemSlim = ({
- headline,
- href,
- disabled,
- preamble,
+ headline = '',
+ href = '',
+ disabled = false,
+ preamble = '',
 }) => {
 
   if (!headline) {
@@ -48,18 +47,4 @@ export const ListItemSlim = ({
       </li>
     )
   )
-}
-
-ListItemSlim.propTypes = {
-  href: PropTypes.string,
-  headLine: PropTypes.string,
-  disabled: PropTypes.bool,
-  preamble: PropTypes.string,
-}
-
-ListItemSlim.defaultProps = {
-  href: '',
-  headLine: '',
-  disabled: false,
-  preamble: '',
 }

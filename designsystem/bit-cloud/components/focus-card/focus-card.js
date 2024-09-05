@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import PropTypes from 'prop-types';
 import React from "react";
 
 import {
@@ -40,15 +39,4 @@ export const FocusCard = ({
       </div>
     </a>
   );
-};
-
-FocusCard.propTypes = {
-  title: PropTypes.string,
-  text: PropTypes.string,
-  url: PropTypes.string,
-  dark: PropTypes.bool,
-}
-
-FocusCard.defaultProps = {
-  dark: false,
 };

@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import PropTypes from 'prop-types';
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Typography } from '@konsumentverket-sverige/designsystem.typography';
@@ -167,20 +166,4 @@ export const WithContentExpander = ({
       </div>
     </div>
   );
-};
-
-WithContentExpander.propTypes = {
-  wrappedComponent: PropTypes.any,
-  text: PropTypes.string,
-  preamble: PropTypes.string,
-  icon: PropTypes.string,
-  wrapperId: PropTypes.string,
-  show: PropTypes.bool,
-  scrollIntoView: PropTypes.bool,
-  open: PropTypes.bool,
-  linkHref: PropTypes.string,
-  disabled: PropTypes.bool,
-  useAlternativeStyling: PropTypes.any,
-  useLightBlueAlternativeStyling: PropTypes.any,
-  useProcessStepStyling: PropTypes.bool,
 };

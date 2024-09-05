@@ -16,7 +16,7 @@ export const containerStyles = css`
     padding-right: ${spacing.l};
   }
 
-  @media (min-width: ${breakpoints.l}) {
+  @media (min-width: ${breakpoints.ml}) {
     margin-left: auto;
     margin-right: auto;
     max-width: ${maxWidthGrid};
@@ -49,4 +49,3 @@ export const gridStyles = css`
     padding-right: 0;
   }
 `;
-

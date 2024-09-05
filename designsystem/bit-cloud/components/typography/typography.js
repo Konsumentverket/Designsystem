@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from "react";
-import PropTypes from 'prop-types';
 import {
   typographyContainerStyle,
   smallTypographyContainerStyle
@@ -21,9 +20,3 @@ export const Typography = ({ children, small = false }) => {
     </div>
   );
 };
-
-Typography.propTypes = {
-}
-
-Typography.defaultProps = {
-}

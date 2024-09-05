@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import PropTypes from 'prop-types';
 import React from 'react';
 import {
   breadcrumbStyle,
@@ -49,8 +48,4 @@ export const Breadcrumbs = ({
       </p>
     </nav>
   );
-};
-
-Breadcrumbs.propTypes = {
-  items: PropTypes.array,
 };

@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React from 'react';
-import PropTypes from "prop-types";
 import * as styles from './display-alphabet.css.js';
 
 const allLetters = 'alla';
@@ -45,10 +44,4 @@ export const DisplayAlphabet = ({
       ))}
     </div>
   );
-};
-
-DisplayAlphabet.propTypes = {
-  onClickLetter: PropTypes.func,
-  activeLetter: PropTypes.oneOf([...alphabet, allLetters]),
-  visibleLetters: PropTypes.array,
 };
