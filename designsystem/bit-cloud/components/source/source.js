@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import React from "react";
 import { sourceStyle, secondRow, rightAlign, sourceLink } from "./sourcs.css.js";
 import isExternal from "./isExternalUrl";
 import { External } from '@konsumentverket-sverige/designsystem.utils';
