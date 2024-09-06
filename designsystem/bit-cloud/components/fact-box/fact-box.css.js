@@ -14,7 +14,7 @@ export const wrapperStyling = css`
         padding: ${spacing.l} ${spacing.l};
 
         p, a, li {
-            font-size: 1.8rem !important;
+            font-size: 1.6rem !important;
         }
     }
 

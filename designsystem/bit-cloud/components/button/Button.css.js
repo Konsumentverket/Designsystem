@@ -36,7 +36,8 @@ export const buttonStyle = css`
         background-color: ${newColors.shades.kovBlue50};
         text-decoration:underline;
     }
-    &:active{
+
+    &:active {
         background-color: ${newColors.shades.kovBlue75};
         text-decoration:underline;
     }
@@ -46,41 +47,35 @@ export const buttonStyle = css`
 `;
 
 export const secondaryStyle = css`
-    background-color: transparent;
+    background-color: ${newColors.primaries.kovWhite};
     color: ${newColors.primaries.fullBlue};
-    box-shadow: inset 0px 0px 0px 1px ${newColors.primaries.fullBlue},
-            0px 3px 10px 3px rgba(22,34,89,0.07);
-
+    box-shadow: inset 0px 0px 0px 1px ${newColors.primaries.fullBlue}, 0px 3px 10px 3px rgba(22,34,89,0.07);
 
     svg {
         fill: ${newColors.primaries.fullBlue};
     }
+
     &:hover, &.selectedButtonStyle {
         background-color: ${newColors.shades.lightBlue50};
         text-decoration: underline;
         border-color: ${newColors.primaries.fullBlue};
-        box-shadow: inset 0 0 0 2px ${newColors.primaries.fullBlue},
-        0px 3px 10px 3px rgba(22,34,89,0.07);
+        box-shadow: inset 0 0 0 2px ${newColors.primaries.fullBlue}, 0px 3px 10px 3px rgba(22,34,89,0.07);
     }
-    &:active {
-        color: ${newColors.kovWhite};
+
+    &:active, &.selectedButtonStyle {
         background-color: ${newColors.shades.lightBlue};
-        box-shadow: none;
-        svg {
-            fill: ${newColors.kovWhite};
-        }
+        text-decoration: underline;
+        border-color: ${newColors.primaries.fullBlue};
+        box-shadow: inset 0 0 0 2px ${newColors.primaries.fullBlue}, 0px 3px 10px 3px rgba(22,34,89,0.07);
     }
     &:disabled{
         ${disabled}
     }
 `;
 
-
-
 export const smallStyle = css`
     padding: 0.8rem 2.4rem;
 `;
-
 
 export const linkStyles = css`
    border: none !important;
@@ -110,8 +105,6 @@ export const linkStylesSmall = css`
         margin-right: .8rem !important;
      }
 `;
-
-
 
 export const buttonIconLeft = css`
     display: flex;
