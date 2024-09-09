@@ -12,10 +12,6 @@ export const wrapperStyling = css`
     ${medium} {
         margin-top: calc(24px + 13px);
         padding: ${spacing.l} ${spacing.l};
-
-        p, a, li {
-            font-size: 1.6rem !important;
-        }
     }
 
 
