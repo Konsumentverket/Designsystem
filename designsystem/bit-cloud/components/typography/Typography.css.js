@@ -48,4 +48,10 @@ export const typographyContainerStyle = css`
   ol:not(.noStyle) {
     ${typography.olStyling}
   }
+
+  blockquote:not(.noStyle) {
+    p, a, li {
+      ${typography.blockquoteText};
+    }
+  }
 `;

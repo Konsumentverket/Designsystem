@@ -175,6 +175,14 @@ export const textMiniAlt = css`
   font-weight: 500;
 `;
 
+export const blockquoteText = css`
+    ${paragraph};
+
+    @media (min-width: ${breakpoints.m}) {
+      ${textSmall};
+    }
+`;
+
 export const linkHover = css`
   text-decoration: none;
   background: ${newColors.primaries.mediumBlue};
