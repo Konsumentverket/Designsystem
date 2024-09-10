@@ -22,7 +22,7 @@ export const disabled = css`
 
 export const preamble = css`
   ${typography.textSmall};
-  color: ${newColors.shades.fullGrey50};
+  color: ${newColors.shades.kovBlack50};
   margin-top: 8px;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -59,6 +59,7 @@ export const headlineDisabled = css`
   color: ${newColors.shades.fullGrey};
   text-decoration: none;
   padding-bottom: 0;
+  margin-bottom: 0;
 
   &:hover {
     text-decoration: none;

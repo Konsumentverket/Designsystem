@@ -39,9 +39,9 @@ export const ListItemSlim = ({
           href={href}
           data-comp='list-item-slim'
         >
-      <span css={styles.headline}>
-        {headline}
-      </span>
+          <span css={styles.headline}>
+            {headline}
+          </span>
           <Icon icon={'ChevronRight'} css={styles.chevronStyle}/>
         </a>
       </li>
