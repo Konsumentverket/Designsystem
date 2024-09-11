@@ -52,6 +52,7 @@ import { MonoArrowRight } from "./Icons/SystemIcons/MonoArrowRight/MonoArrowRigh
 import { MonoArrowRightSmall } from "./Icons/SystemIcons/MonoArrowRightSmall/MonoArrowRightSmall";
 import { MonoCopy } from "./Icons/SystemIcons/MonoCopy/MonoCopy";
 import { MonoArrowDown } from "./Icons/SystemIcons/MonoArrowDown/MonoArrowDown";
+import { MonoArrowDownSmall } from "./Icons/SystemIcons/MonoArrowDownSmall/MonoArrowDownSmall";
 import { MonoCheck } from "./Icons/SystemIcons/MonoCheck/MonoCheck";
 
 
@@ -177,6 +178,7 @@ export {
     MonoArrowRightSmall,
     MonoCopy,
     MonoArrowDown,
+    MonoArrowDownSmall,
     MonoCheck,
 
 
