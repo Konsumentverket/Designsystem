@@ -52,12 +52,14 @@ export const fieldInput = css`
     margin-left: 2.4rem;
     margin-right: 1.6rem;
     flex-shrink: 0;
+    box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.10) inset;
 
-    &:focus{
+    &:focus {
         outline:none!important;
     }
 
-    &:checked{
+    &:checked {
+        box-shadow: none;
         outline: none;
         border: 8px solid ${newColors.primaries.fullBlue};
         background-color: ${newColors.primaries.kovWhite};
@@ -87,6 +89,7 @@ export const fieldInput = css`
     }
     &:disabled {
         opacity: 1;
+        box-shadow: none;
     }
 
 `
@@ -103,6 +106,7 @@ export const fieldLabel = css`
 `
 
 export const disabledStyle = css`
+    box-shadow: none;
     background-color: ${newColors.shades.lightGrey50};
     cursor: inherit;
     box-shadow: none;
