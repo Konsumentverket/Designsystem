@@ -33,11 +33,10 @@ export const BasicSource = () => {
             }
           ]
         }}
-        markdownText={"Lorem ipsum"}
         reviewedDate={new Date()}
         style=""
         english={false}
-        bottomContent={"Granskad"}
+        bottomContent={<div>{"BottomContent - komponent, vanligtvis " + "<" + "ECCAsSource" + " \/>"}</div>}
       />
     </CompositionFonts>
   );
