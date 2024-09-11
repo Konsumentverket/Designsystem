@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { medium, spacing, typography } from '@konsumentverket-sverige/designsystem.utils';
+import {medium, newColors, spacing, typography} from '@konsumentverket-sverige/designsystem.utils';
 
 export const sourceStyle = css`
   padding: 16px 0;
@@ -38,6 +38,27 @@ export const rightAlign = css`
 
 export const sourceLink = css`
     ${typography.linkSmall};
+    position: relative;
+    margin: 0 8px 0 9px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -9px;
+      width: 1px;
+      height: 16px;
+      transform: translateY(-50%);
+      background: ${newColors.shades.fullGrey};
+    }
+
+    &:first-of-type {
+      margin-left: 8px;
+
+      &::after {
+        display: none;
+      }
+    }
 
     svg {
         position: relative;

@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React from "react";
 import { jsx } from "@emotion/core";
 import { sourceStyle, secondRow, rightAlign, sourceLink } from "./sourcs.css.js";
 import isExternal from "./isExternalUrl";
@@ -65,7 +66,7 @@ export const Source = ({
                 >
                   {item.linkText}
                   {isExternal(baseUrl, item.linkUrl) && (
-                    <External title="Extern länk" className="external" />
+                    <External title="Extern länk" className="external"/>
                   )}
                 </a>
               );
@@ -76,10 +77,10 @@ export const Source = ({
         {reviewed && (
           <div css={rightAlign}>
             <p>{`${reviewedDateText || english == true ? "Proofread: " : "Granskad: "
-              }${reviewed.getDate()} ${english
-                ? monthsEn[reviewed.getMonth()]
-                : monthsSv[reviewed.getMonth()]
-              } ${reviewed.getFullYear()}`}</p>
+            }${reviewed.getDate()} ${english
+              ? monthsEn[reviewed.getMonth()]
+              : monthsSv[reviewed.getMonth()]
+            } ${reviewed.getFullYear()}`}</p>
           </div>
         )}
       </div>

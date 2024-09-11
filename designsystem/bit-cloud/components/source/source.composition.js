@@ -20,6 +20,16 @@ export const BasicSource = () => {
               linkUrl: "/",
               linkText: "Konsumentverket",
               occupationId: "fda16320-2da2-e411-9405-000d3a200e7c"
+            },
+            {
+              linkUrl: "/",
+              linkText: "Polisen",
+              occupationId: "fda16320-2da2-e411-9405-000d3a200e7c"
+            },
+            {
+              linkUrl: "/",
+              linkText: "Konsument Europa",
+              occupationId: "fda16320-2da2-e411-9405-000d3a200e7c"
             }
           ]
         }}
