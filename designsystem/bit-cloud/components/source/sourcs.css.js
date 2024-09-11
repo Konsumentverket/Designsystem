@@ -2,18 +2,18 @@ import {css} from "@emotion/core";
 import {newColors, spacing, typography, breakpoints} from '@konsumentverket-sverige/designsystem.utils';
 
 export const sourceStyle = css`
-  padding: 16px 0;
+  padding: 32px 0 16px 0;
 `;
 
 export const secondRow = css`
   display: flex;
   flex-direction: column;
-  padding: 16px 4px;
   ${typography.textSmall};
+  margin-bottom: 0;
 
   a {
     ${typography.linkSmall};
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 
   @media (min-width: ${breakpoints.m}) {
@@ -41,6 +41,7 @@ export const rightAlign = css`
 export const reviewText = css`
   ${typography.textSmall};
   font-size: 1.4rem;
+  margin-bottom: 0;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.6rem;
