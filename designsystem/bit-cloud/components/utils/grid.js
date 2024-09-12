@@ -11,11 +11,6 @@ export const containerStyles = css`
   padding-left: ${spacing.s};
   padding-right: ${spacing.s};
 
-  @media (min-width: ${breakpoints.m}) {
-    padding-left: ${spacing.l};
-    padding-right: ${spacing.l};
-  }
-
   @media (min-width: ${breakpoints.ml}) {
     margin-left: auto;
     margin-right: auto;
