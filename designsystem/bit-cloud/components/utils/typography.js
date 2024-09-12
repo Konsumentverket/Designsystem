@@ -405,7 +405,11 @@ export const richTextHeadingMedium = css`
 `;
 
 export const richTextHeadingSmall = css`
-  ${subHeadingAltSmall};
+  ${subHeadingAltMini};
+
+  @media (min-width: ${breakpoints.m}) {
+    ${subHeadingAltSmall};
+  }
 `;
 
 export const ulListSpacing = css`
