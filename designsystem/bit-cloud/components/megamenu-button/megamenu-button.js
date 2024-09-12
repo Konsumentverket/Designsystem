@@ -18,6 +18,7 @@ const MegamenuButton = ({
   href,
   className,
   linkComponent: LinkComponent = 'a',
+  handleLinkOnClick,
   ...other
 }) => {
   const styles = [buttonStyle];
@@ -33,7 +34,7 @@ const MegamenuButton = ({
   const props = {
     "id": id,
     "className": cssClass.join(" "),
-    "onClick": onClick,
+    "onClick": handleLinkOnClick ?? onClick,
     "ref": reference,
     "css": styles,
     "type": href !== null ? null : type,
