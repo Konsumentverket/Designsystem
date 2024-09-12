@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import {jsx} from '@emotion/core';
 
-export const MonoBlueRss = ({className, style, title, ...otherAttr}) => {
+export const MonoBlueRss = ({className, style, title}) => {
   return (
     <svg className={className} css={style} width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path fill-rule="evenodd" clip-rule="evenodd"
