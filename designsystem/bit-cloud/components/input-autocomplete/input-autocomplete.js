@@ -19,7 +19,6 @@ export const InputAutocomplete = ({
   fetchUrl,
   callbackOnClick = () => { },
   placeholder,
-  session,
 }) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -48,7 +47,7 @@ export const InputAutocomplete = ({
   const fetchSuggestions = async (searchTerm) => {
     setLoading(true);
     try {
-      const response = await fetch(`${fetchUrl}${searchTerm}${session}`);
+      const response = await fetch(`${fetchUrl}${searchTerm}`);
       const data = await response.json();
 
       const result = data.predictions.map((item) => ({
