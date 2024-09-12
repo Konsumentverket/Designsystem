@@ -9,7 +9,8 @@ import {
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 
 export const Breadcrumbs = ({
-  items = []
+  items = [],
+  linkComponent: LinkComponent = 'a'
 }) => {
   return (
     <nav aria-label="breadcrumb" css={breadcrumbStyle} data-comp="breadcrumbs">
@@ -34,13 +35,13 @@ export const Breadcrumbs = ({
                   {crumb.title}
                 </span>
               ) : (
-                <a
+                <LinkComponent
                   href={crumb.url}
                   css={breadcrumbLinkStyle}
                   dir={crumb.isRtl ? "rtl" : null}
                 >
                   {crumb.title}
-                </a>
+                </LinkComponent>
               )}
             </React.Fragment>
           );

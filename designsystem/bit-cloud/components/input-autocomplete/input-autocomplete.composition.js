@@ -11,6 +11,7 @@ const whiteBackground = { padding: "32px", backgroundColor: "#ffffff" };
 // Basic Example
 export const InputAutocompleteBasicExample = () => {
   const element = <InputAutocomplete
+    callbackOnClick={(e, item) => { console.log(e, item); }}
     fetchUrl={'https://localhost:52535/api/contactsearch/place/?query='}
     placeholder="Skriv för att söka"
   />;
