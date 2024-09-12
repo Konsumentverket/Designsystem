@@ -54,6 +54,7 @@ import { MonoCopy } from "./Icons/SystemIcons/MonoCopy/MonoCopy";
 import { MonoArrowDown } from "./Icons/SystemIcons/MonoArrowDown/MonoArrowDown";
 import { MonoArrowDownSmall } from "./Icons/SystemIcons/MonoArrowDownSmall/MonoArrowDownSmall";
 import { MonoCheck } from "./Icons/SystemIcons/MonoCheck/MonoCheck";
+import { MonoBlueRss } from "./Icons/SystemIcons/MonoBlueRss/MonoBlueRss";
 
 
 // Editor icons
@@ -180,6 +181,7 @@ export {
     MonoArrowDown,
     MonoArrowDownSmall,
     MonoCheck,
+    MonoBlueRss,
 
 
     // System icons

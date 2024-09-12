@@ -34,10 +34,10 @@ export const headingLine = css`
     top: 0;
     height: 100%;
     width: 4px;
-    left: calc(-14px + -4px);
+    left: -16px; // 4px stroke and 12px space
 
-    @media (min-width: ${breakpoints.m}) {
-      left: calc(-16px + -4px);
+    @media (min-width: ${breakpoints.ml}) {
+      left: -20px; // 4px stroke and 16px space
     }
   }
 `;
