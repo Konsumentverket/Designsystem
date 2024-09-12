@@ -17,6 +17,7 @@ const MegamenuButton = ({
   reference,
   href,
   className,
+  linkComponent: LinkComponent = 'a',
   ...other
 }) => {
   const styles = [buttonStyle];
@@ -41,11 +42,14 @@ const MegamenuButton = ({
   };
 
   return href ? (
-    <a {...props}>
+    <LinkComponent
+      {...props}
+      injected={true}
+    >
       {iconLeft}
       {text}
       {iconRight}
-    </a>
+    </LinkComponent>
   ) : (
     <button {...props}>
       {iconLeft}

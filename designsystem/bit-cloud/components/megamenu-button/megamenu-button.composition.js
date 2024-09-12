@@ -34,14 +34,14 @@ export const BasicIconButton = () => {
             text="Konsumenträtt för företag"
           />
           <MegamenuButton
-            href={"https://frojd.se"}
+            href={"https://kov.se"}
             iconLeft={
               <Icon icon="MegamenuCompany" />
             }
             text="Olika säljkanaler"
           />
           <MegamenuButton
-            href={"https://frojd.se"}
+            href={"https://example.org"}
             iconLeft={
               <Icon icon="MegamenuCompany" />
             }

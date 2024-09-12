@@ -26,7 +26,8 @@ export const ImageCard = ({
   icon,
   imageComponent,
   onClick,
-  extraClass
+  extraClass,
+  linkComponent: LinkComponent = 'a',
 }) => {
   let imageArea = imageComponent;
   if (imageArea == null) {
@@ -49,16 +50,22 @@ export const ImageCard = ({
             {headline}
             {!isExternalLink && <Icon aria-hidden="true" icon="ChevronRight" />}
           </h3>
-          { !!text && <p css={focusText}>{text}</p> }
+          {!!text && <p css={focusText}>{text}</p>}
         </div>
       </div>
     );
   };
 
   return url !== null ? (
-    <a css={linkWrapper} href={url} onClick={onClick} className="noStyle">
+    <LinkComponent
+      css={linkWrapper}
+      href={url}
+      onClick={onClick}
+      className="noStyle"
+      injected={true}
+    >
       {imageCardMarkup(ImageCard)}
-    </a>
+    </LinkComponent>
   ) : (
     imageCardMarkup(ImageCard)
   );

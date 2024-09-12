@@ -23,6 +23,7 @@ const LinkTextCard = React.forwardRef(({
   style,
   dir,
   lang,
+  linkComponent: LinkComponent = 'a',
   ...other
 }, ref) => {
 
@@ -48,10 +49,16 @@ const LinkTextCard = React.forwardRef(({
 
   return (
     <div id={id} dir={dir} css={[wrapper, linkTextWrapper, style]} lang={lang} {...other}>
-      <a ref={ref} href={href} css={[mainLinkStyle, linkTextMainLinkStyle]} onClick={onClick}>
+      <LinkComponent
+        injected={true}
+        ref={ref}
+        href={href}
+        css={[mainLinkStyle, linkTextMainLinkStyle]}
+        onClick={onClick}
+      >
         {renderLinkText()}
         {children && <span css={linkTextCardContentStyle}>{children}</span>}
-      </a>
+      </LinkComponent>
     </div>
   )
 })

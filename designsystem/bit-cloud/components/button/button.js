@@ -29,6 +29,7 @@ export const Button = ({
   reference,
   onClick,
   href,
+  linkComponent: LinkComponent = 'a',
   ...other
 }) => {
 
@@ -62,11 +63,15 @@ export const Button = ({
   };
 
   return href
-    ? <a {...props} data-comp="button">
+    ? <LinkComponent
+      data-comp="button"
+      injected={true}
+      {...props}
+    >
       {iconLeft}
       {text}
       {iconRight}
-    </a>
+    </LinkComponent>
     :
     <button {...props} data-comp="button">
       {iconLeft}

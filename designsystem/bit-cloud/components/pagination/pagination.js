@@ -24,7 +24,8 @@ export const Pagination = ({
   baseUrl,
   onClick = () => { },
   style,
-  seoCallback
+  seoCallback,
+  linkComponent: LinkComponent = 'a',
 }) => {
 
   if (total == 0)
@@ -60,7 +61,7 @@ export const Pagination = ({
       return null;
 
     const distanceEl = filteredLink.some(x => x === 2) ? null : <span css={distanceIndicatorStyle}>...</span>
-    return <><a className="first" href={createHref(1)} onClick={(e) => onClick(e, 1)} css={[pageStyle]}>1</a>{distanceEl}</>;
+    return <><LinkComponent injected={true} className="first" href={createHref(1)} onClick={(e) => onClick(e, 1)} css={[pageStyle]}>1</LinkComponent>{distanceEl}</>;
   }
 
   const lastLink = () => {
@@ -70,7 +71,7 @@ export const Pagination = ({
       return null
 
     const distanceEl = filteredLink.some(x => x === max - 1) ? null : <span css={distanceIndicatorStyle}>...</span>
-    return <>{distanceEl}<a className="last" href={createHref(max)} onClick={(e) => onClick(e, max)} css={pageStyle}>{max}</a></>;
+    return <>{distanceEl}<LinkComponent injected={true} className="last" href={createHref(max)} onClick={(e) => onClick(e, max)} css={pageStyle}>{max}</LinkComponent></>;
   }
 
   const isFirstPage = currentPage == 1;
@@ -89,15 +90,15 @@ export const Pagination = ({
   }
 
   return <nav aria-label="pagination" css={[paginationWrapperStyle, style]}>
-    {isFirstPage ? <span css={[prevPageStyle, prevPageStyleHidden]}><Icon icon="ChevronRight" /></span> : <a href={createHref(currentPage - 1)} onClick={(e) => onClick(e, currentPage - 1)} css={prevPageStyle} aria-label="Föregående sida"><Icon icon="ChevronRight" /></a>}
+    {isFirstPage ? <span css={[prevPageStyle, prevPageStyleHidden]}><Icon icon="ChevronRight" /></span> : <LinkComponent injected={true} href={createHref(currentPage - 1)} onClick={(e) => onClick(e, currentPage - 1)} css={prevPageStyle} aria-label="Föregående sida"><Icon icon="ChevronRight" /></LinkComponent>}
     {firstLink()}
     {filteredLink.map((pageNumber) => {
       const isCurrent = pageNumber == currentPage;
-      return <a href={createHref(pageNumber)} className={getClass(pageNumber)} onClick={(e) => onClick(e, pageNumber)} aria-current={isCurrent ? "page" : null} key={`pagination${pageNumber}`} css={[pageStyle, isCurrent ? currentPageStyle : null]}>{pageNumber}</a>
+      return <LinkComponent injected={true} href={createHref(pageNumber)} className={getClass(pageNumber)} onClick={(e) => onClick(e, pageNumber)} aria-current={isCurrent ? "page" : null} key={`pagination${pageNumber}`} css={[pageStyle, isCurrent ? currentPageStyle : null]}>{pageNumber}</LinkComponent>
     }
     )}
     {lastLink()}
-    {isLastPage ? <span css={[nextPageStyle, prevPageStyleHidden]}><Icon icon="ChevronRight" /></span> : <a href={createHref(currentPage + 1)} onClick={(e) => onClick(e, currentPage + 1)} css={nextPageStyle} aria-label="Nästa sida"><Icon icon="ChevronRight" /></a>}
+    {isLastPage ? <span css={[nextPageStyle, prevPageStyleHidden]}><Icon icon="ChevronRight" /></span> : <LinkComponent injected={true} href={createHref(currentPage + 1)} onClick={(e) => onClick(e, currentPage + 1)} css={nextPageStyle} aria-label="Nästa sida"><Icon icon="ChevronRight" /></LinkComponent>}
     {SeoCallbackResult}
   </nav>
 }

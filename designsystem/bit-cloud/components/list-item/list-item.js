@@ -12,12 +12,14 @@ export const ListItem = ({
   updatedAt, publishedAt,
   href,
   onClick,
-}) => <a
+  linkComponent: LinkComponent = 'a',
+}) => <LinkComponent
   css={[css.wrapper]}
   className='noStyle'
   href={href}
   onClick={onClick}
   data-comp="listitem"
+  injected={true}
 >
     <p
       css={css.headline}
@@ -27,8 +29,8 @@ export const ListItem = ({
     {preamble && <p css={css.preambleStyle}>{preamble}</p>}
 
     <div css={css.dateWrapper}>
-      { type && <p css={css.typeStyle}>{type}</p> }
-      { updatedAt && <p css={css.dateStyle}> Uppdaterad den <DateFormat date={updatedAt} showDate={true} /></p>}
-      { !updatedAt && publishedAt && <p css={css.dateStyle}><DateFormat date={publishedAt} showDate={true} /></p>}
+      {type && <p css={css.typeStyle}>{type}</p>}
+      {updatedAt && <p css={css.dateStyle}> Uppdaterad den <DateFormat date={updatedAt} showDate={true} /></p>}
+      {!updatedAt && publishedAt && <p css={css.dateStyle}><DateFormat date={publishedAt} showDate={true} /></p>}
     </div>
-  </a>
+  </LinkComponent>

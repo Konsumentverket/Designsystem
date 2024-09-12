@@ -39,6 +39,7 @@ export const Breadcrumbs = ({
                   href={crumb.url}
                   css={breadcrumbLinkStyle}
                   dir={crumb.isRtl ? "rtl" : null}
+                  injected={true}
                 >
                   {crumb.title}
                 </LinkComponent>

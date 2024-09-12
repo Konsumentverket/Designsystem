@@ -21,10 +21,17 @@ export const FocusCard = ({
   text,
   url,
   dark = false,
+  linkComponent: LinkComponent = 'a',
 }) => {
 
   return (
-    <a className={"noStyle"} css={[focusCardStyle, dark && focusCardDarkStyle]} href={url} data-comp="focus-card">
+    <LinkComponent
+      className={"noStyle"}
+      css={[focusCardStyle, dark && focusCardDarkStyle]}
+      href={url}
+      data-comp="focus-card"
+      injected={true}
+    >
       <div css={focusCardTextSectionStyle}>
         {title && (<h3 css={focusCardTitleStyle} className="focusCardTitle">{title}</h3>)}
         {headline && (<h3 css={focusCardTitleStyle} className="focusCardTitle">{headline}</h3>)}
@@ -37,6 +44,6 @@ export const FocusCard = ({
           css={focusCardChevronIconStyle}
         />
       </div>
-    </a>
+    </LinkComponent>
   );
 };

@@ -21,6 +21,7 @@ const TagBlock = React.forwardRef(({
   alternativeTagText,
   transparent = false,
   onClick = () => { },
+  linkComponent: LinkComponent = 'a',
 }, ref) => (
   <div
     data-comp="tag-block"
@@ -28,7 +29,8 @@ const TagBlock = React.forwardRef(({
   >
     <div css={headerStyle}>
       {headingUrl ? (
-        <a
+        <LinkComponent
+          injected={true}
           ref={ref}
           href={headingUrl}
           css={headingLinkStyle}
@@ -37,7 +39,7 @@ const TagBlock = React.forwardRef(({
         >
           <h2 css={headingStyle}>{heading}</h2>
           <ArrowFat />
-        </a>
+        </LinkComponent>
       ) : (
         <h2 css={headingStyle}>{heading}</h2>
       )}

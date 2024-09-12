@@ -14,6 +14,7 @@ const FocusPuff = React.forwardRef(({
   icon,
   imageComponent,
   onClick,
+  linkComponent: LinkComponent = 'a',
   style
 }, ref) => {
 
@@ -30,7 +31,13 @@ const FocusPuff = React.forwardRef(({
   }
 
   return (
-    <a css={[css.linkWrapper, style]} onClick={onClick} href={url} className="noStyle">
+    <LinkComponent
+      css={[css.linkWrapper, style]}
+      onClick={onClick}
+      href={url}
+      className="noStyle"
+      injected={true}
+    >
       <div css={[css.focusWrapper]} className={'focusWrapper'}>
         <div css={css.pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
         <div css={css.textArea} className="textArea">
@@ -41,7 +48,7 @@ const FocusPuff = React.forwardRef(({
           <p css={css.focusText} className="text">{text}</p>
         </div>
       </div>
-    </a>
+    </LinkComponent>
   )
 });
 

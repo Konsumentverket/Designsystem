@@ -24,7 +24,8 @@ export const CampaignFocusPuff = ({
   imageAlt,
   icon,
   imageComponent,
-  onClick
+  onClick,
+  linkComponent: LinkComponent = 'a',
 }) => {
   let imageArea = imageComponent;
   if (imageArea == null) {
@@ -54,9 +55,15 @@ export const CampaignFocusPuff = ({
   };
 
   return url !== null ? (
-    <a css={linkWrapper} href={url} onClick={onClick} className="noStyle">
+    <LinkComponent
+      css={linkWrapper}
+      href={url}
+      onClick={onClick}
+      className="noStyle"
+      injected={true}
+    >
       {campaignPuffMarkup(CampaignFocusPuff)}
-    </a>
+    </LinkComponent>
   ) : (
     campaignPuffMarkup(CampaignFocusPuff)
   );

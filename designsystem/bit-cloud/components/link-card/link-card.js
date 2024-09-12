@@ -20,7 +20,8 @@ const LinkCard = React.forwardRef(({
     headingLevel = 2,
     onClick,
     beforeToggleCount = 3,
-    childrenWrapperStyle
+    childrenWrapperStyle,
+    linkComponent: LinkComponent = 'a'
 }, ref) => {
 
     const childrenArray = React.Children.toArray(children);
@@ -33,21 +34,34 @@ const LinkCard = React.forwardRef(({
     }
 
     return <div id={id} css={[wrapper]} className={className} data-comp="link-card">
-        <a ref={ref} href={href} css={mainLinkStyle} onClick={onClick}>
+        <LinkComponent
+            ref={ref}
+            href={href}
+            css={mainLinkStyle}
+            onClick={onClick}
+            injected={true}
+        >
             <SubHeading level={headingLevel} styleLevel={3}>
-              <div>
-                {icon}
-                <span css={customFontSize} dangerouslySetInnerHTML={{ __html: text }}></span>
-              </div>
-              <Icon icon="ChevronLeft" />
+                <div>
+                    {icon}
+                    <span css={customFontSize} dangerouslySetInnerHTML={{ __html: text }}></span>
+                </div>
+                <Icon icon="ChevronLeft" />
 
             </SubHeading>
-        </a>
+        </LinkComponent>
         {itemsToShow.length > 0 && <div css={[childrenWrapper, childrenWrapperStyle]}>
             {itemsToShow}
         </div>}
         {childrenArray.length > beforeToggleCount &&
-          <a css={showAllLink} href={href} onClick={onClick}>Visa alla ({childrenArray.length}) <Icon icon="ChevronLeft" /></a>
+            <LinkComponent
+                css={showAllLink}
+                href={href}
+                onClick={onClick}
+                injected={true}
+            >
+                Visa alla ({childrenArray.length}) <Icon icon="ChevronLeft" />
+            </LinkComponent>
         }
     </div>
 })
