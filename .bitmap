@@ -142,6 +142,13 @@
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/image-card"
     },
+    "input-autocomplete": {
+        "name": "input-autocomplete",
+        "scope": "konsumentverket-sverige.designsystem",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/input-autocomplete"
+    },
     "input-radio": {
         "name": "input-radio",
         "scope": "konsumentverket-sverige.designsystem",
