@@ -12,6 +12,8 @@ export const SubHeading = ({
   styleLevel = null,
   headingLine = false,
   richText = true,
+  contentfulId = null,
+  contentfulName = ''
 }) => {
   const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
@@ -36,7 +38,7 @@ export const SubHeading = ({
   const selectedStyling = styling[styleLevel ? styleLevel - 1 : level - 1];
 
   return (
-    <SelectedHeading css={[selectedStyling, headingLine ? headingLineStyle : null]}>
+    <SelectedHeading css={[selectedStyling, headingLine ? headingLineStyle : null]} data-contentful-field-id={contentfulName} data-contentful-entry-id={contentfulId}>
       {children}
       {text}
     </SelectedHeading>

@@ -9,6 +9,8 @@ export const Heading = ({
   styleLevel = null,
   headingLine = false,
   richText = true,
+  contentfulId = null,
+  contentfulName = ''
   }) => (
   <SubHeading
     level={level}
@@ -16,6 +18,8 @@ export const Heading = ({
     styleLevel={styleLevel}
     headingLine={headingLine}
     richText={richText}
+    contentfulId={contentfulId}
+    contentfulName={contentfulName}
   >
     {children}
   </SubHeading>
