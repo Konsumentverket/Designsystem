@@ -11,6 +11,8 @@ export const CtaBlock = ({
   imageAlt,
   icon,
   imageComponent,
+  contentfulName,
+  contentfulId
 }) => {
   let imageclass = "";
   let imageArea = imageComponent;
@@ -31,7 +33,8 @@ export const CtaBlock = ({
 
 
     return (
-      <div css={ctaWrapper} className={imageclass} data-comp="cta-block">
+      <div css={ctaWrapper} className={imageclass} data-comp="cta-block" data-contentful-field-id={contentfulName}
+           data-contentful-entry-id={contentfulId}>
         <div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
         <div css={textArea} className='textarea'>
           <h3 css={focusHeadline}>
