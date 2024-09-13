@@ -12,6 +12,7 @@ export const FactBox = ({
   headline,
   content,
   tag = true,
+  contentfulId
 }) => {
 
   if (!content && !children) {
@@ -19,7 +20,8 @@ export const FactBox = ({
   }
 
   return (
-    <div css={[wrapperStyling, tag ? tagMargin : null]} data-comp="fact-box">
+    <div css={[wrapperStyling, tag ? tagMargin : null]} data-comp="fact-box" data-contentful-field-id="considerationBox"
+         data-contentful-entry-id={contentfulId}>
       {tag && (
           <div css={iconWrapper}>
             <Icon
