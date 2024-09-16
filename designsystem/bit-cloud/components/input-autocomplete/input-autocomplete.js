@@ -113,6 +113,7 @@ export const InputAutocomplete = ({
       console.log("Active index: ", activeIndex)
       event.preventDefault();
       handleSuggestionClick(suggestions[activeIndex]);
+      callbackOnClick(event, suggestions[activeIndex]);
     }
   };
 
