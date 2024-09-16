@@ -41,11 +41,24 @@ export const linkWrapper = css`
   }
 
   &:hover {
-    background-color: ${newColors.shades.lightBlue};
-    border: 1px solid ${newColors.primaries.fullBlue};
+    & + div {
+      background-color: ${newColors.shades.lightBlue};
+      border: 1px solid ${newColors.primaries.fullBlue};
+    }
 
     & > div {
       background-color: ${newColors.shades.lightBlue};
+    }
+
+    img {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+
+      .fullWidth & {
+        @media (min-width: ${breakpoints.m}) {
+          border-radius: 15px 0 0 15px;
+        }
+      }
     }
   }
 
