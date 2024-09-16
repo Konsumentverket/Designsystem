@@ -48,6 +48,8 @@ export const clearInput = css`
   top: 50%;
   right: 16px;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
 
   svg {
     fill: ${newColors.primaries.fullBlue};
@@ -127,6 +129,6 @@ export const dropdownButtonStyle = css`
 
 export const loadingWrapperStyle = css`
     top: 16px;
-    right: 16px;
+    right: 48px;
     position: absolute;
 `;

@@ -31,15 +31,16 @@ export const InputAutocomplete = ({
   const [loading, setLoading] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
-  const [skipSearch, setSkipSearch] = useState(false);
+  // const [skipSearch, setSkipSearch] = useState(false);
   const autocompleteRef = useRef(null);
   const inputRef = useRef(null);
 
   useEffect(() => {
-    if (skipSearch) {
-      setSkipSearch(false);
-      return;
-    }
+    // if (skipSearch) {
+    //   setSkipSearch(false);
+    //   return;
+    // }
+
     const timer = setTimeout(() => {
       if (query) {
         fetchSuggestions(query);
@@ -79,7 +80,7 @@ export const InputAutocomplete = ({
 
   const handleSuggestionClick = (suggestion) => {
     setQuery(suggestion.description);
-    setSkipSearch(true);
+    // setSkipSearch(true);
     setSuggestions([]);
     setIsDropdownOpen(false);
   };
