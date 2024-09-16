@@ -4,7 +4,6 @@ import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.ut
 
 export const focusWrapper = css`
   display: flex;
-  gap: 8px;
   height: 100%;
   width: 100%;
   flex-direction: column;
