@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import React, { useState, useEffect, useRef } from 'react';
 import { Loading } from '@konsumentverket-sverige/designsystem.loading';
+import {MonoDelete} from '@konsumentverket-sverige/designsystem.utils';
 import {
   containerStyle,
   containerHasSuggestionsStyle,
@@ -13,20 +14,26 @@ import {
   dropdownItemActiveStyle,
   dropdownButtonStyle,
   loadingWrapperStyle,
+  dropdownPositionRelativeStyle,
+  inputWrapper,
+  clearInput,
 } from './input-autocomplete.css.js';
 
 export const InputAutocomplete = ({
   fetchUrl,
   callbackOnClick = () => { },
   placeholder,
+  dropdownPositionRelative = false,
+  ariaLabelClearInput = 'Rensa sökfältet',
 }) => {
   const [query, setQuery] = useState('');
-  const [suggestions, setSuggestions] = useState([]);
+  const [suggestions, setSuggestions] = useState(initSuggestions);
   const [loading, setLoading] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
   const [skipSearch, setSkipSearch] = useState(false);
   const autocompleteRef = useRef(null);
+  const inputRef = useRef(null);
 
   useEffect(() => {
     if (skipSearch) {
@@ -77,6 +84,11 @@ export const InputAutocomplete = ({
     setIsDropdownOpen(false);
   };
 
+  const handleClearInput = () => {
+    setQuery('');
+    inputRef.current.focus();
+  }
+
   const handleInputKeyDown = (event) => {
     if (event.key === 'Escape') {
       setIsDropdownOpen(false);
@@ -114,27 +126,39 @@ export const InputAutocomplete = ({
       ref={autocompleteRef}
       css={[containerStyle, (showingResult ? containerHasSuggestionsStyle : null)]}
     >
-      <label
-        css={[labelStyle]}
-        htmlFor="autocomplete-input"
-      >
-        {placeholder}
-      </label>
-      <input
-        placeholder={placeholder}
-        autoComplete="off"
-        css={[inputStyle, (showingResult ? inputHasSuggestionsStyle : null)]}
-        type="text"
-        id="autocomplete-input"
-        value={query}
-        onChange={handleInputChange}
-        onKeyDown={handleInputKeyDown}
-        aria-autocomplete="list"
-        aria-controls={"input-autocomplete-suggestions"}
-        aria-expanded={isDropdownOpen}
-        aria-activedescendant={activeIndex >= 0 ? `autocomplete-option-${activeIndex}` : undefined}
-        aria-describedby={loading ? "loading-indicator" : undefined}
-      />
+      <div css={inputWrapper}>
+        <label
+          css={[labelStyle]}
+          htmlFor="autocomplete-input"
+        >
+          {placeholder}
+        </label>
+        <input
+          ref={inputRef}
+          placeholder={placeholder}
+          autoComplete="off"
+          css={[inputStyle, (showingResult ? inputHasSuggestionsStyle : null)]}
+          type="text"
+          id="autocomplete-input"
+          value={query}
+          onChange={handleInputChange}
+          onKeyDown={handleInputKeyDown}
+          aria-autocomplete="list"
+          aria-controls={"input-autocomplete-suggestions"}
+          aria-expanded={isDropdownOpen}
+          aria-activedescendant={activeIndex >= 0 ? `autocomplete-option-${activeIndex}` : undefined}
+          aria-describedby={loading ? "loading-indicator" : undefined}
+        />
+        {query && (
+          <button
+            css={clearInput}
+            onClick={handleClearInput}
+            aria-label={ariaLabelClearInput}
+          >
+            <MonoDelete />
+          </button>
+        )}
+      </div>
       {loading && (
         <div css={loadingWrapperStyle} id="loading-indicator" aria-live="polite">
           <Loading />
@@ -142,7 +166,7 @@ export const InputAutocomplete = ({
       )}
       {isDropdownOpen && suggestions.length > 0 && !loading && (
         <ul
-          css={dropdownWrapperStyle}
+          css={[dropdownWrapperStyle, dropdownPositionRelative && dropdownPositionRelativeStyle]}
           id={"input-autocomplete-suggestions"}
           role="listbox"
         >

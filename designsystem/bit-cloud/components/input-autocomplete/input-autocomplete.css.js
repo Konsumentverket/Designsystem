@@ -9,6 +9,10 @@ export const containerHasSuggestionsStyle = css`
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
 `;
 
+export const inputWrapper = css`
+  position: relative;
+`;
+
 export const labelStyle = css`
   border: 0;
   clip: rect(0 0 0 0);
@@ -37,6 +41,19 @@ export const inputStyle = css`
   }
 `;
 
+export const clearInput = css`
+  background: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+
+  svg {
+    fill: ${newColors.primaries.fullBlue};
+  }
+`;
+
 export const inputHasSuggestionsStyle = css`
   border-bottom: none;
   border-radius: 8px 8px 0px 0px;
@@ -54,17 +71,21 @@ export const dropdownWrapperStyle = css`
   overflow: hidden;
 `;
 
+export const dropdownPositionRelativeStyle = css`
+  position: relative;
+`;
+
 export const dropdownItemStyle = css`
   margin: 0;
   padding: 0;
 
   &[aria-selected=true] {
-    border-bottom: 1px solid transparent;
     background-color: ${newColors.primaries.lightBlue};
   }
 `;
 
 export const dropdownButtonStyle = css`
+  position: relative;
   display: block;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -75,15 +96,32 @@ export const dropdownButtonStyle = css`
   font-family: inherit;
   margin: 0;
   background-color: transparent;
-  border-bottom: 1px solid ${newColors.primaries.lightBlue};
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: calc(100% - 32px);
+    transform: translateX(-50%);
+    height: 1px;
+    background-color: ${newColors.primaries.lightBlue};
+  }
 
   &:hover {
-    border-bottom: 1px solid transparent;
     background-color: ${newColors.primaries.lightBlue};
+
+    &::after {
+      background-color: transparent;
+    }
   }
 
   &:active {
     background-color: ${newColors.shades.mediumBlue50};
+
+    &::after {
+      background-color: transparent;
+    }
   }
 `;
 
