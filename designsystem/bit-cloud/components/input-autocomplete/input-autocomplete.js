@@ -79,10 +79,14 @@ export const InputAutocomplete = ({
     setActiveIndex(-1);
   };
 
-  const handleSuggestionClick = (suggestion) => {
+  const handleSuggestionClick = (suggestion, triggeredByEnter) => {
     console.log("Final suggestion: ", suggestion)
     setQuery(suggestion.description);
-    setSkipSearch(true);
+
+    if(!triggeredByEnter) {
+      setSkipSearch(true);
+    }
+
     setSuggestions([]);
     setIsDropdownOpen(false);
   };
@@ -108,7 +112,7 @@ export const InputAutocomplete = ({
       console.log("Enter", suggestions[activeIndex]);
       console.log("Suggestions: ", suggestions)
       console.log("Active index: ", activeIndex)
-      handleSuggestionClick(suggestions[activeIndex]);
+      handleSuggestionClick(suggestions[activeIndex], true);
     }
   };
 
