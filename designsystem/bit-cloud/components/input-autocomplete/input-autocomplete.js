@@ -113,6 +113,7 @@ export const InputAutocomplete = ({
       console.log("Enter", suggestions[activeIndex]);
       console.log("Suggestions: ", suggestions)
       console.log("Active index: ", activeIndex)
+      event.preventDefault();
       handleSuggestionClick(suggestions[activeIndex], true);
     }
   };
