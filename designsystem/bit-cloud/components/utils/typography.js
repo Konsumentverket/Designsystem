@@ -146,11 +146,15 @@ export const paragraphStrong = css`
 
 export const textSmall = css`
   color: ${newColors.kovBlack};
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   word-break: normal;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const textSmallAlt = css`
