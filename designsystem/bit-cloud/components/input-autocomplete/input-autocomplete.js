@@ -42,11 +42,13 @@ export const InputAutocomplete = ({
       setSkipSearch(false);
       return;
     }
-
     const timer = setTimeout(() => {
+
       if (query) {
+        console.log("fetch")
         fetchSuggestions(query);
       } else {
+        console.log("fetch doesnt run")
         setSuggestions([]);
       }
     }, 500);
@@ -80,14 +82,10 @@ export const InputAutocomplete = ({
     setActiveIndex(-1);
   };
 
-  const handleSuggestionClick = (suggestion, triggeredByEnter) => {
+  const handleSuggestionClick = (suggestion) => {
     console.log("Final suggestion: ", suggestion)
     setQuery(suggestion.description);
-
-    if(!triggeredByEnter) {
-      setSkipSearch(true);
-    }
-
+    setSkipSearch(true);
     setSuggestions([]);
     setIsDropdownOpen(false);
   };
@@ -114,7 +112,7 @@ export const InputAutocomplete = ({
       console.log("Suggestions: ", suggestions)
       console.log("Active index: ", activeIndex)
       event.preventDefault();
-      handleSuggestionClick(suggestions[activeIndex], true);
+      handleSuggestionClick(suggestions[activeIndex]);
     }
   };
 
