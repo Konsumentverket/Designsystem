@@ -20,6 +20,8 @@ const IconCard = React.forwardRef(({
     id,
     useLightAlternativeColors = false,
     useAlternativeColors = false,
+    contentfulName,
+    contentfulId
 }, ref) => {
     return <a
         data-comp="icon-card"
@@ -29,6 +31,8 @@ const IconCard = React.forwardRef(({
         onClick={onClick}
         css={[iconCardStyle, (useAlternativeColors ? altIconCardStyle : useLightAlternativeColors ? altLightIconCardStyle : null)]}
         className="noStyle"
+        data-contentful-field-id={contentfulName}
+        data-contentful-entry-id={contentfulId}
     >
         {icon && React.cloneElement(icon, { "aria-hidden": "true", style: iconStyle })}
         <span css={iconTextStyle}>{text}</span>
