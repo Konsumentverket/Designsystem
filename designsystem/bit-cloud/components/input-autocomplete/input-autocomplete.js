@@ -36,6 +36,7 @@ export const InputAutocomplete = ({
   const inputRef = useRef(null);
 
   useEffect(() => {
+    console.log("Query is: ", query);
     if (skipSearch) {
       console.log("skips search")
       setSkipSearch(false);
