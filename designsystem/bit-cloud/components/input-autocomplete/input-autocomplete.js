@@ -31,15 +31,15 @@ export const InputAutocomplete = ({
   const [loading, setLoading] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
-  // const [skipSearch, setSkipSearch] = useState(false);
+  const [skipSearch, setSkipSearch] = useState(false);
   const autocompleteRef = useRef(null);
   const inputRef = useRef(null);
 
   useEffect(() => {
-    // if (skipSearch) {
-    //   setSkipSearch(false);
-    //   return;
-    // }
+    if (skipSearch) {
+      setSkipSearch(false);
+      return;
+    }
 
     const timer = setTimeout(() => {
       if (query) {
@@ -79,8 +79,9 @@ export const InputAutocomplete = ({
   };
 
   const handleSuggestionClick = (suggestion) => {
+    console.log("Final suggestion: ", suggestion)
     setQuery(suggestion.description);
-    // setSkipSearch(true);
+    setSkipSearch(true);
     setSuggestions([]);
     setIsDropdownOpen(false);
   };
@@ -103,6 +104,9 @@ export const InputAutocomplete = ({
     } else if (event.key === 'ArrowUp') {
       setActiveIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
     } else if (event.key === 'Enter' && activeIndex >= 0) {
+      console.log("Enter", suggestions[activeIndex]);
+      console.log("Suggestions: ", suggestions)
+      console.log("Active index: ", activeIndex)
       handleSuggestionClick(suggestions[activeIndex]);
     }
   };
