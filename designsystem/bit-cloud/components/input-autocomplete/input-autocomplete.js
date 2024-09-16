@@ -36,19 +36,15 @@ export const InputAutocomplete = ({
   const inputRef = useRef(null);
 
   useEffect(() => {
-    console.log("Query is: ", query);
     if (skipSearch) {
-      console.log("skips search")
       setSkipSearch(false);
       return;
     }
     const timer = setTimeout(() => {
 
       if (query) {
-        console.log("fetch")
         fetchSuggestions(query);
       } else {
-        console.log("fetch doesnt run")
         setSuggestions([]);
       }
     }, 500);
@@ -83,7 +79,6 @@ export const InputAutocomplete = ({
   };
 
   const handleSuggestionClick = (suggestion) => {
-    console.log("Final suggestion: ", suggestion)
     setQuery(suggestion.description);
     setSkipSearch(true);
     setSuggestions([]);
@@ -108,9 +103,6 @@ export const InputAutocomplete = ({
     } else if (event.key === 'ArrowUp') {
       setActiveIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
     } else if (event.key === 'Enter' && activeIndex >= 0) {
-      console.log("Enter", suggestions[activeIndex]);
-      console.log("Suggestions: ", suggestions)
-      console.log("Active index: ", activeIndex)
       event.preventDefault();
       handleSuggestionClick(suggestions[activeIndex]);
       callbackOnClick(event, suggestions[activeIndex]);
