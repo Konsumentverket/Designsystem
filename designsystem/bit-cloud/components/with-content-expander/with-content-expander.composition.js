@@ -29,7 +29,7 @@ export const BasicWithIconAndPreambleAndSubComponentWithContentExpander = () => 
                     volutpat
                   </p>
                   <div>
-                    <h2>This h2 should not be styled since it's a direct child in the Typography component</h2>
+                    <h2>This h2 should not be styled since it's not a direct child in the first div in the Typography component</h2>
                     <p>Neither this paragraph</p>
                   </div>
                 </div>
