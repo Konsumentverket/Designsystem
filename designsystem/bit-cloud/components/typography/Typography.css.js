@@ -12,54 +12,52 @@ export const typographyContainerStyle = css`
     margin-bottom: 0;
   }
 
-  :not(.noStyleComponent) {
-    h2:not(.noStyle) {
-      ${typography.h2}
-      border: 1px solid red;
+  :not(.noStyleComponent) h2:not(.noStyle) {
+    ${typography.h2}
+    border: 1px solid red;
+  }
+
+  h3:not(.noStyle) {
+    ${typography.h3}
+  }
+
+  p:not(.noStyle) {
+    ${typography.paragraph}
+    strong, b {
+      ${typography.paragraphStrong}
+    }
+  }
+
+  a:not(.noStyle) {
+    ${typography.link}
+    &:hover {
+      ${typography.linkHover}
     }
 
-    h3:not(.noStyle) {
-      ${typography.h3}
+    &:focus {
+      ${typography.linkFocus}
     }
+  }
 
-    p:not(.noStyle) {
-      ${typography.paragraph}
-      strong, b {
-        ${typography.paragraphStrong}
-      }
+  ul:not(.noStyle) {
+    ${typography.ulStyling}
+  }
+
+  ol:not(.noStyle) {
+    ${typography.olStyling}
+  }
+
+  blockquote:not(.noStyle) {
+    p, a, li {
+      ${typography.blockquoteText};
     }
+  }
 
-    a:not(.noStyle) {
-      ${typography.link}
-      &:hover {
-        ${typography.linkHover}
-      }
+  :first-child {
+    margin-top: 0 !important;
+  }
 
-      &:focus {
-        ${typography.linkFocus}
-      }
-    }
-
-    ul:not(.noStyle) {
-      ${typography.ulStyling}
-    }
-
-    ol:not(.noStyle) {
-      ${typography.olStyling}
-    }
-
-    blockquote:not(.noStyle) {
-      p, a, li {
-        ${typography.blockquoteText};
-      }
-    }
-
-    :first-child {
-      margin-top: 0 !important;
-    }
-
-    :last-child {
-      margin-bottom: 0 !important;
-    }
+  :last-child {
+    margin-bottom: 0 !important;
   }
 `;
