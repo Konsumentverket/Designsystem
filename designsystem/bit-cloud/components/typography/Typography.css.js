@@ -12,23 +12,23 @@ export const typographyContainerStyle = css`
     margin-bottom: 0;
   }
 
-  :not(.noStyleComponent) h2:not(.noStyle) {
+  h2:not(.noStyleComponent h2, .noStyle) {
     ${typography.h2}
     border: 1px solid red;
   }
 
-  h3:not(.noStyle) {
+  h3:not(.noStyleComponent h3.noStyle) {
     ${typography.h3}
   }
 
-  p:not(.noStyle) {
+  p:not(.noStyleComponent p, .noStyle) {
     ${typography.paragraph}
     strong, b {
       ${typography.paragraphStrong}
     }
   }
 
-  a:not(.noStyle) {
+  a:not(.noStyleComponent a, .noStyle) {
     ${typography.link}
     &:hover {
       ${typography.linkHover}
@@ -39,15 +39,15 @@ export const typographyContainerStyle = css`
     }
   }
 
-  ul:not(.noStyle) {
+  ul:not(.noStyleComponent ul, .noStyle) {
     ${typography.ulStyling}
   }
 
-  ol:not(.noStyle) {
+  ol:not(.noStyleComponent ol, .noStyle) {
     ${typography.olStyling}
   }
 
-  blockquote:not(.noStyle) {
+  blockquote:not(.noStyleComponent blockquote, .noStyle) {
     p, a, li {
       ${typography.blockquoteText};
     }
