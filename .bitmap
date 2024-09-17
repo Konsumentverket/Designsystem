@@ -271,7 +271,7 @@
     "typography": {
         "name": "typography",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.38",
+        "version": "0.0.39",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/typography"
     },
@@ -292,7 +292,7 @@
     "with-content-expander": {
         "name": "with-content-expander",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.94",
+        "version": "0.0.95",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/with-content-expander"
     }

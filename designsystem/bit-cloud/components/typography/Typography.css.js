@@ -14,7 +14,6 @@ export const typographyContainerStyle = css`
 
   h2:not(.noStyleComponent h2, .noStyle) {
     ${typography.h2}
-    border: 1px solid red;
   }
 
   h3:not(.noStyleComponent h3, .noStyle) {
@@ -51,13 +50,5 @@ export const typographyContainerStyle = css`
     p, a, li {
       ${typography.blockquoteText};
     }
-  }
-
-  :first-child {
-    margin-top: 0 !important;
-  }
-
-  :last-child {
-    margin-bottom: 0 !important;
   }
 `;
