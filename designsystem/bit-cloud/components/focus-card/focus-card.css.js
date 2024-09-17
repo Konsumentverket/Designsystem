@@ -74,7 +74,7 @@ export const focusCardTitleStyle = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
-    margin: 0 0 ${spacing.m} 0;
+    margin: 0 0 ${spacing.s} 0;
   }
 `;
 
