@@ -49,6 +49,9 @@ export const WithContentExpander = ({
   useAlternativeStyling = false,
   useLightBlueAlternativeStyling = false,
   useProcessStepStyling = false,
+  contentfulId = null,
+  contentfulName = '',
+  contentfulTextName = ''
 }) => {
   const [expanded, setExpanded] = useState(open);
   const linkContainerRef = useRef();
@@ -81,6 +84,8 @@ export const WithContentExpander = ({
   return (
     <div
       data-comp="with-content-expander"
+      data-contentful-field-id={contentfulName}
+      data-contentful-entry-id={contentfulId}
       className={`withContentExpander ${expanded ? "expanded" : ""}`}
       id={wrapperId}
       css={[
@@ -136,7 +141,7 @@ export const WithContentExpander = ({
                 >
                   {text}
                 </h3>
-                {preamble && <p css={preambleStyle}>{preamble}</p>}
+                {preamble && <p css={preambleStyle} data-contentful-field-id={contentfulTextName} data-contentful-entry-id={contentfulId}>{preamble}</p>}
               </div>
             </div>
             {!disabled && (
