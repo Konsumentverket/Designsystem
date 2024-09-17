@@ -17,7 +17,7 @@ export const typographyContainerStyle = css`
     border: 1px solid red;
   }
 
-  h3:not(.noStyleComponent h3.noStyle) {
+  h3:not(.noStyleComponent h3, .noStyle) {
     ${typography.h3}
   }
 
