@@ -186,6 +186,7 @@ export const InputAutocomplete = ({
                 className={"noStyle"}
                 css={dropdownButtonStyle}
                 onClick={(e) => callbackOnClick(e, suggestion)}
+                tabIndex="-1"
               >
                 {suggestion.description}
               </button>
