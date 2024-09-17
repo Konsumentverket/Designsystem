@@ -4,7 +4,6 @@ import {
 } from '@konsumentverket-sverige/designsystem.utils';
 
 export const typographyContainerStyle = css`
-
   & > :first-child {
     margin-top: 0;
   }
@@ -13,44 +12,54 @@ export const typographyContainerStyle = css`
     margin-bottom: 0;
   }
 
-  > h2:not(.noStyle) {
-    ${typography.h2}
-  }
+  > div {
 
-  > h3:not(.noStyle) {
-    ${typography.h3}
-  }
-
-  > p:not(.noStyle) {
-    ${typography.paragraph}
-
-    strong, b {
-      ${typography.paragraphStrong}
-    }
-  }
-
-  > a:not(.noStyle) {
-    ${typography.link}
-    &:hover {
-      ${typography.linkHover}
+    > h2:not(.noStyle) {
+      ${typography.h2}
     }
 
-    &:focus {
-      ${typography.linkFocus}
+    > h3:not(.noStyle) {
+      ${typography.h3}
     }
-  }
 
-  > ul:not(.noStyle) {
-    ${typography.ulStyling}
-  }
+    > p:not(.noStyle) {
+      ${typography.paragraph}
+      strong, b {
+        ${typography.paragraphStrong}
+      }
+    }
 
-  > ol:not(.noStyle) {
-    ${typography.olStyling}
-  }
+    > a:not(.noStyle) {
+      ${typography.link}
+      &:hover {
+        ${typography.linkHover}
+      }
 
-  > blockquote:not(.noStyle) {
-    p, a, li {
-      ${typography.blockquoteText};
+      &:focus {
+        ${typography.linkFocus}
+      }
+    }
+
+    > ul:not(.noStyle) {
+      ${typography.ulStyling}
+    }
+
+    > ol:not(.noStyle) {
+      ${typography.olStyling}
+    }
+
+    > blockquote:not(.noStyle) {
+      p, a, li {
+        ${typography.blockquoteText};
+      }
+    }
+
+    > :first-child {
+      margin-top: 0 !important;
+    }
+
+    > :last-child {
+      margin-bottom: 0 !important;
     }
   }
 `;
