@@ -57,21 +57,19 @@ export const Source = ({
             </span>
             {sourcesCollection.items.map((item, idx) => {
               return (
-                <>
-                  <a
-                    href={item.linkUrl}
-                    key={"link-" + idx}
-                    css={sourceLink}
-                    className={
-                      isExternal(baseUrl, item.linkUrl) ? "external" : null
-                    }
-                  >
-                    {item.linkText}
-                    {isExternal(baseUrl, item.linkUrl) && (
-                      <External title="Extern länk" className="external"/>
-                    )}
-                  </a>
-                </>
+                <a
+                  href={item.linkUrl}
+                  key={"link-" + idx}
+                  css={sourceLink}
+                  className={
+                    isExternal(baseUrl, item.linkUrl) ? "external" : null
+                  }
+                >
+                  {item.linkText}
+                  {isExternal(baseUrl, item.linkUrl) && (
+                    <External title="Extern länk" className="external"/>
+                  )}
+                </a>
               );
             })}
           </p>
