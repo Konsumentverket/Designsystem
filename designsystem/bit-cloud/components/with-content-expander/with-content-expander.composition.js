@@ -25,6 +25,10 @@ export const BasicWithIconAndPreambleAndSubComponentWithContentExpander = () => 
               wrappedComponent={
                 <>
                   <p>Suspendisse rhoncus sem quis feugiat facilisis. Pellentesque vulputate risus sit amet lorem volutpat</p>
+                  <div>
+                    <h2>This h2 should not be styled since it's a direct child in the Typography component</h2>
+                    <p>Neither this paragraph</p>
+                  </div>
                 </>
               }
             />
