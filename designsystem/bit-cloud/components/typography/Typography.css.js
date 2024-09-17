@@ -12,10 +12,10 @@ export const typographyContainerStyle = css`
     margin-bottom: 0;
   }
 
-  > div {
-
+  &:not(.noStyleComponent) {
     > h2:not(.noStyle) {
       ${typography.h2}
+      border: 1px solid red;
     }
 
     > h3:not(.noStyle) {

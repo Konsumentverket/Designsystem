@@ -96,7 +96,7 @@ export const linkStyles = css`
 `;
 
 export const linkStylesSmall = css`
-  ${linkStyles}
+  ${linkStyles};
   font-size: 1.6rem !important;
   svg {
         max-width: 1.8rem !important;

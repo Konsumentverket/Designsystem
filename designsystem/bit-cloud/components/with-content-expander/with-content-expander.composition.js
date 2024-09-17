@@ -28,7 +28,7 @@ export const BasicWithIconAndPreambleAndSubComponentWithContentExpander = () => 
                   <p>Suspendisse rhoncus sem quis feugiat facilisis. Pellentesque vulputate risus sit amet lorem
                     volutpat
                   </p>
-                  <div>
+                  <div className={"noStyleComponent"}>
                     <h2>This h2 should not be styled since it's not a direct child in the first div in the Typography component</h2>
                     <p>Neither this paragraph</p>
                   </div>
