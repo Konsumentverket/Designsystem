@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { newColors, spacing, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, spacing, breakpoints, typography } from '@konsumentverket-sverige/designsystem.utils';
 
 export const containerStyle = css`
   width: 100%;
@@ -34,6 +34,16 @@ export const headerStyle = css`
 
   @media (min-width: ${breakpoints.m}) {
     padding: ${spacing.m};
+  }
+
+  svg {
+    min-width: 12px;
+    width: 12px;
+
+    @media (min-width: ${breakpoints.m}) {
+      min-width: 18px;
+      width: 18px;
+    }
   }
 `;
 
@@ -87,6 +97,15 @@ export const titleAlternativeStyle = css`
 export const titleLightBlueAlternativeStyle = css`
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.6rem;
+  }
+`;
+
+export const titleProcessStepStyle = css`
+  font-size: 2rem;
+  font-weight: 700;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2.4rem;
   }
 `;
 
@@ -233,7 +252,7 @@ export const expandedAreaLightBlueAlternativeStyle = css`
 
 export const expandedAreaExpandedStyle = css`
   visibility: visible;
-  padding: ${spacing.s} ${spacing.s} ${spacing.l} ${spacing.s};
+  padding: ${spacing.m} ${spacing.s} ${spacing.l} ${spacing.s};
   height: auto;
   border-radius: 0 0 ${spacing.s} ${spacing.s};
 

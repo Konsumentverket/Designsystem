@@ -132,9 +132,9 @@ export const BasicWithProcessStepStyling = () => {
     <CompositionFonts>
       <GlobalStyles />
       <WithContentExpander
-        icon={"FurnituresAndDecoration"}
+        // icon={"FurnituresAndDecoration"}
         text={"Lorem ipsum dolor sit amet consectetur adipiscing elit"}
-        preamble={"Pellentesque vulputate risus sit amet lorem volutpat eu aliquam odio varius?"}
+        // preamble={"Pellentesque vulputate risus sit amet lorem volutpat eu aliquam odio varius?"}
         wrappedComponent={
           <>
             <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit</h3>

@@ -19,6 +19,7 @@ import {
   titleStyle,
   titleAlternativeStyle,
   titleLightBlueAlternativeStyle,
+  titleProcessStepStyle,
   preambleStyle,
   linkStyle,
   linkAlternativeStyle,
@@ -137,6 +138,7 @@ export const WithContentExpander = ({
                     titleStyle,
                     useAlternativeStyling ? titleAlternativeStyle : null,
                     useLightBlueAlternativeStyling ? titleLightBlueAlternativeStyle : null,
+                    useProcessStepStyling ? titleProcessStepStyle : null,
                   ]}
                 >
                   {text}
