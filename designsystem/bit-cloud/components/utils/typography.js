@@ -128,6 +128,10 @@ export const paragraph = css`
   word-break: normal;
   margin-bottom: 14px;
 
+  b, strong {
+    font-weight: 500;
+  }
+
   @media (min-width: ${breakpoints.m}) {
     font-size: 2rem;
     line-height: 145%;
@@ -425,6 +429,16 @@ export const ulListSpacing = css`
   }
 `;
 
+export const ulSmallListSpacing = css`
+  margin: 16px 0;
+  padding: 0 0 0 8px;
+
+  @media(min-width: ${breakpoints.m}){
+    margin: 24px 0;
+    padding: 0 0 0 16px;
+  }
+`;
+
 export const ulStyling = css`
   ${ulListSpacing};
 
@@ -458,12 +472,32 @@ export const ulStyling = css`
   }
 `;
 
-export const olListSpacing = css`
-  margin: 32px calc(8px + 19.31px);
+export const ulSmallStyling = css`
+  ${ulStyling};
+  ${ulSmallListSpacing};
 
+  li {
+    ${paragraph};
+
+    @media (min-width: ${breakpoints.m}) {
+      ${textSmall};
+    }
+  }
+`;
+
+export const olListSpacing = css`
+  margin: 32px 27px; // 8px + 19px
 
   @media(min-width: ${breakpoints.m}){
-    margin: 32px calc(16px + 21.45px);
+    margin: 32px 37px; // 16px + 21px
+  }
+`;
+
+export const olSmallListSpacing = css`
+  margin: 16px 27px; // 8px + 19px
+
+  @media(min-width: ${breakpoints.m}){
+    margin: 24px 37px; // 16px + 21px
   }
 `;
 
@@ -480,3 +514,17 @@ export const olStyling = css`
     }
   }
 `;
+
+export const olSmallStyling = css`
+  ${olListSpacing};
+  ${olSmallListSpacing};
+
+  li {
+    ${paragraph};
+
+    @media (min-width: ${breakpoints.m}) {
+      ${textSmall};
+    }
+  }
+`;
+
