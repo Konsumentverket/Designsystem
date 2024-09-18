@@ -137,6 +137,7 @@ export const InputAutocomplete = ({
           {placeholder}
         </label>
         <input
+          role="combobox"
           ref={inputRef}
           placeholder={placeholder}
           autoComplete="off"
