@@ -9,7 +9,6 @@ const baseHeading = css`
   font-weight: 700;
   position: relative;
   word-break: break-word;
-  hyphens: auto;
   margin-bottom: 16px;
 `;
 
