@@ -9,7 +9,7 @@ export const secondRow = css`
   display: flex;
   flex-direction: column;
   ${typography.textSmall};
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 
   a {
     ${typography.linkSmall};
@@ -18,7 +18,6 @@ export const secondRow = css`
 
   @media (min-width: ${breakpoints.m}) {
     flex-direction: row;
-    margin-bottom: 16px;
   }
 `;
 
