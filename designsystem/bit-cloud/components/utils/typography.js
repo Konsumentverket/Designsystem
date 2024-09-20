@@ -110,11 +110,11 @@ export const preamble = css`
   line-height: 150%;
   word-break: normal;
   max-width: 744px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
   }
 `;
 
