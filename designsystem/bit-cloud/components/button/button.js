@@ -41,13 +41,13 @@ export const Button = ({
   linkStyleSmall && styles.push(linkStylesSmall);
   selected && cssClass.push("selectedButtonStyle");
   linkStyle && cssClass.push("button--linkstyle");
-  href && cssClass.push("noStyle");
+  (href && !linkStyle && !linkStyleSmall) && cssClass.push("noStyle");
   text === '' && (iconLeft || iconRight) && styles.push(buttonIconOnly)
   iconLeft && styles.push(buttonIconLeft)
   iconRight && styles.push(buttonIconRight)
   smallButtonStyle && styles.push(smallStyle);
 
-  const ariaAttrs = {};
+  const ariaAttrs = {};''
   Object.keys(other).filter(x => x.startsWith("aria-")).forEach(x => ariaAttrs[x] = other[x]);
 
   const props = {

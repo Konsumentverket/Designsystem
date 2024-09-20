@@ -155,7 +155,7 @@ export const BasicSmallButton = () => {
 // Link style button with icon example
 export const LinkStyleButton = () => {
   const element = <Button
-    onClick={() => { alert("You clicked the button!") }}
+    href={"/test"}
     text="Lorem ipsum"
     iconRight={
       <Icon icon="Camera" />
@@ -175,10 +175,11 @@ export const LinkStyleButton = () => {
     </>
   );
 }
+
 // Link style small button with icon example
 export const LinkStyleSmallButton = () => {
   const element = <Button
-    onClick={() => { alert("You clicked the button!") }}
+    href={"/test"}
     text="Lorem ipsum"
     iconLeft={
       <Icon icon="Camera" />
