@@ -55,6 +55,8 @@ import { MonoArrowDown } from "./Icons/SystemIcons/MonoArrowDown/MonoArrowDown";
 import { MonoArrowDownSmall } from "./Icons/SystemIcons/MonoArrowDownSmall/MonoArrowDownSmall";
 import { MonoCheck } from "./Icons/SystemIcons/MonoCheck/MonoCheck";
 import { MonoBlueRss } from "./Icons/SystemIcons/MonoBlueRss/MonoBlueRss";
+import { WarningCircle } from "./Icons/SystemIcons/WarningCircle/WarningCircle";
+import { WarningCirclePink } from "./Icons/SystemIcons/WarningCirclePink/WarningCirclePink";
 
 
 // Editor icons
@@ -182,6 +184,8 @@ export {
     MonoArrowDownSmall,
     MonoCheck,
     MonoBlueRss,
+    WarningCircle,
+    WarningCirclePink,
 
 
     // System icons

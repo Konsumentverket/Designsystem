@@ -54,6 +54,8 @@ import {
   MonoArrowDownSmall,
   MonoCheck,
   MonoBlueRss,
+  WarningCircle,
+  WarningCirclePink,
 
   // Editor Icons
 
@@ -160,6 +162,8 @@ const systemIconDefinitions = {
   MonoArrowDownSmall,
   MonoCheck,
   MonoBlueRss,
+  WarningCircle,
+  WarningCirclePink,
 };
 
 const editorIconDefinitions = {

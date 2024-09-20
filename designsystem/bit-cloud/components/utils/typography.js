@@ -138,6 +138,11 @@ export const paragraph = css`
   }
 `;
 
+export const paragraphNoMargin = css`
+  ${paragraph};
+  margin-bottom: 0;
+`;
+
 export const paragraphStrong = css`
   ${paragraph};
   font-weight: 500;
@@ -217,6 +222,11 @@ export const link = css`
   &:not(.noStyle):focus {
     ${linkFocus};
   }
+`;
+
+export const linkNoMargin = css`
+  ${link};
+  margin-bottom: 0;
 `;
 
 export const linkMini = css`
