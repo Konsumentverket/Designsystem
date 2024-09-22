@@ -25,6 +25,11 @@ export const h1 = css`
   }
 `;
 
+export const h1NoMargin = css`
+  ${h1};
+  margin: 0;
+`;
+
 export const headingLine = css`
   &::before {
     content: "";
@@ -46,6 +51,11 @@ export const h1Line = css`
   ${headingLine};
 `;
 
+export const h1LineNoMargin = css`
+  ${h1Line};
+  margin: 0;
+`;
+
 export const h2 = css`
   ${baseHeading};
 
@@ -60,9 +70,20 @@ export const h2 = css`
   }
 `;
 
+export const h2NoMargin = css`
+  ${h2};
+  margin: 0;
+`;
+
 export const h2Line = css`
   ${h2};
   ${headingLine};
+`;
+
+export const h2LineNoMargin = css`
+  ${h2};
+  ${headingLine};
+  margin: 0;
 `;
 
 export const h3 = css`
@@ -79,9 +100,19 @@ export const h3 = css`
   }
 `;
 
+export const h3NoMargin = css`
+  ${h3};
+  margin: 0;
+`;
+
 export const h3Line = css`
   ${h3};
   ${headingLine};
+`;
+
+export const h3LineNoMargin = css`
+  ${h3Line};
+  margin: 0;
 `;
 
 export const subHeading = css`
@@ -97,9 +128,19 @@ export const subHeading = css`
   }
 `;
 
+export const subHeadingNoMargin = css`
+  ${subHeading};
+  margin: 0;
+`;
+
 export const subHeadingLine = css`
   ${subHeading};
   ${headingLine};
+`;
+
+export const subHeadingLineNoMargin = css`
+  ${subHeadingLine};
+  margin: 0;
 `;
 
 export const preamble = css`
@@ -116,6 +157,11 @@ export const preamble = css`
     font-size: 2.4rem;
     margin-bottom: 32px;
   }
+`;
+
+export const preambleNoMargin = css`
+  ${preamble};
+  margin: 0;
 `;
 
 export const paragraph = css`
@@ -152,6 +198,11 @@ export const paragraphStrong = css`
   }
 `;
 
+export const paragraphStrongNoMargin = css`
+  ${paragraphStrong};
+  margin-bottom: 0;
+`;
+
 export const textSmall = css`
   color: ${newColors.kovBlack};
   font-size: 1.4rem;
@@ -165,10 +216,20 @@ export const textSmall = css`
   }
 `;
 
+// export const textSmallNoMargin = css`
+//   ${textSmall};
+//   margin-bottom: 0;
+// `;
+
 export const textSmallAlt = css`
   ${textSmall};
   font-weight: 500;
 `;
+
+// export const textSmallAltNoMargin = css`
+//   ${textSmallAlt};
+//   margin-bottom: 0;
+// `;
 
 export const textMini = css`
   font-size: 1.2rem;
@@ -181,6 +242,11 @@ export const textMini = css`
     font-size: 1.4rem;
   }
 `;
+
+// export const textMiniNoMargin = css`
+//   ${textMini};
+//   margin-bottom: 0;
+// `;
 
 export const textMiniAlt = css`
   ${textMini};
@@ -384,11 +450,21 @@ export const subHeadingAltBig = css`
   margin-top: 32px;
 `;
 
+export const subHeadingAltBigNoMargin = css`
+  ${subHeadingAltBig};
+  margin: 0;
+`;
+
 export const subHeadingAltMedium = css`
   ${baseSubHeadingAlt};
   font-size: 2.4rem;
   line-height: 150%; /* 36px */
   margin-top: 24px;
+`;
+
+export const subHeadingAltMediumNoMargin = css`
+  ${subHeadingAltMedium};
+  margin: 0;
 `;
 
 export const subHeadingAltSmall = css`
@@ -398,11 +474,22 @@ export const subHeadingAltSmall = css`
   margin-top: 16px;
 `;
 
+export const subHeadingAltSmallNoMargin = css`
+  ${subHeadingAltSmall};
+  margin: 0;
+`;
+
+
 export const subHeadingAltMini = css`
   ${baseSubHeadingAlt};
   font-size: 1.6rem;
   line-height: 130%; /* 20.8px */
   margin-top: 8px;
+`;
+
+export const subHeadingAltMiniNoMargin = css`
+  ${subHeadingAltMini};
+  margin: 0;
 `;
 
 export const richTextHeadingBig = css`
