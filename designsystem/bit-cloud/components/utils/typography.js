@@ -73,6 +73,10 @@ export const h2 = css`
 export const h2NoMargin = css`
   ${h2};
   margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const h2Line = css`
@@ -84,6 +88,10 @@ export const h2LineNoMargin = css`
   ${h2};
   ${headingLine};
   margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const h3 = css`
@@ -103,6 +111,10 @@ export const h3 = css`
 export const h3NoMargin = css`
   ${h3};
   margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const h3Line = css`
@@ -113,6 +125,10 @@ export const h3Line = css`
 export const h3LineNoMargin = css`
   ${h3Line};
   margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const subHeading = css`
@@ -131,6 +147,10 @@ export const subHeading = css`
 export const subHeadingNoMargin = css`
   ${subHeading};
   margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const subHeadingLine = css`
@@ -141,6 +161,10 @@ export const subHeadingLine = css`
 export const subHeadingLineNoMargin = css`
   ${subHeadingLine};
   margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const preamble = css`
@@ -162,6 +186,10 @@ export const preamble = css`
 export const preambleNoMargin = css`
   ${preamble};
   margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const paragraph = css`
@@ -186,7 +214,11 @@ export const paragraph = css`
 
 export const paragraphNoMargin = css`
   ${paragraph};
-  margin-bottom: 0;
+  margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const paragraphStrong = css`
@@ -200,7 +232,11 @@ export const paragraphStrong = css`
 
 export const paragraphStrongNoMargin = css`
   ${paragraphStrong};
-  margin-bottom: 0;
+  margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const textSmall = css`
@@ -292,7 +328,11 @@ export const link = css`
 
 export const linkNoMargin = css`
   ${link};
-  margin-bottom: 0;
+  margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const linkMini = css`
@@ -465,6 +505,10 @@ export const subHeadingAltMedium = css`
 export const subHeadingAltMediumNoMargin = css`
   ${subHeadingAltMedium};
   margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const subHeadingAltSmall = css`
@@ -477,6 +521,10 @@ export const subHeadingAltSmall = css`
 export const subHeadingAltSmallNoMargin = css`
   ${subHeadingAltSmall};
   margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 
@@ -490,6 +538,10 @@ export const subHeadingAltMini = css`
 export const subHeadingAltMiniNoMargin = css`
   ${subHeadingAltMini};
   margin: 0;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin: 0;
+  }
 `;
 
 export const richTextHeadingBig = css`
