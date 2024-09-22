@@ -1,10 +1,6 @@
 import {css} from "@emotion/core";
 import {newColors, spacing, typography, breakpoints} from '@konsumentverket-sverige/designsystem.utils';
 
-export const sourceStyle = css`
-  padding: 32px 0 16px 0;
-`;
-
 export const secondRow = css`
   display: flex;
   flex-direction: column;

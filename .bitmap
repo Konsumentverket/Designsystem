@@ -236,7 +236,7 @@
     "source": {
         "name": "source",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.84",
+        "version": "0.0.85",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/source"
     },

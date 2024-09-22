@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/core";
-import { sourceStyle, secondRow, rightAlign, sourceLink, sourceTitle, sourcesContainer, reviewText } from "./sourcs.css.js";
+import { secondRow, rightAlign, sourceLink, sourceTitle, sourcesContainer, reviewText } from "./sourcs.css.js";
 import isExternal from "./isExternalUrl";
 import { External } from '@konsumentverket-sverige/designsystem.utils';
 
@@ -47,7 +47,7 @@ export const Source = ({
   ];
 
   return (
-    <div css={[sourceStyle]} data-comp="source">
+    <div data-comp="source">
       <div id="mtmFeedBackForm" className="feedbackForm"></div>
       <div css={secondRow}>
         {sourcesCollection && sourcesCollection.items.length > 0 && (
