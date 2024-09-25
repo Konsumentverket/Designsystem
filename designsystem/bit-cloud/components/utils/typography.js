@@ -307,7 +307,7 @@ export const textMini = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.4rem;
-    line-height: 700;
+    line-height: 170%;
   }
 `;
 
