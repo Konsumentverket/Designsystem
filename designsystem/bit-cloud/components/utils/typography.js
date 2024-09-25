@@ -16,7 +16,7 @@ export const h1 = css`
   ${baseHeading};
 
   font-size: 3.2rem;
-  line-height: 120%;
+  line-height: 130%;
   margin-top: 24px;
 
   @media (min-width: ${breakpoints.m}) {
@@ -103,7 +103,7 @@ export const h3 = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
-    line-height: 150%;
+    line-height: 140%;
     margin-top: 24px;
   }
 `;
@@ -128,6 +128,47 @@ export const h3LineNoMargin = css`
 
   @media (min-width: ${breakpoints.m}) {
     margin: 0;
+  }
+`;
+
+export const h4 = css`
+  ${baseHeading};
+
+  font-size: 1.8rem;
+  line-height: 130%;
+  margin-top: 16px;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2rem;
+    line-height: 140%;
+    margin-top: 24px;
+  }
+`;
+
+export const h5 = css`
+  ${baseHeading};
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 130%;
+  margin-top: 16px;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2rem;
+    line-height: 140%;
+    margin-top: 24px;
+  }
+`;
+
+export const h6 = css`
+  ${baseHeading};
+
+  font-size: 1.4rem;
+  line-height: 130%;
+  margin-top: 16px;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 1.6rem;
+    margin-top: 24px;
   }
 `;
 
@@ -252,20 +293,10 @@ export const textSmall = css`
   }
 `;
 
-// export const textSmallNoMargin = css`
-//   ${textSmall};
-//   margin-bottom: 0;
-// `;
-
 export const textSmallAlt = css`
   ${textSmall};
   font-weight: 500;
 `;
-
-// export const textSmallAltNoMargin = css`
-//   ${textSmallAlt};
-//   margin-bottom: 0;
-// `;
 
 export const textMini = css`
   font-size: 1.2rem;
@@ -276,17 +307,17 @@ export const textMini = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.4rem;
+    line-height: 700;
   }
 `;
-
-// export const textMiniNoMargin = css`
-//   ${textMini};
-//   margin-bottom: 0;
-// `;
 
 export const textMiniAlt = css`
   ${textMini};
   font-weight: 500;
+
+  @media (min-width: ${breakpoints.m}) {
+    line-height: 150%;
+  }
 `;
 
 export const blockquoteText = css`
@@ -354,6 +385,18 @@ export const linkSmall = css`
   }
 `;
 
+export const linkTextSmall = css`
+  ${link};
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+`;
+
 export const linkBodyMedium = css`
   ${link};
   font-size: 1.8rem;
@@ -373,6 +416,22 @@ export const linkLarge = css`
     font-size: 2.4rem;
   }
 `;
+
+export const linkParagraph = css`
+  ${link};
+  font-size: 1.8rem;
+
+  @media (min-width: ${breakpoints.m}) {
+    line-height: 150%;
+    font-size: 2rem;
+  }
+`;
+
+export const linkParagraphStrong = css`
+  ${linkParagraph};
+  font-weight: 700;
+`;
+
 
 export const clickHover = css`
   text-decoration: underline;
@@ -404,6 +463,12 @@ const baseClick = css`
   }
 `;
 
+export const navClick = css`
+  ${baseClick};
+  font-size: 1.6rem;
+  font-weight: 400;
+`;
+
 export const clickMini = css`
   ${baseClick};
   font-size: 1.2rem;
@@ -411,6 +476,11 @@ export const clickMini = css`
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.4rem;
   }
+`;
+
+export const clickMiniUL = css`
+  ${clickMini};
+  text-decoration: underline;
 `;
 
 export const clickSmall = css`
@@ -422,6 +492,16 @@ export const clickSmall = css`
   }
 `;
 
+export const clickSmallUL = css`
+  ${clickSmall};
+  text-decoration: underline;
+`;
+
+export const clickSmallAlt = css`
+  ${clickSmall};
+  font-weight: 400;
+`;
+
 export const clickMedium = css`
   ${baseClick};
   font-size: 1.6rem;
@@ -431,9 +511,19 @@ export const clickMedium = css`
   }
 `;
 
+export const clickMediumUL = css`
+  ${clickMedium};
+  text-decoration: underline;
+`;
+
 export const clickMediumAlt = css`
   ${clickMedium};
   font-weight: 400;
+`;
+
+export const clickMediumAltUL = css`
+  ${clickMediumAlt};
+  text-decoration: underline;
 `;
 
 export const clickLarge = css`
@@ -445,6 +535,11 @@ export const clickLarge = css`
   }
 `;
 
+export const clickLargeUL = css`
+  ${clickLarge};
+  text-decoration: underline;
+`;
+
 
 const baseHeadingAlt = css`
   color: ${newColors.kovBlue};
@@ -454,26 +549,62 @@ const baseHeadingAlt = css`
 
 export const h1Alt2 = css`
   ${baseHeadingAlt};
-  font-size: 2.8rem;
-  line-height: 128.571% /* 36px */
+  font-size: 2.6rem;
+  line-height: 130%;
+  font-weight: 700;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2.8rem;
+    line-height: 128.571% /* 36px */
+  }
+`;
+
+export const h1MediumAlt = css`
+  ${h1Alt2};
 `;
 
 export const h1Alt3 = css`
   ${baseHeadingAlt};
-  font-size: 2.4rem;
-  line-height: 130% /* 31.2px */
+  line-height: 130%;
+  font-size: 2.2rem;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2.4rem;
+  }
+`;
+
+export const h1SmallAlt = css`
+  ${h1Alt3};
 `;
 
 export const h2Alt2 = css`
   ${baseHeadingAlt};
-  font-size: 2.4rem;
-  line-height: 141.667% /* 34px */
+  font-size: 2.2rem;
+  line-height: 130%;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2.4rem;
+    line-height: 141.667%;
+  }
+`;
+
+export const h2MediumAlt = css`
+  ${h2Alt2};
 `;
 
 export const h2Alt3 = css`
   ${baseHeadingAlt};
-  font-size: 2rem;
-  line-height: 140% /* 28px */
+  font-size: 1.8rem;
+  line-height: 130%;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2rem;
+    line-height: 140%;
+  }
+`;
+
+export const h2SmallAlt = css`
+  ${h2Alt3};
 `;
 
 const baseSubHeadingAlt = css`
@@ -485,9 +616,17 @@ const baseSubHeadingAlt = css`
 
 export const subHeadingAltBig = css`
   ${baseSubHeadingAlt};
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   line-height: 120%; /* 33.6px */
   margin-top: 32px;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2.8rem;
+  }
+`;
+
+export const subHeadingLarge = css`
+  ${subHeadingAltBig};
 `;
 
 export const subHeadingAltBigNoMargin = css`
@@ -497,9 +636,18 @@ export const subHeadingAltBigNoMargin = css`
 
 export const subHeadingAltMedium = css`
   ${baseSubHeadingAlt};
-  font-size: 2.4rem;
-  line-height: 150%; /* 36px */
+  font-size: 2.2rem;
+  line-height: 130%;
   margin-top: 24px;
+
+  @media (min-width: ${breakpoints.m}) {
+    line-height: 150%;
+    font-size: 2.4rem;
+  }
+`;
+
+export const subHeadingMedium = css`
+  ${subHeadingAltMedium};
 `;
 
 export const subHeadingAltMediumNoMargin = css`
@@ -513,9 +661,18 @@ export const subHeadingAltMediumNoMargin = css`
 
 export const subHeadingAltSmall = css`
   ${baseSubHeadingAlt};
-  font-size: 2rem;
-  line-height: 140%; /* 28px */
+  font-size: 1.8rem;
+  line-height: 130%;
   margin-top: 16px;
+
+  @media (min-width: ${breakpoints.m}) {
+    font-size: 2rem;
+    line-height: 140%;
+  }
+`;
+
+export const subHeadingSmall = css`
+  ${subHeadingAltSmall};
 `;
 
 export const subHeadingAltSmallNoMargin = css`
@@ -526,7 +683,6 @@ export const subHeadingAltSmallNoMargin = css`
     margin: 0;
   }
 `;
-
 
 export const subHeadingAltMini = css`
   ${baseSubHeadingAlt};
@@ -542,6 +698,10 @@ export const subHeadingAltMiniNoMargin = css`
   @media (min-width: ${breakpoints.m}) {
     margin: 0;
   }
+`;
+
+export const subHeadingXS = css`
+  ${subHeadingAltMini};
 `;
 
 export const richTextHeadingBig = css`
