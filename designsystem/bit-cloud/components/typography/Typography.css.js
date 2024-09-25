@@ -4,6 +4,23 @@ import {
   breakpoints,
 } from '@konsumentverket-sverige/designsystem.utils';
 
+export const typographyHeadingMargin = css`
+  margin-top: 32px;
+  margin-bottom: 8px;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-top: 40px;
+  }
+`;
+
+export const typographyListMargin = css`
+  margin-bottom: 48px;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-bottom: 64px;
+  }
+`;
+
 export const typographyContainerStyle = css`
   & > :first-child {
     margin-top: 0 !important;
@@ -15,10 +32,27 @@ export const typographyContainerStyle = css`
 
   h2:not(.noStyleComponent h2, .noStyle) {
     ${typography.h2}
+    ${typographyHeadingMargin}
   }
 
   h3:not(.noStyleComponent h3, .noStyle) {
     ${typography.h3}
+    ${typographyHeadingMargin}
+  }
+
+  h4:not(.noStyleComponent h4, .noStyle) {
+    ${typography.h4}
+    ${typographyHeadingMargin}
+  }
+
+  h5:not(.noStyleComponent h5, .noStyle) {
+    ${typography.h5}
+    ${typographyHeadingMargin}
+  }
+
+  h6:not(.noStyleComponent h6, .noStyle) {
+    ${typography.h6}
+    ${typographyHeadingMargin}
   }
 
   p:not(.noStyleComponent p, .noStyle) {
@@ -40,11 +74,13 @@ export const typographyContainerStyle = css`
   }
 
   ul:not(.noStyleComponent ul, .noStyle) {
-    ${typography.ulStyling}
+    ${typography.ulStyling};
+    ${typographyListMargin};
   }
 
   ol:not(.noStyleComponent ol, .noStyle) {
-    ${typography.olStyling}
+    ${typography.olStyling};
+    ${typographyListMargin};
   }
 
   blockquote:not(.noStyleComponent blockquote, .noStyle) {
