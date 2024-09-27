@@ -114,6 +114,45 @@ import { MonoDeleteSmall } from "./Icons/SystemIcons/MonoDeleteSmall/MonoDeleteS
 import { MonoSearch } from "./Icons/SystemIcons/MonoSearch/MonoSearch";
 import { MonoMenuThin } from "./Icons/SystemIcons/MonoMenuThin/MonoMenuThin";
 
+import { NewsIcon } from "./Icons/EditorIcons/NewsIcon/NewsIcon.js";
+import { DiagramIcon } from "./Icons/EditorIcons/DiagramIcon/DiagramIcon.js";
+import { BudgetIcon } from "./Icons/EditorIcons/BudgetIcon/BudgetIcon.js";
+import { FlightsIcon } from "./Icons/EditorIcons/FlightsIcon/FlightsIcon.js";
+import { WorkIcon } from "./Icons/EditorIcons/WorkIcon/WorkIcon.js";
+import { OperationIcon } from "./Icons/EditorIcons/OperationIcon/OperationIcon.js";
+import { ReportIcon } from "./Icons/EditorIcons/ReportIcon/ReportIcon.js";
+import { SafeIcon } from "./Icons/EditorIcons/SafeIcon/SafeIcon.js";
+import { EnvironmentIcon } from "./Icons/EditorIcons/EnvironmentIcon/EnvironmentIcon.js";
+import { EconomyIcon } from "./Icons/EditorIcons/EconomyIcon/EconomyIcon.js";
+import { EUIcon } from "./Icons/EditorIcons/EUIcon/EUIcon.js";
+import { ConsumerLawIcon } from "./Icons/EditorIcons/ConsumerLawIcon/ConsumerLawIcon.js";
+import { ConsumerRightsShieldIcon } from "./Icons/EditorIcons/ConsumerRightsShieldIcon/ConsumerRightsShieldIcon.js";
+import { ShoppingIcon } from "./Icons/EditorIcons/ShoppingIcon/ShoppingIcon.js";
+import { StatisticsIcon } from "./Icons/EditorIcons/StatisticsIcon/StatisticsIcon.js";
+import { ConsumerSupportIcon } from "./Icons/EditorIcons/ConsumerSupportIcon/ConsumerSupportIcon.js";
+import { MunicipalSupportIcon } from "./Icons/EditorIcons/MunicipalSupportIcon/MunicipalSupportIcon.js";
+import { TeacherIcon } from "./Icons/EditorIcons/TeacherIcon/TeacherIcon.js";
+import { QuestinCircleIcon } from "./Icons/EditorIcons/QuestinCircleIcon/QuestinCircleIcon.js";
+import { WarningCircleIcon } from "./Icons/EditorIcons/WarningCircleIcon/WarningCircleIcon.js";
+import { WarningDiamondIcon } from "./Icons/EditorIcons/WarningDiamondIcon/WarningDiamondIcon.js";
+import { KOVWorkIcon } from "./Icons/EditorIcons/KOVWorkIcon/KOVWorkIcon.js";
+import { ProductSafetyIcon } from "./Icons/EditorIcons/ProductSafetyIcon/ProductSafetyIcon.js";
+import { PaymentIcon } from "./Icons/EditorIcons/PaymentIcon/PaymentIcon.js";
+import { MarketingIcon } from "./Icons/EditorIcons/MarketingIcon/MarketingIcon.js";
+import { ContractIcon } from "./Icons/EditorIcons/ContractIcon/ContractIcon.js";
+import { RulesIcon } from "./Icons/EditorIcons/RulesIcon/RulesIcon.js";
+import { SalesRulesIcon } from "./Icons/EditorIcons/SalesRulesIcon/SalesRulesIcon.js";
+import { ConsumerRightsIcon } from "./Icons/EditorIcons/ConsumerRightsIcon/ConsumerRightsIcon.js";
+import { PressIcon } from "./Icons/EditorIcons/PressIcon/PressIcon.js";
+import { RecallIcon } from "./Icons/EditorIcons/RecallIcon/RecallIcon.js";
+import { KOIcon } from "./Icons/EditorIcons/KOIcon/KOIcon.js";
+import { RightsIcon } from "./Icons/EditorIcons/RightsIcon/RightsIcon.js";
+import { WarningIcon } from "./Icons/EditorIcons/WarningIcon/WarningIcon.js";
+import { MicrophoneIcon } from "./Icons/EditorIcons/MicrophoneIcon/MicrophoneIcon.js";
+import { WebbinarIcon } from "./Icons/EditorIcons/WebbinarIcon/WebbinarIcon.js";
+
+
+
 export {
 
     // Utils
@@ -237,5 +276,42 @@ export {
     Ellipsis,
     HandHeart,
     Snowboarding,
-    TempIcon
+  //nya
+    TempIcon,
+    NewsIcon,
+    DiagramIcon,
+    BudgetIcon,
+    FlightsIcon,
+    WorkIcon,
+    OperationIcon,
+    ReportIcon,
+    SafeIcon,
+    EnvironmentIcon,
+    EconomyIcon,
+    EUIcon,
+    ConsumerLawIcon,
+    ConsumerRightsShieldIcon,
+    ShoppingIcon,
+    StatisticsIcon,
+    ConsumerSupportIcon,
+    MunicipalSupportIcon,
+    TeacherIcon,
+    QuestinCircleIcon,
+    WarningCircleIcon,
+    WarningDiamondIcon,
+    KOVWorkIcon,
+    ProductSafetyIcon,
+    PaymentIcon,
+    //MarketingIcon,
+    ContractIcon,
+    RulesIcon,
+    SalesRulesIcon,
+    ConsumerRightsIcon,
+    PressIcon,
+    RecallIcon,
+    KOIcon,
+    RightsIcon,
+    WarningIcon,
+    MicrophoneIcon,
+    WebbinarIcon
 }

@@ -1,6 +1,186 @@
 {
   "icons": [
     {
+      "name": "DiagramIcon",
+      "title": "Diagram",
+      "url": "EditorIconsSvg/DiagramIcon.svg"
+    },
+    {
+      "name": "BudgetIcon",
+      "title": "Budget",
+      "url": "EditorIconsSvg/BudgetIcon.svg"
+    },
+    {
+      "name": "FlightsIcon",
+      "title": "Flygkalkylator",
+      "url": "EditorIconsSvg/FlightsIcon.svg"
+    },
+    {
+      "name": "WorkIcon",
+      "title": "Konsumentverkets arbete",
+      "url": "EditorIconsSvg/WorkIcon.svg"
+    },
+    {
+      "name": "OperationIcon",
+      "title": "Vår verksamhet",
+      "url": "EditorIconsSvg/OperationIcon.svg"
+    },
+    {
+      "name": "ReportIcon",
+      "title": "Statistik, rapporter och öppna data",
+      "url": "EditorIconsSvg/ReportIcon.svg"
+    },
+    {
+      "name": "SafeIcon",
+      "title": "Säkra varor och tjänster",
+      "url": "EditorIconsSvg/SafeIcon.svg"
+    },
+    {
+      "name": "EnvironmentIcon",
+      "title": "Miljö och hållbarhet",
+      "url": "EditorIconsSvg/EnvironmentIcon.svg"
+    },
+    {
+      "name": "EconomyIcon",
+      "title": "Din ekonomi",
+      "url": "EditorIconsSvg/EconomyIcon.svg"
+    },
+    {
+      "name": "EUIcon",
+      "title": "Handlat från annat EU-land",
+      "url": "EditorIconsSvg/EUIcon.svg"
+    },
+    {
+      "name": "ConsumerLawIcon",
+      "title": "Konsumentlagar",
+      "url": "EditorIconsSvg/ConsumerLawIcon.svg"
+    },
+    {
+      "name": "ConsumerRightsShieldIcon",
+      "title": "Konsumenträtt",
+      "url": "EditorIconsSvg/ConsumerRightsShieldIcon.svg"
+    },
+    {
+      "name": "ShoppingIcon",
+      "title": "Köp av varor och tjänster",
+      "url": "EditorIconsSvg/ShoppingIcon.svg"
+    },
+    {
+      "name": "StatisticsIcon",
+      "title": "Statistik",
+      "url": "EditorIconsSvg/StatisticsIcon.svg"
+    },
+    {
+      "name": "ConsumerSupportIcon",
+      "title": "För dig som möter konsument",
+      "url": "EditorIconsSvg/ConsumerSupportIcon.svg"
+    },
+    {
+      "name": "MunicipalSupportIcon",
+      "title": "Stöd till kommuner",
+      "url": "EditorIconsSvg/MunicipalSupportIcon.svg"
+    },
+    {
+      "name": "TeacherIcon",
+      "title": "För lärare",
+      "url": "EditorIconsSvg/TeacherIcon.svg"
+    },
+    {
+      "name": "QuestinCircleIcon",
+      "title": "Varning",
+      "url": "EditorIconsSvg/QuestinCircleIcon.svg"
+    },
+    {
+      "name": "WarningCircleIcon",
+      "title": "Varning",
+      "url": "EditorIconsSvg/WarningCircleIcon.svg"
+    },
+    {
+      "name": "WarningDiamondIcon",
+      "title": "Varning",
+      "url": "EditorIconsSvg/WarningDiamondIcon.svg"
+    },
+    {
+      "name": "KOVWorkIcon",
+      "title": "Konsumentverkets arbete",
+      "url": "EditorIconsSvg/KOVWorkIcon.svg"
+    },
+    {
+      "name": "ProductSafetyIcon",
+      "title": "Produktsäkerhet",
+      "url": "EditorIconsSvg/ProductSafetyIcon.svg"
+    },
+    {
+      "name": "PaymentIcon",
+      "title": "Prissättning och att ta betalt",
+      "url": "EditorIconsSvg/PaymentIcon.svg"
+    },
+    {
+      "name": "MarketingIcon",
+      "title": "Marknadsföring",
+      "url": "EditorIconsSvg/MarketingIcon.svg"
+    },
+    {
+      "name": "ContractIcon",
+      "title": "Avtal och mallar",
+      "url": "EditorIconsSvg/ContractIcon.svg"
+    },
+    {
+      "name": "RulesIcon",
+      "title": "Regler per branch",
+      "url": "EditorIconsSvg/RulesIcon.svg"
+    },
+    {
+      "name": "SalesRulesIcon",
+      "title": "Regler för säljkanal",
+      "url": "EditorIconsSvg/SalesRulesIcon.svg"
+    },
+    {
+      "name": "ConsumerRightsIcon",
+      "title": "Konsumenträtt",
+      "url": "EditorIconsSvg/ConsumerRightsIcon.svg"
+    },
+    {
+      "name": "PressIcon",
+      "title": "Presstjänst",
+      "url": "EditorIconsSvg/PressIcon.svg"
+    },
+    {
+      "name": "RecallIcon",
+      "title": "Återkallelser",
+      "url": "EditorIconsSvg/RecallIcon.svg"
+    },
+    {
+      "name": "KOIcon",
+      "title": "KO har ordet",
+      "url": "EditorIconsSvg/KOIcon.svg"
+    },
+    {
+      "name": "RightsIcon",
+      "title": "Våra rättsärenden",
+      "url": "EditorIconsSvg/RightsIcon.svg"
+    },
+    {
+      "name": "WarningIcon",
+      "title": "Varning",
+      "url": "EditorIconsSvg/WarningIcon.svg"
+    },
+    {
+      "name": "MicrophoneIcon",
+      "title": "Marknadsföring",
+      "url": "EditorIconsSvg/MicrophoneIcon.svg"
+    },
+    {
+      "name": "WebbinarIcon",
+      "title": "Webbinarier",
+      "url": "EditorIconsSvg/WebbinarIcon.svg"
+    },
+    {
+      "name": "NewsIcon",
+      "title": "Nyheter",
+      "url": "EditorIconsSvg/NewsIcon.svg"
+    },
+    {
       "name": "Withdrawal",
       "title": "Ångerrätt",
       "url": "EditorIconsSvg/Withdrawal.svg"
