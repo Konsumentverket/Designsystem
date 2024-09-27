@@ -1,6 +1,141 @@
 {
   "icons": [
     {
+      "name": "DBAnimalsIcon",
+      "title": "Djur",
+      "url": "EditorIconsSvg/DBAnimalsIcon.svg"
+    },
+    {
+      "name": "DBCalendarIcon",
+      "title": "Kalender",
+      "url": "EditorIconsSvg/DBCalendarIcon.svg"
+    },
+    {
+      "name": "DiagramIcon",
+      "title": "Diagram",
+      "url": "EditorIconsSvg/DiagramIcon.svg"
+    },
+    {
+      "name": "DBCarIcon",
+      "title": "Bilar",
+      "url": "EditorIconsSvg/DBCarIcon.svg"
+    },
+    {
+      "name": "DiagramIcon",
+      "title": "Diagram",
+      "url": "EditorIconsSvg/DiagramIcon.svg"
+    },
+    {
+      "name": "DBClothesIcon",
+      "title": "Kläder och skor",
+      "url": "EditorIconsSvg/DBClothesIcon.svg"
+    },
+    {
+      "name": "DBDeleteIcon",
+      "title": "Delete",
+      "url": "EditorIconsSvg/DBDeleteIcon.svg"
+    },
+    {
+      "name": "DBEducationIcon",
+      "title": "Utbildning och kurser",
+      "url": "EditorIconsSvg/DBEducationIcon.svg"
+    },
+    {
+      "name": "DBEnergyIcon",
+      "title": "Elavtal och energi",
+      "url": "EditorIconsSvg/DBEnergyIcon.svg"
+    },
+    {
+      "name": "DBFaqAnswerIcon",
+      "title": "FAQ svar",
+      "url": "EditorIconsSvg/DBFaqAnswerIcon.svg"
+    },
+    {
+      "name": "DBFaqQuestionIcon",
+      "title": "FAQ fråga",
+      "url": "EditorIconsSvg/DBFaqQuestionIcon.svg"
+    },
+    {
+      "name": "DBFoodIcon",
+      "title": "Livsmedel",
+      "url": "EditorIconsSvg/DBFoodIcon.svg"
+    },
+    {
+      "name": "DBFridgeIcon",
+      "title": "Vitvaror och hushållsapparater",
+      "url": "EditorIconsSvg/DBFridgeIcon.svg"
+    },
+    {
+      "name": "DBFurnitureIcon",
+      "title": "Möbler och inredning",
+      "url": "EditorIconsSvg/DBFurnitureIcon.svg"
+    },
+    {
+      "name": "DBGamesIcon",
+      "title": "Dator, TV och spelkonsol",
+      "url": "EditorIconsSvg/DBGamesIcon.svg"
+    },
+    {
+      "name": "DBHealthIcon",
+      "title": "Skönhet, frisör och hälsa",
+      "url": "EditorIconsSvg/DBHealthIcon.svg"
+    },
+    {
+      "name": "DBJusticeIcon",
+      "title": "Juridiska tjänster",
+      "url": "EditorIconsSvg/DBJusticeIcon.svg"
+    },
+    {
+      "name": "DBLeisureIcon",
+      "title": "Fritid och nöje",
+      "url": "EditorIconsSvg/DBLeisureIcon.svg"
+    },
+    {
+      "name": "DBMovingIcon",
+      "title": "Flytt- och städtjänster",
+      "url": "EditorIconsSvg/DBMovingIcon.svg"
+    },
+    {
+      "name": "DBOnlineGamingIcon",
+      "title": "Onlinespel och spelbolag",
+      "url": "EditorIconsSvg/DBOnlineGamingIcon.svg"
+    },
+    {
+      "name": "DBPadlockIcon",
+      "title": "Försäkringar",
+      "url": "EditorIconsSvg/DBPadlockIcon.svg"
+    },
+    {
+      "name": "DBPhoneIcon",
+      "title": "Mobiltelefon och abonnemang",
+      "url": "EditorIconsSvg/DBPhoneIcon.svg"
+    },
+    {
+      "name": "DBRenovationIcon",
+      "title": "Hantverkare och renovering",
+      "url": "EditorIconsSvg/DBRenovationIcon.svg"
+    },
+    {
+      "name": "DBRentIcon",
+      "title": "Hyra och köpa boende",
+      "url": "EditorIconsSvg/DBRentIcon.svg"
+    },
+    {
+      "name": "DBTravelIcon",
+      "title": "Resor",
+      "url": "EditorIconsSvg/DBTravelIcon.svg"
+    },
+    {
+      "name": "DBWarningIcon",
+      "title": "Varning",
+      "url": "EditorIconsSvg/DBWarningIcon.svg"
+    },
+    {
+      "name": "DBWifiIcon",
+      "title": "Bredband, fiber och tv-avtal",
+      "url": "EditorIconsSvg/DBWifiIcon.svg"
+    },
+    {
       "name": "DiagramIcon",
       "title": "Diagram",
       "url": "EditorIconsSvg/DiagramIcon.svg"

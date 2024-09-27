@@ -142,7 +142,32 @@ import {
   RightsIcon,
   WarningIcon,
   MicrophoneIcon,
-  WebbinarIcon
+  WebbinarIcon,
+  DBAnimalsIcon,
+  DBCalendarIcon,
+  DBCarIcon,
+  DBClothesIcon,
+  DBDeleteIcon,
+  DBEducationIcon,
+  DBEnergyIcon,
+  DBFaqAnswerIcon,
+  DBFaqQuestionIcon,
+  DBFoodIcon,
+  DBFridgeIcon,
+  DBFurnitureIcon,
+  DBGamesIcon,
+  DBHealthIcon,
+  DBJusticeIcon,
+  DBLeisureIcon,
+  DBMovingIcon,
+  DBOnlineGamingIcon,
+  DBPadlockIcon,
+  DBPhoneIcon,
+  DBRenovationIcon,
+  DBRentIcon,
+  DBTravelIcon,
+  DBWarningIcon,
+  DBWifiIcon
 } from "@konsumentverket-sverige/designsystem.utils"
 
 const systemIconDefinitions = {
