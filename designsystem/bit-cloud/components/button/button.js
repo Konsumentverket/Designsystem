@@ -29,6 +29,8 @@ export const Button = ({
   reference,
   onClick,
   href,
+  contentfulName,
+  contentfulId,
   linkComponent: LinkComponent = 'a',
   ...other
 }) => {
@@ -66,6 +68,7 @@ export const Button = ({
     ? <LinkComponent
       data-comp="button"
       injected={true}
+      data-contentful-field-id={contentfulName} data-contentful-entry-id={contentfulId}
       {...props}
     >
       {iconLeft}
@@ -73,7 +76,7 @@ export const Button = ({
       {iconRight}
     </LinkComponent>
     :
-    <button {...props} data-comp="button">
+    <button {...props} data-comp="button" data-contentful-field-id={contentfulName} data-contentful-entry-id={contentfulId}>
       {iconLeft}
       {text}
       {iconRight}
