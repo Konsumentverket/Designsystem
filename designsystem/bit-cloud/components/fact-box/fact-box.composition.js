@@ -24,6 +24,26 @@ export const BasicFactBox = () => {
   );
 }
 
+export const BasicFactBoxWithArticleEntryMargin = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <FactBox
+        headline="Minska klimatpåverkan"
+        articleEntryMargin={true}
+      >
+        <ul>
+          <li>En rad i punktlista</li>
+          <li>En rad i punktlista som har längre text.</li>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit, sed do eiusmod tempor</li>
+          <li>Incididunt ut labore et dolore magna aliqua</li>
+        </ul>
+      </FactBox>
+    </CompositionFonts>
+  );
+}
+
 export const BasicFactBoxWithoutTag = () => {
   return (
     <CompositionFonts>

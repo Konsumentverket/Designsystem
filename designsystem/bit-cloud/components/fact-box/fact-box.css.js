@@ -54,6 +54,14 @@ export const tagMargin = css`
   }
 `;
 
+export const articleEntryMarginStyling = css`
+  margin-bottom: 32px;
+
+  ${medium} {
+    margin-bottom: 40px;
+  }
+`;
+
 export const titleStyling = css`
     color: ${newColors.primaries.kovBlack};
     font-size: 2.4rem;
