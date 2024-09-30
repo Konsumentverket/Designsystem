@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import { newColors, colors, spacing, medium } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, colors, spacing, medium, typography } from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapperStyling = css`
     width: 100%;
@@ -7,19 +7,16 @@ export const wrapperStyling = css`
     border-radius: 16px;
     padding: ${spacing.m} ${spacing.s};
     position: relative;
-    margin-top: calc(16px + 13px);
+    margin-top: 24px;
 
     ${medium} {
-        margin-top: calc(24px + 13px);
+        margin-top: 32px;
         padding: ${spacing.l} ${spacing.l};
     }
 
 
     li, p {
-        margin-bottom: 24px;
-        font-size: 2.0rem;
-        line-height: 1.4;
-        padding-bottom: 0;
+        ${typography.paragraphNoMargin};
 
         &:last-of-type {
             margin-bottom: 0;
@@ -47,10 +44,10 @@ export const wrapperStyling = css`
 `;
 
 export const tagMargin = css`
-  margin-top: calc(16px + 13px);
+  margin-top: 32px; // 24px + 8px
 
   ${medium} {
-    margin-top: calc(24px + 13px);
+    margin-top: 45px; // 32px + 13px
   }
 `;
 
