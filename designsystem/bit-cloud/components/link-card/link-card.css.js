@@ -43,6 +43,10 @@ export const heading = css`
 export const linkTextMainLinkStyle = css`
     padding: 2.4rem 1.6rem;
 
+    &:hover {
+      border-radius: 16px 16px 0 0 !important;
+    }
+
     .tabnav &:focus {
 
         > *{
@@ -105,12 +109,18 @@ export const mainLinkStyle = css`
       border-radius: 16px 16px 0 0 !important;
       box-shadow: none !important;
 
+      .singleItem &, .noLinkChildren & {
+          border-radius: 16px !important;
+      }
       .linkCardBorder {
           width: 100% !important;
           margin-left: 0 !important;
           padding: 0;
       }
 
+      .singleItem & {
+
+      }
       .noLinkChildren & {
           &:before {
             position: absolute;
@@ -188,10 +198,10 @@ export const mainLinkStyle = css`
 `
 
 export const border = css`
-  width: calc(100% - 32px);
-  margin-left: 16px;
-  border-bottom: 1px solid ${newColors.shades.mediumBlue};
-  padding: 0 !important;
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    border-bottom: 1px solid ${newColors.shades.mediumBlue};
+    padding: 0 !important;
 `
 
 export const rotateArrow = css`

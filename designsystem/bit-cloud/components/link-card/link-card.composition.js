@@ -82,6 +82,24 @@ export const BasicTextLinkCard = () => {
 
 
 
+export const BasicOnlyTitleLinkCard = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+
+      <LinkCard
+        id="one"
+        href="#"
+        text="Sport och fritid"
+        icon={<Icon icon="BeautyEngagement" />}
+      >
+      </LinkCard>
+    </CompositionFonts>
+  );
+}
+
+
+
 export const BasicManyLinksListCard = () => {
   return (
     <CompositionFonts>

@@ -34,6 +34,8 @@ const LinkCard = React.forwardRef(({
         itemsToShow = childrenArray.slice(0, beforeToggleCount).filter(Boolean)
         if (childrenArray.length > 1) className = '';
     }
+console.log(itemsToShow)
+    let singleItemClass = itemsToShow.length == 1 ? "singleItem" : "";
 
     return <div id={id} css={[wrapper]} className={className} data-comp="link-card">
         <LinkComponent
@@ -52,9 +54,9 @@ const LinkCard = React.forwardRef(({
                 <Icon icon="MonoArrowRight" />
               </div>
             </SubHeading>
-          <div className="linkCardBorder" css={border}></div>
+          { (itemsToShow.length > 0 || itemsToShow.length == 1 && className == "noLinkChildren") && <div className="linkCardBorder" css={border}></div> }
         </LinkComponent>
-        {itemsToShow.length > 0 && <div css={[childrenWrapper, childrenWrapperStyle]}>
+        {itemsToShow.length > 0 && <div css={[childrenWrapper, childrenWrapperStyle ]} className={singleItemClass}>
             {itemsToShow}
         </div>}
         {childrenArray.length > beforeToggleCount &&
