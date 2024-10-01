@@ -124,16 +124,15 @@ export const smallTypographyContainerStyle = css`
 
 
 export const processStepStyling = css`
-  border: 1px solid red !important;
-  > h2:not(.noStyleComponent h2),
-  > h3:not(.noStyleComponent h3),
-  > h4:not(.noStyleComponent h4),
-  > h5:not(.noStyleComponent h5),
-  > h6:not(.noStyleComponent h6) {
+  h2:not(.noStyleComponent h2),
+  h3:not(.noStyleComponent h3),
+  h4:not(.noStyleComponent h4),
+  h5:not(.noStyleComponent h5),
+  h6:not(.noStyleComponent h6) {
     color: ${newColors.kovBlack};
   }
 
-  > p:not(.noStyleComponent p, .noStyle) {
+  p:not(.noStyleComponent p) {
     color: ${newColors.shades.kovBlack50};
   }
 `;
