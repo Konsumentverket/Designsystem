@@ -330,8 +330,8 @@ export const blockquoteText = css`
 
 export const linkHover = css`
   text-decoration: none;
-  background: ${newColors.primaries.mediumBlue};
-  box-shadow: 0 0 0 2px ${newColors.primaries.mediumBlue};
+  background: ${newColors.primaries.lightBlue};
+  box-shadow: 0 0 0 2px ${newColors.primaries.lightBlue};
 `;
 
 export const linkFocus = css`
