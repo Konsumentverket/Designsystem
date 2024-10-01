@@ -62,6 +62,7 @@ export const mainLinkStyle = css`
 
     h2 {
       margin: 0 !important;
+      padding-left: 4px;
     }
 
     & > * {
@@ -69,7 +70,7 @@ export const mainLinkStyle = css`
       justify-content: space-between;
       align-items: center;
 
-      padding: 16px 16px 16px 8px;
+      padding: 17px 16px 15px 8px;
       line-height: 1.5;
       color: ${newColors.shades.fullBlue};
       font-size: 1.8rem !important;
@@ -85,7 +86,8 @@ export const mainLinkStyle = css`
         width: 18px;
         height: 18px;
         right: unset !important;
-        margin-right: ${spacing.s};
+        margin-right: ${spacing.xs};
+        margin-left: 4px;
         fill: ${newColors.shades.fullBlue};
         z-index: 1;
 
@@ -179,9 +181,8 @@ export const mainLinkStyle = css`
     .tabnav &:focus {
         outline: none;
 
-        > * {
-            outline: 4px solid ${newColors.shades.fullBlue};
-            outline-offset: 6px;
+        > *:not(.linkCardBorder) {
+          outline: 4px solid ${newColors.secondaries.fullGreen};
         }
     }
 
