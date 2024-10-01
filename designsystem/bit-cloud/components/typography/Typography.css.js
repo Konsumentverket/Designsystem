@@ -124,6 +124,7 @@ export const smallTypographyContainerStyle = css`
 
 
 export const processStepStyling = css`
+  border: 1px solid red !important;
   > h2:not(.noStyleComponent h2),
   > h3:not(.noStyleComponent h3),
   > h4:not(.noStyleComponent h4),
