@@ -101,12 +101,7 @@ export const titleLightBlueAlternativeStyle = css`
 `;
 
 export const titleProcessStepStyle = css`
-  font-size: 2rem;
-  font-weight: 700;
-
-  @media (min-width: ${breakpoints.m}) {
-    font-size: 2.4rem;
-  }
+   ${typography.clickLarge};
 `;
 
 export const preambleStyle = css`

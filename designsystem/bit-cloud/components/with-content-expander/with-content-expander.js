@@ -169,7 +169,7 @@ export const WithContentExpander = ({
         ]}
         className={`expand-section ${expanded ? "expanded" : ""} ${disabled ? "expanded" : ""}`}
       >
-        <Typography>{wrappedComponent}</Typography>
+        <Typography processStep={useProcessStepStyling}>{wrappedComponent}</Typography>
       </div>
     </div>
   );

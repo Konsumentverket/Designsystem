@@ -2,6 +2,7 @@ import {css} from '@emotion/core'
 import {
   typography,
   breakpoints,
+  newColors,
 } from '@konsumentverket-sverige/designsystem.utils';
 
 export const typographyHeadingMargin = css`
@@ -121,4 +122,18 @@ export const smallTypographyContainerStyle = css`
   }
 `;
 
+
+export const processStepStyling = css`
+  > h2:not(.noStyleComponent h2),
+  > h3:not(.noStyleComponent h3),
+  > h4:not(.noStyleComponent h4),
+  > h5:not(.noStyleComponent h5),
+  > h6:not(.noStyleComponent h6) {
+    color: ${newColors.kovBlack};
+  }
+
+  > p:not(.noStyleComponent p, .noStyle) {
+    color: ${newColors.shades.kovBlack50};
+  }
+`;
 

@@ -3,16 +3,18 @@ import { jsx } from '@emotion/core'
 import React from "react";
 import {
   typographyContainerStyle,
-  smallTypographyContainerStyle
+  smallTypographyContainerStyle,
+  processStepStyling,
 } from './Typography.css.js';
 
 
-export const Typography = ({ children, small = false }) => {
+export const Typography = ({ children, small = false, processStep = false }) => {
   return (
     <div
       css={[
         typographyContainerStyle,
-        small ? smallTypographyContainerStyle : null
+        small ? smallTypographyContainerStyle : null,
+        processStep ? processStepStyling : null,
       ]}
       data-comp="typography"
     >

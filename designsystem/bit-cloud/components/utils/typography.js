@@ -528,6 +528,7 @@ export const clickMediumAltUL = css`
 
 export const clickLarge = css`
   ${baseClick};
+  font-weight: 700;
   font-size: 2rem;
 
   @media (min-width: ${breakpoints.m}) {
