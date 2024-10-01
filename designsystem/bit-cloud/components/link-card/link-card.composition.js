@@ -23,7 +23,7 @@ export const BasicLinkListCard = () => {
           href="#"
           text="Studmattor"
           iconLeft={
-            <Icon icon="ChevronLeft" />
+            <Icon icon="MonoArrowRight" />
           }
           linkStyle={true}
         />
@@ -31,7 +31,7 @@ export const BasicLinkListCard = () => {
           href="#"
           text="Hoppborgar"
           iconLeft={
-            <Icon icon="ChevronLeft" />
+            <Icon icon="MonoArrowRight" />
           }
           linkStyle={true}
         />
@@ -39,7 +39,7 @@ export const BasicLinkListCard = () => {
           href="#"
           text="Trampolinparker"
           iconLeft={
-            <Icon icon="ChevronLeft" />
+            <Icon icon="MonoArrowRight" />
           }
           linkStyle={true}
         />
@@ -47,7 +47,7 @@ export const BasicLinkListCard = () => {
           href="#"
           text="Höga barnstolar"
           iconLeft={
-            <Icon icon="ChevronLeft" />
+            <Icon icon="MonoArrowRight" />
           }
           linkStyle={true}
         />
@@ -99,7 +99,7 @@ export const BasicManyLinksListCard = () => {
           href="#"
           text="Studmattor"
           iconLeft={
-            <Icon icon="ChevronLeft" />
+            <Icon icon="MonoArrowRight" />
           }
           linkStyle={true}
         />
@@ -107,7 +107,7 @@ export const BasicManyLinksListCard = () => {
           href="#"
           text="Hoppborgar"
           iconLeft={
-            <Icon icon="ChevronLeft" />
+            <Icon icon="MonoArrowRight" />
           }
           linkStyle={true}
         />
@@ -115,7 +115,7 @@ export const BasicManyLinksListCard = () => {
           href="#"
           text="Trampolinparker"
           iconLeft={
-            <Icon icon="ChevronLeft" />
+            <Icon icon="MonoArrowRight" />
           }
           linkStyle={true}
         />
@@ -123,16 +123,7 @@ export const BasicManyLinksListCard = () => {
           href="#"
           text="Höga barnstolar"
           iconLeft={
-            <Icon icon="ChevronLeft" />
-          }
-          linkStyle={true}
-        />
-
-        <Button
-          href="#"
-          text="Höga barnstolar"
-          iconLeft={
-            <Icon icon="ChevronLeft" />
+            <Icon icon="MonoArrowRight" />
           }
           linkStyle={true}
         />
@@ -141,7 +132,7 @@ export const BasicManyLinksListCard = () => {
           href="#"
           text="Höga barnstolar"
           iconLeft={
-            <Icon icon="ChevronLeft" />
+            <Icon icon="MonoArrowRight" />
           }
           linkStyle={true}
         />
@@ -150,7 +141,16 @@ export const BasicManyLinksListCard = () => {
           href="#"
           text="Höga barnstolar"
           iconLeft={
-            <Icon icon="ChevronLeft" />
+            <Icon icon="MonoArrowRight" />
+          }
+          linkStyle={true}
+        />
+
+        <Button
+          href="#"
+          text="Höga barnstolar"
+          iconLeft={
+            <Icon icon="MonoArrowRight" />
           }
           linkStyle={true}
         />

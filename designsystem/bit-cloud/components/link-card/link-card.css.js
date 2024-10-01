@@ -8,15 +8,13 @@ export const wrapper = css`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 16px;
-  padding: 16px;
+  padding: 0;
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
   position: relative;
   width: 100%;
 
 
   ${medium}{
-     padding: 16px 24px 24px 24px;
   }
 
   & > * {
@@ -26,9 +24,21 @@ export const wrapper = css`
   p {
     font-size: 1.6rem;
     padding-bottom: 0;
+    line-height: 1.5;
+    margin-bottom: 19px;
   }
 `
+export const heading = css`
+   padding-left: 8px;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
 
+   & > svg {
+      width: 12px !important;
+      height: 16px !important;
+   }
+`
 
 export const linkTextMainLinkStyle = css`
     padding: 2.4rem 1.6rem;
@@ -44,7 +54,6 @@ export const linkTextMainLinkStyle = css`
 export const mainLinkStyle = css`
     box-sizing:border-box;
     text-decoration: none !important;
-    border-bottom: 1px solid ${newColors.shades.mediumBlue};
     z-index: 1;
 
     h2 {
@@ -56,7 +65,7 @@ export const mainLinkStyle = css`
       justify-content: space-between;
       align-items: center;
 
-      padding: 16px 8px;
+      padding: 16px 16px 16px 8px;
       line-height: 1.5;
       color: ${newColors.shades.fullBlue};
       font-size: 1.8rem !important;
@@ -81,9 +90,6 @@ export const mainLinkStyle = css`
           height: 24px;
         }
 
-        .noLinkChildren & {
-          margin-left: ${spacing.xs};
-        }
 
         &:last-child {
           width: 18px;
@@ -96,8 +102,14 @@ export const mainLinkStyle = css`
 
     &:hover {
       background-color: ${newColors.primaries.lightBlue};
-      border-radius: 0 !important;
+      border-radius: 16px 16px 0 0 !important;
       box-shadow: none !important;
+
+      .linkCardBorder {
+          width: 100% !important;
+          margin-left: 0 !important;
+          padding: 0;
+      }
 
       .noLinkChildren & {
           &:before {
@@ -122,15 +134,21 @@ export const mainLinkStyle = css`
 
     &:active {
       background-color: ${newColors.shades.mediumBlue50} !important;
-      border-radius: 0 !important;
+      border-radius: 16px 16px 0 0 !important;
       box-shadow: none !important;
 
         h2, span {
           color: ${newColors.primaries.fullBlue} !important;
         }
-        svg{
+        svg {
           fill: ${newColors.shades.fullBlue} !important;
         }
+
+        .linkCardBorder {
+          width: 100% !important;
+          margin-left: 0 !important;
+          padding: 0;
+       }
 
         .noLinkChildren & {
           &:before {
@@ -168,6 +186,14 @@ export const mainLinkStyle = css`
     }
 
 `
+
+export const border = css`
+  width: calc(100% - 32px);
+  margin-left: 16px;
+  border-bottom: 1px solid ${newColors.shades.mediumBlue};
+  padding: 0 !important;
+`
+
 export const rotateArrow = css`
     transform: rotate(0deg)!important;
 `
@@ -176,7 +202,7 @@ export const childrenWrapper = css`
     display: inline-flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 0 0 1.6rem 0;
+    padding: 1.6rem;
     max-height: 160px;
     width: 100%;
     overflow: hidden;
@@ -194,6 +220,7 @@ export const childrenWrapper = css`
         max-width: 100%;
         width: 100%;
         margin-right: 24px;
+        line-height: 1.5;
         margin-bottom: 0;
 
         &:hover {
@@ -208,7 +235,10 @@ export const childrenWrapper = css`
 
         svg {
           margin-right: 8px;
+          margin-left: 8px;
           fill: ${newColors.shades.fullBlue};
+          width: 12px;
+          height: 16px;
         }
     }
 `
@@ -221,6 +251,13 @@ export const showAllLink = css`
     padding: 0;
     line-height: 2.4rem;
     align-self: flex-end;
+    margin: 0 1.6rem 2rem 0;
+
+    svg {
+      width: 12px;
+      height: 16px;
+      margin-left: 12px;
+    }
 `
 
 export const customFontSize = css`

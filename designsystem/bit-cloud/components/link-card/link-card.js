@@ -6,7 +6,9 @@ import {
     mainLinkStyle,
     childrenWrapper,
     showAllLink,
-    customFontSize
+    customFontSize,
+    heading,
+    border
 } from './link-card.css.js';
 import { SubHeading } from '@konsumentverket-sverige/designsystem.sub-heading';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
@@ -42,13 +44,15 @@ const LinkCard = React.forwardRef(({
             injected={true}
         >
             <SubHeading level={headingLevel} styleLevel={3}>
+              <div css={heading}>
                 <div>
-                    {icon}
-                    <span css={customFontSize} dangerouslySetInnerHTML={{ __html: text }}></span>
+                  {icon}
+                  <span css={customFontSize} dangerouslySetInnerHTML={{ __html: text }}></span>
                 </div>
-                <Icon icon="ChevronLeft" />
-
+                <Icon icon="MonoArrowRight" />
+              </div>
             </SubHeading>
+          <div className="linkCardBorder" css={border}></div>
         </LinkComponent>
         {itemsToShow.length > 0 && <div css={[childrenWrapper, childrenWrapperStyle]}>
             {itemsToShow}
@@ -60,7 +64,7 @@ const LinkCard = React.forwardRef(({
                 onClick={onClick}
                 injected={true}
             >
-                Visa alla ({childrenArray.length}) <Icon icon="ChevronLeft" />
+                Visa alla ({childrenArray.length}) <Icon icon="MonoArrowRight" />
             </LinkComponent>
         }
     </div>
