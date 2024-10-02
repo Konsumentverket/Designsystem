@@ -118,9 +118,9 @@ export const mainLinkStyle = css`
           border-radius: 16px !important;
       }
       .linkCardBorder {
-          width: 100% !important;
-          margin-left: 0 !important;
-          padding: 0;
+        width: calc(100% + 12px) !important;
+        margin-left: -12px !important;
+        padding: 0 !important;
       }
 
       .singleItem & {
