@@ -19,7 +19,8 @@ export const typographyContainerStyle = css`
   }
 
   h3:not(.noStyleComponent h3, .noStyle) {
-    ${typography.richTextH3}
+    ${typography.richTextH3};
+    //color: red;
   }
 
   h4:not(.noStyleComponent h4, .noStyle) {
@@ -98,18 +99,14 @@ export const smallTypographyContainerStyle = css`
   }
 `;
 
-
 export const processStepStyling = css`
   h2:not(.noStyleComponent h2),
-  h3:not(.noStyleComponent h3),
+  h3:not(.noStyleComponent h3, .link-element-container h3),
   h4:not(.noStyleComponent h4),
   h5:not(.noStyleComponent h5),
-  h6:not(.noStyleComponent h6) {
-    color: ${newColors.kovBlack};
-  }
-
+  h6:not(.noStyleComponent h6),
   p:not(.noStyleComponent p) {
-    color: ${newColors.shades.kovBlack50};
+    color: ${newColors.kovBlack};
   }
 `;
 
