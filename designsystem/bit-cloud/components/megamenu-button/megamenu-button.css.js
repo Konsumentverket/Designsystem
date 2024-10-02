@@ -7,6 +7,7 @@ export const iconStyle = css`
         height: 4.8rem;
         position: relative;
         flex-shrink: 0;
+        padding: 8px;
 
         @media (min-width: ${breakpoints.m}) {
           width: 5.6rem;
