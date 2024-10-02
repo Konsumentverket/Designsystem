@@ -24,8 +24,11 @@ export const BasicSubHeading = () => {
         <SubHeading level={5} text="h5 with line" headingLine richText={false}/>
         <SubHeading level={6} text="h6 with line" headingLine richText={false}/>
         <SubHeading level={2} text="h2 Richtext" richText={true}/>
+        <SubHeading level={2} text="h2 Richtext with stylelevel 5" richText={true} styleLevel={5}/>
         <SubHeading level={3} text="h3 Richtext" richText={true}/>
         <SubHeading level={4} text="h4 Richtext" richText={true}/>
+        <SubHeading level={5} text="h5 Richtext" richText={true}/>
+        <SubHeading level={6} text="h6 Richtext" richText={true}/>
       </CompositionFonts>
     </div>
   );

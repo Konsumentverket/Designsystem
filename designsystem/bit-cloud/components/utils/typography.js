@@ -705,36 +705,47 @@ export const subHeadingXS = css`
   ${subHeadingAltMini};
 `;
 
-export const richTextHeadingBig = css`
-  ${subHeadingAltMedium};
+export const richTextHeadingMargin = css`
+  margin-top: 32px;
+  margin-bottom: 8px;
 
   @media (min-width: ${breakpoints.m}) {
-    ${subHeadingAltBig};
+    margin-top: 40px;
   }
 `;
 
-export const richTextHeadingMedium = css`
-  ${subHeadingAltSmall};
-
-  @media (min-width: ${breakpoints.m}) {
-    ${subHeadingAltMedium};
-  }
+export const richTextH2 = css`
+  ${h2}
+  ${richTextHeadingMargin}
 `;
 
-export const richTextHeadingSmall = css`
-  ${subHeadingAltMini};
+export const richTextH3 = css`
+  ${h3}
+  ${richTextHeadingMargin}
+`;
 
-  @media (min-width: ${breakpoints.m}) {
-    ${subHeadingAltSmall};
-  }
+export const richTextH4 = css`
+  ${h4}
+  ${richTextHeadingMargin}
+`;
+
+export const richTextH5 = css`
+  ${h5}
+  ${richTextHeadingMargin}
+`;
+
+export const richTextH6 = css`
+  ${h6}
+  ${richTextHeadingMargin}
 `;
 
 export const ulListSpacing = css`
-  margin: 32px 0;
+  margin: 32px 0 32px 0;
   padding: 0 0 0 8px;
 
   @media(min-width: ${breakpoints.m}){
     padding: 0 0 0 16px;
+    margin: 32px 0 56px 0;
   }
 `;
 
@@ -750,10 +761,6 @@ export const ulSmallListSpacing = css`
 
 export const ulStyling = css`
   ${ulListSpacing};
-
-  > :last-child {
-    margin-bottom: 0;
-  }
 
   li {
     display: flex;
@@ -778,6 +785,10 @@ export const ulStyling = css`
       height: 9px;
       margin-right: 16px;
     }
+  }
+
+  > :last-child {
+    margin-bottom: 0;
   }
 `;
 
@@ -821,6 +832,10 @@ export const olStyling = css`
     @media(min-width: ${breakpoints.m}){
       margin-bottom: 24px;
     }
+  }
+
+  > :last-child {
+    margin-bottom: 0;
   }
 `;
 
