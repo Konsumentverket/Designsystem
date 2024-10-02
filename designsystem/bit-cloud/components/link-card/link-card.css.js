@@ -24,8 +24,9 @@ export const wrapper = css`
   p {
     font-size: 1.6rem;
     padding-bottom: 0;
+    padding-left: 9px;
     line-height: 1.5;
-    margin-bottom: 19px;
+    margin-bottom: 10px;
   }
 `
 export const heading = css`
@@ -37,6 +38,7 @@ export const heading = css`
    & > svg {
       width: 12px !important;
       height: 16px !important;
+      margin-right: 4px;
    }
 `
 
@@ -59,6 +61,7 @@ export const mainLinkStyle = css`
     box-sizing:border-box;
     text-decoration: none !important;
     z-index: 1;
+    padding-left: 12px;
 
     h2 {
       margin: 0 !important;
@@ -199,8 +202,8 @@ export const mainLinkStyle = css`
 `
 
 export const border = css`
-    width: calc(100% - 32px);
-    margin-left: 16px;
+    width: calc(100% - 16px);
+    margin-left: 4px;
     border-bottom: 1px solid ${newColors.shades.mediumBlue};
     padding: 0 !important;
 `

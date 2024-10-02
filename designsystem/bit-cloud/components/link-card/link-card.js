@@ -34,7 +34,6 @@ const LinkCard = React.forwardRef(({
         itemsToShow = childrenArray.slice(0, beforeToggleCount).filter(Boolean)
         if (childrenArray.length > 1) className = '';
     }
-console.log(itemsToShow)
     let singleItemClass = itemsToShow.length == 1 ? "singleItem" : "";
 
     return <div id={id} css={[wrapper]} className={className} data-comp="link-card">
