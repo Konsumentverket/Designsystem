@@ -33,3 +33,16 @@ export const BasicSubHeading = () => {
     </div>
   );
 }
+
+export const SubHeadingWithCustomColor = () => {
+  return (
+    <div style={{width: '500px', padding: '0 24px'}}>
+      <CompositionFonts>
+        <GlobalStyles/>
+        <SubHeading level={2} text="h2 color kovBlack" richText={true} color={'kovBlack'} />
+        <SubHeading level={2} text="h2 stylelevel 5 color kovBlack" richText={true} styleLevel={5} color={'kovBlack'} />
+        <SubHeading level={3} text="h3 color kovBlue" richText={true} color={'kovBlue'} />
+      </CompositionFonts>
+    </div>
+  );
+}
