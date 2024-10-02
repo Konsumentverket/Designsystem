@@ -105,7 +105,8 @@ export const processStepStyle = css`
   h5:not(.noStyleComponent h5),
   h6:not(.noStyleComponent h6),
   p:not(.noStyleComponent p) {
-    color: ${newColors.kovBlack};
+    border: 1px solid red;
+    color: ${newColors.kovBlack} !important;
   }
 `;
 

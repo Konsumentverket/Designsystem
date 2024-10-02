@@ -11,7 +11,7 @@ import {
 export const Typography = ({
   children,
   small = false,
-  processStep = false,
+  useProcessStepStyling = false,
   alternativeHeadings = false,
 }) => {
   return (
@@ -19,7 +19,7 @@ export const Typography = ({
       css={[
         typographyContainerStyle,
         small ? smallTypographyContainerStyle : null,
-        processStep ? processStepStyle : null,
+        useProcessStepStyling ? processStepStyle : null,
         alternativeHeadings ? alternativeHeadingStyle : null,
       ]}
       data-comp="typography"
