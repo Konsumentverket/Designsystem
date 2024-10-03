@@ -36,7 +36,7 @@ export const InputAutocomplete = ({
   formatResult = defaultFormatResult,
   suggestionKey = 'description',
   useHeaderSearchStyle = false,
-  focusOnMount = false,
+  focusOnOpen = false,
 }) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -65,12 +65,9 @@ export const InputAutocomplete = ({
   }, [query]);
 
   useEffect(() => {
-   if (focusOnMount) {
-     focusOnInputRef();
-   }
-
-   return () => inputRef.current?.blur();
-  }, [focusOnMount]);
+    focusOnOpen ? focusOnInputRef() : inputRef.current?.blur();
+    return () => inputRef.current?.blur();
+  }, [focusOnOpen]);
 
   const fetchSuggestions = async (searchTerm) => {
     setLoading(true);
