@@ -27,3 +27,24 @@ export const InputAutocompleteBasicExample = () => {
     </>
   );
 }
+
+export const InputAutocompleteCustomized = () => {
+  const element = <InputAutocomplete
+    callbackOnClick={(e, item) => { console.log(e, item); }}
+    fetchUrl={'https://api.addsearch.com/v1/suggest/cecae10a7a8fa96ae6ca84428bb77e0f?term='}
+    placeholder="Skriv för att söka"
+    formatResult={(data) => data.suggestions}
+    suggestionKey={'value'}
+  />;
+
+  return (
+    <>
+      <CompositionFonts>
+        <GlobalStyles />
+        <div style={whiteBackground}>
+          {element}
+        </div>
+      </CompositionFonts>
+    </>
+  );
+}

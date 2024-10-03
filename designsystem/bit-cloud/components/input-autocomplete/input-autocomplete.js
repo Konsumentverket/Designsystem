@@ -19,12 +19,20 @@ import {
   clearInput,
 } from './input-autocomplete.css.js';
 
+const defaultFormatResult = (predictions) =>
+  predictions.map((item) => ({
+    ...item,
+    description: item.description.replace(', Sverige', ''),
+  }));
+
 export const InputAutocomplete = ({
   fetchUrl,
   callbackOnClick = () => { },
   placeholder,
   dropdownPositionRelative = false,
   ariaLabelClearInput = 'Rensa sökfältet',
+  formatResult = defaultFormatResult,
+  suggestionKey = 'description',
 }) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -58,9 +66,7 @@ export const InputAutocomplete = ({
       const response = await fetch(`${fetchUrl}${searchTerm}`);
       const data = await response.json();
 
-      const result = data.predictions.map((item) => ({
-        ...item, description: item.description.replace(', Sverige', ''),
-      }));
+      const result = formatResult(data);
 
       setSuggestions(result);
       setIsDropdownOpen(true);
@@ -189,7 +195,7 @@ export const InputAutocomplete = ({
                 onClick={(e) => callbackOnClick(e, suggestion)}
                 tabIndex="-1"
               >
-                {suggestion.description}
+                {suggestion[suggestionKey]}
               </button>
             </li>
           ))}
