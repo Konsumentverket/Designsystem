@@ -35,6 +35,7 @@ export const InputAutocompleteCustomized = () => {
     placeholder="Skriv för att söka"
     formatResult={(data) => data.suggestions}
     suggestionKey={'value'}
+    useHeaderSearchStyle={true}
   />;
 
   return (

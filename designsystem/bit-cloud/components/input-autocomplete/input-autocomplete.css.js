@@ -41,6 +41,11 @@ export const inputStyle = css`
   }
 `;
 
+export const inputHeaderSearchStyle = css`
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+`;
+
 export const clearInput = css`
   background: none;
   border: none;
@@ -59,6 +64,11 @@ export const clearInput = css`
 export const inputHasSuggestionsStyle = css`
   border-bottom: none;
   border-radius: 8px 8px 0px 0px;
+`;
+
+export const inputHeaderSearchHasSuggestionsStyle = css`
+  border-bottom: none;
+  border-radius: 8px 0px 0px 0px;
 `;
 
 export const dropdownWrapperStyle = css`

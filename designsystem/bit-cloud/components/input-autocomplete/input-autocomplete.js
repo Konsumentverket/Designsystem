@@ -8,7 +8,9 @@ import {
   containerHasSuggestionsStyle,
   labelStyle,
   inputStyle,
+  inputHeaderSearchStyle,
   inputHasSuggestionsStyle,
+  inputHeaderSearchHasSuggestionsStyle,
   dropdownWrapperStyle,
   dropdownItemStyle,
   dropdownItemActiveStyle,
@@ -19,8 +21,8 @@ import {
   clearInput,
 } from './input-autocomplete.css.js';
 
-const defaultFormatResult = (predictions) =>
-  predictions.map((item) => ({
+const defaultFormatResult = (data) =>
+  data.predictions.map((item) => ({
     ...item,
     description: item.description.replace(', Sverige', ''),
   }));
@@ -33,6 +35,7 @@ export const InputAutocomplete = ({
   ariaLabelClearInput = 'Rensa sökfältet',
   formatResult = defaultFormatResult,
   suggestionKey = 'description',
+  useHeaderSearchStyle = false,
 }) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -147,7 +150,12 @@ export const InputAutocomplete = ({
           ref={inputRef}
           placeholder={placeholder}
           autoComplete="off"
-          css={[inputStyle, (showingResult ? inputHasSuggestionsStyle : null)]}
+          css={[
+            inputStyle,
+            useHeaderSearchStyle ? inputHeaderSearchStyle : null,
+            (showingResult && !useHeaderSearchStyle ? inputHasSuggestionsStyle : null),
+            (showingResult && useHeaderSearchStyle ? inputHeaderSearchHasSuggestionsStyle : null),
+          ]}
           type="text"
           id="autocomplete-input"
           value={query}
