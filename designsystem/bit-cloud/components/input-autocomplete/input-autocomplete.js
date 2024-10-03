@@ -36,6 +36,7 @@ export const InputAutocomplete = ({
   formatResult = defaultFormatResult,
   suggestionKey = 'description',
   useHeaderSearchStyle = false,
+  focusOnMount = false,
 }) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -63,6 +64,14 @@ export const InputAutocomplete = ({
     return () => clearTimeout(timer);
   }, [query]);
 
+  useEffect(() => {
+   if (focusOnMount) {
+     focusOnInputRef();
+   }
+
+   return () => inputRef.current?.blur();
+  }, [focusOnMount]);
+
   const fetchSuggestions = async (searchTerm) => {
     setLoading(true);
     try {
@@ -88,15 +97,17 @@ export const InputAutocomplete = ({
   };
 
   const handleSuggestionClick = (suggestion) => {
-    setQuery(suggestion.description);
+    setQuery(suggestion[suggestionKey]);
     setSkipSearch(true);
     setSuggestions([]);
     setIsDropdownOpen(false);
   };
 
+  const focusOnInputRef = () =>  inputRef.current.focus();
+
   const handleClearInput = () => {
     setQuery('');
-    inputRef.current.focus();
+    focusOnInputRef();
   }
 
   const handleInputKeyDown = (event) => {

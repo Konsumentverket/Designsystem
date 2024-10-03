@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'date-fns';
 import {
   globalStyles as GlobalStyles,
@@ -29,6 +29,7 @@ export const InputAutocompleteBasicExample = () => {
 }
 
 export const InputAutocompleteCustomized = () => {
+  const [open, setOpen] = useState(false);
   const element = <InputAutocomplete
     callbackOnClick={(e, item) => { console.log(e, item); }}
     fetchUrl={'https://api.addsearch.com/v1/suggest/cecae10a7a8fa96ae6ca84428bb77e0f?term='}
@@ -36,6 +37,7 @@ export const InputAutocompleteCustomized = () => {
     formatResult={(data) => data.suggestions}
     suggestionKey={'value'}
     useHeaderSearchStyle={true}
+    focusOnMount={true}
   />;
 
   return (
@@ -43,7 +45,8 @@ export const InputAutocompleteCustomized = () => {
       <CompositionFonts>
         <GlobalStyles />
         <div style={whiteBackground}>
-          {element}
+          <button onClick={() => setOpen(!open)}>Click to open InputAutocomplete</button>
+          {open && element}
         </div>
       </CompositionFonts>
     </>
