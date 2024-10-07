@@ -6,7 +6,7 @@ import {MonoDelete} from '@konsumentverket-sverige/designsystem.utils';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 import {
   containerStyle,
-  containerHasSuggestionsStyle,
+  dropdownHasSuggestionsStyle,
   labelStyle,
   inputStyle,
   inputHeaderSearchStyle,
@@ -169,7 +169,7 @@ export const InputAutocomplete = ({
   return (
     <div
       ref={autocompleteRef}
-      css={[containerStyle, (showingResult ? containerHasSuggestionsStyle : null)]}
+      css={[containerStyle]}
     >
 
       <div css={inputAndSubmitWrapper}>
@@ -221,7 +221,11 @@ export const InputAutocomplete = ({
 
           {isDropdownOpen && suggestions.length > 0 && !loading && (
             <ul
-              css={[dropdownWrapperStyle, dropdownPositionRelative && dropdownPositionRelativeStyle]}
+              css={[
+                dropdownWrapperStyle,
+                dropdownPositionRelative && dropdownPositionRelativeStyle,
+                showingResult && dropdownHasSuggestionsStyle,
+              ]}
               id={"input-autocomplete-suggestions"}
               role="listbox"
             >

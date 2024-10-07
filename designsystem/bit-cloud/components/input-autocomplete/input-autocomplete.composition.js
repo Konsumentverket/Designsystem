@@ -42,6 +42,7 @@ export const InputAutocompleteInHeaderSeearch = () => {
     searchButton={true}
     searchButtonText={'Söktext'}
     allowFreeTextSearch={true}
+    dropdownPositionRelative={true}
   />;
 
   return (
