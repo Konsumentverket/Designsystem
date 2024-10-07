@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { newColors } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
 
 export const containerStyle = css`
   position: relative;
@@ -9,8 +9,14 @@ export const containerHasSuggestionsStyle = css`
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
 `;
 
-export const inputWrapper = css`
+export const inputAndSubmitWrapper = css`
   position: relative;
+  display: flex;
+`;
+
+export const inputAndDropdownWrapper = css`
+  position: relative;
+  width: 100%;
 `;
 
 export const labelStyle = css`
@@ -33,11 +39,20 @@ export const inputStyle = css`
   color: ${newColors.shades.kovBlack50};
   padding: 16px;
   border-radius: 8px;
-  border: 1px solid ${newColors.shades.fullBlue};
+  border-top: 1px solid ${newColors.shades.fullGrey};
+  border-right: none;
+  border-bottom: 1px solid ${newColors.shades.fullGrey};
+  border-left: 1px solid ${newColors.shades.fullGrey};
 
   &::placeholder {
     color: ${newColors.secondaries.fullGrey};
     font-style: italic;
+  }
+
+  &:focus {
+    border-top: 1px solid ${newColors.shades.fullBlue};
+    border-bottom: 1px solid ${newColors.shades.fullBlue};
+    border-left: 1px solid ${newColors.shades.fullBlue};
   }
 `;
 
@@ -141,4 +156,46 @@ export const loadingWrapperStyle = css`
     top: 16px;
     right: 48px;
     position: absolute;
+`;
+
+export const searchButtonStyle = css`
+  background: ${newColors.shades.fullBlue};
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  color: ${newColors.kovWhite};
+  cursor: pointer;
+  line-height: 24px;
+  border-top: 1px solid ${newColors.shades.fullBlue};
+  border-right: 1px solid ${newColors.shades.fullBlue};
+  border-bottom: 1px solid ${newColors.shades.fullBlue};
+  border-left: none;
+
+  svg {
+    fill: ${newColors.kovWhite};
+  }
+
+  @media (min-width: ${breakpoints.m}) {
+    padding: 16px 24px;
+  }
+
+  &:focus,
+  &:hover {
+    background: ${newColors.shades.kovBlue50};
+  }
+
+  &:active {
+    background: ${newColors.shades.kovBlue75};
+  }
+`;
+
+export const searchButtonTextStyle = css`
+  display: none;
+
+  @media (min-width: ${breakpoints.m}) {
+    display: inline-block;
+    margin-right: 8px;
+  }
 `;

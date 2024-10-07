@@ -7,6 +7,7 @@ import {
 import { InputAutocomplete } from './input-autocomplete';
 
 const whiteBackground = { padding: "32px", backgroundColor: "#ffffff" };
+const toggleButton = { padding: "16px 24px", border: "1px solid black", marginBottom: "20px", cursor: "pointer" };
 
 // Basic Example
 export const InputAutocompleteBasicExample = () => {
@@ -28,16 +29,19 @@ export const InputAutocompleteBasicExample = () => {
   );
 }
 
-export const InputAutocompleteCustomized = () => {
+export const InputAutocompleteInHeaderSeearch = () => {
   const [open, setOpen] = useState(false);
   const element = <InputAutocomplete
     callbackOnClick={(e, item) => { console.log(e, item); }}
     fetchUrl={'https://api.addsearch.com/v1/suggest/cecae10a7a8fa96ae6ca84428bb77e0f?term='}
-    placeholder="Skriv för att söka"
+    placeholder="Skriv för att sökas"
     formatResult={(data) => data.suggestions}
     suggestionKey={'value'}
     useHeaderSearchStyle={true}
-    focusOnMount={true}
+    focusOnOpen={true}
+    searchButton={true}
+    searchButtonText={'Söktext'}
+    allowFreeTextSearch={true}
   />;
 
   return (
@@ -45,7 +49,7 @@ export const InputAutocompleteCustomized = () => {
       <CompositionFonts>
         <GlobalStyles />
         <div style={whiteBackground}>
-          <button onClick={() => setOpen(!open)}>Click to open InputAutocomplete</button>
+          <button onClick={() => setOpen(!open)} style={toggleButton}>Click to {open ? 'close' : 'open'} InputAutocomplete</button>
           {open && element}
         </div>
       </CompositionFonts>

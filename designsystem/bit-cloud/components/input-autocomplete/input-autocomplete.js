@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 import React, { useState, useEffect, useRef } from 'react';
 import { Loading } from '@konsumentverket-sverige/designsystem.loading';
 import {MonoDelete} from '@konsumentverket-sverige/designsystem.utils';
+import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 import {
   containerStyle,
   containerHasSuggestionsStyle,
@@ -17,8 +18,11 @@ import {
   dropdownButtonStyle,
   loadingWrapperStyle,
   dropdownPositionRelativeStyle,
-  inputWrapper,
+  inputAndDropdownWrapper,
+  inputAndSubmitWrapper,
   clearInput,
+  searchButtonStyle,
+  searchButtonTextStyle,
 } from './input-autocomplete.css.js';
 
 const defaultFormatResult = (data) =>
@@ -37,6 +41,9 @@ export const InputAutocomplete = ({
   suggestionKey = 'description',
   useHeaderSearchStyle = false,
   focusOnOpen = false,
+  allowFreeTextSearch = true,
+  searchButton = false,
+  searchButtonText = 'Sök',
 }) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -46,6 +53,20 @@ export const InputAutocomplete = ({
   const [skipSearch, setSkipSearch] = useState(false);
   const autocompleteRef = useRef(null);
   const inputRef = useRef(null);
+  const [searchButtonHeight, setSearchButtonHeight] = useState(null);
+
+  useEffect(() => {
+    focusOnOpen ? focusOnInputRef() : inputRef.current?.blur();
+    return () => inputRef.current?.blur();
+  }, [focusOnOpen]);
+
+  useEffect(() => {
+    if(!searchButton) return;
+    if (!inputRef?.current) return;
+    setSearchButtonHeight(inputRef.current.offsetHeight);
+
+    return () => setSearchButtonHeight(null);
+  }, [searchButton]);
 
   useEffect(() => {
     if (skipSearch) {
@@ -63,11 +84,6 @@ export const InputAutocomplete = ({
 
     return () => clearTimeout(timer);
   }, [query]);
-
-  useEffect(() => {
-    focusOnOpen ? focusOnInputRef() : inputRef.current?.blur();
-    return () => inputRef.current?.blur();
-  }, [focusOnOpen]);
 
   const fetchSuggestions = async (searchTerm) => {
     setLoading(true);
@@ -94,7 +110,7 @@ export const InputAutocomplete = ({
   };
 
   const handleSuggestionClick = (suggestion) => {
-    setQuery(suggestion[suggestionKey]);
+    setQuery(suggestion);
     setSkipSearch(true);
     setSuggestions([]);
     setIsDropdownOpen(false);
@@ -119,10 +135,19 @@ export const InputAutocomplete = ({
       );
     } else if (event.key === 'ArrowUp') {
       setActiveIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
-    } else if (event.key === 'Enter' && activeIndex >= 0) {
+    } else if (event.key === 'Enter') {
       event.preventDefault();
-      handleSuggestionClick(suggestions[activeIndex]);
-      callbackOnClick(event, suggestions[activeIndex]);
+
+      // Handle when a suggestion is selected
+      if (activeIndex >= 0) {
+        handleSuggestionClick(suggestions[activeIndex][suggestionKey]);
+        callbackOnClick(event, suggestions[activeIndex][suggestionKey]);
+      }
+      // Handle free text search if allowed
+      else if (allowFreeTextSearch) {
+        handleSuggestionClick(query);
+        callbackOnClick(event, query); // Search with the raw query text
+      }
     }
   };
 
@@ -146,77 +171,99 @@ export const InputAutocomplete = ({
       ref={autocompleteRef}
       css={[containerStyle, (showingResult ? containerHasSuggestionsStyle : null)]}
     >
-      <div css={inputWrapper}>
-        <label
-          css={[labelStyle]}
-          htmlFor="autocomplete-input"
-        >
-          {placeholder}
-        </label>
-        <input
-          role="combobox"
-          ref={inputRef}
-          placeholder={placeholder}
-          autoComplete="off"
-          css={[
-            inputStyle,
-            useHeaderSearchStyle ? inputHeaderSearchStyle : null,
-            (showingResult && !useHeaderSearchStyle ? inputHasSuggestionsStyle : null),
-            (showingResult && useHeaderSearchStyle ? inputHeaderSearchHasSuggestionsStyle : null),
-          ]}
-          type="text"
-          id="autocomplete-input"
-          value={query}
-          onChange={handleInputChange}
-          onKeyDown={handleInputKeyDown}
-          aria-autocomplete="list"
-          aria-controls={"input-autocomplete-suggestions"}
-          aria-expanded={isDropdownOpen}
-          aria-activedescendant={activeIndex >= 0 ? `autocomplete-option-${activeIndex}` : undefined}
-          aria-describedby={loading ? "loading-indicator" : undefined}
-        />
-        {query && (
-          <button
-            css={clearInput}
-            onClick={handleClearInput}
-            aria-label={ariaLabelClearInput}
+
+      <div css={inputAndSubmitWrapper}>
+        <div css={inputAndDropdownWrapper}>
+          <label
+            css={[labelStyle]}
+            htmlFor="autocomplete-input"
           >
-            <MonoDelete />
+            {placeholder}
+          </label>
+          <input
+            role="combobox"
+            ref={inputRef}
+            placeholder={placeholder}
+            autoComplete="off"
+            css={[
+              inputStyle,
+              useHeaderSearchStyle ? inputHeaderSearchStyle : null,
+              (showingResult && !useHeaderSearchStyle ? inputHasSuggestionsStyle : null),
+              (showingResult && useHeaderSearchStyle ? inputHeaderSearchHasSuggestionsStyle : null),
+            ]}
+            type="text"
+            id="autocomplete-input"
+            value={query}
+            onChange={handleInputChange}
+            onKeyDown={handleInputKeyDown}
+            aria-autocomplete="list"
+            aria-controls={"input-autocomplete-suggestions"}
+            aria-expanded={isDropdownOpen}
+            aria-activedescendant={activeIndex >= 0 ? `autocomplete-option-${activeIndex}` : undefined}
+            aria-describedby={loading ? "loading-indicator" : undefined}
+          />
+
+          {loading && (
+            <div css={loadingWrapperStyle} id="loading-indicator" aria-live="polite">
+              <Loading/>
+            </div>
+          )}
+
+          {query && (
+            <button
+              css={clearInput}
+              onClick={handleClearInput}
+              aria-label={ariaLabelClearInput}
+            >
+              <MonoDelete/>
+            </button>
+          )}
+
+          {isDropdownOpen && suggestions.length > 0 && !loading && (
+            <ul
+              css={[dropdownWrapperStyle, dropdownPositionRelative && dropdownPositionRelativeStyle]}
+              id={"input-autocomplete-suggestions"}
+              role="listbox"
+            >
+              {suggestions.map((suggestion, index) => (
+                <li
+                  css={[dropdownItemStyle, index === activeIndex ? dropdownItemActiveStyle : null]}
+                  key={index}
+                  role="option"
+                  id={`autocomplete-option-${index}`}
+                  aria-selected={index === activeIndex}
+                  onClick={() => handleSuggestionClick(suggestion[suggestionKey])}
+                >
+                  <button
+                    className={"noStyle"}
+                    css={dropdownButtonStyle}
+                    onClick={(e) => callbackOnClick(e, suggestion)}
+                    tabIndex="-1"
+                  >
+                    {suggestion[suggestionKey]}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+
+        {searchButton && (
+          <button css={[searchButtonStyle, css`height: ${searchButtonHeight}px`]}
+                  onClick={() => handleSuggestionClick(query)}
+          >
+          <span css={[searchButtonTextStyle]}>
+            {searchButtonText}
+          </span>
+
+            <Icon
+              aria-hidden="true"
+              icon="MonoSearch"
+            />
           </button>
         )}
+
       </div>
-      {loading && (
-        <div css={loadingWrapperStyle} id="loading-indicator" aria-live="polite">
-          <Loading />
-        </div>
-      )}
-      {isDropdownOpen && suggestions.length > 0 && !loading && (
-        <ul
-          css={[dropdownWrapperStyle, dropdownPositionRelative && dropdownPositionRelativeStyle]}
-          id={"input-autocomplete-suggestions"}
-          role="listbox"
-        >
-          {suggestions.map((suggestion, index) => (
-            <li
-              css={[dropdownItemStyle, index === activeIndex ? dropdownItemActiveStyle : null]}
-              key={index}
-              role="option"
-              id={`autocomplete-option-${index}`}
-              aria-selected={index === activeIndex}
-              onClick={() => handleSuggestionClick(suggestion)}
-            >
-              <button
-                className={"noStyle"}
-                css={dropdownButtonStyle}
-                onClick={(e) => callbackOnClick(e, suggestion)}
-                tabIndex="-1"
-              >
-                {suggestion[suggestionKey]}
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
     </div>
   );
 };
