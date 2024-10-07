@@ -41,7 +41,7 @@ export const InputAutocomplete = ({
   formatSuggestionsResult = defaultFormatSuggestionsResult,
   useHeaderSearchStyle = false,
   focusOnOpen = false,
-  allowFreeTextSearch = true,
+  allowFreeTextSearch = false,
   searchButton = false,
   searchButtonText = 'Sök',
 }) => {
@@ -122,6 +122,12 @@ export const InputAutocomplete = ({
     focusOnInputRef();
   }
 
+  const handleFreeTextSearch = (event) => {
+    const formattedQuery = formatFreeTextInputToSuggestion(query);
+    handleSuggestionClick(formattedQuery);
+    callbackOnClick(event, formattedQuery);
+  }
+
   const handleInputKeyDown = (event) => {
     if (event.key === 'Escape') {
       setIsDropdownOpen(false);
@@ -144,9 +150,7 @@ export const InputAutocomplete = ({
       }
       // Handle free text search if allowed
       else if (allowFreeTextSearch) {
-        const formattedQuery = formatFreeTextInputToSuggestion(query);
-        handleSuggestionClick(formattedQuery);
-        callbackOnClick(event, formattedQuery);
+        handleFreeTextSearch(event);
       }
     }
   };
@@ -259,10 +263,7 @@ export const InputAutocomplete = ({
         {searchButton && (
           <button
             css={[searchButtonStyle, css`height: ${searchButtonHeight}px`]}
-            onClick={(event) => {
-              handleSuggestionClick(formatFreeTextInputToSuggestion(query));
-              callbackOnClick(event, query);
-            }}
+            onClick={(event) => handleFreeTextSearch(event)}
           >
             <span css={[searchButtonTextStyle]}>
               {searchButtonText}
