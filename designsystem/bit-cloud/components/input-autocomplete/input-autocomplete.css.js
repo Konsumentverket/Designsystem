@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, breakpoints,typography } from '@konsumentverket-sverige/designsystem.utils';
 
 export const containerStyle = css`
   position: relative;
@@ -206,6 +206,12 @@ export const searchButtonTextStyle = css`
 
   @media (min-width: ${breakpoints.m}) {
     display: inline-block;
-    margin-right: 8px;
+    ${typography.clickMedium};
+    color: ${newColors.kovWhite};
+    margin-right: 12px;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 `;
