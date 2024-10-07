@@ -87,15 +87,15 @@ export const focusCardTextStyle = css`
 `;
 
 export const focusCardIconSectionStyle = css`
-  width: 92px;
+  width: 84px;
   position: absolute;
   top: 50%;
-  right: -46px;
+  right: -42px;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 32px 0;
+  padding: 37px 0;
   border-radius: 200px 0px 0 200px;
   background-color: ${newColors.shades.lightBlue};
   // transition: background-color 0.15s ease;
