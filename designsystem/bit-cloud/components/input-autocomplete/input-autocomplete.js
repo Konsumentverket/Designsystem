@@ -25,7 +25,7 @@ import {
   searchButtonTextStyle,
 } from './input-autocomplete.css.js';
 
-const defaultFormatResult = (data) =>
+const defaultFormatSuggestionsResult = (data) =>
   data.predictions.map((item) => ({
     ...item,
     description: item.description.replace(', Sverige', ''),
@@ -37,8 +37,8 @@ export const InputAutocomplete = ({
   placeholder,
   dropdownPositionRelative = false,
   ariaLabelClearInput = 'Rensa sökfältet',
-  formatResult = defaultFormatResult,
-  suggestionKey = 'description',
+  suggestionText = 'description',
+  formatSuggestionsResult = defaultFormatSuggestionsResult,
   useHeaderSearchStyle = false,
   focusOnOpen = false,
   allowFreeTextSearch = true,
@@ -90,8 +90,7 @@ export const InputAutocomplete = ({
     try {
       const response = await fetch(`${fetchUrl}${searchTerm}`);
       const data = await response.json();
-
-      const result = formatResult(data);
+      const result = formatSuggestionsResult(data);
 
       setSuggestions(result);
       setIsDropdownOpen(true);
@@ -110,7 +109,7 @@ export const InputAutocomplete = ({
   };
 
   const handleSuggestionClick = (suggestion) => {
-    setQuery(suggestion);
+    setQuery(suggestion[suggestionText])
     setSkipSearch(true);
     setSuggestions([]);
     setIsDropdownOpen(false);
@@ -140,13 +139,14 @@ export const InputAutocomplete = ({
 
       // Handle when a suggestion is selected
       if (activeIndex >= 0) {
-        handleSuggestionClick(suggestions[activeIndex][suggestionKey]);
-        callbackOnClick(event, suggestions[activeIndex][suggestionKey]);
+        handleSuggestionClick(suggestions[activeIndex]);
+        callbackOnClick(event, suggestions[activeIndex]);
       }
       // Handle free text search if allowed
       else if (allowFreeTextSearch) {
-        handleSuggestionClick(query);
-        callbackOnClick(event, query); // Search with the raw query text
+        const formattedQuery = formatFreeTextInputToSuggestion(query);
+        handleSuggestionClick(formattedQuery);
+        callbackOnClick(event, formattedQuery);
       }
     }
   };
@@ -165,6 +165,8 @@ export const InputAutocomplete = ({
   }, [autocompleteRef]);
 
   const showingResult = isDropdownOpen && suggestions.length > 0 && !loading;
+
+  const formatFreeTextInputToSuggestion = (query) => ({[suggestionText]: query})
 
   return (
     <div
@@ -236,15 +238,17 @@ export const InputAutocomplete = ({
                   role="option"
                   id={`autocomplete-option-${index}`}
                   aria-selected={index === activeIndex}
-                  onClick={(event) => handleSuggestionClick(suggestion[suggestionKey])}
                 >
                   <button
                     className={"noStyle"}
                     css={dropdownButtonStyle}
-                    onClick={(e) => callbackOnClick(e, suggestion)}
+                    onClick={(e) => {
+                      handleSuggestionClick(suggestion)
+                      callbackOnClick(e, suggestion)
+                    }}
                     tabIndex="-1"
                   >
-                    {suggestion[suggestionKey]}
+                    {suggestion[suggestionText]}
                   </button>
                 </li>
               ))}
@@ -256,7 +260,7 @@ export const InputAutocomplete = ({
           <button
             css={[searchButtonStyle, css`height: ${searchButtonHeight}px`]}
             onClick={(event) => {
-              handleSuggestionClick(query);
+              handleSuggestionClick(formatFreeTextInputToSuggestion(query));
               callbackOnClick(event, query);
             }}
           >

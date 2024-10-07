@@ -34,9 +34,9 @@ export const InputAutocompleteInHeaderSeearch = () => {
   const element = <InputAutocomplete
     callbackOnClick={(e, item) => { console.log(e, item); }}
     fetchUrl={'https://api.addsearch.com/v1/suggest/cecae10a7a8fa96ae6ca84428bb77e0f?term='}
-    placeholder="Skriv för att sökas"
-    formatResult={(data) => data.suggestions}
-    suggestionKey={'value'}
+    placeholder="Skriv för att söka"
+    formatSuggestionsResult={(data) => data.suggestions}
+    suggestionText={'value'}
     useHeaderSearchStyle={true}
     focusOnOpen={true}
     searchButton={true}
