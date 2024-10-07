@@ -236,7 +236,7 @@ export const InputAutocomplete = ({
                   role="option"
                   id={`autocomplete-option-${index}`}
                   aria-selected={index === activeIndex}
-                  onClick={() => handleSuggestionClick(suggestion[suggestionKey])}
+                  onClick={(event) => handleSuggestionClick(suggestion[suggestionKey])}
                 >
                   <button
                     className={"noStyle"}
@@ -253,12 +253,16 @@ export const InputAutocomplete = ({
         </div>
 
         {searchButton && (
-          <button css={[searchButtonStyle, css`height: ${searchButtonHeight}px`]}
-                  onClick={() => handleSuggestionClick(query)}
+          <button
+            css={[searchButtonStyle, css`height: ${searchButtonHeight}px`]}
+            onClick={(event) => {
+              handleSuggestionClick(query);
+              callbackOnClick(event, query);
+            }}
           >
-          <span css={[searchButtonTextStyle]}>
-            {searchButtonText}
-          </span>
+            <span css={[searchButtonTextStyle]}>
+              {searchButtonText}
+            </span>
 
             <Icon
               aria-hidden="true"
