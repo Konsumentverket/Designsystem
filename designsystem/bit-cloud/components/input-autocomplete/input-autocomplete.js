@@ -56,6 +56,8 @@ export const InputAutocomplete = ({
   const [searchButtonHeight, setSearchButtonHeight] = useState(null);
 
   useEffect(() => {
+    if (!inputRef.current) return;
+
     focusOnOpen ? focusOnInputRef() : blurInputRef();
     return () => blurInputRef();
   }, [focusOnOpen]);
