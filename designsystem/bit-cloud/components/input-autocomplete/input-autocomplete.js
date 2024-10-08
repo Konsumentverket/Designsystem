@@ -118,7 +118,7 @@ export const InputAutocomplete = ({
   };
 
   const focusOnInputRef = () =>  inputRef.current.focus();
-  const blurInputRef = () => inputRef.current.blur();
+  const blurInputRef = () => inputRef.current?.blur();
 
   const handleClearInput = () => {
     setQuery('');
