@@ -56,8 +56,8 @@ export const InputAutocomplete = ({
   const [searchButtonHeight, setSearchButtonHeight] = useState(null);
 
   useEffect(() => {
-    focusOnOpen ? focusOnInputRef() : inputRef.current?.blur();
-    return () => inputRef.current?.blur();
+    focusOnOpen ? focusOnInputRef() : blurInputRef();
+    return () => blurInputRef();
   }, [focusOnOpen]);
 
   useEffect(() => {
@@ -116,6 +116,7 @@ export const InputAutocomplete = ({
   };
 
   const focusOnInputRef = () =>  inputRef.current.focus();
+  const blurInputRef = () => inputRef.current.blur();
 
   const handleClearInput = () => {
     setQuery('');
@@ -126,6 +127,7 @@ export const InputAutocomplete = ({
     const formattedQuery = formatFreeTextInputToSuggestion(query);
     handleSuggestionClick(formattedQuery);
     callbackOnClick(event, formattedQuery);
+    blurInputRef();
   }
 
   const handleInputKeyDown = (event) => {
@@ -152,6 +154,7 @@ export const InputAutocomplete = ({
       else if (allowFreeTextSearch) {
         handleFreeTextSearch(event);
       }
+      blurInputRef();
     }
   };
 
@@ -249,6 +252,7 @@ export const InputAutocomplete = ({
                     onClick={(e) => {
                       handleSuggestionClick(suggestion)
                       callbackOnClick(e, suggestion)
+                      blurInputRef();
                     }}
                     tabIndex="-1"
                   >
