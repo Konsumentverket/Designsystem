@@ -44,6 +44,7 @@ export const InputAutocomplete = forwardRef(({
   allowFreeTextSearch = false,
   searchButton = false,
   searchButtonText = 'Sök',
+  searchButtonAriaLabel = 'Sök',
 }, ref) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -279,6 +280,7 @@ export const InputAutocomplete = forwardRef(({
             css={[searchButtonStyle, css`height: ${searchButtonHeight}px`]}
             onClick={(event) => handleFreeTextSearch(event)}
             type="submit"
+            aria-label={searchButtonAriaLabel}
           >
             <span css={[searchButtonTextStyle]}>
               {searchButtonText}
