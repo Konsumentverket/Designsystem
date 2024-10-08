@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
 import { Loading } from '@konsumentverket-sverige/designsystem.loading';
 import {MonoDelete} from '@konsumentverket-sverige/designsystem.utils';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
@@ -31,7 +31,7 @@ const defaultFormatSuggestionsResult = (data) =>
     description: item.description.replace(', Sverige', ''),
   }));
 
-export const InputAutocomplete = ({
+export const InputAutocomplete = forwardRef(({
   fetchUrl,
   callbackOnClick = () => { },
   placeholder,
@@ -44,7 +44,7 @@ export const InputAutocomplete = ({
   allowFreeTextSearch = false,
   searchButton = false,
   searchButtonText = 'Sök',
-}) => {
+}, ref) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -86,6 +86,27 @@ export const InputAutocomplete = ({
 
     return () => clearTimeout(timer);
   }, [query]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (autocompleteRef.current && !autocompleteRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [autocompleteRef]);
+
+  useImperativeHandle(ref, () => ({
+    resetQuery: () => {
+      setQuery('');
+      setSuggestions([]);
+      setIsDropdownOpen(false);
+    },
+  }));
 
   const fetchSuggestions = async (searchTerm) => {
     setLoading(true);
@@ -159,19 +180,6 @@ export const InputAutocomplete = ({
       blurInputRef();
     }
   };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (autocompleteRef.current && !autocompleteRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [autocompleteRef]);
 
   const showingResult = isDropdownOpen && suggestions.length > 0 && !loading;
 
@@ -285,4 +293,4 @@ export const InputAutocomplete = ({
       </div>
     </div>
   );
-};
+});

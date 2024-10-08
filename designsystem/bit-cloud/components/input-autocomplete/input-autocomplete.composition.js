@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import 'date-fns';
 import {
   globalStyles as GlobalStyles,
@@ -31,6 +31,14 @@ export const InputAutocompleteBasicExample = () => {
 
 export const InputAutocompleteInHeaderSeearch = () => {
   const [open, setOpen] = useState(false);
+  const inputAutocompleteRef = useRef();
+
+  const handleResetQuery = () => {
+    if(inputAutocompleteRef.current){
+      inputAutocompleteRef.current.resetQuery();
+    }
+  }
+
   const element = <InputAutocomplete
     callbackOnClick={(e, item) => { console.log(e, item); }}
     fetchUrl={'https://api.addsearch.com/v1/suggest/cecae10a7a8fa96ae6ca84428bb77e0f?term='}
@@ -43,6 +51,7 @@ export const InputAutocompleteInHeaderSeearch = () => {
     searchButtonText={'Söktext'}
     allowFreeTextSearch={true}
     dropdownPositionRelative={true}
+    ref={inputAutocompleteRef}
   />;
 
   return (
@@ -51,6 +60,7 @@ export const InputAutocompleteInHeaderSeearch = () => {
         <GlobalStyles />
         <div style={whiteBackground}>
           <button onClick={() => setOpen(!open)} style={toggleButton}>Click to {open ? 'close' : 'open'} InputAutocomplete</button>
+          <button onClick={handleResetQuery} style={toggleButton}>Reset</button>
           {open && element}
         </div>
       </CompositionFonts>
