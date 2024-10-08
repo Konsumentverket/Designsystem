@@ -278,6 +278,7 @@ export const InputAutocomplete = forwardRef(({
           <button
             css={[searchButtonStyle, css`height: ${searchButtonHeight}px`]}
             onClick={(event) => handleFreeTextSearch(event)}
+            type="submit"
           >
             <span css={[searchButtonTextStyle]}>
               {searchButtonText}

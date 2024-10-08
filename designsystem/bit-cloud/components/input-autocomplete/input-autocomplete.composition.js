@@ -61,7 +61,9 @@ export const InputAutocompleteInHeaderSeearch = () => {
         <div style={whiteBackground}>
           <button onClick={() => setOpen(!open)} style={toggleButton}>Click to {open ? 'close' : 'open'} InputAutocomplete</button>
           <button onClick={handleResetQuery} style={toggleButton}>Reset</button>
-          {open && element}
+          <form onSubmit={(e) => e.preventDefault()}>
+            {open && element}
+          </form>
         </div>
       </CompositionFonts>
     </>
