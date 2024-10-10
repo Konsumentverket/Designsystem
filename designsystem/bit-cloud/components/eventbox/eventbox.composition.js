@@ -5,7 +5,7 @@ import {
 } from '@konsumentverket-sverige/designsystem.utils';
 
 import React from 'react';
-import { EventBox } from './event-box';
+import { EventBox } from './eventbox';
 
 // Basic Example
 export const EventBoxExampleList = () => {

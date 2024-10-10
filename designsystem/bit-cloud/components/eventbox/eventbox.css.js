@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { spacing, newColors, breakpoints, containerStyles, medium } from '@konsumentverket-sverige/designsystem.utils';
+import { newColors, medium } from '@konsumentverket-sverige/designsystem.utils';
 
 export const eventBoxWrapper = css`
   display: flex;
@@ -11,4 +11,4 @@ export const eventBoxWrapper = css`
 
   border-radius: 16px;
   background-color: ${newColors.primaries.lightBlue};
-`;
+`

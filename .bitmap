@@ -58,12 +58,12 @@
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/editor-icon"
     },
-    "event-box": {
-        "name": "event-box",
+    "eventbox": {
+        "name": "eventbox",
         "scope": "konsumentverket-sverige.designsystem",
         "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "designsystem/bit-cloud/components/event-box"
+        "rootDir": "designsystem/bit-cloud/components/eventbox"
     },
     "expand-button": {
         "name": "expand-button",
