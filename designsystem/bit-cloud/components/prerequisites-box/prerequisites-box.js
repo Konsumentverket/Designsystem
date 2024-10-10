@@ -12,7 +12,7 @@ export const PrerequisitesBox = ({
   }
 
   return (
-    <div css={[wrapperStyling]}>
+    <div css={[wrapperStyling]} data-comp="prerequisites">
       {text && (
         <h2 css={titleStyling}>{text}</h2>
       )}

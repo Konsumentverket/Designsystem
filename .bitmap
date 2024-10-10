@@ -58,6 +58,13 @@
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/editor-icon"
     },
+    "event-box": {
+        "name": "event-box",
+        "scope": "konsumentverket-sverige.designsystem",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/event-box"
+    },
     "expand-button": {
         "name": "expand-button",
         "scope": "konsumentverket-sverige.designsystem",
@@ -222,7 +229,7 @@
     "prerequisites-box": {
         "name": "prerequisites-box",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.89",
+        "version": "0.0.90",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/prerequisites-box"
     },
