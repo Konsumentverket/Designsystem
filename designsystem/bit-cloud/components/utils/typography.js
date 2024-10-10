@@ -338,7 +338,6 @@ export const linkFocus = css`
   text-decoration: none;
   background: ${newColors.primaries.mediumBlue};
   box-shadow: 0 0 0 2px ${newColors.primaries.mediumBlue};
-  outline: 4px solid ${newColors.secondaries.fullGreen};
 `;
 
 export const link = css`
@@ -439,7 +438,6 @@ export const clickHover = css`
 
 export const clickFocus = css`
   text-decoration: underline;
-  outline: 4px solid ${newColors.secondaries.fullGreen};
 `;
 
 const baseClick = css`
