@@ -21,9 +21,10 @@ const IconCard = React.forwardRef(({
     useLightAlternativeColors = false,
     useAlternativeColors = false,
     contentfulName,
-    contentfulId
+    contentfulId,
+    linkComponent: LinkComponent = 'a',
 }, ref) => {
-    return <a
+    return <LinkComponent
         data-comp="icon-card"
         ref={ref}
         id={id}
@@ -40,7 +41,7 @@ const IconCard = React.forwardRef(({
             aria-hidden="true"
             style={chevronStyle}
         />
-    </a>
+    </LinkComponent>
 })
 
 export { IconCard };
