@@ -34,6 +34,7 @@ const IconCard = React.forwardRef(({
         className="noStyle"
         data-contentful-field-id={contentfulName}
         data-contentful-entry-id={contentfulId}
+        injected={true}
     >
         {icon && React.cloneElement(icon, { "aria-hidden": "true", style: iconStyle })}
         <span css={iconTextStyle}>{text}</span>
