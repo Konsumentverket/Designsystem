@@ -5,7 +5,9 @@ export const secondRow = css`
   display: flex;
   flex-direction: column;
   ${typography.textSmall};
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid ${newColors.shades.mediumBlue};
 
   a {
     ${typography.linkSmall};
