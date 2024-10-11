@@ -14,6 +14,9 @@ export const EventBoxExampleList = () => {
       <GlobalStyles />
       <EventBox
         date={new Date().toISOString()}
+        time={"14:00 - 16:00"}
+        latestApplicationDate={new Date().toISOString()}
+        datePassed={true}
         subject={"Konsumenträtt, Hållbarhet"}
         lecturers={["Föreläsare 1", "Föreläsare 2"]}
         listOption={true}
@@ -30,6 +33,8 @@ export const EventBoxExampleComma = () => {
       <GlobalStyles />
       <EventBox
         date={new Date().toISOString()}
+        time={"14:00 - 16:00"}
+        latestApplicationDate={new Date().toISOString()}
         subject={"Konsumenträtt, Hållbarhet"}
         lecturers={["Föreläsare 1", "Föreläsare 2"]}
         listOption={false}
@@ -46,6 +51,8 @@ export const EventBoxExampleOutdated = () => {
       <GlobalStyles />
       <EventBox
         date={new Date().toISOString()}
+        time={"14:00 - 16:00"}
+        latestApplicationDate={new Date().toISOString()}
         subject={"Konsumenträtt, Hållbarhet"}
         lecturers={["Föreläsare 1", "Föreläsare 2"]}
         listOption={true}
@@ -63,11 +70,10 @@ export const EventBoxExampleSingle = () => {
       <GlobalStyles />
       <EventBox
         date={new Date().toISOString()}
+        time={"14:00 - 16:00"}
         subject={"Konsumenträtt, Hållbarhet"}
         lecturers={["Namn Namnsson"]}
         listOption={false}
-        text={"Pellentesque elit enim, congue eget tellus non. Sollicitudin tristique urna aliquam bibendum dapibus mi"}
-        url={'https://www.konsumentverket.se'}
       />
     </CompositionFonts>
   );
