@@ -99,11 +99,11 @@ export const smallTypographyContainerStyle = css`
 `;
 
 export const processStepStyle = css`
-  h2:not(.noStyleComponent h2),
+  h2:not(.noStyleComponent h2, .link-element-container h2),
   h3:not(.noStyleComponent h3, .link-element-container h3),
-  h4:not(.noStyleComponent h4),
-  h5:not(.noStyleComponent h5),
-  h6:not(.noStyleComponent h6),
+  h4:not(.noStyleComponent h4, .link-element-container h4),
+  h5:not(.noStyleComponent h5, .link-element-container h5),
+  h6:not(.noStyleComponent h6, .link-element-container h6),
   p:not(.noStyleComponent p) {
     color: ${newColors.kovBlack} !important;
   }
