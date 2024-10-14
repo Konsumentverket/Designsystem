@@ -78,10 +78,13 @@ export const iconStyle = css`
 `;
 
 export const titleStyle = css`
-  color: ${newColors.primaries.fullBlue};
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 500;
+
+  & {
+    color: ${newColors.primaries.fullBlue};
+  }
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
