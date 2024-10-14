@@ -52,7 +52,8 @@ export const WithContentExpander = ({
   useProcessStepStyling = false,
   contentfulId = null,
   contentfulName = '',
-  contentfulTextName = ''
+  contentfulTextName = '',
+  level = 3,
 }) => {
   const [expanded, setExpanded] = useState(open);
   const linkContainerRef = useRef();
@@ -81,6 +82,8 @@ export const WithContentExpander = ({
   }, [expanded]);
 
   if (!show) return null;
+
+  const HeadingLevel = `h${level}`;
 
   return (
     <div
@@ -132,7 +135,7 @@ export const WithContentExpander = ({
             <div css={innerHeaderStyle}>
               {icon && <EditorIcon icon={icon} css={iconStyle} />}
               <div css={innerHeaderTextStyle}>
-                <h3
+                <HeadingLevel
                   className="noStyle"
                   css={[
                     titleStyle,
@@ -142,7 +145,7 @@ export const WithContentExpander = ({
                   ]}
                 >
                   {text}
-                </h3>
+                </HeadingLevel>
                 {preamble && <p css={preambleStyle} data-contentful-field-id={contentfulTextName} data-contentful-entry-id={contentfulId}>{preamble}</p>}
               </div>
             </div>
