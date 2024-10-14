@@ -70,6 +70,8 @@ export const clearInput = css`
   display: flex;
   align-items: center;
   padding-left: 2px;
+  cursor: pointer;
+
 
   svg {
     fill: ${newColors.primaries.fullBlue};
