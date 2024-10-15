@@ -51,6 +51,38 @@ export const BasicLinkListCard = () => {
           }
           linkStyle={true}
         />
+        <Button
+          href="#"
+          text="Studmattor"
+          iconLeft={
+            <Icon icon="MonoArrowRight" />
+          }
+          linkStyle={true}
+        />
+        <Button
+          href="#"
+          text="Hoppborgar"
+          iconLeft={
+            <Icon icon="MonoArrowRight" />
+          }
+          linkStyle={true}
+        />
+        <Button
+          href="#"
+          text="Trampolinparker"
+          iconLeft={
+            <Icon icon="MonoArrowRight" />
+          }
+          linkStyle={true}
+        />
+        <Button
+          href="#"
+          text="Höga barnstolar"
+          iconLeft={
+            <Icon icon="MonoArrowRight" />
+          }
+          linkStyle={true}
+        />
       </LinkCard>
     </CompositionFonts>
   );

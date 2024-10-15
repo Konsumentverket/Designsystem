@@ -217,7 +217,6 @@ export const childrenWrapper = css`
     flex-direction: column;
     flex-wrap: wrap;
     padding: 1.6rem;
-    max-height: 160px;
     width: 100%;
     overflow: hidden;
 

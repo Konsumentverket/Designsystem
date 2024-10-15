@@ -21,7 +21,7 @@ const LinkCard = React.forwardRef(({
     icon,
     headingLevel = 2,
     onClick,
-    beforeToggleCount = 3,
+    beforeToggleCount = 4,
     childrenWrapperStyle,
     linkComponent: LinkComponent = 'a'
 }, ref) => {
