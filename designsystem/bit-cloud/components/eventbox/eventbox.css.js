@@ -14,7 +14,7 @@ export const eventBoxWrapper = css`
 export const eventBoxInfo = css`
   font-size: 1.6rem;
   line-height: 1.45;
-  color: ${newColors.readingBlack};
+  color: ${newColors.kovBlack};
 
   @media (min-width: ${breakpoints.m}) {
      font-size: 2rem;
@@ -79,7 +79,7 @@ export const eventBoxOverdue = css`
   }
 
   svg {
-    fill: ${newColors.readingBlack};
+    fill: ${newColors.kovBlack};
     margin-right: 8px;
     min-width: 24px;
     margin-top: -3px;
