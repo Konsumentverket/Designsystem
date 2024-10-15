@@ -25,10 +25,12 @@ export const EventBox = ({
   text,
   url,
   listOption,
+  contentfulName,
+  contentfulId
   }) => {
 
   return (
-    <div data-comp="event-box" css={eventBoxWrapper}>
+    <div data-comp="event-box" css={eventBoxWrapper} data-contentful-field-id={contentfulName} data-contentful-entry-id={contentfulId}>
         <div css={eventBoxInfoContainer}>
           { date && <p css={eventBoxInfo}><span>Datum:</span> {date}</p>}
           { time && <p css={eventBoxInfo}><span>Tid:</span> {time}</p> }
