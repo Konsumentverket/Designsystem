@@ -37,13 +37,13 @@ export const EventBox = ({
           { subject && <p css={eventBoxInfo}><span>Ämne:</span> {subject}</p> }
 
           { listOption && lecturers?.length>0 && (
-            <p css={eventBoxInfo}><span>Föreläsare:</span>
+            <div css={eventBoxInfo}><span>Föreläsare:</span>
               <ul>
                 {lecturers.map((lecturer, index) => (
                   <li key={index}>{lecturer}</li>
                 ))}
               </ul>
-            </p>
+            </div>
           )}
           { !listOption && lecturers?.length>0 && (
             <p css={eventBoxInfo}><span>Föreläsare:</span> {lecturers.join(", ")}</p>
