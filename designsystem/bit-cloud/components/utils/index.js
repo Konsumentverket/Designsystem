@@ -16,6 +16,7 @@ import { MonoSigning } from "./Icons/SystemIcons/MonoSigning/MonoSigning.js";
 import { Volume } from "./Icons/SystemIcons/Volume/Volume.js";
 import { MonoGlobe } from "./Icons/SystemIcons/MonoGlobe/MonoGlobe.js";
 import { MonoListen } from "./Icons/SystemIcons/MonoListen/MonoListen.js";
+import { MonoListenWhite } from "./Icons/SystemIcons/MonoListenWhite/MonoListenWhite.js";
 import { Ecc } from "./Icons/SystemIcons/Ecc/Ecc.js";
 import { Arrow, arrowPath } from './Icons/SystemIcons/Arrow/Arrow.js';
 import { ArrowFat } from './Icons/SystemIcons/ArrowFat/ArrowFat.js';
@@ -205,6 +206,7 @@ export {
   Volume,
   MonoGlobe,
   MonoListen,
+  MonoListenWhite,
   Ecc,
   Arrow,
   arrowPath,
