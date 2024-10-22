@@ -6,7 +6,7 @@ import {
 } from '@konsumentverket-sverige/designsystem.utils';
 
 export const typographyContainerStyle = css`
-    & > :first-child {
+  & > :first-child {
     margin-top: 0 !important;
   }
   & > :last-child {
@@ -56,21 +56,26 @@ export const typographyContainerStyle = css`
 `;
 
 export const smallTypographyContainerStyle = css`
-  p:not(.noStyleComponent p, .noStyle) {
-    ${typography.paragraph};
+  p:not(.noStyleComponent p) {
+    ${typography.textSmall};
+
     strong {
-      ${typography.paragraph};
-    }
-    @media (min-width: ${breakpoints.m}) {
       ${typography.textSmall};
-      strong {
-        ${typography.textSmall};
-        font-weight: 700;
-      }
+      font-weight: 700;
     }
   }
+
+  h2:not(.noStyleComponent h2, .link-element-container h2),
+  h3:not(.noStyleComponent h3, .link-element-container h3),
+  h4:not(.noStyleComponent h4, .link-element-container h4),
+  h5:not(.noStyleComponent h5, .link-element-container h5),
+  h6:not(.noStyleComponent h6, .link-element-container h6) {
+    ${typography.textSmall};
+    font-weight: 700;
+  }
+
   a:not(.noStyleComponent a, .noStyle) {
-    ${typography.linkBodyMedium}
+    ${typography.linkTextSmall}
   }
   ul:not(.noStyleComponent ul, .noStyle) {
     ${typography.ulSmallStyling}

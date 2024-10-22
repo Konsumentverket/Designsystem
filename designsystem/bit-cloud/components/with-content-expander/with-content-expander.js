@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Typography } from '@konsumentverket-sverige/designsystem.typography';
-import { MonoArrowDown } from '@konsumentverket-sverige/designsystem.utils';
+import { MonoArrowDown, MonoArrowDownSmall } from '@konsumentverket-sverige/designsystem.utils';
 import { EditorIcon } from '@konsumentverket-sverige/designsystem.editor-icon';
 
 import {
@@ -14,6 +14,7 @@ import {
   iconStyle,
   headerStyle,
   headerProcessStepStyle,
+  headerExpanderExplainerStyle,
   innerHeaderStyle,
   innerHeaderTextStyle,
   titleStyle,
@@ -28,6 +29,7 @@ import {
   linkStyleAlternativeExpanded,
   linkStyleLightBlueAlternativeExpanded,
   linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
+  linkStyleExpanderExplainerExpanded,
   chevronStyle,
   chevronExpandedStyle,
   expandedAreaStyle,
@@ -50,6 +52,7 @@ export const WithContentExpander = ({
   useAlternativeStyling = false,
   useLightBlueAlternativeStyling = false,
   useProcessStepStyling = false,
+  useExpanderExplainerStyling = false,
   contentfulId = null,
   contentfulName = '',
   contentfulTextName = '',
@@ -85,6 +88,56 @@ export const WithContentExpander = ({
 
   const HeadingLevel = `h${level}`;
 
+  const containerStyles = [
+    containerStyle,
+    useAlternativeStyling && containerAlternativeStyle,
+    useLightBlueAlternativeStyling && containerLightBlueAlternativeStyle,
+    useProcessStepStyling && noLeftBorderRadiusStyling,
+  ];
+
+  const linkStyles = [
+    linkStyle,
+    expanded && linkStyleExpanded,
+    (useAlternativeStyling && expanded && !useProcessStepStyling) &&
+      linkStyleAlternativeExpanded,
+    useAlternativeStyling && linkAlternativeStyle,
+    useLightBlueAlternativeStyling && linkLightBlueAlternativeStyle,
+    (useLightBlueAlternativeStyling && expanded && !noLeftBorderRadiusStyling) &&
+      linkStyleLightBlueAlternativeExpanded,
+    (useLightBlueAlternativeStyling && expanded && noLeftBorderRadiusStyling) &&
+      linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
+    useProcessStepStyling && noLeftBorderRadiusStyling,
+    useExpanderExplainerStyling && linkStyleExpanderExplainerExpanded,
+  ];
+
+  const headerStyles = [
+    headerStyle,
+    useProcessStepStyling && headerProcessStepStyle,
+    useExpanderExplainerStyling && headerExpanderExplainerStyle,
+  ];
+
+  const titleStyles = [
+    titleStyle,
+    useAlternativeStyling && titleAlternativeStyle,
+    useLightBlueAlternativeStyling && titleLightBlueAlternativeStyle,
+    useProcessStepStyling && titleProcessStepStyle,
+  ];
+
+  const chevronStyles =[
+    chevronStyle,
+    expanded && chevronExpandedStyle
+  ];
+
+  const expandedAreaStyles = [
+    expandedAreaStyle,
+    expanded && expandedAreaExpandedStyle,
+    (expanded && useAlternativeStyling) &&
+      expandedAreaAlternativeStyle,
+    (expanded && useLightBlueAlternativeStyling) &&
+      expandedAreaLightBlueAlternativeStyle,
+    useProcessStepStyling && noLeftBorderRadiusStyling,
+  ];
+
   return (
     <div
       data-comp="with-content-expander"
@@ -92,12 +145,7 @@ export const WithContentExpander = ({
       data-contentful-entry-id={contentfulId}
       className={`withContentExpander ${expanded ? "expanded" : ""}`}
       id={wrapperId}
-      css={[
-        containerStyle,
-        useAlternativeStyling ? containerAlternativeStyle : null,
-        useLightBlueAlternativeStyling ? containerLightBlueAlternativeStyle : null,
-        useProcessStepStyling ? noLeftBorderRadiusStyling : null,
-      ]}
+      css={containerStyles}
       ref={topOfComponent}
     >
       <div className="link-element noStyle" onClick={(e) => handleExpansionOnClick(e)}>
@@ -110,25 +158,10 @@ export const WithContentExpander = ({
           aria-label={text}
           className="noStyle accordion"
           aria-controls={`${wrapperId}-content`}
-          css={[
-            linkStyle,
-            expanded ? linkStyleExpanded : null,
-            useAlternativeStyling && expanded && !useProcessStepStyling
-              ? linkStyleAlternativeExpanded
-              : null,
-            useAlternativeStyling ? linkAlternativeStyle : null,
-            useLightBlueAlternativeStyling ? linkLightBlueAlternativeStyle : null,
-            useLightBlueAlternativeStyling && expanded && !noLeftBorderRadiusStyling
-              ? linkStyleLightBlueAlternativeExpanded
-              : null,
-            useLightBlueAlternativeStyling && expanded && noLeftBorderRadiusStyling
-              ? linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius
-              : null,
-            useProcessStepStyling ? noLeftBorderRadiusStyling : null,
-          ]}
+          css={linkStyles}
         >
           <div
-            css={[headerStyle, useProcessStepStyling ? headerProcessStepStyle : null]}
+            css={headerStyles}
             className="link-element-container"
             ref={linkContainerRef}
           >
@@ -137,23 +170,25 @@ export const WithContentExpander = ({
               <div css={innerHeaderTextStyle}>
                 <HeadingLevel
                   className="noStyle"
-                  css={[
-                    titleStyle,
-                    useAlternativeStyling ? titleAlternativeStyle : null,
-                    useLightBlueAlternativeStyling ? titleLightBlueAlternativeStyle : null,
-                    useProcessStepStyling ? titleProcessStepStyle : null,
-                  ]}
+                  css={titleStyles}
                 >
                   {text}
                 </HeadingLevel>
                 {preamble && <p css={preambleStyle} data-contentful-field-id={contentfulTextName} data-contentful-entry-id={contentfulId}>{preamble}</p>}
               </div>
             </div>
-            {!disabled && (
+            {(!disabled && !useExpanderExplainerStyling) && (
               <MonoArrowDown
                 aria-hidden="true"
                 className="expand-icon"
-                style={[chevronStyle, expanded ? chevronExpandedStyle : null]}
+                style={chevronStyles}
+              />
+            )}
+            {(!disabled && useExpanderExplainerStyling) && (
+              <MonoArrowDownSmall
+                aria-hidden="true"
+                className="expand-icon"
+                style={chevronStyles}
               />
             )}
           </div>
@@ -161,18 +196,15 @@ export const WithContentExpander = ({
       </div>
       <div
         id={`${wrapperId}-content`}
-        css={[
-          expandedAreaStyle,
-          expanded ? expandedAreaExpandedStyle : null,
-          expanded && useAlternativeStyling ? expandedAreaAlternativeStyle : null,
-          expanded && useLightBlueAlternativeStyling
-            ? expandedAreaLightBlueAlternativeStyle
-            : null,
-          useProcessStepStyling ? noLeftBorderRadiusStyling : null,
-        ]}
+        css={expandedAreaStyles}
         className={`expand-section ${expanded ? "expanded" : ""} ${disabled ? "expanded" : ""}`}
       >
-        <Typography useProcessStepStyling={useProcessStepStyling}>{wrappedComponent}</Typography>
+        <Typography
+          useProcessStepStyling={useProcessStepStyling}
+          small={useExpanderExplainerStyling}
+        >
+          {wrappedComponent}
+        </Typography>
       </div>
     </div>
   );

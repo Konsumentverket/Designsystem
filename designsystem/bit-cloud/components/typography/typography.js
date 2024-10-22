@@ -18,9 +18,9 @@ export const Typography = ({
     <div
       css={[
         typographyContainerStyle,
-        small ? smallTypographyContainerStyle : null,
-        useProcessStepStyling ? processStepStyle : null,
-        alternativeHeadings ? alternativeHeadingStyle : null,
+        small && smallTypographyContainerStyle,
+        useProcessStepStyling && processStepStyle,
+        alternativeHeadings && alternativeHeadingStyle,
       ]}
       data-comp="typography"
     >

@@ -53,6 +53,14 @@ export const headerProcessStepStyle = css`
   }
 `;
 
+export const headerExpanderExplainerStyle = css`
+  padding: 16px;
+
+  @media (min-width: ${breakpoints.m}) {
+    padding: 16px;
+  }
+`;
+
 export const innerHeaderStyle = css`
   display: flex;
   align-items: center;
@@ -212,6 +220,15 @@ export const linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius = css`
 
   &:after {
     background-color: ${newColors.primaries.mediumBlue};
+  }
+`;
+
+export const linkStyleExpanderExplainerExpanded = css`
+  &:after {
+    @media (min-width: ${breakpoints.m}) {
+      left: 16px;
+      width: calc(100% - (${spacing.s} * 2));
+    }
   }
 `;
 
