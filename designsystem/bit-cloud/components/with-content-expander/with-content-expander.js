@@ -36,6 +36,7 @@ import {
   expandedAreaAlternativeStyle,
   expandedAreaLightBlueAlternativeStyle,
   expandedAreaExpandedStyle,
+  expandedAreaExpanderExplainerStyle,
 } from "./with-content-expander.css.js";
 
 export const WithContentExpander = ({
@@ -136,6 +137,8 @@ export const WithContentExpander = ({
     (expanded && useLightBlueAlternativeStyling) &&
       expandedAreaLightBlueAlternativeStyle,
     useProcessStepStyling && noLeftBorderRadiusStyling,
+    (expanded && useExpanderExplainerStyling) &&
+    expandedAreaExpanderExplainerStyle,
   ];
 
   return (

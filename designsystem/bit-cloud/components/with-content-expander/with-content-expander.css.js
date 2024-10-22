@@ -272,3 +272,12 @@ export const expandedAreaExpandedStyle = css`
     padding: ${spacing.m} ${spacing.m} ${spacing.l} ${spacing.m};
   }
 `;
+
+export const expandedAreaExpanderExplainerStyle = css`
+  padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};
+
+  @media (min-width: ${breakpoints.m}) {
+    padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};
+  }
+`;
+
