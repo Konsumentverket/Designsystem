@@ -53,7 +53,7 @@ export const headerProcessStepStyle = css`
   }
 `;
 
-export const headerExpanderExplainerStyle = css`
+export const headerLightBlueAlternativeStyle = css`
   padding: 16px;
 
   @media (min-width: ${breakpoints.m}) {
@@ -161,6 +161,13 @@ export const linkLightBlueAlternativeStyle = css`
     background-color: ${newColors.shades.lightBlue};
     box-shadow: none;
   }
+
+  &:after {
+    @media (min-width: ${breakpoints.m}) {
+      left: 16px;
+      width: calc(100% - (${spacing.s} * 2));
+    }
+  }
 `;
 
 export const linkStyleExpanded = css`
@@ -211,6 +218,11 @@ export const linkStyleLightBlueAlternativeExpanded = css`
 
   &:after {
     background-color: ${newColors.primaries.mediumBlue};
+
+    @media (min-width: ${breakpoints.m}) {
+      left: 16px;
+      width: calc(100% - (${spacing.s} * 2));
+    }
   }
 `;
 
@@ -220,15 +232,6 @@ export const linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius = css`
 
   &:after {
     background-color: ${newColors.primaries.mediumBlue};
-  }
-`;
-
-export const linkStyleExpanderExplainerExpanded = css`
-  &:after {
-    @media (min-width: ${breakpoints.m}) {
-      left: 16px;
-      width: calc(100% - (${spacing.s} * 2));
-    }
   }
 `;
 
@@ -260,6 +263,11 @@ export const expandedAreaLightBlueAlternativeStyle = css`
   background-color: ${newColors.primaries.lightBlue};
   border: 0;
   border-top: 0;
+  padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};
+
+  @media (min-width: ${breakpoints.m}) {
+    padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};
+  }
 `;
 
 export const expandedAreaExpandedStyle = css`
@@ -270,14 +278,6 @@ export const expandedAreaExpandedStyle = css`
 
   @media (min-width: ${breakpoints.m}) {
     padding: ${spacing.m} ${spacing.m} ${spacing.l} ${spacing.m};
-  }
-`;
-
-export const expandedAreaExpanderExplainerStyle = css`
-  padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};
-
-  @media (min-width: ${breakpoints.m}) {
-    padding: ${spacing.s} ${spacing.s} ${spacing.m} ${spacing.s};
   }
 `;
 

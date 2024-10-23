@@ -14,7 +14,6 @@ import {
   iconStyle,
   headerStyle,
   headerProcessStepStyle,
-  headerExpanderExplainerStyle,
   innerHeaderStyle,
   innerHeaderTextStyle,
   titleStyle,
@@ -29,14 +28,13 @@ import {
   linkStyleAlternativeExpanded,
   linkStyleLightBlueAlternativeExpanded,
   linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
-  linkStyleExpanderExplainerExpanded,
   chevronStyle,
   chevronExpandedStyle,
   expandedAreaStyle,
   expandedAreaAlternativeStyle,
   expandedAreaLightBlueAlternativeStyle,
   expandedAreaExpandedStyle,
-  expandedAreaExpanderExplainerStyle,
+  headerLightBlueAlternativeStyle,
 } from "./with-content-expander.css.js";
 
 export const WithContentExpander = ({
@@ -53,7 +51,6 @@ export const WithContentExpander = ({
   useAlternativeStyling = false,
   useLightBlueAlternativeStyling = false,
   useProcessStepStyling = false,
-  useExpanderExplainerStyling = false,
   contentfulId = null,
   contentfulName = '',
   contentfulTextName = '',
@@ -108,13 +105,12 @@ export const WithContentExpander = ({
     (useLightBlueAlternativeStyling && expanded && noLeftBorderRadiusStyling) &&
       linkStyleLightBlueAlternativeExpandedWithNoBorderLeftRadius,
     useProcessStepStyling && noLeftBorderRadiusStyling,
-    useExpanderExplainerStyling && linkStyleExpanderExplainerExpanded,
   ];
 
   const headerStyles = [
     headerStyle,
     useProcessStepStyling && headerProcessStepStyle,
-    useExpanderExplainerStyling && headerExpanderExplainerStyle,
+    useLightBlueAlternativeStyling && headerLightBlueAlternativeStyle,
   ];
 
   const titleStyles = [
@@ -137,8 +133,6 @@ export const WithContentExpander = ({
     (expanded && useLightBlueAlternativeStyling) &&
       expandedAreaLightBlueAlternativeStyle,
     useProcessStepStyling && noLeftBorderRadiusStyling,
-    (expanded && useExpanderExplainerStyling) &&
-    expandedAreaExpanderExplainerStyle,
   ];
 
   return (
@@ -180,14 +174,14 @@ export const WithContentExpander = ({
                 {preamble && <p css={preambleStyle} data-contentful-field-id={contentfulTextName} data-contentful-entry-id={contentfulId}>{preamble}</p>}
               </div>
             </div>
-            {(!disabled && !useExpanderExplainerStyling) && (
+            {(!disabled && !useLightBlueAlternativeStyling) && (
               <MonoArrowDown
                 aria-hidden="true"
                 className="expand-icon"
                 style={chevronStyles}
               />
             )}
-            {(!disabled && useExpanderExplainerStyling) && (
+            {(!disabled && useLightBlueAlternativeStyling) && (
               <MonoArrowDownSmall
                 aria-hidden="true"
                 className="expand-icon"
@@ -204,7 +198,7 @@ export const WithContentExpander = ({
       >
         <Typography
           useProcessStepStyling={useProcessStepStyling}
-          small={useExpanderExplainerStyling}
+          small={useLightBlueAlternativeStyling}
         >
           {wrappedComponent}
         </Typography>
