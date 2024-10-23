@@ -5,7 +5,7 @@ const displayAlphabetFont = css`
   font-size: 1.8rem;
   font-weight: 500;
   text-decoration: none;
-  line-height: calc(27px + 4px + 4px);
+  line-height: 140%;
 `;
 
 export const alphabetWrapper = css`
@@ -25,30 +25,45 @@ export const alphabetWrapper = css`
 `
 
 export const letter = css`
-  width: 20px;
-  height: 35px;
   text-align: center;
   display: block;
+  padding: 4px;
+  border-radius: 2px;
+  overflow: hidden;
   ${displayAlphabetFont};
 `
 
 export const validLetter = css`
   color: ${newColors.shades.fullBlue};
-  border-bottom: 1px solid ${newColors.shades.fullBlue};
 
-  &:focus,
   &:hover {
     color: ${newColors.shades.kovBlue50};
     background: ${newColors.shades.mediumBlue50};
-    border-bottom: 2px solid ${newColors.shades.kovBlue50};
   }
 `;
 
 export const invalidLetter = css`
-  color: ${newColors.shades.fullGrey};
+  color: ${newColors.shades.kovBlack50};
 `
 
 export const activeLetter = css`
   color: ${newColors.shades.kovBlue};
-  border-bottom: 2px solid ${newColors.shades.kovBlue};
+  background: ${newColors.shades.mediumBlue50};
+  position: relative;
+
+  &:hover {
+    color: ${newColors.shades.kovBlue};
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: ${newColors.shades.kovBlue};
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
 `
