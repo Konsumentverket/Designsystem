@@ -1,4 +1,4 @@
-import 'date-fns';
+
 import {
   globalStyles as GlobalStyles,
   CompositionFonts

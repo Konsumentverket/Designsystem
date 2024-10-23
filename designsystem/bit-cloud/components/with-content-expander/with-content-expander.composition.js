@@ -3,7 +3,7 @@ import {
   globalStyles as GlobalStyles,
   CompositionFonts,
 } from '@konsumentverket-sverige/designsystem.utils';
-import 'date-fns';
+
 import { WithContentExpander } from './with-content-expander.js';
 
 export const BasicWithIconAndPreambleAndSubComponentWithContentExpander = () => {

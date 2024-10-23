@@ -1,5 +1,5 @@
 import React from 'react';;
-import 'date-fns';
+
 import { PrerequisitesBox } from './prerequisites-box.js';
 import {
   globalStyles as GlobalStyles, CompositionFonts

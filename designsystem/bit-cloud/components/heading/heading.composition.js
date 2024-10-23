@@ -1,5 +1,5 @@
 import React from 'react';
-import 'date-fns';
+
 import {Heading} from './heading.js';
 import {CompositionFonts, globalStyles as GlobalStyles} from "@konsumentverket-sverige/designsystem.utils";
 

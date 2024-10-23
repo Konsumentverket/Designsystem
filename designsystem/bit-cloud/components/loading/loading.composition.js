@@ -1,5 +1,5 @@
 import React from 'react';;
-import 'date-fns';
+
 import { Loading } from './loading.js';
 
 export const BasicLoading = () => {

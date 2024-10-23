@@ -1,5 +1,5 @@
 import React from 'react';
-import 'date-fns';
+
 import { Dropdown } from './drop-down.js';
 
 import {

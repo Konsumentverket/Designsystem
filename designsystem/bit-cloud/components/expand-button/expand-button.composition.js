@@ -1,5 +1,5 @@
 import React from 'react';;
-import 'date-fns';
+
 import { ExpandButton } from './expand-button.js';
 import {
   globalStyles as GlobalStyles,

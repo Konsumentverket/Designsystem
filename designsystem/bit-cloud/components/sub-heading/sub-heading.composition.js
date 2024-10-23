@@ -1,7 +1,7 @@
 import React from 'react';
 
 ;
-import 'date-fns';
+
 import {SubHeading} from './sub-heading.js';
 import {CompositionFonts, globalStyles as GlobalStyles} from "@konsumentverket-sverige/designsystem.utils";
 

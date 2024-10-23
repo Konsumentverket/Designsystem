@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 import React from 'react';
-import 'date-fns';
+
 
 import {
   globalStyles as GlobalStyles,

@@ -1,5 +1,4 @@
-import React from 'react';;
-import 'date-fns';
+import React from 'react';
 import { InputText } from './input-text.js';
 
 export const BasicInputText = () => {

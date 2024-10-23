@@ -1,5 +1,4 @@
-import React from 'react';;
-import 'date-fns';
+import React from 'react';
 import { ListItemDisabled } from './list-item-disabled.js';
 
 export const BasicListItemDisabled = () => {

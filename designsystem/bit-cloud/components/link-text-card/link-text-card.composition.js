@@ -1,5 +1,5 @@
 import React from 'react';;
-import 'date-fns';
+
 import { LinkTextCard } from './link-text-card.js';
 
 export const BasicLinkTextCard = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import 'date-fns';
+
 import {DisplayAlphabet} from './display-alphabet.js';
 import {
   globalStyles as GlobalStyles,

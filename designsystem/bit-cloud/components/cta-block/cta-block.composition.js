@@ -1,5 +1,5 @@
 import React from 'react';
-import 'date-fns';
+
 import { CtaBlock } from './cta-block';
 import {
   globalStyles as GlobalStyles,

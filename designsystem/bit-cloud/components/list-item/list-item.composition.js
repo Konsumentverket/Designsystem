@@ -1,5 +1,5 @@
 import React from 'react';;
-import 'date-fns';
+
 import { ListItem } from './list-item.js';
 import {
   globalStyles as GlobalStyles,

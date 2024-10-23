@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import 'date-fns';
+
 import {
   globalStyles as GlobalStyles,
   CompositionFonts

@@ -1,5 +1,4 @@
 import { css } from '@emotion/core';
-import 'date-fns';
 import {
   globalStyles as GlobalStyles,
   CompositionFonts

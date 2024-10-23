@@ -2,7 +2,6 @@
 import { jsx } from '@emotion/core'
 import React from "react"
 import * as css from "./list-item-disabled.css.js"
-import { DateFormat } from '@konsumentverket-sverige/designsystem.utils'
 
 export const ListItemDisabled = ({
   children,
@@ -20,7 +19,7 @@ export const ListItemDisabled = ({
 }) => (
   <div css={[css.wrapper, invertedLinkStyle && css.invertedLink, css.disabled, style]}>
     {type && <p css={css.news}>{type.toUpperCase()}
-      {reviewedDate && <>: <DateFormat date={reviewedDate} showDate={true} /></>}</p>}
+      {reviewedDate && <>: {reviewedDate}</>}</p>}
     <p
       css={[css.headlineDisabled, css.headline]}
       className="listItemHeadline">

@@ -1,5 +1,5 @@
 import React from 'react';;
-import 'date-fns';
+
 import { Pagination } from './pagination.js';
 import {
   globalStyles as GlobalStyles, CompositionFonts

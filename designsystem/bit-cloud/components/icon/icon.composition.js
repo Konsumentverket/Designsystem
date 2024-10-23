@@ -1,5 +1,5 @@
 import React from 'react';;
-import 'date-fns';
+
 import { Icon, systemIconDefinitions, editorIconDefinitions } from './icon.js';
 
 import {

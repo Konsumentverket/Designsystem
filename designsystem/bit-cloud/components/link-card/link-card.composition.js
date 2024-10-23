@@ -1,5 +1,5 @@
 import React from 'react';
-import 'date-fns';
+
 import { LinkCard } from './link-card.js';
 import { CompositionFonts, globalStyles as GlobalStyles } from '@konsumentverket-sverige/designsystem.utils';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon'

@@ -1,9 +1,9 @@
-import 'date-fns';
+
 import { colors, newColors } from './colors';
 import { GlobalStyles as globalStyles, CompositionFonts, small, medium, large } from './globalstyles';
 import { spacing } from './spacing';
 import { breakpoints } from "./breakpoints";
-import { DateFormat } from './dateformat.js';
+//import { DateFormat } from './dateformat.js';
 import { containerStyles} from "./grid";
 import * as typography from "./typography.js";
 
@@ -189,7 +189,6 @@ export {
   globalStyles,
   CompositionFonts,
   spacing,
-  DateFormat,
   breakpoints,
   containerStyles,
   typography,

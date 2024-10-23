@@ -1,5 +1,5 @@
 import React from 'react';;
-import 'date-fns';
+
 import { FactBox } from './fact-box.js';
 import {
   globalStyles as GlobalStyles, CompositionFonts
