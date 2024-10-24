@@ -13,6 +13,7 @@ export const FactBox = ({
   content,
   tag = true,
   contentfulId,
+  contentfulName,
   articleEntryMargin = false,
 }) => {
 
@@ -27,7 +28,7 @@ export const FactBox = ({
       articleEntryMargin ? articleEntryMarginStyling : null,
     ]}
      data-comp="fact-box"
-     data-contentful-field-id="considerationBox"
+     data-contentful-field-id={contentfulName ?? "considerationBox"}
      data-contentful-entry-id={contentfulId}
     >
       {tag && (
