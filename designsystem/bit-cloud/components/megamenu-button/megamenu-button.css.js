@@ -3,15 +3,15 @@ import { spacing, small, newColors, breakpoints } from '@konsumentverket-sverige
 
 export const iconStyle = css`
     svg {
-        width: 4.8rem;
-        height: 4.8rem;
+        width: 2.4rem;
+        height: 2.4rem;
         position: relative;
         flex-shrink: 0;
 
         @media (min-width: ${breakpoints.m}) {
-          width: 5.6rem;
-          height: 5.6rem;
-          padding: 12px;
+          width: 3.2rem;
+          height: 3.2rem;
+          padding: 0;
         }
 
     }
