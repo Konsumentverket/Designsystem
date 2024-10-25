@@ -30,14 +30,14 @@ export const EventBox = ({
   }) => {
 
   return (
-    <div data-comp="event-box" css={eventBoxWrapper} data-contentful-field-id={contentfulName} data-contentful-entry-id={contentfulId}>
+    <div data-comp="event-box" css={eventBoxWrapper}>
         <div css={eventBoxInfoContainer}>
-          { date && <p css={eventBoxInfo}><span>Datum:</span> {date}</p>}
-          { time && <p css={eventBoxInfo}><span>Tid:</span> {time}</p> }
-          { subject && <p css={eventBoxInfo}><span>Ämne:</span> {subject}</p> }
+          { date && <p css={eventBoxInfo} data-contentful-field-id="date" data-contentful-entry-id={contentfulId}><span>Datum:</span> {date}</p>}
+          { time && <p css={eventBoxInfo} data-contentful-field-id="date" data-contentful-entry-id={contentfulId}><span>Tid:</span> {time}</p> }
+          { subject && <p css={eventBoxInfo} data-contentful-field-id="subject" data-contentful-entry-id={contentfulId}><span>Ämne:</span> {subject}</p> }
 
           { listOption && lecturers?.length>0 && (
-            <div css={eventBoxInfo}><span>Föreläsare:</span>
+            <div css={eventBoxInfo} data-contentful-field-id="lecturers" data-contentful-entry-id={contentfulId}><span>Föreläsare:</span>
               <ul>
                 {lecturers.map((lecturer, index) => (
                   <li key={index}>{lecturer}</li>
@@ -46,13 +46,13 @@ export const EventBox = ({
             </div>
           )}
           { !listOption && lecturers?.length>0 && (
-            <p css={eventBoxInfo}><span>Föreläsare:</span> {lecturers.join(", ")}</p>
+            <p css={eventBoxInfo} data-contentful-field-id="lecturers" data-contentful-entry-id={contentfulId}><span>Föreläsare:</span> {lecturers.join(", ")}</p>
           )}
           { text && <p css={eventBoxInfo}><span>Övrigt:</span> {text}</p>}
         </div>
 
       { !datePassed ? (
-        <div css={eventBoxApply}>
+        <div css={eventBoxApply} data-contentful-field-id="link" data-contentful-entry-id={contentfulId}>
           { url &&
           <Button
             href={url}
