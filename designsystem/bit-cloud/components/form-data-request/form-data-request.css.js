@@ -11,6 +11,7 @@ export const form = css`
   display: flex;
   flex-direction: column;
   background-color: ${newColors.shades.lightBlue50};
+  border-radius: 8px;
   padding: 24px;
 
   h2 {
