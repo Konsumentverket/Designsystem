@@ -2,16 +2,14 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { WithContentExpander } from '@konsumentverket-sverige/designsystem.with-content-expander';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
 import { Heading } from '@konsumentverket-sverige/designsystem.heading';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
-import { form, formRow, inputError, accordionContainer } from './form-data-request.css.js';
+import { form, formRow, inputError, childrenContainer } from './form-data-request.css.js';
 
 export const FormDataRequest = ({
   title,
-  accordionTitle,
-  accordionContent,
+  children,
 }) => {
   const {
     register,
@@ -105,16 +103,8 @@ export const FormDataRequest = ({
           )}
         </div>
       </div>
-      <div css={[accordionContainer]}>
-        <WithContentExpander
-          useLightBlueAlternativeStyling={true}
-          text={accordionTitle}
-          wrappedComponent={
-            <>
-              <div dangerouslySetInnerHTML={{ __html: accordionContent }} />
-            </>
-          }
-        />
+      <div css={[childrenContainer]}>
+        {children}
       </div>
       <Button text="Skicka begäran" />
     </form>

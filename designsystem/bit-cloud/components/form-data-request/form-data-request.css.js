@@ -76,7 +76,7 @@ export const formRow = css`
   }
 `;
 
-export const accordionContainer = css`
+export const childrenContainer = css`
   margin-bottom: 24px;
 `;
 
