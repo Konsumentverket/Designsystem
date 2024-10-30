@@ -1,15 +1,25 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
 import { Heading } from '@konsumentverket-sverige/designsystem.heading';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
-import { form, formRow, inputError, childrenContainer } from './form-data-request.css.js';
+import {
+  form,
+  formRow,
+  inputError,
+  errorMessage,
+  childrenContainer,
+  recaptchaContainer,
+} from './form-data-request.css.js';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export const FormDataRequest = ({
   title,
   children,
+  recaptchaSiteKey,
+  handleFormSubmit = () => {},
 }) => {
   const {
     register,
@@ -17,7 +27,24 @@ export const FormDataRequest = ({
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [recaptchaError, setRecaptchaError] = useState('');
+
+  const onSubmit = (data) => {
+    if (recaptchaSiteKey && !recaptchaToken) {
+      setRecaptchaError('Var vänlig bekräfta att du inte är en robot');
+      return;
+    } else {
+      handleFormSubmit(data);
+    }
+  };
+
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
+    setRecaptchaError('');
+  };
+
   return (
     <form
       css={[form]}
@@ -35,7 +62,7 @@ export const FormDataRequest = ({
             {...register('firstName', { required: true })}
           />
           {errors.firstName && (
-            <span>
+            <span css={[errorMessage]}>
               <Icon icon="Warn" />
               Ange ditt förnamn
             </span>
@@ -50,7 +77,7 @@ export const FormDataRequest = ({
             {...register('lastName', { required: true })}
           />
           {errors.lastName && (
-            <span>
+            <span css={[errorMessage]}>
               <Icon icon="Warn" />
               Ange ditt efternamn
             </span>
@@ -69,12 +96,12 @@ export const FormDataRequest = ({
               required: 'Ange ditt personnummer',
               pattern: {
                 value: /^\d{2}\d{2}\d{2}-\d{4}$/,
-                message: 'Ange ett korrekt personnummer',
+                message: 'Ange ditt personnummer med 10 siffror (ÅÅMMDD-XXXX)',
               },
             })}
           />
           {errors.ssn && (
-            <span>
+            <span css={[errorMessage]}>
               <Icon icon="Warn" />
               {errors.ssn.message}
             </span>
@@ -91,21 +118,34 @@ export const FormDataRequest = ({
               required: 'Ange din e-postadress',
               pattern: {
                 value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                message: 'Ange en korrekt e-postadress',
+                message: 'Ange en giltig e-postadress ',
               },
             })}
           />
           {errors.email && (
-            <span>
+            <span css={[errorMessage]}>
               <Icon icon="Warn" />
               {errors.email.message}
             </span>
           )}
         </div>
       </div>
-      <div css={[childrenContainer]}>
-        {children}
-      </div>
+      {recaptchaSiteKey && (
+        <div css={[recaptchaContainer]}>
+          <ReCAPTCHA
+            sitekey={recaptchaSiteKey}
+            onChange={handleRecaptchaChange}
+          />
+          {recaptchaError !== '' && (
+            <span css={[errorMessage]}>
+              <Icon icon="Warn" />
+              {recaptchaError}
+            </span>
+          )}
+        </div>
+      )}
+
+      <div css={[childrenContainer]}>{children}</div>
       <Button text="Skicka begäran" />
     </form>
   );

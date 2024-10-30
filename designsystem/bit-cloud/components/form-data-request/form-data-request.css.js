@@ -35,7 +35,7 @@ export const formRow = css`
 
   @media (min-width: ${breakpoints.m}) {
     flex-direction: row;
-    margin-bottom: 58px;
+    margin-bottom: 40px;
   }
 
   div {
@@ -62,23 +62,33 @@ export const formRow = css`
       margin-bottom: 0;
     }
   }
+`;
 
-  span {
+export const errorMessage = css`
     align-items: center;
-    bottom: -8px;
     color: ${newColors.secondaries.fullPink};
     display: flex;
     gap: 6px;
-    position: absolute;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-top: 8px;
 
     @media (min-width: ${breakpoints.m}) {
       bottom: -30px;
     }
-  }
+
+    svg {
+      flex-shrink: 0;
+    }
 `;
 
 export const childrenContainer = css`
   margin-bottom: 24px;
+`;
+
+export const recaptchaContainer = css`
+  margin-bottom: 54px;
+  position: relative;
 `;
 
 export const inputError = css`
