@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { jsx } from '@emotion/core';
 import {
     itemsWrapperStyle,
@@ -17,6 +17,7 @@ import {
 import { FormCheckbox } from '@konsumentverket-sverige/designsystem.form-checkbox';
 import { FormRadiobutton } from '@konsumentverket-sverige/designsystem.form-radiobutton';
 import { ChevronRight } from '@konsumentverket-sverige/designsystem.utils';
+import useOnClickOutside from "./useOnClickOutside";
 
 const CheckboxOption = ({ text, value, onChange, stateValue }) => (
     <div css={itemOptionWrapperStyle}>
@@ -25,7 +26,7 @@ const CheckboxOption = ({ text, value, onChange, stateValue }) => (
             labelText={text}
             name={value}
             value={value}
-            onChange={onChange}
+            onChange={(event) => onChange(event, value)}
             usePrimaryColor={true}
             checked={stateValue.includes(value)}
         />
@@ -39,7 +40,7 @@ const RadioOption = ({ text, value, id, onChange, stateValue }) => (
             labelText={text}
             name={id}
             value={value}
-            onChange={onChange}
+            onChange={(event) => onChange(event, value)}
             usePrimaryColor={true}
             checked={stateValue.includes(value)}
         />
@@ -51,39 +52,72 @@ const LinkOption = ({ href, text }) => (
 )
 
 const componentMap = {
-    checkbox: CheckboxOption,
-    radio: RadioOption,
-    link: LinkOption,
+  checkbox: CheckboxOption,
+  radio: RadioOption,
+  link: LinkOption,
 };
 
 export const Dropdown = ({
-    label,
-    id,
-    data,
-    type = 'link'
+  label,
+  id,
+  data,
+  type = 'link',
+  onEnter = () => {},
+  onChange = () => {},
+  value = [],
+  isExpanded = false,
+  setIsExpanded = () => {},
 }) => {
-    const Component = componentMap[type];
-    if (!Component)
-        return null;
+  const Component = componentMap[type];
+  if (!Component) return null;
 
-    const [value, setValue] = useState([]);
-    const [isExpanded, setIsExpanded] = useState(false);
+    const closeDropdown = () => setIsExpanded(false)
 
-    const handleOptionChange = (newValue) => {
-        if (type === "radio") {
-            setValue([newValue]);
-        } else {
-            setValue(prevValue => prevValue.includes(newValue) 
-                ? prevValue.filter(item => item !== newValue) 
-                : [...prevValue, newValue]
-            );
+    const dropdownRef = useRef();
+    useOnClickOutside(dropdownRef, () => closeDropdown());
+
+    useEffect(() => {
+      const handleKeyDown = (event) => {
+
+        if (event.key === 'Enter') {
+          onEnter(value, event);
         }
+
+        if (event.key === 'Escape' || event.key === 'Esc') {
+          closeDropdown();
+        }
+      };
+
+      if (isExpanded) {
+        document.addEventListener('keydown', handleKeyDown);
+      } else {
+        document.removeEventListener('keydown', handleKeyDown);
+      }
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    }, [isExpanded, value, onEnter]);
+
+    const handleOptionChange = (newValue, event) => {
+        let updatedValue;
+
+        if (type === "radio" || type === "select") {
+          updatedValue = [newValue];
+        } else {
+          updatedValue = value.includes(newValue)
+            ? value.filter(item => item !== newValue)
+            : [...value, newValue];
+        }
+
+        onChange(updatedValue, event);
     };
 
     return (
         <div
             data-comp="drop-down"
             css={[wrapperStyle, isExpanded && wrapperExpandedStyle]}
+            ref={dropdownRef}
         >
             <div css={innerWrapperStyle}>
                 {label && (
@@ -93,7 +127,9 @@ export const Dropdown = ({
                         aria-expanded={isExpanded}
                         onClick={() => setIsExpanded(!isExpanded)}
                     >
-                        {label}
+                        <span>
+                          {label}
+                        </span>
                         <ChevronRight
                             aria-hidden="true"
                             style={[chevronStyle, isExpanded && chevronExpandedStyle]}

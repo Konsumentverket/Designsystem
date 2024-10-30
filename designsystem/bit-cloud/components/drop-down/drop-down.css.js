@@ -40,8 +40,10 @@ export const itemsWrapperExpandedStyle = css`
 export const buttonStyle = css`
     position: relative;
     z-index: 1;
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-weight: 500;
     line-height: 1.3333333;
     font-size: 1.6rem;
@@ -53,7 +55,7 @@ export const buttonStyle = css`
     margin: 0;
     cursor: pointer;
 
-    ${medium} {   
+    ${medium} {
         font-size: 1.8rem;
     }
 `;
@@ -63,11 +65,12 @@ export const invalidStyle = css`
 `;
 
 export const chevronStyle = css`
-    transform: rotate(-90deg);
+    fill: ${newColors.shades.fullBlue};
+    transform: rotate(90deg);
 `;
 
 export const chevronExpandedStyle = css`
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 `;
 
 export const itemsListStyle = css`
