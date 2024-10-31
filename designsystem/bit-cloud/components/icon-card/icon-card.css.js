@@ -42,6 +42,10 @@ export const iconCardStyle = css`
       line-height: 1.4;
     }
 
+    [dir="rtl"] & {
+      text-align: right;
+    }
+
     &:hover {
         background-color: ${newColors.primaries.lightBlue};
         border: 1px solid ${newColors.shades.fullBlue};

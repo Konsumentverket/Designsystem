@@ -18,6 +18,7 @@ const IconCard = React.forwardRef(({
     url,
     onClick,
     id,
+    dir = "ltr",
     useLightAlternativeColors = false,
     useAlternativeColors = false,
     contentfulName,
@@ -27,6 +28,7 @@ const IconCard = React.forwardRef(({
     return <LinkComponent
         data-comp="icon-card"
         ref={ref}
+        dir={dir}
         id={id}
         href={url}
         onClick={onClick}
