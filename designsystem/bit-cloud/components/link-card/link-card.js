@@ -16,6 +16,7 @@ import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 const LinkCard = React.forwardRef(({
     text,
     href,
+    expandText = "Visa alla",
     children,
     id,
     icon,
@@ -65,7 +66,7 @@ const LinkCard = React.forwardRef(({
                 onClick={onClick}
                 injected={true}
             >
-                Visa alla ({childrenArray.length}) <Icon icon="MonoArrowRight" />
+              {expandText} ({childrenArray.length}) <Icon icon="MonoArrowRight" />
             </LinkComponent>
         }
     </div>
