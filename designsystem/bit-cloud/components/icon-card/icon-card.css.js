@@ -42,7 +42,7 @@ export const iconCardStyle = css`
       line-height: 1.4;
     }
 
-    [dir="rtl"] & {
+    [dir="rtl"] &, &:dir(rtl) {
       text-align: right;
 
       span {
