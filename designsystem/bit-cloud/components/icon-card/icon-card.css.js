@@ -44,6 +44,10 @@ export const iconCardStyle = css`
 
     [dir="rtl"] & {
       text-align: right;
+
+      span {
+        text-align: right;
+      }
     }
 
     &:hover {
