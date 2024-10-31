@@ -17,6 +17,7 @@ const LinkCard = React.forwardRef(({
     text,
     href,
     expandText = "Visa alla",
+    numResults,
     children,
     id,
     icon,
@@ -30,10 +31,12 @@ const LinkCard = React.forwardRef(({
     const childrenArray = React.Children.toArray(children);
     let itemsToShow = [];
     let className = 'noLinkChildren';
+    let num = null;
 
     if (childrenArray && childrenArray.length > 0) {
         itemsToShow = childrenArray.slice(0, beforeToggleCount).filter(Boolean)
         if (childrenArray.length > 1) className = '';
+        num = numResults ?? childrenArray.length;
     }
     let singleItemClass = itemsToShow.length == 1 ? "singleItem" : "";
 
@@ -66,7 +69,7 @@ const LinkCard = React.forwardRef(({
                 onClick={onClick}
                 injected={true}
             >
-              {expandText} ({childrenArray.length}) <Icon icon="MonoArrowRight" />
+              {expandText} ({num}) <Icon icon="MonoArrowRight" />
             </LinkComponent>
         }
     </div>

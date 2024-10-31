@@ -17,6 +17,7 @@ export const BasicLinkListCard = () => {
         href="#"
         text="Sport och fritid"
         icon={null}
+        numResults={10}
       >
 
         <Button
