@@ -47,7 +47,7 @@
     "drop-down": {
         "name": "drop-down",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.97",
+        "version": "0.0.98",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/drop-down"
     },
@@ -117,7 +117,7 @@
     "form-radiobutton": {
         "name": "form-radiobutton",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.95",
+        "version": "0.0.96",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-radiobutton"
     },
@@ -229,7 +229,7 @@
     "pagination": {
         "name": "pagination",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.96",
+        "version": "0.0.97",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/pagination"
     },

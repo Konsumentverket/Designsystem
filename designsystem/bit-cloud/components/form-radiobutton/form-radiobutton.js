@@ -34,7 +34,6 @@ export const FormRadiobutton = ({
       aria-disabled={disabled}
       onChange={onChange}
       checked={checked}
-      data-usePrimaryColor={usePrimaryColor}
     />
     <label
       className='radio-label'

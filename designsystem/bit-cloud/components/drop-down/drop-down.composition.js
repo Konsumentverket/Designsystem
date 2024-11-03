@@ -63,6 +63,14 @@ const data = [
   }
 ]
 
+const radioData = [
+  {
+    text: 'Default',
+    value: 'default',
+  },
+  ...data,
+]
+
 export const BasicCheckboxDropDown = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [dropdownValue, setDropdownValue] = useState([]);
@@ -108,43 +116,7 @@ export const BasicRadioDropDown = () => {
             setDropdownValue(value);
           }}
           value={dropdownValue}
-          data={data}
-        />
-      </CompositionFonts>
-    </div>
-  )
-}
-
-export const RadioDropDownThatClosesOnEnter = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [dropdownValue, setDropdownValue] = useState([]);
-
-  console.log("Dropdown value: ", dropdownValue)
-
-  return (
-    <div style={{ minHeight: '600px' }}>
-      <CompositionFonts>
-        <GlobalStyles />
-        <Dropdown
-          id="lorem-radio"
-          label="Lorem ipsum dolor sit amet"
-          type="radio"
-          onChange={(value, event) => {
-            console.log("OnChange value: ", value)
-            setDropdownValue(value);
-          }}
-          onEnter={(value, event) => {
-            console.log("OnEnter value: ", value)
-            console.log("Closing dropdown in 1 second")
-
-            setTimeout(() => {
-              setIsExpanded(false);
-            }, 1000)
-          }}
-          isExpanded={isExpanded}
-          setIsExpanded={setIsExpanded}
-          value={dropdownValue}
-          data={data}
+          data={radioData}
         />
       </CompositionFonts>
     </div>

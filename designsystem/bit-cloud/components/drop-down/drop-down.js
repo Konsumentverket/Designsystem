@@ -40,7 +40,7 @@ const RadioOption = ({ text, value, id, onChange, stateValue }) => (
             labelText={text}
             name={id}
             value={value}
-            onChange={(event) => onChange(event, value)}
+            onChange={onChange}
             usePrimaryColor={true}
             checked={stateValue.includes(value)}
         />
@@ -62,7 +62,6 @@ export const Dropdown = ({
   id,
   data,
   type = 'link',
-  onEnter = () => {},
   onChange = () => {},
   value = [],
   isExpanded = false,
@@ -71,18 +70,12 @@ export const Dropdown = ({
   const Component = componentMap[type];
   if (!Component) return null;
 
-    const closeDropdown = () => setIsExpanded(false)
-
     const dropdownRef = useRef();
+    const closeDropdown = () => setIsExpanded(false)
     useOnClickOutside(dropdownRef, () => closeDropdown());
 
     useEffect(() => {
       const handleKeyDown = (event) => {
-
-        if (event.key === 'Enter') {
-          onEnter(value, event);
-        }
-
         if (event.key === 'Escape' || event.key === 'Esc') {
           closeDropdown();
         }
@@ -97,20 +90,20 @@ export const Dropdown = ({
       return () => {
         document.removeEventListener('keydown', handleKeyDown);
       };
-    }, [isExpanded, value, onEnter]);
+    }, [isExpanded, value]);
 
     const handleOptionChange = (newValue, event) => {
-        let updatedValue;
+      let updatedValue;
 
-        if (type === "radio" || type === "select") {
-          updatedValue = [newValue];
-        } else {
-          updatedValue = value.includes(newValue)
-            ? value.filter(item => item !== newValue)
-            : [...value, newValue];
-        }
+      if (type === "radio") {
+        updatedValue = [newValue];
+      } else {
+        updatedValue = value.includes(newValue)
+          ? value.filter(item => item !== newValue)
+          : [...value, newValue];
+      }
 
-        onChange(updatedValue, event);
+      onChange(updatedValue, event);
     };
 
     return (
@@ -119,7 +112,10 @@ export const Dropdown = ({
             css={[wrapperStyle, isExpanded && wrapperExpandedStyle]}
             ref={dropdownRef}
         >
-            <div css={innerWrapperStyle}>
+            <div
+              css={innerWrapperStyle}
+              aria-labelledby={`legend-${id}`}
+            >
                 {label && (
                     <button
                         css={buttonStyle}
@@ -127,7 +123,7 @@ export const Dropdown = ({
                         aria-expanded={isExpanded}
                         onClick={() => setIsExpanded(!isExpanded)}
                     >
-                        <span>
+                        <span id={`legend-${id}`} >
                           {label}
                         </span>
                         <ChevronRight
@@ -142,7 +138,11 @@ export const Dropdown = ({
                     css={[itemsWrapperStyle, isExpanded && itemsWrapperExpandedStyle]}
                 >
                     {data && (
-                        <ul css={itemsListStyle}>
+                        <ul
+                          css={itemsListStyle}
+                          role={
+                            type === "radio" ? "radiogroup" : "group"
+                          }>
                             {data.map((item, index) => (
                                 <li key={index}>
                                     <Component

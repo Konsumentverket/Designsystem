@@ -36,11 +36,14 @@ export const pageStyle = css`
 `
 
 export const prevPageStyle = css`
-
+  display: flex;
+  align-items: center;
+  transform: rotate(180deg);
 `
 
 export const nextPageStyle = css`
-    transform: rotate(180deg);
+  display: flex;
+  align-items: center;
 `
 
 export const prevPageStyleHidden = css`
