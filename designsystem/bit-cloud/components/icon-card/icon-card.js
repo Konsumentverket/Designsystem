@@ -18,6 +18,7 @@ const IconCard = React.forwardRef(({
     url,
     onClick,
     id,
+    lang = "sv",
     dir = "ltr",
     useLightAlternativeColors = false,
     useAlternativeColors = false,
@@ -31,6 +32,7 @@ const IconCard = React.forwardRef(({
         dir={dir}
         id={id}
         href={url}
+        lang={lang}
         onClick={onClick}
         css={[iconCardStyle, (useAlternativeColors ? altIconCardStyle : useLightAlternativeColors ? altLightIconCardStyle : null)]}
         className="noStyle"
