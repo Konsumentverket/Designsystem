@@ -48,6 +48,7 @@ const data = [
   {
     text: 'Vivamus non feugiat justo, id ullamcorper est',
     value: 'vivamus-non-feugiat-justo-id-ullamcorper-est-radio',
+    disabled: true,
   },
   {
     text: 'Integer vehicula luctus',
@@ -56,6 +57,7 @@ const data = [
   {
     text: 'Mauris mattis est sapien nec accumsan est',
     value: 'mauris-mattis-est-sapien-nec-accumsan-est-radio',
+    disabled: true,
   },
   {
     text: 'Proin sit amet tempor lorem ut sed dignissim velit, semper tristique',
@@ -118,6 +120,7 @@ export const BasicRadioDropDown = () => {
           value={dropdownValue}
           data={radioData}
         />
+        <button onClick={() => console.log("hhejjjj")}>klicka</button>
       </CompositionFonts>
     </div>
   )
