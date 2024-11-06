@@ -61,7 +61,7 @@ export const Pagination = ({
       return null;
 
     const distanceEl = filteredLink.some(x => x === 2) ? null : <span css={distanceIndicatorStyle}>...</span>
-    return <><LinkComponent injected={true} className="first" href={createHref(1)} onClick={(e) => onClick(e, 1)} css={[pageStyle]}>1</LinkComponent>{distanceEl}</>;
+    return <><LinkComponent injected="true" className="first" href={createHref(1)} onClick={(e) => onClick(e, 1)} css={[pageStyle]}>1</LinkComponent>{distanceEl}</>;
   }
 
   const lastLink = () => {
@@ -71,7 +71,7 @@ export const Pagination = ({
       return null
 
     const distanceEl = filteredLink.some(x => x === max - 1) ? null : <span css={distanceIndicatorStyle}>...</span>
-    return <>{distanceEl}<LinkComponent injected={true} className="last" href={createHref(max)} onClick={(e) => onClick(e, max)} css={pageStyle}>{max}</LinkComponent></>;
+    return <>{distanceEl}<LinkComponent injected="true" className="last" href={createHref(max)} onClick={(e) => onClick(e, max)} css={pageStyle}>{max}</LinkComponent></>;
   }
 
   const isFirstPage = currentPage == 1;
@@ -96,7 +96,7 @@ export const Pagination = ({
       </span>
     ): (
       <LinkComponent
-        injected={true}
+        injected="true"
         href={createHref(currentPage - 1)}
         onClick={(e) => onClick(e, currentPage - 1)}
         css={prevPageStyle} aria-label="Föregående sida"
@@ -109,7 +109,7 @@ export const Pagination = ({
       const isCurrent = pageNumber == currentPage;
       return (
         <LinkComponent
-          injected={true}
+          injected="true"
           href={createHref(pageNumber)}
           className={getClass(pageNumber)}
           onClick={(e) => onClick(e, pageNumber)}
@@ -129,7 +129,7 @@ export const Pagination = ({
       </span>
     ) : (
       <LinkComponent
-        injected={true}
+        injected="true"
         href={createHref(currentPage + 1)}
         onClick={(e) => onClick(e, currentPage + 1)}
         css={nextPageStyle}

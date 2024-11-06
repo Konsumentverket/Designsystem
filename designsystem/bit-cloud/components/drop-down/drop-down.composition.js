@@ -120,7 +120,6 @@ export const BasicRadioDropDown = () => {
           value={dropdownValue}
           data={radioData}
         />
-        <button onClick={() => console.log("hhejjjj")}>klicka</button>
       </CompositionFonts>
     </div>
   )

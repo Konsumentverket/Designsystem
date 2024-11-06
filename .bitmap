@@ -47,7 +47,7 @@
     "drop-down": {
         "name": "drop-down",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.100",
+        "version": "0.0.101",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/drop-down"
     },
@@ -243,7 +243,7 @@
     "pagination": {
         "name": "pagination",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.98",
+        "version": "0.0.99",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/pagination"
     },
