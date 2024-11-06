@@ -128,6 +128,14 @@
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-search-field"
     },
+    "form-success": {
+        "name": "form-success",
+        "scope": "",
+        "version": "",
+        "defaultScope": "konsumentverket-sverige.designsystem",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/form-success"
+    },
     "heading": {
         "name": "heading",
         "scope": "konsumentverket-sverige.designsystem",
