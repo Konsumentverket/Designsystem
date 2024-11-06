@@ -234,6 +234,14 @@
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/megamenu-button"
     },
+    "notice-box": {
+        "name": "notice-box",
+        "scope": "",
+        "version": "",
+        "defaultScope": "konsumentverket-sverige.designsystem",
+        "mainFile": "index.ts",
+        "rootDir": "designsystem/bit-cloud/components/notice-box"
+    },
     "pagination": {
         "name": "pagination",
         "scope": "konsumentverket-sverige.designsystem",
