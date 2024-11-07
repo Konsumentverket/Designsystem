@@ -26,15 +26,15 @@ export const itemsWrapperStyle = css`
 export const itemsWrapperExpandedStyle = css`
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
+    top: -1px;
+    right: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
     padding: 56px ${spacing.s} ${spacing.s} ${spacing.s};
     box-shadow: 0px 3px 10px 3px rgba(22, 34, 89, 0.07);
-    outline: 1px solid ${newColors.shades.fullBlue};
     background-color: ${newColors.kovWhite};
     border-radius: ${spacing.s} ${spacing.s} ${spacing.s} ${spacing.s};
+    border: 1px solid ${newColors.shades.fullBlue};
 `;
 
 export const buttonStyle = css`

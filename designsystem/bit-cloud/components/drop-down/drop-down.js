@@ -73,7 +73,6 @@ export const Dropdown = ({
   if (!Component) return null;
 
   const dropdownRef = useRef();
-  const listRef = useRef();
 
   const closeDropdown = () => setIsExpanded(false)
   useOnClickOutside(dropdownRef, () => closeDropdown());
@@ -95,20 +94,6 @@ export const Dropdown = ({
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [isExpanded, value]);
-
-  useEffect(() => {
-    if (type !== 'radio') return;
-
-    if (isExpanded && listRef.current) {
-      // Focus on the first radio input that isn't disabled
-      const firstEnabledRadio = Array.from(listRef.current.querySelectorAll('input[type="radio"]'))
-        .find((radio) => !radio.disabled);
-
-      if (firstEnabledRadio) {
-        firstEnabledRadio.focus();
-      }
-    }
-  }, [isExpanded]);
 
   const handleOptionChange = (newValue, event) => {
     let updatedValue;
@@ -166,7 +151,6 @@ export const Dropdown = ({
         >
           {data && (
             <ul
-              ref={listRef}
               css={itemsListStyle}
               role={
                 type === "radio" ? "radiogroup" : "group"
