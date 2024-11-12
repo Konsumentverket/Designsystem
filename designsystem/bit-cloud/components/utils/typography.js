@@ -743,7 +743,6 @@ export const ulListSpacing = css`
 
   @media(min-width: ${breakpoints.m}){
     padding: 0 0 0 16px;
-    margin: 32px 0 56px 0;
   }
 `;
 
