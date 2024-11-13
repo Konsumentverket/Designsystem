@@ -16,8 +16,28 @@ export const EventBoxExampleList = () => {
         date={new Date().toISOString()}
         time={"14:00 - 16:00"}
         latestApplicationDate={new Date().toISOString()}
-        datePassed={true}
-        subject={"Konsumenträtt, Hållbarhet"}
+        lastApplyDatePassed={true}
+        subject={["Konsumenträtt, Hållbarhet"]}
+        lecturers={["Föreläsare 1", "Föreläsare 2"]}
+        listOption={true}
+        text={"Pellentesque elit enim, congue eget tellus non. Sollicitudin tristique urna aliquam bibendum dapibus mi"}
+        url={'https://www.konsumentverket.se'}
+      />
+    </CompositionFonts>
+  );
+}
+
+export const EventBoxExampleOldEvent = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <EventBox
+        date={"24 maj 2022"}
+        time={"14:00 - 16:00"}
+        latestApplicationDate={"19 maj 2022"}
+        lastApplyDatePassed={true}
+        oldEvent={true}
+        subject={["Konsumenträtt, Hållbarhet"]}
         lecturers={["Föreläsare 1", "Föreläsare 2"]}
         listOption={true}
         text={"Pellentesque elit enim, congue eget tellus non. Sollicitudin tristique urna aliquam bibendum dapibus mi"}
@@ -35,7 +55,7 @@ export const EventBoxExampleComma = () => {
         date={new Date().toISOString()}
         time={"14:00 - 16:00"}
         latestApplicationDate={new Date().toISOString()}
-        subject={"Konsumenträtt, Hållbarhet"}
+        subject={["Konsumenträtt, Hållbarhet"]}
         lecturers={["Föreläsare 1", "Föreläsare 2"]}
         listOption={false}
         text={"Pellentesque elit enim, congue eget tellus non. Sollicitudin tristique urna aliquam bibendum dapibus mi"}
@@ -53,7 +73,7 @@ export const EventBoxExampleOutdated = () => {
         date={new Date().toISOString()}
         time={"14:00 - 16:00"}
         latestApplicationDate={new Date().toISOString()}
-        subject={"Konsumenträtt, Hållbarhet"}
+        subject={["Konsumenträtt, Hållbarhet"]}
         lecturers={["Föreläsare 1", "Föreläsare 2"]}
         listOption={true}
         text={"Pellentesque elit enim, congue eget tellus non. Sollicitudin tristique urna aliquam bibendum dapibus mi"}
@@ -71,7 +91,7 @@ export const EventBoxExampleSingle = () => {
       <EventBox
         date={new Date().toISOString()}
         time={"14:00 - 16:00"}
-        subject={"Konsumenträtt, Hållbarhet"}
+        subject={["Konsumenträtt, Hållbarhet"]}
         lecturers={["Namn Namnsson"]}
         listOption={false}
       />

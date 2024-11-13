@@ -19,7 +19,8 @@ export const EventBox = ({
   date,
   time,
   latestApplicationDate,
-  datePassed,
+  oldEvent,
+  lastApplyDatePassed,
   subject,
   lecturers,
   text,
@@ -33,7 +34,7 @@ export const EventBox = ({
     <div data-comp="event-box" css={eventBoxWrapper}>
         <div css={eventBoxInfoContainer}>
           { date && <p css={eventBoxInfo} data-contentful-field-id="date" data-contentful-entry-id={contentfulId}><span>Datum:</span> {date}</p>}
-          { time && <p css={eventBoxInfo} data-contentful-field-id="date" data-contentful-entry-id={contentfulId}><span>Tid:</span> {time}</p> }
+          { time && !oldEvent && <p css={eventBoxInfo} data-contentful-field-id="date" data-contentful-entry-id={contentfulId}><span>Tid:</span> {time}</p> }
           { subject && <p css={eventBoxInfo} data-contentful-field-id="subject" data-contentful-entry-id={contentfulId}><span>Ämne:</span> {subject.join(", ")}</p> }
 
           { listOption && lecturers?.length>0 && (
@@ -51,7 +52,7 @@ export const EventBox = ({
           { text && <p css={eventBoxInfo} data-contentful-field-id="text" data-contentful-entry-id={contentfulId}><span>Övrigt:</span> {text}</p>}
         </div>
 
-      { !datePassed ? (
+      { !lastApplyDatePassed ? (
         <div css={eventBoxApply} data-contentful-field-id="link" data-contentful-entry-id={contentfulId}>
           { url &&
           <Button
@@ -64,7 +65,9 @@ export const EventBox = ({
           { latestApplicationDate && <p css={eventBoxDisclaimer} data-contentful-field-id="latestApplicationDate" data-contentful-entry-id={contentfulId}>Sista dag för anmälan är den {latestApplicationDate}</p>}
         </div>
       ) : (
-        <p css={eventBoxOverdue}><Icon icon="WarningCircle"/> Sista dag för anmälan har passerat</p>
+        <>
+          { !oldEvent && <p css={eventBoxOverdue}><Icon icon="WarningCircle"/> Sista dag för anmälan har passerat</p>}
+        </>
       )}
 
     </div>

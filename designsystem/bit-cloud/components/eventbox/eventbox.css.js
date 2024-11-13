@@ -44,7 +44,7 @@ export const eventBoxInfoContainer = css`
   margin-bottom: 10px;
 
   p:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 `
 export const eventBoxDisclaimer = css`
