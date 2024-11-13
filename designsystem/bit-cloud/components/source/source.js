@@ -1,7 +1,16 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/core";
-import { secondRow, rightAlign, sourceLink, sourceTitle, sourcesContainer, reviewText } from "./sourcs.css.js";
+import {
+  sourceWrapperStyle,
+  topWrapperStyle,
+  rightAlign,
+  sourceLink,
+  sourceTitle,
+  sourceItemsContainer,
+  reviewText,
+  bottomTextStyle,
+} from "./sourcs.css.js";
 import isExternal from "./isExternalUrl";
 import { External } from '@konsumentverket-sverige/designsystem.utils';
 
@@ -47,11 +56,11 @@ export const Source = ({
   ];
 
   return (
-    <div data-comp="source">
+    <div data-comp="source" css={sourceWrapperStyle}>
       <div id="mtmFeedBackForm" className="feedbackForm"></div>
-      <div css={secondRow}>
+      <div css={topWrapperStyle}>
         {sourcesCollection && sourcesCollection.items.length > 0 && (
-          <p css={sourcesContainer}>
+          <p css={sourceItemsContainer}>
             <span css={sourceTitle}>
               {sourceText ? `${sourceText} ` : "Källa: "}
             </span>
@@ -90,7 +99,7 @@ export const Source = ({
           </div>
         )}
       </div>
-      {bottomContent && <div>{bottomContent}</div>}
+      {bottomContent && <p css={bottomTextStyle}>{bottomContent}</p>}
     </div>
   );
 };

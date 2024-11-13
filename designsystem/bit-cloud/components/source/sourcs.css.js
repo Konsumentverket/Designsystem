@@ -1,25 +1,24 @@
 import {css} from "@emotion/core";
 import {newColors, spacing, typography, breakpoints} from '@konsumentverket-sverige/designsystem.utils';
 
-export const secondRow = css`
+export const sourceWrapperStyle = css`
+  padding-bottom: 24px;
+  border-bottom: 1px solid ${newColors.shades.mediumBlue};
+  margin-bottom: 24px;
+`;
+
+export const topWrapperStyle = css`
   display: flex;
   flex-direction: column;
   ${typography.textSmall};
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid ${newColors.shades.mediumBlue};
-
-  a {
-    ${typography.linkSmall};
-    margin-bottom: 0 !important;
-  }
+  margin-bottom: 16px;
 
   @media (min-width: ${breakpoints.m}) {
     flex-direction: row;
   }
 `;
 
-export const sourcesContainer = css`
+export const sourceItemsContainer = css`
   display: flex;
   margin: 0;
   flex-wrap: wrap;
@@ -62,7 +61,9 @@ export const sourceTitle = css`
 export const sourceLink = css`
   ${typography.linkSmall};
   position: relative;
-  margin: 0 8px 0 9px;
+  & {
+    margin: 0 8px 0 9px;
+  }
 
   &::after {
     content: "";
@@ -89,3 +90,9 @@ export const sourceLink = css`
     left: 8px;
   }
 `
+
+export const bottomTextStyle = css`
+  ${typography.textSmall};
+  color: ${newColors.shades.kovBlack50};
+  margin-bottom: 0;
+`;

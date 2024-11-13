@@ -9,6 +9,9 @@ import {
 } from '@konsumentverket-sverige/designsystem.utils';
 
 export const BasicSource = () => {
+  // Usually microcopy
+  const bottomText = `Innehållet på den här sidan är framtaget i samarbete med en eller flera andra myndigheter och konsumentbyråer. Konsumentverket samverkar med andra i vårt uppdrag att vägleda konsumenter.`;
+
   return (
     <CompositionFonts>
       <GlobalStyles/>
@@ -36,7 +39,7 @@ export const BasicSource = () => {
         reviewedDate={new Date()}
         style=""
         english={false}
-        bottomContent={<div>{"BottomContent - komponent, vanligtvis " + "<" + "ECCAsSource" + " \/>"}</div>}
+        bottomContent={bottomText}
       />
     </CompositionFonts>
   );
