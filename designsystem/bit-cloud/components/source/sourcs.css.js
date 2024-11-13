@@ -11,7 +11,6 @@ export const topWrapperStyle = css`
   display: flex;
   flex-direction: column;
   ${typography.textSmall};
-  margin-bottom: 16px;
 
   @media (min-width: ${breakpoints.m}) {
     flex-direction: row;
@@ -94,5 +93,6 @@ export const sourceLink = css`
 export const bottomTextStyle = css`
   ${typography.textSmall};
   color: ${newColors.shades.kovBlack50};
+  margin-top: 16px;
   margin-bottom: 0;
 `;
