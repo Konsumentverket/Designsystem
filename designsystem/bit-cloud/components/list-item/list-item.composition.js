@@ -39,3 +39,37 @@ export const UpdatedListItem = () => {
     </>
   );
 }
+
+export const WebbinairListItemComing = () => {
+  return (
+    <>
+      <CompositionFonts>
+        <GlobalStyles />
+        <ListItem
+          type="Webbinarium"
+          webbinairDateStart={"2025-03-05 17:00"}
+          webbinairDateEnd={"19:00"}
+          href="#"
+          headline="Trafikskolor glömmer ångerrätten"
+          preamble="Kort ingress som förklarar webbinariet!" />
+      </CompositionFonts>
+    </>
+  );
+}
+
+export const WebbinairListItemOld = () => {
+  return (
+    <>
+      <CompositionFonts>
+        <GlobalStyles />
+        <ListItem
+          type="Webbinarium"
+          webbinairDateStart={"2024-01-05"}
+          webbinairDateEnd={null}
+          href="#"
+          headline="Trafikskolor glömmer ångerrätten"
+          preamble="Kort ingress som förklarar webbinariet!" />
+      </CompositionFonts>
+    </>
+  );
+}
