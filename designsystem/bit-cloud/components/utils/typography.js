@@ -162,12 +162,12 @@ export const h5 = css`
 export const h6 = css`
   ${baseHeading};
 
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 130%;
   margin-top: 16px;
 
   @media (min-width: ${breakpoints.m}) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-top: 24px;
   }
 `;
