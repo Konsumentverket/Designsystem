@@ -2,9 +2,12 @@ import {css} from "@emotion/core";
 import {newColors, spacing, typography, breakpoints} from '@konsumentverket-sverige/designsystem.utils';
 
 export const sourceWrapperStyle = css`
+  margin-bottom: 24px;
+`;
+
+export const bottomBorderStyle = css`
   padding-bottom: 24px;
   border-bottom: 1px solid ${newColors.shades.mediumBlue};
-  margin-bottom: 24px;
 `;
 
 export const topWrapperStyle = css`

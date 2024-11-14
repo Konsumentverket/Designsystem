@@ -10,6 +10,7 @@ import {
   sourceItemsContainer,
   reviewText,
   bottomTextStyle,
+  bottomBorderStyle,
 } from "./sourcs.css.js";
 import isExternal from "./isExternalUrl";
 import { External } from '@konsumentverket-sverige/designsystem.utils';
@@ -21,7 +22,8 @@ export const Source = ({
   reviewedDateText,
   english,
   bottomContent,
-  sourceText
+  sourceText,
+  bottomBorder = false,
 }) => {
   const reviewed = reviewedDate ? new Date(reviewedDate) : null;
 
@@ -56,7 +58,10 @@ export const Source = ({
   ];
 
   return (
-    <div data-comp="source" css={sourceWrapperStyle}>
+    <div
+      data-comp="source"
+      css={[sourceWrapperStyle, bottomBorder && bottomBorderStyle]}
+    >
       <div id="mtmFeedBackForm" className="feedbackForm"></div>
       <div css={topWrapperStyle}>
         {sourcesCollection && sourcesCollection.items.length > 0 && (
