@@ -47,8 +47,8 @@ export const WebbinairListItemComing = () => {
         <GlobalStyles />
         <ListItem
           type="Webbinarium"
-          webbinairDateStart={"2025-03-05 17:00"}
-          webbinairDateEnd={"19:00"}
+          webbinairDateStart={"2025-03-05"}
+          webbinairDateEnd={"17:00 - 19:00"}
           href="#"
           headline="Trafikskolor glömmer ångerrätten"
           preamble="Kort ingress som förklarar webbinariet!" />

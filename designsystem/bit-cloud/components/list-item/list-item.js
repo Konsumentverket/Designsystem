@@ -33,7 +33,7 @@ export const ListItem = ({
       {updatedAt && <p css={css.dateStyle}> Uppdaterad den {updatedAt}</p>}
       {!updatedAt && publishedAt && <p css={css.dateStyle}>{publishedAt}</p>}
 
-      { webbinairDateStart && webbinairDateEnd && <p css={css.dateStyle}>Kommande: {webbinairDateStart} - kl {webbinairDateEnd}</p>}
+      { webbinairDateStart && webbinairDateEnd && <p css={css.dateStyle}>Kommande: {webbinairDateStart}, kl {webbinairDateEnd}</p>}
       { webbinairDateStart && !webbinairDateEnd && <p css={css.dateStyle}>Genomfört: {webbinairDateStart}</p>}
     </div>
   </LinkComponent>
