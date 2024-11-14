@@ -23,7 +23,7 @@ export const Source = ({
   english,
   bottomContent,
   sourceText,
-  bottomBorder = false,
+  bottomBorder = true,
 }) => {
   const reviewed = reviewedDate ? new Date(reviewedDate) : null;
 

@@ -78,7 +78,7 @@ export const SourceWithoutBottomBorder = () => {
         style=""
         english={false}
         bottomContent={bottomContent}
-        bottomBorder={true}
+        bottomBorder={false}
       />
     </CompositionFonts>
   );
