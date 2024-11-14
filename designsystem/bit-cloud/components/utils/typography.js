@@ -174,7 +174,6 @@ export const h6 = css`
 
 export const subHeading = css`
   ${baseHeading};
-  color: ${newColors.kovBlack};
   font-size: 2rem;
   line-height: 140%;
   margin-top: 14px;
@@ -607,7 +606,7 @@ export const h2SmallAlt = css`
 `;
 
 const baseSubHeadingAlt = css`
-  color: ${newColors.kovBlack};
+  color: ${newColors.kovBlue};
   font-style: normal;
   font-weight: 700;
   margin-bottom: 8px;
