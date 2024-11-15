@@ -10,7 +10,7 @@ export const wrapperStyling = css`
     margin-top: 24px;
 
     ${medium} {
-        margin-top: 32px;
+        margin-top: 40px;
         padding: ${spacing.l} ${spacing.l};
     }
 
@@ -44,7 +44,7 @@ export const wrapperStyling = css`
 `;
 
 export const articleEntryMarginStyling = css`
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 
   ${medium} {
     margin-bottom: 40px;
@@ -61,8 +61,8 @@ export const titleStyling = css`
 
 export const iconWrapper = css`
   position: absolute;
-  top: calc((28.51px / 2) * -1);
-  left: calc((23.33px / 2) * -1);
+  top: -14.255px;
+  left: -11.665px;
 `;
 
 export const iconColor = css`
