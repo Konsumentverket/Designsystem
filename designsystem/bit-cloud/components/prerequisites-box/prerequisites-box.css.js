@@ -6,9 +6,11 @@ export const wrapperStyling = css`
   background-color: ${newColors.shades.lightGrey25};
   border-radius: 16px;
   padding: 16px;
+  margin-bottom: 24px;
 
   @media (min-width: ${breakpoints.m}) {
     padding: 24px;
+    margin-bottom: 40px;
   }
 
   p {

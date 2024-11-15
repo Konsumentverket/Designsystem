@@ -17,11 +17,11 @@ export const h1 = css`
 
   font-size: 3.2rem;
   line-height: 130%;
-  margin-top: 24px;
+  margin-top: 16px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 5rem;
-    margin-top: 40px;
+    margin-top: 32px;
   }
 `;
 
@@ -219,7 +219,7 @@ export const preamble = css`
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 2.4rem;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
 `;
 
