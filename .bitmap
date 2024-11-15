@@ -75,7 +75,7 @@
     "fact-box": {
         "name": "fact-box",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.113",
+        "version": "0.0.114",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/fact-box"
     },

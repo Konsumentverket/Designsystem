@@ -43,14 +43,6 @@ export const wrapperStyling = css`
     }
 `;
 
-export const tagMargin = css`
-  margin-top: 32px; // 24px + 8px
-
-  ${medium} {
-    margin-top: 45px; // 32px + 13px
-  }
-`;
-
 export const articleEntryMarginStyling = css`
   margin-bottom: 32px;
 

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx } from '@emotion/core'
-import {wrapperStyling, tagMargin, titleStyling, iconWrapper, iconColor, articleEntryMarginStyling} from './fact-box.css.js'
+import {wrapperStyling, titleStyling, iconWrapper, iconColor, articleEntryMarginStyling} from './fact-box.css.js'
 import {
   Icon
 } from '@konsumentverket-sverige/designsystem.icon';
@@ -24,7 +24,6 @@ export const FactBox = ({
   return (
     <div css={[
       wrapperStyling,
-      tag ? tagMargin : null,
       articleEntryMargin ? articleEntryMarginStyling : null,
     ]}
      data-comp="fact-box"
