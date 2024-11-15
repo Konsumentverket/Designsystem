@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { typography } from '@konsumentverket-sverige/designsystem.utils';
-import {kovBlackStyle, kovBlueStyle} from "./sub-heading.css";
+import {kovBlackStyle, kovBlueStyle, rightBorderStyle} from "./sub-heading.css";
 
 export const SubHeading = ({
   children = null,
@@ -13,6 +13,7 @@ export const SubHeading = ({
   contentfulId = null,
   contentfulName = '',
   color = '',
+  rightBorder = false,
 }) => {
   const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
@@ -51,7 +52,7 @@ export const SubHeading = ({
   const selectedStyling = styling[styleLevel ? styleLevel - 1 : level - 1];
 
   return (
-    <SelectedHeading css={[selectedStyling, headingLine ? typography.headingLine : null, customColor ? customColor : null]} data-contentful-field-id={contentfulName} data-contentful-entry-id={contentfulId}>
+    <SelectedHeading css={[selectedStyling, headingLine ? typography.headingLine : null, customColor ? customColor : null, rightBorder ? rightBorderStyle : null]} data-contentful-field-id={contentfulName} data-contentful-entry-id={contentfulId}>
       {children}
       {text}
     </SelectedHeading>

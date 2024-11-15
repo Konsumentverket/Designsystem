@@ -10,7 +10,8 @@ export const Heading = ({
   headingLine = false,
   richText = true,
   contentfulId = null,
-  contentfulName = ''
+  contentfulName = '',
+  rightBorder = false,
   }) => (
   <SubHeading
     level={level}
@@ -20,6 +21,7 @@ export const Heading = ({
     richText={richText}
     contentfulId={contentfulId}
     contentfulName={contentfulName}
+    rightBorder={rightBorder}
   >
     {children}
   </SubHeading>
