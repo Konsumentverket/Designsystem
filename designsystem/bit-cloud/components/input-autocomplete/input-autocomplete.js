@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
+import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle, useMemo } from 'react';
 import { Loading } from '@konsumentverket-sverige/designsystem.loading';
 import {MonoDelete} from '@konsumentverket-sverige/designsystem.utils';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
@@ -30,6 +30,15 @@ const defaultFormatSuggestionsResult = (data) =>
     ...item,
     description: item.description.replace(', Sverige', ''),
   }));
+
+const generateRandomId = () => {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let id = '';
+  for (let i = 0; i < 6; i++) { // Generate a random 6-character suffix
+    id += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return id;
+};
 
 export const InputAutocomplete = forwardRef(({
   fetchUrl,
@@ -186,6 +195,11 @@ export const InputAutocomplete = forwardRef(({
 
   const formatFreeTextInputToSuggestion = (query) => ({[suggestionText]: query})
 
+  const randomId = useMemo(() => generateRandomId(), []);
+  const autoCompleteInputId = `autocomplete-input-${randomId}`;
+  const autoCompleteSuggestionsId = `autocomplete-suggestions-${randomId}`;
+  const loadingId = `loading-indicator-${randomId}`
+
   return (
     <div
       ref={autocompleteRef}
@@ -196,7 +210,8 @@ export const InputAutocomplete = forwardRef(({
         <div css={inputAndDropdownWrapper}>
           <label
             css={[labelStyle]}
-            htmlFor="autocomplete-input"
+            htmlFor={autoCompleteInputId}
+            // htmlFor="autocomplete-input"
           >
             {placeholder}
           </label>
@@ -212,19 +227,21 @@ export const InputAutocomplete = forwardRef(({
               (showingResult && useHeaderSearchStyle ? inputHeaderSearchHasSuggestionsStyle : null),
             ]}
             type="text"
-            id="autocomplete-input"
+            id={autoCompleteInputId}
+            // id="autocomplete-input"
             value={query}
             onChange={handleInputChange}
             onKeyDown={handleInputKeyDown}
             aria-autocomplete="list"
-            aria-controls={"input-autocomplete-suggestions"}
+            aria-controls={autoCompleteSuggestionsId}
+            // aria-controls={"input-autocomplete-suggestions"}
             aria-expanded={isDropdownOpen}
             aria-activedescendant={activeIndex >= 0 ? `autocomplete-option-${activeIndex}` : undefined}
-            aria-describedby={loading ? "loading-indicator" : undefined}
+            aria-describedby={loading ? loadingId : undefined}
           />
 
           {loading && (
-            <div css={loadingWrapperStyle} id="loading-indicator" aria-live="polite">
+            <div css={loadingWrapperStyle} id={loadingId} aria-live="polite">
               <Loading/>
             </div>
           )}
@@ -246,7 +263,7 @@ export const InputAutocomplete = forwardRef(({
                 dropdownPositionRelative && dropdownPositionRelativeStyle,
                 showingResult && dropdownHasSuggestionsStyle,
               ]}
-              id={"input-autocomplete-suggestions"}
+              id={autoCompleteSuggestionsId}
               role="listbox"
             >
               {suggestions.map((suggestion, index) => (
