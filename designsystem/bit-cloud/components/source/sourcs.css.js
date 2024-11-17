@@ -99,6 +99,7 @@ export const sourceLink = css`
 `
 
 export const bottomTextStyle = css`
+  max-width: 748px;
   ${typography.textSmall};
   color: ${newColors.shades.kovBlack50};
   margin-top: 16px;
