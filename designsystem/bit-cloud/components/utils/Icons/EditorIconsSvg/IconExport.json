@@ -1,0 +1,15 @@
+{
+  "icons": [
+    {
+      "name": "MonoArrowSmall",
+      "title": "Pil",
+      "url": "MonoArrowSmall.svg"
+    },
+    {
+      "name": "Video",
+      "title": "video",
+      "url": "Video.svg"
+    }
+
+  ]
+}
