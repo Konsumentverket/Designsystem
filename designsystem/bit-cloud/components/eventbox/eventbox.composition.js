@@ -76,7 +76,6 @@ export const EventBoxExampleOutdated = () => {
         subject={["Konsumenträtt, Hållbarhet"]}
         lecturers={["Föreläsare 1", "Föreläsare 2"]}
         listOption={true}
-        text={"Pellentesque elit enim, congue eget tellus non. Sollicitudin tristique urna aliquam bibendum dapibus mi"}
         url={'https://www.konsumentverket.se'}
       />
     </CompositionFonts>

@@ -4,11 +4,15 @@ import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.ut
 export const eventBoxWrapper = css`
   display: flex;
   width: 100%;
-  padding: 32px 24px;
+  padding: 32px 24px 20px;
   flex-direction: column;
   align-items: flex-start;
   border-radius: 16px;
   background-color: ${newColors.primaries.lightBlue};
+`
+
+export const eventBoxInfoContainer = css`
+  margin-bottom: 10px;
 `
 
 export const eventBoxInfo = css`
@@ -25,6 +29,7 @@ export const eventBoxInfo = css`
   span {
     font-weight: bold;
     display: block;
+
     @media (min-width: ${breakpoints.m}) {
       display: inline;
     }
@@ -39,19 +44,12 @@ export const eventBoxInfo = css`
     margin-bottom: 8px;
   }
 `
-
-export const eventBoxInfoContainer = css`
-  margin-bottom: 10px;
-
-  p:last-of-type {
-    margin-bottom: 0 !important;
-  }
-`
 export const eventBoxDisclaimer = css`
   margin-top: 8px;
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0!important;
+  padding-bottom: 12px;
 
   @media (min-width: ${breakpoints.m}) {
     font-size: 1.6rem;
@@ -73,6 +71,7 @@ export const eventBoxOverdue = css`
   line-height: 1.3;
   margin-top: 16px;
   margin-bottom: 0!important;
+  padding-bottom: 12px;
 
   @media (min-width: ${breakpoints.s}) {
     align-items: center;
