@@ -155,48 +155,48 @@ const globalStyles = (
           fill: ${newColors.shades.fullBlue};
         }
 
-        &[href$=".pdf"],
-        &[href$=".doc"],
-        &[href$=".docx"],
-        &[href$=".ppt"],
-        &[href$=".pptx"],
-        &[href$=".txt"],
-        &[href$=".xlt"],
-        &[href$=".xltx"]{
-          margin-left: 3.2rem;
-          position: relative;
-          display: inline-flex;
-          align-items: center;
-          &:hover {
-            box-shadow: 0 0 0 2px ${newColors.shades.fullBlue};
-          }
-          &:before{
-            content: '';
-            display:inline-block;
-            background-repeat: no-repeat;
-            background-size: 22px 30px;
-            background-position: 0px 0px;
-            width: 22px;
-            height: 30px;
-            position: absolute;
-            left: -3.2rem;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-        }
+        // &[href$=".pdf"],
+        // &[href$=".doc"],
+        // &[href$=".docx"],
+        // &[href$=".ppt"],
+        // &[href$=".pptx"],
+        // &[href$=".txt"],
+        // &[href$=".xlt"],
+        // &[href$=".xltx"]{
+        //   margin-left: 3.2rem;
+        //   position: relative;
+        //   display: inline-flex;
+        //   align-items: center;
+        //   &:hover {
+        //     box-shadow: 0 0 0 2px ${newColors.shades.fullBlue};
+        //   }
+        //   &:before{
+        //     content: '';
+        //     display:inline-block;
+        //     background-repeat: no-repeat;
+        //     background-size: 22px 30px;
+        //     background-position: 0px 0px;
+        //     width: 22px;
+        //     height: 30px;
+        //     position: absolute;
+        //     left: -3.2rem;
+        //     top: 50%;
+        //     transform: translateY(-50%);
+        //   }
+        // }
 
-        &[href$=".pdf"] { ${fileIcon(filePdfPath)} }
-
-        &[href$=".ppt"],
-        &[href$=".pptx"] { ${fileIcon(filePowerpointPath)} }
-
-        &[href$=".doc"],
-        &[href$=".docx"] { ${fileIcon(fileWordPath)} }
-
-        &[href$=".xlt"],
-        &[href$=".xltx"] { ${fileIcon(fileExcelPath)} }
-
-        &[href$=".txt"] { ${fileIcon(filePath)} }
+        // &[href$=".pdf"] { ${fileIcon(filePdfPath)} }
+        //
+        // &[href$=".ppt"],
+        // &[href$=".pptx"] { ${fileIcon(filePowerpointPath)} }
+        //
+        // &[href$=".doc"],
+        // &[href$=".docx"] { ${fileIcon(fileWordPath)} }
+        //
+        // &[href$=".xlt"],
+        // &[href$=".xltx"] { ${fileIcon(fileExcelPath)} }
+        //
+        // &[href$=".txt"] { ${fileIcon(filePath)} }
 
         &:hover {
           box-shadow: 0 0 0 4px ${colors.theme1.midLight};
