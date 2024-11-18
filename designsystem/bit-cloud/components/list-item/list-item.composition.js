@@ -7,6 +7,7 @@ import {
 } from '@konsumentverket-sverige/designsystem.utils';
 
 export const BasicListItem = () => {
+  const text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto asperiores consectetur consequatur dicta dolore doloribus error facilis impedit labore modi nemo non obcaecati odio perspiciatis placeat praesentium quaerat quidem quisquam quo quod sapiente sint sit suscipit tempora, voluptate voluptates voluptatum! Aspernatur blanditiis consequuntur cupiditate dignissimos doloremque, fugit id in ipsam iste laborum maiores molestias, mollitia neque non officia pariatur perferendis porro quam quia quisquam sequi suscipit ut voluptatum? Cum eos ex facilis odit recusandae sunt vero! Esse fuga neque nulla praesentium suscipit! Animi assumenda at culpa dolorem, nemo nulla obcaecati porro ratione suscipit tempora! Aut nesciunt obcaecati ullam voluptates!"
   return (
     <>
       <CompositionFonts>
@@ -17,7 +18,8 @@ export const BasicListItem = () => {
             publishedAt={new Date().toISOString()}
             href="#"
             headline="Trafikskolor glömmer ångerrätten"
-            preamble="Kort ingress som förklarar webbinariet!" />
+            preamble={text}
+          />
       </CompositionFonts>
     </>
   );

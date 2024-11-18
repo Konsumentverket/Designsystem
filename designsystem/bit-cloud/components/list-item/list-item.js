@@ -26,7 +26,7 @@ export const ListItem = ({
       className="listItemHeadline">
       {headline} <Icon icon="MonoArrowRightSmall" />
     </p>
-    {preamble && <p css={css.preambleStyle}>{preamble}</p>}
+    {preamble && <p css={[css.preambleStyle, css.preambleMaxWidth]}>{preamble}</p>}
 
     <div css={css.dateWrapper}>
       {type && <p css={css.typeStyle}>{type}</p>}

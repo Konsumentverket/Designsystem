@@ -72,6 +72,10 @@ export const preambleStyle = css`
   margin-bottom: 16px;
 `
 
+export const preambleMaxWidth = css`
+  max-width: 728px;
+`
+
 export const dateWrapper = css`
   display: flex;
   flex-direction: row;
