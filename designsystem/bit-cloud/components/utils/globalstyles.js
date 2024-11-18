@@ -199,9 +199,9 @@ const globalStyles = (
         // &[href$=".txt"] { ${fileIcon(filePath)} }
 
         &:hover {
-          box-shadow: 0 0 0 4px ${colors.theme1.midLight};
+          // box-shadow: 0 0 0 4px ${colors.theme1.midLight};
+          // background-color:${colors.theme1.midLight};
           border-radius: .4rem;
-          background-color:${colors.theme1.midLight};
           text-decoration:none;
           svg {
             fill: ${colors.theme1.mid};
@@ -214,12 +214,13 @@ const globalStyles = (
           }
         }
 
-        &:active{
-          box-shadow: 0 0 0 4px ${colors.theme1.midLight};
+        &:active {
+            // box-shadow: 0 0 0 4px ${colors.theme1.midLight};
+            // background-color:${colors.theme1.midLight};
+          color: ${colors.theme1.xDark};
           border-radius: .4rem;
-          background-color:${colors.theme1.midLight};
-          color:${colors.theme1.xDark};
-          text-decoration:none;
+          text-decoration: none;
+
           svg {
             fill: ${colors.theme1.xDark};
           }
