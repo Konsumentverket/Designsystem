@@ -56,6 +56,7 @@ import { MonoArrowDown } from "./Icons/SystemIcons/MonoArrowDown/MonoArrowDown";
 import { MonoArrowDownSmall } from "./Icons/SystemIcons/MonoArrowDownSmall/MonoArrowDownSmall";
 import { MonoCheck } from "./Icons/SystemIcons/MonoCheck/MonoCheck";
 import { MonoBlueRss } from "./Icons/SystemIcons/MonoBlueRss/MonoBlueRss";
+import { Video } from "./Icons/SystemIcons/Video/Video";
 import { WarningCircle } from "./Icons/SystemIcons/WarningCircle/WarningCircle";
 import { WarningCirclePink } from "./Icons/SystemIcons/WarningCirclePink/WarningCirclePink";
 
@@ -255,6 +256,7 @@ export {
   MonoBlueRss,
   WarningCircle,
   WarningCirclePink,
+  Video,
 
 
   // System icons
