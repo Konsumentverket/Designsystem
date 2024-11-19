@@ -90,7 +90,7 @@ export const BasicIconRightButton = () => {
   const element = <Button
     href={"#"}
     iconRight={
-      <Icon icon="Camera" />
+      <Icon icon="MonoDownload" />
     }
     text="Lorem ipsum"
   />;
@@ -157,8 +157,8 @@ export const LinkStyleButton = () => {
   const element = <Button
     href={"/test"}
     text="Lorem ipsum"
-    iconRight={
-      <Icon icon="Camera" />
+    iconLeft={
+      <Icon icon="Video" />
     }
     linkStyle={true}
   />;
