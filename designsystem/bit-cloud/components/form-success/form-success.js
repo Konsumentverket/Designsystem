@@ -40,7 +40,9 @@ export const FormSuccess = ({
       <Button
         onClick={buttonClick}
         text="Ladda ner bekräftelse"
-        iconRight={<Icon icon="LinkArrow" />}
+        iconRight={
+          <Icon icon="MonoDownload" />
+        }
       />
     </div>
   );

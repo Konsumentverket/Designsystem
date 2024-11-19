@@ -146,7 +146,11 @@ export const FormDataRequest = ({
       )}
 
       <div css={[childrenContainer]}>{children}</div>
-      <Button text="Skicka begäran" />
+      <Button text="Skicka begäran"
+        iconRight={
+          <Icon icon="ChevronRight" />
+        }
+      />
     </form>
   );
 };
