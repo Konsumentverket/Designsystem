@@ -14,6 +14,7 @@ import { ChevronLeft } from "./Icons/SystemIcons/ChevronLeft/ChevronLeft.js";
 import { MonoEasyToRead } from "./Icons/SystemIcons/MonoEasyToRead/MonoEasyToRead.js";
 import { MonoSigning } from "./Icons/SystemIcons/MonoSigning/MonoSigning.js";
 import { Volume } from "./Icons/SystemIcons/Volume/Volume.js";
+import { MonoDownload } from "./Icons/SystemIcons/MonoDownload/MonoDownload.js";
 import { MonoGlobe } from "./Icons/SystemIcons/MonoGlobe/MonoGlobe.js";
 import { MonoListen } from "./Icons/SystemIcons/MonoListen/MonoListen.js";
 import { MonoListenWhite } from "./Icons/SystemIcons/MonoListenWhite/MonoListenWhite.js";
@@ -56,9 +57,9 @@ import { MonoArrowDown } from "./Icons/SystemIcons/MonoArrowDown/MonoArrowDown";
 import { MonoArrowDownSmall } from "./Icons/SystemIcons/MonoArrowDownSmall/MonoArrowDownSmall";
 import { MonoCheck } from "./Icons/SystemIcons/MonoCheck/MonoCheck";
 import { MonoBlueRss } from "./Icons/SystemIcons/MonoBlueRss/MonoBlueRss";
-import { Video } from "./Icons/SystemIcons/Video/Video";
 import { WarningCircle } from "./Icons/SystemIcons/WarningCircle/WarningCircle";
 import { WarningCirclePink } from "./Icons/SystemIcons/WarningCirclePink/WarningCirclePink";
+import { Video } from "./Icons/SystemIcons/Video/Video";
 
 
 // Editor icons
@@ -204,6 +205,7 @@ export {
   ChevronLeft,
   MonoSigning,
   Volume,
+  MonoDownload,
   MonoGlobe,
   MonoListen,
   MonoListenWhite,

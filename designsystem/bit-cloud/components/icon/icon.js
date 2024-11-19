@@ -57,6 +57,8 @@ import {
   MonoBlueRss,
   WarningCircle,
   WarningCirclePink,
+  MonoDownload,
+  Video,
 
   // Editor Icons
 
@@ -227,6 +229,8 @@ const systemIconDefinitions = {
   MonoBlueRss,
   WarningCircle,
   WarningCirclePink,
+  Video,
+  MonoDownload
 };
 
 const editorIconDefinitions = {
