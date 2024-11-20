@@ -25,10 +25,6 @@ export const sourceItemsContainer = css`
   margin: 0;
   flex-wrap: wrap;
   row-gap: 8px;
-
-  @media (min-width: ${breakpoints.m}) {
-    row-gap: 16px;
-  }
 `;
 
 export const rightAlign = css`
