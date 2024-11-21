@@ -1,17 +1,15 @@
 import {css} from '@emotion/core';
-import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
-
 export const kovBlackStyle = css`
-  color: ${newColors.kovBlack};
+  color: #161616;
 `;
 
 export const kovBlueStyle = css`
-  color: ${newColors.kovBlue};
+  color: #162259;
 `;
 
 export const rightBorderStyle = css`
-  @media (min-width: ${breakpoints.m}) {
+  @media (min-width: 768px) {
     padding-right: 32px;
-    border-right: 1px solid ${newColors.shades.lightGrey50};
+    border-right: 1px solid #EBE9E9;
   }
 `;
