@@ -8,6 +8,7 @@ export const tagStyle = css`
     line-height: 1.5;
     display: inline-block;
     text-decoration: none;
+    margin: 0;
 
     &:hover {
         background-color: #DFF1FB;
