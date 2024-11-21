@@ -1,22 +1,20 @@
 import { css } from '@emotion/core';
-import { newColors, colors, spacing } from '@konsumentverket-sverige/designsystem.utils';
-
 export const tagStyle = css`
-    box-shadow:inset 0px 0px 0px 1px ${newColors.shades.fullBlue};
-    border-radius: ${spacing.l};
-    color: ${newColors.shades.fullBlue};
-    padding: ${spacing.xs} ${spacing.s};
+    box-shadow:inset 0px 0px 0px 1px #0061C2;
+    border-radius: 32px;
+    color: #0061C2;
+    padding: 8px 16px;
     font-size: 1.6rem;
     line-height: 1.5;
     display: inline-block;
     text-decoration: none;
 
     &:hover {
-        background-color: ${newColors.shades.lightBlue};
-        box-shadow:inset 0px 0px 0px 1px ${newColors.shades.fullBlue};
+        background-color: #DFF1FB;
+        box-shadow:inset 0px 0px 0px 1px #0061C2;
     }
 
     &:active {
-        background-color: ${newColors.shades.mediumBlue50};
+        background-color: #B9E1F6;
     }
 `;
