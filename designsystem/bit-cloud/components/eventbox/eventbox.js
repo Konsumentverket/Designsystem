@@ -60,7 +60,7 @@ export const EventBox = ({
             iconRight={
               <Icon icon="External"/>
             }
-            text="Gå till anmälan"
+            text="Anmäl dig till webbinarium"
           />}
           { latestApplicationDate && <p css={eventBoxDisclaimer} data-contentful-field-id="latestApplicationDate" data-contentful-entry-id={contentfulId}>Sista dag för anmälan är den {latestApplicationDate}</p>}
         </div>
