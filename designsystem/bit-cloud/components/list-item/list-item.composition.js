@@ -75,3 +75,22 @@ export const WebbinairListItemOld = () => {
     </>
   );
 }
+
+
+export const ListItemSearch = () => {
+  return (
+    <>
+      <CompositionFonts>
+        <GlobalStyles />
+        <ListItem
+          type=""
+          href="#"
+          headline="Landet runt med budget i siktet"
+          preamble="En granskning ledd av EU-kommissionen visar att endast en av fem influerare sköter sig när det gäller att reklammarkera sina inlägg. Flygbiljett."
+          bottomText="Start > För konsument > Produktsäkerhet"
+          children=""
+        />
+      </CompositionFonts>
+    </>
+  );
+}

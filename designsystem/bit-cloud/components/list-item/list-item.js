@@ -6,12 +6,13 @@ import { Icon } from '@konsumentverket-sverige/designsystem.icon'
 
 export const ListItem = ({
   headline,
+  children,
   preamble,
   type,
   updatedAt, publishedAt,
   webbinairDateStart, webbinairDateEnd,
   href,
-  onClick,
+  onClick, bottomText,
   linkComponent: LinkComponent = 'a',
 }) => <LinkComponent
   css={[css.wrapper]}
@@ -26,6 +27,7 @@ export const ListItem = ({
       className="listItemHeadline">
       {headline} <Icon icon="MonoArrowRightSmall" />
     </p>
+    {children && children}
     {preamble && <p css={[css.preambleStyle, css.preambleMaxWidth]}>{preamble}</p>}
 
     <div css={css.dateWrapper}>
@@ -36,4 +38,5 @@ export const ListItem = ({
       { webbinairDateStart && webbinairDateEnd && <p css={css.dateStyle}>Kommande: {webbinairDateStart}, kl {webbinairDateEnd}</p>}
       { webbinairDateStart && !webbinairDateEnd && <p css={css.dateStyle}>Genomfört: {webbinairDateStart}</p>}
     </div>
+    {bottomText && <p css={css.bottomText}>{bottomText}</p>}
   </LinkComponent>

@@ -21,6 +21,7 @@ import { MonoListenWhite } from "./Icons/SystemIcons/MonoListenWhite/MonoListenW
 import { Ecc } from "./Icons/SystemIcons/Ecc/Ecc.js";
 import { Arrow, arrowPath } from './Icons/SystemIcons/Arrow/Arrow.js';
 import { ArrowFat } from './Icons/SystemIcons/ArrowFat/ArrowFat.js';
+import { ArrowAngleRight } from './Icons/SystemIcons/ArrowAngleRight/ArrowAngleRight.js';
 import { External } from "./Icons/SystemIcons/External/External.js";
 import { Exclamationmark } from "./Icons/SystemIcons/Exclamationmark/Exclamationmark.js";
 import { Check, checkPath } from "./Icons/SystemIcons/Check/Check.js";
@@ -211,6 +212,7 @@ export {
   MonoListenWhite,
   Ecc,
   Arrow,
+  ArrowAngleRight,
   arrowPath,
   ArrowFat,
   External,

@@ -54,6 +54,7 @@ export const InputAutocomplete = forwardRef(({
   searchButton = false,
   searchButtonText = 'Sök',
   searchButtonAriaLabel = 'Sök',
+  keyword = ''
 }, ref) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -71,6 +72,13 @@ export const InputAutocomplete = forwardRef(({
     focusOnOpen ? focusOnInputRef() : blurInputRef();
     return () => blurInputRef();
   }, [focusOnOpen]);
+
+  useEffect(() => {
+    if (!keyword || keyword == "") return;
+
+    setQuery(keyword);
+  }, [keyword]);
+
 
   useEffect(() => {
     if(!searchButton) return;

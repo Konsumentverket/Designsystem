@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
+import {newColors, breakpoints, colors} from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapper = css`
   width: 100%;
@@ -110,3 +110,12 @@ export const dateStyle = css`
   color: ${newColors.shades.kovBlack50};
   margin-bottom: 0;
 `
+
+export const bottomText = css`
+  color: ${newColors.shades.kovBlack50};
+  font-size: 1.4rem;
+  line-height: 2;
+  padding-bottom: 0;
+  margin-bottom: 0;
+`
+
