@@ -61,6 +61,10 @@ export const eventBoxApply = css`
   &:empty {
     display: none;
   }
+
+  a {
+    width: fit-content;
+  }
 `
 
 export const eventBoxOverdue = css`
