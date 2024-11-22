@@ -37,9 +37,9 @@ export const CtaBlock = ({
            data-contentful-entry-id={contentfulId}>
         <div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
         <div css={textArea} className='textarea'>
-          <h3 css={focusHeadline}>
+          <h2 css={focusHeadline}>
             {headline}
-          </h3>
+          </h2>
           <p css={focusText}>{text}</p>
           {btn}
         </div>

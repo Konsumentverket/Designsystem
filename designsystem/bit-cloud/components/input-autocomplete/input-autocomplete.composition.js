@@ -15,6 +15,7 @@ export const InputAutocompleteBasicExample = () => {
     callbackOnClick={(e, item) => { console.log(e, item); }}
     fetchUrl={'https://localhost:52535/api/contactsearch/place/?query='}
     placeholder="Skriv för att söka"
+    keyword={"hej"}
   />;
 
   return (
