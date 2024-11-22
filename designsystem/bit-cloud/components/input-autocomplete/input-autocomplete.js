@@ -57,6 +57,7 @@ export const InputAutocomplete = forwardRef(({
   keyword = ''
 }, ref) => {
   const [query, setQuery] = useState('');
+  const [initQuery, setInitQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -76,7 +77,7 @@ export const InputAutocomplete = forwardRef(({
   useEffect(() => {
     if (!keyword || keyword == "") return;
 
-    setQuery(keyword);
+    setInitQuery(keyword);
   }, [keyword]);
 
 
@@ -161,6 +162,7 @@ export const InputAutocomplete = forwardRef(({
 
   const handleClearInput = () => {
     setQuery('');
+    setInitQuery('');
     focusOnInputRef();
   }
 
@@ -237,7 +239,7 @@ export const InputAutocomplete = forwardRef(({
             type="text"
             id={autoCompleteInputId}
             // id="autocomplete-input"
-            value={query}
+            value={initQuery || query}
             onChange={handleInputChange}
             onKeyDown={handleInputKeyDown}
             aria-autocomplete="list"
@@ -254,7 +256,7 @@ export const InputAutocomplete = forwardRef(({
             </div>
           )}
 
-          {query && (
+          { (query || initQuery) && (
             <button
               css={clearInput}
               onClick={handleClearInput}
