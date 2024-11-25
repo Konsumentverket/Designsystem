@@ -60,6 +60,7 @@ export const headline = css`
   }
 
   svg {
+    min-width: 18px;
     margin-left: 8px;
     fill: ${newColors.shades.fullBlue};
   }
@@ -78,9 +79,12 @@ export const preambleMaxWidth = css`
 
 export const dateWrapper = css`
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 0;
+  flex-direction: column;
+
+  @media (min-width: ${breakpoints.m}) {
+    align-items: center;
+    flex-direction: row;
+  }
 `
 
 export const typeStyle = css`
@@ -91,15 +95,23 @@ export const typeStyle = css`
   line-height: 1.5;
   color: ${newColors.shades.kovBlack50};
   padding-right: 16px;
-  margin-bottom: 0;
+  margin-bottom: 4px;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-bottom: 0;
+  }
 
   &:after {
-    content: '';
-    display: block;
-    width: 1px;
-    height: 16px;
-    background-color: ${newColors.shades.kovBlack50};
-    margin-left: 16px;
+    display: none;
+
+    @media (min-width: ${breakpoints.m}) {
+      display: block;
+      content: '';
+      width: 1px;
+      height: 16px;
+      background-color: ${newColors.shades.kovBlack50};
+      margin-left: 16px;
+    }
   }
 `
 
