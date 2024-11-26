@@ -43,7 +43,7 @@ export const ImageCard = ({
 
   const imageCardMarkup = () => {
     return (
-      <div css={focusWrapper} className={extraClass}>
+      <div css={focusWrapper} className={extraClass} data-comp="image-card">
         <div css={pictureWrapper} className={imageComponent ? 'image' : null}>{imageArea}</div>
         <div css={textArea} className='textarea'>
           <h3 css={focusHeadline}>
@@ -63,6 +63,7 @@ export const ImageCard = ({
       onClick={onClick}
       className="noStyle"
       injected={true}
+      data-comp="image-card"
     >
       {imageCardMarkup(ImageCard)}
     </LinkComponent>
