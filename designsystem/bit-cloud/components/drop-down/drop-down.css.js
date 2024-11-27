@@ -35,11 +35,12 @@ export const itemsWrapperExpandedStyle = css`
     background-color: ${newColors.kovWhite};
     border-radius: ${spacing.s} ${spacing.s} ${spacing.s} ${spacing.s};
     border: 1px solid ${newColors.shades.fullBlue};
+    z-index: 1;
 `;
 
 export const buttonStyle = css`
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     display: flex;
     align-items: center;
