@@ -8,7 +8,7 @@ export const wrapperStyle = css`
     width: 100%;
 `;
 
-export const labelStyle = css` 
+export const labelStyle = css`
     display: flex;
     align-items: center;
     width: 100%;
@@ -62,7 +62,6 @@ export const fieldStyle = css`
   }
 
   .radio:focus-within + .radio-label {
-    outline: ${colors.states.focus} solid 2px;
     outline-offset: 2px;
     box-shadow: none;
   }

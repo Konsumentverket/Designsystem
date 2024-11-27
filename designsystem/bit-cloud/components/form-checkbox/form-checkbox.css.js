@@ -7,7 +7,7 @@ export const wrapperStyle = css`
     width: 100%;
 `;
 
-export const labelStyle = css` 
+export const labelStyle = css`
     display: flex;
     align-items: center;
     width: 100%;
@@ -56,7 +56,6 @@ export const checkboxStyle = css`
   }
 
   .checkbox:focus-within + .checkbox-label {
-    outline: ${colors.states.focus} solid 2px;
     outline-offset: 2px;
     box-shadow: none;
   }
