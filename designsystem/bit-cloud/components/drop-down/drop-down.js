@@ -75,7 +75,7 @@ export const Dropdown = ({
   const dropdownRef = useRef();
 
   const closeDropdown = () => setIsExpanded(false)
-  // useOnClickOutside(dropdownRef, () => closeDropdown());
+  useOnClickOutside(dropdownRef, () => closeDropdown());
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -112,7 +112,7 @@ export const Dropdown = ({
   const handleBlur = (e) => {
     // Close dropdown when focusing outside of it
     if (!dropdownRef.current.contains(e.relatedTarget)) {
-      // closeDropdown();
+      closeDropdown();
     }
   };
 
