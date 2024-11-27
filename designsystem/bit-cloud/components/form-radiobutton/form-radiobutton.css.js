@@ -61,7 +61,8 @@ export const fieldStyle = css`
     }
   }
 
-  .radio:focus-within + .radio-label {
+  .radio:focus-visible + .radio-label {
+    outline: ${colors.states.focus} solid 2px;
     outline-offset: 2px;
     box-shadow: none;
   }
