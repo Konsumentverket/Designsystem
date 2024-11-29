@@ -146,6 +146,7 @@ export const Dropdown = ({
         )}
         <div
           aria-hidden={!isExpanded}
+          tab-index={!isExpanded ? "-1" : "1" }
           id={`dropdown-${id}`}
           css={[itemsWrapperStyle, isExpanded && itemsWrapperExpandedStyle]}
         >
