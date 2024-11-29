@@ -11,6 +11,7 @@ const Tag = ({
 }) => {
   return (
     <a
+      data-comp="tag"
       key={id}
       href={url}
       css={[tagStyle]}
