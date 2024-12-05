@@ -110,7 +110,7 @@
     "form-data-request": {
         "name": "form-data-request",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.31",
+        "version": "0.0.32",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-data-request"
     },
@@ -131,14 +131,14 @@
     "form-success": {
         "name": "form-success",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.20",
+        "version": "0.0.21",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/form-success"
     },
     "heading": {
         "name": "heading",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.118",
+        "version": "0.0.119",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/heading"
     },
@@ -187,14 +187,14 @@
     "link-card": {
         "name": "link-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.147",
+        "version": "0.0.148",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/link-card"
     },
     "link-text-card": {
         "name": "link-text-card",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.147",
+        "version": "0.0.148",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/link-text-card"
     },
@@ -271,7 +271,7 @@
     "sub-heading": {
         "name": "sub-heading",
         "scope": "konsumentverket-sverige.designsystem",
-        "version": "0.0.118",
+        "version": "0.0.119",
         "mainFile": "index.ts",
         "rootDir": "designsystem/bit-cloud/components/sub-heading"
     },

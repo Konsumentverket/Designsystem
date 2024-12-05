@@ -30,16 +30,3 @@ export const BasicHeadings = () => {
     </>
   );
 }
-
-export const BasicHeadingWithRightBorderForECC = () => {
-  return (
-    <>
-      <div style={{width: '500px', padding: '0 24px'}}>
-        <CompositionFonts>
-          <GlobalStyles/>
-          <Heading level={1} text="h1 with line" headingLine richText={false} rightBorder={true}/>
-        </CompositionFonts>
-      </div>
-    </>
-  );
-}
