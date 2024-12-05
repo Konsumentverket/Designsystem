@@ -780,6 +780,11 @@ export const ulStyling = css`
       width: 9px;
       height: 9px;
       margin-right: 16px;
+
+      [dir="rtl"] & {
+        margin-right: 0;
+        margin-left: 16px;
+      }
     }
   }
 
@@ -827,6 +832,11 @@ export const olStyling = css`
 
     @media(min-width: ${breakpoints.m}){
       margin-bottom: 24px;
+    }
+
+    [dir="rtl"] & {
+      padding-left: 0;
+      padding-right: 16px;
     }
   }
 
