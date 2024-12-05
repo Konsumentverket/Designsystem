@@ -34,11 +34,26 @@ export const letter = css`
 `
 
 export const validLetter = css`
+  position: relative;
   color: ${newColors.shades.fullBlue};
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: ${newColors.shades.fullBlue};
+  }
 
   &:hover {
     color: ${newColors.shades.kovBlue50};
     background: ${newColors.shades.mediumBlue50};
+  }
+
+  &:hover::after {
+    visibility: hidden;
   }
 `;
 
@@ -49,21 +64,19 @@ export const invalidLetter = css`
 export const activeLetter = css`
   color: ${newColors.shades.kovBlue};
   background: ${newColors.shades.mediumBlue50};
-  position: relative;
+
+  &::after {
+    height: 2px;
+    background-color: ${newColors.shades.kovBlue};
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
 
   &:hover {
     color: ${newColors.shades.kovBlue};
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: ${newColors.shades.kovBlue};
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+  &:hover::after {
+    visibility: visible;
   }
 `
