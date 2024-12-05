@@ -13,14 +13,12 @@ import {
   childrenContainer,
   recaptchaContainer,
 } from './form-data-request.css.js';
-import ReCAPTCHA from 'react-google-recaptcha';
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha,
+} from 'react-google-recaptcha-v3';
 
-export const FormDataRequest = ({
-  title,
-  children,
-  recaptchaSiteKey,
-  handleFormSubmit = () => {},
-}) => {
+const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
   const {
     register,
     handleSubmit,
@@ -28,21 +26,31 @@ export const FormDataRequest = ({
     formState: { errors },
   } = useForm();
 
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [recaptchaError, setRecaptchaError] = useState('');
 
-  const onSubmit = (data) => {
-    if (recaptchaSiteKey && !recaptchaToken) {
-      setRecaptchaError('Var vänlig bekräfta att du inte är en robot');
+  const onSubmit = async (data) => {
+    if (!executeRecaptcha) {
+      setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
       return;
-    } else {
-      handleFormSubmit(data);
     }
-  };
 
-  const handleRecaptchaChange = (token) => {
-    setRecaptchaToken(token);
-    setRecaptchaError('');
+    try {
+      const token = await executeRecaptcha('personuppgifter');
+      if (!token) {
+        setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
+        return;
+      }
+
+      const formData = {
+        ...data,
+        recaptchaToken: token,
+      };
+
+      handleFormSubmit(formData);
+    } catch (error) {
+      setRecaptchaError('Något gick fel med reCAPTCHA. Försök igen.');
+    }
   };
 
   return (
@@ -130,27 +138,39 @@ export const FormDataRequest = ({
           )}
         </div>
       </div>
-      {recaptchaSiteKey && (
+      {recaptchaError !== '' && (
         <div css={[recaptchaContainer]}>
-          <ReCAPTCHA
-            sitekey={recaptchaSiteKey}
-            onChange={handleRecaptchaChange}
-          />
-          {recaptchaError !== '' && (
-            <span css={[errorMessage]}>
-              <Icon icon="Warn" />
-              {recaptchaError}
-            </span>
-          )}
+          <span css={[errorMessage]}>
+            <Icon icon="Warn" />
+            {recaptchaError}
+          </span>
         </div>
       )}
 
       <div css={[childrenContainer]}>{children}</div>
-      <Button text="Skicka begäran"
-        iconRight={
-          <Icon icon="ChevronRight" />
-        }
-      />
+      <Button text="Skicka begäran" iconRight={<Icon icon="ChevronRight" />} />
     </form>
   );
 };
+
+export const FormDataRequest = ({
+  title,
+  children,
+  recaptchaSiteKey,
+  handleFormSubmit = () => {},
+}) => (
+  <GoogleReCaptchaProvider
+    reCaptchaKey={recaptchaSiteKey}
+    scriptProps={{
+      async: true,
+      defer: true,
+      appendTo: 'head',
+    }}
+  >
+    <FormDataRequestInner
+      title={title}
+      children={children}
+      handleFormSubmit={handleFormSubmit}
+    />
+  </GoogleReCaptchaProvider>
+);

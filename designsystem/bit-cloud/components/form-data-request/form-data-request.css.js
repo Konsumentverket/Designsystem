@@ -87,7 +87,7 @@ export const childrenContainer = css`
 `;
 
 export const recaptchaContainer = css`
-  margin-bottom: 54px;
+  margin-bottom: 24px;
   position: relative;
 `;
 
