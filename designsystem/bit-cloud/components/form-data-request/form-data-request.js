@@ -161,6 +161,7 @@ export const FormDataRequest = ({
 }) => (
   <GoogleReCaptchaProvider
     reCaptchaKey={recaptchaSiteKey}
+    useEnterprise={true}
     scriptProps={{
       async: true,
       defer: true,
