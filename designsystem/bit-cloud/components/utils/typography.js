@@ -740,8 +740,16 @@ export const ulListSpacing = css`
   margin: 32px 0 32px 0;
   padding: 0 0 0 8px;
 
+  [dir="rtl"] & {
+    padding: 0 8px 0 0;
+  }
+
   @media(min-width: ${breakpoints.m}){
     padding: 0 0 0 16px;
+
+    [dir="rtl"] & {
+      padding: 0 16px 0 0;
+    }
   }
 `;
 
