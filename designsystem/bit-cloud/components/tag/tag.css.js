@@ -1,6 +1,8 @@
-import { css } from '@emotion/core';
-export const tagStyle = css`
-    box-shadow:inset 0px 0px 0px 1px #0061C2;
+import {css} from '@emotion/core';
+
+export const tagStyle = {
+  style: css`
+    box-shadow: inset 0px 0px 0px 1px #0061C2;
     border-radius: 32px;
     color: #0061C2;
     padding: 8px 16px;
@@ -11,13 +13,14 @@ export const tagStyle = css`
     margin: 0;
 
     &:hover {
-        background-color: #DFF1FB;
-        box-shadow:inset 0px 0px 0px 1px #0061C2;
-        text-decoration: underline;
+      background-color: #DFF1FB;
+      box-shadow: inset 0px 0px 0px 1px #0061C2;
+      text-decoration: underline;
     }
 
     &:active {
-        text-decoration: underline;
-        background-color: #B9E1F6;
+      text-decoration: underline;
+      background-color: #B9E1F6;
     }
-`;
+  `
+};

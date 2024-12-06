@@ -14,7 +14,7 @@ const Tag = ({
       data-comp="tag"
       key={id}
       href={url}
-      css={[tagStyle]}
+      css={[tagStyle.style]}
       onClick={onClick}
       className="noStyle"
     >
