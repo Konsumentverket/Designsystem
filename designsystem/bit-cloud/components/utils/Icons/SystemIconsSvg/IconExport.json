@@ -11,12 +11,17 @@
       "url": "Video.svg"
     },
     {
-      "name": "Video",
+      "name": "Video white",
       "title": "Video",
       "url": "mono-white-video.svg"
     },
     {
       "name": "MonoDownload",
+      "title": "Ladda ner",
+      "url": "MonoDownload.svg"
+    },
+    {
+      "name": "MonoDownload white",
       "title": "Ladda ner",
       "url": "MonoDownload.svg"
     }
