@@ -11,7 +11,7 @@
       "url": "Video.svg"
     },
     {
-      "name": "Video white",
+      "name": "MonoWhiteVideo",
       "title": "Video",
       "url": "MonoWhiteVideo.svg"
     },
@@ -21,7 +21,7 @@
       "url": "MonoDownload.svg"
     },
     {
-      "name": "MonoDownload white",
+      "name": "MonoWhiteDownload",
       "title": "Ladda ner",
       "url": "MonoWhiteDownload.svg"
     }
