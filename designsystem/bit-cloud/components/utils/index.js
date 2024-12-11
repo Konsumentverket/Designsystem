@@ -12,6 +12,7 @@ import { Adapt } from "./Icons/SystemIcons/Adapt/Adapt.js"
 import { ChevronRight } from "./Icons/SystemIcons/ChevronRight/ChevronRight.js";
 import { ChevronLeft } from "./Icons/SystemIcons/ChevronLeft/ChevronLeft.js";
 import { MonoEasyToRead } from "./Icons/SystemIcons/MonoEasyToRead/MonoEasyToRead.js";
+import { MonoWhiteVideo } from "./Icons/SystemIcons/MonoWhiteVideo/MonoWhiteVideo.js";
 import { MonoSigning } from "./Icons/SystemIcons/MonoSigning/MonoSigning.js";
 import { Volume } from "./Icons/SystemIcons/Volume/Volume.js";
 import { MonoDownload } from "./Icons/SystemIcons/MonoDownload/MonoDownload.js";
@@ -61,6 +62,7 @@ import { MonoBlueRss } from "./Icons/SystemIcons/MonoBlueRss/MonoBlueRss";
 import { WarningCircle } from "./Icons/SystemIcons/WarningCircle/WarningCircle";
 import { WarningCirclePink } from "./Icons/SystemIcons/WarningCirclePink/WarningCirclePink";
 import { Video } from "./Icons/SystemIcons/Video/Video";
+
 
 
 // Editor icons
@@ -182,6 +184,11 @@ import { DBTravelIcon } from "./Icons/EditorIcons/DBTravelIcon/DBTravelIcon.js";
 import { DBWarningIcon } from "./Icons/EditorIcons/DBWarningIcon/DBWarningIcon.js";
 import { DBWifiIcon } from "./Icons/EditorIcons/DBWifiIcon/DBWifiIcon.js";
 
+import { DBSocialShareIcon } from "./Icons/EditorIcons/DBSocialShareIcon/DBSocialShareIcon.js";
+import { DBFriendshipIcon } from "./Icons/EditorIcons/DBFriendshipIcon/DBFriendshipIcon.js";
+import { DBWebsiteInfoIcon } from "./Icons/EditorIcons/DBWebsiteInfoIcon/DBWebsiteInfoIcon.js";
+
+
 
 export {
 
@@ -261,6 +268,7 @@ export {
   WarningCircle,
   WarningCirclePink,
   Video,
+  MonoWhiteVideo,
 
 
   // System icons
@@ -375,5 +383,8 @@ export {
   DBRentIcon,
   DBTravelIcon,
   DBWarningIcon,
-  DBWifiIcon
+  DBWifiIcon,
+  DBSocialShareIcon,
+  DBFriendshipIcon,
+  DBWebsiteInfoIcon
 }

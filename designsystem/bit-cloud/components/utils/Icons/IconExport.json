@@ -126,6 +126,21 @@
       "url": "EditorIconsSvg/DBWifiIcon.svg"
     },
     {
+      "name": "DBSocialShareIcon",
+      "title": "Konsumentverket i sociala medier",
+      "url": "EditorIconsSvg/DBSocialShareIcon.svg"
+    },
+    {
+      "name": "DBFriendshipIcon",
+      "title": "Bidrag till organisationer",
+      "url": "EditorIconsSvg/DBFriendshipIcon.svg"
+    },
+    {
+      "name": "DBWebsiteInfoIcon",
+      "title": "Om webbplatsen",
+      "url": "EditorIconsSvg/DBWebsiteInfoIcon.svg"
+    },
+    {
       "name": "DiagramIcon",
       "title": "Diagram",
       "url": "EditorIconsSvg/DiagramIcon.svg"

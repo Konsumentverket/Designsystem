@@ -60,6 +60,7 @@ import {
   WarningCirclePink,
   MonoDownload,
   Video,
+  MonoWhiteVideo,
 
   // Editor Icons
 
