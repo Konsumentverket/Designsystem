@@ -233,7 +233,8 @@ const systemIconDefinitions = {
   WarningCircle,
   WarningCirclePink,
   Video,
-  MonoDownload
+  MonoDownload,
+  MonoWhiteVideo
 };
 
 const editorIconDefinitions = {
