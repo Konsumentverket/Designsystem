@@ -59,6 +59,7 @@ import {
   WarningCircle,
   WarningCirclePink,
   MonoDownload,
+  MonoWhiteDownload,
   Video,
   MonoWhiteVideo,
 
@@ -234,7 +235,8 @@ const systemIconDefinitions = {
   WarningCirclePink,
   Video,
   MonoDownload,
-  MonoWhiteVideo
+  MonoWhiteVideo,
+  MonoWhiteDownload
 };
 
 const editorIconDefinitions = {

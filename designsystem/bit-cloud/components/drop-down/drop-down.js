@@ -146,7 +146,7 @@ export const Dropdown = ({
         )}
         <div
           aria-hidden={!isExpanded}
-          tab-index={!isExpanded ? "-1" : "1" }
+          tabIndex={!isExpanded ? "-1" : "1" }
           id={`dropdown-${id}`}
           css={[itemsWrapperStyle, isExpanded && itemsWrapperExpandedStyle]}
         >
@@ -158,7 +158,7 @@ export const Dropdown = ({
               }
             >
               {data.map((item, index) => (
-                <li key={index}>
+                <li key={index} tabIndex={!isExpanded ? "-1" : "1" }>
                   <Component
                     id={id}
                     onChange={(checked) => handleOptionChange(item.value, checked)}

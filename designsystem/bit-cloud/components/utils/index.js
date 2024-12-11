@@ -13,6 +13,7 @@ import { ChevronRight } from "./Icons/SystemIcons/ChevronRight/ChevronRight.js";
 import { ChevronLeft } from "./Icons/SystemIcons/ChevronLeft/ChevronLeft.js";
 import { MonoEasyToRead } from "./Icons/SystemIcons/MonoEasyToRead/MonoEasyToRead.js";
 import { MonoWhiteVideo } from "./Icons/SystemIcons/MonoWhiteVideo/MonoWhiteVideo.js";
+import { MonoWhiteDownload } from "./Icons/SystemIcons/MonoWhiteDownload/MonoWhiteDownload.js";
 import { MonoSigning } from "./Icons/SystemIcons/MonoSigning/MonoSigning.js";
 import { Volume } from "./Icons/SystemIcons/Volume/Volume.js";
 import { MonoDownload } from "./Icons/SystemIcons/MonoDownload/MonoDownload.js";
@@ -269,6 +270,7 @@ export {
   WarningCirclePink,
   Video,
   MonoWhiteVideo,
+  MonoWhiteDownload,
 
 
   // System icons
