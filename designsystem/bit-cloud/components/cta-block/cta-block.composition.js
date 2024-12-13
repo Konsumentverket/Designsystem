@@ -66,6 +66,54 @@ export const CTABasic = () => {
   );
 }
 
+export const ContactCTAWithButtonAndBlueBackground = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <CtaBlock
+        headline="Rapportera när produkter eller företag bryter mot lagen"
+        text="Konsumentverket granskar varor, tjänster och företag. Om du som konsument upptäcker att ett företag har gjort fel eller ser en risk med en vara eller tjänst kan du anmäla det till oss."
+        backgroundColor={"blue"}
+        contactCta={true}
+        btn={
+          <Button
+            onClick={() => {
+              alert("You clicked the button!")
+            }}
+            iconRight={
+              <Icon icon="MonoArrowRightSmall"/>
+            }
+            text="Skicka in anmälan"
+          />
+        }
+      />
+    </CompositionFonts>
+  );
+}
+
+export const ContactCTAWithLinkAndGreyBackground = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <CtaBlock
+        headline="Rapportera när produkter eller företag bryter mot lagen"
+        text="Konsumentverket granskar varor, tjänster och företag. Om du som konsument upptäcker att ett företag har gjort fel eller ser en risk med en vara eller tjänst kan du anmäla det till oss."
+        backgroundColor={"grey"}
+        contactCta={true}
+        btn={
+          <Button
+            href={"#"}
+            iconRight={
+              <Icon icon="MonoArrowRightSmall"/>
+            }
+            text="Länktext"
+          />
+        }
+      />
+    </CompositionFonts>
+  );
+}
+
 
 export const CTAWithButtonNoImage = () => {
   return (

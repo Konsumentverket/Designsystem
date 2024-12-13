@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { newColors, breakpoints } from '@konsumentverket-sverige/designsystem.utils';
+import {newColors, typography} from '@konsumentverket-sverige/designsystem.utils';
 
 
 export const ctaWrapper = css`
@@ -8,7 +8,6 @@ export const ctaWrapper = css`
   width: 100%;
   justify-content: center;
   border-radius: 16px;
-  background: ${newColors.kovWhite};
   box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
   overflow: hidden;
 
@@ -33,6 +32,18 @@ export const ctaWrapper = css`
   }
 `
 
+export const whiteBackground = css`
+  background: ${newColors.kovWhite};
+`
+
+export const blueBackground = css`
+  background: ${newColors.shades.lightBlue50};
+`
+
+export const greyBackground = css`
+  background: ${newColors.shades.lightGrey25};
+`
+
 export const focusHeadline = css`
   font-size: 2.6rem;
   line-height: 1.3;
@@ -55,7 +66,14 @@ export const focusText = css`
   @media (min-width: 650px) {
     margin-bottom: 3.2rem;
   }
+`
 
+export const paragraphStyling = css`
+  ${typography.paragraph};
+
+  & {
+    margin-bottom: 16px;
+  }
 `
 
 export const textArea = css`
@@ -72,13 +90,50 @@ export const textArea = css`
 
   button {
     width: auto;
-    padding: 1.6rem 3.2rem 1.6rem 2.4rem;
+    padding: 1.6rem 2.4rem;
   }
 
   a {
     width: fit-content;
     text-decoration: none;
     justify-content: flex-start;
+  }
+`
+
+export const smallHeadlineStyle = css`
+  ${typography.h3NoMargin};
+
+  & {
+    margin-bottom: 16px;
+  }
+`
+
+export const smallPaddingStyle = css`
+  padding: 24px 16px;
+
+  @media (min-width: 650px) {
+    padding: 24px;
+  }
+`
+
+export const buttonRightStyle = css`
+  a {
+    width: auto;
+    justify-content: center;
+
+    @media (min-width: 650px) {
+      width: fit-content;
+      margin-left: auto;
+    }
+  }
+
+  button {
+    width: 100%;
+
+    @media (min-width: 650px) {
+      width: auto;
+      margin-left: auto;
+    }
   }
 `
 
