@@ -153,6 +153,7 @@ export const Dropdown = ({
           {data && (
             <ul
               css={itemsListStyle}
+              tabIndex={!isExpanded ? "-1" : "1" }
               role={
                 type === "radio" ? "radiogroup" : "group"
               }
