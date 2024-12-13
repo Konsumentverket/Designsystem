@@ -23,7 +23,7 @@ export const CtaBlock = ({
   image,
   imageAlt,
   icon,
-  backgroundColor= "white",
+  backgroundColor= "White",
   imageComponent,
   contentfulName,
   contentfulId,
@@ -47,9 +47,9 @@ export const CtaBlock = ({
   if (imageArea == null) imageclass = "noimage";
 
   const validBackgroundColors = {
-    white: whiteBackground,
-    blue: blueBackground,
-    grey: greyBackground
+    White: whiteBackground,
+    Blue: blueBackground,
+    Grey: greyBackground
   };
 
   const selectedBackgroundColor = validBackgroundColors[backgroundColor] || whiteBackground;
