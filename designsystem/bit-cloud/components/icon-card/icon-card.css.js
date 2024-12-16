@@ -20,6 +20,11 @@ export const iconStyle = css`
     height: 24px;
     width: 24px;
     fill: ${newColors.shades.fullBlue};
+
+    ${medium} {
+      height: 32px;
+      width: 32px;
+    }
 `;
 
 export const iconCardStyle = css`

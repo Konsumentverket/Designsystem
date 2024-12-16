@@ -173,7 +173,11 @@ import {
   DBRentIcon,
   DBTravelIcon,
   DBWarningIcon,
-  DBWifiIcon
+  DBWifiIcon,
+  DBSocialShareIcon,
+  DBFriendshipIcon,
+  DBWebsiteInfoIcon
+
 } from "@konsumentverket-sverige/designsystem.utils"
 
 const systemIconDefinitions = {
@@ -348,7 +352,10 @@ const editorIconDefinitions = {
   BabyCarriage,
   Ellipsis,
   HandHeart,
-  Snowboarding
+  Snowboarding,
+  DBSocialShareIcon,
+  DBFriendshipIcon,
+  DBWebsiteInfoIcon
 }
 
 const Icon = ({ icon, className, style, title, ...otherAttr }) => {
