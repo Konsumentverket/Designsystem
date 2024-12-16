@@ -1,33 +1,31 @@
-import { css } from "@emotion/css";
-import { colors } from '@konsumentverket-sverige/designsystem.utils';
+import { css } from '@emotion/core';
+import {
+  colors,
+  newColors,
+  breakpoints,
+} from '@konsumentverket-sverige/designsystem.utils';
+
 
 export const InputStyle = (hasInnerContent) => css`
+    border-radius: 8px;
+    border: 1px solid ${newColors.shades.fullBlue};
+    height: 57px;
+    padding: 0 16px;
     width: 100%;
-    padding: 1.2rem ${hasInnerContent ? '4.5rem' : '1.6rem'} 1.2rem 1.6rem;
-    border: 2px solid ${colors.theme3.midLight};
-    border-radius: 0.8rem;
-    font-size: 1.8rem;
-    line-height: 3rem;
-    height: 5.4rem;
-    box-sizing: border-box;
-    -webkit-appearance: none;
+    font-size: 1.6rem;
+    margin-bottom: 24px;
 
-    &:focus{
-        outline: none;
-        border-color: ${colors.theme1.mid}
+    @media (min-width: ${breakpoints.m}) {
+      margin-bottom: 0;
     }
 
-    &::placeholder, &::-webkit-input-placeholder {
-        font-style: italic;
-        color: ${colors.theme3.mid};
-    }
     &::-ms-clear{
         display:none;
         width: 0;
-        height: 0; 
+        height: 0;
     }
     &::-webkit-search-cancel-button{
-        appearance: none;   
+        appearance: none;
     }
 `
 export const invalidStyle = css`
@@ -40,7 +38,7 @@ export const InputWrapperStyle = css`
 
 `
 
-export const ClearInput = css` 
+export const ClearInput = css`
     appearance: none;
     position: absolute;
     right: 1.6rem;
@@ -58,7 +56,7 @@ export const ClearInput = css`
     &:focus{
         outline: none;
     }
-    
+
 `
 export const LoadingStyle = css`
 
@@ -68,9 +66,7 @@ export const LoadingStyle = css`
 
 `
 export const Label = css`
-  color: #4D4D4D;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
-  margin-bottom: .8rem;
-  display: block;
+   display: block;
+   font-weight: 700;
+   margin-bottom: 18px;
 `
