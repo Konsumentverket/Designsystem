@@ -63,7 +63,7 @@ import { MonoBlueRss } from "./Icons/SystemIcons/MonoBlueRss/MonoBlueRss";
 import { WarningCircle } from "./Icons/SystemIcons/WarningCircle/WarningCircle";
 import { WarningCirclePink } from "./Icons/SystemIcons/WarningCirclePink/WarningCirclePink";
 import { Video } from "./Icons/SystemIcons/Video/Video";
-
+import { Information } from "./Icons/SystemIcons/Information/Information";
 
 
 // Editor icons
@@ -271,6 +271,7 @@ export {
   Video,
   MonoWhiteVideo,
   MonoWhiteDownload,
+  Information,
 
 
   // System icons
