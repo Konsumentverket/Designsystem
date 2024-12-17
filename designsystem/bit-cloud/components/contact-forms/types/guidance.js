@@ -7,6 +7,7 @@ import { Heading } from '@konsumentverket-sverige/designsystem.heading';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 import {
   form,
+  formTitle,
   formRow,
   inputError,
   errorMessage,
@@ -61,9 +62,8 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
     }
   };
 
-  const maxLengthSubject = 40;
+  const maxLengthInput = 40;
   const maxLengthText = 2000;
-
 
   return (
     <form
@@ -71,7 +71,12 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
       data-comp="guidance"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <Heading text={title} level={2} />
+      {title && (
+        <h2 css={formTitle}>
+          {title}
+        </h2>
+      )}
+
       <div css={[formRow]}>
         <div>
           <label htmlFor="email">E-post (obligatoriskt)*</label>
@@ -97,33 +102,65 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
         </div>
         <div>
           <label htmlFor="municipality">Kommun (frivilligt)</label>
-          <input
-            id="municipality"
-            placeholder="Skriv din kommun"
-            css={errors.municipality ? inputError : null}
-            {...register('municipality', {required: false})}
-          />
+
+          <span css={inputWrapper}>
+            <input
+              id="municipality"
+              placeholder="Skriv din kommun"
+              css={errors.municipality ? inputError : null}
+              {...register('municipality', {
+                required: false,
+                maxLength: {
+                  value: maxLengthInput,
+                  message: `Texten får inte vara mer än ${maxLengthInput} tecken.`,
+                },
+              })}
+            />
+            <span css={[
+              characterCountInput,
+              watch("municipality", "").length > maxLengthInput ? exceededMaxCount : null
+            ]}>{
+              watch("municipality", "").length
+            }/40
+            </span>
+          </span>
+
           {errors.municipality && (
             <span css={[errorMessage]}>
               <Icon icon="Warn"/>
-              Ange ditt förnamn
+              Texten får inte vara mer än {maxLengthInput} tecken.
             </span>
           )}
         </div>
         <div>
           <label htmlFor="company">Företag (frivilligt)</label>
-          <input
-            id="company"
-            placeholder="Skriv vilket företag det berör"
-            css={errors.company ? inputError : null}
-            {...register('company', {required: false})}
-          />
-          {errors.company && (
-            <span css={[errorMessage]}>
-              <Icon icon="Warn"/>
-              Skriv vilket företag det berör
+          <span css={inputWrapper}>
+            <input
+              id="company"
+              placeholder="Skriv vilket företag det berör"
+              css={errors.company ? inputError : null}
+              {...register('company', {
+                required: false,
+                maxLength: {
+                  value: maxLengthInput,
+                  message: `Texten får inte vara mer än ${maxLengthInput} tecken.`,
+                },
+              })}
+            />
+            <span css={[
+              characterCountInput,
+              watch("company", "").length > maxLengthInput ? exceededMaxCount : null
+            ]}>{
+              watch("company", "").length
+            }/40
             </span>
-          )}
+          </span>
+            {errors.company && (
+              <span css={[errorMessage]}>
+              <Icon icon="Warn"/>
+              Texten får inte vara mer än {maxLengthInput} tecken.
+            </span>
+            )}
         </div>
       </div>
 
@@ -147,19 +184,21 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
             <input
               id="subject"
               placeholder="Skriv ämnet för ditt ärende"
-              css={errors.subject ? inputError : null}
+              css={
+                errors.subject ? inputError : null
+              }
               {...register('subject', {
-                required: true,
+                required: "Skriv ämnet för ditt ärende",
                 maxLength: {
-                  value: maxLengthSubject,
-                  message: `Ämnestiteln får inte vara mer än ${maxLengthSubject} tecken lång.`,
+                  value: maxLengthInput,
+                  message: `Ämnestiteln får inte vara mer än ${maxLengthInput} tecken lång.`,
                 },
               })}
             />
 
             <span css={[
               characterCountInput,
-              watch("subject", "").length > maxLengthSubject ? exceededMaxCount : null
+              watch("subject", "").length > maxLengthInput ? exceededMaxCount : null
             ]}>{
               watch("subject", "").length
             }/40
@@ -184,7 +223,7 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
               placeholder="Skriv din fråga"
               css={errors.text ? inputError : null}
               {...register('text', {
-                required: true,
+                required: "Skriv din fråga",
                 maxLength: {
                   value: maxLengthText,
                   message: `Texten får inte vara mer än ${maxLengthText} tecken lång.`,

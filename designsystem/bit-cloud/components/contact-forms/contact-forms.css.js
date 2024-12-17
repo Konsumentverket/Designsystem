@@ -12,18 +12,25 @@ export const form = css`
   flex-direction: column;
   background-color: ${newColors.shades.lightBlue50};
   border-radius: 8px;
-  padding: 24px;
+  padding: 24px 16px;
 
-  h2 {
-    font-weight: 700;
-    font-size: 2.4rem;
-    margin-bottom: 35px;
+  @media (min-width: ${breakpoints.m}) {
+    padding: 24px;
   }
 
   button {
     @media (min-width: ${breakpoints.m}) {
       margin-left: auto;
     }
+  }
+`;
+
+export const formTitle = css`
+  ${typography.h2NoMargin};
+  margin-bottom: 16px;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-bottom: 32px;
   }
 `;
 
@@ -60,7 +67,7 @@ export const formRow = css`
     border: 1px solid ${newColors.shades.fullBlue};
     width: 100%;
     font-size: 1.6rem;
-    margin-bottom: 24px;
+    //margin-bottom: 24px;
 
     @media (min-width: ${breakpoints.m}) {
       margin-bottom: 0;
@@ -68,6 +75,7 @@ export const formRow = css`
 
     &::placeholder {
       ${typography.textSmall};
+      font-style: italic;
     }
   }
 
@@ -137,11 +145,19 @@ export const inputWrapper = css`
   position: relative;
   display: flex;
   align-items: center;
+  //margin-bottom: 24px;
+
+  input {
+    padding-right: 70px;
+    //margin-bottom: 0;
+  }
 `;
 
 export const characterCount = css`
   ${typography.textSmall};
   color: ${newColors.readingBlack};
+  background: #ffffff;
+  padding: 2px 0 2px 2px;
 `;
 
 export const characterCountInput = css`
@@ -149,6 +165,7 @@ export const characterCountInput = css`
   position: absolute;
   top: 50%;
   right: 16px;
+
   transform: translateY(-50%);
 `;
 
@@ -156,10 +173,10 @@ export const characterCountTextArea = css`
   ${characterCount};
   position: absolute;
   right: 16px;
-  bottom: 32px;
+  bottom: 12px;
 
   @media (min-width: ${breakpoints.m}) {
-    bottom: 12px;
+    //bottom: 32px;
   }
 `;
 

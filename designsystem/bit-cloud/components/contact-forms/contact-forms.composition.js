@@ -14,6 +14,7 @@ export const BasicFormGuidance = () => {
       <ContactForms
         title="Kontakta vägledning"
         type={'guidance'}
+        handleFormSubmit={(data) => console.log(data)}
       >
         <WithContentExpander
           useLightBlueAlternativeStyling={true}
