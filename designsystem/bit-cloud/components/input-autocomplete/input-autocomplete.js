@@ -54,7 +54,8 @@ export const InputAutocomplete = forwardRef(({
   searchButton = false,
   searchButtonText = 'Sök',
   searchButtonAriaLabel = 'Sök',
-  keyword = ''
+  keyword = '',
+  sanitizeSuggestions = false
 }, ref) => {
   const [query, setQuery] = useState('');
   const [initQuery, setInitQuery] = useState('');
@@ -77,7 +78,7 @@ export const InputAutocomplete = forwardRef(({
   useEffect(() => {
     if (!keyword || keyword == "") return;
 
-    setInitQuery(keyword);
+    setInitQuery(sanitizeText(keyword));
   }, [keyword]);
 
 
@@ -202,6 +203,13 @@ export const InputAutocomplete = forwardRef(({
     }
   };
 
+  const sanitizeText = (txt) => {
+    if (!sanitizeSuggestions) return txt;
+
+    const regex = /(<([^>]+)>)/gi;
+    return txt ? txt.replace(regex, "") : '';
+  }
+
   const showingResult = isDropdownOpen && suggestions.length > 0 && !loading;
 
   const formatFreeTextInputToSuggestion = (query) => ({[suggestionText]: query})
@@ -295,7 +303,7 @@ export const InputAutocomplete = forwardRef(({
                     }}
                     tabIndex="-1"
                   >
-                    {suggestion[suggestionText]}
+                    {sanitizeText(suggestion[suggestionText])}
                   </button>
                 </li>
               ))}
