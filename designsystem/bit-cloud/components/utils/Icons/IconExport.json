@@ -13,7 +13,7 @@
     {
       "name": "DBCarIcon",
       "title": "Bilar",
-      "url": "EditorIconsSvg/DBCarIcon.svg"
+      "url": "EditorIconsSvg/blue-dual-car.svg"
     },
     {
       "name": "DBClothesIcon",
@@ -338,7 +338,7 @@
     {
       "name": "Cars",
       "title": "Bilar",
-      "url": "EditorIconsSvg/blue-dual-car.svg"
+      "url": "EditorIconsSvg/Cars.svg"
     },
     {
       "name": "ComputerTvGameConsole",
