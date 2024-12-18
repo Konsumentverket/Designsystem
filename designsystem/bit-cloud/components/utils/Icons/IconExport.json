@@ -3,7 +3,7 @@
     {
       "name": "DBAnimalsIcon",
       "title": "Djur",
-      "url": "EditorIconsSvg/DBAnimalsIcon.svg"
+      "url": "EditorIconsSvg/blue-dual-paw.svg"
     },
     {
       "name": "DBCalendarIcon",
@@ -68,7 +68,7 @@
     {
       "name": "DBHealthIcon",
       "title": "Skönhet, frisör och hälsa",
-      "url": "EditorIconsSvg/DBHealthIcon.svg"
+      "url": "EditorIconsSvg/blue-dual-health.svg"
     },
     {
       "name": "DBJusticeIcon",
@@ -93,12 +93,12 @@
     {
       "name": "DBPadlockIcon",
       "title": "Försäkringar",
-      "url": "EditorIconsSvg/DBPadlockIcon.svg"
+      "url": "EditorIconsSvg/blue-dual-padlock.svg"
     },
     {
       "name": "DBPhoneIcon",
       "title": "Mobiltelefon och abonnemang",
-      "url": "EditorIconsSvg/DBPhoneIcon.svg"
+      "url": "EditorIconsSvg/blue-dual-phone.svg"
     },
     {
       "name": "DBRenovationIcon",
@@ -123,7 +123,7 @@
     {
       "name": "DBWifiIcon",
       "title": "Bredband, fiber och tv-avtal",
-      "url": "EditorIconsSvg/DBWifiIcon.svg"
+      "url": "EditorIconsSvg/blue-dual-wifi.svg"
     },
     {
       "name": "DBSocialShareIcon",
@@ -338,7 +338,7 @@
     {
       "name": "Cars",
       "title": "Bilar",
-      "url": "EditorIconsSvg/Cars.svg"
+      "url": "EditorIconsSvg/blue-dual-car.svg"
     },
     {
       "name": "ComputerTvGameConsole",
