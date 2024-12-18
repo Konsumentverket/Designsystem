@@ -63,6 +63,7 @@ import {
   Video,
   MonoWhiteVideo,
   Information,
+  MonoWhiteChat,
 
   // Editor Icons
 
@@ -243,6 +244,7 @@ const systemIconDefinitions = {
   MonoWhiteVideo,
   MonoWhiteDownload,
   Information,
+  MonoWhiteChat,
 };
 
 const editorIconDefinitions = {

@@ -64,6 +64,7 @@ import { WarningCircle } from "./Icons/SystemIcons/WarningCircle/WarningCircle";
 import { WarningCirclePink } from "./Icons/SystemIcons/WarningCirclePink/WarningCirclePink";
 import { Video } from "./Icons/SystemIcons/Video/Video";
 import { Information } from "./Icons/SystemIcons/Information/Information";
+import { MonoWhiteChat } from "./Icons/SystemIcons/MonoWhiteChat/MonoWhiteChat";
 
 
 // Editor icons
@@ -272,6 +273,7 @@ export {
   MonoWhiteVideo,
   MonoWhiteDownload,
   Information,
+  MonoWhiteChat,
 
 
   // System icons
