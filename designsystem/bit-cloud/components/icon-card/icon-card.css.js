@@ -55,6 +55,10 @@ export const iconCardStyle = css`
       }
     }
 
+    svg {
+     flex-shrink: 0;
+    }
+
     &:hover {
         background-color: ${newColors.primaries.lightBlue};
         border: 1px solid ${newColors.shades.fullBlue};
