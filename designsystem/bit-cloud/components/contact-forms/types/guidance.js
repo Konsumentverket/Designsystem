@@ -43,8 +43,6 @@ export const Guidance = ({ title, children, handleFormSubmit, texts }) => {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [recaptchaError, setRecaptchaError] = useState('');
 
-  console.log("kolla texts: ", texts)
-
   if(!texts) return null;
 
   const {
