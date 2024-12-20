@@ -14,6 +14,7 @@ export const FormSuccess = ({
   contentfulId,
   contentfulName,
   buttonClick = () => {},
+  buttonText,
 }) => {
   return (
     <div
@@ -39,7 +40,7 @@ export const FormSuccess = ({
       )}
       <Button
         onClick={buttonClick}
-        text="Ladda ner bekräftelse"
+        text={buttonText ?? "Ladda ner bekräftelse"}
         iconRight={
           <Icon icon="MonoDownload" />
         }
