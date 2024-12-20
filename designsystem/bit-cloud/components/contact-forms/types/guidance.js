@@ -25,9 +25,9 @@ import {
   centerPosition,
   rightPosition,
   informationButtonOpen,
+  tooltipText,
 } from '../contact-forms.css.js';
 import {
-  GoogleReCaptchaProvider,
   useGoogleReCaptcha,
 } from 'react-google-recaptcha-v3';
 import {useOnClickOutside} from '@konsumentverket-sverige/designsystem.utils';
@@ -373,7 +373,7 @@ const ToolTip = ({position = 'left', id = '', text=''}) => {
           onBlur={handleBlur}
           id={`tooltip-${id}`}
         >
-          <p>{text}</p>
+          <p css={tooltipText}>{text}</p>
           <button
             type="button"
             onClick={() => setIsOpen(false)}

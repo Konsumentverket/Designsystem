@@ -159,6 +159,10 @@ export const tooltip = css`
   }
 `;
 
+export const tooltipText = css`
+  ${typography.textMini};
+`;
+
 export const showTooltip = css`
   display: flex;
   justify-content: space-between;
