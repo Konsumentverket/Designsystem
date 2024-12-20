@@ -190,6 +190,7 @@ import { DBSocialShareIcon } from "./Icons/EditorIcons/DBSocialShareIcon/DBSocia
 import { DBFriendshipIcon } from "./Icons/EditorIcons/DBFriendshipIcon/DBFriendshipIcon.js";
 import { DBWebsiteInfoIcon } from "./Icons/EditorIcons/DBWebsiteInfoIcon/DBWebsiteInfoIcon.js";
 
+import useOnClickOutside from "./hooks/useOnClickOutside";
 
 
 export {
@@ -207,6 +208,7 @@ export {
   small,
   medium,
   large,
+  useOnClickOutside,
 
   // System icons
 

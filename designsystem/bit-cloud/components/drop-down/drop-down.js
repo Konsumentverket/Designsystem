@@ -16,8 +16,10 @@ import {
 } from './drop-down.css.js';
 import { FormCheckbox } from '@konsumentverket-sverige/designsystem.form-checkbox';
 import { FormRadiobutton } from '@konsumentverket-sverige/designsystem.form-radiobutton';
-import { ChevronRight } from '@konsumentverket-sverige/designsystem.utils';
-import useOnClickOutside from "./useOnClickOutside";
+import {
+  ChevronRight,
+  useOnClickOutside
+} from '@konsumentverket-sverige/designsystem.utils';
 
 const CheckboxOption = ({ text, value, onChange, stateValue, disabled }) => (
     <div css={itemOptionWrapperStyle}>

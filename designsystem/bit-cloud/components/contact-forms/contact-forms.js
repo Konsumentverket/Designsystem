@@ -12,6 +12,7 @@ export const ContactForms = ({
   children,
   handleFormSubmit = () => {},
   type = 'guidance',
+  texts,
 }) => {
   const forms = {
     guidance: Guidance,
@@ -24,7 +25,8 @@ export const ContactForms = ({
   const props = {
     title,
     children,
-    handleFormSubmit
+    handleFormSubmit,
+    texts
   }
 
   return (

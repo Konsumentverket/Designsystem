@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@konsumentverket-sverige/designsystem.button';
-import { Heading } from '@konsumentverket-sverige/designsystem.heading';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 import {
   form,
@@ -21,13 +20,19 @@ import {
   informationButton,
   informationButtonWrapper,
   tooltip,
+  showTooltip,
+  leftPosition,
+  centerPosition,
+  rightPosition,
+  informationButtonOpen,
 } from '../contact-forms.css.js';
 import {
   GoogleReCaptchaProvider,
   useGoogleReCaptcha,
 } from 'react-google-recaptcha-v3';
+import {useOnClickOutside} from '@konsumentverket-sverige/designsystem.utils';
 
-export const Guidance = ({ title, children, handleFormSubmit }) => {
+export const Guidance = ({ title, children, handleFormSubmit, texts }) => {
   const {
     register,
     handleSubmit,
@@ -37,6 +42,28 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
 
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [recaptchaError, setRecaptchaError] = useState('');
+
+  console.log("kolla texts: ", texts)
+
+  if(!texts) return null;
+
+  const {
+    guidanceEmailLabel,
+    guidanceEmailPlaceholder,
+    guidanceEmailHelpText,
+    guidanceMunicipalityLabel,
+    guidanceMunicipalityPlaceholder,
+    guidanceMunicipalityHelpText,
+    guidanceCompanyLabel,
+    guidanceCompanyPlaceholder,
+    guidanceCompanyHelpText,
+    guidanceSubjectLabel,
+    guidanceSubjectPlaceholder,
+    guidanceSubjectHelpText,
+    guidanceQuestionLabel,
+    guidanceQuestionPlaceholder,
+    guidanceSubmitButtonText
+  } = texts;
 
   const onSubmit = async (data) => {
     if (!executeRecaptcha) {
@@ -79,14 +106,14 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
 
       <div css={[formRow]}>
         <div>
-          <label htmlFor="email">E-post (obligatoriskt)*</label>
+          <label htmlFor="email">{guidanceEmailLabel}</label>
           <input
             id="email"
             type="email"
-            placeholder="Skriv din e-postadress"
+            placeholder={guidanceEmailPlaceholder}
             css={errors.email ? inputError : null}
             {...register('email', {
-              required: 'Skriv din e-postadress',
+              required: {guidanceEmailPlaceholder},
               pattern: {
                 value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
                 message: 'Ange en giltig e-postadress ',
@@ -101,12 +128,19 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
           )}
         </div>
         <div>
-          <label htmlFor="municipality">Kommun (frivilligt)</label>
-
+          <div css={labelWrapper}>
+          <label htmlFor="municipality">{guidanceMunicipalityLabel}</label>
+            <ToolTip
+              position="center"
+              id="municipality"
+              text={guidanceMunicipalityHelpText}
+            />
+          </div>
           <span css={inputWrapper}>
             <input
               id="municipality"
-              placeholder="Skriv din kommun"
+              placeholder={guidanceMunicipalityPlaceholder}
+              aria-describedby="tooltip-municipality"
               css={errors.municipality ? inputError : null}
               {...register('municipality', {
                 required: false,
@@ -116,7 +150,9 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
                 },
               })}
             />
-            <span css={[
+            <span
+              aria-hidden={true}
+              css={[
               characterCountInput,
               watch("municipality", "").length > maxLengthInput ? exceededMaxCount : null
             ]}>{
@@ -133,11 +169,19 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
           )}
         </div>
         <div>
-          <label htmlFor="company">Företag (frivilligt)</label>
+          <div css={labelWrapper}>
+            <label htmlFor="company">{guidanceCompanyLabel}</label>
+            <ToolTip
+              position={"right"}
+              id={"company"}
+              text={guidanceCompanyHelpText}
+            />
+          </div>
           <span css={inputWrapper}>
             <input
               id="company"
-              placeholder="Skriv vilket företag det berör"
+              placeholder={guidanceCompanyPlaceholder}
+              aria-describedby="tooltip-company"
               css={errors.company ? inputError : null}
               {...register('company', {
                 required: false,
@@ -147,7 +191,9 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
                 },
               })}
             />
-            <span css={[
+            <span
+              aria-hidden={true}
+              css={[
               characterCountInput,
               watch("company", "").length > maxLengthInput ? exceededMaxCount : null
             ]}>{
@@ -167,36 +213,33 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
       <div css={[formRow]}>
         <div>
           <div css={labelWrapper}>
-            <label htmlFor="subject">Ämne (obligatoriskt)*</label>
-            {/*<div css={informationButtonWrapper}>*/}
-            {/*  <button css={informationButton}>*/}
-            {/*    <Icon icon={'Information'}/>*/}
-            {/*  </button>*/}
-            {/*  <div css={tooltip} role="tooltip" className="tooltip">*/}
-            {/*    <p>Diarienummer hittar du i bekräftelsemejlet du fick när du gjorde anmälan</p>*/}
-            {/*    <button>*/}
-            {/*      <Icon icon={'MonoDeleteSmall'}/>*/}
-            {/*    </button>*/}
-            {/*  </div>*/}
-            {/*</div>*/}
+            <label htmlFor="subject">{guidanceSubjectLabel}</label>
+            <ToolTip
+              position={"left"}
+              id="subject"
+              text={guidanceSubjectHelpText}
+            />
           </div>
           <span css={inputWrapper}>
             <input
               id="subject"
-              placeholder="Skriv ämnet för ditt ärende"
+              placeholder={guidanceSubjectPlaceholder}
+              aria-describedby="tooltip-subject"
               css={
                 errors.subject ? inputError : null
               }
               {...register('subject', {
-                required: "Skriv ämnet för ditt ärende",
+                required: {guidanceSubjectPlaceholder},
                 maxLength: {
                   value: maxLengthInput,
-                  message: `Ämnestiteln får inte vara mer än ${maxLengthInput} tecken lång.`,
+                  message: `Ämnet får inte vara mer än ${maxLengthInput} tecken lång.`,
                 },
               })}
             />
 
-            <span css={[
+            <span
+              aria-hidden={true}
+              css={[
               characterCountInput,
               watch("subject", "").length > maxLengthInput ? exceededMaxCount : null
             ]}>{
@@ -215,22 +258,24 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
 
       <div css={[formRow]}>
         <div>
-          <label htmlFor="text">Din fråga (obligatoriskt)*</label>
+          <label htmlFor="text">{guidanceQuestionLabel}</label>
           <span css={inputWrapper}>
             <textarea
               id="text"
               rows={5}
-              placeholder="Skriv din fråga"
+              placeholder={guidanceQuestionPlaceholder}
               css={errors.text ? inputError : null}
               {...register('text', {
-                required: "Skriv din fråga",
+                required: {guidanceQuestionPlaceholder},
                 maxLength: {
                   value: maxLengthText,
                   message: `Texten får inte vara mer än ${maxLengthText} tecken lång.`,
                 },
               })}
             />
-            <span css={[
+            <span
+              aria-hidden={true}
+              css={[
               characterCountTextArea,
               watch("text", "").length > maxLengthText ? exceededMaxCount : null
             ]}>{
@@ -258,7 +303,88 @@ export const Guidance = ({ title, children, handleFormSubmit }) => {
       )}
 
       <div css={[childrenContainer]}>{children}</div>
-      <Button text="Skicka begäran" iconRight={<Icon icon="ChevronRight"/>}/>
+      <Button className="submitButton" text={guidanceSubmitButtonText} iconRight={<Icon icon="ChevronRight"/>}/>
     </form>
   );
 };
+
+const ToolTip = ({position = 'left', id = '', text=''}) => {
+  const [isOpen , setIsOpen] = useState(false);
+
+  const tooltipRef = useRef();
+
+  useOnClickOutside(tooltipRef, () => setIsOpen(false));
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape' || event.key === 'Esc') {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.removeEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
+
+  if (!text) return null;
+
+  const onClick = () => {
+    setIsOpen(!isOpen);
+  }
+
+  const positions = {
+    left: leftPosition,
+    center: centerPosition,
+    right: rightPosition,
+  }
+
+  const handleBlur = (e) => {
+    // Close tooltip when focusing outside of it
+    if (!tooltipRef.current.contains(e.relatedTarget)) {
+      setIsOpen(false);
+    }
+  };
+
+  return (
+    <div css={informationButtonWrapper} className="tooltip">
+        <button
+          type="button"
+          css={[informationButton, isOpen ? informationButtonOpen : null]}
+          onClick={onClick}
+          aria-controls={`tooltip-${id}`}
+          aria-expanded={isOpen}
+        >
+          <Icon icon={'Information'}/>
+        </button>
+        <div
+          css={[
+            tooltip,
+            positions[position],
+            isOpen ? showTooltip : null
+          ]}
+          role="tooltip"
+          className="tooltip"
+          ref={tooltipRef}
+          onBlur={handleBlur}
+          id={`tooltip-${id}`}
+        >
+          <p>{text}</p>
+          <button
+            type="button"
+            onClick={() => setIsOpen(false)}
+            aria-controls={`tooltip-${id}`}
+            aria-label={`Stäng tooltip-${id}`}
+          >
+            <Icon icon={'MonoDeleteSmall'}/>
+          </button>
+        </div>
+    </div>
+  )
+}

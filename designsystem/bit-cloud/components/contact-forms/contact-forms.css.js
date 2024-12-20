@@ -1,10 +1,8 @@
 import { css } from '@emotion/core';
 import {
-  checkPath,
-  colors,
   newColors,
-  spacing,
-  breakpoints, typography,
+  breakpoints,
+  typography,
 } from '@konsumentverket-sverige/designsystem.utils';
 
 export const form = css`
@@ -18,7 +16,7 @@ export const form = css`
     padding: 24px;
   }
 
-  button {
+  .submitButton {
     @media (min-width: ${breakpoints.m}) {
       margin-left: auto;
     }
@@ -54,6 +52,8 @@ export const formRow = css`
     display: block;
     font-weight: 700;
     margin-bottom: 16px;
+    margin-right: 16px;
+    height: 23px;
   }
 
   input {
@@ -67,7 +67,6 @@ export const formRow = css`
     border: 1px solid ${newColors.shades.fullBlue};
     width: 100%;
     font-size: 1.6rem;
-    //margin-bottom: 24px;
 
     @media (min-width: ${breakpoints.m}) {
       margin-bottom: 0;
@@ -91,7 +90,7 @@ export const formRow = css`
 `;
 
 export const labelWrapper = css`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin-bottom: 16px;
 
@@ -101,26 +100,46 @@ export const labelWrapper = css`
 `;
 
 export const informationButtonWrapper = css`
-  outline: 1px solid green;
   position: relative;
+  top: -4px;
 `;
 
 export const informationButton = css`
-  outline: 1px solid hotpink;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 16px;
+  position: relative;
+  background: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    z-index: 2;
+    top: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid ${newColors.primaries.lightOrange};
+  }
+`;
+
+export const informationButtonOpen = css`
+    &::after {
+      display: block;
+    }
 `;
 
 export const tooltip = css`
+  display: none;
   background: ${newColors.primaries.lightOrange};
-  padding: 16px;
-  display: flex;
+  padding: 16px 16px 0 16px;
   position: absolute;
-  max-width: 251px;
-  left: 0;
-  top: calc(100% + 10px);
+  width: 275px;
+  left: -127px;
+  top: calc(100% + 11px);
   z-index: 1;
   border-radius: 8px;
   box-shadow: 0px 4px 20px rgba(22, 34, 89, 0.10);
@@ -130,6 +149,7 @@ export const tooltip = css`
     display: flex;
     align-self: baseline;
     margin-left: 8px;
+    cursor: pointer;
   }
 
   svg {
@@ -139,17 +159,36 @@ export const tooltip = css`
   }
 `;
 
+export const showTooltip = css`
+  display: flex;
+  justify-content: space-between;
+`;
 
+export const leftPosition = css`
+  @media (min-width: ${breakpoints.m}) {
+    left: -21px;
+  }
+`;
+
+export const centerPosition = css`
+  @media (min-width: ${breakpoints.m}) {
+    left: -127px; // (275 / 2) - (23 / 2)
+  }
+`;
+
+export const rightPosition = css`
+  @media (min-width: ${breakpoints.m}) {
+    left: -227px; // 250 - 23
+  }
+`;
 
 export const inputWrapper = css`
   position: relative;
   display: flex;
   align-items: center;
-  //margin-bottom: 24px;
 
   input {
     padding-right: 70px;
-    //margin-bottom: 0;
   }
 `;
 
@@ -165,7 +204,6 @@ export const characterCountInput = css`
   position: absolute;
   top: 50%;
   right: 16px;
-
   transform: translateY(-50%);
 `;
 
@@ -174,10 +212,6 @@ export const characterCountTextArea = css`
   position: absolute;
   right: 16px;
   bottom: 12px;
-
-  @media (min-width: ${breakpoints.m}) {
-    //bottom: 32px;
-  }
 `;
 
 
