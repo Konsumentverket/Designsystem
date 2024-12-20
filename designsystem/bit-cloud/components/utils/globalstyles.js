@@ -199,6 +199,9 @@ const globalStyles = (
         }
       }
 
+      .grecaptcha-badge {
+        z-index: 1;
+      }
     }
 `;
 
