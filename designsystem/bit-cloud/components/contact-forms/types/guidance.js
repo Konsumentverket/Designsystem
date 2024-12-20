@@ -358,6 +358,7 @@ const ToolTip = ({position = 'left', id = '', text=''}) => {
           onClick={onClick}
           aria-controls={`tooltip-${id}`}
           aria-expanded={isOpen}
+          aria-label={`Visa en hjälpande text för detta fält: ${id}`}
         >
           <Icon icon={'Information'}/>
         </button>
