@@ -48,7 +48,7 @@ export const formRow = css`
     width: 100%;
   }
 
-  label {
+  label:not(.noStyle) {
     display: block;
     font-weight: 700;
     margin-bottom: 16px;
@@ -86,6 +86,78 @@ export const formRow = css`
     &::placeholder {
       font-style: italic;
     }
+  }
+`;
+
+export const inputStyle = css`
+  height: 57px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid ${newColors.shades.fullBlue};
+  width: 100%;
+  font-size: 1.6rem;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-bottom: 0;
+  }
+
+  &::placeholder {
+    ${typography.textSmall};
+    font-style: italic;
+  }
+`;
+
+export const textAreaStyle = css`
+  min-height: 57px;
+  padding: 12px 16px;
+  resize: vertical;
+
+  border-radius: 8px;
+  border: 1px solid ${newColors.shades.fullBlue};
+  width: 100%;
+  font-size: 1.6rem;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-bottom: 0;
+  }
+
+  &::placeholder {
+    ${typography.textSmall};
+    font-style: italic;
+  }
+`;
+
+
+export const labelStyle = css`
+  display: block;
+  font-weight: 700;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  height: 23px;
+`;
+
+export const formInputWrapper = css`
+  position: relative;
+  width: 100%;
+  margin-bottom: 32px;
+`;
+
+
+export const inputDescriptionStyle = css`
+  //height: 57px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid ${newColors.shades.fullBlue};
+  width: 100%;
+  font-size: 1.6rem;
+
+  @media (min-width: ${breakpoints.m}) {
+    margin-bottom: 0;
+  }
+
+  &::placeholder {
+    ${typography.textSmall};
+    font-style: italic;
   }
 `;
 
@@ -244,6 +316,9 @@ export const errorMessage = css`
 
 export const childrenContainer = css`
   margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `;
 
 export const recaptchaContainer = css`
@@ -253,4 +328,192 @@ export const recaptchaContainer = css`
 
 export const inputError = css`
   border-color: ${newColors.secondaries.fullPink} !important;
+`;
+
+export const fileUploadWrapper = css`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+`;
+
+export const dragAreaWrapper = css`
+  position: relative;
+  display: flex;
+  height: 168px;
+`;
+
+export const fileUploadLabel = css`
+  display: block;
+  ${typography.subHeadingXS};
+  margin-bottom: 16px;
+  margin-top: 0;
+  color: ${newColors.kovBlack};
+`;
+
+export const fileUploadLabelText = css`
+  margin-right: 8px;
+`;
+
+export const fileUploadTypes = css`
+  ${typography.clickSmallAlt};
+  color: ${newColors.shades.kovBlack50};
+
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
+export const dragArea = css`
+  display: block;
+  cursor: pointer;
+
+  & {
+    position: absolute;
+    margin: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    &:focus-within {
+      .tabnav & {
+        outline: 4px solid ${newColors.secondaries.fullGreen};
+      }
+    }
+  }
+`;
+
+export const uploadBox = css`
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  background: ${newColors.shades.lightBlue};
+  border: 1px solid ${newColors.shades.fullBlue50};
+  border-radius: 8px;
+  align-items: center;
+
+  &:hover {
+    background: ${newColors.shades.lightBlue50};
+  }
+`;
+
+export const uploadBoxActive = css`
+  background: ${newColors.shades.lightBlue50};
+`;
+
+export const uploadBoxTitleStyle = css`
+  margin-bottom: 8px;
+  ${typography.clickMedium};
+  display: flex;
+  align-items: center;
+`;
+
+export const iconMarginLeft = css`
+  margin-left: 8px;
+`;
+
+export const iconMarginRight = css`
+  margin-right: 8px;
+`;
+
+export const iconSize = css`
+  min-width: 20px;
+  width: 20px;
+`;
+
+export const uploadBoxTextStyle = css`
+  ${typography.textSmall};
+  color: ${newColors.shades.kovBlack50};
+`;
+
+export const visuallyHidden = css`
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+`;
+
+// export const fileUploadInput = css`
+//   position: absolute;
+//   opacity: 0;
+//   width: 1px;
+//   height: 1px;
+//   margin: -1px;
+//   padding: 0;
+//   border: 0;
+//   clip: rect(0, 0, 0, 0);
+//   overflow: hidden;
+//   //display: none;
+// `;
+
+export const fileListStyle = css`
+    list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+`;
+
+export const listItem = css`
+  //background-color: green;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: ${newColors.kovWhite};
+  box-shadow: 0px 4px 20px 0px rgba(22, 34, 89, 0.10);
+  margin-bottom: 0;
+`;
+
+
+export const fileTileTop = css`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+`;
+
+export const fileThumbnail = css`
+  //outline: 1px solid blue;
+  padding: 8px 16px;
+  border-radius: 16px;
+  background-color: ${newColors.shades.lightBlue50};
+  display: flex;
+  align-items: center;
+  color: ${newColors.kovBlack};
+
+  //background: ${newColors.primaries.lightOrange};
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%230061C2FF' stroke-width='2' stroke-dasharray='4%2c 8' stroke-dashoffset='81' stroke-linecap='square'/%3e%3c/svg%3e");
+  margin-right: 16px;
+
+  //svg {
+  //  fill: green;
+  //}
+`;
+
+
+
+export const deleteFileButton = css`
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  ${typography.clickSmallUL};
+  white-space: nowrap;
+  //margin-left: 16px;
+`;
+
+export const fileDescriptionInstruction = css`
+  ${typography.textSmall};
+  color: ${newColors.shades.kovBlack50};
+
+  strong {
+    ${typography.subHeadingXS};
+    color: ${newColors.kovBlack};
+    margin-right: 8px;
+  }
 `;

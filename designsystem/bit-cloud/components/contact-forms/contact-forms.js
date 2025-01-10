@@ -5,6 +5,7 @@ import {
 } from 'react-google-recaptcha-v3';
 
 import {Guidance} from "./types/guidance";
+import {OtherCases} from "./types/otherCases";
 
 export const ContactForms = ({
   recaptchaSiteKey,
@@ -16,6 +17,7 @@ export const ContactForms = ({
 }) => {
   const forms = {
     guidance: Guidance,
+    otherCases: OtherCases,
   }
 
   const SelectedForm = forms[type] || null;

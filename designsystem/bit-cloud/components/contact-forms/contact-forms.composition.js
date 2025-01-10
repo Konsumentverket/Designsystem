@@ -24,6 +24,25 @@ const formMicroCopy = {
     guidanceQuestionLabel: 'Din fråga (obligatoriskt)*',
     guidanceQuestionPlaceholder: 'Skriv din fråga',
     guidanceSubmitButtonText: 'Skicka',
+  },
+  otherCases: {
+    otherCasesEmailLabel: 'E-post (obligatoriskt)*',
+    otherCasesEmailPlaceholder: 'Skriv din e-postadress',
+    otherCasesEmailHelpText: 'Hjälptext för emailfält',
+    otherCasesSubjectLabel: 'Ämne (obligatoriskt)*',
+    otherCasesSubjectPlaceholder: 'Beskriv kort vad din fråga handlar om',
+    otherCasesSubjectHelpText: 'Hjälptext för ämnesfält',
+    otherCasesQuestionLabel: 'Din fråga (obligatoriskt)*',
+    otherCasesQuestionPlaceholder: 'Skriv kort vad du vill ha hjälp med',
+    otherCasesFileLabel: 'Lägg till filer',
+    otherCasesFileTypes: '(pdf, docx, txt, odt, jpg, png, gif. Max 20 MB)',
+    otherCasesUploadBoxLabel: 'Ladda upp dina filer här',
+    otherCasesUploadBoxText: 'Dra filer hit eller klicka här för att bläddra',
+    otherCasesFileDescriptionLabel: 'Beskriv vad filen visar',
+    otherCasesFileDescriptionText: '(t.ex. bild på varan, annonsen eller mejlen)',
+    otherCasesRemoveFile: 'Ta bort filen',
+    otherCaseFileDescriptionPlaceholder: 'Skriv en kort beskrivning av filen',
+    otherCasesSubmitButtonText: 'Skicka',
   }
 }
 
@@ -37,6 +56,39 @@ export const BasicFormGuidance = () => {
         handleFormSubmit={(data) => console.log(data)}
         texts={formMicroCopy.guidance}
       >
+        <WithContentExpander
+          useLightBlueAlternativeStyling={true}
+          text="Så behandlar vi dina personuppgifter"
+          wrappedComponent={
+            <>
+              <p>Lorem ipsum dolor sit amet</p>
+            </>
+          }
+        />
+      </ContactForms>
+    </CompositionFonts>
+  );
+};
+
+export const BasicFormOtherCases = () => {
+  return (
+    <CompositionFonts>
+      <GlobalStyles />
+      <ContactForms
+        title="Kontakta vägledning"
+        type={'otherCases'}
+        handleFormSubmit={(data) => console.log(data)}
+        texts={formMicroCopy.otherCases}
+      >
+        <WithContentExpander
+          useLightBlueAlternativeStyling={true}
+          text="Så behandlar vi dina personuppgifter"
+          wrappedComponent={
+            <>
+              <p>Lorem ipsum dolor sit amet</p>
+            </>
+          }
+        />
         <WithContentExpander
           useLightBlueAlternativeStyling={true}
           text="Så behandlar vi dina personuppgifter"

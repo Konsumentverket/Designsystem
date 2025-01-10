@@ -64,6 +64,11 @@ import {
   MonoWhiteVideo,
   Information,
   MonoWhiteChat,
+  DBFileUpload,
+  DBFileText,
+  DBFilePDF,
+  DBFileImage,
+  DBDeleteFileAlt2,
 
   // Editor Icons
 
@@ -245,6 +250,11 @@ const systemIconDefinitions = {
   MonoWhiteDownload,
   Information,
   MonoWhiteChat,
+  DBFileUpload,
+  DBFileText,
+  DBFilePDF,
+  DBFileImage,
+  DBDeleteFileAlt2,
 };
 
 const editorIconDefinitions = {

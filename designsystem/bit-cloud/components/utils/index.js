@@ -65,6 +65,11 @@ import { WarningCirclePink } from "./Icons/SystemIcons/WarningCirclePink/Warning
 import { Video } from "./Icons/SystemIcons/Video/Video";
 import { Information } from "./Icons/SystemIcons/Information/Information";
 import { MonoWhiteChat } from "./Icons/SystemIcons/MonoWhiteChat/MonoWhiteChat";
+import { DBFileUpload } from "./Icons/SystemIcons/DBFileUpload/DBFileUpload";
+import { DBFileText } from "./Icons/SystemIcons/DBFileText/DBFileText";
+import { DBFilePDF } from "./Icons/SystemIcons/DBFilePDF/DBFilePDF";
+import { DBFileImage } from "./Icons/SystemIcons/DBFileImage/DBFileImage";
+import { DBDeleteFileAlt2 } from "./Icons/SystemIcons/DBDeleteFileAlt2/DBDeleteFileAlt2";
 
 
 // Editor icons
@@ -276,7 +281,11 @@ export {
   MonoWhiteDownload,
   Information,
   MonoWhiteChat,
-
+  DBFileUpload,
+  DBFileText,
+  DBFilePDF,
+  DBFileImage,
+  DBDeleteFileAlt2,
 
   // System icons
 
