@@ -15,6 +15,7 @@ export const ContactForms = ({
   type = 'guidance',
   texts,
   test = '',
+  guidanceEmailLabel = '',
 }) => {
   const forms = {
     guidance: Guidance,
@@ -29,7 +30,8 @@ export const ContactForms = ({
     title,
     children,
     handleFormSubmit,
-    texts
+    texts,
+    guidanceEmailLabel
   }
 
   return (

@@ -18,7 +18,7 @@ import FormInput from "../components/FormInput";
 import FormTextArea from "../components/FormTextArea";
 import ErrorMessage from "../components/ErrorMessage";
 
-export const Guidance = ({title, children, handleFormSubmit, texts}) => {
+export const Guidance = ({title, children, handleFormSubmit, texts, guidanceEmailLabel}) => {
   const {
     register,
     handleSubmit,
@@ -32,7 +32,7 @@ export const Guidance = ({title, children, handleFormSubmit, texts}) => {
   if (!texts) return null;
 
   const {
-    guidanceEmailLabel,
+    // guidanceEmailLabel,
     guidanceEmailPlaceholder,
     guidanceEmailHelpText,
     guidanceMunicipalityLabel,
