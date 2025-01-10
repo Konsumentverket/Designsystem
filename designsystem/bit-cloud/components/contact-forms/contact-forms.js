@@ -14,7 +14,8 @@ export const ContactForms = ({
   handleFormSubmit = () => {},
   type = 'guidance',
   texts,
-  test = '',
+  microCopy = {
+  },
   guidanceEmailLabel = '',
 }) => {
   const forms = {
@@ -31,7 +32,8 @@ export const ContactForms = ({
     children,
     handleFormSubmit,
     texts,
-    guidanceEmailLabel
+    guidanceEmailLabel,
+    ...microCopy
   }
 
   return (
@@ -44,7 +46,6 @@ export const ContactForms = ({
         appendTo: 'head',
       }}
     >
-      {test && <div>{test}</div>}
       <SelectedForm {...props} />
     </GoogleReCaptchaProvider>
   )
