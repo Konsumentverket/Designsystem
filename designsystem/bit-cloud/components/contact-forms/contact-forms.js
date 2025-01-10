@@ -14,9 +14,6 @@ export const ContactForms = ({
   handleFormSubmit = () => {},
   type = 'guidance',
   texts,
-  microCopy = {
-  },
-  guidanceEmailLabel = '',
 }) => {
   const forms = {
     guidance: Guidance,
@@ -31,9 +28,7 @@ export const ContactForms = ({
     title,
     children,
     handleFormSubmit,
-    texts,
-    guidanceEmailLabel,
-    ...microCopy
+    texts
   }
 
   return (

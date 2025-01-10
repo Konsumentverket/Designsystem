@@ -18,7 +18,7 @@ import FormInput from "../components/FormInput";
 import FormTextArea from "../components/FormTextArea";
 import ErrorMessage from "../components/ErrorMessage";
 
-export const Guidance = ({title, children, handleFormSubmit, texts, guidanceEmailLabel, guidanceMunicipalityLabel}) => {
+export const Guidance = ({title, children, handleFormSubmit, texts}) => {
   const {
     register,
     handleSubmit,
@@ -32,10 +32,10 @@ export const Guidance = ({title, children, handleFormSubmit, texts, guidanceEmai
   if (!texts) return null;
 
   const {
-    // guidanceEmailLabel,
+    guidanceEmailLabel,
     guidanceEmailPlaceholder,
     guidanceEmailHelpText,
-    // guidanceMunicipalityLabel,
+    guidanceMunicipalityLabel,
     guidanceMunicipalityPlaceholder,
     guidanceMunicipalityHelpText,
     guidanceCompanyLabel,
@@ -82,7 +82,7 @@ export const Guidance = ({title, children, handleFormSubmit, texts, guidanceEmai
       data-comp="contactForm-guidance"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <p>{guidanceMunicipalityLabel}</p>
+
       {title && (
         <h2 css={formTitle}>
           {title}
