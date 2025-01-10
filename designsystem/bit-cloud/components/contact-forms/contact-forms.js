@@ -14,6 +14,7 @@ export const ContactForms = ({
   handleFormSubmit = () => {},
   type = 'guidance',
   texts,
+  test = '',
 }) => {
   const forms = {
     guidance: Guidance,
@@ -41,6 +42,7 @@ export const ContactForms = ({
         appendTo: 'head',
       }}
     >
+      {test && <div>{test}</div>}
       <SelectedForm {...props} />
     </GoogleReCaptchaProvider>
   )
