@@ -5,6 +5,7 @@ import {
   exceededMaxCount,
   inputError,
   inputWrapper,
+  resetRightPadding,
   labelWrapper,
   inputStyle,
   labelStyle,
@@ -24,7 +25,8 @@ const FormInput = ({
   maxLengthCount = 40,
   register,
   validation,
-  watch
+  watch,
+  ...otherAttributes
 }) => {
   return (
     <div css={formInputWrapper}>
@@ -43,7 +45,11 @@ const FormInput = ({
 
       </div>
 
-      <span css={inputWrapper}>
+      <span css={[
+        inputWrapper,
+        !maxLengthValidation ? resetRightPadding : null,
+      ]}
+      >
 
         <input
           id={id}
@@ -55,6 +61,7 @@ const FormInput = ({
             error ? inputError : null
           ]}
           {...register(id, validation)}
+          {...otherAttributes}
         />
 
         {maxLengthValidation && (

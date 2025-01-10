@@ -35,57 +35,10 @@ export const formTitle = css`
 export const formRow = css`
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  margin-bottom: 18px;
 
   @media (min-width: ${breakpoints.m}) {
     flex-direction: row;
-    margin-bottom: 40px;
-  }
-
-  div:not(.tooltip) {
-    position: relative;
-    width: 100%;
-  }
-
-  label:not(.noStyle) {
-    display: block;
-    font-weight: 700;
-    margin-bottom: 16px;
-    margin-right: 16px;
-    height: 23px;
-  }
-
-  input {
-    height: 57px;
-    padding: 0 16px;
-  }
-
-  input,
-  textarea {
-    border-radius: 8px;
-    border: 1px solid ${newColors.shades.fullBlue};
-    width: 100%;
-    font-size: 1.6rem;
-
-    @media (min-width: ${breakpoints.m}) {
-      margin-bottom: 0;
-    }
-
-    &::placeholder {
-      ${typography.textSmall};
-      font-style: italic;
-    }
-  }
-
-  textarea {
-    min-height: 57px;
-    padding: 12px 16px;
-    resize: vertical;
-
-    &::placeholder {
-      font-style: italic;
-    }
+    column-gap: 32px;
   }
 `;
 
@@ -265,6 +218,12 @@ export const inputWrapper = css`
 
   input {
     padding-right: 70px;
+  }
+`;
+
+export const resetRightPadding = css`
+  input {
+    padding-right: 16px;
   }
 `;
 

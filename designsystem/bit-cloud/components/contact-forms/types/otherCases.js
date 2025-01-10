@@ -116,6 +116,7 @@ export const OtherCases = ({title, children, handleFormSubmit, texts}) => {
           },
         }}
         watch={watch}
+        autoComplete={"email"}
       />
 
       <FormInput
