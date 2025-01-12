@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@konsumentverket-sverige/designsystem.button';
 import {Icon} from '@konsumentverket-sverige/designsystem.icon';
+import {Loading} from '@konsumentverket-sverige/designsystem.Loading';
 import {
   form,
   formTitle,
@@ -15,10 +16,17 @@ import {
 } from 'react-google-recaptcha-v3';
 import FormInput from "../components/FormInput";
 import FormTextArea from "../components/FormTextArea";
-import FileSelectorWithList from "../components/FileSelectorWithList";
+import FileSelectorWithList, {restoreFileNames} from "../components/FileSelectorWithList";
 import ErrorMessage from "../components/ErrorMessage";
+import LoaderOverlay from "../components/LoaderOverlay";
 
-export const OtherCases = ({title, children, handleFormSubmit, texts}) => {
+export const OtherCases = ({
+  title,
+  children,
+  handleFormSubmit,
+  texts,
+  isLoading
+}) => {
   const {
     register,
     handleSubmit,
@@ -70,6 +78,10 @@ export const OtherCases = ({title, children, handleFormSubmit, texts}) => {
         return;
       }
 
+      if (data.fileDescriptions) {
+        data.fileDescriptions = restoreFileNames(data.fileDescriptions)
+      }
+
       const formData = {
         ...data,
         recaptchaToken: token,
@@ -89,7 +101,9 @@ export const OtherCases = ({title, children, handleFormSubmit, texts}) => {
       css={[form]}
       data-comp="contactForm-otherCases"
       onSubmit={handleSubmit(onSubmit)}
+      aria-busy={isLoading}
     >
+
       {title && (
         <h2 css={formTitle}>
           {title}
@@ -138,7 +152,7 @@ export const OtherCases = ({title, children, handleFormSubmit, texts}) => {
             message: `Ämnet får inte vara mer än ${maxLengthInput} tecken lång.`,
           }
         }
-      }
+        }
         watch={watch}
       />
 
@@ -195,7 +209,15 @@ export const OtherCases = ({title, children, handleFormSubmit, texts}) => {
       )}
 
       <div css={[childrenContainer]}>{children}</div>
-      <Button className="submitButton" text={otherCasesSubmitButtonText} iconRight={<Icon icon="ChevronRight"/>}/>
+
+      {isLoading && <LoaderOverlay/>}
+
+      <Button
+        className="submitButton"
+        disabled={isLoading}
+        text={isLoading ? "Skickar..." : otherCasesSubmitButtonText}
+        iconRight={isLoading ? <Loading color={"#FFF"}/> : <Icon icon="ChevronRight"/>}
+      />
     </form>
   );
 };

@@ -17,8 +17,15 @@ import {
 import FormInput from "../components/FormInput";
 import FormTextArea from "../components/FormTextArea";
 import ErrorMessage from "../components/ErrorMessage";
+import LoaderOverlay from "../components/LoaderOverlay";
 
-export const Guidance = ({title, children, handleFormSubmit, texts}) => {
+export const Guidance = ({
+  title,
+  children,
+  handleFormSubmit,
+  texts,
+  isLoading,
+}) => {
   const {
     register,
     handleSubmit,
@@ -211,7 +218,15 @@ export const Guidance = ({title, children, handleFormSubmit, texts}) => {
       )}
 
       <div css={[childrenContainer]}>{children}</div>
-      <Button className="submitButton" text={guidanceSubmitButtonText} iconRight={<Icon icon="ChevronRight"/>}/>
+
+      {isLoading && <LoaderOverlay />}
+
+      <Button
+        className="submitButton"
+        disabled={isLoading}
+        text={isLoading ? "Skickar..." : guidanceSubmitButtonText}
+        iconRight={isLoading ? <Loading color={"#FFF"}/> : <Icon icon="ChevronRight"/>}
+      />
     </form>
   );
 };

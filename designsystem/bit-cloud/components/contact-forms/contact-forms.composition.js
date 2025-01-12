@@ -41,7 +41,7 @@ const formMicroCopy = {
     otherCasesFileDescriptionLabel: 'Beskriv vad filen visar',
     otherCasesFileDescriptionText: '(t.ex. bild på varan, annonsen eller mejlen)',
     otherCasesRemoveFile: 'Ta bort filen',
-    otherCaseFileDescriptionPlaceholder: 'Skriv en kort beskrivning av filen',
+    otherCasesFileDescriptionPlaceholder: 'Skriv en kort beskrivning av filen',
     otherCasesSubmitButtonText: 'Skicka',
   }
 }

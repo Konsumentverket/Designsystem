@@ -14,6 +14,7 @@ export const ContactForms = ({
   handleFormSubmit = () => {},
   type = 'guidance',
   texts,
+  isLoading = false,
 }) => {
   const forms = {
     guidance: Guidance,
@@ -28,7 +29,8 @@ export const ContactForms = ({
     title,
     children,
     handleFormSubmit,
-    texts
+    texts,
+    isLoading
   }
 
   return (

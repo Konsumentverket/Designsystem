@@ -36,6 +36,16 @@ const ACCEPTED_FILE_TYPES = [
   "image/gif",
 ];
 
+const extensionMappings = {
+  "-pdf": ".pdf",
+  "-docx": ".docx",
+  "-txt": ".txt",
+  "-odt": ".odt",
+  "-jpeg": ".jpeg",
+  "-jpg": ".jpg",
+  "-gif": ".gif",
+}
+
 const FILE_TYPE_ICONS = {
   "application/pdf": "DBFilePDF",
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document": "DBFileText",
@@ -50,13 +60,38 @@ const FILE_TYPE_ICONS = {
 // to ensure the name is compatible as a key in react-hook-form
 const formatFileName = string => string.replace(".", "-");
 
+/*
+ * Replaces the last dash and its suffix in file names with the correct
+ * file extension (e.g., "-jpg" → ".jpg"), preserving descriptions as values.
+ */
+export const restoreFileNames = (fileDescriptions) => {
+  const descriptionsWithCorrectFilename = {};
+
+  for (const key in fileDescriptions) {
+    const value = fileDescriptions[key];
+
+    // Find the last dash and its suffix
+    const dashIndex = key.lastIndexOf('-');
+    if (dashIndex !== -1) {
+      const suffix = key.substring(dashIndex);
+      const replacement = extensionMappings[suffix];
+      if (replacement) {
+        descriptionsWithCorrectFilename[key.slice(0, dashIndex) + replacement] = value;
+        continue;
+      }
+    }
+
+    // If no replacement found, keep the key as is
+    descriptionsWithCorrectFilename[key] = value;
+  }
+
+  return descriptionsWithCorrectFilename;
+};
+
 const FORM_FILE_INPUT_KEY = 'files';
 const FORM_FILE_DESCRIPTIONS_KEY = 'fileDescriptions';
 
 const FileSelectorWithList = ({
-  // fileInputKey,
-  // fileDescriptionKey,
-  // fileList,
   reactHookFormProps,
   fileLabel,
   fileTypesText,
@@ -68,8 +103,7 @@ const FileSelectorWithList = ({
   removeFileText,
   maxLengthInput,
 }) => {
-  // const FORM_FILE_INPUT_KEY = fileInputKey;
-  // const FORM_FILE_DESCRIPTIONS_KEY = fileDescriptionKey;
+
   const dragAreaElement = useRef();
   const [dragging,setDragging] = useState(false);
   const [dragCounter, setDragCounter] = useState(0);
@@ -278,23 +312,6 @@ const FileSelectorWithList = ({
               </>
             )}
           </ErrorMessage>
-          // <span css={[errorMessage]} id="file-error" role="alert">
-          //   <Icon icon="Warn"/>
-          //   {errors[FORM_FILE_INPUT_KEY].message === "Invalid file size" ? (
-          //     <>
-          //       Den totala storleken för de bifogade filerna överskrider gränsen på {MAX_MEGABYTES} MB.
-          //       <br/>
-          //       Ta bort en eller flera filer och försök igen. Den aktuella totala storleken är {formattedFileSize} MB.
-          //     </>
-          //   ) : (
-          //     <>
-          //       En eller flera filer har en otillåten filtyp. De tillåtna filtyperna är: pdf, docx, txt, odt, jpg, png
-          //       och gif.
-          //       <br/>
-          //       Ta bort filer med otillåtna filtyper och försök igen.
-          //     </>
-          //   )}
-          // </span>
         )}
 
       </div>

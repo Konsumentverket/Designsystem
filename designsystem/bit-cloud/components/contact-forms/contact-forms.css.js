@@ -11,14 +11,23 @@ export const form = css`
   background-color: ${newColors.shades.lightBlue50};
   border-radius: 8px;
   padding: 24px 16px;
+  position: relative;
 
   @media (min-width: ${breakpoints.m}) {
     padding: 24px;
   }
 
   .submitButton {
+    position: relative;
+
     @media (min-width: ${breakpoints.m}) {
       margin-left: auto;
+    }
+
+    .lds-dual-ring {
+      position: relative;
+      top: -2px;
+      margin-left: 8px;
     }
   }
 `;
@@ -283,6 +292,16 @@ export const childrenContainer = css`
 export const recaptchaContainer = css`
   margin-bottom: 24px;
   position: relative;
+`;
+
+export const loadingStyle = css`
+  background: #DFF1FB;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 `;
 
 export const inputError = css`
