@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@konsumentverket-sverige/designsystem.button';
 import {Icon} from '@konsumentverket-sverige/designsystem.icon';
-import {Loading} from '@konsumentverket-sverige/designsystem.Loading';
+import {Loading} from '@konsumentverket-sverige/designsystem.loading';
 import {
   form,
   formTitle,
