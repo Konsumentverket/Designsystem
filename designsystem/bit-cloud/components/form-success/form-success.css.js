@@ -1,36 +1,44 @@
 import { css } from "@emotion/core";
+import {newColors, typography} from '@konsumentverket-sverige/designsystem.utils';
 
 export const wrapper = css`
     margin-bottom: 34px;
 `;
 
 export const dataListTitle = css`
-    margin-bottom: 28px;
+  ${typography.subHeadingLarge};
+  margin-bottom: 24px;
 `;
 
 export const dataList = css`
     margin-bottom: 36px;
 
     div {
-      margin-bottom: 29px;
-      font-size: 2rem;
-      line-height: 145%;
+      ${typography.paragraph};
+      color: ${newColors.shades.readingBlack};
     }
 
     dt {
       display: inline-block;
       font-weight: bold;
       margin-right: 8px;
+      vertical-align: top;
     }
 
     dd {
       display: inline-block;
       margin: 0;
+      max-width: 640px;
     },
 `;
 
 export const nestedContainerTitle = css`
     display: block;
+`;
+
+export const nestedWrapper = css`
+  display: flex !important;
+  flex-direction: column;
 `;
 
 export const nestedFlex = css`
@@ -42,7 +50,7 @@ export const nestedFlex = css`
 export const nestedFlexChild = css`
   display: flex;
   flex-direction: column;
-  margin-left: 32px;
+  margin-left: 50px;
   gap: 0;
 `;
 

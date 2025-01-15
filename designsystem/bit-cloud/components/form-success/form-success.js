@@ -6,6 +6,7 @@ import {
   dataListTitle,
   dataList,
   nestedContainerTitle,
+  nestedWrapper,
   nestedFlex,
   nestedKeyStyle,
   nestedFlexChild
@@ -33,9 +34,9 @@ export const FormSuccess = ({
       id="form-success"
     >
       <NoticeBox headline={headline}>{children}</NoticeBox>
-      <div css={dataListTitle}>
-        <Heading text="Inskickade uppgifter:" level={3}/>
-      </div>
+
+      <h3 css={dataListTitle}>Inskickade uppgifter:</h3>
+
       {formData && (
         <dl css={dataList}>
           {Object.keys(formData).map((key) => {
@@ -43,7 +44,7 @@ export const FormSuccess = ({
 
             return (
               hasNestedData ? (
-                <div key={key} css={nestedFlex}>
+                <div key={key} css={nestedWrapper}>
                   <dt css={nestedContainerTitle}>{key}:&nbsp;</dt>
                   <dd css={nestedFlex}>
                     {Object.entries(formData[key]).map(([nestedKey, nestedValue]) => (

@@ -11,7 +11,6 @@ export const wrapperStyling = css`
 
     ${medium} {
         margin-top: 32px;
-        padding: ${spacing.l} ${spacing.l};
     }
 
 
@@ -47,7 +46,7 @@ export const tagMargin = css`
   margin-top: 32px; // 24px + 8px
 
   ${medium} {
-    margin-top: 45px; // 32px + 13px
+    margin-top: 40px; // 32px + 8px
   }
 `;
 
@@ -60,11 +59,11 @@ export const articleEntryMarginStyling = css`
 `;
 
 export const titleStyling = css`
+    ${typography.h2NoMargin};
     color: ${newColors.primaries.kovBlack};
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 1.4;
-    margin: 0 0 24px 0;
+    & {
+      margin-bottom: 32px;
+    }
 `;
 
 export const iconWrapper = css`
