@@ -56,16 +56,17 @@ export const WithContentExpander = ({
   contentfulTextName = '',
   level = 3,
 }) => {
+  useEffect(() => {
+    if (location && location.hash) {
+      const split = location.hash.split(",");
+      open = split.some((x) => x === `#${wrapperId}`);
+    }
+  }, []);
+
   const [expanded, setExpanded] = useState(open);
   const linkContainerRef = useRef();
   const linkRef = useRef();
   const topOfComponent = useRef();
-  useEffect(() => {
-    if (location && location.hash) {
-      const split = location.hash.split(",");
-      setExpanded(split.some((x) => x === `#${wrapperId}`));
-    }
-  }, []);
 
   const handleExpansionOnClick = (e) => {
     e.stopPropagation();
