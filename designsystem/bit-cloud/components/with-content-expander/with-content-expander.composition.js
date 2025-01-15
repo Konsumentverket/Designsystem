@@ -11,6 +11,7 @@ export const BasicWithIconAndPreambleAndSubComponentWithContentExpander = () => 
     <CompositionFonts>
       <GlobalStyles />
       <WithContentExpander
+        wrapperId={"test"}
         icon={"FurnituresAndDecoration"}
         text={"Lorem ipsum dolor sit amet consectetur adipiscing elit"}
         preamble={"Pellentesque vulputate risus sit amet lorem volutpat eu aliquam odio varius?"}
