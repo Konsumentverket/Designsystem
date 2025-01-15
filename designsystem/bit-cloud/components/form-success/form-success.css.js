@@ -14,6 +14,7 @@ export const dataList = css`
     div {
       margin-bottom: 29px;
       font-size: 2rem;
+      line-height: 145%;
     }
 
     dt {
@@ -38,9 +39,14 @@ export const nestedFlex = css`
   gap: 16px;
 `;
 
+export const nestedFlexChild = css`
+  display: flex;
+  flex-direction: column;
+  margin-left: 32px;
+  gap: 0;
+`;
+
 export const nestedKeyStyle = css`
   font-weight: bold;
-  margin-left: 32px;
   margin-right: 8px;
-  line-height: 145%;
 `;

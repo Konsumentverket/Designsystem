@@ -7,7 +7,8 @@ import {
   dataList,
   nestedContainerTitle,
   nestedFlex,
-  nestedKeyStyle
+  nestedKeyStyle,
+  nestedFlexChild
 } from './form-success.css.js';
 import {NoticeBox} from '@konsumentverket-sverige/designsystem.notice-box';
 import {Heading} from '@konsumentverket-sverige/designsystem.heading';
@@ -46,10 +47,10 @@ export const FormSuccess = ({
                   <dt css={nestedContainerTitle}>{key}:&nbsp;</dt>
                   <dd css={nestedFlex}>
                     {Object.entries(formData[key]).map(([nestedKey, nestedValue]) => (
-                      <span key={nestedKey}>
+                      <span key={nestedKey} css={[nestedFlex, nestedFlexChild]}>
                           <span css={nestedKeyStyle}>{nestedKey}: </span>
                           <span>{!!nestedValue ? nestedValue : "Saknar beskrivning."}</span>
-                        </span>
+                      </span>
                     ))}
                   </dd>
                 </div>
