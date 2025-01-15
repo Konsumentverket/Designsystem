@@ -17,6 +17,11 @@ export const BasicFormSuccess = () => {
           Personnummer: '123456-7890',
           'E-postadress': 'lorem@ipsum.com',
           Datum: '2024-01-01',
+          Filer: {
+            "file_1.jpg": "",
+            "file 2.pdf": "Description of file 2",
+            "file 3.jpg": "Description of file 3"
+          },
         }}
         headline="Konsumentverket har tagit emot din begäran om radering av information."
       >

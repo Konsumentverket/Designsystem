@@ -56,9 +56,10 @@ const FILE_TYPE_ICONS = {
   "image/gif": "DBFileImage",
 };
 
-// Replace periods (.) with dashes (-)
+
+// Replaces periods (".") with hyphens ("-") and spaces (" ") with underscores ("_")
 // to ensure the name is compatible as a key in react-hook-form
-const formatFileName = string => string.replace(".", "-");
+const formatFileName = string => string.replace(/[. ]/g, match => match === "." ? "-" : "_")
 
 /*
  * Replaces the last dash and its suffix in file names with the correct

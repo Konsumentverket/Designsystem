@@ -80,6 +80,12 @@ export const OtherCases = ({
 
       if (data.fileDescriptions) {
         data.fileDescriptions = restoreFileNames(data.fileDescriptions)
+
+        for (const key in data.fileDescriptions) {
+          if (data.fileDescriptions[key] === "") {
+            data.fileDescriptions[key] = "Saknar beskrivning.";
+          }
+        }
       }
 
       const formData = {

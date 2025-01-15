@@ -19,11 +19,28 @@ export const dataList = css`
     dt {
       display: inline-block;
       font-weight: bold;
-      marginRight: 8px;
+      margin-right: 8px;
     }
 
     dd {
       display: inline-block;
       margin: 0;
     },
+`;
+
+export const nestedContainerTitle = css`
+    display: block;
+`;
+
+export const nestedFlex = css`
+  display: flex !important;
+  flex-direction: column;
+  gap: 16px;
+`;
+
+export const nestedKeyStyle = css`
+  font-weight: bold;
+  margin-left: 32px;
+  margin-right: 8px;
+  line-height: 145%;
 `;
