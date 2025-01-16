@@ -60,6 +60,7 @@ export const WithContentExpander = ({
     if (location && location.hash) {
       const split = location.hash.split(",");
       open = split.some((x) => x === `#${wrapperId}`);
+      if (open) scrollIntoView=true;
     }
   }, []);
 
