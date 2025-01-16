@@ -21,6 +21,7 @@ const FormTextArea = ({
   tooltipPosition='left',
   error,
   maxLengthValidation = false,
+  showCounter = false,
   maxLengthCount = 2000,
   register,
   validation,
@@ -56,7 +57,7 @@ const FormTextArea = ({
           {...register(id, validation)}
         />
 
-        {maxLengthValidation && (
+        {maxLengthValidation && showCounter && (
           <span
             aria-hidden={true}
             css={[

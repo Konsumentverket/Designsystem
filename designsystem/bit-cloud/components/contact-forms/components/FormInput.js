@@ -22,6 +22,7 @@ const FormInput = ({
   tooltipPosition='left',
   error,
   maxLengthValidation = false,
+  showCounter = false,
   maxLengthCount = 40,
   register,
   validation,
@@ -47,7 +48,7 @@ const FormInput = ({
 
       <span css={[
         inputWrapper,
-        !maxLengthValidation ? resetRightPadding : null,
+        !showCounter ? resetRightPadding : null,
       ]}
       >
 
@@ -64,7 +65,7 @@ const FormInput = ({
           {...otherAttributes}
         />
 
-        {maxLengthValidation && (
+        {maxLengthValidation && showCounter && (
           <span
             aria-hidden={true}
             css={[

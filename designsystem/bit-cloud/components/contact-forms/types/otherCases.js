@@ -100,6 +100,7 @@ export const OtherCases = ({
   };
 
   const maxLengthInput = 40;
+  const maxLengthEmail = 100;
   const maxLengthText = 2000;
 
   return (
@@ -123,7 +124,7 @@ export const OtherCases = ({
         tooltipText={otherCasesEmailHelpText}
         error={errors && errors.email}
         maxLengthValidation={true}
-        maxLengthCount={maxLengthInput}
+        maxLengthCount={maxLengthEmail}
         register={register}
         validation={{
           required: {
@@ -133,6 +134,10 @@ export const OtherCases = ({
           pattern: {
             value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
             message: 'Ange en giltig e-postadress ',
+          },
+          maxLength: {
+            value: maxLengthEmail,
+            message: `E-postadressen får inte vara mer än ${maxLengthEmail} tecken.`,
           },
         }}
         watch={watch}
@@ -147,6 +152,7 @@ export const OtherCases = ({
         error={errors && errors.subject}
         maxLengthValidation={true}
         maxLengthCount={maxLengthInput}
+        showCounter={true}
         register={register}
         validation={{
           required: {
@@ -169,6 +175,7 @@ export const OtherCases = ({
         error={errors && errors.question}
         maxLengthValidation={true}
         maxLengthCount={maxLengthText}
+        showCounter={true}
         register={register}
         validation={{
           required: {

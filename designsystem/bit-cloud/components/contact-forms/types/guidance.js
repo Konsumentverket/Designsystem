@@ -82,6 +82,7 @@ export const Guidance = ({
   };
 
   const maxLengthInput = 40;
+  const maxLengthEmail = 100;
   const maxLengthText = 2000;
 
   return (
@@ -107,7 +108,7 @@ export const Guidance = ({
           tooltipText={guidanceEmailHelpText}
           error={errors && errors.email}
           maxLengthValidation={true}
-          maxLengthCount={maxLengthInput}
+          maxLengthCount={maxLengthEmail}
           register={register}
           validation={{
             required: {
@@ -117,6 +118,10 @@ export const Guidance = ({
             pattern: {
               value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
               message: 'Ange en giltig e-postadress ',
+            },
+            maxLength: {
+              value: maxLengthEmail,
+              message: `E-postadressen får inte vara mer än ${maxLengthEmail} tecken.`,
             },
           }}
           watch={watch}
@@ -132,6 +137,7 @@ export const Guidance = ({
           error={errors && errors.municipality}
           maxLengthValidation={true}
           maxLengthCount={maxLengthInput}
+          showCounter={true}
           register={register}
           validation={{
             required: {
@@ -153,14 +159,17 @@ export const Guidance = ({
           tooltipPosition={"right"}
           tooltipText={guidanceCompanyHelpText}
           error={errors && errors.company}
+          maxLengthValidation={true}
+          showCounter={true}
+          maxLengthCount={maxLengthInput}
           register={register}
           validation={{
             required: {
               value: false,
             },
             maxLength: {
-              value: 100,
-              message: `Texten får inte vara mer än 100 tecken.`,
+              value: maxLengthInput,
+              message: `Texten får inte vara mer än ${maxLengthInput} tecken.`,
             }
           }}
           watch={watch}
@@ -175,6 +184,7 @@ export const Guidance = ({
         tooltipText={guidanceSubjectHelpText}
         error={errors && errors.subject}
         maxLengthValidation={true}
+        showCounter={true}
         maxLengthCount={maxLengthInput}
         register={register}
         validation={{
@@ -197,6 +207,7 @@ export const Guidance = ({
         error={errors && errors.question}
         maxLengthValidation={true}
         maxLengthCount={maxLengthText}
+        showCounter={true}
         register={register}
         validation={{
           required: {
