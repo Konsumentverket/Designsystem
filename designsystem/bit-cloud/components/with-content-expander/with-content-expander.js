@@ -44,7 +44,7 @@ export const WithContentExpander = ({
   icon,
   wrapperId,
   show = true,
-  scrollIntoView = false,
+  scrollIntoView = true,
   open = false,
   linkHref = "",
   disabled = false,
