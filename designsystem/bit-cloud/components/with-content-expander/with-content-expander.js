@@ -91,6 +91,8 @@ export const WithContentExpander = ({
 
   if (!show) return null;
 
+  if (!linkHref || linkHref == "") linkHref = `#${wrapperId}`;
+
   const HeadingLevel = `h${level}`;
 
   const containerStyles = [
