@@ -7,6 +7,10 @@ import { Heading } from '@konsumentverket-sverige/designsystem.heading';
 import { Icon } from '@konsumentverket-sverige/designsystem.icon';
 import {
   form,
+  reasonTitle,
+  formTitle,
+  radio,
+  radioLabel,
   formRow,
   inputError,
   errorMessage,
@@ -59,7 +63,21 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
       data-comp="form-data-request"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <Heading text={title} level={2} />
+      <div css={[reasonTitle]}>
+        <Heading text="Vad vill du göra?" level={3} />
+      </div>
+      <input css={[radio]} id="reason-aquire" type="radio" value="aquire" checked {...register('reason', { required: true })} />
+      <label htmlFor="reason-aquire" css={[radioLabel]}>
+        Få ut information om mina personuppgifter
+      </label>
+      <input css={[radio]} id="reason-delete" type="radio" value="delete" {...register('reason', { required: true })} />
+      <label htmlFor="reason-delete" css={[radioLabel]}>
+        Radera mina personuppgifter
+      </label>
+
+      <div css={[formTitle]}>
+        <Heading text={title} level={3} />
+      </div>
       <div css={[formRow]}>
         <div>
           <label htmlFor="firstName">Förnamn*</label>

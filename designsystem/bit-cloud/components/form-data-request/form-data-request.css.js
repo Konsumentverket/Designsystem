@@ -14,16 +14,22 @@ export const form = css`
   border-radius: 8px;
   padding: 24px;
 
-  h2 {
-    font-weight: 700;
-    font-size: 2.4rem;
-    margin-bottom: 35px;
-  }
-
   button {
     @media (min-width: ${breakpoints.m}) {
       margin-left: auto;
     }
+  }
+`;
+
+export const reasonTitle = css`
+  h3 {
+    margin-bottom: 4px;
+  }
+`;
+
+export const formTitle = css`
+  h3 {
+    margin-bottom: 22px;
   }
 `;
 
@@ -93,4 +99,52 @@ export const recaptchaContainer = css`
 
 export const inputError = css`
   border-color: ${newColors.secondaries.fullPink} !important;
+`;
+
+export const radio = css`
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+`
+
+export const radioLabel = css`
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1.2rem ${spacing.xs} 0;
+  color: ${newColors.shades.kovBlack};
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+
+  &:hover {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration: underline;
+  }
+
+  &:before {
+    content: '';
+    position: relative;
+    top: 2px;
+    flex-shrink: 0;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px 0px rgba(22, 34, 89, 0.10) inset;
+    box-sizing: border-box;
+    border: 1px solid ${newColors.shades.fullBlue};
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 1.6rem;
+    border-radius: 50%;
+
+    input:checked + & {
+      border: 6px solid ${newColors.shades.fullBlue};
+    }
+  }
 `;
