@@ -66,7 +66,7 @@ const FormDataRequestInner = ({ title, children, handleFormSubmit }) => {
       <div css={[reasonTitle]}>
         <Heading text="Vad vill du göra?" level={3} />
       </div>
-      <input css={[radio]} id="reason-aquire" type="radio" value="aquire" checked {...register('reason', { required: true })} />
+      <input css={[radio]} id="reason-aquire" type="radio" value="aquire" defaultChecked {...register('reason', { required: true })} />
       <label htmlFor="reason-aquire" css={[radioLabel]}>
         Få ut information om mina personuppgifter
       </label>
